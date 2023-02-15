@@ -1,0 +1,25 @@
+---
+permalink: storage/concept_per_node_work_with_utilities.html 
+sidebar: sidebar 
+keywords: troubleshooting network issues, using per-node utilities, storage node UI 
+summary: Puede usar las utilidades por nodo para solucionar problemas de red si las herramientas de supervisión estándar de la interfaz de usuario del software NetApp Element no proporcionan suficiente información para la solución de problemas. Las utilidades por nodo proporcionan información y herramientas específicas que pueden ayudarle a solucionar problemas de red entre los nodos o con el nodo de gestión. 
+---
+= Trabaje con utilidades por nodo para los nodos de almacenamiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede usar las utilidades por nodo para solucionar problemas de red si las herramientas de supervisión estándar de la interfaz de usuario del software NetApp Element no proporcionan suficiente información para la solución de problemas. Las utilidades por nodo proporcionan información y herramientas específicas que pueden ayudarle a solucionar problemas de red entre los nodos o con el nodo de gestión.
+
+
+
+== Obtenga más información
+
+* xref:task_per_node_access_settings.adoc[Acceda a la configuración por nodo con la interfaz de usuario por nodo]
+* xref:reference_per_node_network_settings_details.adoc[Los detalles de la configuración de red de la interfaz de usuario por nodo]
+* xref:reference_per_node_cluster_settings_details.adoc[Detalles de la configuración de clúster de la interfaz de usuario por nodo]
+* xref:task_per_node_run_system_tests.adoc[Ejecute las pruebas del sistema usando la interfaz de usuario por nodo]
+* xref:task_per_node_run_system_utilities.adoc[Ejecute las utilidades del sistema con la interfaz de usuario por nodo]
+

@@ -1,0 +1,24 @@
+---
+permalink: storage/task_troubleshoot_add_mdss_drives.html 
+sidebar: sidebar 
+keywords: mdss, add, multi-drive slice service 
+summary: 'Es posible añadir una segunda unidad de metadatos en un nodo de SolidFire de si se convierte la unidad de bloques de la ranura 2 en una unidad de segmentos. Para ello, debe habilitar la función del servicio de segmentos de varias unidades \(MDSS\). Para habilitar esta función, debe ponerse en contacto con el soporte de NetApp.' 
+---
+= Añada unidades MDSS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible añadir una segunda unidad de metadatos en un nodo de SolidFire de si se convierte la unidad de bloques de la ranura 2 en una unidad de segmentos. Para ello, debe habilitar la función del servicio de segmentos de varias unidades (MDSS). Para habilitar esta función, debe ponerse en contacto con el soporte de NetApp.
+
+Para que una unidad de segmentos tenga el estado available, puede que deba reemplazar una unidad con errores por una unidad nueva o de repuesto. Debe añadir la unidad de segmentos del sistema al mismo tiempo que añade la unidad para la ranura 2. Si intenta añadir solo la unidad de segmentos de la ranura 2 o añadirla antes de la unidad de segmentos del sistema, el sistema mostrará un error.
+
+. Haga clic en *Cluster* > *Drives*.
+. Haga clic en *disponible* para ver la lista de unidades disponibles.
+. Seleccione las unidades de segmentos que desea añadir.
+. Haga clic en *acciones masivas*.
+. Haga clic en *Agregar*.
+. Confirme en la ficha *Active Drives* que las unidades se han añadido.
+

@@ -1,0 +1,97 @@
+---
+permalink: api/reference_element_api_deletegroupsnapshot.html 
+sidebar: sidebar 
+keywords: volume,volumes,group,snapshot,snapshots,delete,deleting,DeleteGroupSnapshot 
+summary: Puede utilizar DeleteGroupSnapshot para eliminar una instantánea de grupo. 
+---
+= DeleteGroupSnapshot
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar `DeleteGroupSnapshot` para eliminar una copia de snapshot de grupo.
+
+Puede utilizar el parámetro saveMembers para conservar todas las instantáneas que se han realizado para los volúmenes del grupo, pero se eliminará la asociación de grupo.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+GroupSnapshotID
+ a| 
+El ID único de la copia de Snapshot de grupo.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+Miembros de saveMembers
+ a| 
+Especifica qué se debe eliminar al eliminar una copia de Snapshot de grupo. Valores válidos:
+
+* True: Se mantienen las instantáneas, pero se elimina la asociación de grupo.
+* False: Se eliminan el grupo y las instantáneas.
+
+ a| 
+booleano
+ a| 
+falso
+ a| 
+No
+
+|===
+
+
+== Valor de retorno
+
+Este método no tiene ningún valor devuelto.
+
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "DeleteGroupSnapshot",
+     "params": {
+       "groupSnapshotID": 10,
+       "saveMembers" : true
+        },
+     "id": 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {}
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

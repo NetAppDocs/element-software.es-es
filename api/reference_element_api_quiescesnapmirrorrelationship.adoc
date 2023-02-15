@@ -1,0 +1,73 @@
+---
+permalink: api/reference_element_api_quiescesnapmirrorrelationship.html 
+sidebar: sidebar 
+keywords: snapmirror,relationship,relationships,quiesce,quiescing,quiescescnapmirrorrelationship 
+summary: 'La interfaz de usuario web del software Element utiliza el método QuiesceSnapMirrorRelationship para deshabilitar las transferencias de datos futuras en una relación de SnapMirror. Si se está realizando una transferencia, el estado de la relación se convierte en "inactivo" hasta que se completa la transferencia. Si se cancela la transferencia actual, no se reiniciará. Puede volver a habilitar las transferencias de datos para la relación mediante el método API RehumeSnapMirrorationship.' 
+---
+= QuiesceSnapMirrorRelationship
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La interfaz de usuario web del software Element utiliza el `QuiesceSnapMirrorRelationship` Método para deshabilitar futuras transferencias de datos para una relación de SnapMirror. Si se está realizando una transferencia, el estado de la relación se convierte en "inactivo" hasta que se completa la transferencia. Si se cancela la transferencia actual, no se reiniciará. Puede volver a habilitar las transferencias de datos para la relación mediante el `ResumeSnapMirrorRelationship` Método API.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+SnapMirrorEndpointID
+ a| 
+El ID de extremo del sistema de almacenamiento remoto de ONTAP se comunica con el clúster de almacenamiento de Element.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+DestationVolume
+ a| 
+El volumen de destino de la relación de SnapMirror.
+ a| 
+xref:reference_element_api_snapmirrorvolumeinfo.adoc[SnapMirrorVolumeinfo]
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+SnapMirrorRelationship
+ a| 
+Un objeto que contiene información acerca de la relación de SnapMirror en modo inactivo.
+ a| 
+xref:reference_element_api_snapmirrorrelationship.adoc[SnapMirrorRelationship]
+
+|===
+
+
+== Nuevo desde la versión
+
+10.1

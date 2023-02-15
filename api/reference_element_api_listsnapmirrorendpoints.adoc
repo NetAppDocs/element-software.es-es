@@ -1,0 +1,62 @@
+---
+permalink: api/reference_element_api_listsnapmirrorendpoints.html 
+sidebar: sidebar 
+keywords: snapmirror,endpoint,endpoints,list,listing,listsnapmirrorendpoints 
+summary: La interfaz de usuario web del software Element utiliza el método ListSnapMirrorEndpoints para enumerar todos los extremos de SnapMirror con los que se comunica el clúster de almacenamiento de Element. 
+---
+= ListSnapMirrorEndpoints
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La interfaz de usuario web del software Element utiliza el `ListSnapMirrorEndpoints` Método para enumerar todos los extremos de SnapMirror con los que se comunica el clúster de almacenamiento de Element.
+
+
+
+== Parámetro
+
+Este método tiene el siguiente parámetro de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+SnapMirrorEndpointID
+ a| 
+Devolver sólo los objetos asociados a estos ID. Si no se proporcionan ID o la cabina está vacía, el método devuelve todos los ID de extremo de SnapMirror.
+ a| 
+matriz en números enteros
+ a| 
+Ninguno
+ a| 
+No
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+SnapMirrorEndpoints
+ a| 
+Una lista de extremos de SnapMirror existentes.
+ a| 
+xref:reference_element_api_snapmirrorendpoint.adoc[SnapMirrorEndpoint] cabina
+
+|===
+
+
+== Nuevo desde la versión
+
+10.0

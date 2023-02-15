@@ -1,0 +1,42 @@
+---
+permalink: api/reference_element_api_protectiondomaintolerance.html 
+sidebar: sidebar 
+keywords: object,objects,protectionDomainTolerance 
+summary: El objeto protectionDomainTolerance contiene información sobre la capacidad del clúster de almacenamiento de seguir leyendo y escribiendo datos en caso de uno o más fallos. Todo ello dentro de un único dominio de protección de su tipo de dominio de protección asociado. 
+---
+= ProtectionDomainTolerance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El objeto protectionDomainTolerance contiene información sobre la capacidad del clúster de almacenamiento de seguir leyendo y escribiendo datos en caso de uno o más fallos. Todo ello dentro de un único dominio de protección de su tipo de dominio de protección asociado.
+
+
+
+== Miembros de objeto
+
+Este objeto contiene los siguientes miembros:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+ProtectionSchemetolerancias
+ a| 
+Una lista de objetos (uno para cada esquema de protección) que contienen información de tolerancia a fallos para el tipo de dominio de protección asociado.
+ a| 
+xref:reference_element_api_protectionschemetolerance.adoc[ProtectionSchemeTolerance] cabina
+
+
+
+ a| 
+FailoidableForsemble
+ a| 
+La cantidad de fallos simultáneos dentro del tipo asociado de dominio de protección que se puede producir sin perder el quórum del conjunto.
+ a| 
+entero
+
+|===

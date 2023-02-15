@@ -1,0 +1,24 @@
+---
+permalink: storage/task_data_protection_clone_a_volume_from_a_snapshot.html 
+sidebar: sidebar 
+keywords: clone volume from snapshot, volume snapshots, clone 
+summary: Es posible crear un nuevo volumen a partir de una copia de Snapshot de un volumen. En ese caso, el sistema utiliza la información de la copia de Snapshot para clonar un volumen nuevo con los datos que contenía el volumen en el momento en el que se creó la copia de Snapshot. En este proceso se almacena información sobre otras copias de Snapshot del volumen en el volumen que se acaba de crear. 
+---
+= Clonar un volumen a partir de una copia de Snapshot
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible crear un nuevo volumen a partir de una copia de Snapshot de un volumen. En ese caso, el sistema utiliza la información de la copia de Snapshot para clonar un volumen nuevo con los datos que contenía el volumen en el momento en el que se creó la copia de Snapshot. En este proceso se almacena información sobre otras copias de Snapshot del volumen en el volumen que se acaba de crear.
+
+. Haga clic en *Protección de datos* > *instantáneas*.
+. Haga clic en el icono *acciones* de la instantánea que desee utilizar para la clonación de volumen.
+. En el menú que se abre, haga clic en *Clone Volume from Snapshot*.
+. Introduzca un *Nombre de volumen* en el cuadro de diálogo *Clonar volumen desde Snapshot*.
+. Seleccione una *Tamaño total* y unidades de tamaño para el nuevo volumen.
+. Seleccione un tipo *Access* para el volumen.
+. Seleccione una *cuenta* de la lista para asociarla con el nuevo volumen.
+. Haga clic en *Iniciar clonación*.
+

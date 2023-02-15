@@ -1,0 +1,136 @@
+---
+permalink: api/reference_element_api_disablemaintenancemode.html 
+sidebar: sidebar 
+keywords: disable,maintenance,mode 
+summary: Se puede utilizar el método DisMaintenanceMode para sacar un nodo de almacenamiento del modo de mantenimiento. Solo debe deshabilitar el modo de mantenimiento después de completar el mantenimiento y el nodo está en línea. 
+---
+= Modo de mantenimiento disableMaintenanceMode
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `DisableMaintenanceMode` método para sacar un nodo de almacenamiento del modo de mantenimiento. Solo debe deshabilitar el modo de mantenimiento después de completar el mantenimiento y el nodo está en línea.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+nodos
+ a| 
+Lista de ID de nodos de almacenamiento que se van a quitar del modo de mantenimiento.
+ a| 
+matriz en números enteros
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+
+
+== Valores devueltos
+
+Este método tiene los siguientes valores devueltos:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+Establish asyncHandle
+ a| 
+Puede utilizar el método GetAsyncResult para recuperar este comando establish de la escritura y determinar cuándo se completa la transición del modo de mantenimiento.
+ a| 
+entero
+
+
+
+ a| 
+Modo CurrentMode
+ a| 
+El estado actual del modo de mantenimiento del nodo. Los posibles valores son los siguientes:
+
+* Disabled: No se ha solicitado ningún mantenimiento.
+* FailedToRecover: El nodo no pudo recuperarse del modo de mantenimiento.
+* Inesperado: Se encontró que el nodo estaba sin conexión, pero estaba en el modo deshabilitado.
+* RecoveringFromMaintenance: El nodo se está recuperando del modo de mantenimiento.
+* PreparaciónForMaintenance: Se están llevando a cabo acciones para preparar un nodo para realizar tareas de mantenimiento.
+* ReadyForMaintenance: El nodo está listo para realizar tareas de mantenimiento.
+
+ a| 
+Modo de mantenimiento (cadena)
+
+
+
+ a| 
+Modo requestedMode
+ a| 
+El estado del modo de mantenimiento solicitado del nodo. Los posibles valores son los siguientes:
+
+* Disabled: No se ha solicitado ningún mantenimiento.
+* FailedToRecover: El nodo no pudo recuperarse del modo de mantenimiento.
+* Inesperado: Se encontró que el nodo estaba sin conexión, pero estaba en el modo deshabilitado.
+* RecoveringFromMaintenance: El nodo se está recuperando del modo de mantenimiento.
+* PreparaciónForMaintenance: Se están llevando a cabo acciones para preparar un nodo para realizar tareas de mantenimiento.
+* ReadyForMaintenance: El nodo está listo para realizar tareas de mantenimiento.
+
+ a| 
+Modo de mantenimiento (cadena)
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+  "method": "DisableMaintenanceMode",
+  "params": {
+    "nodes": [6]
+  },
+"id": 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+   "id": 1,
+   "result":
+      {
+        "requestedMode": "Disabled",
+        "asyncHandle": 1,
+        "currentMode": "Enabled"
+    }
+}
+----
+
+
+== Nuevo desde la versión
+
+12.2
+
+
+
+== Obtenga más información
+
+http://docs.netapp.com/us-en/hci/docs/concept_hci_storage_maintenance_mode.html["Conceptos del modo de mantenimiento del almacenamiento de NetApp HCI"^]

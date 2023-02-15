@@ -1,0 +1,54 @@
+---
+permalink: storage/reference_data_manage_accounts_account_details.html 
+sidebar: sidebar 
+keywords: account, volumes 
+summary: En la página Accounts de la pestaña Management se proporciona información sobre cada cuenta del sistema, como el ID, el nombre de usuario y los detalles de eficiencia de los volúmenes asignados a cada cuenta. 
+---
+= Detalles de cuentas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En la página Accounts de la pestaña Management se proporciona información sobre cada cuenta del sistema, como el ID, el nombre de usuario y los detalles de eficiencia de los volúmenes asignados a cada cuenta.
+
+* *ID*
++
+El ID que genera el sistema para la cuenta.
+
+* *Nombre de usuario*
++
+El nombre otorgado a la cuenta cuando se creó.
+
+* *Estado*
++
+El estado de la cuenta. Los posibles valores son los siguientes:
+
++
+** Active: Una cuenta activa.
+** Locked: Una cuenta bloqueada.
+** Deleted: Una cuenta que se ha eliminado y purgado.
+
+
+* *Volúmenes activos*
++
+La cantidad de volúmenes activos asignados a la cuenta.
+
+* *Compresión*
++
+La puntuación de eficiencia de compresión para los volúmenes que se han asignado a la cuenta.
+
+* *Deduplicación*
++
+La puntuación de eficiencia de deduplicación para los volúmenes que se han asignado a la cuenta.
+
+* *Thin Provisioning*
++
+La puntuación de eficiencia de thin provisioning para los volúmenes que se han asignado a la cuenta.
+
+* *Eficiencia general*
++
+La puntuación de eficiencia general para los volúmenes que se han asignado a la cuenta.
+
+

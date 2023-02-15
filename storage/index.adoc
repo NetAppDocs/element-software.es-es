@@ -1,0 +1,37 @@
+---
+permalink: storage/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Gestionar el almacenamiento con el software Element
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilice el software Element para configurar almacenamiento SolidFire, supervisar la capacidad y el rendimiento del clúster y gestionar la actividad de almacenamiento en una infraestructura multi-tenant.
+
+Element es el sistema operativo de almacenamiento como pieza central de un clúster de SolidFire. El software Element se ejecuta de forma independiente en todos los nodos del clúster y permite que los nodos del clúster combinen recursos y presenten como un único sistema de almacenamiento a clientes externos. El software Element es responsable de toda la coordinación, escalado y gestión del clúster en su conjunto.
+
+La interfaz de software se creó sobre la API de Element.
+
+* link:task_post_deploy_access_the_element_software_user_interface.html["Acceda a la interfaz de usuario del software Element"]
+* link:task_post_deploy_configure_system_options.html["Configure las opciones del sistema SolidFire después de la implementación"]
+* link:concept_upgrade_storage_components.html["Actualice los componentes del sistema de almacenamiento"]
+* link:task_intro_use_basic_options_in_the_element_software_ui.html["Use las opciones básicas en la interfaz de usuario del software Element"]
+* link:concept_system_manage_accounts_overview.html["Gestionar cuentas"]
+* link:concept_system_manage_system_management.html["Gestione su sistema"]
+* link:concept_data_manage_data_management.html["Gestione volúmenes y volúmenes virtuales"]
+* link:concept_data_protection.html["Proteja sus datos"]
+* link:concept_system_monitoring_and_troubleshooting.html["Solucionar los problemas del sistema"]
+
+
+
+
+== Obtenga más información
+
+* https://www.netapp.com/data-storage/solidfire/documentation["Página SolidFire y Element Resources"^]
+* https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
+

@@ -1,0 +1,54 @@
+---
+permalink: api/concept_element_api_request_endpoints.html 
+sidebar: sidebar 
+keywords: request,endpoints 
+summary: 'Hay tres tipos de extremos de solicitud utilizados en la API \(clúster de almacenamiento, creación de clústeres de almacenamiento y por nodo\). Siempre debe utilizar el extremo más reciente admitido por la versión del software Element.' 
+---
+= Extremos de solicitudes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Existen tres tipos de extremos de solicitud utilizados en la API (clúster de almacenamiento, creación de clústeres de almacenamiento y por nodo). Siempre debe utilizar el extremo más reciente admitido por la versión del software Element.
+
+Los tres extremos de solicitud de la API se designan de las siguientes formas:
+
+
+
+== Métodos de API de clúster
+
+El extremo de HTTPS para solicitudes de API para todo el clúster de almacenamiento es `+https://<mvip>/json-rpc/<api-version>+`, donde:
+
+* `<mvip>` Es la dirección IP virtual de gestión del clúster de almacenamiento.
+* `<api-version>` Es la versión de la API que está usando.
+
+
+
+
+== Creación de clústeres y métodos API de bootstrap
+
+El extremo de HTTPS para crear un clúster de almacenamiento y acceder a las solicitudes de la API de bootstrap es `+https://<nodeIP>/json-rpc/<api-version>+`, donde:
+
+* `<nodeIP>` Es la dirección IP del nodo que va a añadir al clúster.
+* `<api-version>` Es la versión de la API que está usando.
+
+
+
+
+== Métodos API por nodo
+
+El extremo de HTTPS para solicitudes de API de nodo de almacenamiento individuales es `+https://<nodeIP>:442/json-rpc/<api-version>+`, donde:
+
+* `<nodeIP>` Es la dirección IP de gestión del nodo de almacenamiento; 442 es el puerto en el que se ejecuta el servidor HTTPS.
+* `<api-version>` Es la versión de la API que está usando.
+
+
+
+
+== Obtenga más información
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Página de recursos de SolidFire de NetApp"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentación para versiones anteriores de SolidFire de NetApp y los productos Element"^]
+

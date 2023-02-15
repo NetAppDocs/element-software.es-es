@@ -1,0 +1,98 @@
+---
+permalink: concepts/concept_solidfire_concepts_nodes.html 
+sidebar: sidebar 
+keywords: what is, node, management node, storage node, fibre channel, state, pending, active 
+summary: Los nodos son elementos de hardware que se agrupan en un clúster para poder acceder a ellos como recursos de computación o almacenamiento basado en bloques. 
+---
+= Nodos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los nodos son recursos virtuales o de hardware que se agrupan en un clúster para proporcionar funcionalidades de computación y almacenamiento basado en bloques.
+
+El software NetApp Element define varios roles de nodo para un clúster. Los tipos de roles de nodo son los siguientes:
+
+* <<Nodo de gestión>>
+* <<Nodo de almacenamiento>>
+* <<Nodo Fibre Channel>>
+
+
+<<estados de funcionamiento del nodo,estados de los nodos>> varía en función de la asociación del clúster.
+
+
+
+== Nodo de gestión
+
+Un nodo de gestión es una máquina virtual que se usa para actualizar y proporcionar servicios del sistema, incluidos la supervisión y la telemetría, gestionar los activos y la configuración del clúster, ejecutar las pruebas y utilidades del sistema y habilitar el acceso al soporte de NetApp para la solución de problemas.link:../concepts/concept_intro_management_node.html["Leer más"]
+
+
+
+== Nodo de almacenamiento
+
+Un nodo de almacenamiento SolidFire es un servidor que contiene una colección de unidades que se comunican entre sí a través de la interfaz de red Bond10G. Las unidades de cada nodo contienen espacio de bloques y metadatos para almacenar y gestionar los datos. Cada nodo contiene una imagen de fábrica de software NetApp Element.
+
+Los nodos de almacenamiento tienen las siguientes características:
+
+* Cada nodo tiene un nombre único. Si un administrador no especifica un nombre de nodo, se usa el predeterminado, SF-XXXX, donde XXXX representa cuatro caracteres aleatorios generados por el sistema.
+* Cada nodo tiene su propia caché de escritura de alto rendimiento de memoria de acceso aleatorio no volátil (NVRAM) con la que se mejora el rendimiento general del sistema y se reduce la latencia de escritura.
+* Cada nodo está conectado a dos redes, almacenamiento y gestión, cada una con dos enlaces independientes por motivos de redundancia y rendimiento. Cada nodo requiere una dirección IP en cada red.
+* Es posible crear un clúster con nodos de almacenamiento nuevos o añadir nodos de almacenamiento a un clúster existente para aumentar el rendimiento y la capacidad del almacenamiento.
+* En cualquier momento que desee, se pueden añadir nodos al clúster o quitarlos sin tener que interrumpir el servicio.
+
+
+
+
+== Nodo Fibre Channel
+
+Los nodos Fibre Channel de SolidFire proporcionan conectividad a un switch Fibre Channel, que puede conectarse a clientes Fibre Channel. Los nodos Fibre Channel funcionan como un conversor de protocolo entre los protocolos de iSCSI y Fibre Channel. Esto permite añadir conectividad de Fibre Channel a un clúster de SolidFire nuevo o actual.
+
+Los nodos Fibre Channel tienen las siguientes características:
+
+* Los switches Fibre Channel gestionan el estado de la estructura para proporcionar interconexiones optimizadas.
+* El tráfico entre dos puertos solo fluye por los switches; no se transmite a ningún otro puerto.
+* Un error en un puerto es un hecho aislado y no afecta al funcionamiento de otros puertos.
+* Varias parejas de puertos pueden comunicarse de forma simultánea en una estructura.
+
+
+
+
+== estados de funcionamiento del nodo
+
+[role="lead"]
+Un nodo se puede encontrar en alguno de varios estados en función del nivel de configuración.
+
+* *Disponible*
++
+El nodo no tiene ningún nombre de clúster asociado y aún no forma parte de un clúster.
+
+* *Pendiente*
++
+El nodo está configurado y se puede añadir a un clúster designado.
+
++
+No es necesario autenticarse para acceder al nodo.
+
+* *Activo pendiente*
++
+El sistema está instalando el software Element compatible en el nodo. Cuando finalice, el nodo se moverá al estado Active.
+
+* *Activo*
++
+El nodo participa en un clúster.
+
++
+Es necesario autenticarse para modificar el nodo.
+
+
+
+En cada uno de estos estados, algunos campos son de solo lectura.
+
+[discrete]
+== Obtenga más información
+
+* https://www.netapp.com/data-storage/solidfire/documentation["Página SolidFire y Element Resources"^]
+* https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
+

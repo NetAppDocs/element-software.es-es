@@ -1,0 +1,129 @@
+---
+permalink: api/reference_element_api_enableencryptionatrest.html 
+sidebar: sidebar 
+keywords: encryption,enable,enabling,EnableEncryptionAtRest 
+summary: 'Puede usar el método EnableEncryptionAtRest para habilitar el cifrado Advanced Encryption Standard \(AES\) de 256 bits en reposo en el clúster de modo que el clúster pueda gestionar la clave de cifrado utilizada para las unidades de cada nodo. Esta función no está habilitada de forma predeterminada.' 
+---
+= EnableEncryptionAtest
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `EnableEncryptionAtRest` Método para habilitar el cifrado AES (estándar de cifrado avanzado) de 256 bits en reposo en el clúster de manera que el clúster pueda gestionar la clave de cifrado utilizada para las unidades de cada nodo. Esta función no está habilitada de forma predeterminada.
+
+
+TIP: Para ver el estado actual del cifrado en reposo y/o el cifrado de software en reposo en el clúster, use el link:../api/reference_element_api_getclusterinfo["obtenga el método de información del clúster"^]. Puede utilizar el `GetSoftwareEncryptionAtRestInfo` link:../api/reference_element_api_getsoftwareencryptionatrestinfo["método para obtener información que utiliza el clúster para cifrar datos en reposo"^].
+
+
+NOTE: Este método no habilita el cifrado de software en reposo. Esto sólo se puede hacer usando link:../api/reference_element_api_createcluster.html["cree el método de clúster"^] con `enableSoftwareEncryptionAtRest` establezca en `true`.
+
+Cuando habilita el cifrado en reposo, el clúster gestiona automáticamente las claves de cifrado internamente para las unidades de cada nodo del clúster.
+
+Si se especifica un keyProviderID, la contraseña se genera y recupera según el tipo de proveedor de claves. Esto suele realizarse mediante un servidor de claves de protocolo de interoperabilidad de gestión de claves (KMIP) en el caso de un proveedor de claves KMIP. Después de esta operación, el proveedor especificado se considera activo y no se puede eliminar hasta que se deshabilite el cifrado en reposo con el `DisableEncryptionAtRest` método.
+
+
+NOTE: Si tiene un tipo de nodo con un número de modelo que termina en "-NE", la `EnableEncryptionAtRest` La llamada al método fallará y la respuesta será "no se permite el cifrado. Cluster detectado nodo no encriptable".
+
+
+NOTE: Solo tendrá que habilitar o deshabilitar el cifrado cuando el clúster se ejecute y esté en buen estado. Puede activar o desactivar el cifrado a su discreción y con la frecuencia que necesite.
+
+
+NOTE: Este proceso es asíncrono y devuelve una respuesta antes de activar el cifrado. Puede utilizar el `GetClusterInfo` método para sondear el sistema para ver cuándo se ha completado el proceso.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+KeyProviderID
+ a| 
+El ID de un proveedor de claves KMIP que se debe usar.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+No
+
+|===
+
+
+== Valores devueltos
+
+Este método no tiene valores devueltos.
+
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "EnableEncryptionAtRest",
+   "params": {},
+   "id": 1
+}
+----
+
+
+== Ejemplos de respuestas
+
+Este método devuelve una respuesta similar al siguiente ejemplo del método EnableEncryptionAtRest. No hay resultados para informar.
+
+[listing]
+----
+{
+   "id": 1,
+   "result": {}
+}
+----
+Mientras que el cifrado en reposo se está habilitado en un clúster, GetClusterInfo muestra un resultado que describe el estado del cifrado en reposo ("cifrado AtRestState") como "habilitado". Una vez que el cifrado en reposo está completamente habilitado, el estado devuelto cambia a "habilitado".
+
+[listing]
+----
+{
+   "id": 1,
+      "result": {
+         "clusterInfo": {
+            "attributes": { },
+               "encryptionAtRestState": "enabling",
+            "ensemble": [
+               "10.10.5.94",
+               "10.10.5.107",
+               "10.10.5.108"
+            ],
+            "mvip": "192.168.138.209",
+            "mvipNodeID": 1,
+            "name": "Marshall",
+            "repCount": 2,
+            "svip": "10.10.7.209",
+            "svipNodeID": 1,
+            "uniqueID": "91dt"
+      }
+   }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6
+
+[discrete]
+== Obtenga más información
+
+* link:reference_element_api_secureerasedrives.html["SecureEraseDrives"]
+* link:reference_element_api_getclusterinfo.html["GetClusterInfo"]
+* https://www.netapp.com/data-storage/solidfire/documentation/["Página de recursos de SolidFire de NetApp"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentación para versiones anteriores de SolidFire de NetApp y los productos Element"^]
+

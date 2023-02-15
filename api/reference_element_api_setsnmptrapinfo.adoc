@@ -1,0 +1,109 @@
+---
+permalink: api/reference_element_api_setsnmptrapinfo.html 
+sidebar: sidebar 
+keywords: snmp,trap,information,info,setting,set,setsnmptrapinfo 
+summary: 'Puede utilizar el método SetSnmpTrapInfo para habilitar y deshabilitar la generación de notificaciones SNMP del clúster \(traps\) y especificar el conjunto de hosts que reciben las notificaciones. Los valores que se pasan con cada llamada al método SetSnmpTrapInfo sustituyen a todos los valores establecidos en cualquier llamada anterior.' 
+---
+= SetSnmpTrapInfo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `SetSnmpTrapInfo` Método para habilitar y deshabilitar la generación de notificaciones SNMP (capturas) del clúster y especificar el conjunto de hosts que reciben las notificaciones. Los valores que se pasan con cada uno de ellos `SetSnmpTrapInfo` llamada a método reemplaza todos los valores establecidos en cualquier llamada anterior.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+TrapRecipients
+ a| 
+Lista de hosts que reciben los retos generados por el clúster de almacenamiento. Se requiere al menos un objeto si se habilita alguno de los tipos de solapamiento. Este parámetro solo es necesario si alguno de los parámetros booleanos se establece en TRUE. (No hay un valor predeterminado. No es obligatorio).
+ a| 
+xref:reference_element_api_snmptraprecipient.adoc[SnmpTrapRecipient] cabina
+
+
+
+ a| 
+ClusterFaultTrapsEnabled
+ a| 
+Si se establece en true, se envía una notificación de fallo del clúster correspondiente a la lista configurada de destinatarios de capturas cuando se registra un fallo en el clúster. (Valor predeterminado: FALSE. No es obligatorio).
+ a| 
+booleano
+
+
+
+ a| 
+ClusterFaultResolvedTrapsEnabled
+ a| 
+Si se establece en true, se envía una notificación de fallo resuelto del clúster correspondiente a la lista de destinatarios de capturas configurados cuando se resuelve un fallo del clúster. (Valor predeterminado: FALSE. No es obligatorio).
+ a| 
+booleano
+
+
+
+ a| 
+ClusterEventTrapsEnabled
+ a| 
+Si se establece en true, se envía una notificación de eventos del clúster correspondiente a la lista configurada de destinatarios de capturas cuando se registra un evento del clúster. (Valor predeterminado: FALSE. No es obligatorio).
+ a| 
+booleano
+
+|===
+
+
+== Valores devueltos
+
+Este método no tiene valores devueltos.
+
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+"method":"SetSnmpTrapInfo",
+"params":{
+    "clusterFaultTrapsEnabled":true,
+    "clusterFaultResolvedTrapsEnabled":true,
+    "clusterEventTrapsEnabled":true,
+    "trapRecipients":[
+    {
+      "host":"192.30.0.10",
+      "port":162,
+      "community":"public"
+    }
+   ]
+  },
+  "id":1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+    "id" : 1,
+    "result" : {}
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

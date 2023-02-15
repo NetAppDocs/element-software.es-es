@@ -1,0 +1,42 @@
+---
+permalink: storage/task_system_manage_cluster_ntp_configure.html 
+sidebar: sidebar 
+keywords: ntp, cluster, query, fqdn, dns server 
+summary: 'Puede indicar a cada nodo de un clúster que consulte un servidor de Protocolo de hora de red \(NTP\) para obtener actualizaciones. El clúster solo contacta con los servidores configurados y solicita información NTP de ellos.' 
+---
+= Configure los servidores de protocolo de tiempo de red para que el clúster consulte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede indicar a cada nodo de un clúster que consulte un servidor de protocolo de tiempo de redes (NTP) en busca de actualizaciones. El clúster solo contacta con los servidores configurados y solicita información NTP de ellos.
+
+Configure el NTP en el clúster para que apunte a un servidor NTP local. Es posible usar la dirección IP o el nombre de host FQDN. El servidor NTP predeterminado en el momento de crear el clúster se establece en us.pool.ntp.org; sin embargo, no siempre es posible establecer una conexión con este sitio en función de la ubicación física del clúster de SolidFire.
+
+El uso del FQDN depende de si la configuración de DNS del nodo de almacenamiento individual está en su lugar y operativa. Para ello, revise la página requisitos de puerto de red para configurar los servidores DNS en cada nodo de almacenamiento y asegúrese de que los puertos estén abiertos.
+
+Es posible introducir hasta cinco servidores NTP distintos.
+
+
+NOTE: Es posible usar tanto direcciones IPv4 como IPv6.
+
+.Lo que necesitará
+Para poder configurar esta opción, debe tener privilegios de administrador del clúster.
+
+.Pasos
+. Configure una lista de IP y/o FQDN en la configuración del servidor.
+. Compruebe que DNS se haya configurado correctamente en los nodos.
+. Haga clic en *Cluster* > *Settings*.
+. En Configuración del protocolo de tiempo de redes, seleccione *no*, que utiliza la configuración NTP estándar.
+. Haga clic en *Guardar cambios*.
+
+
+
+
+== Obtenga más información
+
+* https://www.netapp.com/data-storage/solidfire/documentation["Página SolidFire y Element Resources"^]
+* https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
+

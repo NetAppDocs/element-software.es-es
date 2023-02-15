@@ -1,0 +1,43 @@
+---
+permalink: setup/task_setup_create_a_volume_access_group_for_fibre_channel_clients.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Los grupos de acceso de volúmenes permiten la comunicación entre volúmenes y clientes de Fibre Channel en un sistema de almacenamiento SolidFire. La asignación de iniciadores de cliente Fibre Channel \(WWPN\) a los volúmenes en un grupo de acceso de volúmenes permite operaciones de I/o de datos seguras entre una red Fibre Channel y un volumen SolidFire.' 
+---
+= Cree un grupo de acceso de volúmenes para clientes Fibre Channel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los grupos de acceso de volúmenes permiten la comunicación entre volúmenes y clientes de Fibre Channel en un sistema de almacenamiento SolidFire. La asignación de iniciadores de cliente Fibre Channel (WWPN) a los volúmenes en un grupo de acceso de volúmenes permite operaciones de E/S de datos seguras entre una red Fibre Channel y un volumen de SolidFire.
+
+También se pueden añadir iniciadores iSCSI a un grupo de acceso de volúmenes para permitir el acceso de los iniciadores a los mismos volúmenes del grupo de acceso de volúmenes.
+
+.Pasos
+. Haga clic en *Administración* > *grupos de acceso*.
+. Haga clic en *Crear grupo de acceso*.
+. Escriba un nombre para el grupo de acceso de volúmenes en el campo *Nombre*.
+. Seleccione y añada los iniciadores Fibre Channel de la lista *Unbound Fibre Channel Initiators*.
++
+
+NOTE: Puede añadir o eliminar iniciadores más adelante.
+
+. *Opcional:* Seleccione y añada un iniciador iSCSI de la lista *Initiators*.
+. Para adjuntar volúmenes al grupo de acceso, realice los siguientes pasos:
++
+.. Seleccione un volumen de la lista *Volumes*.
+.. Haga clic en *Adjuntar volumen*.
+
+
+. Haga clic en *Crear grupo de acceso*.
+
+
+
+
+== Obtenga más información
+
+* https://www.netapp.com/data-storage/solidfire/documentation["Página SolidFire y Element Resources"^]
+* https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
+

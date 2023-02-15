@@ -1,0 +1,134 @@
+---
+permalink: api/reference_element_api_createsnapmirrorvolume.html 
+sidebar: sidebar 
+keywords: SnapMirror,endpoints,create,creating,volume,volumes,CreateSnapMirrorVolume 
+summary: La interfaz de usuario web de Element utiliza el método CreateSnapMirrorVolume para crear un volumen en el sistema de ONTAP remoto. 
+---
+= CreateSnapMirrorVolume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La interfaz de usuario web de Element utiliza el `CreateSnapMirrorVolume` Método para crear un volumen en el sistema ONTAP remoto.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+SnapMirrorEndpointID
+ a| 
+El ID de extremo del sistema de almacenamiento remoto de ONTAP se comunica con el clúster de almacenamiento de Element.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+vserver
+ a| 
+El nombre del Vserver.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+nombre
+ a| 
+El nombre del volumen ONTAP de destino.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+tipo
+ a| 
+El tipo de volumen. Los posibles valores son los siguientes:
+
+* rw: Volumen de lectura/escritura
+* ls: Volumen de carga compartida
+* dp: Volumen de protección de datos
+
+
+Si no se proporciona ningún tipo, el tipo predeterminado es dp.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+agregado
+ a| 
+El agregado de ONTAP que contiene en el que se creará el volumen. Puede utilizar ListSnapMirrorAggregates para obtener información sobre los agregados de ONTAP disponibles.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+tamaño
+ a| 
+El tamaño en bytes del volumen.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+
+
+== Valores devueltos
+
+Este método tiene los siguientes valores devueltos:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+SnapMirrorVolume
+ a| 
+Información acerca de un volumen de SnapMirror.
+ a| 
+xref:reference_element_api_snapmirrorvolume.adoc[SnapMirrorVolume]
+
+|===
+
+
+== Nuevo desde la versión
+
+10.1

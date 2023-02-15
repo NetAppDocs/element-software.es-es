@@ -1,0 +1,40 @@
+---
+permalink: storage/reference_data_manage_volumes_qos_policies_details.html 
+sidebar: sidebar 
+keywords: qos policies 
+summary: Puede ver detalles de las políticas de calidad de servicio en la pestaña Management. 
+---
+= Detalles de las políticas de calidad de servicio
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede ver detalles de las políticas de calidad de servicio en la pestaña Management.
+
+* *ID*
++
+El ID que genera el sistema para la política de calidad de servicio.
+
+* *Nombre*
++
+El nombre definido por el usuario para la política de calidad de servicio.
+
+* *Min IOPS*
++
+El número mínimo de IOPS garantizado para el volumen.
+
+* *Max IOPS*
++
+El número máximo de IOPS permitido para el volumen.
+
+* *Burst IOPS*
++
+El número máximo de IOPS permitido durante un breve período para el volumen. El valor predeterminado es de 15 15,000.
+
+* *Volúmenes*
++
+La cantidad de volúmenes que usan la política. Este número enlaza con una tabla de volúmenes que tienen aplicada la política.
+
+

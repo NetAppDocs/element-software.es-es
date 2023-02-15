@@ -1,0 +1,74 @@
+---
+permalink: api/reference_element_api_qos.html 
+sidebar: sidebar 
+keywords: object,objects,QoS 
+summary: 'El objeto QoS contiene información acerca de la configuración de calidad de servicio \(QoS\) de los volúmenes. Los volúmenes creados sin valores de calidad de servicio especificados se crean con los valores predeterminados. Puede buscar valores predeterminados mediante el método GetDefaultQoS.' 
+---
+= Calidad de servicio
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El objeto QoS contiene información acerca de la configuración de calidad de servicio de los volúmenes. Los volúmenes creados sin valores de calidad de servicio especificados se crean con los valores predeterminados. Puede encontrar los valores predeterminados mediante la `GetDefaultQoS` método.
+
+
+
+== Miembros de objeto
+
+Este objeto contiene los siguientes miembros:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+BurstIOPS
+ a| 
+Se permiten IOPS máximo de 4 KB «pico» durante breves periodos de tiempo. Permite ráfagas de actividad de I/o con un valor normal de maxIOPS.
+ a| 
+entero
+
+
+
+ a| 
+Tiempo de burstTime
+ a| 
+La cantidad de tiempo permitido para burstIOPS. El valor devuelto se representa en segundos. El sistema calcula este valor en función de las IOPS establecidas para la calidad de servicio.
+ a| 
+entero
+
+
+
+ a| 
+curva
+ a| 
+La curva es un conjunto de pares clave-valor. Las claves son tamaños de I/o en bytes. Los valores representan el coste de ejecutar un IOP en un tamaño de I/o específico. La curva se calcula en relación con una operación de 4096 bytes establecida en 100 IOPS.
+ a| 
+Objeto JSON
+
+
+
+ a| 
+IOPS
+ a| 
+El número máximo de IOPS de 4 KB permitidas a lo largo de un periodo de tiempo prolongado.
+ a| 
+entero
+
+
+
+ a| 
+MinIOPS
+ a| 
+Como garantía el mínimo de IOPS de 4 KB. Las IOPS permitidas solo se sitúan por debajo de este nivel si todos los volúmenes se han limitado a su valor de minIOPS y aún no hay suficiente capacidad de rendimiento.
+ a| 
+entero
+
+|===
+
+
+== Obtenga más información
+
+xref:reference_element_api_getdefaultqos.adoc[GetDefaultQoS]

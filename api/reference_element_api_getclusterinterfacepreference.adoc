@@ -1,0 +1,96 @@
+---
+permalink: api/reference_element_api_getclusterinterfacepreference.html 
+sidebar: sidebar 
+keywords: cluster,interface,preferences,preference,get,getting,getclusterinterfacepreference 
+summary: El método GetClusterInterfacePreference permite a los sistemas integrados con clústeres de almacenamiento que ejecutan el software Element para obtener información sobre una preferencia de interfaz de clúster existente. Este método es para uso interno. 
+---
+= GetClusterInterfacePreference
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La `GetClusterInterfacePreference` Método permite que los sistemas se integren con los clústeres de almacenamiento que ejecutan el software Element para obtener información acerca de una preferencia de interfaz de clúster existente. Este método es para uso interno.
+
+
+
+== Parámetros
+
+Este método tiene el siguiente parámetro de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+nombre
+ a| 
+El nombre de la interfaz del clúster preferido.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+preferencia
+ a| 
+El nombre y el valor de la preferencia de la interfaz de clúster solicitada.
+ a| 
+Objeto JSON
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+	"method": "GetClusterInterfacePreference",
+	"params": {
+		"name": "prefname"
+		},
+	"id": 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+	"id": 1,
+	"result": {
+		"preference": {
+			"name": "prefname",
+			"value": "testvalue"
+		}
+	}
+}
+----
+
+
+== Nuevo desde la versión
+
+11.0

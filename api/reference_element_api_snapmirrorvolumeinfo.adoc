@@ -1,0 +1,64 @@
+---
+permalink: api/reference_element_api_snapmirrorvolumeinfo.html 
+sidebar: sidebar 
+keywords: object,objects,snapMirrorVolumeInfo 
+summary: El objeto snapVolumeInfo contiene información sobre la ubicación de un volumen en una relación de SnapMirror, como su nombre y tipo. 
+---
+= SnapMirrorVolumeInfo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El objeto snapVolumeInfo contiene información sobre la ubicación de un volumen en una relación de SnapMirror, como su nombre y tipo.
+
+
+
+== Miembros de objeto
+
+Este objeto contiene los siguientes miembros:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+tipo
+ a| 
+El tipo de volumen. Los posibles valores son los siguientes:
+
+* SolidFire: El volumen reside en un clúster de almacenamiento que ejecuta el software Element.
+* ONTAP: El volumen reside en un clúster de ONTAP remoto.
+
+ a| 
+cadena
+
+
+
+ a| 
+ID de volumen
+ a| 
+El ID del volumen. Sólo válido si "type" es SolidFire.
+ a| 
+entero
+
+
+
+ a| 
+vserver
+ a| 
+El nombre del Vserver al que pertenece este volumen. Sólo válido si "type" es ONTAP.
+ a| 
+cadena
+
+
+
+ a| 
+nombre
+ a| 
+El nombre del volumen.
+ a| 
+cadena
+
+|===

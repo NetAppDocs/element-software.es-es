@@ -1,0 +1,101 @@
+---
+permalink: api/reference_element_api_getdriveconfig.html 
+sidebar: sidebar 
+keywords: drive,config,configuration,get,getting,getdriveconfig 
+summary: El método GetDriveConfig para obtener información de la unidad para los números de unidades de bloque y segmentos esperados, así como el número de unidades de bloque y segmentos conectados actualmente al nodo. 
+---
+= GetDriveConfig
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `GetDriveConfig` método para obtener información de la unidad para los números de unidades de bloques y segmentos esperados, así como el número de unidades de bloque y segmentos conectados actualmente al nodo.
+
+
+
+== Parámetros
+
+Este método no tiene parámetros de entrada.
+
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+DriveConfig
+ a| 
+La información de las unidades que están conectadas al nodo.
+ a| 
+xref:reference_element_api_drive.adoc[unidad]
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "GetDriveConfig",
+   "params": {},
+   "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Las respuestas para este método son similares al ejemplo siguiente. Debido al tamaño, la respuesta contiene información de una unidad de un solo nodo de almacenamiento.
+
+[listing]
+----
+{
+	"id": 1,
+	"result": {
+			"driveConfig": {
+					"drives": [
+						{
+							"canonicalName": "sda",
+							"connected": true,
+							"dev": 2052,
+							"devPath": "/dev/sdimm0p4",
+							"driveType": "Slice",
+							"name": "scsi-SATA_VRFSD3400GNCVMT205581853-part4",
+							"path": "/dev/sda4",
+							"pathLink": "/dev/sdimm0p4",
+							"product": "VRFSD3400GNCVMTKS1",
+							"scsiCompatId": "scsi-SATA_VRFSD3400GNCVMT205581853-part4",
+							"scsiState": "Running",
+							"securityAtMaximum": false,
+							"securityEnabled": false,
+							"securityFrozen": true,
+							"securityLocked": false,
+							"securitySupported": true,
+							"serial": "205581853",
+							"size": 299988156416,
+							"slot": -1,
+							"uuid": "9d4b198b-5ff9-4f7c-04fc-3bc4e2f38974",
+							"vendor": "Viking",
+							"version": "612ABBF0"
+						}
+					],
+					"numBlockActual": 10,
+					"numBlockExpected": 10,
+					"numSliceActual": 1,
+					"numSliceExpected": 1,
+					"numTotalActual": 11,
+					"numTotalExpected": 11
+			}
+	}
+}
+----

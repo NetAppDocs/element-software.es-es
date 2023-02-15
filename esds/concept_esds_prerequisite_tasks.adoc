@@ -1,0 +1,472 @@
+---
+permalink: esds/concept_esds_prerequisite_tasks.html 
+sidebar: sidebar 
+keywords: solidfire esds,software-defined storage,ports,prerequisites 
+summary: Asegúrese de realizar las comprobaciones necesarias y compruebe que su entorno cumple los requisitos de configuración, direccionamiento IP y red antes de instalar SolidFire eSDS. 
+---
+= Realice las tareas de requisitos previos para la instalación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Asegúrese de realizar las comprobaciones necesarias y compruebe que su entorno cumple los requisitos de configuración, direccionamiento IP y red antes de instalar SolidFire eSDS.
+
+.*Instale el hardware necesario*
+* Instale el servidor admitido. Consulte https://mysupport.netapp.com/matrix/imt.jsp?components=97283;&solution=1757&isHWU#welcome["Matriz de interoperabilidad de NetApp (se requiere inicio de sesión)"^] si quiere más información.
+* Asegúrese de que la configuración de hardware sea equilibrada y de que se llenen todos los canales. Para obtener más información sobre cómo maximizar el ancho de banda, consulte https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/SolidFire_Enterprise_SDS/How_to_balance_memory_and_maximize_bandwidth_for_your_hardware_configurations["Artículo de base de conocimientos"^] (se requiere inicio de sesión).
+
+
+.*Configurar el host (nodo)*
+* Instale Red Hat Package Manager en función de las versiones compatibles enumeradas en https://mysupport.netapp.com/matrix/imt.jsp?components=97283;&solution=1757&isHWU#welcome["Matriz de interoperabilidad de NetApp (se requiere inicio de sesión)"^].
+* Configure un servidor de protocolo de tiempo de redes (NTP) para utilizarlo con todos los hosts de la red.
+* Al seleccionar el destino de instalación, seleccione el botón de opción para configurar manualmente la partición del sistema de archivos. En la página *Manual Partitioning*, utilice los botones *+* y *-* para eliminar cualquier partición existente, y cree nuevas particiones y dimensionarlas siguiendo las recomendaciones que se enumeran aquí. El uso del esquema de particiones predeterminado de LVM le permite cambiar fácilmente el tamaño más adelante, si es necesario.
++
+
+NOTE: De forma predeterminada, Red Hat Package Manager elige `xfs` como sistema de archivos predeterminado para las particiones que se crean manualmente. Debe cambiarlo a. `ext4`, excepto el `/boot` y.. `swap` particiones. Su `/boot` la partición debe utilizar `ext2`.
+
++
+Si el disco SATA es de 250 GB, siga la partición recomendada a continuación. Si su disco SATA tiene más espacio, puede aumentar los tamaños de las particiones /opt y /var.
+
++
+[cols="2*"]
+|===
+| Partición | Tamaño 
+
+
+ a| 
+/boot
+ a| 
+1 GB
+
+
+
+ a| 
+/opt
+ a| 
+50 GB
+
+
+
+ a| 
+/var
+ a| 
+50 GB
+
+
+
+ a| 
+intercambiar
+ a| 
+4 GB
+
+
+
+ a| 
+/home
+ a| 
+5 GB
+
+
+
+ a| 
+/
+ a| 
+Mínimo DE 10 GB
+
+
+
+ a| 
+/usr
+ a| 
+Mínimo DE 10 GB
+
+|===
++
+
+NOTE: La `/dev/sdb` ningún proceso utiliza el disco.
+
+* Desactive RAID para /boot.
+* En la pantalla de selección de software, donde seleccione paquetes específicos para instalar, seleccione *servidor* o *servidor de infraestructura* según la versión de Red Hat Package Manager.
+* Después del primer arranque, realizar lo siguiente:
++
+** Instale Red Hat Subscription Manager y habilite los siguientes repositorios:
++
+[listing]
+----
+
+rhel-7-server-ansible-2.9-rpms
+rhel-7-server-optional-rpms
+rhel-7-server-extras-rpms
+----
+** Habilite SSH en sus nodos.
+** Si desea deshabilitar IPv6, siga los pasos detallados en este https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/SolidFire_Enterprise_SDS/How_to_disable_IPv6_for_SolidFire_eSDS["Artículo de KB (se requiere inicio de sesión)"^].
+
+
+
+
+.*Instale el software necesario*
+* Instale Ansible, Git, Podman y Python 3.0.
++
+[NOTE]
+====
+Para el elemento 12.5, la versión de Podman admitida depende de su versión de Red Hat Package Manager:
+
+[cols="35,65"]
+|===
+| Versión de Red Hat Package Manager | Versión de Podman 
+
+
+| 7.x. | 1.6.4 
+
+
+| 8.1, 8.2, 8.3 y 8.4  a| 
+3.1.x, 3.2.x, 3.3.x, 3.4.1 y 3.4.2
+
+
+NOTE: Cuando esté disponible, NetApp le recomienda que acepte actualizaciones de seguridad para su versión de Podman.
+
+|===
+====
+
+
+.*Compruebe que su configuración coincide con los requisitos de NetApp para la instalación de SolidFire eSDS*
+* Utilice la configuración de SolidFire eSDS que se muestra en la https://mysupport.netapp.com/matrix/#welcome["Herramienta de matriz de interoperabilidad de NetApp (IMT)"] como referencia.
++
+
+IMPORTANT: Si se pone en contacto con el soporte de NetApp para obtener ayuda con los problemas relacionados con SolidFire eSDS, el soporte primero verificará que su plataforma cumpla con la configuración de referencia de SolidFire eSDS enumerada en IMT. Si Support determina que su plataforma subyacente no cumple con la configuración de referencia, el equipo de soporte le guiará a la hora de alinear el firmware, el software o los componentes de hardware que no sean compatibles con las versiones correctas en IMT.
+
+* Ejecute una comprobación de cumplimiento de SolidFire eSDS.
++
+.. Ejecute el `ansible-galaxy install` para instalar el `nar_solidfire_sds_compliance` función.
++
+[listing]
+----
+ansible-galaxy install git+https://github.com/NetApp-Automation/nar_solidfire_sds_compliance.git
+----
++
+También puede instalar manualmente la función copiándola de https://github.com/NetApp-Automation["Repositorio de GitHub de NetApp"^] y colocar el rol en el `~/.ansible/roles` directorio. NetApp proporciona un archivo README que incluye información acerca de cómo ejecutar una función.
+
++
+
+NOTE: Asegúrese de descargar siempre las versiones más recientes de las funciones.
+
+.. Mueva los roles que descargó hacia arriba en un directorio desde el lugar donde se instalaron.
++
+[listing]
+----
+ $ mv ~/.ansible/roles/ansible/nar_solidfire_sds_* ~/.ansible/roles/
+----
+.. Ejecute el `ansible-galaxy role list` Comando para garantizar que Ansible está configurado para utilizar los roles nuevos.
++
+[listing]
+----
+ - nar_solidfire_sds_install, (unknown version)
+ - nar_solidfire_sds_upgrade, (unknown version)
+ - ansible, (unknown version)
+ - nar_solidfire_sds_compliance, (unknown version)
+ - nar_solidfire_cluster_config, (unknown version)
+ - nar_solidfire_sds_uninstall, (unknown version)
+----
+.. Cree el libro de estrategia para utilizarlo en la comprobación de cumplimiento de normativas.
+.. Ejecute el libro de estrategia de comprobación de cumplimiento tal y como se muestra en el siguiente ejemplo:
++
+[listing]
+----
+ $ ansible-playbook -i yourinventory.yml yourplaybook.yml
+----
+
+
++
+
+NOTE: Incluso después de empezar a utilizar el sistema SolidFire eSDS, debe realizar la comprobación de cumplimiento con regularidad para asegurarse de que el sistema cumple con las normativas. En algunos casos, el soporte de NetApp le solicitará que ejecute la comprobación de cumplimiento como ayuda para diagnosticar y solucionar problemas.
+
+
+
+.*Entender los requisitos de red y direcciones IP*
+* Familiarícese con la configuración y gestión de redes e interfaces de red en Red Hat Package Manager. Consulte https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/networking_guide/index["Documentación de redhat"^].
+* Configure la red siguiendo los requisitos de IP que se detallan aquí:
++
+[cols="4*"]
+|===
+| Componente | La dirección IP de la red de almacenamiento | La dirección IP de red de gestión | Número total de direcciones IP 
+
+
+ a| 
+Nodo de almacenamiento
+ a| 
+1
+ a| 
+1
+ a| 
+2 por nodo
+
+
+
+ a| 
+Nodo de gestión
+ a| 
+(Opcional) 1
+ a| 
+1
+ a| 
+1 por clúster en la red de almacenamiento + 1 por clúster en la red de gestión + 1 FQDN por clúster para el nodo de gestión
+
+
+
+ a| 
+Clúster de almacenamiento
+ a| 
+1 IP de almacenamiento (SVIP)
+ a| 
+1 IP de gestión (MVIP)
+ a| 
+2 por clúster de almacenamiento
+
+|===
+* Configure la red de almacenamiento en switches Ethernet de 25 GbE y la red de gestión en switches de 10 GbE. Consulte la siguiente ilustración de cableado:
++
+image::../media/esds_dl360_ports.png[Muestra los puertos del nodo DL360.]
+
++
+[cols="2*"]
+|===
+| Elemento | Descripción 
+
+
+| 1  a| 
+Puertos para la red de almacenamiento
+
+
+
+ a| 
+2
+ a| 
+Puerto para IPMI
+
+
+
+ a| 
+3
+ a| 
+Puertos para la red de gestión
+
+|===
+
+
+
+IMPORTANT: La ilustración que se ofrece aquí tiene la intención de ser un ejemplo. Su hardware real puede ser diferente en función del servidor que tenga.
+
+* Cambie el MTU del puerto del switch a 9216 bytes.
+
+
+.*Permite puertos específicos a través del firewall de su centro de datos*
+* Si `firewalld` Está activado en el nodo de almacenamiento en el que se ejecuta Red Hat Package Manager, asegúrese de que tiene abiertos los siguientes puertos, de manera que pueda gestionar el sistema de forma remota, permitir a los clientes fuera del centro de datos conectarse a los recursos y asegurarse de que los servicios internos funcionen correctamente:
++
+[cols="4*"]
+|===
+| Origen | Destino | Puerto | Descripción 
+
+
+ a| 
+MIP de nodo de almacenamiento
+ a| 
+Nodo de gestión
+ a| 
+80 TCP/UDP
+ a| 
+Actualizaciones del clúster
+
+
+
+ a| 
+Servidor SNMP
+ a| 
+MIP de nodo de almacenamiento
+ a| 
+161 UDP
+ a| 
+Sondeo de SNMP
+
+
+
+ a| 
+PC del administrador de sistemas
+ a| 
+Nodo de gestión
+ a| 
+442 TCP
+ a| 
+Acceso de interfaz de usuario de HTTPS a nodo de gestión
+
+
+
+ a| 
+PC del administrador de sistemas
+ a| 
+MIP de nodo de almacenamiento
+ a| 
+442 TCP
+ a| 
+Acceso de interfaz de usuario de HTTPS a nodo de almacenamiento
+
+
+
+ a| 
+Clientes iSCSI
+ a| 
+MVIP de clúster de almacenamiento
+ a| 
+443 TCP
+ a| 
+Acceso de interfaz de usuario y API (opcional)
+
+
+
+ a| 
+Nodo de gestión
+ a| 
+monitoring.solidfire.com
+ a| 
+443 TCP
+ a| 
+Informes del clúster de almacenamiento a Active IQ
+
+
+
+ a| 
+MIP de nodo de almacenamiento
+ a| 
+MVIP de clúster de almacenamiento remoto
+ a| 
+443 TCP
+ a| 
+Comunicación de emparejamiento de clústeres de replicación remota
+
+
+
+ a| 
+MIP de nodo de almacenamiento
+ a| 
+MIP de nodo de almacenamiento remoto
+ a| 
+443 TCP
+ a| 
+Comunicación de emparejamiento de clústeres de replicación remota
+
+
+
+ a| 
+SolidFire eSDS sfapp
+ a| 
+Acceso API e interfaz de usuario por nodo para crear un clúster
+ a| 
+2010 UDP
+ a| 
+Indicador de clúster (para detectar nodos que se van a añadir a un clúster)
+
+
+
+ a| 
+Clientes iSCSI
+ a| 
+SVIP de clúster de almacenamiento
+ a| 
+3260 TCP
+ a| 
+Comunicaciones de cliente iSCSI
+
+
+
+ a| 
+Clientes iSCSI
+ a| 
+SIP de clúster de almacenamiento
+ a| 
+3260 TCP
+ a| 
+Comunicaciones de cliente iSCSI
+
+
+
+ a| 
+Servidor DE JABÓN
+ a| 
+SolidFire eSDS sfapp
+ a| 
+7627 TCP
+ a| 
+Servicios web DE JABÓN
+
+
+
+ a| 
+PC del administrador de sistemas
+ a| 
+N.A.
+ a| 
+8080 TCP
+ a| 
+Comunicaciones del administrador del sistema
+
+
+
+ a| 
+VCenter Server
+ a| 
+Nodo de gestión
+ a| 
+8443 TCP
+ a| 
+Servicio QoSSIOC del complemento de vCenter
+
+|===
++
+
+NOTE: Se necesitan los puertos 2181, 2182 y 2183 para la base de datos distribuida de elementos y se abrirán dinámicamente desde el contenedor de elementos al instalar SolidFire eSDS.
+
+* Utilice los siguientes comandos para abrir los puertos mencionados anteriormente:
++
+[listing]
+----
+systemctl start firewalld
+firewall-cmd --permanent --add-service=snmp
+firewall-cmd --permanent --add-port=80/tcp
+firewall-cmd --permanent --add-port=80/udp
+firewall-cmd --permanent --add-port=442-443/tcp
+firewall-cmd --permanent --add-port=442-443/udp
+firewall-cmd --permanent --add-port=2010/udp
+firewall-cmd --permanent --add-source-port=2010/udp
+firewall-cmd --permanent --add-port=3260/tcp
+firewall-cmd --permanent --add-port=7627/tcp
+firewall-cmd --permanent --add-port=8080/tcp
+firewall-cmd --permanent --add-port=8443/tcp
+firewall-cmd –-reload
+----
+
+
+.*Configurar la red host*
+* Configure la red del host con el link:task_esds_configure_the_interface_config_files.html["mejores prácticas"^] proporcionado.
++
+
+IMPORTANT: Debe completar los pasos para configurar la red host para garantizar una instalación correcta de SolidFire eSDS.
+
+
+
+.*Completar requisitos adicionales*
+* Instale un recogida, que el soporte de NetApp utilizará para la recogida de registros de host. Puede instalar una recogida de https://mysupport.netapp.com/site/tools/tool-eula/activeiq-onecollect["aquí"^]. Necesita una cuenta de NetApp para acceder a la descarga. También puede encontrar la Guía de instalación de recopilación y las notas de la versión en la misma ubicación.
++
+
+NOTE: Debe descargar e instalar una recopilación para poder recibir asistencia óptima.
+
+* Instale el nodo de gestión para la recogida de registros y para habilitar el acceso al soporte de NetApp para la solución de problemas. Para obtener información sobre los pasos de instalación y el nodo de gestión, consulte link:../mnode/task_mnode_install.html["aquí"^].
+
+
+
+
+== Obtenga más información
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Página de recursos de SolidFire de NetApp"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentación para versiones anteriores de SolidFire de NetApp y los productos Element"^]
+

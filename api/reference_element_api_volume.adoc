@@ -1,0 +1,303 @@
+---
+permalink: api/reference_element_api_volume.html 
+sidebar: sidebar 
+keywords: object,objects,volume 
+summary: El objeto de volumen contiene información de configuración acerca de los volúmenes emparejados o desemparejados. No incluye información de tiempo de ejecución ni de uso, y no contiene información acerca de los volúmenes virtuales. 
+---
+= volumen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El objeto de volumen contiene información de configuración acerca de los volúmenes emparejados o desemparejados. No incluye información de tiempo de ejecución ni de uso, y no contiene información acerca de los volúmenes virtuales.
+
+
+
+== Miembros de objeto
+
+Este objeto contiene los siguientes miembros:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+acceso
+ a| 
+El tipo de acceso permitido para el volumen. Los posibles valores son los siguientes:
+
+* `readOnly`: Sólo se permiten operaciones de lectura.
+* `readWrite`: Se permiten lecturas y escrituras.
+* `locked`: No se permiten lecturas ni escrituras.
+* `replicationTarget`: Designado como volumen objetivo en un par de volúmenes replicado.
+
+ a| 
+cadena
+
+
+
+ a| 
+ID de cuenta
+ a| 
+El ID de cuenta de la cuenta que contiene el volumen.
+ a| 
+entero
+
+
+
+ a| 
+atributos
+ a| 
+La lista de pares nombre-valor en el formato de objetos JSON.
+ a| 
+Objeto JSON
+
+
+
+ a| 
+Tamaño del bloque
+ a| 
+El tamaño de los bloques en el volumen.
+ a| 
+entero
+
+
+
+ a| 
+CreateTime
+ a| 
+La hora con formato UTC+0 se creó el volumen.
+ a| 
+Cadena ISO 8601
+
+
+
+ a| 
+Plan de protección de currentScheme
+ a| 
+El esquema de protección que se está utilizando para este volumen. Si un volumen se convierte de un esquema de protección a otro, este miembro refleja el esquema de protección al que se está convirtiendo el volumen.
+ a| 
+cadena
+
+
+
+ a| 
+DeleteTime
+ a| 
+La hora con formato UTC+0 se eliminó el volumen.
+ a| 
+Cadena ISO 8601
+
+
+
+ a| 
+enable512e
+ a| 
+Si se establece en TRUE, el volumen proporciona una emulación de sector de 512 bytes.
+ a| 
+booleano
+
+
+
+ a| 
+EnableSnapMirrorReplication
+ a| 
+Tanto si el volumen se puede usar para la replicación con extremos de SnapMirror.
+ a| 
+booleano
+
+
+
+| Tamaño 50 | Especifica la cantidad máxima de instantáneas del volumen que se mantendrán simultáneamente si se utiliza el modo de retención de snapshots First in-first-out (FIFO). | entero 
+
+
+ a| 
+iqn
+ a| 
+El nombre completo de iSCSI correspondiente al volumen.
+ a| 
+cadena
+
+
+
+ a| 
+LastAccessTime
+ a| 
+La última vez que se produjo cualquier acceso (incluidas las operaciones de I/o) al volumen (con el formato UTC+0). Si no se conoce la última hora de acceso, este valor es nulo.
+ a| 
+Cadena ISO 8601
+
+
+
+ a| 
+LastAccessTimeIO
+ a| 
+La última vez que se produjo cualquier I/o en el volumen (con formato UTC+0). Si no se conoce la última hora de acceso, este valor es nulo.
+ a| 
+Cadena ISO 8601
+
+
+
+| MinFioSize | Especifica la cantidad mínima de ranuras de snapshot reservadas simultáneamente por el volumen si se utiliza el modo de retención de snapshot del primero en entrar primero en salir (FIFO). | entero 
+
+
+ a| 
+nombre
+ a| 
+El nombre del volumen según lo proporcionado en el momento de creación.
+ a| 
+cadena
+
+
+
+ a| 
+Esquema de protección previa
+ a| 
+Si un volumen se convierte de un esquema de protección a otro, este miembro refleja el esquema de protección del que se está convirtiendo el volumen. Este miembro no cambia hasta que se inicia una conversión. Si un volumen nunca se convirtió, este miembro es nulo.
+ a| 
+cadena
+
+
+
+ a| 
+Tiempo purgable
+ a| 
+La hora con formato UTC+0 se purgó el volumen del sistema.
+ a| 
+Cadena ISO 8601
+
+
+
+ a| 
+calidad de servicio
+ a| 
+La configuración de calidad de servicio para este volumen.
+ a| 
+xref:reference_element_api_qos.adoc[Calidad de servicio]
+
+
+
+ a| 
+QosPolicyID
+ a| 
+El ID de política de calidad de servicio asociado con el volumen. El valor es nulo si el volumen no se asocia con una política.
+ a| 
+entero
+
+
+
+ a| 
+SsiEUIDeviceID
+ a| 
+El identificador global exclusivo de dispositivo SCSI para el volumen en un formato de 16 bytes basado en EUI-64.
+ a| 
+cadena
+
+
+
+ a| 
+SsiNAADeviceID
+ a| 
+El Identificador global exclusivo de dispositivo SCSI para el volumen en el formato extendido registrado de NAA según la norma IEEE.
+ a| 
+cadena
+
+
+
+ a| 
+Recuento de sliceos
+ a| 
+El número de cortes en el volumen. Este valor es siempre "1".
+ a| 
+entero
+
+
+
+ a| 
+estado
+ a| 
+El estado actual del volumen. Los posibles valores son los siguientes:
+
+* Init: Volumen que se está inicializando y no está listo para conexiones.
+* Active: Un volumen activo listo para las conexiones.
+* Deleted: Un volumen que se ha marcado para su eliminación, pero no se ha purgado todavía.
+
+ a| 
+cadena
+
+
+
+ a| 
+Tamaño total
+ a| 
+Los bytes totales de capacidad aprovisionada.
+ a| 
+entero
+
+
+
+ a| 
+ID de volumen virtual
+ a| 
+El ID único de volumen virtual asociado con el volumen, si lo hubiera.
+ a| 
+UUID
+
+
+
+ a| 
+VolumeAccessGroups
+ a| 
+Lista de ID pf los grupos de acceso de volúmenes a los que pertenece un volumen. Este valor es una lista vacía si un volumen no pertenece a ningún grupo de acceso de volúmenes.
+ a| 
+matriz en números enteros
+
+
+
+ a| 
+VolumeConsistencyGroupUUID
+ a| 
+El ID único universal del grupo de coherencia de volúmenes del que forma parte el volumen.
+ a| 
+UUID
+
+
+
+ a| 
+ID de volumen
+ a| 
+El ID de volumen único para el volumen.
+ a| 
+entero
+
+
+
+ a| 
+VolumePairs
+ a| 
+Información acerca de un volumen emparejado. Solo es visible si un volumen está emparejado. Este valor es una lista vacía si el volumen no está emparejado.
+ a| 
+xref:reference_element_api_volumepair.adoc[Pareja de volúmenes] cabina
+
+
+
+ a| 
+VolumeUUID
+ a| 
+El ID único universal del volumen.
+ a| 
+UUID
+
+|===
+
+
+== Obtenga más información
+
+* xref:reference_element_api_listactivevolumes.adoc[ListActiveVolumes]
+* xref:reference_element_api_listdeletedvolumes.adoc[ListDeletedVolumes]
+* xref:reference_element_api_listvolumes.adoc[ListVolumes]
+* xref:reference_element_api_listvolumesforaccount.adoc[ListVolumesForAccount]
+* xref:reference_element_api_qos.adoc[Calidad de servicio]
+

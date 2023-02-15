@@ -1,0 +1,130 @@
+---
+permalink: api/reference_element_api_snapmirrorvserver.html 
+sidebar: sidebar 
+keywords: object,objects,snapMirrorVserver 
+summary: 'El objeto snapMirrorVServer contiene información sobre las máquinas virtuales de almacenamiento \(o vServers\) en el clúster ONTAP de destino.' 
+---
+= SnapMirrorVServer
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El objeto snapMirrorVServer contiene información sobre las máquinas virtuales de almacenamiento (o vServers) en el clúster ONTAP de destino.
+
+
+
+== Miembros de objeto
+
+Este objeto contiene los siguientes miembros:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+SnapMirrorEndpointID
+ a| 
+El ID del sistema ONTAP de destino.
+ a| 
+entero
+
+
+
+ a| 
+Nombre del servidor virtual
+ a| 
+El nombre del Vserver.
+ a| 
+cadena
+
+
+
+ a| 
+VserverType
+ a| 
+El tipo de Vserver. Los posibles valores son los siguientes:
+
+* sql server
+* admin
+* sistema
+* nodo
+
+ a| 
+cadena
+
+
+
+ a| 
+VserverSubtype
+ a| 
+Subtipo del Vserver. Los posibles valores son los siguientes:
+
+* predeterminado
+* dp_destino
+* sql server
+* origen_sinc
+* sync_destination
+
+ a| 
+cadena
+
+
+
+ a| 
+RootVolume
+ a| 
+El volumen raíz del Vserver.
+ a| 
+cadena
+
+
+
+ a| 
+RootVolumeagregate
+ a| 
+El agregado en el que se creará el volumen raíz.
+ a| 
+cadena
+
+
+
+ a| 
+VserveragregateInfo
+ a| 
+Matriz de objetos snapMirrorVserveragregateInfo.
+ a| 
+Objeto JSON
+
+
+
+ a| 
+AdminState
+ a| 
+Estado administrativo detallado del Vserver. Los posibles valores son los siguientes:
+
+* ejecutando
+* detenido
+* iniciando
+* parar
+* inicializando
+* eliminando
+
+ a| 
+cadena
+
+
+
+ a| 
+OperacionalState
+ a| 
+Estado operativo básico del Vserver. Los posibles valores son los siguientes:
+
+* ejecutando
+* detenido
+
+ a| 
+cadena
+
+|===

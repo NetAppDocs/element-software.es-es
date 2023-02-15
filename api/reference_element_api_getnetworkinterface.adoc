@@ -1,0 +1,186 @@
+---
+permalink: api/reference_element_api_getnetworkinterface.html 
+sidebar: sidebar 
+keywords: nodes,node,network,interface,get,getting,getnetworkinterface 
+summary: Puede utilizar el método GetNetworkInterface para obtener información acerca de una interfaz de red en un nodo. 
+---
+= GetNetworkInterface
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `GetNetworkInterface` método para obtener información sobre una interfaz de red en un nodo.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+interfaz
+ a| 
+El nombre de la interfaz para obtener información acerca de cada nodo. Los posibles valores son los siguientes:
+
+* Bond1G
+* Bond10G
+
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+fuerza
+ a| 
+Establezca este parámetro en TRUE para ejecutarse en todos los nodos del clúster.
+ a| 
+booleano
+ a| 
+falso
+ a| 
+No
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+nodos
+ a| 
+Una cabina de objetos que describen la interfaz para cada nodo de almacenamiento del clúster de almacenamiento. Cada objeto dentro de la matriz contiene los siguientes elementos:
+
+* NodeID: (Entero) el ID del nodo de almacenamiento en el clúster de almacenamiento al que se aplica la información de la interfaz.
+* resultado: (xref:reference_element_api_networkinterface.adoc[NetworkInterface]) Información de configuración de la interfaz para este nodo de almacenamiento.
+
+ a| 
+Cabina de objetos JSON
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+	"method": "GetNetworkInterface",
+	"params": {
+		"interface": "Bond1G",
+		"force": true
+		},
+	"id": 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+	"id": 1,
+	"result": {
+		"nodes": [
+			{
+				"nodeID": 1,
+				"result": {
+					"interface": {
+						"address": "10.117.64.32",
+						"addressV6": "::",
+						"broadcast": "10.117.79.255",
+						"macAddress": "90:b1:1c:42:e0:1e",
+						"mtu": 1500,
+						"name": "Bond1G",
+						"namespace": false,
+						"netmask": "255.255.240.0",
+						"status": "UpAndRunning",
+						"type": "BondMaster",
+						"virtualNetworkTag": 0
+					}
+				}
+			},
+			{
+				"nodeID": 2,
+				"result": {
+					"interface": {
+						"address": "10.117.64.35",
+						"addressV6": "::",
+						"broadcast": "10.117.79.255",
+						"macAddress": "d4:ae:52:7a:ae:23",
+						"mtu": 1500,
+						"name": "Bond1G",
+						"namespace": false,
+						"netmask": "255.255.240.0",
+						"status": "UpAndRunning",
+						"type": "BondMaster",
+						"virtualNetworkTag": 0
+					}
+				}
+			},
+			{
+				"nodeID": 3,
+				"result": {
+					"interface": {
+						"address": "10.117.64.39",
+						"addressV6": "::",
+						"broadcast": "10.117.79.255",
+						"macAddress": "c8:1f:66:f0:9d:17",
+						"mtu": 1500,
+						"name": "Bond1G",
+						"namespace": false,
+						"netmask": "255.255.240.0",
+						"status": "UpAndRunning",
+						"type": "BondMaster",
+						"virtualNetworkTag": 0
+					}
+				}
+			},
+			{
+				"nodeID": 4,
+				"result": {
+					"interface": {
+						"address": "10.117.64.107",
+						"addressV6": "::",
+						"broadcast": "10.117.79.255",
+						"macAddress": "b8:ca:3a:f5:24:f8",
+						"mtu": 1500,
+						"name": "Bond1G",
+						"namespace": false,
+						"netmask": "255.255.240.0",
+						"status": "UpAndRunning",
+						"type": "BondMaster",
+						"virtualNetworkTag": 0
+					}
+				}
+			}
+		]
+	}
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

@@ -1,0 +1,44 @@
+---
+permalink: storage/concept_troubleshoot_nodes.html 
+sidebar: sidebar 
+keywords: troubleshoot, nodes removing 
+summary: Los nodos se pueden quitar de un clúster cuando requieren mantenimiento o se deben sustituir. Debe usar la API o la interfaz de usuario de NetApp Element para quitar los nodos antes de desconectarlos. 
+---
+= Solucione los problemas de los nodos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los nodos se pueden quitar de un clúster cuando requieren mantenimiento o se deben sustituir. Debe usar la API o la interfaz de usuario de NetApp Element para quitar los nodos antes de desconectarlos.
+
+A continuación, se ofrece una descripción general del procedimiento para quitar nodos de almacenamiento:
+
+* Compruebe que haya suficiente capacidad en el clúster para crear una copia de los datos en el nodo.
+* Quite las unidades del clúster mediante la interfaz de usuario o el método API RemoveDrives.
++
+Esto provoca que el sistema migre los datos desde las unidades del nodo a otras unidades en el clúster. El tiempo que se tarda en realizar este proceso depende de la cantidad de datos que haya que migrar.
+
+* Quite el nodo del clúster.
+
+
+Tenga en cuenta las siguientes consideraciones antes de apagar o encender un nodo:
+
+* La desconexión de nodos y clústeres implica riesgos si no se realiza correctamente.
++
+La desconexión de un nodo se debe hacer bajo la supervisión del soporte de NetApp.
+
+* Si un nodo ha estado desconectado más de 5.5 minutos en alguna condición de apagado, la protección de datos de Double Helix comienza la tarea de escritura de bloques replicados sencillos en otro nodo para replicar los datos. En este caso, póngase en contacto con el soporte de NetApp para obtener ayuda con el análisis del nodo con errores.
+* Para reiniciar o desconectar correctamente un nodo, puede usar el comando de API Shutdown.
+* Si un nodo está sin actividad o desconectado, debe ponerse en contacto con el soporte de NetApp antes de volver a conectarlo.
+* Una vez que el nodo se ha conectado de nuevo, debe volver a añadir las unidades al clúster, en función de la cantidad de tiempo que ha estado fuera de servicio.
+
+
+
+
+== Si quiere más información
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2844772["Reemplazar un chasis SolidFire con fallos"]
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2846861["Reemplazar un nodo serie H600S con fallos"]

@@ -1,0 +1,43 @@
+---
+permalink: storage/task_intro_view_api_activity_in_real_time.html 
+sidebar: sidebar 
+keywords: solidfire api, element api, element os, element, viewing the API log, viewing API calls 
+summary: El sistema Element usa la API de NetApp Element como base para sus funciones y funcionalidades. La interfaz de usuario de Element le permite ver diversos tipos de actividad de la API en tiempo real en el sistema conforme utiliza la interfaz. Con el registro de la API, puede ver la actividad de la API del sistema en segundo plano y la que ha iniciado el usuario, así como las llamadas API que se han hecho en la página que está viendo en ese momento. 
+---
+= Ver la actividad de la API
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El sistema Element usa la API de NetApp Element como base para sus funciones y funcionalidades. La interfaz de usuario de Element le permite ver diversos tipos de actividad de la API en tiempo real en el sistema conforme utiliza la interfaz. Con el registro de la API, puede ver la actividad de la API del sistema en segundo plano y la que ha iniciado el usuario, así como las llamadas API que se han hecho en la página que está viendo en ese momento.
+
+Puede usar el registro de API para identificar qué métodos API se usan en determinadas tareas y cómo se usan los objetos y los métodos API para crear aplicaciones personalizadas.
+
+Para obtener más información sobre cada método, consulte link:../api/index.html["Referencia de API del software Element"].
+
+. En la barra de navegación de la interfaz de usuario de Element, haga clic en *API Log*.
+. Realice los siguientes pasos para modificar el tipo de actividad de API que se muestra en la ventana API Log:
++
+.. Seleccione *peticiones* para mostrar el tráfico de solicitud de API.
+.. Seleccione *respuestas* para mostrar el tráfico de respuesta de la API.
+.. Filtre los tipos de tráfico de API seleccionando una de las siguientes opciones:
++
+*** *Usuario iniciado*: Tráfico API por sus actividades durante esta sesión de interfaz de usuario web.
+*** * Sondeo de fondo*: Tráfico de API generado por la actividad del sistema en segundo plano.
+*** *Página actual*: Tráfico de API generado por tareas en la página que está viendo actualmente.
+
+
+
+
+
+
+
+
+== Obtenga más información
+
+* link:../api/index.html["Gestionar el almacenamiento con la API de Element"]
+* https://www.netapp.com/data-storage/solidfire/documentation["Página SolidFire y Element Resources"^]
+* https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
+

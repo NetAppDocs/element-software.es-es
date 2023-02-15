@@ -1,0 +1,48 @@
+---
+permalink: storage/task_data_protection_create_a_volume_snapshot.html 
+sidebar: sidebar 
+keywords: volume snapshot, create, active volume, preserve volume 
+summary: Se puede crear una copia de Snapshot de un volumen activo para conservar la imagen del volumen en un momento determinado. Es posible crear hasta 32 copias de Snapshot de un solo volumen. 
+---
+= Cree una copia de Snapshot de volumen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se puede crear una copia de Snapshot de un volumen activo para conservar la imagen del volumen en un momento determinado. Es posible crear hasta 32 copias de Snapshot de un solo volumen.
+
+. Haga clic en *Administración* > *volúmenes*.
+. Haga clic en el icono *acciones* del volumen que desea utilizar para la instantánea.
+. En el menú que se abre, seleccione *Snapshot*.
+. En el cuadro de diálogo *Crear instantánea del volumen*, introduzca el nuevo nombre de instantánea.
+. *Opcional:* Active la casilla de verificación *incluir instantánea en la replicación cuando se empareja* para asegurarse de que la instantánea se captura en la replicación cuando el volumen principal está emparejado.
+. Para configurar la retención de la copia de Snapshot, seleccione una de las siguientes opciones:
++
+** Haga clic en *mantener siempre* para conservar la instantánea en el sistema indefinidamente.
+** Haga clic en *establecer período de retención* y utilice los cuadros de número de fecha para elegir un período de tiempo durante el cual el sistema retendrá la instantánea.
+
+
+. Para crear una sola snapshot de forma inmediata, realice los siguientes pasos:
++
+.. Haga clic en *tomar instantánea ahora*.
+.. Haga clic en ** Crear Snapshot**.
+
+
+. Para programar que la copia de Snapshot se ejecute en el futuro, realice los siguientes pasos:
++
+.. Haga clic en *Crear programación Snapshot*.
+.. Introduzca un *Nuevo nombre de programa*.
+.. Seleccione un *Tipo de programación* de la lista.
+.. *Opcional:* Active la casilla de verificación *Programación periódica* para repetir periódicamente la instantánea programada.
+.. Haga clic en *Crear programación*.
+
+
+
+
+
+
+== Obtenga más información
+
+xref:task_data_protection_schedule_a_snapshot_task.adoc[Programar una copia de Snapshot]

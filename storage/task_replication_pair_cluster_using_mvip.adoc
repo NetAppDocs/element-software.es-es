@@ -1,0 +1,36 @@
+---
+permalink: storage/task_replication_pair_cluster_using_mvip.html 
+sidebar: sidebar 
+keywords: pair clusters, mvip, connection 
+summary: Es posible emparejar dos clústeres para la replicación en tiempo real mediante la dirección MVIP de un clúster para establecer una conexión con el otro clúster. Para usar este método, debe tener acceso de administrador de clúster en ambos clústeres. La contraseña y el nombre de usuario del administrador de clúster se usan para autenticar el acceso a los clústeres antes de que estos se puedan emparejar. 
+---
+= Emparejar clústeres con la MVIP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible emparejar dos clústeres para la replicación en tiempo real mediante la dirección MVIP de un clúster para establecer una conexión con el otro clúster. Para usar este método, debe tener acceso de administrador de clúster en ambos clústeres. La contraseña y el nombre de usuario del administrador de clúster se usan para autenticar el acceso a los clústeres antes de que estos se puedan emparejar.
+
+. En el clúster local, seleccione *Data Protection* > *Cluster Pairs*.
+. Haga clic en *Pair Cluster*.
+. Haga clic en *Iniciar emparejamiento* y haga clic en *Sí* para indicar que tiene acceso al clúster remoto.
+. Introduzca la dirección de MVIP del clúster remoto.
+. Haga clic en *emparejamiento completo en clúster remoto*.
++
+En la ventana *autenticación requerida*, introduzca el nombre de usuario y la contraseña del administrador del clúster remoto.
+
+. En el clúster remoto, seleccione *Protección de datos* > *pares de clústeres*.
+. Haga clic en *Pair Cluster*.
+. Haga clic en *Complete Pairing*.
+. Haga clic en el botón *Complete Pairing*.
+
+
+
+
+== Obtenga más información
+
+* xref:task_replication_pair_cluster_using_pairing_key.adoc[Emparejar clústeres con una clave de emparejamiento]
+* https://www.youtube.com/watch?v=HbKxPZnNvn4&feature=youtu.be["Emparejar clústeres con la MVIP (vídeo)"]
+

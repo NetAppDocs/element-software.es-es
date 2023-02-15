@@ -1,0 +1,206 @@
+---
+permalink: api/reference_element_api_clonemultiplevolumes.html 
+sidebar: sidebar 
+keywords: volume,volumes,clone,cloning,multiple,CloneMultipleVolumes 
+summary: Puede utilizar el método CloneMultipleVolumes para crear un clon de un grupo de volúmenes especificados. Es posible asignar un conjunto coherente de características a un grupo de varios volúmenes cuando se clonan juntos. 
+---
+= CloneMultipleVolumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `CloneMultipleVolumes` método para crear un clon de un grupo de volúmenes especificados. Es posible asignar un conjunto coherente de características a un grupo de varios volúmenes cuando se clonan juntos.
+
+Antes de usar el parámetro groupSnapshotID para clonar los volúmenes en una snapshot de grupo, primero se debe crear la snapshot de grupo mediante el xref:reference_element_api_creategroupsnapshot.adoc[CreateGroupSnapshot] El método API o la interfaz de usuario web. El uso de groupSnapshotID es opcional cuando se clonan varios volúmenes.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+acceso
+ a| 
+Nuevo método de acceso predeterminado para los nuevos volúmenes si no se invalida con la información que se pasa en la cabina del volumen.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+EnableSnapMirrorReplication
+ a| 
+Determina si el volumen se puede usar para la replicación con extremos de SnapMirror. Los posibles valores son los siguientes:
+
+* verdadero
+* falso
+
+ a| 
+booleano
+ a| 
+falso
+ a| 
+No
+
+
+
+ a| 
+GroupSnapshotID
+ a| 
+El ID de la snapshot de grupo que se utilizará como base para el clon.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+NewAccountID
+ a| 
+Nuevo ID de cuenta de los volúmenes si no se anula mediante información que se transmite en la cabina de volúmenes.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+volúmenes
+ a| 
+Recogida de miembros que se especifica para los nuevos volúmenes. Miembros:
+
+* Volumen ID: (Obligatorio)
+* Acceso: (Opcional) puede ser uno de readonly, READWRITE, bloqueado o replicationTarget.
+* Atributos: (Opcional) Lista de pares nombre-valor en formato de objeto JSON.
+* Nombre: (Opcional) Nuevo nombre para el clon.
+* NewAccountID: (Opcional) ID de cuenta de los nuevos volúmenes.
+* NewSize: (Opcional) Tamaño total del volumen, en bytes. El tamaño se redondea al megabyte más cercano.
+
+
+Si no se especifican miembros opcionales, los valores se heredan de los volúmenes de origen.
+ a| 
+Cabina de objetos JSON
+ a| 
+Ninguno
+ a| 
+Sí (volumeID)
+
+|===
+
+
+== Valores devueltos
+
+Este método tiene los siguientes valores devueltos:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+Establish asyncHandle
+ a| 
+Valor devuelto por una llamada de método asíncrono.
+ a| 
+entero
+
+
+
+ a| 
+GroupCloneID
+ a| 
+El ID único del clon del nuevo grupo.
+ a| 
+entero
+
+
+
+ a| 
+miembros
+ a| 
+Lista de ID de volumen para las parejas de volúmenes de origen y destino.
+ a| 
+Cabina de objetos JSON
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "CloneMultipleVolumes",
+   "params": {
+       "volumes": [
+           {
+              "volumeID": 5
+              "name":"foxhill",
+              "access":"readOnly"
+              },
+           {
+              "volumeID": 18
+              },
+           {
+             "volumeID": 20
+              }
+     ]
+   },
+   "id": 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "asyncHandle": 12,
+    "groupCloneID": 4,
+    "members": [
+     {
+      "srcVolumeID": 5,
+      "volumeID": 29
+     },
+     {
+      "srcVolumeID": 18,
+      "volumeID": 30
+     },
+     {
+      "srcVolumeID": 20,
+      "volumeID": 31
+      }
+    ]
+  }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

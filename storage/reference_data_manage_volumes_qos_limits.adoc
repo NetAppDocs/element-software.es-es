@@ -1,0 +1,104 @@
+---
+permalink: storage/reference_data_manage_volumes_qos_limits.html 
+sidebar: sidebar 
+keywords: qos, value limits 
+summary: 'Puede encontrar información acerca de los posibles valores mínimo y máximo de Quality of Service \(QoS\).' 
+---
+= Límites de valor de calidad de servicio
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede encontrar información acerca de los posibles valores mínimos y máximos de calidad de servicio (QoS).
+
+|===
+
+
+|  | Valor máximo de tamaño de I/O. 
+
+
+| Parámetros | Valor mínimo 
+
+
+| Predeterminado | 4 KB 
+
+
+| 8 KB | 16 KB 
+
+
+| 262 KB  a| 
+IOPS mín
+
+
+
+ a| 
+50
+ a| 
+50
+
+
+
+ a| 
+15,000
+ a| 
+9,375*
+
+
+
+ a| 
+5556*
+ a| 
+385*
+
+
+
+ a| 
+Tasa máx. De IOPS
+ a| 
+100
+
+
+
+ a| 
+15,000
+ a| 
+200,000**
+
+
+
+ a| 
+125,000
+ a| 
+74,074
+
+
+
+ a| 
+5128
+ a| 
+IOPS de ráfaga
+
+
+
+ a| 
+100
+ a| 
+15,000
+
+
+
+ a| 
+200,000**
+ a| 
+125,000
+
+
+
+ a| 
+74,074
+ a| 
+5128
+
+|===

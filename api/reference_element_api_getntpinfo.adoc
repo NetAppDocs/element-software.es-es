@@ -1,0 +1,87 @@
+---
+permalink: api/reference_element_api_getntpinfo.html 
+sidebar: sidebar 
+keywords: ntp,info,get,getting,getntpinfo 
+summary: 'Puede utilizar el método GetNtpInfo para obtener la información de configuración del protocolo de tiempo de red \(NTP\) actual.' 
+---
+= GetNtpInfo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `GetNtpInfo` Método para obtener la información de configuración del protocolo de hora de red (NTP) actual.
+
+
+
+== Parámetro
+
+Este método no tiene parámetro de entrada.
+
+
+
+== Valores devueltos
+
+Este método tiene los siguientes valores devueltos:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+servidores
+ a| 
+Lista de servidores NTP.
+ a| 
+matriz de cadenas
+
+
+
+ a| 
+cliente de envío
+ a| 
+Indica si los nodos del clúster están escuchando mensajes de NTP de retransmisión. Los posibles valores son los siguientes:
+
+* verdadero
+* falso
+
+ a| 
+booleano
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+  "method": "GetNtpInfo",
+  "params": {},
+  "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id" : 1,
+  "result" : {
+    "broadcastclient" : false,
+    "servers" : [ "us.pool.ntp.org" ]
+   }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

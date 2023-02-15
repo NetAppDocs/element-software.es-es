@@ -1,0 +1,114 @@
+---
+permalink: api/reference_element_api_listsnapmirrorrelationships.html 
+sidebar: sidebar 
+keywords: snapmirror,endpoints,endpoint,list,listing,listsnapmirrorrelationships 
+summary: La interfaz de usuario web del software Element utiliza el método ListSnapMirrorRelationship para enumerar una o todas las relaciones de SnapMirror en un clúster de almacenamiento de Element. 
+---
+= ListSnapMirrorRelationship
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La interfaz de usuario web del software Element utiliza el `ListSnapMirrorRelationships` Método para enumerar una o todas las relaciones de SnapMirror en un clúster de almacenamiento de Element.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+SnapMirrorEndpointID
+ a| 
+Enumere sólo las relaciones asociadas con el identificador de extremo especificado. Si no se proporciona ningún ID de extremo, el sistema enumera las relaciones de todos los extremos de SnapMirror conocidos.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+DestationVolume
+ a| 
+Las relaciones de lista asociadas con el volumen de destino especificado.
+ a| 
+xref:reference_element_api_snapmirrorvolumeinfo.adoc[SnapMirrorVolumeInfo]
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+Volumen de origen
+ a| 
+Enumere las relaciones asociadas con el volumen de origen especificado.
+ a| 
+xref:reference_element_api_snapmirrorvolumeinfo.adoc[SnapMirrorVolumeInfo]
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+vserver
+ a| 
+Enumere las relaciones en el Vserver especificado.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+ID de relación
+ a| 
+Enumerar las relaciones asociadas con el ID de relación especificado.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+No
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+SnapMirrorRelationship
+ a| 
+Una lista de los objetos que contienen información acerca de las relaciones de SnapMirror.
+ a| 
+xref:reference_element_api_snapmirrorrelationship.adoc[SnapMirrorRelationship] cabina
+
+|===
+
+
+== Nuevo desde la versión
+
+10.1

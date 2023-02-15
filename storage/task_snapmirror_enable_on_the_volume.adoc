@@ -1,0 +1,33 @@
+---
+permalink: storage/task_snapmirror_enable_on_the_volume.html 
+sidebar: sidebar 
+keywords: snapmirror, enable, volume, ui, manually enable 
+summary: Debe habilitar SnapMirror en el volumen en la interfaz de usuario de Element. Esto permite la replicación de datos en volúmenes de ONTAP especificados. Se trata de un permiso del administrador del clúster donde se ejecuta el software NetApp Element para que SnapMirror controle un volumen. 
+---
+= Habilite SnapMirror en el volumen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe habilitar SnapMirror en el volumen en la interfaz de usuario de Element. Esto permite la replicación de datos en volúmenes de ONTAP especificados. Se trata de un permiso del administrador del clúster donde se ejecuta el software NetApp Element para que SnapMirror controle un volumen.
+
+.Lo que necesitará
+* Debe habilitar SnapMirror en la interfaz de usuario de Element para el clúster.
+* Existe un extremo de SnapMirror disponible.
+* El volumen debe ser el tamaño de bloque 512e.
+* El volumen no participa en la replicación remota.
+* El tipo de acceso de volumen no es destino de replicación.
+
+
+
+NOTE: También puede establecer esta propiedad al crear o clonar un volumen.
+
+.Pasos
+. Haga clic en *Administración* > *volúmenes*.
+. Haga clic en el icono *acciones* del volumen para el que desea activar SnapMirror.
+. En el menú que se abre, seleccione *Editar*.
+. En el cuadro de diálogo *Editar volumen*, active la casilla de verificación *Activar SnapMirror*.
+. Haga clic en *Guardar cambios*.
+

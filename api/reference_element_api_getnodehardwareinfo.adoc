@@ -1,0 +1,90 @@
+---
+permalink: api/reference_element_api_getnodehardwareinfo.html 
+sidebar: sidebar 
+keywords: node,hardware,info,get,getting,getnodehardwareinfo 
+summary: Puede usar el método GetNodeHardwareInfo para obtener toda la información de hardware y el estado del nodo especificado. Generalmente, se incluyen los fabricantes, los proveedores, las versiones y otra información de identificación de hardware asociada. 
+---
+= GetNodeHardwareInfo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `GetNodeHardwareInfo` método para obtener toda la información y el estado de hardware del nodo especificado. Generalmente, se incluyen los fabricantes, los proveedores, las versiones y otra información de identificación de hardware asociada.
+
+
+
+== Parámetro
+
+Este método tiene el siguiente parámetro de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+NodeID
+ a| 
+ID del nodo para el que se está solicitando información del hardware. La información sobre un nodo Fibre Channel se devuelve si se especifica un nodo Fibre Channel.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+NodeHardwareInfo
+ a| 
+Información de hardware para el ID de nodo especificado. Cada objeto de esta salida se etiqueta con el ID de nodo del nodo especificado.
+ a| 
+xref:reference_element_api_hardwareinfo.adoc[HardwareInfo]
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "GetNodeHardwareInfo",
+   "params": {
+     "nodeID": 1
+   },
+"id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Debido a la longitud de este ejemplo de respuesta, se documenta en un tema complementario.
+
+
+
+== Nuevo desde la versión
+
+9.6
+
+
+
+== Obtenga más información
+
+xref:reference_element_api_response_example_getnodehardwareinfo_fibre_channel.adoc[GetNodeHardwareInfo (salida para nodos Fibre Channel)]
+
+xref:reference_element_api_response_example_getnodehardwareinfo.adoc[GetNodeHardwareInfo (salida para iSCSI)]

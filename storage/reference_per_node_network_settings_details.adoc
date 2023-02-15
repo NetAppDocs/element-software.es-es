@@ -1,0 +1,96 @@
+---
+permalink: storage/reference_per_node_network_settings_details.html 
+sidebar: sidebar 
+keywords: network settings, per-node UI, storage node, ui 
+summary: Es posible cambiar la configuración de red del nodo de almacenamiento para dar al nodo un nuevo conjunto de atributos de red. 
+---
+= Los detalles de la configuración de red de la interfaz de usuario por nodo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible cambiar la configuración de red del nodo de almacenamiento para dar al nodo un nuevo conjunto de atributos de red.
+
+Puede ver la configuración de red para un nodo de almacenamiento en la página *Configuración de red* cuando inicia sesión en el nodo (https://<node[] IP>:442/hcc/node/network-settings). Puede seleccionar las opciones *Bond1G* (administración) o *Bond10G* (almacenamiento). En la lista siguiente se describe la configuración que se puede modificar cuando el estado de un nodo de almacenamiento es Available, Pending o Active:
+
+
+NOTE: Si ejecuta un clúster SDS empresarial de SolidFire, la mayoría de la configuración de red en la interfaz de usuario por nodo no se puede modificar después de la implementación del nodo.
+
+* *Método*
++
+El método que se utiliza para configurar la interfaz. Métodos posibles:
+
++
+** Loopback: Se utiliza para definir la interfaz de bucle invertido de IPv4.
+** Manual: Se utiliza para definir interfaces para las que no se realiza ninguna configuración de forma predeterminada.
+** dhcp: Se utiliza para obtener una dirección IP a través de DHCP.
+** Static: Se utiliza para definir interfaces Ethernet con direcciones IPv4 asignadas de forma estática.
+
+
+* *Velocidad de enlace*
++
+La velocidad negociada por la NIC virtual.
+
+* *Dirección IPv4*
++
+La dirección IPv4 de la red eth0.
+
+* *Máscara de subred IPv4*
++
+Las subdivisiones de dirección de la red IPv4.
+
+* *Dirección de puerta de enlace IPv4*
++
+La dirección de red del enrutador para enviar paquetes fuera de la red local.
+
+* *Dirección IPv6*
++
+La dirección IPv6 de la red eth0.
+
+* *Dirección de puerta de enlace IPv6*
++
+La dirección de red del enrutador para enviar paquetes fuera de la red local.
+
+* *MTU*
++
+Tamaño de paquete más grande que un protocolo de red puede transmitir. Debe ser mayor o igual que 1500. Si se añade un segundo NIC de almacenamiento, el valor debería ser 9000.
+
+* *Servidores DNS*
++
+La interfaz de red que se utiliza para la comunicación del clúster.
+
+* *Buscar dominios*
++
+La búsqueda de direcciones MAC adicionales que hay disponibles en el sistema.
+
+* *Modo Bond*
++
+Puede ser uno de los siguientes modos:
+
++
+** ActivePassive (predeterminado)
+** ALB
+** LACP
+
+
+* *Estado*
++
+Los posibles valores son los siguientes:
+
++
+** UpAndRunning
+** Abajo
+** Arriba
+
+
+* *Etiqueta de red virtual*
++
+La etiqueta asignada cuando se creó la red virtual.
+
+* *Rutas*
++
+Las rutas estáticas para especificar hosts o redes a través de la interfaz asociada que se ha configurado para que usen las rutas.
+
+

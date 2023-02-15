@@ -1,0 +1,44 @@
+---
+permalink: storage/reference_replication_volume_pairing_messages.html 
+sidebar: sidebar 
+keywords: volume pairing, messages, replication, data protection 
+summary: Es posible ver mensajes de emparejamiento de volúmenes durante el proceso inicial de emparejamiento desde la página Volume Pairs de la pestaña Data Protection. Estos mensajes pueden aparecer tanto en los extremos de origen como de destino de la pareja en la vista de lista Replicating Volumes. 
+---
+= Mensajes sobre el emparejamiento de volúmenes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible ver mensajes de emparejamiento de volúmenes durante el proceso inicial de emparejamiento desde la página Volume Pairs de la pestaña Data Protection. Estos mensajes pueden aparecer tanto en los extremos de origen como de destino de la pareja en la vista de lista Replicating Volumes.
+
+* *PausedDisconnected*
++
+Se agotó el tiempo de ejecución de la replicación de origen o los RPC de sincronización. Se perdió la conexión con el clúster remoto. Compruebe las conexiones de red con el clúster.
+
+* *ResumingConnected*
++
+La sincronización de replicación remota está activa. Se inicia el proceso de sincronización y se esperan los datos.
+
+* *ResumingRRSync*
++
+Se hace una copia sencilla de Helix de los metadatos del volumen en el clúster emparejado.
+
+* *ResumingLocalSync*
++
+Se hace una copia doble de Helix de los metadatos del volumen en el clúster emparejado.
+
+* *ReumingDataTransfer*
++
+Se reanudó la transferencia de datos.
+
+* *Activo*
++
+Los volúmenes están emparejados y los datos se envían del volumen de origen al de destino; los datos están sincronizados.
+
+* *Inactivo*
++
+No se produce ninguna actividad de replicación.
+
+

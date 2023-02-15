@@ -1,0 +1,178 @@
+---
+permalink: api/reference_element_api_createvolumeaccessgroup.html 
+sidebar: sidebar 
+keywords: volume,access,groups,group,create,creating,CreateVolumeAccessGroup 
+summary: Es posible usar CreateVolumeAccessGroup para crear un nuevo grupo de acceso de volúmenes. Al crear el grupo de acceso de volúmenes, es necesario asignarle un nombre y de manera opcional se pueden introducir iniciadores y volúmenes. 
+---
+= CreateVolumeAccessGroup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar `CreateVolumeAccessGroup` para crear un nuevo grupo de acceso de volúmenes. Al crear el grupo de acceso de volúmenes, es necesario asignarle un nombre y de manera opcional se pueden introducir iniciadores y volúmenes.
+
+Cualquier IQN de iniciador que se añade al grupo de acceso de volúmenes puede acceder a cualquier volumen del grupo sin autenticación CHAP.
+
+
+NOTE: Los volúmenes clonados no heredan pertenencia al grupo de acceso de volúmenes en el volumen de origen.
+
+Tenga en cuenta lo siguiente al crear grupos de acceso de volúmenes:
+
+* Un grupo de acceso de volúmenes puede contener hasta 64 IQN de iniciador.
+* Un iniciador solo puede pertenecer a un grupo de acceso de volúmenes.
+* Un grupo de acceso de volúmenes puede contener hasta 2000 volúmenes.
+* Cada grupo de acceso de volúmenes puede pertenecer a un máximo de cuatro grupos de acceso de volúmenes.
+
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+iniciadores
+ a| 
+Lista de ID o nombres de iniciador (IQN y WWPN) que se van a incluir en el grupo de acceso de volúmenes. Si pasa una lista de nombres de iniciador, se crean los iniciadores si no existen todavía. Si pasa una lista de ID de iniciador, el método devuelve un error si alguno de los iniciadores aún no existe. Pasar los nombres de iniciadores está obsoleto; debe usar ID de iniciador cuando sea posible.
+ a| 
+matriz de enteros o matriz de cadenas (obsoleto)
+ a| 
+ a| 
+No
+
+
+
+ a| 
+nombre
+ a| 
+El nombre del grupo de acceso de volúmenes. No es necesario ser único, pero se recomienda. Debe tener entre 1 y 64 caracteres de longitud.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+volúmenes
+ a| 
+Lista de ID de volumen que se incluirán en el grupo de acceso de volúmenes.
+ a| 
+matriz en números enteros
+ a| 
+ a| 
+No
+
+
+
+ a| 
+atributos
+ a| 
+La lista de pares nombre-valor en el formato de objetos JSON.
+ a| 
+Objeto JSON
+ a| 
+{}
+ a| 
+No
+
+|===
+
+
+== Valores devueltos
+
+Este método tiene los siguientes valores devueltos:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+VolumeAccessGroup
+ a| 
+Un objeto que contiene información acerca del grupo de acceso de volúmenes recién creado.
+ a| 
+xref:reference_element_api_volumeaccessgroup.adoc[VolumeAccessGroup]
+
+
+
+ a| 
+VolumeAccessGroupID
+ a| 
+El ID del grupo de acceso de volúmenes recién creado.
+ a| 
+entero
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "CreateVolumeAccessGroup",
+   "params": {
+      "name": "myaccessgroup",
+      "initiators": ["iqn.1993-08.org.debian: 01: a31b1d799d5c"],
+      "volumes": [327],
+      "attributes": {}
+   }
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id": null,
+  "result": {
+    "volumeAccessGroup": {
+      "attributes": {},
+      "deletedVolumes": [],
+      "initiatorIDs": [
+        95
+      ],
+      "initiators": [
+        "iqn.1993-08.org.debian: 01: a31b1d799d5c"
+      ],
+      "name": "myaccessgroup",
+      "volumeAccessGroupID": 96,
+      "volumes": [
+        327
+      ]
+    },
+    "volumeAccessGroupID": 96
+  }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6
+
+
+
+== Obtenga más información
+
+* xref:reference_element_api_getasyncresult.adoc[GetAsyncResult]
+* xref:reference_element_api_listsyncjobs.adoc[ListSyncJobs]
+* xref:reference_element_api_modifyvolume.adoc[Volumen ModificíoVolume]
+

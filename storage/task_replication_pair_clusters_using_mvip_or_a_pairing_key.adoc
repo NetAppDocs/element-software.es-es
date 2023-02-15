@@ -1,0 +1,30 @@
+---
+permalink: storage/task_replication_pair_clusters_using_mvip_or_a_pairing_key.html 
+sidebar: sidebar 
+keywords: pair cluster, mvip, pairing key, cluster pairing 
+summary: Es posible emparejar un clúster de origen y de destino mediante la dirección MVIP de un clúster de destino si ambos clústeres ofrece acceso de administrador de clúster. Si solo un clúster en una pareja de clústeres ofrece acceso de administrador del clúster, se puede usar una clave de emparejamiento en el clúster de destino para completar el emparejamiento de clústeres. 
+---
+= Emparejar clústeres con la MVIP o una clave de emparejamiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible emparejar un clúster de origen y de destino mediante la dirección MVIP de un clúster de destino si ambos clústeres ofrece acceso de administrador de clúster. Si solo un clúster en una pareja de clústeres ofrece acceso de administrador del clúster, se puede usar una clave de emparejamiento en el clúster de destino para completar el emparejamiento de clústeres.
+
+. Seleccione uno de los siguientes métodos para emparejar clústeres:
++
+** Emparejar clústeres con la MVIP: Utilice este método si ambos clústeres tienen acceso de administrador del clúster. Este método utiliza la dirección MVIP del clúster remoto para emparejar dos clústeres.
+** Emparejar clústeres con una clave de emparejamiento: Utilice este método si solo uno de los clústeres ofrece acceso de administrador del clúster. Este método genera una clave de emparejamiento que se puede usar en el clúster de destino para completar el emparejamiento de clústeres.
+
+
+
+
+
+
+== Obtenga más información
+
+* xref:task_replication_pair_cluster_using_mvip.adoc[Emparejar clústeres con la MVIP]
+* xref:task_replication_pair_cluster_using_pairing_key.adoc[Emparejar clústeres con una clave de emparejamiento]
+

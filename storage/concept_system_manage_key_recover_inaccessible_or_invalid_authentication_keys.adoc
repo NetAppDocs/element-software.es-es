@@ -1,0 +1,35 @@
+---
+permalink: storage/concept_system_manage_key_recover_inaccessible_or_invalid_authentication_keys.html 
+sidebar: sidebar 
+keywords: slice drive error, cluster fault, authentication keys 
+summary: Ocasionalmente, puede producirse un error que requiere la intervención del usuario. En caso de error, se generará un error en el clúster. Los dos casos más probables se describen aquí. 
+---
+= Recuperación de claves de autenticación no válidas o inaccesibles
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ocasionalmente, puede producirse un error que requiere la intervención del usuario. En caso de error, se generará un error del clúster (denominado código de avería del clúster). Los dos casos más probables se describen aquí.
+
+
+
+== El clúster no puede desbloquear las unidades debido a un fallo en el clúster KmipServerFault.
+
+Esto puede suceder cuando el clúster se inicia por primera vez y no se puede acceder al servidor de claves o la clave requerida no está disponible.
+
+. Siga los pasos de recuperación indicados en los códigos de fallo del clúster (si los hubiera).
+
+
+
+
+== Se puede configurar un error slicServiceUnhealthy porque las unidades de metadatos se han marcado como un error y se han colocado en el estado "Available".
+
+Pasos para borrar:
+
+. Vuelva a añadir las unidades.
+. Después de 3 a 4 minutos, verificar que el `sliceServiceUnhealthy` se borró el error.
+
+
+Consulte link:reference_monitor_cluster_fault_codes.html["códigos de error de clúster"] si quiere más información.

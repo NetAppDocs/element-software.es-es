@@ -1,0 +1,55 @@
+---
+permalink: storage/reference_system_manage_drives_drives_details.html 
+sidebar: sidebar 
+keywords: drives, details, manage, filter, cluster 
+summary: En la página Drives de la pestaña Cluster, se proporciona una lista de las unidades activas del clúster. La página se puede filtrar si selecciona de las pestañas Active, Available, Removing, Erasing y Failed. 
+---
+= Detalles de unidades
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En la página Drives de la pestaña Cluster, se proporciona una lista de las unidades activas del clúster. La página se puede filtrar si selecciona de las pestañas Active, Available, Removing, Erasing y Failed.
+
+Cuando se inicializa un clúster por primera vez, la lista de unidades activas está vacía. Puede añadir unidades que no estén asignadas a un clúster y que aparezcan en la pestaña Available después de crear un clúster de SolidFire nuevo.
+
+Los siguientes elementos se muestran en la lista de unidades activas.
+
+* *ID de unidad*
++
+El número secuencial asignado a la unidad.
+
+* *ID de nodo*
++
+El número de nodo asignado cuando el nodo se añade al clúster.
+
+* *Nombre de nodo*
++
+El nombre del nodo que aloja la unidad.
+
+* *Ranura*
++
+El número de ranura en la que la unidad se encuentra físicamente.
+
+* *Capacidad*
++
+El tamaño de la unidad, en GB.
+
+* *Serie*
++
+El número de serie de la unidad.
+
+* *Desgaste restante*
++
+El indicador del nivel de desgaste.
+
++
+El sistema de almacenamiento informa de la cantidad aproximada de desgaste disponible en cada unidad de estado sólido (SSD) para escribir y borrar datos. Una unidad que ha consumido el 5% de los ciclos de escritura y borrado diseñados informa del 95% de desgaste restante. El sistema no actualiza automáticamente la información de desgaste de la unidad; se puede actualizar o cerrar y volver a cargar la página para actualizar la información.
+
+* *Tipo*
++
+El tipo de unidad. El tipo puede ser de bloque o metadatos.
+
+

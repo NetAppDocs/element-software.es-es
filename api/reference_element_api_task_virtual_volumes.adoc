@@ -1,0 +1,138 @@
+---
+permalink: api/reference_element_api_task_virtual_volumes.html 
+sidebar: sidebar 
+keywords: object,objects,task 
+summary: El objeto de la tarea contiene información acerca de una tarea de volumen virtual que se está ejecutando o finalizó en el sistema. Puede utilizar el método ListVirtualVolumeTasks para recuperar esta información de todas las tareas de volumen virtual. 
+---
+= tarea (volúmenes virtuales)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El objeto de la tarea contiene información acerca de una tarea de volumen virtual que se está ejecutando o finalizó en el sistema. Puede utilizar el `ListVirtualVolumeTasks` método para recuperar esta información de todas las tareas de volúmenes virtuales.
+
+
+
+== Miembros de objeto
+
+Este objeto contiene los siguientes miembros:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+cancelada
+ a| 
+Indica si la tarea se ha cancelado o no. Los posibles valores son los siguientes:
+
+* verdadero
+* falso
+
+ a| 
+booleano
+
+
+
+ a| 
+VirtualVolumeID
+ a| 
+El ID único de volumen virtual del volumen virtual que se está clonando (para tareas de clonado).
+ a| 
+UUID
+
+
+
+ a| 
+PartentMetadata
+ a| 
+Objeto que contiene metadatos del elemento principal para tareas que clonan o crean snapshots de un volumen virtual.
+ a| 
+Objeto JSON
+
+
+
+ a| 
+PartentTotalSize
+ a| 
+El espacio total disponible (en bytes) en el elemento principal para tareas de clonado o snapshot.
+ a| 
+entero
+
+
+
+ a| 
+ParentUsedSize
+ a| 
+El espacio utilizado del elemento principal (en bytes) para tareas de clonado o snapshot.
+ a| 
+entero
+
+
+
+ a| 
+funcionamiento
+ a| 
+El tipo de operación que ejecuta la tarea. Los posibles valores son los siguientes:
+
+* Unknown: La operación de la tarea es desconocida.
+* Prepare: La tarea está preparando un volumen virtual.
+* Snapshot: La tarea está creando una copia de Snapshot de un volumen virtual.
+* Rollback: La tarea está revirtiendo un volumen virtual a una copia de Snapshot.
+* Clone: La tarea está creando un clon del volumen virtual.
+* FastClone: La tarea está creando un clon rápido de un volumen virtual.
+* CopyDiffs: La tarea está copiando bloques distintos en un volumen virtual.
+
+ a| 
+cadena
+
+
+
+ a| 
+estado
+ a| 
+El estado actual de la tarea de volumen virtual. Los posibles valores son los siguientes:
+
+* Error: La tarea no se realizó correctamente y devolvió un error.
+* Queued: La tarea está a la espera de ser ejecutada.
+* Running: La tarea se encuentra en ejecución.
+* Success: La tarea se completó correctamente.
+
+ a| 
+cadena
+
+
+
+ a| 
+VirtualVolumeHostID
+ a| 
+El ID único del host que inició la tarea.
+ a| 
+UUID
+
+
+
+ a| 
+ID de volumen virtual
+ a| 
+El nuevo ID exclusivo de volumen virtual (para tareas que crean un nuevo volumen virtual).
+ a| 
+UUID
+
+
+
+ a| 
+VirtualVolumeTaskID
+ a| 
+El ID único de la tarea.
+ a| 
+UUID
+
+|===
+
+
+== Obtenga más información
+
+xref:reference_element_api_listvirtualvolumetasks.adoc[ListVirtualVolumeTasks]

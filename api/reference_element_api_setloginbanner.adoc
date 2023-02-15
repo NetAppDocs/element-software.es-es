@@ -1,0 +1,125 @@
+---
+permalink: api/reference_element_api_setloginbanner.html 
+sidebar: sidebar 
+keywords: terms,use,banner,configure,set,setting,setloginbanner,login 
+summary: Puede usar el método SetLoginBanner para configurar el banner de las condiciones de uso que ven los usuarios cuando inician sesión en la interfaz web de Element. 
+---
+= SetLoginBanner
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `SetLoginBanner` Método para configurar el banner de las condiciones de uso que ven los usuarios cuando inician sesión en la interfaz web de Element.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+banner
+ a| 
+El texto deseado del banner con las condiciones de uso. La longitud máxima permitida es de 4,096 caracteres.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+activado
+ a| 
+El estado del banner con las condiciones de uso. Los posibles valores son los siguientes:
+
+* `true`: El banner de los Términos de uso se muestra al iniciar sesión en la interfaz web.
+* `false`: El banner de los Términos de uso no se muestra al iniciar sesión en la interfaz web.
+
+ a| 
+booleano
+ a| 
+Ninguno
+ a| 
+No
+
+|===
+
+
+== Valores devueltos
+
+Este método tiene los siguientes valores devueltos:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+banner
+ a| 
+El texto actual del banner con las condiciones de uso. Este valor puede contener texto incluso cuando el banner está desactivado.
+ a| 
+cadena
+
+
+
+ a| 
+activado
+ a| 
+El estado del banner con las condiciones de uso. Los posibles valores son los siguientes:
+
+* True: El banner con las condiciones de uso se muestra cuando el inicio de sesión de la interfaz web.
+* False: El banner con las condiciones de uso no se muestra cuando el inicio de sesión de la interfaz web.
+
+ a| 
+booleano
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+  "id": 3920,
+  "method": "SetLoginBanner",
+  "params": {
+    "banner": "Welcome to NetApp!",
+    "enabled": true
+  }
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id": 3920,
+  "result": {
+    "loginBanner": {
+      "banner": "Welcome to NetApp!",
+      "enabled": true
+    }
+  }
+}
+----
+
+
+== Nuevo desde la versión
+
+10.0

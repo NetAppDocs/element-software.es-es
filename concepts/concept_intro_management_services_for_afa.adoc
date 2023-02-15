@@ -1,0 +1,19 @@
+---
+permalink: concepts/concept_intro_management_services_for_afa.html 
+sidebar: sidebar 
+keywords: what is, what are, management services, service, vcp service, plugin service, microservice 
+summary: Los servicios de gestión proporcionan una funcionalidad de gestión centralizada y ampliada para el almacenamiento all-flash de SolidFire. Estos servicios incluyen telemetría del sistema de Active IQ, registro y actualizaciones de servicio, así como el servicio QoSSIOC para el plugin de Element para vCenter. 
+---
+= Servicios de gestión para el almacenamiento all-flash de SolidFire
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A partir de la versión Element 11.3, *servicios de administración* se alojan en el link:../concepts/concept_intro_management_node.html["nodo de gestión"], permitiendo actualizaciones más rápidas de determinados servicios de software fuera de las versiones principales.
+
+Los servicios de gestión proporcionan una funcionalidad de gestión centralizada y ampliada para el almacenamiento all-flash de SolidFire. Estos servicios incluyen link:..concepts/concept_intro_solidfire_software_interfaces.html#netapp-element-plug-in-for-vcenter-server["Control del cloud híbrido de NetApp"], Telemetría del sistema de Active IQ, registro y actualizaciones de servicio, así como el servicio QoSSIOC para el plugin de Element para vCenter.
+
+
+TIP: Más información acerca de link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes["lanzamientos de servicios de gestión"].

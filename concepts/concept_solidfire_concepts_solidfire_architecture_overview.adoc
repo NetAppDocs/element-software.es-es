@@ -1,0 +1,77 @@
+---
+permalink: concepts/concept_solidfire_concepts_solidfire_architecture_overview.html 
+sidebar: sidebar 
+keywords: solidfire, element, aiq, cluster, active iq, vcenter plugin, vcp, storage, what is, activeiq 
+summary: 'Un sistema de almacenamiento all-flash SolidFire está compuesto por componentes de hardware diferenciados \(unidad y nodos\) que se combinan en un único pool de recursos de almacenamiento mediante el software NetApp Element que se ejecuta de forma independiente en cada nodo. Este clúster unificado se presenta como un único sistema de almacenamiento que pueden utilizar clientes externos y se gestiona como una única entidad a través de la interfaz de usuario del software Element, la API y otras herramientas de gestión.' 
+---
+= Información general de la arquitectura de SolidFire
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un sistema de almacenamiento all-flash SolidFire consta de componentes de hardware diferenciados (unidad y nodos) que se combinan en un pool de recursos de almacenamiento con el software NetApp Element que se ejecuta de manera independiente en cada nodo. Este único sistema de almacenamiento se gestiona como una única entidad utilizando la interfaz de usuario del software Element, la API y otras herramientas de gestión.
+
+Un sistema de almacenamiento SolidFire incluye los siguientes componentes de hardware:
+
+* *Cluster*: El concentrador del sistema de almacenamiento SolidFire que es una colección de nodos.
+* *Nodes*: Los componentes de hardware agrupados en un cluster. Existen dos tipos de nodos:
++
+** Nodos de almacenamiento, que son servidores que contienen una colección de unidades
+** Nodos Fibre Channel (FC), que se utilizan para conectarse a clientes FC
+
+
+* *Drives*: Se utiliza en los nodos de almacenamiento para almacenar datos para el clúster. Un nodo de almacenamiento contiene dos tipos de unidades:
++
+** Las unidades de metadatos de volúmenes almacenan información que define los volúmenes y otros objetos dentro de un clúster.
+** Las unidades de bloques almacenan bloques de datos para los volúmenes.
+
+
+
+
+image::../media/solidfire_concepts_guide_architecture_image.gif[Diagrama arquitectónico del software Element]
+
+Puede gestionar, supervisar y actualizar el sistema mediante la interfaz de usuario web de Element y otras herramientas compatibles:
+
+* link:../concepts/concept_intro_solidfire_software_interfaces.html["Interfaces de software de SolidFire"]
+* link:../concepts/concept_intro_solidfire_active_iq.html["SolidFire Active IQ"]
+* link:../concepts/concept_intro_management_node.html["Nodo de gestión para el software Element"]
+* link:../concepts/concept_intro_management_services_for_afa.html["Servicios de gestión"]
+
+
+
+
+== Direcciones URL comunes
+
+Estas son las URL comunes que utiliza con un sistema de almacenamiento all-flash de SolidFire:
+
+[cols="2*"]
+|===
+| URL | Descripción 
+
+
+| `https://[storage cluster MVIP address]` | Acceda a la interfaz de usuario del software NetApp Element. 
+
+
+| `https://activeiq.solidfire.com` | Supervise los datos y reciba alertas sobre los cuellos de botella de rendimiento o los problemas potenciales del sistema. 
+
+
+| `https://[management node IP address]` | Acceda a Hybrid Cloud Control de NetApp para actualizar sus servicios de gestión de actualizaciones e instalación del almacenamiento. 
+
+
+| `https://[IP address]:442` | Desde la interfaz de usuario por nodo, acceda a la configuración de red y clúster y utilice pruebas y utilidades del sistema. link:../storage/task_per_node_access_settings.html["Leer más."] 
+
+
+| `https://[management node IP address]/mnode` | Utilice la API DE REST de los servicios de gestión y otras funcionalidades desde el nodo de gestión.link:../mnode/task_mnode_work_overview.html["Leer más."] 
+
+
+| `https://[management node IP address]:9443` | Registre el paquete del plugin de vCenter en vSphere Web Client.link:https://docs.netapp.com/us-en/vcp/vcp_task_getstarted.html["Leer más."^] 
+|===
+
+
+== Obtenga más información
+
+* https://www.netapp.com/data-storage/solidfire/documentation["Página SolidFire y Element Resources"^]
+* https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
+

@@ -1,0 +1,127 @@
+---
+permalink: api/reference_element_api_getsnmpinfo.html 
+sidebar: sidebar 
+keywords: snmp,information,info,get,getting 
+summary: 'Puede utilizar el método GetSnmpInfo para obtener la información de configuración del protocolo simple de administración de red \(SNMP\) actual.' 
+---
+= GetSnmpInfo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `GetSnmpInfo` Método para obtener la información de configuración del protocolo simple de gestión de red (SNMP) actual.
+
+
+
+== Parámetros
+
+
+NOTE: GetSnmpInfo queda obsoleto para versiones posteriores a la versión 8.0 del elemento. La xref:reference_element_api_getsnmpstate.adoc[GetSnmpState] y.. xref:reference_element_api_setsnmpacl.adoc[SetSnmpACL] Los métodos sustituyen al método GetSnmpInfo.
+
+Este método no tiene parámetros de entrada.
+
+
+
+== Valores devueltos
+
+Este método tiene los siguientes valores devueltos:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+redes
+ a| 
+Lista de redes y tipos de acceso habilitados para SNMP. *Nota:* las redes sólo se muestran si SNMP v3 está desactivado.
+ a| 
+xref:reference_element_api_network_snmp.adoc[red]
+
+
+
+ a| 
+activado
+ a| 
+Indica si los nodos del clúster están configurados para SNMP. Los posibles valores son los siguientes:
+
+* verdadero
+* falso
+
+ a| 
+booleano
+
+
+
+ a| 
+SnmpV3Enabled
+ a| 
+Si el nodo del clúster está configurado para SNMP v3. Los posibles valores son los siguientes:
+
+* verdadero
+* falso
+
+ a| 
+booleano
+
+
+
+ a| 
+UsmUsers
+ a| 
+Si se habilita SNMP v3, se devuelve una lista con los parámetros de acceso de usuario para SNMP desde el clúster. Este se devuelve en lugar del parámetro Networks.
+ a| 
+xref:reference_element_api_usmuser.adoc[UsumUsuario]
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "GetSnmpInfo",
+   "params": {},
+   "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+   "id" : 1,
+   "result" : {
+      "enabled" : true,
+      "networks" : [
+         {
+            "access" : "rosys",
+            "cidr" : 0,
+            "community" : "public",
+            "network" : "localhost"
+         }
+      ]
+   }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6
+
+
+
+== Obtenga más información
+
+* xref:reference_element_api_getsnmpstate.adoc[GetSnmpState]
+* xref:reference_element_api_setsnmpacl.adoc[SetSnmpACL]
+

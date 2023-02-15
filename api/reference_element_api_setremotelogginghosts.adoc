@@ -1,0 +1,91 @@
+---
+permalink: api/reference_element_api_setremotelogginghosts.html 
+sidebar: sidebar 
+keywords: remote,logging,host,hosts,set,setting,setremotelogginghosts 
+summary: Puede usar el método SetRemoteLoggingHosts para configurar el registro remoto desde los nodos del clúster de almacenamiento a un servidor o servidores de registro centralizados. El registro remoto se realiza a través de TCP utilizando el puerto predeterminado 514. Esta API no se añade a los hosts de registro existentes. En su lugar, sustituye lo que existe actualmente con nuevos valores especificados por este método API. Puede usar GetRemoteLoggingHosts para determinar cuáles son los hosts de registro actuales y, a continuación, usar SetRemoteLoggingHosts para establecer la lista deseada de hosts de registro nuevos y actuales. 
+---
+= SetRemoteLoggingHosts
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `SetRemoteLoggingHosts` método para configurar el registro remoto de los nodos en el clúster de almacenamiento en un servidor de registro o servidores centralizados. El registro remoto se realiza a través de TCP utilizando el puerto predeterminado 514. Esta API no se añade a los hosts de registro existentes. En su lugar, sustituye lo que existe actualmente con nuevos valores especificados por este método API. Puede utilizar `GetRemoteLoggingHosts` para determinar cuáles son los hosts de registro actuales y, a continuación, utilizarlos `SetRemoteLoggingHosts` para definir la lista deseada de hosts de registro actuales y nuevos.
+
+
+
+== Parámetro
+
+Este método tiene el siguiente parámetro de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+RemoteHosts
+ a| 
+Lista de hosts que son destinatarios de mensajes de registro.
+ a| 
+xref:reference_element_api_loggingserver.adoc[LoggingServer] cabina
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+
+
+== Valores devueltos
+
+Este método no tiene valores devueltos.
+
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "id": 1,
+   "method": "SetRemoteLoggingHosts",
+   "params": {
+     "remoteHosts": [
+        {
+          "host": "172.16.1.20",
+          "port": 10514
+        },
+        {
+          "host": "172.16.1.25"
+        }
+      ]
+   }
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+    "id" : 1,
+    "result" : {}
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6
+
+
+
+== Obtenga más información
+
+xref:reference_element_api_getremotelogginghosts.adoc[GetRemoteLoggingHosts]

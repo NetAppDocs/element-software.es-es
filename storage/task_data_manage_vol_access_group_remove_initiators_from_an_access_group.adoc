@@ -1,0 +1,25 @@
+---
+permalink: storage/task_data_manage_vol_access_group_remove_initiators_from_an_access_group.html 
+sidebar: sidebar 
+keywords: initiator, remove from volume access group, access groups, remove initiator 
+summary: Cuando se quita un iniciador de un grupo de acceso, este ya no puede acceder a los volúmenes de ese grupo de acceso de volúmenes. El acceso normal de cuenta al volumen no se interrumpe. 
+---
+= Quite los iniciadores de un grupo de acceso
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cuando se quita un iniciador de un grupo de acceso, este ya no puede acceder a los volúmenes de ese grupo de acceso de volúmenes. El acceso normal de cuenta al volumen no se interrumpe.
+
+Si se modifica la configuración de CHAP en una cuenta o se quitan los iniciadores o los volúmenes de un grupo de acceso, se podría interrumpir el acceso de los iniciadores a los volúmenes de forma inesperada. Para asegurarse de que no se interrumpirá el acceso a los volúmenes de forma inesperada, siempre debe cerrar las sesiones iSCSI afectadas por alguno de los cambios en la cuenta o en el grupo de acceso. Asimismo, compruebe que los iniciadores pueden volver a conectarse con los volúmenes una vez que se hayan realizado los cambios en la configuración del iniciador y la configuración del clúster.
+
+.Pasos
+. Haga clic en *Administración* > *grupos de acceso*.
+. Haga clic en el icono *acciones* del grupo de acceso que desea quitar.
+. En el menú que se abre, seleccione *Editar*.
+. En Add Initiators en el cuadro de diálogo *Edit Volume Access Group*, haga clic en la flecha de la lista *Initiators*.
+. Seleccione el icono de x para cada iniciador que desea quitar del grupo de acceso.
+. Haga clic en *Guardar cambios*.
+

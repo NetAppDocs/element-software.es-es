@@ -1,0 +1,107 @@
+---
+permalink: api/reference_element_api_clusterpair.html 
+sidebar: sidebar 
+keywords: objects,object,clusterPair 
+summary: El objeto clusterPair contiene información acerca de los clústeres emparejados con el clúster local. Se puede recuperar una lista de objetos clusterPair para el clúster local con el método ListClusterPairs. 
+---
+= ClusterPair
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El objeto clusterPair contiene información acerca de los clústeres emparejados con el clúster local. Se puede recuperar una lista de objetos clusterPair para el clúster local con el método ListClusterPairs.
+
+
+
+== Miembros de objeto
+
+Este objeto contiene los siguientes miembros:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+Nombre del clúster
+ a| 
+El nombre del otro clúster de la pareja.
+ a| 
+cadena
+
+
+
+ a| 
+ClusterPairID
+ a| 
+Un ID único que se otorga a cada clúster en la pareja.
+ a| 
+entero
+
+
+
+ a| 
+ClusterPairUUID
+ a| 
+El identificador único universal de la pareja de clústeres.
+ a| 
+cadena
+
+
+
+ a| 
+UUID
+ a| 
+Identificador único del clúster remoto de la pareja de clústeres.
+ a| 
+entero
+
+
+
+ a| 
+latencia
+ a| 
+La latencia, en milisegundos, entre clústeres.
+ a| 
+entero
+
+
+
+ a| 
+mivip
+ a| 
+La dirección IP de la conexión de gestión para los clústeres emparejados.
+ a| 
+cadena
+
+
+
+ a| 
+estado
+ a| 
+El estado de la conexión entre los clústeres emparejados. Los posibles valores son los siguientes:
+
+* Sin configurar
+* Conectado
+* Mal configurado
+* Desconectado
+
+ a| 
+cadena
+
+
+
+ a| 
+versión
+ a| 
+La versión de Element del otro clúster en la pareja.
+ a| 
+cadena
+
+|===
+
+
+== Obtenga más información
+
+xref:reference_element_api_listclusterpairs.adoc[ListClusterPairs]

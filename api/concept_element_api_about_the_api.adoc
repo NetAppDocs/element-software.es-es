@@ -1,0 +1,40 @@
+---
+permalink: api/concept_element_api_about_the_api.html 
+sidebar: sidebar 
+keywords: SolidFire,API,overview,about,Element 
+summary: La API de Element se basa en el protocolo JSON-RPC a través de HTTPS. JSON-RPC es un protocolo RPC sencillo basado en texto que se basa en el formato ligero de intercambio de datos JSON. Las bibliotecas de clientes están disponibles para todos los principales lenguajes de programación. 
+---
+= Acerca de la API del software Element
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La API de Element se basa en el protocolo JSON-RPC a través de HTTPS. JSON-RPC es un protocolo RPC sencillo basado en texto que se basa en el formato ligero de intercambio de datos JSON. Las bibliotecas de clientes están disponibles para todos los principales lenguajes de programación.
+
+Puede realizar solicitudes de API a través de solicitudes HTTPS POSTERIORES al extremo de la API. El cuerpo de la solicitud POST es un objeto de solicitud JSON-RPC. Actualmente, la API no admite solicitudes por lotes (varios objetos de solicitud en UNA SOLA ENTRADA). Cuando envíe solicitudes de API, debe usar "Application/json-rpc" como el tipo de contenido de la solicitud y asegurarse de que el cuerpo no esté codificado en forma.
+
+
+NOTE: La interfaz de usuario web de Element utiliza los métodos de API que se describen en este documento. Puede supervisar las operaciones de API en la interfaz de usuario habilitando el registro de API; esto permite ver los métodos que se emiten al sistema. Puede activar tanto las solicitudes como las respuestas para ver cómo responde el sistema a los métodos que se emiten.
+
+A menos que se especifique lo contrario, todas las cadenas de fecha de las respuestas API tienen el formato UTC+0.
+
+
+NOTE: Cuando el clúster de almacenamiento tiene una gran carga o envía muchas solicitudes de API consecutivas sin retrasos, puede que un método falle y devuelva el error "xDBVersionmismatch". Si esto ocurre, vuelva a intentar la llamada al método.
+
+* xref:reference_element_api_request_object_members.adoc[Solicitar miembros de objeto]
+* xref:reference_element_api_response_object_members.adoc[Miembros del objeto de respuesta]
+* xref:concept_element_api_request_endpoints.adoc[Extremos de solicitudes]
+* xref:concept_element_api_authentication.adoc[Autenticación API]
+* xref:concept_element_api_asynchronous_methods.adoc[Métodos asíncronos]
+* xref:reference_element_api_attributes.adoc[Atributos]
+
+
+
+
+== Obtenga más información
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Página de recursos de SolidFire de NetApp"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentación para versiones anteriores de SolidFire de NetApp y los productos Element"^]
+

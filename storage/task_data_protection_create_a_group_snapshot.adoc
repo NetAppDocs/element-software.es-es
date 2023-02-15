@@ -1,0 +1,44 @@
+---
+permalink: storage/task_data_protection_create_a_group_snapshot.html 
+sidebar: sidebar 
+keywords: group snapshot, create, volumes, schedule, automate group snapshots 
+summary: Puede crear una snapshot de un grupo de volúmenes, así como planificar snapshots de grupo para automatizarlas. Una copia de Snapshot de grupo puede realizar copias de forma constante de hasta 32 volúmenes a la vez. 
+---
+= Crear una copia de Snapshot de grupo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede crear una snapshot de un grupo de volúmenes, así como planificar snapshots de grupo para automatizarlas. Una copia de Snapshot de grupo puede realizar copias de forma constante de hasta 32 volúmenes a la vez.
+
+.Pasos
+. Haga clic en *Administración* > *volúmenes*.
+. Use las casillas para seleccionar varios volúmenes de un grupo de volúmenes.
+. Haga clic en *acciones masivas*.
+. Haga clic en *instantánea de grupo*.
+. Introduzca un nombre de snapshot de grupo nuevo en el cuadro de diálogo Create Group Snapshot of Volumes.
+. *Opcional:* Active la casilla de verificación *incluir cada miembro de instantánea de grupo en replicación cuando se empareja* para asegurarse de que cada instantánea se captura en la replicación cuando el volumen principal está emparejado.
+. Seleccione una opción de retención para la copia de Snapshot de grupo:
++
+** Haga clic en *mantener siempre* para conservar la instantánea en el sistema indefinidamente.
+** Haga clic en *establecer período de retención* y utilice los cuadros de número de fecha para elegir un período de tiempo durante el cual el sistema retendrá la instantánea.
+
+
+. Para crear una sola snapshot de forma inmediata, realice los siguientes pasos:
++
+.. Haga clic en *tomar instantánea de grupo ahora*.
+.. Haga clic en *Crear instantánea de grupo*.
+
+
+. Para programar que la copia de Snapshot se ejecute en el futuro, realice los siguientes pasos:
++
+.. Haga clic en *Crear programación Snapshot de grupo*.
+.. Introduzca un *Nuevo nombre de programa*.
+.. Seleccione un *Tipo de programación* de la lista.
+.. *Opcional:* Active la casilla de verificación *Programación periódica* para repetir periódicamente la instantánea programada.
+.. Haga clic en *Crear programación*.
+
+
+

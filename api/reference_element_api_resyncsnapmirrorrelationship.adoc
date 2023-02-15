@@ -1,0 +1,101 @@
+---
+permalink: api/reference_element_api_resyncsnapmirrorrelationship.html 
+sidebar: sidebar 
+keywords: SnapMirror,relationship,resync,resyncing,ResyncSnapMirrorRelationship 
+summary: La interfaz de usuario web del software Element utiliza el método ResyncSnapMirrorRelationship para establecer o restablecer una relación de mirroring entre un extremo de origen y de destino. Cuando vuelve a sincronizar una relación, el sistema elimina las copias Snapshot en el volumen de destino que son más recientes que la copia Snapshot común y, a continuación, monta el volumen de destino como un volumen de protección de datos con la copia Snapshot común como la copia Snapshot exportada. 
+---
+= ResyncSnapMirrorRelationship
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La interfaz de usuario web del software Element utiliza el `ResyncSnapMirrorRelationship` método para establecer o restablecer una relación de mirroring entre un extremo de origen y de destino. Cuando vuelve a sincronizar una relación, el sistema elimina las copias Snapshot en el volumen de destino que son más recientes que la copia Snapshot común y, a continuación, monta el volumen de destino como un volumen de protección de datos con la copia Snapshot común como la copia Snapshot exportada.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+SnapMirrorEndpointID
+ a| 
+El ID de extremo del sistema de almacenamiento remoto de ONTAP se comunica con el clúster de almacenamiento de Element.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+DestationVolume
+ a| 
+El volumen de destino de la relación de SnapMirror.
+ a| 
+xref:reference_element_api_snapmirrorvolumeinfo.adoc[SnapMirrorVolumeinfo]
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+MaxTransferRate
+ a| 
+Especifica la tasa máxima de transferencia de datos entre los volúmenes en kilobytes por segundo. El valor predeterminado, 0, es ilimitado y permite que la relación de SnapMirror utilice completamente el ancho de banda de red disponible.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+Volumen de origen
+ a| 
+El volumen de origen de la relación de SnapMirror.
+ a| 
+xref:reference_element_api_snapmirrorvolumeinfo.adoc[SnapMirrorVolumeinfo]
+ a| 
+Ninguno
+ a| 
+No
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+SnapMirrorRelationship
+ a| 
+Un objeto que contiene información sobre la relación de SnapMirror resynced.
+ a| 
+xref:reference_element_api_snapmirrorrelationship.adoc[SnapMirrorRelationship]
+
+|===
+
+
+== Nuevo desde la versión
+
+10.1

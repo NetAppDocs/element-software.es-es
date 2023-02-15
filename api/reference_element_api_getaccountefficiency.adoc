@@ -1,0 +1,131 @@
+---
+permalink: api/reference_element_api_getaccountefficiency.html 
+sidebar: sidebar 
+keywords: accounts,account,efficiency,get,getting,GetAccountEfficiency 
+summary: Puede utilizar GetAccountEfficiency para obtener estadísticas de eficiencia sobre una cuenta de volumen. Este método devuelve información de eficiencia sólo para la cuenta que se da como parámetro. 
+---
+= GetAccountEfficiency
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar `GetAccountEfficiency` para obtener estadísticas de eficiencia sobre una cuenta de volumen. Este método devuelve información de eficiencia sólo para la cuenta que se da como parámetro.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+ID de cuenta
+ a| 
+Especifica la cuenta de volumen para la cual se devuelven estadísticas de eficiencia.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+compresión
+ a| 
+La cantidad de espacio que ahorra la compresión de datos en todos los volúmenes de la cuenta. Se afirma como una relación en la que el valor "1" significa que los datos se han almacenado sin compresión.
+ a| 
+flotante
+
+
+
+ a| 
+deduplicación
+ a| 
+La cantidad de espacio ahorrado no duplicando datos para todos los volúmenes de la cuenta. Se indica como una relación.
+ a| 
+flotante
+
+
+
+ a| 
+Volúmenes missingVolumes
+ a| 
+Los volúmenes que no se pudieron consultar para los datos de eficiencia. Los volúmenes que faltan pueden deberse a que el ciclo de recolección de elementos no utilizados (GC) tiene menos de una hora de antigüedad, a una pérdida temporal de conectividad de red o a servicios reiniciados desde el ciclo de GC.
+ a| 
+matriz en números enteros
+
+
+
+ a| 
+Thin Provisioning
+ a| 
+La relación entre el espacio utilizado y la cantidad de espacio asignado para almacenar datos. Se indica como una relación.
+ a| 
+flotante
+
+
+
+ a| 
+fecha/hora
+ a| 
+La última vez que se recopilaron los datos de eficiencia después de la recolección de basura (GC), en formato UTC+0.
+ a| 
+Cadena de fecha ISO 8601
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "GetAccountEfficiency",
+   "params": {
+     "accountID": 3
+   },
+   "id": 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+   "id": 1,
+   "result": {
+       "compression": 2.020468042933262,
+       "deduplication": 2.042488619119879,
+       "missingVolumes": [],
+       "thinProvisioning": 1.010087163391013,
+       "timestamp": "2014-03-10T14:06:02Z"
+   }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

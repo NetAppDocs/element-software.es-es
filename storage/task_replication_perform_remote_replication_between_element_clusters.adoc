@@ -1,0 +1,26 @@
+---
+permalink: storage/task_replication_perform_remote_replication_between_element_clusters.html 
+sidebar: sidebar 
+keywords: remote replication, clusters, Element software, failover, failback 
+summary: Para los clústeres que ejecutan el software Element, la replicación en tiempo real permite la creación rápida de copias remotas de datos de volumen. Un clúster de almacenamiento se puede emparejar con hasta otros cuatro clústeres de almacenamiento. Es posible replicar datos de volúmenes de forma síncrona o asíncrona desde un clúster de una pareja de clústeres para escenarios de conmutación por error y conmutación tras recuperación. 
+---
+= Llevar a cabo la replicación remota entre los clústeres que ejecutan el software NetApp Element
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para los clústeres que ejecutan el software Element, la replicación en tiempo real permite la creación rápida de copias remotas de datos de volumen. Un clúster de almacenamiento se puede emparejar con hasta otros cuatro clústeres de almacenamiento. Es posible replicar datos de volúmenes de forma síncrona o asíncrona desde un clúster de una pareja de clústeres para escenarios de conmutación por error y conmutación tras recuperación.
+
+El proceso de replicación incluye los siguientes pasos:
+
+image::../media/replication_element_clusters_workflow.gif[Diagrama de flujo de trabajo de replicación]
+
+* link:task_replication_plan_cluster_and_volume_pairing.html["Planifique el emparejamiento de clústeres y volúmenes para la replicación en tiempo real"]
+* link:task_replication_pair_clusters.html["Emparejar clústeres para la replicación"]
+* link:task_replication_pair_volumes.html["Emparejar volúmenes"]
+* link:task_replication_validate_volume_replication.html["Validar la replicación de volúmenes"]
+* link:task_replication_delete_volume_relationship_after_replication.html["Eliminar una relación de volumen después de la replicación"]
+* link:task_replication_manage_volume_relationships.html["Gestionar relaciones de volumen"]
+

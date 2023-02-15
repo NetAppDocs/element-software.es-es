@@ -1,0 +1,112 @@
+---
+permalink: api/reference_element_api_enableclusterssh.html 
+sidebar: sidebar 
+keywords: SSH,enabling,enable,cluster,EnableClusterSsh 
+summary: Puede utilizar el método EnableClusterSsh para habilitar el servicio SSH en todos los nodos del clúster de almacenamiento. 
+---
+= EnableClusterSsh
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `EnableClusterSsh` Método para habilitar el servicio SSH en todos los nodos del clúster de almacenamiento.
+
+
+NOTE: El SDS empresarial de SolidFire no admite este método. Si utiliza este método en un sistema SolidFire eSDS, el método devolverá un error.
+
+
+
+== Parámetro
+
+Este método tiene el siguiente parámetro de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+duración
+ a| 
+La cantidad de tiempo durante el cual se seguirá habilitando el servicio SSH.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+
+
+== Valores devueltos
+
+Este método tiene los siguientes valores devueltos:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+resultado
+ a| 
+Un objeto JSON que contiene el estado del servicio SSH para el clúster de almacenamiento, el tiempo restante hasta que SSH esté deshabilitado y el estado del servicio SSH para cada nodo.
+ a| 
+Objeto JSON
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+  "method": "EnableClusterSsh",
+  "params": {
+      "duration"  : "02:00:00.00"
+  },
+  "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+	"id": 1,
+	"result" : {
+    "enabled": true,
+    "timeRemaining": "00:43:21",
+    "nodes": [
+    {
+        "nodeID": 1,
+        "enabled": true
+    },
+    {
+        "nodeID": 2,
+        "enabled": true
+    },
+    {
+        "nodeID": 3,
+        "enabled": false
+    },
+    {
+        "nodeID": 4,
+        "enabled": false
+    } ]
+			}
+	}
+----
+
+
+== Nuevo desde la versión
+
+10.3

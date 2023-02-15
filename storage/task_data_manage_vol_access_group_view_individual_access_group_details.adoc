@@ -1,0 +1,37 @@
+---
+permalink: storage/task_data_manage_vol_access_group_view_individual_access_group_details.html 
+sidebar: sidebar 
+keywords: access group details, view, view details, initiators 
+summary: Es posible ver los detalles de un grupo de acceso individual, como iniciadores y volúmenes conectados, en formato gráfico. 
+---
+= Ver detalles de cada grupo de acceso
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible ver los detalles de un grupo de acceso individual, como iniciadores y volúmenes conectados, en formato gráfico.
+
+. Haga clic en *Administración* > *grupos de acceso*.
+. Haga clic en el icono Actions de un grupo de acceso.
+. Haga clic en *Ver detalles*.
+
+
+
+
+== Detalles del grupo de acceso de volúmenes
+
+En la página Access Groups de la pestaña Management, se proporciona información sobre los grupos de acceso de volúmenes.
+
+Se muestra la siguiente información:
+
+* *ID*: El ID generado por el sistema para el grupo de acceso.
+* *Nombre*: El nombre otorgado al grupo de acceso cuando se creó.
+* *Volúmenes activos*: Número de volúmenes activos en el grupo de acceso.
+* *Compresión*: La puntuación de eficiencia de compresión del grupo de acceso.
+* *Deduplicación*: La puntuación de eficiencia de deduplicación del grupo de acceso.
+* *Thin Provisioning*: Puntuación de eficiencia de thin provisioning para el grupo de acceso.
+* *Eficiencia general*: La puntuación de eficiencia general del grupo de acceso.
+* *Initiators*: El número de iniciadores conectados al grupo de acceso.
+

@@ -1,0 +1,199 @@
+---
+permalink: api/reference_element_api_modifyvolumeaccessgroup.html 
+sidebar: sidebar 
+keywords: volume,access,group,modify,modifying,updating,changing,change,update,edit,editing,modifyvolumeaccessgroup 
+summary: Es posible usar el método ModifyVolumeAccessGroup para actualizar iniciadores y añadir o quitar volúmenes de un grupo de acceso de volúmenes. 
+---
+= ModifyVolumeAccessGroup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `ModifyVolumeAccessGroup` método para actualizar los iniciadores y añadir o quitar volúmenes de un grupo de acceso de volúmenes.
+
+Si un iniciador o volumen especificado es un duplicado de lo que existe actualmente, el grupo de acceso de volúmenes se deja como está. Si no especifica un valor para los volúmenes o los iniciadores, no se cambia la lista actual de iniciadores y volúmenes.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+
+
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+VolumeAccessGroupID
+ a| 
+El ID del grupo de acceso de volúmenes que se desea modificar.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+nombre
+ a| 
+El nuevo nombre de este grupo de acceso de volúmenes.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+atributos
+ a| 
+La lista de pares nombre-valor en el formato de objetos JSON.
+ a| 
+Objeto JSON
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+iniciadores
+ a| 
+Lista de ID o nombres de iniciador (IQN y WWPN) que se van a incluir en el grupo de acceso de volúmenes. Si pasa una lista de nombres de iniciador, se crean los iniciadores si no existen todavía. Si pasa una lista de ID de iniciador, el método devuelve un error si alguno de los iniciadores aún no existe. Pasar los nombres de iniciadores está obsoleto; debe usar ID de iniciador cuando sea posible.
+ a| 
+matriz de enteros (recomendado) o matriz de cadenas (obsoleto)
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+DeleteOrphanInitiators
+ a| 
+Especifica si se eliminarán los objetos iniciadores después de que se eliminen de un grupo de acceso de volúmenes o no. Los posibles valores son los siguientes:
+
+* True: Elimine los objetos iniciadores después de que se eliminen de un grupo de acceso de volúmenes.
+* False: No se eliminan los objetos del iniciador después de que se quitan de un grupo de acceso de volúmenes. Este es el valor predeterminado.
+
+ a| 
+booleano
+ a| 
+falso
+ a| 
+No
+
+
+
+ a| 
+volúmenes
+ a| 
+Una lista de ID de volumen de los volúmenes que se van a modificar.
+ a| 
+matriz en números enteros
+ a| 
+Ninguno
+ a| 
+xref:reference_element_api_volumeaccessgroup.adoc[VolumeAccessGroup]
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+VolumeAccessGroup
+ a| 
+Un objeto que contiene información acerca del grupo de acceso de volúmenes recién modificado.
+ a| 
+xref:reference_element_api_volumeaccessgroup.adoc[VolumeAccessGroup]
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "ModifyVolumeAccessGroup",
+   "params": {
+      "volumeAccessGroupID": 96,
+      "name": "accessgrouptest",
+      "initiators": [115,114],
+      "volumes": [
+         346
+    ],
+      "attributes": {}
+   }
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id": null,
+  "result": {
+    "volumeAccessGroup": {
+      "attributes": {},
+      "deletedVolumes": [
+        327
+      ],
+      "initiatorIDs": [
+        114,
+        115
+      ],
+      "initiators": [
+        "iqn.1998-01.com.vmware:desk1-esx1-577b283a",
+        "iqn.1998-01.com.vmware:donesq-esx1-421b281b"
+      ],
+      "name": "accessgrouptest",
+      "volumeAccessGroupID": 96,
+      "volumes": [
+        346
+      ]
+    }
+  }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6
+
+
+
+== Obtenga más información
+
+* xref:reference_element_api_addinitiatorstovolumeaccessgroup.adoc[AddInitiatorsToVolumeAccessGroup]
+* xref:reference_element_api_addvolumestovolumeaccessgroup.adoc[AddVolumesToVolumeAccessGroup]
+* xref:reference_element_api_removeinitiatorsfromvolumeaccessgroup.adoc[RemoveInitiatorsFromVolumeAccessGroup]
+* xref:reference_element_api_removevolumesfromvolumeaccessgroup.adoc[RemoveVolumesFromVolumeAccessGroup]
+

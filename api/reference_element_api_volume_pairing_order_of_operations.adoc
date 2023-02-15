@@ -1,0 +1,37 @@
+---
+permalink: api/reference_element_api_volume_pairing_order_of_operations.html 
+sidebar: sidebar 
+keywords: volume,pairing,order,operations,volumes,pairing,pair,pairs 
+summary: Para poder emparejar los volúmenes, es necesario crear una pareja de clústeres entre dos clústeres correspondientes. 
+---
+= Orden de las operaciones de emparejamiento de volúmenes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para poder emparejar los volúmenes, es necesario crear una pareja de clústeres entre dos clústeres correspondientes.
+
+Use el siguiente conjunto de métodos API para establecer una conexión de clúster:
+
+* xref:reference_element_api_startvolumepairing.adoc[StartVolumePairing]:
++
+Este método de API crea y devuelve una clave de emparejamiento de volúmenes que se utiliza para crear una pareja de volúmenes. La clave contiene información que se utiliza para establecer comunicaciones entre volúmenes.
+
+* xref:reference_element_api_completevolumepairing.adoc[CompleteVolumePairing]:
++
+Este método utiliza la clave de emparejamiento creada con el xref:reference_element_api_startvolumepairing.adoc[StartVolumePairing] Método API para crear una pareja de volúmenes. Emita el xref:reference_element_api_completevolumepairing.adoc[CompleteVolumePairing] Método API con los parámetros volumeID y volumePairingKey para el volumen de destino.
+
+
+
+Solo se puede identificar uno de los volúmenes emparejados como un volumen de destino de replicación. Utilice la xref:reference_element_api_modifyvolumepair.adoc[ModifyVolumePair] Método API para establecer la dirección de la replicación de datos del volumen identificando el volumen que es el destino. Los datos se replican del volumen de origen al volumen de destino.
+
+
+
+== Obtenga más información
+
+* xref:reference_element_api_startvolumepairing.adoc[StartVolumePairing]
+* xref:reference_element_api_completevolumepairing.adoc[CompleteVolumePairing]
+* xref:reference_element_api_modifyvolumepair.adoc[ModifyVolumePair]
+

@@ -1,0 +1,51 @@
+---
+permalink: api/reference_element_api_protectiondomainresiliency.html 
+sidebar: sidebar 
+keywords: object,objects,protectionDomainResiliency 
+summary: 'El objeto protectionDomainResiliency contiene el estado de resiliencia de este clúster de almacenamiento. La resiliencia indica la capacidad del clúster de almacenamiento para recuperarse automáticamente de uno o más fallos, todos ellos dentro de un único dominio de protección del tipo de dominio de protección asociado. Un clúster de almacenamiento se considera curado cuando pueda seguir leyendo y escribiendo datos mediante el fallo de cualquier nodo de almacenamiento \(un estado conocido como tolerancia de nodo\).' 
+---
+= ProtectionDomainResiliency
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El objeto protectionDomainResiliency contiene el estado de resiliencia de este clúster de almacenamiento. La resiliencia indica la capacidad del clúster de almacenamiento para recuperarse automáticamente de un fallo o varios en un único dominio de protección de su tipo de dominio de protección asociado. Un clúster de almacenamiento se considera curado cuando este pueda seguir leyendo y escribiendo datos mediante el fallo de cualquier otro nodo de almacenamiento (un estado conocido como tolerancia al nodo).
+
+
+
+== Miembros de objeto
+
+Este objeto contiene los siguientes miembros:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+ProtectionSchemeResiliencies
+ a| 
+Una lista de objetos (uno para cada esquema de protección) que contienen información de resiliencia de fallos para el tipo asociado de dominio de protección.
+ a| 
+xref:reference_element_api_protectionschemeresiliency.adoc[ProtectionSchemeResiliency] cabina
+
+
+
+ a| 
+SingleFailureThresholdBytesForBlockData
+ a| 
+El número máximo de bytes que se pueden almacenar en el clúster de almacenamiento antes de perder la capacidad de recuperarse automáticamente en un estado de tolerancia de nodo.
+ a| 
+entero
+
+
+
+ a| 
+FailoidableForsemble
+ a| 
+El número previsto de fallos simultáneos que se pueden producir sin perder la capacidad de recuperarse automáticamente a un estado de tolerancia de nodo para el quórum del conjunto.
+ a| 
+entero
+
+|===

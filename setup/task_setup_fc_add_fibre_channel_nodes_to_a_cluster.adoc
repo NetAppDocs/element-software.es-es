@@ -1,0 +1,43 @@
+---
+permalink: setup/task_setup_fc_add_fibre_channel_nodes_to_a_cluster.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible añadir nodos Fibre Channel a un clúster cuando se necesita más almacenamiento o durante la creación del clúster. Los nodos Fibre Channel requieren una configuración inicial cuando se conectan por primera vez. Una vez que se configura, aparece en la lista de nodos pendientes y puede añadirlos a un clúster. 
+---
+= Añada nodos Fibre Channel a un clúster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible añadir nodos Fibre Channel a un clúster cuando se necesita más almacenamiento o durante la creación del clúster. Los nodos Fibre Channel requieren una configuración inicial cuando se conectan por primera vez. Una vez que se configura, aparece en la lista de nodos pendientes y puede añadirlos a un clúster.
+
+La versión de software de cada nodo Fibre Channel en un clúster tiene que ser compatible. Cuando se añade un nodo Fibre Channel a un clúster, el clúster instala la versión del clúster de Element en el nodo nuevo según sea necesario.
+
+.Pasos
+. Seleccione *Cluster* > *Nodes*.
+. Haga clic en *pendiente* para ver la lista de nodos pendientes.
+. Debe realizar una de las siguientes acciones:
++
+** Para agregar nodos individuales, haga clic en el icono *acciones* del nodo que desea agregar.
+** Para añadir varios nodos, active la casilla de los nodos que desee agregar y, a continuación, *acciones masivas*.
++
+
+NOTE: Si el nodo que desea añadir tiene una versión de elemento diferente a la versión que se ejecuta en el clúster, el clúster actualiza de forma asíncrona el nodo a la versión de Element que se ejecuta en el maestro de clústeres. Después de que se actualiza el nodo, se añade automáticamente al clúster. Durante este proceso asíncrono, el nodo tendrá el estado pendingActive.
+
+
+
+. Haga clic en *Agregar*.
++
+El nodo aparece en la lista de nodos activos.
+
+
+
+
+
+== Obtenga más información
+
+* https://www.netapp.com/data-storage/solidfire/documentation["Página SolidFire y Element Resources"^]
+* https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
+

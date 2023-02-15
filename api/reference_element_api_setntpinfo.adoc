@@ -1,0 +1,101 @@
+---
+permalink: api/reference_element_api_setntpinfo.html 
+sidebar: sidebar 
+keywords: ntp,info,set,setting,setntpinfo 
+summary: Puede usar el método SetNtpInfo para configurar NTP en nodos de clúster. Los valores que establece con esta interfaz se aplican a todos los nodos del clúster. Si un servidor de retransmisión NTP transmite periódicamente información de hora a la red, los nodos se pueden configurar como clientes de retransmisión. 
+---
+= SetNtpInfo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `SetNtpInfo` Método para configurar NTP en los nodos del clúster. Los valores que establece con esta interfaz se aplican a todos los nodos del clúster. Si un servidor de retransmisión NTP transmite periódicamente información de hora a la red, los nodos se pueden configurar como clientes de retransmisión.
+
+
+NOTE: El SDS empresarial de SolidFire no admite este método. Si utiliza este método en un sistema SolidFire eSDS, el método devolverá un error.
+
+
+
+== Parámetros
+
+
+NOTE: Asegúrese de usar los servidores NTP internos a la red en lugar de los que vienen predeterminados en la instalación.
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+servidores
+ a| 
+La lista de servidores NTP que se van a añadir a cada configuración de NTP de nodo.
+ a| 
+matriz de cadenas
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+cliente de envío
+ a| 
+Habilita cada nodo del clúster como cliente de retransmisión.
+ a| 
+booleano
+ a| 
+falso
+ a| 
+No
+
+|===
+
+
+== Valores devueltos
+
+Este método no tiene valores devueltos.
+
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "SetNtpInfo",
+   "params": {
+     "servers"  : [
+       "ntpserver1.example.org",
+       "ntpserver2.example.org",
+       "ntpserver3.example.org"
+     ],
+     "broadcastclient" : false
+   },
+   "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+    "id" : 1,
+    "result" : {}
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

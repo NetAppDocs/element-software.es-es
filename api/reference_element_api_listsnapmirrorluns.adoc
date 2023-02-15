@@ -1,0 +1,73 @@
+---
+permalink: api/reference_element_api_listsnapmirrorluns.html 
+sidebar: sidebar 
+keywords: snapmirror,lun,luns,list,listing,listsnapmirrorluns 
+summary: La interfaz de usuario web del software Element utiliza el método ListSnapMirrorLuns para enumerar la información de LUN para la relación de SnapMirror desde el clúster de ONTAP remoto. 
+---
+= ListSnapMirrorLuns
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La interfaz de usuario web del software Element utiliza el `ListSnapMirrorLuns` Método para enumerar la información de LUN para la relación de SnapMirror desde el clúster de ONTAP remoto.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+SnapMirrorEndpointID
+ a| 
+Enumere solo la información de LUN asociada con el ID de extremo especificado.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+DestationVolume
+ a| 
+El volumen de destino de la relación de SnapMirror.
+ a| 
+xref:reference_element_api_snapmirrorvolumeinfo.adoc[SnapMirrorVolumeInfo]
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+
+
+== Valores devueltos
+
+Este método tiene los siguientes valores devueltos:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+SnapMirrorLunInfos
+ a| 
+Una lista de objetos que contienen información acerca de LUN de SnapMirror.
+ a| 
+xref:reference_element_api_snapmirrorluninfo.adoc[SnapMirrorLunInfo] cabina
+
+|===
+
+
+== Nuevo desde la versión
+
+10.1

@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: element-earlierversions.html 
+keywords: earlier versions, element versions 
+summary: La documentación de versiones anteriores está disponible por si no se está ejecutando la versión más reciente. 
+---
+= Versiones anteriores de la documentación sobre el software SolidFire y NetApp Element
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+La documentación de las versiones anteriores está disponible en el sitio de soporte de NetApp.
+
+* https://docs.netapp.com/us-en/element-software-123/index.html["Documentación de Element 12.3.x."^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=63945&language=en-US["Documentación de Element 12.2.1"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=63593&language=en-US["Documentación de Element 12.2"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=63946&language=en-US["Documentación de Element 12.0.1"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=63368&language=en-US["Documentación de Element 12.0"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=64187&language=en-US["Documentación de Element 11.8.2"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=63944&language=en-US["Documentación de Element 11.8.1"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=63293&language=en-US["Documentación de Element 11.8"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=63138&language=en-US["Documentación de Element 11.7"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=63207&language=en-US["Documentación de Element 11.5.1"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=63058&language=en-US["Documentación de Element 11.5"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=63027&language=en-US["Documentación del elemento 11.3P1"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=63206&language=en-US["Documentación de Element 11.3.2"^]
+* https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62654["Documentación de Element 11.1 y versiones anteriores"^]
+
+
+
+
+== Si quiere más información
+
+* https://www.netapp.com/data-storage/solidfire/documentation["Página SolidFire y Element Resources"^]
+* https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
+

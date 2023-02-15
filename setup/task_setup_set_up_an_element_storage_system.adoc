@@ -1,0 +1,14 @@
+---
+permalink: setup/task_setup_set_up_an_element_storage_system.html 
+sidebar: sidebar 
+keywords:  
+summary: Para configurar un sistema de almacenamiento del software NetApp Element, es necesario configurar un nodo de almacenamiento, crear un clúster de almacenamiento y añadir unidades al clúster. Si se usa una red Fibre Channel, es posible configurar un nodo Fibre Channel. 
+---
+= Configure un sistema de almacenamiento Element
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para configurar un sistema de almacenamiento del software NetApp Element, es necesario configurar un nodo de almacenamiento, crear un clúster de almacenamiento y añadir unidades al clúster. Si se usa una red Fibre Channel, es posible configurar un nodo Fibre Channel.

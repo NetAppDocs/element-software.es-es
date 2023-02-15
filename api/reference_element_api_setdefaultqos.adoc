@@ -1,0 +1,139 @@
+---
+permalink: api/reference_element_api_setdefaultqos.html 
+sidebar: sidebar 
+keywords: qos,value,configure,configuring,default,set,setting,setdefaultqos 
+summary: 'Se puede utilizar el método SetDefaultQoS para configurar los valores predeterminados de calidad de servicio \(QoS\) \(medidos en entradas y salidas por segundo, o IOPS\) para un volumen.' 
+---
+= SetDefaultQoS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `SetDefaultQoS` Método para configurar los valores predeterminados de calidad de servicio (QoS) (que se miden en entradas y salidas por segundo o IOPS) de un volumen.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+MinIOPS
+ a| 
+El número mínimo de IOPS sostenidas que proporciona el clúster a un volumen.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+IOPS
+ a| 
+El número máximo de IOPS sostenidas que proporciona el clúster a un volumen.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+BurstIOPS
+ a| 
+El número máximo de IOPS permitidas en un escenario de ráfaga breve.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+No
+
+|===
+
+
+== Valores devueltos
+
+Este método tiene los siguientes valores devueltos:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+MinIOPS
+ a| 
+El número mínimo de IOPS sostenidas que proporciona el clúster a un volumen.
+ a| 
+entero
+
+
+
+ a| 
+IOPS
+ a| 
+El número máximo de IOPS sostenidas que proporciona el clúster a un volumen.
+ a| 
+entero
+
+
+
+ a| 
+BurstIOPS
+ a| 
+El número máximo de IOPS permitidas en un escenario de ráfaga breve.
+ a| 
+entero
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "SetDefaultQoS",
+    "params": {
+        "burstIOPS":8000,
+        "maxIOPS":1000,
+        "minIOPS":200
+    },
+    "id": 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+    "id":1,
+    "result": {
+        "burstIOPS":8000,
+        "maxIOPS":1000,
+        "minIOPS":200
+    ​}
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

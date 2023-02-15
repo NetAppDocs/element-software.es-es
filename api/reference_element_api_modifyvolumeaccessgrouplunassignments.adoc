@@ -1,0 +1,136 @@
+---
+permalink: api/reference_element_api_modifyvolumeaccessgrouplunassignments.html 
+sidebar: sidebar 
+keywords: volumes,volume,defining,define,modify,modifying,edit,editing,change,changing,modifyvolumeaccessgrouplunassignments,access,group,lun,assignment 
+summary: Puede utilizar el método ModifyVolumeAccessGroupLunAssignments para definir asignaciones de LUN personalizadas para volúmenes específicos. 
+---
+= ModifyVolumeAccessGroupLunAssignments
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `ModifyVolumeAccessGroupLunAssignments` Método para definir asignaciones de LUN personalizadas para volúmenes específicos.
+
+Este método solo cambia los valores de LUN establecidos en el parámetro lunAssignments en el grupo de acceso de volúmenes. El resto de las asignaciones de LUN no han cambiado.
+
+Los valores de asignación de LUN deben ser únicos para los volúmenes de un grupo de acceso de volúmenes. No se pueden definir valores de LUN duplicados dentro de un grupo de acceso de volúmenes. Sin embargo, puede volver a utilizar los mismos valores de LUN en diferentes grupos de acceso de volúmenes.
+
+
+NOTE: Los valores válidos de LUN abarcan de 0 a 16383. El sistema genera una excepción si pasa un valor de LUN fuera de este rango. Ninguna de las asignaciones de LUN especificadas se modifica si hay una excepción.
+
+PRECAUCIÓN:
+
+Si cambia una asignación de LUN para un volumen con I/o activas, es posible interrumpir las operaciones de I/O. Debe cambiar la configuración del servidor antes de cambiar las asignaciones de LUN de volumen.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+
+
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+VolumeAccessGroupID
+ a| 
+ID de grupo de acceso de volúmenes único para el que se modificarán las asignaciones de LUN.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+LunAssignments
+ a| 
+Los ID de volumen con nuevos valores de LUN asignados.
+ a| 
+matriz en números enteros
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+VolumeAccessGroupLunAssignments
+ a| 
+Objeto que contiene detalles de las asignaciones de LUN de grupos de acceso de volúmenes modificadas.
+ a| 
+Objeto JSON
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "ModifyVolumeAccessGroupLunAssignments",
+   "params": {
+       "volumeAccessGroupID" : 218,
+       "lunAssignments" : [
+           {"volumeID" : 832, "lun" : 0},
+           {"volumeID" : 834, "lun" : 1}
+        ]
+    },
+    "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "volumeAccessGroupLunAssignments": {
+      "deletedLunAssignments": [],
+      "lunAssignments": [
+        {
+          "lun": 0,
+          "volumeID": 832
+        },
+        {
+          "lun": 1,
+          "volumeID": 834
+        }
+      ],
+      "volumeAccessGroupID": 218
+    }
+  }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

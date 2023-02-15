@@ -1,0 +1,45 @@
+---
+section: esds
+title: Instale y utilice SDS empresarial de SolidFire
+url: "/esds/index.html"
+entries:
+- title: Empiece a usar SolidFire eSDS
+  url: "/esds/concept_get_started_esds.html"
+- title: Realice las tareas de requisitos previos para la instalación
+  url: "/esds/concept_esds_prerequisite_tasks.html"
+  entries:
+  - title: Consideraciones sobre la configuración de red
+    url: "/esds/concept_esds_networking_best_practices.html"
+  - title: Configure la red del host
+    url: "/esds/task_esds_configure_the_interface_config_files.html"
+- title: Instale SolidFire eSDS
+  url: "/esds/task_esds_install_using_ansible.html"
+- title: Realice las tareas posteriores a la instalación
+  url: "/esds/task_esds_postinstallation.html"
+- title: Actualice los clústeres
+  url: "/esds/task_esds_upgrade_cluster.html"
+- title: Supervise los clústeres
+  url: "/esds/concept_esds_monitor_clusters.html"
+- title: Gestionar el almacenamiento SolidFire eSDS
+  url: "/esds/reference_esds_element_links.html"
+- title: Desinstale SolidFire eSDS
+  url: "/esds/task_esds_uninstall.html"
+- title: Mantener SolidFire eSDS
+  url: "/esds/concept_esds_maintain.html"
+  entries:
+  - title: Obtenga la clave de licencia
+    url: "/esds/task_esds_get_license_key.html"
+  - title: Use el modo de mantenimiento en clústeres eSDS de SolidFire
+    url: "/esds/reference_esds_use_maintenance_mode.html"
+  - title: Sustituya las unidades para HPE DL380
+    url: "/esds/task_esds_dl380_drive_repl.html"
+  - title: Reemplace las unidades para HPE DL360
+    url: "/esds/task_esds_dl360_drive_repl.html"
+  - title: Sustituya las unidades para Dell R640
+    url: "/esds/task_esds_r640_drive_repl.html"
+  - title: Recopile registros del contenedor
+    url: "/esds/reference_esds_containerlogs.html"
+  - title: Enlaces a artículos de la base de conocimientos de solución de problemas
+    url: "/esds/reference_esds_troubleshoot_links.html"
+  - title: Contenido del archivo sf_sds_config.yaml
+    url: "/esds/reference_esds_sf_sds_config_file.html"

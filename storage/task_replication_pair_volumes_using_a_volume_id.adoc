@@ -1,0 +1,63 @@
+---
+permalink: storage/task_replication_pair_volumes_using_a_volume_id.html 
+sidebar: sidebar 
+keywords: volume pairings, volume id, replication 
+summary: Es posible emparejar un volumen con otro volumen en un clúster remoto si tiene credenciales de administrador de clústeres para el clúster remoto. 
+---
+= Emparejar volúmenes con un ID de volumen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible emparejar un volumen con otro volumen en un clúster remoto si tiene credenciales de administrador de clústeres para el clúster remoto.
+
+.Lo que necesitará
+* Confirme que los clústeres que contienen los volúmenes están emparejados.
+* Cree un nuevo volumen en el clúster remoto.
++
+
+NOTE: Puede asignar un origen y un destino de replicación después del proceso de emparejamiento. Un origen u objetivo de replicación pueden ser un volumen de una pareja de volúmenes. Debe crear un volumen de destino que no contenga datos y que tenga las mismas características que el volumen de origen, como el tamaño, la configuración de tamaño de bloque para los volúmenes (512e o 4k) y la configuración de calidad de servicio. Si asigna un volumen existente como objetivo de replicación, los datos de ese volumen se sobrescriben. El tamaño del volumen de destino puede ser mayor o igual que el del volumen de origen, pero no menor.
+
+* Determine el ID del volumen de destino.
+
+
+.Pasos
+. Seleccione *Gestión* > *volúmenes*.
+. Haga clic en el icono *acciones* del volumen que desea emparejar.
+. Haga clic en *par*.
+. En el cuadro de diálogo *volumen de par*, seleccione *Iniciar emparejamiento*.
+. Seleccione *i do* para indicar que tiene acceso al clúster remoto.
+. Seleccione un *modo de replicación* de la lista:
++
+** *Tiempo real (asíncrono)*: Las escrituras se reconocen en el cliente después de que se aplican en el clúster de origen.
+** *Real-Time (Synchronous)*: Las escrituras se reconocen en el cliente después de que se aplican tanto en los clústeres de origen como de destino.
+** *Sólo instantáneas*: Sólo se replican las instantáneas creadas en el clúster de origen. No se replican las escrituras activas del volumen de origen.
+
+
+. Seleccione un clúster remoto de la lista Remote Cluster.
+. Seleccione un ID de volumen remoto.
+. Haga clic en *Iniciar emparejamiento*.
++
+El sistema abre una pestaña del navegador web que se conecta a la interfaz de usuario de Element del clúster remoto. Es posible que se le pida iniciar sesión en el clúster remoto con las credenciales de administrador de clúster.
+
+. En la interfaz de usuario de Element del clúster remoto, seleccione *Complete Pairing*.
+. Confirme los detalles en *Confirmar emparejamiento de volúmenes*.
+. Haga clic en *Complete Pairing*.
++
+Después de confirmar el emparejamiento, los dos clústeres comienzan el proceso de conexión de los volúmenes para el emparejamiento. Durante el proceso de emparejamiento, puede ver mensajes en la columna *Estado del volumen* de la ventana *pares de volúmenes*. Se muestra la pareja de volúmenes `PausedMisconfigured` hasta que se asignan el origen y el destino de la pareja de volúmenes.
+
++
+Después de completar correctamente el emparejamiento, se recomienda actualizar la tabla Volumes para eliminar la opción *Pair* de la lista *Actions* del volumen emparejado. Si no actualiza la tabla, la opción *par* permanece disponible para su selección. Si vuelve a seleccionar la opción *par*, se abre una nueva pestaña y, dado que el volumen ya está emparejado, el sistema informa un `StartVolumePairing Failed: xVolumeAlreadyPaired` Mensaje de error en la ventana *Pair Volume* de la página UI de Element.
+
+
+
+
+
+== Obtenga más información
+
+* xref:reference_replication_volume_pairing_messages.adoc[Mensajes sobre el emparejamiento de volúmenes]
+* xref:reference_replication_volume_pairing_warnings.adoc[Advertencias sobre el emparejamiento de volúmenes]
+* xref:task_replication_assign_replication_source_and_target_to_paired_volumes.adoc[Asigne un origen y un destino de replicación a los volúmenes emparejados]
+

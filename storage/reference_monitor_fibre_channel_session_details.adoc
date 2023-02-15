@@ -1,0 +1,50 @@
+---
+permalink: storage/reference_monitor_fibre_channel_session_details.html 
+sidebar: sidebar 
+keywords: fibre channel sessions, fc, FC, sessions 
+summary: 'Puede encontrar información acerca de las sesiones activas Fibre Channel \(FC\) que están conectadas al clúster.' 
+---
+= Detalles de la sesión Fibre Channel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se proporciona información sobre las sesiones activas de Fibre Channel (FC) que están conectadas al clúster.
+
+En la lista siguiente se describe la información que puede encontrar acerca de las sesiones FC conectadas al clúster:
+
+* *ID de nodo*
++
+El nodo que aloja la sesión de la conexión.
+
+* *Nombre de nodo*
++
+El nombre del nodo que genera el sistema.
+
+* *ID de iniciador*
++
+Un ID que genera el sistema para el iniciador.
+
+* *WWPN del iniciador*
++
+El nombre de puerto que se inicia a nivel mundial.
+
+* *Alias del iniciador*
++
+Un nombre opcional para el iniciador que facilite encontrar el iniciador cuando la lista es larga.
+
+* *WWPN de destino*
++
+El nombre de puerto objetivo a nivel mundial.
+
+* *Grupo de acceso por volumen*
++
+El nombre del grupo de acceso de volúmenes al que pertenece la sesión.
+
+* *ID de grupo de acceso de volumen*
++
+El ID que genera el sistema para el grupo de acceso.
+
+

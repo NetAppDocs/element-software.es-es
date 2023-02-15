@@ -1,0 +1,163 @@
+---
+permalink: storage/concept_system_manage_manage_cluster_administrator_users.html 
+sidebar: sidebar 
+keywords: element, solidfire, cluster admin, account, create, change, configure, administrator access, edit permissions, change passwords 
+summary: Las cuentas de administrador de clúster se pueden gestionar para un sistema de almacenamiento SolidFire. Las funciones de gestión de administrador de clúster disponibles incluyen crear, eliminar y editar cuentas de administrador de clúster, cambiar la contraseña de administrador del clúster y configurar los ajustes LDAP para gestionar el acceso al sistema para los usuarios. 
+---
+= Gestione cuentas de usuario administrador del clúster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para gestionar las cuentas de administrador de clúster correspondientes a un sistema de almacenamiento de SolidFire, debe crear, eliminar y editar cuentas de administrador de clúster, cambiar la contraseña de administrador de clúster y configurar las opciones de LDAP para gestionar el acceso a los usuarios al sistema.
+
+
+
+== Tipos de cuenta de administrador del clúster de almacenamiento
+
+Existen dos tipos de cuentas de administrador que pueden existir en un clúster de almacenamiento que ejecuta el software NetApp Element: La cuenta de administrador de clúster principal y una cuenta de administrador de clúster.
+
+* *Cuenta de administrador del clúster principal*
++
+Esta cuenta de administrador se crea cuando se crea el clúster. Es la cuenta administrativa principal con el nivel de acceso al clúster más alto. Esta cuenta es similar a un usuario raíz en un sistema Linux. Puede cambiar la contraseña de esta cuenta de administrador.
+
+* *Cuenta de administrador de clúster*
++
+Puede conceder a una cuenta de administrador de clúster una gama limitada de accesos de administrador para realizar determinadas tareas dentro de un clúster. Las credenciales que se asignan a cada cuenta de administrador de clúster sirven para autenticar las solicitudes de la API y la interfaz de usuario de Element dentro del sistema de almacenamiento.
+
+
+
+
+NOTE: Se necesita una cuenta de administrador de clúster local (que no sea LDAP) para acceder a los nodos activos en un clúster a través de la interfaz de usuario por nodo. No se necesitan credenciales de cuenta para acceder a un nodo que aún no forme parte de un clúster.
+
+
+
+== Ver los detalles de administrador del clúster
+
+. Si desea crear una cuenta de administrador de clúster (que no sea LDAP) para todo el clúster, realice las siguientes acciones:
++
+.. Haga clic en *usuarios* > *Administradores de clúster*.
+
+
+. En la página Cluster Admins de la pestaña Users, puede ver la siguiente información.
++
+** *ID*: Número secuencial asignado a la cuenta de administrador del clúster.
+** *Nombre de usuario*: El nombre otorgado a la cuenta de administrador del clúster cuando se creó.
+** *Acceso*: Los permisos de usuario asignados a la cuenta de usuario. Los posibles valores son los siguientes:
++
+*** lea
+*** creación de informes
+*** nodos
+*** unidades
+*** volúmenes
+*** cuentas
+*** Administradores de clústeres
+*** administrador
+*** SupportAdmin
+
+
+
+
++
+
+NOTE: Todos los permisos están disponibles para el tipo de acceso del administrador.
+
++
+** *Tipo*: El tipo de administrador de clúster. Los posibles valores son los siguientes:
++
+*** Clúster
+*** LDAP
+
+
+** *Atributos*: Si la cuenta de administrador de clúster se creó mediante la API de elemento, esta columna muestra cualquier par nombre-valor que se haya establecido utilizando ese método.
++
+Consulte link:../api/index.html["Referencia de API del software NetApp Element"].
+
+
+
+
+
+
+
+== Cree una cuenta de administrador de clúster
+
+Es posible crear nuevas cuentas de administrador de clúster con permisos para conceder o restringir el acceso a determinadas áreas del sistema de almacenamiento. Cuando se configuran los permisos de la cuenta de administrador del clúster, el sistema otorga derechos de solo lectura a aquellos permisos que no se asignen al administrador del clúster.
+
+Si desea crear una cuenta de administrador de clúster LDAP, asegúrese de que LDAP esté configurado en el clúster antes de comenzar.
+
+link:task_system_manage_enable_ldap_authentication.html["Habilite la autenticación de LDAP con la interfaz de usuario de Element"]
+
+Más adelante, los privilegios de la cuenta de administrador de clúster se pueden cambiar para crear informes, nodos, unidades, volúmenes, cuentas y acceso a nivel de clúster. Cuando habilita un permiso, el sistema asigna acceso de escritura para ese nivel. Para los niveles que no se seleccionan, el sistema concede al usuario administrador acceso de solo lectura.
+
+También es posible quitar más adelante cualquier cuenta de usuario administrador de clúster que haya creado un administrador del sistema. Sin embargo, no es posible quitar la cuenta de administrador de clúster principal que se generó al crear el clúster.
+
+. Si desea crear una cuenta de administrador de clúster (que no sea LDAP) para todo el clúster, realice las siguientes acciones:
++
+.. Haga clic en *usuarios* > *Administradores de clúster*.
+.. Haga clic en *Crear administrador de clúster*.
+.. Seleccione el tipo de usuario *Cluster*.
+.. Introduzca un nombre de usuario y una contraseña para la cuenta y confirme la contraseña.
+.. Seleccione los permisos de usuario que se van a aplicar a la cuenta.
+.. Active la casilla con la que se acepta el contrato de licencia para usuario final de.
+.. Haga clic en *Crear administrador de clúster*.
+
+
+. Para crear una cuenta de administrador de clúster en el directorio LDAP, realice las siguientes acciones:
++
+.. Haga clic en *Cluster* > *LDAP*.
+.. Asegúrese de que la autenticación LDAP está habilitada.
+.. Haga clic en *probar autenticación de usuario* y copie el nombre completo que aparece para el usuario o uno de los grupos de los que el usuario es miembro para poder pegarlo más tarde.
+.. Haga clic en *usuarios* > *Administradores de clúster*.
+.. Haga clic en *Crear administrador de clúster*.
+.. Seleccione el tipo de usuario LDAP.
+.. En el campo Nombre distintivo, siga el ejemplo del cuadro de texto para introducir un nombre completo distintivo para el usuario o grupo. Como alternativa, péguela desde el nombre distintivo que copió anteriormente.
++
+Si el nombre distintivo forma parte de un grupo, cualquier usuario que sea miembro de dicho grupo en el servidor LDAP tendrá permisos de esta cuenta de administrador.
+
++
+Para agregar usuarios o grupos de administración de clúster LDAP, el formato general del nombre de usuario es "'LDAP:<Full Distinguished Name>'".
+
+.. Seleccione los permisos de usuario que se van a aplicar a la cuenta.
+.. Active la casilla con la que se acepta el contrato de licencia para usuario final de.
+.. Haga clic en *Crear administrador de clúster*.
+
+
+
+
+
+
+== Edite los permisos de administrador del clúster
+
+Los privilegios de la cuenta de administrador de clúster se pueden cambiar para crear informes, nodos, unidades, volúmenes y cuentas. y acceso a nivel de clúster. Cuando habilita un permiso, el sistema asigna acceso de escritura para ese nivel. Para los niveles que no se seleccionan, el sistema concede al usuario administrador acceso de solo lectura.
+
+. Haga clic en *usuarios* > *Administradores de clúster*.
+. Haga clic en el icono Actions del administrador de clúster que quiera editar.
+. Haga clic en *Editar*.
+. Seleccione los permisos de usuario que se van a aplicar a la cuenta.
+. Haga clic en *Guardar cambios*.
+
+
+
+
+== Cambiar contraseñas de las cuentas de administrador del clúster
+
+Es posible usar la interfaz de usuario de Element para cambiar las contraseñas de administrador de clúster.
+
+. Haga clic en *usuarios* > *Administradores de clúster*.
+. Haga clic en el icono Actions del administrador de clúster que quiera editar.
+. Haga clic en *Editar*.
+. En el campo Change Password, introduzca una contraseña nueva y confírmela.
+. Haga clic en *Guardar cambios*.
+
+
+
+
+== Obtenga más información
+
+* link:task_system_manage_enable_ldap_authentication.html["Habilite la autenticación de LDAP con la interfaz de usuario de Element"]
+* link:concept_system_manage_manage_ldap.html["Deshabilite LDAP"]
+* https://www.netapp.com/data-storage/solidfire/documentation["Página SolidFire y Element Resources"^]
+* https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
+

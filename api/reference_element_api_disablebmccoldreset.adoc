@@ -1,0 +1,76 @@
+---
+permalink: api/reference_element_api_disablebmccoldreset.html 
+sidebar: sidebar 
+keywords: BMC cold reset,BMC reset,disable BMC 
+summary: 'Puede utilizar el método DisablebmcColdReset para deshabilitar la tarea en segundo plano que restablece periódicamente el controlador de administración de la placa base \(BMC\) para todos los nodos del clúster.' 
+---
+= DisablebmcColdReset
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `DisableBmcColdReset` Método para deshabilitar la tarea en segundo plano que restablece periódicamente el controlador de administración de placa base (BMC) para todos los nodos del clúster.
+
+
+NOTE: El SDS empresarial de SolidFire no admite este método. Si utiliza este método en un sistema SolidFire eSDS, el método devolverá un error.
+
+
+
+== Parámetro
+
+Este método no tiene parámetro de entrada.
+
+
+
+== Valores devueltos
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+CbmcResetDurationMinutes
+ a| 
+Devuelve el tiempo transcurrido entre los intervalos de restablecimiento. El intervalo debe ser siempre 0 una vez que se complete el comando.
+ a| 
+entero
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+  "method": "DisableBmcColdReset",
+  "params": {},
+  "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+    "id": 1,
+    "result": {
+        "cBmcResetDurationMinutes": 0
+    }
+}
+----
+
+
+== Nuevo desde la versión
+
+12.0

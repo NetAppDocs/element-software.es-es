@@ -1,0 +1,31 @@
+---
+permalink: api/concept_element_api_common_methods.html 
+sidebar: sidebar 
+keywords: common,methods 
+summary: Los métodos comunes son los que se utilizan para recuperar información sobre el clúster de almacenamiento, la propia API o las operaciones de API continuas. 
+---
+= Métodos comunes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los métodos comunes son los que se utilizan para recuperar información sobre el clúster de almacenamiento, la propia API o las operaciones de API continuas.
+
+* xref:reference_element_api_getapi.adoc[GetAPI]
+* xref:reference_element_api_getasyncresult.adoc[GetAsyncResult]
+* xref:reference_element_api_getcompletestats.adoc[GetCompleteStats]
+* xref:reference_element_api_getlimits.adoc[GetLimits]
+* xref:reference_element_api_getorigin.adoc[GetOrigin]
+* xref:reference_element_api_getrawstats.adoc[GetRawStats]
+* xref:reference_element_api_listasyncresults.adoc[ListAsyncResults]
+
+
+
+
+== Obtenga más información
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Página de recursos de SolidFire de NetApp"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentación para versiones anteriores de SolidFire de NetApp y los productos Element"^]
+

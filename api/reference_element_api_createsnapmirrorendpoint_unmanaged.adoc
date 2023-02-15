@@ -1,0 +1,75 @@
+---
+permalink: api/reference_element_api_createsnapmirrorendpoint_unmanaged.html 
+sidebar: sidebar 
+keywords: SnapMirror,endpoint,unmanaged,create,creating,CreateSnapMirrorEndpointUnmanaged 
+summary: El sistema de almacenamiento del software Element utiliza el método CreateSnapMirrorEndpointUnmanaged para permitir que extremos de SnapMirror remotos no gestionados se comuniquen con un clúster de almacenamiento de Element. No se pueden administrar extremos no gestionados mediante las API de SnapMirror de Element. Deben gestionarse con las API o el software de gestión de ONTAP. 
+---
+= CreateSnapMirrorEndpointUnmanaged
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El sistema de almacenamiento del software Element utiliza `CreateSnapMirrorEndpointUnmanaged` Método para habilitar extremos de SnapMirror remotos y sin gestionar para comunicarse con un clúster de almacenamiento de Element. No se pueden administrar extremos no gestionados mediante las API de SnapMirror de Element. Deben gestionarse con las API o el software de gestión de ONTAP.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+Nombre del clúster
+ a| 
+Nombre del extremo.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+Direcciones IP
+ a| 
+La lista de direcciones IP para un clúster de sistemas de almacenamiento ONTAP que se deben comunicar con este clúster de almacenamiento de Element.
+ a| 
+matriz de cadenas
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+
+
+== Valores devueltos
+
+Este método tiene los siguientes valores devueltos:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+SnapMirrorEndpoint
+ a| 
+El extremo de SnapMirror recién creado.
+ a| 
+xref:reference_element_api_snapmirrorendpoint.adoc[SnapMirrorEndpoint]
+
+|===
+
+
+== Nuevo desde la versión
+
+10.3

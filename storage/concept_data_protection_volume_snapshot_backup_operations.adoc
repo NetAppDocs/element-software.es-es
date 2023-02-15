@@ -1,0 +1,19 @@
+---
+permalink: storage/concept_data_protection_volume_snapshot_backup_operations.html 
+sidebar: sidebar 
+keywords: volume snapshot, backup operations, back up volume snapshot, cluster, object store 
+summary: La función integrada de backup se puede usar para realizar un backup de una copia de Snapshot de volumen. Es posible realizar backups de snapshots de un clúster de SolidFire en un almacén de objetos externo o en otro clúster de SolidFire. Cuando se crea un backup de una copia de Snapshot en un almacén de objetos externo, debe haber una conexión con el almacén de objetos que permita realizar operaciones de lectura y escritura. 
+---
+= Realice un backup de una copia de Snapshot de volumen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La función integrada de backup se puede usar para realizar un backup de una copia de Snapshot de volumen. Es posible realizar backups de snapshots de un clúster de SolidFire en un almacén de objetos externo o en otro clúster de SolidFire. Cuando se crea un backup de una copia de Snapshot en un almacén de objetos externo, debe haber una conexión con el almacén de objetos que permita realizar operaciones de lectura y escritura.
+
+* link:task_data_protection_back_up_a_volume_snapshot_to_an_amazon_s3_object_store["Realice backups de una copia de Snapshot de volumen en un almacén de objetos Amazon S3"]
+* link:task_data_protection_back_up_a_volume_snapshot_to_openstack_swift["Realice backups de una copia de Snapshot de volumen en un almacén de objetos OpenStack Swift"]
+* link:task_data_protection_back_up_volume_to_solidfire["Realice backups de una copia de Snapshot de volumen en un clúster de SolidFire"]
+

@@ -1,0 +1,149 @@
+---
+permalink: api/reference_element_api_listclusterfaults.html 
+sidebar: sidebar 
+keywords: cluster,list,listing,fault,faults,listclusterfaults,error,errors 
+summary: Puede usar el método ListClusterFaults para enumerar información sobre los fallos detectados en el clúster. Con este método, puede enumerar tanto los fallos actuales como los que se han resuelto. El sistema almacena en caché los fallos cada 30 segundos. 
+---
+= ListClusterFaults
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `ListClusterFaults` método para enumerar información sobre cualquier error detectado en el clúster. Con este método, puede enumerar tanto los fallos actuales como los que se han resuelto. El sistema almacena en caché los fallos cada 30 segundos.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+Prácticas más eficaces
+ a| 
+Incluir fallos activados por una configuración del sistema no óptima. Los posibles valores son los siguientes:
+
+* verdadero
+* falso
+
+ a| 
+booleano
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+Intachable
+ a| 
+Determina los tipos de fallos devueltos. Los posibles valores son los siguientes:
+
+* Actual: Lista de fallos activos sin resolver.
+* Resuelto: Lista de fallos detectados y resueltos con anterioridad.
+* All: Enumera los fallos actuales y resueltos. El estado del fallo puede verse en el miembro "relativamente solucionado" del objeto de fallo.
+
+ a| 
+cadena
+ a| 
+todo
+ a| 
+No
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+fallos
+ a| 
+Un objeto que describe los errores solicitados del clúster.
+ a| 
+xref:reference_element_api_fault.adoc[fallo]
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+  "method": "ListClusterFaults",
+    "params": {
+      "faultTypes": "current",
+      "bestPractices": true
+    },
+    "id": 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "faults": [
+      {
+        "clusterFaultID": 1,
+        "code": "notUsingLACPBondMode",
+        "data": null,
+        "date": "2016-04-26T14:57:04.275286Z",
+        "details": "Bond1G interfaces found not using LACP bond mode. Nodes not set to LACP bond mode: {1,2,4,5}",
+        "driveID": 0,
+        "driveIDs": [],
+        "nodeHardwareFaultID": 0,
+        "nodeID": 0,
+        "resolved": false,
+        "resolvedDate": "",
+        "serviceID": 0,
+        "severity": "bestPractice",
+        "type": "cluster"
+      },
+      {
+        "clusterFaultID": 9,
+        "code": "disconnectedClusterPair",
+        "data": null,
+        "date": "2016-04-26T20:40:08.736597Z",
+        "details": "One of the clusters in a pair may have become misconfigured or disconnected.  Remove the local pairing and retry pairing the clusters. Disconnected Cluster Pairs: []. Misconfigured Cluster Pairs: [3]",
+        "driveID": 0,
+        "driveIDs": [],
+        "nodeHardwareFaultID": 0,
+        "nodeID": 0,
+        "resolved": false,
+        "resolvedDate": "",
+        "serviceID": 0,
+        "severity": "warning",
+        "type": "cluster"
+      }
+    ]
+  }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

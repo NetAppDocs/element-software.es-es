@@ -1,0 +1,48 @@
+---
+permalink: api/reference_element_api_deletesnapmirrorendpoints.html 
+sidebar: sidebar 
+keywords: SnapMirror,endpoints,endpoint,delete,deleting,DeleteSnapMirrorEndpoints 
+summary: La interfaz de usuario web de Element utiliza DeleteSnapMirrorEndpoints para eliminar uno o varios extremos de SnapMirror del sistema. 
+---
+= DeleteSnapMirrorEndpoints
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utiliza la interfaz de usuario web de Element `DeleteSnapMirrorEndpoints` Para eliminar uno o varios extremos de SnapMirror del sistema.
+
+
+
+== Parámetro
+
+Este método tiene el siguiente parámetro de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+SnapMirrorEndpointID
+ a| 
+Una cabina de ID de extremos de SnapMirror que se van a eliminar.
+ a| 
+matriz en números enteros
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+
+
+== Valores devueltos
+
+Este método no tiene valores devueltos.
+
+
+
+== Nuevo desde la versión
+
+10.0

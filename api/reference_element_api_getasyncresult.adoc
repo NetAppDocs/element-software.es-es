@@ -1,0 +1,223 @@
+---
+permalink: api/reference_element_api_getasyncresult.html 
+sidebar: sidebar 
+keywords: async,asynchronous,results,result,get,getting,GetAsyncResult 
+summary: Puede utilizar GetAsyncResult para recuperar el resultado de llamadas de método asincrónicas. Algunas llamadas a métodos requieren cierto tiempo para ejecutarse y es posible que no se hayan completado cuando el sistema envía la respuesta inicial. Para obtener el estado o el resultado de la llamada al método, utilice GetAsyncResult para sondear el valor establish asyncHandle devuelto por el método. 
+---
+= GetAsyncResult
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar `GetAsyncResult` para recuperar el resultado de las llamadas de método asíncrono. Algunas llamadas a métodos requieren cierto tiempo para ejecutarse y es posible que no se hayan completado cuando el sistema envía la respuesta inicial. Para obtener el estado o el resultado de la llamada al método, utilice `GetAsyncResult` Para sondear el valor de la mano devuelto por el método.
+
+`GetAsyncResult` devuelve el estado general de la operación (en curso, completado o error) de forma estándar, pero los datos reales devueltos para la operación dependen de la llamada al método original y los datos devueltos se documentan con cada método.
+
+Si falta el parámetro keepResult o FALSE, el comando establish asyncHandle se desactiva cuando se devuelve el resultado, y más tarde intenta consultar que el comando establish devuelvan un error. Puede mantener activo el comando establish de la ley para consultas futuras estableciendo el parámetro keepResult en TRUE.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+Establish asyncHandle
+ a| 
+Valor devuelto por la llamada de método asíncrono original.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+KeepResult
+ a| 
+Si es True, GetAsyncResult no elimina el resultado asíncrono al devolverlo, lo que permite consultas futuras a ese establish de generar datos.
+ a| 
+booleano
+ a| 
+falso
+ a| 
+No
+
+|===
+
+
+== Valores devueltos
+
+Este método tiene los siguientes valores devueltos:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+estado
+ a| 
+Estado de la llamada de método asíncrono. Los posibles valores son los siguientes:
+
+* Running: El método se sigue ejecutando.
+* Completo: El método está completo y el resultado o error está disponible.
+
+ a| 
+cadena
+
+
+
+ a| 
+resultado
+ a| 
+Si el método asíncrono se completó correctamente, esto es el resultado de la operación asíncrona. Si la operación asíncrona falla, este miembro no está presente.
+ a| 
+cadena
+
+
+
+ a| 
+error
+ a| 
+Si el estado es completo y el método asíncrono con errores, este miembro incluye los detalles del error. Si la operación asincrónica se realiza correctamente, este miembro no está presente.
+ a| 
+cadena
+
+
+
+ a| 
+ResultType
+ a| 
+Tipo de operación que está realizando o estaba realizando la llamada de método asíncrono.
+ a| 
+cadena
+
+
+
+ a| 
+detalles
+ a| 
+Si el estado es en ejecución, este miembro incluye información relevante para la operación actual del método. Si el método asíncrono no se está ejecutando, este miembro no está presente.
+ a| 
+Objeto JSON
+
+
+
+ a| 
+CreateTime
+ a| 
+La hora a la que se llamó al método asíncrono, en formato UTC+0.
+ a| 
+Cadena de fecha ISO 8601
+
+
+
+ a| 
+LastUpdateTime
+ a| 
+La hora a la que se actualizó por última vez el estado del método asíncrono, en formato UTC+0.
+ a| 
+Cadena de fecha ISO 8601
+
+|===
+*Nota:* el valor devuelto de GetAsyncResult es esencialmente una versión anidada de la respuesta JSON estándar con un campo de estado adicional.
+
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+  "method": "GetAsyncResult",
+  "params": {
+      "asyncHandle" : 389
+},
+"id" : 1
+}
+----
+
+
+== Ejemplo de respuesta: Error de método
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+   "error": {
+      "code": 500,
+      "message": "DBClient operation requested on a non-existent path at [/asyncresults/1]",
+      "name": "xDBNoSuchPath"
+   },
+   "id": 1
+}
+----
+Si la "respuesta" fuera el objeto de respuesta JSON de la llamada GetAsyncResult, entonces "Response.error" correspondería a un error con el propio método GetAsyncResult (como consultar un handle no existente).
+
+
+
+== Ejemplo de respuesta: Error de tarea asíncrona
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+   "id": 1,
+   "result": {
+     "createTime": "2016-01-01T02:05:53Z",
+     "error": {
+       "bvID": 1,
+       "message": "Bulk volume job failed",
+       "name": "xBulkVolumeScriptFailure",
+       "volumeID": 34
+     },
+     "lastUpdateTime": "2016-01-21T02:06:56Z",
+     "resultType": "BulkVolume",
+     "status": "complete"
+   }
+}
+----
+El "esponse.result.error" correspondería a un resultado de error de la llamada al método original.
+
+
+
+== Ejemplo de respuesta: Tarea asíncrona correcta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+   "id": 1,
+   "result": {
+     "createTime": "2016-01-01T22:29:18Z",
+     "lastUpdateTime": "2016-01-01T22:45:51Z",
+     "result": {
+       "cloneID": 25,
+       "message": "Clone complete.",
+       "volumeID": 47
+     },
+     "resultType": "Clone",
+     "status": "complete"
+   }
+}
+----
+"Esponse.result.result" es el valor devuelto por la llamada al método original si la llamada se ha completado correctamente.
+
+
+
+== Nuevo desde la versión
+
+9.6

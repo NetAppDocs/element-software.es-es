@@ -1,0 +1,93 @@
+---
+permalink: api/reference_element_api_getfipsreport.html 
+sidebar: sidebar 
+keywords: fips,report,get,getting,getfipsreport,feature,support 
+summary: Puede utilizar el método GetFipsReport para comprobar el estado de compatibilidad de la función de cifrado FIPS 140-2 de todos los nodos del clúster de almacenamiento. 
+---
+= GetFipsReport
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `GetFipsReport` Método para comprobar el estado de soporte de la función de cifrado FIPS 140-2 de todos los nodos del clúster de almacenamiento.
+
+
+
+== Parámetro
+
+Este método no tiene parámetro de entrada.
+
+
+
+== Valores devueltos
+
+Este método tiene los siguientes valores devueltos:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+resultado
+ a| 
+Un objeto JSON que contiene el estado de la compatibilidad con la función FIPS 140-2 para cada nodo e información sobre errores de cada nodo que no responde a la consulta.
+ a| 
+xref:reference_element_api_fipsreport.adoc[FipsReport]
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+  "method": "GetFipsReport",
+  "params": {},
+  "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+    "id": 1,
+    "result": {
+    "nodes": [
+        {
+           "nodeID": 1,
+		   "fipsDrives": "None",
+           "httpsEnabled": true
+        },
+        {
+           "nodeID": 3,
+		   "fipsDrives": "None",
+           "httpsEnabled": true
+        }
+    ],
+    "errorNodes": [
+        {
+           "nodeID": 2,
+           "error": {
+               "message": "The RPC timed out.",
+               "name": "xRpcTimeout"
+               }
+        }
+    ]
+    }
+}
+----
+
+
+== Nuevo desde la versión
+
+10.3

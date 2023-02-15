@@ -1,0 +1,32 @@
+---
+permalink: storage/task_data_protection_back_up_a_volume_snapshot_to_openstack_swift.html 
+sidebar: sidebar 
+keywords: volume snapshot, backup, openstack swift S3 object store 
+summary: Es posible realizar backups de snapshots de SolidFire en almacenes de objetos secundarios que sean compatibles con OpenStack Swift. 
+---
+= Realice backups de una copia de Snapshot de volumen en un almacén de objetos OpenStack Swift
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible realizar backups de snapshots de SolidFire en almacenes de objetos secundarios que sean compatibles con OpenStack Swift.
+
+. Haga clic en *Protección de datos* > *instantáneas*.
+. Haga clic en el icono *acciones* de la instantánea de la que desea realizar la copia de seguridad.
+. En el menú que se abre, haga clic en *copia de seguridad en*.
+. En el cuadro de diálogo *Backup integrado*, en *Backup to*, seleccione *Swift*.
+. Seleccione una opción en *Formato de datos*:
++
+** *Original*: Formato comprimido que sólo pueden leer los sistemas de almacenamiento SolidFire.
+** *Sin comprimir*: Formato sin comprimir compatible con otros sistemas.
+
+
+. Introduzca una *URL* para acceder al almacén de objetos.
+. Introduzca un *Nombre de usuario* para la cuenta.
+. Introduzca *clave de autenticación* para la cuenta.
+. Introduzca el *contenedor* en el que desea almacenar la copia de seguridad.
+. *Opcional*: Introduzca una *etiqueta de nombre*.
+. Haga clic en *Iniciar lectura*.
+

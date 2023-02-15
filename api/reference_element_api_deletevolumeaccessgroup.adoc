@@ -1,0 +1,112 @@
+---
+permalink: api/reference_element_api_deletevolumeaccessgroup.html 
+sidebar: sidebar 
+keywords: volume,access,group,groups,delete,deleting,DeleteVolumeAccessGroup 
+summary: Puede usar DeleteVolumeAccessGroup para eliminar un grupo de acceso de volúmenes. 
+---
+= DeleteVolumeAccessGroup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar `DeleteVolumeAccessGroup` para eliminar un grupo de acceso de volúmenes.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+VolumeAccessGroupID
+ a| 
+El ID del grupo de acceso de volúmenes que se eliminará.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+DeleteOrphanInitiators
+ a| 
+Especifica si se eliminarán objetos iniciadores o no. Los posibles valores son los siguientes:
+
+* True: Elimine los objetos iniciadores después de que se eliminen de un grupo de acceso de volúmenes.
+* False: No se eliminan los objetos del iniciador después de que se quitan de un grupo de acceso de volúmenes. Este es el valor predeterminado.
+
+ a| 
+booleano
+ a| 
+falso
+ a| 
+No
+
+
+
+ a| 
+fuerza
+ a| 
+Al añadir esta Marca, se fuerza la eliminación del grupo de acceso de volúmenes aunque tenga un ID de red virtual o una etiqueta. Los posibles valores son los siguientes:
+
+* True: Se eliminará el grupo de acceso de volúmenes.
+* False: Valor predeterminado. No elimine el grupo de acceso de volúmenes si tiene una etiqueta o un ID de red virtual.
+
+ a| 
+booleano
+ a| 
+falso
+ a| 
+No
+
+|===
+
+
+== Valores devueltos
+
+Este método no tiene valores devueltos.
+
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "DeleteVolumeAccessGroup",
+   "params": {
+          "force": true,
+	  "volumeAccessGroupID"  : 3
+   },
+   "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+   "id" : 1,
+   "result": {}
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

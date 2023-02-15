@@ -1,0 +1,24 @@
+---
+permalink: storage/concept_prereq_networking.html 
+sidebar: sidebar 
+keywords: 'network setup, setup network, switch requirements, port requirements, network," "networking," "set up network," "prerequisites," "requirements' 
+summary: La configuración de red para un sistema SolidFire consta de requisitos de switch y puerto. La implementación de estos depende de su sistema. 
+---
+= Redes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La configuración de red para un sistema SolidFire consta de requisitos de switch y puerto. La implementación de estos depende de su sistema.
+
+
+
+== Si quiere más información
+
+* link:../storage/concept_prereq_switch_configuration_for_solidfire_clusters.html["Configuración de switches para los clústeres que ejecutan el software Element"]
+* link:../storage/reference_prereq_network_port_requirements.html["Requisitos de puerto de red"]
+* https://www.netapp.com/data-storage/solidfire/documentation["Página SolidFire y Element Resources"^]
+* https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
+

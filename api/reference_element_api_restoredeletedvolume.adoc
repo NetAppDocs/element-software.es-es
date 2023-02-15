@@ -1,0 +1,77 @@
+---
+permalink: api/reference_element_api_restoredeletedvolume.html 
+sidebar: sidebar 
+keywords: restore,active,restoring,deleted,volume,volumes,restoredeletedvolume 
+summary: Puede utilizar el método RestoreDeletedVolume para marcar un volumen eliminado como activo de nuevo. Esta acción hace que el volumen esté disponible inmediatamente para la conexión iSCSI. 
+---
+= RestoreDeletedVolume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `RestoreDeletedVolume` método para marcar un volumen eliminado como activo de nuevo. Esta acción hace que el volumen esté disponible inmediatamente para la conexión iSCSI.
+
+
+
+== Parámetro
+
+Este método tiene el siguiente parámetro de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+ID de volumen
+ a| 
+El ID de volumen del volumen eliminado que se va a restaurar.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+
+
+== Valores devueltos
+
+Este método no tiene valores devueltos.
+
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "RestoreDeletedVolume",
+   "params": {
+      "volumeID"  : 5
+   },
+   "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id" : 1,
+  "result": {}
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

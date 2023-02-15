@@ -1,0 +1,23 @@
+---
+permalink: storage/task_snapmirror_perform_failback_to_element.html 
+sidebar: sidebar 
+keywords: failback, perform a failbacl, Element, snapmirror 
+summary: Cuando se mitigó el problema en el lado primario, se debe volver a sincronizar el volumen de origen original y conmutar al software NetApp Element. Los pasos que realice varían en función de si todavía existe el volumen de origen original o si necesita realizar la conmutación tras recuperación en un volumen recién creado. 
+---
+= Realice una conmutación tras recuperación al elemento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cuando se mitigó el problema en el lado primario, se debe volver a sincronizar el volumen de origen original y conmutar al software NetApp Element. Los pasos que realice varían en función de si todavía existe el volumen de origen original o si necesita realizar la conmutación tras recuperación en un volumen recién creado.
+
+
+
+== Obtenga más información
+
+* xref:task_snapmirror_perform_failback_when_source_volume_exists.adoc[Realice una conmutación tras recuperación cuando el volumen de origen siga existiendo]
+* xref:task_snapmirror_performing_failback_when_source_volume_no_longer_exists.adoc[Realice una conmutación tras recuperación cuando el volumen de origen ya no exista]
+* xref:concept_snapmirror_failback_scenarios.adoc[Escenarios de conmutación tras recuperación de SnapMirror]
+

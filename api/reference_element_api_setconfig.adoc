@@ -1,0 +1,121 @@
+---
+permalink: api/reference_element_api_setconfig.html 
+sidebar: sidebar 
+keywords: config,configuration,set,setting,node,setconfig,network,cluster 
+summary: Puede utilizar el método SetConfig para establecer la información de red y de clúster del nodo. Este método incluye la misma configuración en un único método de API que está disponible mediante los métodos SetClusterConfig y SetNetworkConfig. Sólo es necesario incluir con este método los campos que desee modificar. 
+---
+= Config
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `SetConfig` método para establecer la información de red y clúster del nodo. Este método incluye la misma configuración en un único método API que está disponible mediante ambos `SetClusterConfig` y.. `SetNetworkConfig` métodos. Sólo es necesario incluir con este método los campos que desee modificar.
+
+
+NOTE: El SDS empresarial de SolidFire no admite este método. Si utiliza este método en un sistema SolidFire eSDS, el método devolverá un error.
+
+
+
+== Parámetro
+
+PRECAUCIÓN:
+
+Si se cambia el modo de enlace en un nodo, se puede producir una pérdida temporal de conectividad de red.
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+clúster
+ a| 
+Información de clúster que identifica la forma en que el nodo de almacenamiento se comunica con el clúster de almacenamiento con el que está asociado.
+ a| 
+xref:reference_element_api_cluster.adoc[clúster]
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+red
+ a| 
+Los tipos de conexión de red y la configuración actual de cada interfaz de red del nodo.
+ a| 
+xref:reference_element_api_network_all_interfaces.adoc[red (todas las interfaces)]
+ a| 
+Ninguno
+ a| 
+No
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+gestión de
+ a| 
+La configuración nueva y actual del nodo. Este objeto contiene:
+
+* xref:reference_element_api_cluster.adoc[clúster]: Información del clúster que identifica cómo se comunica el nodo de almacenamiento con el clúster de almacenamiento al que está asociado.
+* xref:reference_element_api_network_all_interfaces.adoc[red (todas las interfaces)]: Tipos de conexión de red y configuración actual para cada interfaz de red del nodo.
+
+ a| 
+Objeto JSON
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+	"method": "SetConfig",
+	"params": {
+		"cluster": {
+			"name": "MyHostname"
+		},
+		"network": {
+			"Bond10G": {
+				"bond-mode": "ALB"
+			}
+		}
+	}
+}
+----
+
+
+== Ejemplo de respuesta
+
+La respuesta de este método es la misma que la del método getconfig. Todos los campos del objeto se muestran y se actualizan los valores cuando se utiliza SetConfig.
+
+
+
+== Nuevo desde la versión
+
+9.6
+
+
+
+== Obtenga más información
+
+* xref:reference_element_api_setclusterconfig.adoc[SetClusterConfig]
+* xref:reference_element_api_setnetworkconfig.adoc[SetNetworkConfig]
+* xref:reference_element_api_response_example_getconfig.adoc[Getconfig]
+

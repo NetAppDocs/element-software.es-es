@@ -1,0 +1,26 @@
+---
+permalink: storage/task_data_protection_schedule_a_snapshot_task.html 
+sidebar: sidebar 
+keywords: snapshot, schedule, volume snapshots, group snapshots 
+summary: Se pueden proteger datos en un volumen o un grupo de volúmenes mediante la programación de copias de Snapshot de volumen para que se produzcan en intervalos concretos. Se pueden programar las copias de Snapshot de un solo volumen o las copias de Snapshot de grupo para que se ejecuten automáticamente. 
+---
+= Programar una copia de Snapshot
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se pueden proteger datos en un volumen o un grupo de volúmenes mediante la programación de copias de Snapshot de volumen para que se produzcan en intervalos concretos. Se pueden programar las copias de Snapshot de un solo volumen o las copias de Snapshot de grupo para que se ejecuten automáticamente.
+
+Cuando se configura una programación de Snapshot, se puede elegir entre intervalos de tiempo basados en los días de la semana o los días del mes. También es posible especificar los días, las horas y los minutos antes de que se produzca la siguiente copia de Snapshot. Las snapshots resultantes se pueden almacenar en un sistema de almacenamiento de remoto si el volumen se está replicando.
+
+
+
+== Obtenga más información
+
+* xref:task_data_protection_create_a_snapshot_schedule.adoc[Crear una programación de Snapshot]
+* xref:task_data_protection_edit_a_snapshot_schedule.adoc[Editar una programación de Snapshot]
+* xref:task_data_protection_delete_a_snapshot_schedule.adoc[Eliminar una programación de Snapshot]
+* xref:task_data_protection_copy_a_snapshot_schedule.adoc[Copiar una programación de Snapshot]
+

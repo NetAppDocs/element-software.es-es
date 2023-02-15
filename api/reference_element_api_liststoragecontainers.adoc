@@ -1,0 +1,104 @@
+---
+permalink: api/reference_element_api_liststoragecontainers.html 
+sidebar: sidebar 
+keywords: virtual,volume,storage,container,containers,list,listing,liststoragecontainers 
+summary: Se puede usar el método ListStorageContainers para recuperar información acerca de todos los contenedores de almacenamiento de volúmenes virtuales que se conocen en el sistema. 
+---
+= ListStorageContainers
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `ListStorageContainers` método para recuperar información sobre todos los contenedores de almacenamiento de volúmenes virtuales que conoce el sistema.
+
+
+
+== Parámetros
+
+Este método tiene el siguiente parámetro de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+ContenerID de almacenamiento
+ a| 
+Una lista de los ID de contenedor de almacenamiento de los que se puede recuperar información. Si omite este parámetro, el método muestra información acerca de todos los contenedores de almacenamiento del sistema.
+ a| 
+Cabina de UUID
+ a| 
+Ninguno
+ a| 
+No
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+Contenedores de almacenamiento
+ a| 
+Lista de objetos que contienen información sobre todos los contenedores de almacenamiento del sistema.
+ a| 
+xref:reference_element_api_storagecontainer.adoc[Contenedor de almacenamiento] cabina
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "ListStorageContainers",
+   "params": {
+      "storageContainerIDs": ["efda8307-b916-4424-979e-658a3f16894d"]
+   },
+   "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id": 6395,
+  "result": {
+    "storageContainers": [
+      {
+        "accountID": 64,
+        "initiatorSecret": "EJ:08An1MyNQmL!7",
+        "name": "VvolContainer",
+        "protocolEndpointType": "SCSI",
+        "status": "active",
+        "storageContainerID": "efda8307-b916-4424-979e-658a3f16894d",
+        "targetSecret": "g38}zWBK%206jQr~",
+        "virtualVolumes": []
+      }
+    ]
+  }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

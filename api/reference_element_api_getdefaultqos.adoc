@@ -1,0 +1,87 @@
+---
+permalink: api/reference_element_api_getdefaultqos.html 
+sidebar: sidebar 
+keywords: qos,values,default,get,getting,getdefaultqos 
+summary: 'Se puede utilizar el método GetDefaultQoS para obtener la calidad predeterminada de los valores de servicio \(QoS\) para un volumen recién creado.' 
+---
+= GetDefaultQoS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `GetDefaultQoS` Método para obtener los valores de calidad de servicio predeterminados para un volumen recién creado.
+
+
+
+== Parámetros
+
+Este método no tiene parámetros de entrada.
+
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+Calidad de servicio
+ a| 
+Los valores predeterminados de calidad de servicio.
+ a| 
+xref:reference_element_api_qos.adoc[Calidad de servicio]
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "GetDefaultQoS",
+   "params": {},
+   "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+   "id" : 1,
+   "result" : {
+      "burstIOPS" : 15000,
+      "burstTime" : 60,
+      "curve" : {
+         "1048576" : 15000,
+         "131072" : 1900,
+         "16384" : 270,
+         "262144" : 3000,
+         "32768" : 500,
+         "4096" : 100,
+         "524288" : 7500,
+         "65536" : 1000,
+         "8192" : 160
+      },
+      "maxIOPS" : 15000,
+      "minIOPS" : 100
+   }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

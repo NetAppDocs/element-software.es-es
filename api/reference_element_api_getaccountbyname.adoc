@@ -1,0 +1,98 @@
+---
+permalink: api/reference_element_api_getaccountbyname.html 
+sidebar: sidebar 
+keywords: accounts,account,name,username,GetAccountByName 
+summary: Puede utilizar GetAccountByName para obtener detalles sobre una cuenta específica, dada su nombre de usuario. 
+---
+= GetAccountByName
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar `GetAccountByName` para obtener detalles sobre una cuenta específica, dada su nombre de usuario.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+nombre de usuario
+ a| 
+Nombre de usuario de la cuenta.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+cuenta
+ a| 
+Detalles de cuentas.
+ a| 
+xref:reference_element_api_account.adoc[cuenta]
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "GetAccountByName",
+   "params": {
+     "username"  : "jimmyd"
+   },
+   "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+    "account": {
+        "attributes": {},
+        "username": "jimmyd",
+        "targetSecret": "targetsecret",
+        "volumes": [],
+        "enableChap": true,
+        "status": "active",
+        "accountID": 1,
+        "storageContainerID": "abcdef01-1234-5678-90ab-cdef01234567",
+        "initiatorSecret": "initiatorsecret"
+    }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

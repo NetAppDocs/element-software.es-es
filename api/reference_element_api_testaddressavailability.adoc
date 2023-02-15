@@ -1,0 +1,146 @@
+---
+permalink: api/reference_element_api_testaddressavailability.html 
+sidebar: sidebar 
+keywords: ip,address,availability,test,testing,ensemble,cluster,testaddressavailability 
+summary: Puede utilizar el método TestAddressAvailability para comprobar si se utiliza una determinada dirección IP en una interfaz dentro del clúster de almacenamiento. 
+---
+= TestAddressAvailability
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `TestAddressAvailability` Método para comprobar si hay una determinada dirección IP en uso en una interfaz dentro del clúster de almacenamiento.
+
+
+NOTE: El SDS empresarial de SolidFire no admite este método. Si utiliza este método en un sistema SolidFire eSDS, el método devolverá un error.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+interfaz
+ a| 
+La interfaz de red de destino (como eth0, Bond10G, etc.).
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+dirección
+ a| 
+La dirección IP que se va a buscar en la interfaz de destino.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+VirtualNetworkTag
+ a| 
+El ID de VLAN de destino.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+tiempo de espera
+ a| 
+Tiempo de espera en segundos para probar la dirección de destino.
+ a| 
+entero
+ a| 
+5
+ a| 
+No
+
+|===
+
+
+== Valores devueltos
+
+Este método tiene los siguientes valores devueltos:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+dirección
+ a| 
+La dirección IP probada.
+ a| 
+cadena
+
+
+
+ a| 
+disponible
+ a| 
+True si la dirección IP solicitada está en uso y FALSE si no lo está.
+ a| 
+booleano
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+	"method": "TestAddressAvailability",
+	"params": {
+		"interface": "Bond10G",
+		"address": "10.0.0.1",
+		"virtualNetworkTag": 1234
+	}
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+	"id": 1,
+	"result": {
+		"address":"10.0.0.1",
+		"available": true
+	}
+}
+----
+
+
+== Nuevo desde la versión
+
+11.0

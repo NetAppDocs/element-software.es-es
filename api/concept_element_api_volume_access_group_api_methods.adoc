@@ -1,0 +1,33 @@
+---
+permalink: api/concept_element_api_volume_access_group_api_methods.html 
+sidebar: sidebar 
+keywords: volume,access,group,method,methods,API,managing,manage 
+summary: Los métodos de grupo de acceso de volúmenes permiten añadir, quitar, ver y modificar grupos de acceso de volúmenes, que son colecciones de volúmenes a los que los usuarios pueden acceder mediante iniciadores iSCSI o Fibre Channel. 
+---
+= Métodos API de grupo de acceso de volúmenes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los métodos de grupo de acceso de volúmenes permiten añadir, quitar, ver y modificar grupos de acceso de volúmenes, que son colecciones de volúmenes a los que los usuarios pueden acceder mediante iniciadores iSCSI o Fibre Channel.
+
+* xref:reference_element_api_addinitiatorstovolumeaccessgroup.adoc[AddInitiatorsToVolumeAccessGroup]
+* xref:reference_element_api_addvolumestovolumeaccessgroup.adoc[AddVolumesToVolumeAccessGroup]
+* xref:reference_element_api_createvolumeaccessgroup.adoc[CreateVolumeAccessGroup]
+* xref:reference_element_api_deletevolumeaccessgroup.adoc[DeleteVolumeAccessGroup]
+* xref:reference_element_api_listvolumeaccessgroups.adoc[ListVolumeAccessGroups]
+* xref:reference_element_api_removevolumesfromvolumeaccessgroup.adoc[RemoveVolumesFromVolumeAccessGroup]
+* xref:reference_element_api_removeinitiatorsfromvolumeaccessgroup.adoc[RemoveInitiatorsFromVolumeAccessGroup]
+* xref:reference_element_api_modifyvolumeaccessgroup.adoc[ModifyVolumeAccessGroup]
+* xref:reference_element_api_getvolumeaccessgroupefficiency.adoc[GetVolumeAccessGroupEfficency]
+
+
+
+
+== Obtenga más información
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Página de recursos de SolidFire de NetApp"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentación para versiones anteriores de SolidFire de NetApp y los productos Element"^]
+

@@ -1,0 +1,138 @@
+---
+sidebar: sidebar 
+permalink: hccstorage/task-hcc-dashboard.html 
+summary: Es posible ver recursos de almacenamiento en la consola de control de cloud híbrido de NetApp. Además, puede supervisar la capacidad de almacenamiento y el rendimiento del almacenamiento. 
+keywords: netapp, element, hcc, hybrid cloud control, storage, storage performance, capacity 
+---
+= Supervise los recursos de almacenamiento en la consola de control del cloud híbrido
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Con la consola de control del cloud híbrido de NetApp, puede ver todos los recursos de almacenamiento de un solo vistazo. Además, puede supervisar la capacidad de almacenamiento y el rendimiento del almacenamiento.
+
+
+NOTE: Cuando inicia una nueva sesión de control del cloud híbrido de NetApp por primera vez, es posible que haya un retraso al cargar la vista de la consola de control del cloud híbrido de NetApp cuando el nodo de gestión gestiona muchos clústeres. El tiempo de carga varía en función del número de clústeres que gestiona el nodo de gestión activamente. Para lanzamientos posteriores, experimentará tiempos de carga más rápidos.
+
+* <<Acceda a la consola HCC de NetApp>>
+* <<Supervise los recursos de almacenamiento>>
+* <<Supervise la capacidad de almacenamiento>>
+* <<Supervise el rendimiento del almacenamiento>>
+
+
+
+
+== Acceda a la consola HCC de NetApp
+
+. Abra la dirección IP del nodo de gestión en un navegador web. Por ejemplo:
++
+[listing]
+----
+https://[management node IP address]
+----
+. Inicie sesión en NetApp Hybrid Cloud Control proporcionando las credenciales de administrador del clúster de almacenamiento all-flash SolidFire.
+. Consulte la consola de control del cloud híbrido.
+
+
+image::hcc_dashboard_all.PNG[Panel HCC]
+
+
+
+== Supervise los recursos de almacenamiento
+
+Utilice el panel *almacenamiento* para ver su entorno de almacenamiento total. Es posible supervisar el número de clústeres de almacenamiento, los nodos de almacenamiento y el total de volúmenes.
+
+Para ver los detalles, en el panel almacenamiento, seleccione *Mostrar detalles*.
+
+image::hcc_dashboard_storage_node_number.PNG[Vista del almacenamiento]
+
+
+NOTE: El número total de nodos de almacenamiento no incluye nodos de testigos de clústeres de almacenamiento de dos nodos. Los nodos de testigos se incluyen en el número de nodos de la sección de detalles de ese clúster.
+
+
+TIP: Para ver los datos más recientes del clúster de almacenamiento, use la página Storage Clusters, donde el sondeo se produce con más frecuencia que en la consola.
+
+
+
+== Supervise la capacidad de almacenamiento
+
+Supervisar la capacidad de almacenamiento del entorno es crucial. Mediante el panel capacidad de almacenamiento, puede determinar sus ganancias en eficiencia de la capacidad del almacenamiento con o sin funciones de compresión, deduplicación y thin provisioning habilitadas.
+
+Puede ver el espacio de almacenamiento físico total disponible en su clúster en la ficha *RAW* e información sobre el almacenamiento aprovisionado en la ficha *EFECTIVO*.
+
+image::hcc_dashboard_storage_capacity_effective.png[Panel HCC > capacidad de almacenamiento]
+
+.Pasos
+. Seleccione la ficha *RAW* para ver el espacio de almacenamiento físico total utilizado y disponible en el clúster.
++
+Observe las líneas verticales para determinar si la capacidad que ha utilizado es inferior al total o inferior a los umbrales de advertencia, error o crítico. Pase el ratón por las líneas para ver los detalles.
+
++
+
+NOTE: Puede establecer el umbral de Advertencia, que por defecto es 3% inferior al umbral de error. Los umbrales error y crítico están predefinidos y no se pueden configurar por diseño. El umbral de error indica que aún hay menos de un nodo de capacidad en el clúster. Para conocer los pasos para establecer el umbral, consulte link:../storage/task_system_manage_cluster_set_the_cluster_full_threshold.html["Configurar el umbral completo del clúster"].
+
++
+
+TIP: Para obtener más detalles sobre la API de Element de umbrales de clúster relacionados, consulte link:../api/reference_element_api_getclusterfullthreshold.html["“GetClusterFullThreshold”"] En la documentación de la API del software _Element_. Para ver detalles sobre la capacidad de metadatos y bloques, consulte link:../storage/concept_monitor_understand_cluster_fullness_levels.html["Niveles de llenado de clústeres"] En la documentación del software _Element_.
+
+. Seleccione la ficha *EFECTIVO* para ver información sobre el almacenamiento total aprovisionado a los hosts conectados y para ver los índices de eficiencia.
++
+.. Opcionalmente, compruebe *incluir Thin Provisioning* para ver las tasas de eficiencia de Thin Provisioning en el gráfico de barras de capacidad efectiva.
+.. *Cuadro de barras de capacidad efectiva*: Observe las líneas verticales para determinar si la capacidad utilizada es inferior o inferior a los umbrales de advertencia, error o crítico. De forma similar a la ficha RAW, puede pasar el ratón por encima de las líneas verticales para ver los detalles.
+.. *Eficiencias*: Examine estas calificaciones para determinar el aumento de la eficiencia de la capacidad de almacenamiento con las funciones de compresión, deduplicación y thin provisioning activadas. Por ejemplo, si la compresión se muestra como «1,3x», esto significa que la eficiencia del almacenamiento con compresión habilitada es 1.3 veces más eficiente que sin ella.
++
+
+NOTE: Las eficiencias totales son iguales a (factor de eficiencia maxUsedSpace *) / 2, donde efficiencyfactor = (thinProvisioningfactor * deDuplicationfactor * compressionfactor). Cuando no se selecciona thin provisioning, no se incluye en la eficiencia total.
+
+.. Si la capacidad de almacenamiento efectiva se acerca a un umbral de error o crítico, considere borrar los datos de su sistema.
+
+
+. Para un análisis más profundo y un contexto histórico, mire https://activeiq.solidfire.com/["Detalles de SolidFire Active IQ de NetApp"^].
+
+
+
+
+== Supervise el rendimiento del almacenamiento
+
+Puede ver cuántas IOPS o rendimiento puede obtener de un clúster sin superar el rendimiento útil de ese recurso mediante el panel rendimiento del almacenamiento. El rendimiento del almacenamiento es el punto en el que se obtiene la utilización máxima antes de que la latencia empeore.
+
+El panel rendimiento del almacenamiento le ayuda a identificar si el rendimiento se está alcanzando el punto en el que el rendimiento podría degradarse si las cargas de trabajo aumentan.
+
+La información de este panel se actualiza cada 10 segundos y muestra un promedio de todos los puntos del gráfico.
+
+Para obtener detalles sobre el método API de Element asociado, consulte link:../api/reference_element_api_getclusterstats.html["GetClusterStats"] Método en la documentación de la API del software _Element_.
+
+.Pasos
+. Consulte el panel Storage Performance. Para obtener detalles, pase el ratón sobre los puntos del gráfico.
++
+.. *Pestaña IOPS*: Consulte las operaciones actuales por segundo. Busque tendencias de datos o picos. Por ejemplo, si observa que el número máximo de IOPS es 160 000 y 100 000 de IOPS libres o disponibles, puede considerar la posibilidad de añadir más cargas de trabajo a este clúster. Por otro lado, si observa que solo 140K está disponible, puede considerar la descarga de cargas de trabajo o la ampliación del sistema.
++
+image::hcc_dashboard_storage_perform_iops.png[Storage Performance > pestaña IOPS]
+
+.. *Ficha de rendimiento*: Patrones de monitor o picos de rendimiento. Además, supervise constantemente valores de rendimiento elevados, lo que podría indicar que se está acercando al rendimiento máximo útil del recurso.
++
+image::hcc_dashboard_storage_perform_throughput.png[Rendimiento del almacenamiento > pestaña rendimiento]
+
+.. *Ficha utilización*: Controlar la utilización de IOPS en relación con el total de IOPS disponibles resumido a nivel de clúster.
++
+image::hcc_dashboard_storage_perform_utlization.png[Rendimiento del almacenamiento > pestaña utilización]
+
+
+
+. Para obtener más análisis, observe el rendimiento del almacenamiento mediante el complemento de NetApp Element para vCenter Server.
++
+https://docs.netapp.com/us-en/vcp/vcp_task_reports_volume_performance.html["Rendimiento que se muestra en el plugin de NetApp Element para vCenter Server"^].
+
+
+
+[discrete]
+== Obtenga más información
+
+* https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
+* https://www.netapp.com/data-storage/solidfire/documentation["Página SolidFire y Element Resources"^]
+

@@ -1,0 +1,28 @@
+---
+permalink: esds/concept_esds_monitor_clusters.html 
+sidebar: sidebar 
+keywords: solidfire esds installation, hcc, hybrid cloud control, esds clusters 
+summary: 'Puede supervisar el rendimiento de los clústeres de eSDS de SolidFire y ver el inventario mediante la interfaz de usuario de control de cloud híbrido de NetApp. También puede recopilar registros para solucionar problemas mediante la interfaz de usuario de Hybrid Cloud Control de NetApp".' 
+---
+= Supervise los clústeres
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede supervisar el rendimiento de los clústeres de eSDS de SolidFire y ver el inventario mediante la interfaz de usuario de control de cloud híbrido de NetApp. También puede recopilar registros para solucionar problemas mediante la interfaz de usuario de Hybrid Cloud Control de NetApp.
+
+A continuación encontrará los enlaces a la información sobre la supervisión de los clústeres en la interfaz de usuario de control de cloud híbrido de NetApp:
+
+* link:hccstorage/task-hcc-nodes.html["Consulte el inventario en la página Nodes"]
+* link:hccstorage/task-hcc-volumes.html["Supervise los volúmenes en el clúster de almacenamiento de"]
+
+
+
+
+== Obtenga más información
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Página de recursos de SolidFire de NetApp"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentación para versiones anteriores de SolidFire de NetApp y los productos Element"^]
+

@@ -1,0 +1,47 @@
+---
+permalink: storage/task_system_manage_fips_identify_nodes_ready_for_fips_drives.html 
+sidebar: sidebar 
+keywords: fips, security, federal information processing standards, 140-2 
+summary: Debe comprobar si todos los nodos del clúster de almacenamiento están listos para admitir unidades FIPS mediante el método API GetFipsReport del software NetApp Element. 
+---
+= Identifique si los nodos están listos para la función de unidades FIPS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe comprobar si todos los nodos del clúster de almacenamiento están listos para admitir unidades FIPS mediante el método API GetFipsReport del software NetApp Element.
+
+El informe resultante muestra uno de los siguientes Estados:
+
+* None: El nodo no es compatible con la función de unidades FIPS.
+* Parcial: El nodo es compatible con FIPS, pero no todas las unidades son unidades FIPS.
+* Ready: El nodo es compatible con FIPS y todas las unidades son unidades FIPS o no existen unidades.
+
+
+.Pasos
+. Con la API de Element, compruebe si los nodos y las unidades del clúster de almacenamiento pueden ver las unidades FIPS introduciendo:
++
+`GetFipsReport`
+
+. Revise los resultados y consulte los nodos que no muestran el estado de Ready.
+. En el caso de los nodos que no muestren el estado Listo, compruebe si la unidad es compatible con la función de las unidades FIPS:
++
+** Utilice la API de Element, introduzca: `GetHardwareList`
+** Observe el valor de *DriveEncryptionCapabilityType*. Si es "fips", el hardware puede admitir la función de unidades FIPS.
++
+Consulte los detalles acerca de `GetFipsReport` o. `ListDriveHardware` en la link:../api/index.html["Referencia de la API de Element"].
+
+
+
+. Si la unidad no puede admitir la función unidades FIPS, reemplace el hardware con hardware FIPS (nodo o unidades).
+
+
+
+
+== Obtenga más información
+
+* https://www.netapp.com/data-storage/solidfire/documentation["Página SolidFire y Element Resources"^]
+* https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
+

@@ -1,0 +1,31 @@
+---
+permalink: storage/task_data_manage_volumes_work_with_volumes_task.html 
+sidebar: sidebar 
+keywords: volumes, work, storage, iscsi, fc, cluster data management, overview of functions 
+summary: El sistema SolidFire aprovisiona el almacenamiento mediante volúmenes. Los volúmenes son dispositivos de bloque a los que los clientes iSCSI o Fibre Channel acceden a través de la red. En la página Volumes de la pestaña Management, puede crear, modificar, clonar y eliminar volúmenes en un nodo. También puede ver estadísticas sobre el ancho de banda de los volúmenes y el uso de I/O. 
+---
+= Trabaje con volúmenes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El sistema SolidFire aprovisiona el almacenamiento mediante volúmenes. Los volúmenes son dispositivos de bloque a los que los clientes iSCSI o Fibre Channel acceden a través de la red. En la página Volumes de la pestaña Management, puede crear, modificar, clonar y eliminar volúmenes en un nodo. También puede ver estadísticas sobre el ancho de banda de los volúmenes y el uso de I/O.
+
+
+
+== Obtenga más información
+
+* link:concept_data_manage_volumes_quality_of_service_policies.html["Gestione políticas de calidad de servicio"]
+* link:task_data_manage_volumes.html#create-a-volume["Cree un volumen"]
+* link:task_data_manage_volumes.html#view-volume-details["Ver detalles de rendimiento de cada volumen"]
+* link:task_data_manage_volumes.html#edit-active-volumes["Editar los volúmenes activos"]
+* link:task_data_manage_volumes.html#delete-a-volume["Eliminar un volumen"]
+* link:task_data_manage_volumes.html#restore-a-deleted-volume["Restaurar un volumen eliminado"]
+* link:task_data_manage_volumes.html#purge-a-volume["Purgar un volumen"]
+* link:task_data_manage_volumes.html#clone-a-volume["Clonar un volumen"]
+* link:task_data_manage_volumes_assign_luns_to_fibre_channel_volumes.html["Asigne LUN a volúmenes Fibre Channel"]
+* link:task_data_manage_volumes_apply_a_qos_policy.html["Aplique una política de calidad de servicio en los volúmenes"]
+* link:task_data_manage_volumes_remove_a_qos_policy_association_of_a_volume.html["Quite la asociación de políticas de calidad de servicio de un volumen"]
+

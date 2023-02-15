@@ -1,0 +1,85 @@
+---
+permalink: api/reference_element_api_setclusterstructure.html 
+sidebar: sidebar 
+keywords: storage,cluster,configuration,info,restore,set,setting,setclusterstructure 
+summary: Puede utilizar el método SetClusterStructure para restaurar la información de configuración del clúster de almacenamiento desde una copia de seguridad. Al llamar al método, pasa el objeto clusterStructure que contiene la información de configuración que desea restaurar como parámetro params. 
+---
+= SetClusterStructure
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `SetClusterStructure` método para restaurar la información de configuración del clúster de almacenamiento desde un backup. Al llamar al método, pasa el objeto clusterStructure que contiene la información de configuración que desea restaurar como parámetro params.
+
+
+
+== Parámetro
+
+Este método tiene el siguiente parámetro de entrada:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+parámetros
+ a| 
+Un objeto JSON que contiene la información de configuración del clúster de almacenamiento actual.
+ a| 
+xref:reference_element_api_clusterstructure.adoc[ClusterStructure]
+
+|===
+
+
+== Valores devueltos
+
+Este método tiene los siguientes valores devueltos:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+resultado
+ a| 
+Controlador de resultados asíncrono.
+ a| 
+Establish asyncHandle
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+  "method": "SetClusterStructure",
+  "params": <insert clusterStructure object here>,
+  "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+	"id": 1,
+	"result" : {
+	"asyncHandle": 1
+	}
+}
+----
+
+
+== Nuevo desde la versión
+
+10.3

@@ -1,0 +1,38 @@
+---
+permalink: api/reference_element_api_cluster_pairing_order_of_operations.html 
+sidebar: sidebar 
+keywords: cluster,pairing,pair,order,operations,clusters 
+summary: Es necesario establecer una conexión entre una pareja de clústeres de almacenamiento que ejecutan el software Element para poder utilizar la replicación remota. 
+---
+= Orden de operaciones de emparejamiento de clústeres
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es necesario establecer una conexión entre una pareja de clústeres de almacenamiento que ejecutan el software Element para poder utilizar la replicación remota.
+
+Use el siguiente conjunto de métodos API para establecer una conexión de clúster:
+
+* xref:reference_element_api_startclusterpairing.adoc[StartClusterPairing]:
++
+Este método de API crea y devuelve una clave de emparejamiento que se utiliza para establecer una pareja de clústeres. La clave está codificada y contiene información que se utiliza para establecer comunicaciones entre clústeres. Un único clúster se puede emparejar con hasta cuatro clústeres. Sin embargo, se debe generar una nueva clave para cada emparejamiento de clústeres. La xref:reference_element_api_startclusterpairing.adoc[StartClusterPairing] método genera una nueva clave cada vez que se llama al método. Utilice cada clave única con xref:reference_element_api_completeclusterpairing.adoc[CompleteClusterPairing] método para emparejar cada clúster adicional.
+
++
+
+NOTE: Por motivos de seguridad, la clave de emparejamiento no se debe enviar a otros usuarios por correo electrónico. La clave contiene un nombre de usuario y una contraseña.
+
+* xref:reference_element_api_completeclusterpairing.adoc[CompleteClusterPairing]:
++
+Este método utiliza la clave de emparejamiento creada con el xref:reference_element_api_startclusterpairing.adoc[StartClusterPairing] Método API para crear una pareja de clústeres. Emita el xref:reference_element_api_completeclusterpairing.adoc[CompleteClusterPairing] Método API con el parámetro clusterPairingKey en el destino. El clúster de origen es el clúster que creó la clave.
+
+
+
+
+
+== Obtenga más información
+
+* xref:reference_element_api_startclusterpairing.adoc[StartClusterPairing]
+* xref:reference_element_api_completeclusterpairing.adoc[CompleteClusterPairing]
+

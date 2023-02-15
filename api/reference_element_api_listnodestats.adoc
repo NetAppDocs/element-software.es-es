@@ -1,0 +1,92 @@
+---
+permalink: api/reference_element_api_listnodestats.html 
+sidebar: sidebar 
+keywords: node,nodes,stats,list,listing,listnodestats 
+summary: Puede usar el método ListNodeStats para ver las mediciones de actividad de alto nivel para todos los nodos de almacenamiento de un clúster de almacenamiento. 
+---
+= ListNodeStats
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `ListNodeStats` método para ver las mediciones de actividad de alto nivel para todos los nodos de almacenamiento de un clúster de almacenamiento.
+
+
+NOTE: El SDS empresarial de SolidFire no admite este método. Si utiliza este método en un sistema SolidFire eSDS, el método devolverá un error.
+
+
+
+== Parámetros
+
+Este método no tiene parámetros de entrada.
+
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+Estadísticas de nodos
+ a| 
+Información de la actividad del nodo de almacenamiento.
+ a| 
+xref:reference_element_api_nodestats.adoc[Estadísticas de nodos]
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "ListNodeStats",
+   "params": {},
+   "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+   "id": 1,
+   "result": {
+     "nodeStats": {
+       "nodes": [
+         {
+         "cBytesIn": 46480366124,
+         "cBytesOut": 46601523187,
+         "cpu": 0,
+         "mBytesIn": 59934129,
+         "mBytesOut": 41620976,
+         "networkUtilizationCluster": 0,
+         "networkUtilizationStorage": 0,
+         "nodeID": 1,
+         "sBytesIn": 46480366124,
+         "sBytesOut": 46601523187,
+         "timestamp": 1895558254814,
+         "usedMemory": 31608135680
+         }
+       ]
+     }
+ }
+----
+
+
+== Nuevo desde la versión
+
+9.6

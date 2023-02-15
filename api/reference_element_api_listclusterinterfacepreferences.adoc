@@ -1,0 +1,82 @@
+---
+permalink: api/reference_element_api_listclusterinterfacepreferences.html 
+sidebar: sidebar 
+keywords:  
+summary: El método ListClusterInterfacePreference permite a los sistemas integrados con los clústeres de almacenamiento que ejecutan el software Element mostrar las preferencias de la interfaz de clúster existentes almacenadas en el sistema. Este método es para uso interno. 
+---
+= ListClusterInterfacePreferences
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La `ListClusterInterfacePreference` Method permite a los sistemas integrados con los clústeres de almacenamiento que ejecutan el software Element mostrar las preferencias de la interfaz de clúster existentes almacenadas en el sistema. Este método es para uso interno.
+
+
+NOTE: El SDS empresarial de SolidFire no admite este método. Si utiliza este método en un sistema SolidFire eSDS, el método devolverá un error.
+
+
+
+== Parámetros
+
+Este método no tiene parámetros de entrada.
+
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+preferencias
+ a| 
+Una lista de objetos de interfaz de clúster almacenados actualmente en el clúster de almacenamiento, cada uno de los cuales contiene el nombre y el valor de la preferencia.
+ a| 
+Cabina de objetos JSON
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+	"method": "ListClusterInterfacePreferences",
+    "params": {
+    },
+    "id": 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+	"id": 1,
+	"result": {
+		"preferences": [
+			{
+				"name": "prefname",
+				"value": "testvalue"
+			}
+		]
+	}
+}
+----
+
+
+== Nuevo desde la versión
+
+11.0

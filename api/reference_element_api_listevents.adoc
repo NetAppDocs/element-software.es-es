@@ -1,0 +1,261 @@
+---
+permalink: api/reference_element_api_listevents.html 
+sidebar: sidebar 
+keywords: cluster,list,listing,event,events,listevents 
+summary: Puede usar el método ListEvents para enumerar los eventos detectados en el clúster, ordenados de la más antigua a la más reciente. 
+---
+= ListEvents
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `ListEvents` método para mostrar los eventos detectados en el clúster, ordenados de la más antigua a la más reciente.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+ID de unidad
+ a| 
+Especifica que solo se devolverán los eventos con este ID de unidad.
+ a| 
+entero
+ a| 
+0
+ a| 
+No
+
+
+
+ a| 
+EndEventID
+ a| 
+Identifica el final de un intervalo de ID de evento que se deben devolver.
+ a| 
+entero
+ a| 
+(ilimitada)
+ a| 
+No
+
+
+
+ a| 
+EndPublishTime
+ a| 
+Especifica que sólo se devolverán los eventos publicados antes de esta hora.
+ a| 
+cadena
+ a| 
+0
+ a| 
+No
+
+
+
+ a| 
+EndReportTime
+ a| 
+Especifica que sólo se devolverán los eventos notificados antes de esta hora.
+ a| 
+cadena
+ a| 
+0
+ a| 
+No
+
+
+
+ a| 
+Tipo de evento
+ a| 
+Especifica el tipo de eventos que se van a devolver. Consulte xref:reference_element_api_event.adoc[evento] para los posibles tipos de evento.
+ a| 
+cadena
+ a| 
+0
+ a| 
+No
+
+
+
+ a| 
+Maxevents
+ a| 
+Especifica el número máximo de eventos que se devolverán.
+ a| 
+entero
+ a| 
+(ilimitada)
+ a| 
+No
+
+
+
+ a| 
+NodeID
+ a| 
+Especifica que solo se devolverán los eventos con este ID de nodo.
+ a| 
+entero
+ a| 
+ a| 
+
+
+
+ a| 
+ID de servicio
+ a| 
+Especifica que sólo se devolverán los eventos con este ID de servicio.
+ a| 
+ a| 
+ a| 
+
+
+
+ a| 
+StartEventID
+ a| 
+Identifica el comienzo de un intervalo de eventos que se van a devolver.
+ a| 
+entero
+ a| 
+0
+ a| 
+No
+
+
+
+ a| 
+StartPublishTime
+ a| 
+Especifica que sólo se devolverán los eventos publicados después de este tiempo.
+ a| 
+cadena
+ a| 
+0
+ a| 
+No
+
+
+
+ a| 
+StartReportTime
+ a| 
+Especifica que sólo se devolverán los eventos informados después de este tiempo.
+ a| 
+cadena
+ a| 
+0
+ a| 
+No
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+eventos
+ a| 
+Lista de eventos.
+ a| 
+xref:reference_element_api_event.adoc[evento] cabina
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "ListEvents",
+   "params": {
+   },
+   "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id":1,
+  "result":{
+    "events":[
+       {
+          "details":
+            {
+              "paramGCGeneration":1431550800,
+              "paramServiceID":2
+            },
+          "driveID":0,
+          "eventID":2131,
+          "eventInfoType":"gcEvent",
+          "message":"GC Cluster Coordination Complete",
+          "nodeID":0,
+          "serviceID":2,
+          "severity":0,
+          "timeOfPublish":"2015-05-13T21:00:02.361354Z",
+          "timeOfReport":"2015-05-13T21:00:02.361269Z"
+       },{
+          "details":
+               {
+                  "eligibleBS":[5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,24,25,26,27,28,29,30,31,40,41,42,43,44,45,46,47,52,53,54,55,56,57,58,59,60],
+                  "generation":1431550800,
+                  "participatingSS":[23,35,39,51]
+               },
+          "driveID":0,
+          "eventID":2130,
+          "eventInfoType":"gcEvent",
+          "message":"GCStarted",
+          "nodeID":0,
+          "serviceID":2,
+          "severity":0,
+          "timeOfPublish":"2015-05-13T21:00:02.354128Z",
+          "timeOfReport":"2015-05-13T21:00:02.353894Z"
+       },{
+          "details":"",
+          "driveID":0,
+          "eventID":2129,
+          "eventInfoType":"tSEvent",
+          "message":"return code:2 t:41286 tt:41286 qcc:1 qd:1 qc:1 vrc:1 tt:2 ct:Write etl:524288",
+          "nodeID":0,
+          "serviceID":0,
+          "severity":0,
+          "timeOfPublish":"2015-05-13T20:45:21.586483Z",
+          "timeOfReport":"2015-05-13T20:45:21.586311Z"
+       }
+     ]
+   }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

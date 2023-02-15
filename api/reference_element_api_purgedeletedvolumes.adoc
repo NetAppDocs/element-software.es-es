@@ -1,0 +1,86 @@
+---
+permalink: api/reference_element_api_purgedeletedvolumes.html 
+sidebar: sidebar 
+keywords: volume,volumes,purge,purging,multiple,deleted,purgedeletedvolumes 
+summary: Puede utilizar el método PurgeDeletedVolumes para purgar volúmenes inmediatamente y de forma permanente que se hayan eliminado. Puede utilizar este método para purgar hasta 500 volúmenes a la vez. 
+---
+= PurgeDeletedVolumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `PurgeDeletedVolumes` método para purgar volúmenes inmediatamente y de forma permanente que se hayan eliminado; puede usar este método para purgar hasta 500 volúmenes al mismo tiempo.
+
+Debe eliminar volúmenes mediante `DeleteVolumes` antes de que se puedan purgar. Los volúmenes se purgan automáticamente después de un período de tiempo, por lo que normalmente no se requiere el uso de este método.
+
+
+NOTE: Si purga un gran número de volúmenes a la vez, o si los volúmenes que purga cada uno tienen muchas instantáneas asociadas, el método puede fallar y devolver el error "xDBConnectionLoss". Si esto sucede, vuelva a intentar llamar al método con menos volúmenes.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+| ID de volumen | Una lista de identificadores de volumen de los volúmenes que se van a purgar del sistema. | matriz en números enteros | No | No 
+
+
+| ID de cuenta | Una lista de los ID de cuentas. Todos los volúmenes de todas las cuentas especificadas se purgan en el sistema. | matriz en números enteros | No | No 
+
+
+| VolumeAccessGroupID | Una lista de volumeAccessGroupID. Todos los volúmenes de todos los grupos de acceso de volúmenes especificados se purgan del sistema. | matriz en números enteros | No | No 
+|===
+*Nota:* puede especificar sólo uno de los parámetros anteriores por llamada de método. Si se especifica más de uno o ninguno, se producirá un error.
+
+
+
+== Valores devueltos
+
+Este método no tiene valores devueltos.
+
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "PurgeDeletedVolumes",
+   "params": {
+      "accountIDs" : [1, 2, 3]
+   },
+   "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id" : 1,
+  "result": {}
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6
+
+
+
+== Obtenga más información
+
+xref:reference_element_api_deletevolumes.adoc[DeleteVolumes]

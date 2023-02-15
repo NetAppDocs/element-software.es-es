@@ -1,0 +1,40 @@
+---
+permalink: storage/task_snapmirror_perform_failback_when_source_volume_exists.html 
+sidebar: sidebar 
+keywords: failback, perform, source volume, snapmirror, ui 
+summary: Es posible resincronizar el volumen de origen original y conmutar por error con la interfaz de usuario de NetApp Element. Este procedimiento se aplica a situaciones en las que aún existe el volumen de origen original. 
+---
+= Realice una conmutación tras recuperación cuando el volumen de origen siga existiendo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible resincronizar el volumen de origen original y conmutar por error con la interfaz de usuario de NetApp Element. Este procedimiento se aplica a situaciones en las que aún existe el volumen de origen original.
+
+. En la interfaz de usuario de Element, busque la relación que rompió para realizar la conmutación al respaldo.
+. Haga clic en el icono acciones y haga clic en *Reverse Resync*.
+. Confirme la acción.
++
+
+NOTE: La operación de resincronización inversa crea una nueva relación en la que se invierten los roles de los volúmenes de origen y de destino originales (esto provoca dos relaciones a medida que persiste la relación original). Los datos nuevos del volumen de destino original se transfieren al volumen de origen original como parte de la operación de resincronización inversa. Puede seguir accediendo al volumen activo y escribiendo datos en el lado de destino, pero deberá desconectar todos los hosts del volumen de origen y realizar una actualización de SnapMirror antes de volver a redirigir al volumen primario original.
+
+. Haga clic en el icono acciones de la relación inversa que acaba de crear y haga clic en *Actualizar*.
++
+Ahora que ha completado la resincronización inversa y aseguró que no hay sesiones activas conectadas al volumen en el lado de destino y que los datos más recientes se encuentran en el volumen primario original, es posible realizar los siguientes pasos para completar la conmutación tras recuperación y reactivar el volumen primario original:
+
+. Haga clic en el icono Actions de la relación inversa y haga clic en *Break*.
+. Haga clic en el icono Actions de la relación original y haga clic en *Resync*.
++
+
+NOTE: El volumen primario original ahora se puede montar para reanudar las cargas de trabajo de producción en el volumen primario original. La replicación original de SnapMirror se reanuda a partir de la normativa y el programa que se ha configurado para la relación.
+
+. Después de confirmar que el estado original de la relación es "sinreflejado", haga clic en el icono acciones de la relación inversa y haga clic en *Eliminar*.
+
+
+
+
+== Obtenga más información
+
+xref:concept_snapmirror_failback_scenarios.adoc[Escenarios de conmutación tras recuperación de SnapMirror]

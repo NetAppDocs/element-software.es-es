@@ -1,0 +1,26 @@
+---
+permalink: storage/task_troubleshoot_power_down_a_cluster.html 
+sidebar: sidebar 
+keywords: cluster, power down, mvip 
+summary: Si necesita desconectar un clúster completo, puede hacerlo después de haberse puesto en contacto con el servicio de soporte de NetApp y haber completado unos pasos preliminares. 
+---
+= Apague un clúster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si necesita desconectar un clúster completo, puede hacerlo después de haberse puesto en contacto con el servicio de soporte de NetApp y haber completado unos pasos preliminares.
+
+Prepare el clúster para su apagado haciendo lo siguiente:
+
+* Detenga todas las operaciones de I/O.
+* Desconecte todas las sesiones de iSCSI.
++
+.. Acceda a la dirección IP virtual de gestión (MVIP) en el clúster para abrir la interfaz de usuario de Element.
+.. Revise los nodos que aparecen en la lista Nodes.
+.. Ejecute el método API Shutdown especificando la opción halt en cada ID de nodo del clúster.
+
+
+

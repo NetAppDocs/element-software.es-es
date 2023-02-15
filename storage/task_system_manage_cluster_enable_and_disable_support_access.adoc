@@ -1,0 +1,25 @@
+---
+permalink: storage/task_system_manage_cluster_enable_and_disable_support_access.html 
+sidebar: sidebar 
+keywords: support access, enable, disable 
+summary: Es posible habilitar el acceso de soporte para permitir temporalmente el acceso del personal de soporte de NetApp a los nodos de almacenamiento a través de SSH para solucionar problemas. 
+---
+= Habilite y deshabilite el acceso al soporte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible habilitar el acceso de soporte para permitir temporalmente el acceso del personal de soporte de NetApp a los nodos de almacenamiento a través de SSH para solucionar problemas.
+
+Para modificar el acceso al soporte, debe tener privilegios de administrador de clúster.
+
+
+NOTE: Esta función no está disponible en los clústeres de SDS empresarial de SolidFire.
+
+. Haga clic en *Cluster* > *Settings*.
+. En la sección Habilitar/deshabilitar acceso de soporte, introduzca la duración (en horas) que desea permitir que el soporte tenga acceso.
+. Haga clic en *Activar acceso de soporte*.
+. *Opcional:* para desactivar el acceso al soporte técnico, haga clic en *Desactivar acceso al soporte técnico*.
+

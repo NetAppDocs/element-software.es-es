@@ -1,0 +1,25 @@
+---
+permalink: storage/task_replication_pause_replication.html 
+sidebar: sidebar 
+keywords: replication, pause, volume pairs 
+summary: Puede pausar manualmente la replicación si necesita detener el procesamiento de I/o durante un breve periodo de tiempo. Puede que desee pausar la replicación si hay un aumento en el procesamiento de I/o y desea reducir la carga de procesamiento. 
+---
+= Detenga la replicación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede pausar manualmente la replicación si necesita detener el procesamiento de I/o durante un breve periodo de tiempo. Puede que desee pausar la replicación si hay un aumento en el procesamiento de I/o y desea reducir la carga de procesamiento.
+
+. Seleccione *Protección de datos* > *pares de volúmenes*.
+. Haga clic en el icono Actions de la pareja de volúmenes.
+. Haga clic en *Editar*.
+. En el panel *Editar par de volúmenes*, detenga manualmente el proceso de replicación.
++
+
+IMPORTANT: Cuando se pausa o se reanuda manualmente una replicación de volumen, se detiene o se reanuda la transmisión de datos. Asegúrese de haber coordinado estos cambios en ambos sitios.
+
+. Haga clic en *Guardar cambios*.
+

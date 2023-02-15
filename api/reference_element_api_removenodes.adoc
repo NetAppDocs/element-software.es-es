@@ -1,0 +1,100 @@
+---
+permalink: api/reference_element_api_removenodes.html 
+sidebar: sidebar 
+keywords: node,nodes,cluster,remove,removing,removenodes 
+summary: Se puede usar RemoveNodes para quitar uno o varios nodos que ya no deberían participar en el clúster. 
+---
+= RemoveNodes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar `RemoveNodes` para quitar uno o varios nodos que ya no deberían participar en el clúster.
+
+Antes de quitar un nodo, debe quitar todas las unidades que contiene el nodo mediante el `RemoveDrives` método. No se puede quitar un nodo hasta que el `RemoveDrives` el proceso ha finalizado y todos los datos se han migrado del nodo. Después de quitar un nodo, este se registra a sí mismo como un nodo pendiente. Puede volver a añadir el nodo o apagarlo (apagar el nodo lo elimina de la lista de nodos pendientes).
+
+
+
+== Eliminación de nodo maestro de clústeres
+
+Si utiliza `RemoveNodes` para quitar el nodo maestro de clúster, es posible que se agote el tiempo de espera del método antes de devolver una respuesta. Si la llamada al método no puede eliminar el nodo, vuelva a realizar la llamada al método. Tenga en cuenta que si va a quitar el nodo de maestro de clústeres junto con otros nodos, debe usar una llamada independiente para quitar el nodo maestro de clústeres por sí mismo.
+
+
+
+== Parámetro
+
+Este método tiene el siguiente parámetro de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+IgnoroEnsemlletolerancia Cambiar
+ a| 
+Ignore los cambios en la tolerancia de fallo del nodo del conjunto cuando quite los nodos.
+
+Si el clúster de almacenamiento utiliza esquemas de protección de datos que toleran varios fallos de nodo y la eliminación de los nodos disminuye la tolerancia de fallo del nodo del conjunto, la eliminación del nodo se produce un error normalmente. Es posible establecer este parámetro en TRUE para deshabilitar la comprobación de tolerancia del conjunto con el fin de que la eliminación del nodo se complete correctamente.
+ a| 
+booleano
+ a| 
+falso
+ a| 
+No
+
+
+
+ a| 
+nodos
+ a| 
+Lista de NodeIDs para los nodos que se van a quitar.
+ a| 
+matriz en números enteros
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+
+
+== Valor de retorno
+
+Este método no tiene ningún valor devuelto.
+
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "RemoveNodes",
+   "params": {
+     "nodes"  : [3,4,5]
+   },
+   "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id" : 1
+  "result" : {},
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

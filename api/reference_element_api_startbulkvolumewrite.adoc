@@ -1,0 +1,172 @@
+---
+permalink: api/reference_element_api_startbulkvolumewrite.html 
+sidebar: sidebar 
+keywords: volume,bulk,start,starting,write,session,startbulkvolumewrite 
+summary: Se puede utilizar el método StartBulkVolumeWrite para iniciar una sesión de escritura masiva de volúmenes en un volumen especificado. 
+---
+= StartBulkVolumeWrite
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `StartBulkVolumeWrite` método para iniciar una sesión de escritura masiva de volúmenes en un volumen especificado.
+
+Solo se pueden ejecutar simultáneamente dos procesos de volúmenes masivos en un volumen. Cuando se inicializa la sesión, los datos se escriben en un volumen de almacenamiento de Element desde un origen de backup externo. Un servidor web que se ejecuta en un nodo de almacenamiento de Element, accede a los datos externos. La información de interacción del servidor para el acceso a datos externos es pasada por un script que se ejecuta en el sistema de almacenamiento.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+formato
+ a| 
+El formato de los datos del volumen. Puede ser:
+
+* `uncompressed`: Todos los bytes del volumen se devuelven sin compresión.
+* `native`: Los datos Opaque se devuelven que son más pequeños y eficientes almacenados y escritos en una escritura masiva posterior.
+
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+ID de volumen
+ a| 
+El ID del volumen en el que se va a escribir.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+guión
+ a| 
+El nombre de un script ejecutable. Si no se otorga ningún nombre de script, la clave y la URL son necesarias para acceder a los nodos de almacenamiento Element. La secuencia de comandos se ejecuta en el nodo primario, y la clave y la URL se devuelven al script para que se pueda contactar con el servidor web local.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+ScriptParameters
+ a| 
+Parámetros JSON para pasar al script.
+ a| 
+Objeto JSON
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+atributos
+ a| 
+Atributos JSON para el trabajo de volúmenes masivos.
+ a| 
+Objeto JSON
+ a| 
+Ninguno
+ a| 
+No
+
+|===
+
+
+== Valores devueltos
+
+Este método tiene los siguientes valores devueltos:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+Establish asyncHandle
+ a| 
+El ID del proceso asíncrono que se comprobará para que finalice.
+ a| 
+entero
+
+
+
+ a| 
+clave
+ a| 
+Clave opaca que identifica de forma exclusiva la sesión.
+ a| 
+cadena
+
+
+
+ a| 
+url
+ a| 
+URL para acceder al servidor web del nodo.
+ a| 
+cadena
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "StartBulkVolumeWrite",
+   "params": {
+      "volumeID" : 5,
+      "format"  : "native",
+   },
+   "id": 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+   "id" : 1,
+   "result" : {
+      "asyncHandle" : 1,
+      "key" : "11eed8f086539205beeaadd981aad130",
+      "url" : "https://127.0.0.1:44000/"
+   }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

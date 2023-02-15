@@ -1,0 +1,927 @@
+---
+permalink: storage/reference_monitor_cluster_fault_codes.html 
+sidebar: sidebar 
+keywords: cluster fault codes, alerts, error codes, view 
+summary: El sistema informa de un error o un estado que puede ser de su interés al generar un código de error, que se incluye en la página Alerts. Estos códigos ayudan a determinar en qué componente del sistema se generó la alerta y por qué se generó. 
+---
+= códigos de error de clúster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El sistema informa de un error o un estado que puede ser de su interés al generar un código de error, que se incluye en la página Alerts. Estos códigos ayudan a determinar en qué componente del sistema se generó la alerta y por qué se generó.
+
+En la siguiente lista se describen los distintos tipos de códigos:
+
+* *AutenticaciónServiceFault*
++
+El servicio de autenticación en uno o más nodos del clúster no funciona según lo esperado.
+
++
+Comuníquese con el soporte de NetApp para obtener ayuda.
+
+* *Disponible VirtualNetworkIPAddressLow*
++
+El número de direcciones de red virtual en el bloque de direcciones IP es bajo.
+
++
+Para resolver esta falla, añada más direcciones IP al bloque de direcciones de red virtual.
+
+* *BlockBlockClusterFull*
++
+No hay suficiente espacio libre de almacenamiento basado en bloques para admitir la pérdida de un solo nodo. Consulte el método API GetClusterFullThreshold para obtener detalles sobre los niveles de ocupación de los clústeres. Esta falla del clúster indica una de las siguientes condiciones:
+
++
+** Stage3Low (Advertencia): Se superó el umbral definido por el usuario. Ajuste la configuración del clúster lleno o añada más nodos.
+** Stage4Critical (error): No hay espacio suficiente para recuperar el sistema de un fallo de 1 nodo. No se permite la creación de volúmenes, snapshots y clones.
+** Stage5CompletelyConsumed (crítico)1; no se permiten escrituras ni nuevas conexiones iSCSI. Se mantendrán las conexiones iSCSI actuales. Las escrituras fallarán hasta que se añada más capacidad al clúster. Para resolver esta falla, purgue o elimine volúmenes o añada otro nodo de almacenamiento al clúster de almacenamiento.
+
+
+* * BlocksDegraded*
++
+Los datos de bloques ya no se replican por completo debido a un fallo.
+
++
+|===
+
+
+| Gravedad | Descripción 
+
+
+ a| 
+Advertencia
+ a| 
+Solo se puede acceder a dos copias completas de datos en bloques.
+
+
+
+ a| 
+Error
+ a| 
+Solo se puede acceder a una única copia completa de los datos en bloque.
+
+
+
+ a| 
+Crítico
+ a| 
+No se puede acceder a ninguna copia completa de los datos en bloque.
+
+|===
++
+*Nota:* el estado de aviso sólo puede ocurrir en un sistema de Triple Helix.
+
++
+Para resolver esta falla, restaure los nodos sin conexión o los servicios de bloques, o póngase en contacto con el soporte de NetApp para obtener ayuda.
+
+* *BlockServiceTooFull*
++
+Un servicio de bloques está utilizando demasiado espacio.
+
++
+Para resolver esta falla, añada más capacidad aprovisionada.
+
+* *BlockServiceUnhealthy*
++
+Se detectó que un servicio de bloques está en mal estado:
+
++
+** Gravedad = Advertencia: No se realiza ninguna acción. Este período de advertencia caducará en cTimeUntilBSIsKilledMSec=330000 milisegundos.
+** Gravedad = error: El sistema decomisiona automáticamente los datos y vuelve a replicar los datos en otras unidades en buen estado.
+** Severidad = crítico: Hay servicios de bloque con errores en varios nodos mayores o iguales al número de replicación (2 para Double Helix). Los datos no están disponibles y la sincronización de bandejas no finalizará. Compruebe si existen problemas de conectividad de red y errores de hardware. Si se han producido errores en componentes de hardware específicos, habrá otros errores. El fallo se borrará cuando se pueda acceder al servicio de bloqueo o cuando se haya retirado el servicio.
+
+
+* *BmcSelfTestFailed*
++
+La controladora de gestión de placa base (BMC) no pudo realizar una autoprueba.
+
++
+Comuníquese con el soporte de NetApp para obtener ayuda.
+
++
+Durante una actualización a Element 12.5 o posterior, el `BmcSelfTestFailed` No se genera una falla para un nodo que tenga un BMC con errores ya existentes o cuando falla el BMC de un nodo durante la actualización. Los BMCs que no superan las autopruebas durante la actualización emiten una `BmcSelfTestFailed` error de advertencia después de que todo el clúster finaliza la actualización.
+
+* *RelojSkewExceedsFaultThreshold*
++
+El desfase de tiempo entre el maestro de clústeres y el nodo que presenta un token supera el umbral recomendado. El clúster de almacenamiento no puede corregir el desfase de hora entre los nodos automáticamente.
+
++
+Para resolver esta falla, use los servidores NTP internos a la red en lugar de los que vienen predeterminados en la instalación. Si usa un servidor NTP interno, comuníquese con el soporte de NetApp para obtener ayuda.
+
+* *ClusterCannotSync*
++
+Hay una condición de falta de espacio y los datos en las unidades de almacenamiento en bloque desconectadas no pueden sincronizarse con las unidades que siguen activas.
+
++
+Para resolver esta falla, añada más almacenamiento.
+
+* *ClusterFull*
++
+No hay más espacio de almacenamiento libre en el clúster de almacenamiento.
+
++
+Para resolver esta falla, añada más almacenamiento.
+
+* *ClusterIOPSAreOverProvisioned*
++
+Hay un sobreaprovisionamiento de IOPS en el clúster. La suma de todas las IOPS de calidad de servicio mínima es mayor que el número de IOPS que se espera del clúster. No puede mantenerse una calidad de servicio mínima para todos los volúmenes en simultáneo.
+
++
+Para resolver este problema, reduzca la configuración mínima de IOPS de calidad de servicio para los volúmenes.
+
+* *CpuThermalEventThreshold*
++
+El número de eventos térmicos de la CPU en una o más CPU supera el umbral configurado.
+
++
+Si no se detectan nuevos eventos térmicos de la CPU en diez minutos, la advertencia se resolverá por sí misma.
+
+* *DisableDriveSecurityFailed*
++
+El clúster no se configura para habilitar la seguridad de la unidad (cifrado en reposo), pero al menos una unidad tiene la seguridad de la unidad habilitada, lo cual significa que se deshabilita la seguridad de la unidad en esas unidades. Este fallo se registra con la gravedad "'Advertencia'".
+
++
+Para resolver esta falla, compruebe los detalles de la falla por el motivo por el que no se pudo deshabilitar la seguridad de la unidad. Los posibles motivos son:
+
++
+** No se pudo adquirir la clave de cifrado, investigue el problema de acceso a la clave o al servidor de claves externo.
+** Se produjo un error en la operación de desactivación de la unidad, determine si es posible que se haya adquirido una clave incorrecta. Si ninguno de estos son el motivo del fallo, es posible que sea necesario sustituir la unidad.
+
+
++
+Es posible intentar recuperar una unidad que no deshabilita la seguridad correctamente incluso cuando se proporciona la clave de autenticación correcta. Para realizar esta operación, quite las unidades del sistema moverlas a Available, ejecute un borrado seguro en la unidad y vuelva a moverlas a Active.
+
+* *DesconecttedClusterPair*
++
+Una pareja de clústeres está desconectada o configurada incorrectamente. Compruebe la conectividad de red entre los clústeres.
+
+* *DisconnectedRemoteNode*
++
+Un nodo remoto está desconectado o configurado incorrectamente. Compruebe la conectividad de red entre los nodos.
+
+* *DesconectadoSnapMirrorEndpoint*
++
+Un extremo de SnapMirror remoto está desconectado o configurado incorrectamente. Compruebe la conectividad de red entre el clúster y el SnapMirrorEndpoint remoto.
+
+* *Disponible*
++
+Hay una o más unidades disponibles en el clúster. En general, todos los clústeres deben tener todas las unidades añadidas, y ninguna debe estar en estado disponible. Si esta falla aparece de forma inesperada, comuníquese con el soporte de NetApp.
+
++
+Para resolver esta falla, añada las unidades disponibles al clúster de almacenamiento.
+
+* *DriveFailed*
++
+El clúster devuelve esta falla cuando una o más unidades han fallado, lo cual indica una de las siguientes condiciones:
+
++
+** El administrador de unidades no puede acceder a la unidad.
+** El servicio de segmentos o bloques se ha producido un error demasiadas veces, probablemente debido a fallos de lectura o escritura de la unidad y no se puede reiniciar.
+** Falta la unidad.
+** No se puede acceder al servicio maestro del nodo (todas las unidades del nodo se consideran ausentes o con errores).
+** La unidad está bloqueada y no puede adquirirse la clave de autenticación de la unidad.
+** La unidad se bloqueó y la operación de desbloqueo falla. Para resolver este problema:
+** Compruebe la conectividad de red del nodo.
+** Sustituya la unidad.
+** Asegúrese de que la clave de autenticación esté disponible.
+
+
+* *HealthdriveFault*
++
+Se produjo un error en la comprobación DEL estado INTELIGENTE de una unidad y, como resultado, se reducen las funciones de la unidad. Existe un nivel de gravedad crítico para esta falla:
+
++
+** Unidad con serie: <serial number> en ranura: <node slot> <drive slot> no superó la comprobación de estado general INTELIGENTE. Para resolver esta falla, reemplace la unidad.
+
+
+* *DriveWeFault*
++
+La vida útil restante de una unidad cayó por debajo del umbral permitido, pero la unidad sigue funcionando.existen dos niveles de gravedad posibles para este fallo: Crucial y Advertencia:
+
++
+** Unidad con serie: <serial number> en ranura: <node slot> <drive slot> tiene niveles de desgaste críticos.
+** Unidad con serie: <serial number> en ranura: <node slot> <drive slot> tiene bajas reservas de desgaste. Para resolver esta falla, reemplace la unidad cuanto antes.
+
+
+* *DuplicateClusterMasterCandidates*
++
+Se detectó más de un candidato maestro de clúster de almacenamiento. Comuníquese con el soporte de NetApp para obtener ayuda.
+
+* *EnableDriveSecurityFailed*
++
+El clúster se configura para requerir seguridad de unidades (cifrado en reposo), pero la seguridad de unidades no se pudo habilitar en al menos una unidad. Este fallo se registra con la gravedad "'Advertencia'".
+
++
+Para resolver esta falla, compruebe los detalles de la falla por el motivo por el que no se pudo habilitar la seguridad de la unidad. Los posibles motivos son:
+
++
+** No se pudo adquirir la clave de cifrado, investigue el problema de acceso a la clave o al servidor de claves externo.
+** Se produjo un error en la operación de habilitación en la unidad, para determinar si podría haberse adquirido una clave incorrecta. Si ninguno de estos son el motivo del fallo, es posible que sea necesario sustituir la unidad.
+
+
++
+Es posible intentar recuperar una unidad que no habilita la seguridad correctamente incluso cuando se proporciona la clave de autenticación correcta. Para realizar esta operación, quite las unidades del sistema moverlas a Available, ejecute un borrado seguro en la unidad y vuelva a moverlas a Active.
+
+* * Ensembergraded*
++
+Se perdió la alimentación de energía o la conectividad de red en uno o varios de los nodos del conjunto.
+
++
+Para resolver esta falla, restaure la alimentación o la conectividad de red.
+
+* *excepción*
++
+Una falla que no es de rutina. Estas fallas no se borran automáticamente de la cola de fallas. Comuníquese con el soporte de NetApp para obtener ayuda.
+
+* *FailedSpaceTooFull*
++
+Un servicio de bloques no responde a las solicitudes de escritura de datos. Esto provoca que el servicio de segmentos se quede sin espacio para almacenar escrituras fallidas.
+
++
+Para resolver esto, restaure la funcionalidad de servicios de bloques de modo que las escrituras puedan continuar normalmente y que el espacio con fallas se vacíe en el servicio de segmentos.
+
+* *FanSensor*
++
+Un sensor de ventilador presenta una falla o está ausente.
+
++
+Para resolver esta falla, reemplace cualquier hardware con errores.
+
+* *FiberChannelAccessDegraded*
++
+Un nodo Fibre Channel no responde a otros nodos en el clúster de almacenamiento a través de su dirección IP de almacenamiento durante un período. En este estado, se considera que el nodo no responde y se genera una falla en el clúster. Compruebe la conectividad de red.
+
+* *FiberChannelAccessUnavailable*
++
+Ninguno de los nodos Fibre Channel responde. Se muestran los ID de los nodos. Compruebe la conectividad de red.
+
+* *FiberChannelActiveIxL*
++
+El número de Nexus IXL se acerca al límite admitido de 8000 sesiones activas por nodo Fibre Channel.
+
++
+** El límite de mejores prácticas es de 5500.
+** El límite de advertencia es 7500.
+** El límite máximo (no forzado) es 8192. Para resolver esta falla, reduzca el número de Nexus IXL por debajo del límite de mejores prácticas de 5500.
+
+
+* *FiberChannelConfig*
++
+Esta falla del clúster indica una de las siguientes condiciones:
+
++
+** Hay un puerto de Fibre Channel no esperado en una ranura PCI.
+** Hay un modelo de adaptador de bus de host de Fibre Channel no esperado.
+** Hay un problema con el firmware de un adaptador de bus de host de Fibre Channel.
+** Un puerto de Fibre Channel no está en línea.
+** Hay un problema persistente en la configuración de traspaso de Fibre Channel. Comuníquese con el soporte de NetApp para obtener ayuda.
+
+
+* *FiberChannelIOPS*
++
+El número total de IOPS está cerca del límite de IOPS para los nodos Fibre Channel del clúster. Los límites son:
+
++
+** FC0025: Límite de 450 000 IOPS con un tamaño de bloque de 4 KB por nodo Fibre Channel.
+** FCN001: Límite de 625K OPS a un tamaño de bloque de 4K por nodo Fibre Channel. Para resolver esta falla, equilibre la carga en todos los nodos Fibre Channel disponibles.
+
+
+* *FiberChannelStaticIxL*
++
+El número de Nexus IXL se acerca al límite admitido de 16000 sesiones estáticas por nodo Fibre Channel.
+
++
+** El límite de mejores prácticas es de 11000.
+** El límite de advertencia es 15000.
+** El límite máximo (obligatorio) es 16384. Para resolver esta falla, reduzca el número de Nexus IXL por debajo del límite de mejores prácticas de 11000.
+
+
+* *FileSystemCapacidadLow*
++
+No hay espacio suficiente en uno de los sistemas de archivos.
+
++
+Para resolver esta falla, añada más capacidad al sistema de archivos.
+
+* *FileSystemIsReadOnly*
++
+Un sistema de archivos ha cambiado al modo de solo lectura.
+
++
+Comuníquese con el soporte de NetApp para obtener ayuda.
+
+* *FipsDrivesdiscordancia*
++
+Se insertó de forma física una unidad que no es FIPS en un nodo de almacenamiento compatible con FIPS o se insertó de forma física una unidad FIPS en un nodo de almacenamiento que no es FIPS. Se genera un solo error por nodo y se enumera todas las unidades afectadas.
+
++
+Para resolver esta falla, quite o sustituya la unidad o las unidades con discrepancias.
+
+* *FipsDrivesOutOfCompliance*
++
+El sistema detectó que se deshabilitó el cifrado en reposo después de habilitar la función FIPS Drives. Esta falla también se genera cuando la función de unidades FIPS está habilitada y hay un nodo o una unidad no FIPS en el clúster de almacenamiento.
+
++
+Para resolver esta falla, habilite el cifrado en reposo o elimine el hardware que no es FIPS del clúster de almacenamiento.
+
+* *FipsSelfTestFailure*
++
+El subsistema FIPS detectó un fallo durante la autoprueba.
+
++
+Comuníquese con el soporte de NetApp para obtener ayuda.
+
+* *HardwareConfigdiscordancia*
++
+Esta falla del clúster indica una de las siguientes condiciones:
+
++
+** La configuración no coincide con la definición del nodo.
+** El tamaño de unidad para este tipo de nodo es incorrecto.
+** Se detectó una unidad no compatible. Un posible motivo es que la versión de elemento instalada no reconoce esta unidad. Recomienda actualizar el software Element en este nodo.
+** Hay un error de coincidencia en el firmware de la unidad.
+** El estado de capacidad de cifrado de la unidad no coincide con el nodo. Comuníquese con el soporte de NetApp para obtener ayuda.
+
+
+* *IdPCertificateExpiración*
++
+El certificado SSL del proveedor de servicios del clúster para su uso con un proveedor de identidades (IDP) de terceros está a punto de expirar o ya ha caducado. Este fallo utiliza las siguientes gravedades en función de la urgencia:
+
++
+|===
+
+
+| Gravedad | Descripción 
+
+
+ a| 
+Advertencia
+ a| 
+El certificado caduca dentro de los 30 días.
+
+
+
+ a| 
+Error
+ a| 
+El certificado caduca dentro de los 7 días.
+
+
+
+ a| 
+Crítico
+ a| 
+El certificado caduca en un plazo de 3 días o ya ha caducado.
+
+|===
++
+Para resolver esta falla, actualice el certificado SSL antes de que caduque. Utilice el método API UpdateIdpConfiguration con `refreshCertificateExpirationTime=true` Para proporcionar el certificado SSL actualizado.
+
+* *InconstentBondModes*
++
+Los modos de enlace en el dispositivo de VLAN no están presentes. Esta falla muestra el modo de enlace esperado y el modo de enlace actualmente en uso.
+
+
+
+* * InconstentMtus*
++
+Esta falla del clúster indica una de las siguientes condiciones:
+
++
+** Bond1G mismatch: Se detectaron varias MTU inconsistentes en interfaces Bond1G.
+** Bond10G mismatch: Se detectaron varias MTU inconsistentes en interfaces Bond10G. Esta falla muestra los nodos en cuestión junto con el valor de MTU asociado.
+
+
+* *InconstentRoutingRules*
++
+Las reglas de enrutamiento de esta interfaz son inconsistentes.
+
+* * InconstentSubnetMasks*
++
+La máscara de red en el dispositivo de VLAN no coincide con la máscara de red registrada internamente para la VLAN. Esta falla muestra la máscara de red esperada y la máscara de red actualmente en uso.
+
+* * IncorrectBondPortCount*
++
+El número de puertos de enlace es incorrecto.
+
+* *InvalidConfigdFiberChannelNodeCount*
++
+Una de las dos conexiones de nodos Fibre Channel esperadas está degradada. Esta falla aparece cuando se conecta un solo nodo Fibre Channel.
+
++
+Para resolver esta falla, compruebe la conectividad de red y el cableado de red del clúster y compruebe los servicios con errores. Si no hay problemas de red o servicio, comuníquese con el soporte de NetApp para obtener el reemplazo de un nodo Fibre Channel.
+
+* *IrqBalanceFailed*
++
+Se produjo una excepción al intentar balancear las interrupciones.
+
++
+Comuníquese con el soporte de NetApp para obtener ayuda.
+
+* *KmipCertificateFault*
++
+** El certificado de la entidad de certificación raíz (CA) está cerca de su vencimiento.
++
+Para resolver este fallo, adquiera un nuevo certificado de la CA raíz con una fecha de caducidad de al menos 30 días y utilice ModifyKeyServerKmip para proporcionar el certificado de CA raíz actualizado.
+
+** El certificado de cliente está a punto de expirar.
++
+Para resolver esta falla, cree una nueva CSR con GetClientCertificateSigningRequest, asegúrese de que la nueva fecha de caducidad se agota al menos 30 días y utilice ModifyKeyServerKmip para reemplazar el certificado de cliente KMIP que caduca con el nuevo certificado.
+
+** El certificado de la entidad de certificación raíz (CA) ha caducado.
++
+Para resolver este fallo, adquiera un nuevo certificado de la CA raíz con una fecha de caducidad de al menos 30 días y utilice ModifyKeyServerKmip para proporcionar el certificado de CA raíz actualizado.
+
+** El certificado de cliente ha caducado.
++
+Para resolver esta falla, cree una nueva CSR con GetClientCertificateSigningRequest, asegúrese de que la nueva fecha de caducidad se agota al menos 30 días y utilice ModifyKeyServerKmip para reemplazar el certificado de cliente KMIP caducado con el nuevo certificado.
+
+** Error de certificado de entidad de certificación raíz (CA).
++
+Para resolver esta falla, compruebe que se proporcionó el certificado correcto y, si fuera necesario, vuelva a adquirir el certificado de la CA raíz. Utilice ModifyKeyServerKmip para instalar el certificado de cliente KMIP correcto.
+
+** Error del certificado de cliente.
++
+Para resolver esta falla, compruebe que esté instalado el certificado de cliente KMIP correcto. La CA raíz del certificado de cliente debe instalarse en el EKS. Utilice ModifyKeyServerKmip para instalar el certificado de cliente KMIP correcto.
+
+
+
+* *KmipServerFault*
++
+** Error de conexión
++
+Para resolver esta falla, compruebe que el servidor de claves externo esté vivo y sea posible acceder a él a través de la red. Utilice TestKeyServerKimp y TestKeyProviderKmip para probar su conexión.
+
+** Error de autenticación
++
+Para resolver esta falla, compruebe que se estén utilizando los certificados de cliente KMIP y de CA raíz correctos, y que coincidan las claves privadas y el certificado de cliente KMIP.
+
+** Error del servidor
++
+Para resolver esta falla, compruebe los detalles del error. Es posible que sea necesario solucionar los problemas en el servidor de claves externo según el error que se devuelve.
+
+
+
+* *MemoryEccThreshold*
++
+Se ha detectado un gran número de errores ECC corregibles o no corregibles. Este fallo utiliza las siguientes gravedades en función de la urgencia:
+
++
+|===
+
+
+| Evento | Gravedad | Descripción 
+
+
+ a| 
+Un único módulo DIMM cErrorCount llega a cDimmcorrectableErrWarnThreshold.
+ a| 
+Advertencia
+ a| 
+Errores corregibles de memoria ECC por encima del umbral en DIMM: <Processor> <DIMM Slot>
+
+
+
+ a| 
+Un único DIMM cErrorCount permanece por encima de cDimmcorrectableErrWarnThreshold hasta que el temporizador ciErrorFaultTimer caduca para el DIMM.
+ a| 
+Error
+ a| 
+Errores corregibles de memoria ECC por encima del umbral en DIMM: <Processor> <DIMM>
+
+
+
+ a| 
+Un controlador de memoria informa cErrorCount encima de cMemCtlrcorrectableErrWarnThreshold y se especifica cMemCtlrcorrectableErrWarnDuration.
+ a| 
+Advertencia
+ a| 
+Errores corregibles de memoria ECC por encima del umbral en el controlador de memoria: <Processor> <Memory Controller>
+
+
+
+ a| 
+Un controlador de memoria informa cErrorCount sobre cMemCtlrcorrectableErrWarnThreshold hasta que cErrorFaultTimer caduca para el controlador de memoria.
+ a| 
+Error
+ a| 
+Errores corregibles de memoria ECC por encima del umbral en DIMM: <Processor> <DIMM>
+
+
+
+ a| 
+Un módulo DIMM único informa de un uErrorCount por encima de cero, pero inferior a cDimmUncorrectTaberreErrFaultThreshold.
+ a| 
+Advertencia
+ a| 
+Errores de memoria ECC no corregibles detectados en el módulo DIMM: <Processor> <DIMM Slot>
+
+
+
+ a| 
+Un módulo DIMM único informa de un uErrorCount de al menos cmimUncorrecttableErrFaultThreshold.
+ a| 
+Error
+ a| 
+Errores de memoria ECC no corregibles detectados en el módulo DIMM: <Processor> <DIMM Slot>
+
+
+
+ a| 
+Un controlador de memoria informa de un uErrorCount por encima de cero, pero menor que cMemctlenseUncorrecttableErrFaultThreshold.
+ a| 
+Advertencia
+ a| 
+Errores de memoria ECC no corregibles detectados en el controlador de memoria: <Processor> <Memory Controller>
+
+
+
+ a| 
+Un controlador de memoria informa de un uErrorCount de al menos cMemctlrUncorrecttableErrFaultThreshold.
+ a| 
+Error
+ a| 
+Errores de memoria ECC no corregibles detectados en el controlador de memoria: <Processor> <Memory Controller>
+
+|===
++
+Para resolver esta falla, comuníquese con el soporte de NetApp para obtener ayuda.
+
+* *MemyUsageThreshold*
++
+El uso de memoria está por encima de lo normal. Este fallo utiliza las siguientes gravedades en función de la urgencia:
+
++
+
+NOTE: Consulte el encabezado *Detalles* del error para obtener información más detallada sobre el tipo de fallo.
+
++
+|===
+
+
+| Gravedad | Descripción 
+
+
+ a| 
+Advertencia
+ a| 
+La memoria del sistema es baja.
+
+
+
+ a| 
+Error
+ a| 
+La memoria del sistema es muy baja.
+
+
+
+ a| 
+Crítico
+ a| 
+La memoria del sistema se ha consumido por completo.
+
+|===
++
+Para resolver esta falla, comuníquese con el soporte de NetApp para obtener ayuda.
+
+* *MetadataClusterFull*
++
+No hay suficiente espacio libre de almacenamiento de metadatos para admitir la pérdida de un solo nodo. Consulte el método API GetClusterFullThreshold para obtener detalles sobre los niveles de ocupación de los clústeres. Esta falla del clúster indica una de las siguientes condiciones:
+
++
+** Stage3Low (Advertencia): Se superó el umbral definido por el usuario. Ajuste la configuración del clúster lleno o añada más nodos.
+** Stage4Critical (error): No hay espacio suficiente para recuperar el sistema de un fallo de 1 nodo. No se permite la creación de volúmenes, snapshots y clones.
+** Stage5CompletelyConsumed (crítico)1; no se permiten escrituras ni nuevas conexiones iSCSI. Se mantendrán las conexiones iSCSI actuales. Las escrituras fallarán hasta que se añada más capacidad al clúster. Purgue o elimine datos o añada más nodos. Para resolver esta falla, purgue o elimine volúmenes o añada otro nodo de almacenamiento al clúster de almacenamiento.
+
+
+* *MtuCheckFailure*
++
+Un dispositivo de red no tiene configurado el tamaño de MTU correcto.
+
++
+Para resolver esta falla, asegúrese de que todas las interfaces de red y puertos del switch tengan configuradas tramas gigantes (MTU de hasta 9000 bytes de tamaño).
+
+* *NetworkConfig*
++
+Esta falla del clúster indica una de las siguientes condiciones:
+
++
+** No hay una interfaz esperada.
+** Hay una interfaz duplicada.
+** Una interfaz configurada está inactiva.
+** Se requiere reiniciar la red. Comuníquese con el soporte de NetApp para obtener ayuda.
+
+
+* *NoAvailableVirtualNetworkIPAddresses*
++
+No hay direcciones de red virtual disponibles en el bloque de direcciones IP.
+
++
+** VirtualNetworkID # TAG(###) no tiene direcciones IP de almacenamiento disponibles. No es posible agregar nodos adicionales al clúster. Para resolver esta falla, añada más direcciones IP al bloque de direcciones de red virtual.
+
+
+* *NodeHardwarFault (falla de interfaz de red <name> o el cable está desconectado)*
++
+Una interfaz de red está desconectada o el cable está desenchufado.
+
++
+Para resolver esta falla, compruebe la conectividad de red de los nodos.
+
+* *NodeHardwarfault (el estado de capacidad de cifrado de la unidad coincide con el estado de capacidad de cifrado del nodo para la unidad en la ranura <node slot> <drive slot>)*
++
+Una unidad no coincide con las funcionalidades de cifrado del nodo de almacenamiento en el que se instala.
+
+* *NodeHardwareFault (error de tamaño de unidad <drive type> <actual size> para la unidad en la ranura <node slot> <drive slot> para este tipo de nodo - <expected size> esperado)*
++
+Un nodo de almacenamiento contiene una unidad que tiene un tamaño incorrecto para este nodo.
+
+* *NodeHardwareFault (unidad no compatible detectada en la ranura <node slot> <drive slot>; las estadísticas de la unidad y la información de estado no estarán disponibles)*
++
+Un nodo de almacenamiento contiene una unidad que no es compatible.
+
+* *NodeHardwareFault (la unidad de la ranura <node slot> <drive slot> debe utilizar la versión de firmware <expected version>, pero utiliza la versión no compatible <actual version>)*
++
+Un nodo de almacenamiento contiene una unidad que ejecuta una versión de firmware no compatible.
+
+* * NodeMaintenanceMode*
++
+Se ha colocado un nodo en modo de mantenimiento. Este fallo utiliza las siguientes gravedades en función de la urgencia:
+
++
+|===
+
+
+| Gravedad | Descripción 
+
+
+ a| 
+Advertencia
+ a| 
+Indica que el nodo aún está en modo de mantenimiento.
+
+
+
+ a| 
+Error
+ a| 
+Indica que el modo de mantenimiento no se ha desactivado, lo más probable es que se deba a stabys activos o con errores.
+
+|===
++
+Para resolver esta falla, deshabilite el modo de mantenimiento una vez que finalice el mantenimiento. Si el fallo del nivel de error persiste, comuníquese con el soporte de NetApp para obtener ayuda.
+
+* *NodeOffline*
++
+El software Element no puede comunicarse con el nodo especificado. Compruebe la conectividad de red.
+
+* *NotUsingLACPBondMode*
++
+El modo de enlace LACP no está configurado.
+
++
+Para resolver esta falla, use el enlace LACP cuando se implementan nodos de almacenamiento; es posible que los clientes experimenten problemas de rendimiento si LACP no está habilitado y configurado correctamente.
+
+* *NtpServerUnalcanzable*
++
+El clúster de almacenamiento no puede comunicarse con los servidores NTP especificados.
+
++
+Para resolver esta falla, compruebe la configuración del servidor NTP, de la red y del firewall.
+
+* *NtpTimeNotInSync*
++
+La diferencia entre el tiempo del clúster de almacenamiento y el tiempo del servidor NTP es demasiado amplia. El clúster de almacenamiento no puede corregir esta diferencia automáticamente.
+
++
+Para resolver esta falla, use los servidores NTP internos a la red en lugar de los que vienen predeterminados en la instalación. Si usa los servidores NTP internos y el problema persiste, comuníquese con el soporte de NetApp para obtener ayuda.
+
+* *NvramDeviceStatus*
++
+Un dispositivo NVRAM presenta un error, está fallando o ya falló. Este fallo tiene las siguientes gravedades:
+
++
+|===
+
+
+| Gravedad | Descripción 
+
+
+ a| 
+Advertencia
+ a| 
+El hardware ha detectado una advertencia. Esta condición puede ser transitoria, como una advertencia de temperatura.
+
+** NvmLifetimeerror
+** NvmLifetimeStatus
+** EnergySourceLifetimeStatus
+** EnergySourceTemperatureStatus
+** WarningThresholdExceeded
+
+
+
+
+ a| 
+Error
+ a| 
+El hardware ha detectado un error o estado crítico. El maestro de clústeres intenta quitar la unidad de segmentos de la operación (esto genera un evento de eliminación de la unidad). Si no hay servicios de segmentos secundarios disponibles, no se eliminará la unidad. Errores devueltos además de los errores de nivel de advertencia:
+
+** El punto de montaje del dispositivo NVRAM no existe.
+** La partición del dispositivo NVRAM no existe.
+** Existe una partición del dispositivo NVRAM, pero no está montada.
+
+
+
+
+ a| 
+Crítico
+ a| 
+El hardware ha detectado un error o estado crítico. El maestro de clústeres intenta quitar la unidad de segmentos de la operación (esto genera un evento de eliminación de la unidad). Si no hay servicios de segmentos secundarios disponibles, no se eliminará la unidad.
+
+** Persistente perdido
+** ArmStatusSaveNArmed
+** CsaveStatuserror
+
+
+|===
++
+Sustituya cualquier hardware con fallos en el nodo. Si esto no se resuelve el problema, comuníquese con el soporte de NetApp para obtener ayuda.
+
+* *PowerSupplyError*
++
+Esta falla del clúster indica una de las siguientes condiciones:
+
++
+** No hay un suministro de alimentación.
+** Se produjo un error de suministro de alimentación.
+** La entrada de un suministro de alimentación es nula o está fuera de rango. Para resolver esta falla, compruebe que se suministra alimentación redundante a todos los nodos. Comuníquese con el soporte de NetApp para obtener ayuda.
+
+
+* *AprovisionadoSpaceTooFull*
++
+La capacidad general aprovisionada del clúster está demasiado llena.
+
++
+Para resolver esta falla, añada más espacio aprovisionado, o elimine y purgue los volúmenes.
+
+* *RemoteRepAsyncDelayExceeded*
++
+Se superó la demora de replicación asíncrona configurada. Compruebe la conectividad de red entre clústeres.
+
+* *RemoteRepClusterFull*
++
+Los volúmenes pusieron en pausa la replicación remota porque el clúster de almacenamiento de destino está demasiado lleno.
+
++
+Para resolver esta falla, libere un poco de espacio en el clúster de almacenamiento de destino.
+
+* *RemoteRepSnapshotClusterFull*
++
+Los volúmenes pusieron en pausa la replicación remota de copias de Snapshot porque el clúster de almacenamiento de destino está demasiado lleno.
+
++
+Para resolver esta falla, libere un poco de espacio en el clúster de almacenamiento de destino.
+
+* *RemoteRepSnapshotsExceedLimit*
++
+Los volúmenes pusieron en pausa la replicación remota de copias de Snapshot porque el volumen del clúster de almacenamiento de destino superó su límite de copias de Snapshot.
+
++
+Para resolver esta falla, aumente el límite de snapshots en el clúster de almacenamiento de destino.
+
+* * Error de Acción de Ugenera*
++
+Ocurrió un error en la ejecución de una o más actividades programadas.
+
++
+La falla se borra si la actividad programada se vuelve a ejecutar, esta vez, correctamente, si la actividad programada se elimina o si la actividad se pone en pausa y luego se reanuda.
+
+* *SensorReadingFailed*
++
+Un sensor no pudo comunicarse con la controladora de gestión de la placa base (BMC).
+
++
+Comuníquese con el soporte de NetApp para obtener ayuda.
+
+* *ServiceNotRunning*
++
+Un servicio requerido no está en ejecución.
+
++
+Comuníquese con el soporte de NetApp para obtener ayuda.
+
+* *SliceServiceTooFull*
++
+Un servicio de segmentos tiene asignada muy poca capacidad aprovisionada.
+
++
+Para resolver esta falla, añada más capacidad aprovisionada.
+
+* *SliceServiceUnhealthy*
++
+El sistema detectó que un servicio de segmentos está en estado incorrecto y lo decomisiona automáticamente.
+
++
+** Gravedad = Advertencia: No se realiza ninguna acción. Este período de aviso caducará en 6 minutos.
+** Gravedad = error: El sistema decomisiona automáticamente los datos y vuelve a replicar los datos en otras unidades en buen estado. Compruebe si existen problemas de conectividad de red y errores de hardware. Si se han producido errores en componentes de hardware específicos, habrá otros errores. El fallo se borrará cuando se pueda acceder al servicio de cortes o cuando se haya retirado el servicio.
+
+
+* *SshEnabled*
++
+El servicio SSH está habilitado en uno o más nodos del clúster de almacenamiento.
+
++
+Para resolver esta falla, deshabilite el servicio SSH en los nodos correspondientes o comuníquese con el soporte de NetApp para obtener ayuda.
+
+* *SslCertificateExpiración*
++
+El certificado SSL asociado con este nodo está cerca de su vencimiento o ha caducado. Este fallo utiliza las siguientes gravedades en función de la urgencia:
+
++
+|===
+
+
+| Gravedad | Descripción 
+
+
+ a| 
+Advertencia
+ a| 
+El certificado caduca dentro de los 30 días.
+
+
+
+ a| 
+Error
+ a| 
+El certificado caduca dentro de los 7 días.
+
+
+
+ a| 
+Crítico
+ a| 
+El certificado caduca en un plazo de 3 días o ya ha caducado.
+
+|===
++
+Para resolver esta falla, reemplace el certificado SSL por uno nuevo. Si es necesario, comuníquese con el soporte de NetApp para obtener ayuda.
+
+* *StrandedCapacity*
++
+Un solo nodo representa más de la mitad de la capacidad de un clúster de almacenamiento.
+
++
+Para mantener la redundancia de datos, el sistema reduce la capacidad del nodo más grande de manera que parte de su capacidad de bloque se quede sin utilizar (no se utiliza).
+
++
+Para resolver esta falla, añada más unidades a los nodos de almacenamiento existentes o añada nodos de almacenamiento al clúster.
+
+* *Sensor de temperatura*
++
+Un sensor de temperatura informa de temperaturas más altas que las normales. Esta falla puede activarse en conjunto con fallas de tipo powerSupplyError o fanSensor.
+
++
+Para resolver esta falla, compruebe que el flujo de aire no esté obstruido cerca del clúster de almacenamiento. Si es necesario, comuníquese con el soporte de NetApp para obtener ayuda.
+
+* *actualización*
++
+Hay una actualización en curso desde hace más de 24 horas.
+
++
+Para resolver esta falla, reanude la actualización o comuníquese con el soporte de NetApp para obtener ayuda.
+
+* *UnresponveService*
++
+Un servicio ha dejado de responder.
+
++
+Comuníquese con el soporte de NetApp para obtener ayuda.
+
+* *VirtualNetworkConfig*
++
+Esta falla del clúster indica una de las siguientes condiciones:
+
++
+** No hay una interfaz presente.
+** La interfaz tiene un espacio de nombres incorrecto.
+** Hay una máscara de red incorrecta.
+** Hay una dirección IP incorrecta.
+** Una interfaz no está en funcionamiento.
+** Hay una interfaz superflua en un nodo. Comuníquese con el soporte de NetApp para obtener ayuda.
+
+
+* *VolumesDegraded*
++
+Los volúmenes secundarios aún se están replicando y sincronizando. El mensaje se borra al finalizar la sincronización.
+
+* *VolumesOffline*
++
+Uno o más volúmenes del clúster de almacenamiento están fuera de línea. El fallo *volumeDegraded* también estará presente.
+
++
+Comuníquese con el soporte de NetApp para obtener ayuda.
+
+

@@ -1,0 +1,88 @@
+---
+permalink: storage/reference_data_manage_volumes_volume_details.html 
+sidebar: sidebar 
+keywords: volume, size of volume 
+summary: En la página Volumes de la pestaña Management, se proporciona información sobre los volúmenes activos, como el nombre, la cuenta, los grupos de acceso asociados con el volumen y el tamaño del volumen. 
+---
+= Detalles del volumen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En la página Volumes de la pestaña Management, se proporciona información sobre los volúmenes activos, como el nombre, la cuenta, los grupos de acceso asociados con el volumen y el tamaño del volumen.
+
+* *ID*
++
+El ID que genera el sistema para el volumen.
+
+* *Nombre*
++
+El nombre que se le dio al volumen cuando se creó.
+
+* *Cuenta*
++
+El nombre de la cuenta asignada al volumen.
+
+* *Grupos de acceso*
++
+El nombre del grupo o los grupos de acceso de volúmenes a los que pertenece el volumen.
+
+* *Acceso*
++
+El tipo de acceso asignado al volumen cuando se creó. Los posibles valores son los siguientes:
+
++
+** Read/Write: Se aceptan todas las lecturas y las escrituras.
+** Read Only: Se permite toda la actividad de lectura, pero no la de escritura.
+** Locked: Solo se permite el acceso de administrador.
+** ReplicationTarget: Se designa como un volumen de destino en una pareja de volúmenes replicada.
+
+
+* *Utilizado*
++
+El porcentaje de espacio usado en el volumen.
+
+* *Tamaño*
++
+El tamaño total (en GB) del volumen.
+
+* *Instantáneas*
++
+El número de copias de Snapshot que se crean para el volumen.
+
+* *Política de QoS*
++
+El nombre de la política de calidad de servicio que ha definido el usuario y el enlace a ella.
+
+* *Min IOPS*
++
+El número mínimo de IOPS garantizado para el volumen.
+
+* *Max IOPS*
++
+El número máximo de IOPS permitido para el volumen.
+
+* *Burst IOPS*
++
+El número máximo de IOPS permitido durante un breve período para el volumen. El valor predeterminado es de 15 15,000.
+
+* *Atributos*
++
+Atributos que se asignaron al volumen como pareja de claves/valor mediante un método API.
+
+* *512e*
++
+Indica si 512e está habilitado en un volumen. Los posibles valores son los siguientes:
+
++
+** Sí
+** No
+
+
+* *Creado el*
++
+La fecha y la hora en la que se creó el volumen.
+
+

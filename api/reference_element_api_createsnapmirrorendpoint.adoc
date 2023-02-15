@@ -1,0 +1,88 @@
+---
+permalink: api/reference_element_api_createsnapmirrorendpoint.html 
+sidebar: sidebar 
+keywords: SnapMirror,endpoints,endpoint,creating,create,CreateSnapMirrorEndpoint 
+summary: La interfaz de usuario web de Element utiliza el método CreateSnapMirrorEndpoint para crear una relación con un extremo de SnapMirror remoto. 
+---
+= CreateSnapMirrorEndpoint
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La interfaz de usuario web de Element utiliza el `CreateSnapMirrorEndpoint` Método para crear una relación con un extremo de SnapMirror remoto.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+Gestión de IP
+ a| 
+La dirección IP de gestión del extremo de SnapMirror remoto.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+nombre de usuario
+ a| 
+El nombre de usuario de gestión para el sistema ONTAP.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+contraseña
+ a| 
+La contraseña de gestión para el sistema ONTAP.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+
+
+== Valores devueltos
+
+Este método tiene los siguientes valores devueltos:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+SnapMirrorEndpoint
+ a| 
+El extremo de SnapMirror recién creado.
+ a| 
+xref:reference_element_api_snapmirrorendpoint.adoc[SnapMirrorEndpoint]
+
+|===
+
+
+== Nuevo desde la versión
+
+10.0

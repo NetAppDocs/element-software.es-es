@@ -1,0 +1,67 @@
+---
+permalink: storage/concept_troubleshoot_basic_mdss_drive_troubleshooting.html 
+sidebar: sidebar 
+keywords: mdss drives, troubleshoot, multi-drive slice service 
+summary: 'Puede recuperar unidades de metadatos \(o de segmentos\) si vuelven a añadirlas al clúster en el caso de que se produzca un error en una o ambas unidades de metadatos. Puede llevar a cabo la operación de recuperación en la interfaz de usuario de NetApp Element si la función MDSS ya está habilitada en el nodo.' 
+---
+= Solución de problemas básica de unidades MDSS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede recuperar las unidades de metadatos (o de segmentos) si se vuelven a añadir al clúster en el caso de que se produzca un error en una o en ambas unidades de metadatos. Puede llevar a cabo la operación de recuperación en la interfaz de usuario de NetApp Element si la función MDSS ya está habilitada en el nodo.
+
+Si se produce un error en una de las unidades de metadatos de un nodo o en las dos, el servicio de segmentos se cerrará y se realizarán backups de los datos de ambas unidades en distintas unidades del nodo.
+
+En los siguientes escenarios se describen posibles escenarios de fallos y se ofrecen recomendaciones básicas para corregir el problema:
+
+
+
+== Error en la unidad de segmentos del sistema
+
+* En este caso, la ranura 2 se verifica y vuelve a un estado available.
+* La unidad de segmentos del sistema se debe volver a rellenar antes de que el servicio de segmentos vuelva a conectarse.
+* Debe sustituir la unidad de segmentos del sistema cuando esta esté disponible, añada la unidad y la unidad de la ranura 2 a la vez.
+
+
+
+NOTE: No es posible añadir la unidad de la ranura 2 por sí misma como una unidad de metadatos. Debe volver a añadir al nodo ambas unidades a la vez.
+
+
+
+== Error en la ranura 2
+
+* En este escenario, la unidad de segmentos del sistema se verifica y vuelve a un estado available.
+* Debe reemplazar la ranura 2 con una unidad de repuesto y, cuando la ranura 2 esté disponible, añada la unidad de segmentos del sistema y la unidad de la ranura 2 al mismo tiempo.
+
+
+
+
+== Se produce un error en la unidad de segmentos del sistema y en la ranura 2
+
+* Debe reemplazar la unidad de segmentos del sistema y la ranura 2 con una unidad de repuesto. Cuando las dos unidades estén disponibles, añada la unidad de segmentos del sistema y la unidad de la ranura 2 al mismo tiempo.
+
+
+
+
+== Orden de las operaciones
+
+* Reemplace la unidad de hardware en la que se haya producido el error con una unidad de repuesto (reemplace ambas unidades en caso de que las dos tengan errores).
+* Vuelva a añadir las unidades al clúster cuando se hayan rellenado de nuevo y estén en el estado available.
+
+
+
+
+== Verificar operaciones
+
+* Verifique que las unidades de la ranura 0 (o internas) y la ranura 2 se hayan identificado como unidades de metadatos en la lista de unidades activas.
+* Compruebe que el equilibrado de todos los segmentos se ha completado (no hay más mensajes del tipo moving slices en el registro de eventos durante al menos 30 minutos).
+
+
+
+
+== Si quiere más información
+
+xref:task_troubleshoot_add_mdss_drives.adoc[Añada unidades MDSS]

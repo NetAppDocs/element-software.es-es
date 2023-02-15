@@ -1,0 +1,77 @@
+---
+permalink: storage/reference_per_node_cluster_settings_details.html 
+sidebar: sidebar 
+keywords: nodes, changing cluster settings, per-node UI 
+summary: Puede verificar la configuración del clúster para un nodo de almacenamiento después de la configuración del clúster y modificar el nombre de host del nodo. 
+---
+= Detalles de la configuración de clúster de la interfaz de usuario por nodo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede verificar la configuración del clúster para un nodo de almacenamiento después de la configuración del clúster y modificar el nombre de host del nodo.
+
+En la siguiente lista se describe la configuración del clúster para un nodo de almacenamiento que se indica en la página *Configuración de clúster* de la interfaz de usuario por nodo (https://<node[] IP>:442/hcc/node/cluster-settings).
+
+
+NOTE: Si ejecuta un clúster SDS empresarial de SolidFire, la mayoría de la configuración de red en la interfaz de usuario por nodo no se puede modificar después de la implementación del nodo.
+
+* *Rol*
++
+El rol que tiene el nodo en el clúster. Los posibles valores son los siguientes:
+
++
+** Storage: Nodo de almacenamiento o Fibre Channel.
+** Management: Se trata de un nodo de gestión.
+
+
+* *Nombre de host*
++
+El nombre del nodo.
+
+* *Cluster*
++
+El nombre del clúster.
+
+* *Composición de grupo*
++
+El estado del nodo. Los posibles valores son los siguientes:
+
++
+** Available: El nodo no tienen ningún nombre de clúster asociado y aún no forma parte de un clúster.
+** Pending: Se ha configurado el nodo y se puede añadir a un clúster designado. No es necesario autenticarse para acceder al nodo.
+** PendingActive: El sistema está instalando el software compatible en el nodo. Cuando finalice, el nodo se moverá al estado Active.
+** Active: El nodo participa en un clúster. Es necesario autenticarse para modificar el nodo.
+
+
+* *Versión*
++
+La versión del software Element que se ejecuta en el nodo.
+
+* *Ensemble*
++
+Los nodos que forman parte del conjunto de base de datos.
+
+* *ID de nodo*
++
+El ID asignado cuando se añade un nodo al clúster.
+
+* *Interfaz de clúster*
++
+La interfaz de red que se utiliza para la comunicación del clúster.
+
+* *Interfaz de administración*
++
+La interfaz de red de gestión. De forma predeterminada es Bond1G, pero también puede usar Bond10G.
+
+* *Interfaz de almacenamiento*
++
+La interfaz de red de almacenamiento que usa Bond10G.
+
+* *Capacidad de cifrado*
++
+Indica si el nodo admite el cifrado de unidad o no.
+
+

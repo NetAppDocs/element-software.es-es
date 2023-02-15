@@ -1,0 +1,158 @@
+---
+permalink: api/reference_element_api_resetnode.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puede utilizar el método ResetNode para restablecer un nodo a la configuración de fábrica. Todos los datos, paquetes \(actualizaciones de software, etc.\), configuraciones y archivos de registro se eliminan del nodo cuando se llama a este método. Sin embargo, la configuración de red del nodo se conserva durante esta operación. Los nodos que participan en un clúster no se pueden restablecer a la configuración de fábrica.' 
+---
+= ResetNode
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `ResetNode` método para restablecer un nodo a la configuración de fábrica. Cuando llama a este método, se eliminan todos los datos, paquetes (actualizaciones de software, etc.), configuraciones y archivos de registro del nodo. Sin embargo, la configuración de red del nodo se conserva durante esta operación. Los nodos que participan en un clúster no se pueden restablecer a la configuración de fábrica.
+
+
+NOTE: El SDS empresarial de SolidFire no admite este método. Si utiliza este método en un sistema SolidFire eSDS, el método devolverá un error.
+
+
+
+== Parámetros
+
+La API ResetNode sólo se puede utilizar en los nodos en estado "disponible". No se puede usar en los nodos que están "activos" en un clúster ni en el estado "Pending".
+
+PRECAUCIÓN:
+
+Este método borra todos los datos de clientes que están en el nodo.
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+cree
+ a| 
+Se utiliza para especificar la dirección URL de una imagen de software de elemento remoto a la que se restablecerá el nodo.
+ a| 
+URL
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+fuerza
+ a| 
+Establezca esta opción en true para restablecer el nodo.
+ a| 
+booleano
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+opciones
+ a| 
+Se utiliza para introducir especificaciones para ejecutar las operaciones de restablecimiento. El soporte de NetApp puede proporcionar detalles si es necesario.
+ a| 
+Objeto JSON
+ a| 
+Ninguno
+ a| 
+No
+
+|===
+
+
+== Valores devueltos
+
+Este método no tiene valores devueltos.
+
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "ResetNode",
+   "params": {
+      "build" : "file:///sf/rtfi/image/filesystem.squashfs",
+      "force" : true
+              },
+   "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id": null,
+  "result": {
+    "rtfiInfo": {
+      "build": "file:///sf/rtfi/image/filesystem.squashfs",
+      "generation": "9",
+      "options": {
+        "edebug": "",
+        "sf_auto": "0",
+        "sf_bond_mode": "ActivePassive",
+        "sf_check_hardware": "0",
+        "sf_disable_otpw": "0",
+        "sf_fa_host": "",
+        "sf_hostname": "SF-FA18",
+        "sf_inplace": "1",
+        "sf_inplace_die_action": "kexec",
+        "sf_inplace_safe": "0",
+        "sf_keep_cluster_config": "0",
+        "sf_keep_data": "0",
+        "sf_keep_hostname": "0",
+        "sf_keep_network_config": "0",
+        "sf_keep_paths": "\"/var/log/hardware.xml\"",
+        "sf_max_archives": "5",
+        "sf_nvram_size": "",
+        "sf_oldroot": "",
+        "sf_postinst_erase_root_drive": "0",
+        "sf_root_drive": "",
+        "sf_rtfi_cleanup_state": "",
+        "sf_secure_erase": "1",
+        "sf_secure_erase_retries": "5",
+        "sf_slice_size": "",
+        "sf_ssh_key": "1",
+        "sf_ssh_root": "1",
+        "sf_start_rtfi": "1",
+        "sf_status_httpserver": "1",
+        "sf_status_httpserver_stop_delay": "5m",
+        "sf_status_inject_failure": "",
+        "sf_status_json": "0",
+        "sf_support_host": "sfsupport.solidfire.com",
+        "sf_test_hardware": "0",
+        "sf_upgrade": "0",
+        "sf_upgrade_firmware": "0",
+        "sf_upload_logs_url": ""
+     },
+      "statusUrlAll": "http://192.168.130.20/status/all.json",
+      "statusUrlCurrent": "http://192.168.130.20/status/current.json"
+    }
+  }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

@@ -1,0 +1,116 @@
+---
+permalink: api/reference_element_api_listsyncjobs.html 
+sidebar: sidebar 
+keywords: sync,synchronization,job,jobs,list,get,listing,getting,listsyncjobs 
+summary: Puede usar el método ListSyncJobs para obtener información acerca de los trabajos de sincronización que se ejecutan en un clúster de almacenamiento de Element. Este método muestra información acerca de los trabajos de sincronización remota, de clonado y de segmentos. 
+---
+= ListSyncJobs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `ListSyncJobs` Método para obtener información sobre los trabajos de sincronización que se ejecutan en un clúster de almacenamiento de Element. Este método muestra información acerca de los trabajos de sincronización remota, de clonado y de segmentos.
+
+
+
+== Parámetros
+
+Este método no tiene parámetros de entrada.
+
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+SyncJobs
+ a| 
+Lista de objetos que describen los procesos de sincronización que se están ejecutando en el sistema.
+ a| 
+xref:reference_element_api_syncjob.adoc[SyncJob] cabina
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "ListSyncJobs",
+   "params": { },
+   "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+    "id":1,
+    "result":{
+      "syncJobs":[
+        {
+           "bytesPerSecond":275314.8834458956,
+           "currentBytes":178257920,
+           "dstServiceID":36,
+           "elapsedTime":289.4568382049871,
+           "percentComplete":8.900523560209423,
+           "remainingTime":2962.675921065957,
+           "sliceID":5,
+           "srcServiceID":16,
+           "stage":"whole",
+           "totalBytes":200278016remote0,
+           "type":"slice"
+       },
+       {
+           "bytesPerSecond":305461.3198607744,
+           "cloneID":1,
+           "currentBytes":81788928,
+           "dstServiceID":16,
+           "dstVolumeID":6,
+           "elapsedTime":291.7847648200743,
+           "nodeID":1,
+           "percentComplete":8.167539267015707,
+           "remainingTime":3280.708270981153,
+           "sliceID":6,
+           "srcServiceID":16,
+           "srcVolumeID":5,
+           "stage":"whole",
+           "totalBytes":1001390080,
+           "type":"clone"
+        },
+        {
+           "blocksPerSecond":0,
+           "branchType": "snapshot",
+           "dstServiceID":8,
+           "dstVolumeID":2,
+           "elapsedTime":0,
+           "percentComplete":0,
+           "remainingTime":0,
+           "sliceID":2,
+           "stage":"metadata",
+           "type":"remote"
+       }
+     ]
+   }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

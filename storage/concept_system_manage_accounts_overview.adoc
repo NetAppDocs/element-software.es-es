@@ -1,0 +1,26 @@
+---
+permalink: storage/concept_system_manage_accounts_overview.html 
+sidebar: sidebar 
+keywords: element, chap, cluster, accounts, administrator 
+summary: En los sistemas de almacenamiento de SolidFire, los inquilinos pueden utilizar las cuentas para permitir que los clientes se conecten a volúmenes en un clúster. También se pueden gestionar cuentas de administrador de clúster para un sistema de almacenamiento SolidFire. 
+---
+= Gestionar cuentas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En los sistemas de almacenamiento de SolidFire, los inquilinos pueden utilizar las cuentas para permitir que los clientes se conecten a volúmenes en un clúster. Cuando crea un volumen, este se asigna a una cuenta específica. También se pueden gestionar cuentas de administrador de clúster para un sistema de almacenamiento SolidFire.
+
+* link:task_data_manage_accounts_work_with_accounts_task.html["Trabaje con cuentas que utilicen CHAP"]
+* link:concept_system_manage_manage_cluster_administrator_users.html["Gestione cuentas de usuario administrador del clúster"]
+
+
+
+
+== Si quiere más información
+
+* https://www.netapp.com/data-storage/solidfire/documentation["Página SolidFire y Element Resources"^]
+* https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
+

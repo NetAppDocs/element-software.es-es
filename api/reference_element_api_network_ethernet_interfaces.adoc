@@ -1,0 +1,195 @@
+---
+permalink: api/reference_element_api_network_ethernet_interfaces.html 
+sidebar: sidebar 
+keywords: object,objects,network 
+summary: 'El objeto network \(interfaces Ethernet\) contiene información de configuración para interfaces Ethernet individuales. Puede utilizar los métodos getconfig y GetNetworkConfig para obtener esta información para un nodo de almacenamiento.' 
+---
+= Red (interfaces Ethernet)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El objeto network (interfaces Ethernet) contiene información de configuración para las interfaces Ethernet individuales. Puede utilizar el `GetConfig` y.. `GetNetworkConfig` métodos para obtener esta información para un nodo de almacenamiento.
+
+
+
+== Miembros de objeto
+
+Este objeto contiene los siguientes miembros:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+bond-master
+ a| 
+Especifica qué interfaz de unión rígida esta interfaz física se ha Unido como esclavo de enlace.
+ a| 
+cadena
+
+
+
+ a| 
+familia
+ a| 
+Familia de direcciones que la interfaz está configurada para utilizar. Actualmente se admite "inet" para IPv4.
+ a| 
+cadena
+
+
+
+ a| 
+Dirección MAC
+ a| 
+La dirección MAC real asignada a la interfaz y observada por la red.
+ a| 
+cadena
+
+
+
+ a| 
+MacAddressPermanente
+ a| 
+Dirección MAC inmutable asignada por el fabricante a la interfaz.
+ a| 
+cadena
+
+
+
+ a| 
+método
+ a| 
+El método que se utiliza para configurar la interfaz. Los posibles valores son los siguientes:
+
+* Loopback: Se utiliza para definir la interfaz de bucle invertido de IPv4.
+* Manual: Se utiliza para definir interfaces que no se configuran automáticamente.
+* dhcp: Se puede utilizar para obtener una dirección IP a través de DHCP.
+* Static: Se utiliza para definir interfaces Ethernet con direcciones IPv4 asignadas de forma estática.
+
+ a| 
+cadena
+
+
+
+ a| 
+estado
+ a| 
+El estado de la interfaz. Los posibles valores son los siguientes:
+
+* Down: La interfaz está inactiva.
+* Activo: La interfaz está lista, pero no tiene enlace.
+* UpAndRunning: La interfaz está lista y se ha establecido un vínculo.
+
+ a| 
+cadena
+
+
+
+ a| 
+UpAndRunning
+ a| 
+Indica si la interfaz está lista y tiene un enlace.
+ a| 
+booleano
+
+|===
+
+
+== Modificación de miembros y estados de nodo
+
+Esta tabla indica si los parámetros del objeto se pueden modificar en cada estado de nodo posible.
+
+|===
+
+
+| Nombre del parámetro | Estado disponible | Estado pendiente | Estado activo 
+
+
+ a| 
+bond-master
+ a| 
+No
+ a| 
+No
+ a| 
+No
+
+
+
+ a| 
+familia
+ a| 
+No
+ a| 
+No
+ a| 
+No
+
+
+
+ a| 
+Dirección MAC
+ a| 
+Configurado por el sistema
+ a| 
+N.A.
+ a| 
+N.A.
+
+
+
+ a| 
+MacAddressPermanente
+ a| 
+Configurado por el sistema
+ a| 
+N.A.
+ a| 
+N.A.
+
+
+
+ a| 
+método
+ a| 
+No
+ a| 
+No
+ a| 
+No
+
+
+
+ a| 
+estado
+ a| 
+Sí
+ a| 
+Sí
+ a| 
+Sí
+
+
+
+ a| 
+UpAndRunning
+ a| 
+Configurado por el sistema
+ a| 
+N.A.
+ a| 
+N.A.
+
+|===
+
+
+== Obtenga más información
+
+* xref:reference_element_api_getconfig.adoc[Getconfig]
+* xref:reference_element_api_getnetworkconfig.adoc[GetNetworkConfig]
+

@@ -1,0 +1,78 @@
+---
+permalink: api/reference_element_api_removevolumepair.html 
+sidebar: sidebar 
+keywords: volume,pair,volumes,remove,removing,removevolumepair 
+summary: Se puede usar el método RemoveVolumePair para quitar el emparejamiento remoto entre dos volúmenes. Use este método en los volúmenes de origen y objetivo emparejados. Cuando se quita la información de emparejamiento de volúmenes, los datos ya no se replican en el volumen o desde él. 
+---
+= RemoveVolumePair
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `RemoveVolumePair` método para quitar el emparejamiento remoto entre dos volúmenes. Use este método en los volúmenes de origen y objetivo emparejados. Cuando se quita la información de emparejamiento de volúmenes, los datos ya no se replican en el volumen o desde él.
+
+
+
+== Parámetro
+
+Este método tiene el siguiente parámetro de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+ID de volumen
+ a| 
+El ID del volumen en el que se detiene el proceso de replicación.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+
+
+== Valor de retorno
+
+Este método no tiene ningún valor devuelto.
+
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "RemoveVolumePair",
+   "params": {
+      "volumeID": 5
+   "id" : 1
+   }
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+   "id": 1,
+   "result": {
+   }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

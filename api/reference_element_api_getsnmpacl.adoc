@@ -1,0 +1,90 @@
+---
+permalink: api/reference_element_api_getsnmpacl.html 
+sidebar: sidebar 
+keywords: snmp,acl,get,getting,getsnmpacl 
+summary: Puede utilizar el método GetSnmpACL para obtener los permisos de acceso SNMP actuales en los nodos del clúster. 
+---
+= GetSnmpACL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `GetSnmpACL` Método para obtener los permisos de acceso SNMP actuales en los nodos del clúster.
+
+
+
+== Parámetros
+
+Este método no tiene parámetros de entrada.
+
+
+
+== Valores devueltos
+
+Este método tiene los siguientes valores devueltos:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+redes
+ a| 
+Lista de redes y qué tipo de acceso tienen a los servidores SNMP que se ejecutan en los nodos del clúster. Este valor se presenta si SNMP v3 está deshabilitado.
+ a| 
+xref:reference_element_api_network_snmp.adoc[red] cabina
+
+
+
+ a| 
+UsmUsers
+ a| 
+Lista de usuarios y el tipo de acceso que tienen a los servidores SNMP que se ejecutan en los nodos del clúster. Este valor se presenta si SNMP v3 está habilitado.
+ a| 
+xref:reference_element_api_usmuser.adoc[UsumUsuario] cabina
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+"method": "GetSnmpACL",
+"params": {},
+"id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id" : 1,
+  "result" : {
+     "usmUsers"  : [
+       {
+          "name": "jdoe",
+          "access": "rouser",
+          "secLevel": "priv",
+          "password": "mypassword",
+          "passphrase": "mypassphrase",
+       }
+     ]
+   }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

@@ -1,0 +1,154 @@
+---
+permalink: api/reference_element_api_createinitiators.html 
+sidebar: sidebar 
+keywords: create,creating,initiator,CreateInitiators,WWPN,IQN,initiators 
+summary: 'Puede usar CreateInitiators para crear varios IQN de iniciadores nuevos o nombres de puerto WWPN \(WWPN\) y, de manera opcional, asignarles alias y atributos. Cuando se usa CreateInitiators para crear iniciadores nuevos, también es posible añadirlos a grupos de acceso de volúmenes.' 
+---
+= CreateInitiators
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar `CreateInitiators` Para crear varios IQN de iniciador nuevos o nombres de puerto WWPN y, de manera opcional, asignarles alias y atributos. Cuando utilice `CreateInitiators` para crear nuevos iniciadores, también puede añadirlos a grupos de acceso de volúmenes.
+
+Si la operación no puede crear uno de los iniciadores proporcionados en el parámetro, el método devuelve un error y no crea ningún iniciador (no es posible completar parcialmente).
+
+
+
+== Parámetro
+
+Este método tiene el siguiente parámetro de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+iniciadores
+ a| 
+Una lista de objetos que contienen características de cada iniciador nuevo. Objetos:
+
+* `alias`: (Opcional) el nombre descriptivo que se debe asignar a este iniciador. (cadena)
+* `attributes`: (Opcional) un conjunto de atributos JSON que se asignarán a este iniciador. (Objeto JSON)
+* `chapUsername`: (Opcional) el nombre de usuario CHAP único para este iniciador. Los valores predeterminados del nombre del iniciador (IQN) si no se especifican durante la creación y requiredChap son true. (cadena)
+* `initiatorSecret`: (Opcional) el secreto CHAP utilizado para autenticar el iniciador. Por defecto, es un secreto generado aleatoriamente si no se especifica durante la creación y requiredChap es true. (cadena)
+* `name`: (Obligatorio) el nombre del iniciador (IQN o WWPN) que se va a crear. (cadena)
+* `requireChap`: (Opcional) True si se requiere CHAP durante el inicio de sesión de este iniciador. (booleano)
+* `targetSecret`: (Opcional) el secreto CHAP utilizado para autenticar el destino (al utilizar la autenticación CHAP mutua). Por defecto, es un secreto generado aleatoriamente si no se especifica durante la creación y requiredChap es true. (cadena)
+* `virtualNetworkIDs`: (Opcional) la lista de identificadores de red virtual asociados con este iniciador. Si define una o más redes virtuales, este iniciador solo puede iniciar sesión en esas redes virtuales. Si no define ninguna red virtual, este iniciador puede iniciar sesión en todas las redes.
+* `volumeAccessGroupID`: (Opcional) el ID del grupo de acceso de volúmenes al que se agregará este iniciador recién creado. (entero)
+
+ a| 
+Cabina de objetos JSON
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+iniciadores
+ a| 
+Lista de objetos que describen los iniciadores recién creados.
+ a| 
+xref:reference_element_api_initiator.adoc[iniciador] cabina
+
+|===
+
+
+== Error
+
+Este método puede devolver el siguiente error:
+
+|===
+
+
+| Nombre | Descripción 
+
+
+ a| 
+XInitiatorExists
+ a| 
+Devuelto si el nombre del iniciador que ha elegido ya existe.
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+  "id": 3291,
+  "method": "CreateInitiators",
+  "params": {
+    "initiators": [
+      {
+        "name": "iqn.1993-08.org.debian:01:288170452",
+        "alias": "example1"
+      },
+      {
+        "name": "iqn.1993-08.org.debian:01:297817012",
+        "alias": "example2"
+      }
+    ]
+  }
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id": 3291,
+  "result": {
+    "initiators": [
+      {
+        "alias": "example1",
+        "attributes": {},
+        "initiatorID": 145,
+        "initiatorName": "iqn.1993-08.org.debian:01:288170452",
+        "volumeAccessGroups": []
+      },
+      {
+        "alias": "example2",
+        "attributes": {},
+        "initiatorID": 146,
+        "initiatorName": "iqn.1993-08.org.debian:01:297817012",
+        "volumeAccessGroups": []
+      }
+    ]
+  }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6
+
+
+
+== Obtenga más información
+
+xref:reference_element_api_listinitiators.adoc[ListInitiators]

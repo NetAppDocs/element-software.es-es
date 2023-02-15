@@ -1,0 +1,22 @@
+---
+permalink: storage/task_system_manage_fips_avoid_mixing_nodes_for_fips_drives.html 
+sidebar: sidebar 
+keywords: fips, security, federal information processing standards, 140-2, nodes, drives, ear 
+summary: Para prepararse para habilitar la función de unidades FIPS, debe evitar combinar nodos donde algunos sean compatibles con unidades FIPS y otros no lo sean. 
+---
+= Evite combinar nodos para unidades FIPS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para prepararse para habilitar la función de unidades FIPS, debe evitar combinar nodos donde algunos sean compatibles con unidades FIPS y otros no lo sean.
+
+Un clúster se considera compatible con unidades FIPS según las siguientes condiciones:
+
+* Todas las unidades están certificadas como unidades FIPS.
+* Todos los nodos son nodos de unidades FIPS.
+* El cifrado en reposo (EAR) está habilitado.
+* Se habilitó la función de unidades FIPS. Todas las unidades y los nodos deben ser compatibles con FIPS, y el cifrado en reposo debe habilitarse para habilitar la función de unidad FIPS.
+

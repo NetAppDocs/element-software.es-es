@@ -1,0 +1,132 @@
+---
+permalink: api/reference_element_api_createqospolicy.html 
+sidebar: sidebar 
+keywords: QoS,policy,policies,create,creating 
+summary: Puede utilizar el método CreateQoSPolicy para crear un objeto QoSPolicy que posteriormente puede aplicar a un volumen tras su creación o modificación. Una política de calidad de servicio tiene un ID único, un nombre y una configuración de calidad de servicio. 
+---
+= QoCreateSPolicy
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `CreateQoSPolicy` Método para crear un objeto QoSPolicy que posteriormente se puede aplicar a un volumen tras la creación o modificación. Una política de calidad de servicio tiene un ID único, un nombre y una configuración de calidad de servicio.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+nombre
+ a| 
+El nombre de la política QoS; por ejemplo, Gold, Platinum o Silver.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+calidad de servicio
+ a| 
+La configuración de la calidad de servicio que representa esta política.
+ a| 
+xref:reference_element_api_qos.adoc[Calidad de servicio]
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+QosPolicy
+ a| 
+El objeto QoSPolicy recién creado.
+ a| 
+xref:reference_element_api_qospolicy.adoc[QoSPolicy]
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+  "id": 68,
+  "method": "CreateQoSPolicy",
+  "params": {
+    "name": "bronze",
+    "qos": {
+      "minIOPS": 50,
+      "maxIOPS": 15000,
+      "burstIOPS": 15000
+    }
+  }
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id": 68,
+  "result": {
+    "qosPolicy": {
+      "name": "bronze",
+      "qos": {
+        "burstIOPS": 15000,
+        "burstTime": 60,
+        "curve": {
+          "4096": 100,
+          "8192": 160,
+          "16384": 270,
+          "32768": 500,
+          "65536": 1000,
+          "131072": 1950,
+          "262144": 3900,
+          "524288": 7600,
+          "1048576": 15000
+        },
+        "maxIOPS": 15000,
+        "minIOPS": 50
+      },
+      "qosPolicyID": 2,
+      "volumeIDs": []
+    }
+  }
+}
+----
+
+
+== Nuevo desde la versión
+
+10.0

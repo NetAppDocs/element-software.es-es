@@ -1,0 +1,235 @@
+---
+permalink: esds/reference_esds_use_maintenance_mode.html 
+sidebar: sidebar 
+keywords: element, solidfire esds, maintenance, maintenance mode 
+summary: Si necesita desconectar un nodo de almacenamiento para realizar tareas de mantenimiento, como actualizaciones de software o reparaciones de host, puede minimizar el impacto de I/o del resto del clúster de almacenamiento habilitando el modo de mantenimiento para ese nodo. 
+---
+= Use el modo de mantenimiento en clústeres eSDS de SolidFire
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si necesita desconectar un nodo de almacenamiento para realizar tareas de mantenimiento, como actualizaciones de software o reparaciones de host, puede minimizar el impacto de I/o del resto del clúster de almacenamiento habilitando el modo de mantenimiento para ese nodo.
+
+
+TIP: Si desea comprobar el estado actual del modo de mantenimiento en el nodo, utilice el enlace:./api/reference_element_api_listactivenodes.html[`ListActiveNodes`Método API. El objeto nodo incluye un `maintenanceMode` parámetro, que indica el estado actual del modo de mantenimiento en el nodo.
+
+
+NOTE: Asegúrese de realizar el mantenimiento en cuanto esté habilitado el modo de mantenimiento. No deje el nodo en modo de mantenimiento más de lo necesario.
+
+Puede realizar la transición de un nodo de almacenamiento al modo de mantenimiento solo si el estado del nodo es bueno (no tiene fallos de clúster de bloqueo) y el clúster de almacenamiento es tolerante a un único nodo de fallo. Después de habilitar el modo de mantenimiento para un nodo en buen estado y tolerante, el nodo no se realiza la transición de forma inmediata, sino que se supervisa hasta que se cumplen las siguientes condiciones:
+
+* Todos los volúmenes alojados en el nodo se han producido un fallo y el nodo ya no se aloja como el principal de ningún volumen.
+* Se asigna un nodo en espera temporal para cada volumen que se realiza el relevo de errores.
+
+
+Una vez que se cumplen estos criterios, el nodo pasa al modo de mantenimiento. Si no se cumplen estos criterios en un periodo de cinco minutos, el nodo no entrará en modo de mantenimiento.
+
+Cuando deshabilita el modo de mantenimiento para un nodo de almacenamiento, el nodo se supervisa hasta que se cumplen las siguientes condiciones:
+
+* Todos los datos se replican completamente en el nodo.
+* Se resuelven todos los fallos del clúster de bloqueo.
+* Todas las asignaciones temporales de nodos en espera de los volúmenes alojados en el nodo se han desactivado.
+
+
+Una vez que se cumplen estos criterios, el nodo pasa del modo de mantenimiento. Si no se cumplen estos criterios en una hora, no podrá realizar la transición desde el modo de mantenimiento.
+
+
+
+== Posibles situaciones al usar el modo de mantenimiento
+
+* Si un nodo está en modo de mantenimiento, pero todavía no se ha reiniciado y/o no ha tenido lugar un mantenimiento, o tenía lugar un mantenimiento y está en buen estado, pero no ha deshabilitado el modo de mantenimiento, y se cae otro nodo, el modo de mantenimiento del primer nodo se deshabilita automáticamente.
+* Si uno de sus nodos se encuentra en modo de mantenimiento y otro nodo se desactiva a la vez, se producirá una interrupción del servicio. Tiene que esperar hasta que el nodo que está en modo de mantenimiento vuelva a estar en línea.
+* Si coloca un nodo que forma parte de un conjunto en modo de mantenimiento durante un largo período de tiempo, el sistema lo quitará automáticamente del conjunto, si hay otros nodos disponibles para agregarse en su lugar.
+
+
+
+
+== Habilite el modo de mantenimiento
+
+Puede habilitar el modo de mantenimiento mediante `EnableMaintenanceMode` Método API. Este método tiene los siguientes parámetros de entrada:
+
+[cols="5*"]
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+`forceWithUnresolvedFaults`
+ a| 
+Fuerce el modo de mantenimiento para habilitar para este nodo incluso con fallos de clúster de bloqueo presentes.
+ a| 
+booleano
+ a| 
+Falso
+ a| 
+No
+
+
+
+ a| 
+`nodes`
+ a| 
+La lista de ID de nodo que se van a poner en modo de mantenimiento. Solo se admite un nodo cada vez.
+ a| 
+matriz en números enteros
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+`perMinutePrimarySwapLimit`
+ a| 
+El número de cortes principales que se van a intercambiar por minuto. Si no se especifica, todos los cortes primarios se intercambiarán a la vez.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+`timeout`
+ a| 
+Especifica cuánto tiempo debe permanecer activado el modo de mantenimiento antes de que se desactive automáticamente. Con formato de cadena de tiempo (por ejemplo, HH:mm:ss). Si no se especifica, el modo de mantenimiento permanecerá habilitado hasta que se deshabilite explícitamente.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+No
+
+|===
+Este método tiene los siguientes valores devueltos:
+
+[cols="3*"]
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+`asyncHandle`
+ a| 
+Puede utilizar el `GetAsyncResult` Método para recuperar esta página temporal y determinar cuándo se ha completado la transición del modo de mantenimiento.
+ a| 
+entero
+
+
+
+ a| 
+`currentMode`
+ a| 
+El estado actual del modo de mantenimiento del nodo. Los posibles valores son los siguientes:
+
+* Disabled: No se ha solicitado ningún mantenimiento.
+* FailedToRecover: El nodo no pudo recuperarse del modo de mantenimiento.
+* RecoveringFromMaintenance: El nodo se está recuperando del modo de mantenimiento.
+* PreparaciónForMaintenance: Se están llevando a cabo acciones para preparar un nodo para realizar tareas de mantenimiento.
+* ReadyForMaintenance: El nodo está listo para realizar tareas de mantenimiento.
+
+ a| 
+Modo de mantenimiento (cadena)
+
+
+
+ a| 
+`requestedMode`
+ a| 
+El estado del modo de mantenimiento solicitado del nodo. Los posibles valores son los siguientes:
+
+* Disabled: No se ha solicitado ningún mantenimiento.
+* FailedToRecover: El nodo no pudo recuperarse del modo de mantenimiento.
+* RecoveringFromMaintenance: El nodo se está recuperando del modo de mantenimiento.
+* PreparaciónForMaintenance: Se están llevando a cabo acciones para preparar un nodo para realizar tareas de mantenimiento.
+* ReadyForMaintenance: El nodo está listo para realizar tareas de mantenimiento.
+
+ a| 
+Modo de mantenimiento (cadena)
+
+|===
+
+
+== Deshabilite el modo de mantenimiento
+
+Puede deshabilitar el modo de mantenimiento con el `DisableMaintenanceMode` Método API. Este método tiene el siguiente parámetro de entrada:
+
+[cols="5*"]
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+`nodes`
+ a| 
+Lista de ID de nodos de almacenamiento que se van a quitar del modo de mantenimiento.
+ a| 
+matriz en números enteros
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+Este método tiene los siguientes valores devueltos:
+
+[cols="3*"]
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+`asyncHandle`
+ a| 
+Puede utilizar el `GetAsyncResult` Método para recuperar esta página temporal y determinar cuándo se ha completado la transición del modo de mantenimiento.
+ a| 
+entero
+
+
+
+ a| 
+`currentMode`
+ a| 
+El estado actual del modo de mantenimiento del nodo. Los posibles valores son los siguientes:
+
+* Disabled: No se ha solicitado ningún mantenimiento.
+* FailedToRecover: El nodo no pudo recuperarse del modo de mantenimiento.
+* Inesperado: Se encontró que el nodo estaba sin conexión, pero estaba en el modo deshabilitado.
+* RecoveringFromMaintenance: El nodo se está recuperando del modo de mantenimiento.
+* PreparaciónForMaintenance: Se están llevando a cabo acciones para preparar un nodo para realizar tareas de mantenimiento.
+* ReadyForMaintenance: El nodo está listo para realizar tareas de mantenimiento.
+
+ a| 
+Modo de mantenimiento (cadena)
+
+
+
+ a| 
+`requestedMode`
+ a| 
+El estado del modo de mantenimiento solicitado del nodo. Los posibles valores son los siguientes:
+
+* Disabled: No se ha solicitado ningún mantenimiento.
+* FailedToRecover: El nodo no pudo recuperarse del modo de mantenimiento.
+* Inesperado: Se encontró que el nodo estaba sin conexión, pero estaba en el modo deshabilitado.
+* RecoveringFromMaintenance: El nodo se está recuperando del modo de mantenimiento.
+* PreparaciónForMaintenance: Se están llevando a cabo acciones para preparar un nodo para realizar tareas de mantenimiento.
+* ReadyForMaintenance: El nodo está listo para realizar tareas de mantenimiento.
+
+ a| 
+Modo de mantenimiento (cadena)
+
+|===
+
+
+== Obtenga más información
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Página de recursos de SolidFire de NetApp"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentación para versiones anteriores de SolidFire de NetApp y los productos Element"^]
+

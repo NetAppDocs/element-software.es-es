@@ -1,0 +1,122 @@
+---
+permalink: api/reference_element_api_listqospolicies.html 
+sidebar: sidebar 
+keywords: qos,policy,policies,list,listing,listqospolicies 
+summary: Puede utilizar el método ListQoSPolicies para enumerar la configuración de todas las directivas QoS en el sistema. 
+---
+= ListQoSPolicies
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `ListQoSPolicies` Método para mostrar la configuración de todas las políticas de calidad de servicio del sistema.
+
+
+
+== Parámetros
+
+Este método no tiene parámetros de entrada.
+
+
+
+== Valores devueltos
+
+Este método tiene los siguientes valores devueltos:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+QosPolicies
+ a| 
+Una lista de detalles acerca de cada política de calidad de servicio.
+ a| 
+xref:reference_element_api_qospolicy.adoc[QoSPolicy] cabina
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+  "id": 231,
+  "method": "ListQoSPolicies",
+  "params": {}
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id": 231,
+  "result": {
+    "qosPolicies": [
+      {
+        "name": "silver",
+        "qos": {
+          "burstIOPS": 15000,
+          "burstTime": 60,
+          "curve": {
+            "4096": 100,
+            "8192": 160,
+            "16384": 270,
+            "32768": 500,
+            "65536": 1000,
+            "131072": 1950,
+            "262144": 3900,
+            "524288": 7600,
+            "1048576": 15000
+          },
+          "maxIOPS": 14000,
+          "minIOPS": 50
+        },
+        "qosPolicyID": 1,
+        "volumeIDs": [
+          1
+        ]
+      },
+      {
+        "name": "bronze",
+        "qos": {
+          "burstIOPS": 15000,
+          "burstTime": 60,
+          "curve": {
+            "4096": 100,
+            "8192": 160,
+            "16384": 270,
+            "32768": 500,
+            "65536": 1000,
+            "131072": 1950,
+            "262144": 3900,
+            "524288": 7600,
+            "1048576": 15000
+          },
+          "maxIOPS": 15000,
+          "minIOPS": 50
+        },
+        "qosPolicyID": 2,
+        "volumeIDs": [
+          2
+        ]
+      }
+    ]
+  }
+}
+----
+
+
+== Nuevo desde la versión
+
+10.0

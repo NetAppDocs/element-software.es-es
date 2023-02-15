@@ -1,0 +1,34 @@
+---
+permalink: storage/task_replication_plan_cluster_and_volume_pairing.html 
+sidebar: sidebar 
+keywords: cluster, volume pairing, plan for, real-time replication 
+summary: La replicación remota en tiempo real requiere emparejar dos clústeres de almacenamiento que ejecutan el software Element, emparejar volúmenes en cada clúster y validar la replicación. Una vez que se completa la replicación, se debe eliminar la relación de volumen. 
+---
+= Planifique el emparejamiento de clústeres y volúmenes para la replicación en tiempo real
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La replicación remota en tiempo real requiere emparejar dos clústeres de almacenamiento que ejecutan el software Element, emparejar volúmenes en cada clúster y validar la replicación. Una vez que se completa la replicación, se debe eliminar la relación de volumen.
+
+.Lo que necesitará
+* Debe tener privilegios de administrador del clúster en uno de los clústeres que se está emparejando, o en ambos.
+* Todas las direcciones IP de nodos en las redes de gestión y almacenamiento para los clústeres emparejados se deben enrutar entre sí.
+* La MTU de todos los nodos emparejados debe ser la misma y debe ser compatible entre clústeres de un extremo a otro.
+* Ambos clústeres de almacenamiento deben tener nombres de clúster únicos, MVIP, SVIP y todas las direcciones IP de los nodos.
+* La diferencia entre las versiones del software Element en los clústeres no debe ser superior a la versión principal. Si la diferencia es superior, se debe actualizar uno de los clústeres para ejecutar la replicación de datos.
+
+
+
+NOTE: NetApp no ha autorizado los dispositivos aceleradores WAN para usarlos al replicar datos. Estos dispositivos pueden interferir con la compresión y la deduplicación si se implementan entre dos clústeres que están replicando datos. Asegúrese de autorizar por completo los efectos de cualquier dispositivo acelerador WAN antes de implementarlo en un entorno de producción.
+
+
+
+== Obtenga más información
+
+* xref:task_replication_pair_clusters.adoc[Emparejar clústeres para la replicación]
+* xref:task_replication_pair_volumes.adoc[Emparejar volúmenes]
+* xref:task_replication_assign_replication_source_and_target_to_paired_volumes.adoc[Asigne un origen y un destino de replicación a los volúmenes emparejados]
+

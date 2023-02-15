@@ -1,0 +1,78 @@
+---
+permalink: storage/task_system_manage_cluster_enable_and_disable_encryption_for_a_cluster.html 
+sidebar: sidebar 
+keywords: enable, disable, encryption at rest, cluster, sed, hardware-based, encryption settings, software-based 
+summary: Con los clústeres de SolidFire, puede cifrar todos los datos almacenados en el clúster mediante el cifrado basado en software o hardware en reposo. 
+---
+= Habilite y deshabilite el cifrado en reposo para un clúster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Con los clústeres de SolidFire, puede cifrar todos los datos en reposo almacenados en unidades del clúster. Puede habilitar la protección en todo el clúster de unidades de autocifrado (SED) mediante cualquiera de los dos link:../concepts/concept_solidfire_concepts_security.html["cifrado basado en hardware o software en reposo"].
+
+Puede habilitar el cifrado de hardware en reposo mediante la interfaz de usuario o la API de Element. La habilitación de la función de cifrado de hardware en reposo no afecta al rendimiento o la eficiencia del clúster. Puede habilitar el cifrado de software en reposo únicamente mediante la API de Element.
+
+El cifrado basado en hardware en reposo no está habilitado de forma predeterminada durante la creación de clústeres, y se puede habilitar o deshabilitar desde la interfaz de usuario de Element.
+
+
+WARNING: En los clústeres de almacenamiento all-flash de SolidFire, el cifrado del software en reposo debe habilitarse durante la creación del clúster y no se puede deshabilitar una vez que se ha creado el clúster. Para los clústeres SDS empresarial de SolidFire, el cifrado de software en reposo está habilitado de forma predeterminada.
+
+.Lo que necesitará
+* Tiene privilegios de administrador de clúster para habilitar o modificar la configuración de cifrado.
+* Para el cifrado basado en hardware en reposo, se ha asegurado de que el clúster está en estado correcto antes de cambiar la configuración de cifrado.
+* Si va a deshabilitar el cifrado, debe haber dos nodos participando en un clúster para acceder a la clave para deshabilitar el cifrado en una unidad.
+
+
+
+
+== Comprobar el cifrado en estado de reposo
+
+Para ver el estado actual del cifrado en reposo y/o el cifrado de software en reposo en el clúster, use el link:../api/reference_element_api_getclusterinfo.html["GetClusterInfo"^] método. Puede utilizar el link:../api/reference_element_api_getsoftwareencryptionatrestinfo.html["GetSoftwareEncryptionAtRestInfo"^] método para obtener información que utiliza el clúster para cifrar datos en reposo.
+
+
+NOTE: La consola de interfaz de usuario del software Element en `https://<MVIP>/` actualmente, solo muestra el cifrado en estado de reposo para el cifrado basado en hardware.
+
+.Opciones
+* <<Habilite el cifrado basado en hardware en reposo>>
+* <<Habilite el cifrado basado en software en reposo>>
+* <<Deshabilite el cifrado basado en hardware en reposo>>
+
+
+
+
+== Habilite el cifrado basado en hardware en reposo
+
+
+NOTE: Para habilitar el cifrado en reposo mediante una configuración de gestión de claves externa, debe habilitar el cifrado en reposo a través de la link:../api/reference_element_api_enableencryptionatrest.html["API"]. Al habilitar el uso del botón existente de la interfaz de usuario de Element, se revierten al uso de claves generadas internamente.
+
+. En la interfaz de usuario de Element, seleccione *Cluster* > *Settings*.
+. Seleccione *Activar cifrado en reposo*.
+
+
+
+
+== Habilite el cifrado basado en software en reposo
+
+
+NOTE: El cifrado de software en reposo no se puede deshabilitar una vez que se habilita en el clúster.
+
+. Durante la creación del clúster, ejecute el link:../api/reference_element_api_createcluster.html["cree el método de clúster"] con `enableSoftwareEncryptionAtRest` establezca en `true`.
+
+
+
+
+== Deshabilite el cifrado basado en hardware en reposo
+
+. En la interfaz de usuario de Element, seleccione *Cluster* > *Settings*.
+. Seleccione *Desactivar cifrado en reposo*.
+
+
+[discrete]
+== Obtenga más información
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Página de recursos de SolidFire de NetApp"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentación para versiones anteriores de SolidFire de NetApp y los productos Element"^]
+

@@ -1,0 +1,24 @@
+---
+permalink: storage/task_troubleshoot_remove_mdss_drives.html 
+sidebar: sidebar 
+keywords: mdss, remove, multi-drive slice service 
+summary: 'Es posible quitar las unidades del servicio de segmentos de varias unidades \(MDSS\). Este procedimiento solo se aplica si el nodo tiene varias unidades de segmentos.' 
+---
+= Quite las unidades MDSS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible quitar las unidades del servicio de segmentos de varias unidades (MDSS). Este procedimiento solo se aplica si el nodo tiene varias unidades de segmentos.
+
+
+NOTE: Si se produce un error en la unidad de segmentos del sistema y en la unidad de ranura 2, el sistema cerrará los servicios de segmentos y quitará las unidades. Si no se produce ningún error y quita las unidades, tendrá que quitar ambas unidades a la vez.
+
+. Haga clic en *Cluster* > *Drives*.
+. En la ficha unidades *disponibles* , haga clic en la casilla de verificación correspondiente a las unidades de segmentos que se van a eliminar.
+. Haga clic en *acciones masivas*.
+. Haga clic en *Quitar*.
+. Confirme la acción.
+

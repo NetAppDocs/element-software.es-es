@@ -1,0 +1,26 @@
+---
+permalink: api/concept_element_api_snapshots_overview.html 
+sidebar: sidebar 
+keywords: snapshot,overview 
+summary: Una copia de Snapshot de volumen es una copia de un momento específico de un volumen. Las copias de Snapshot se pueden usar para revertir un volumen al estado que tenía en el momento de creación de las copias. 
+---
+= Información general de Snapshot
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Una copia de Snapshot de volumen es una copia de un momento específico de un volumen. Las copias de Snapshot se pueden usar para revertir un volumen al estado que tenía en el momento de creación de las copias.
+
+Puede agrupar copias de Snapshot de volumen para que los volúmenes relacionados puedan respaldarse o revertirse de forma coherente. Una snapshot de grupo captura una imagen puntual de todos los archivos de segmentos de volúmenes. A continuación, se puede usar la imagen para revertir un grupo de volúmenes a un estado de un momento específico y garantizar que todos los datos sean consistentes en todos los volúmenes del grupo.
+
+Se pueden programar snapshots de volúmenes para que se produzcan de forma autónoma en intervalos definidos. Puede definir intervalos por tiempo, días de la semana o días del mes. También puede utilizar copias Snapshot programadas para garantizar que se realice un backup de las copias Snapshot en un almacenamiento remoto con fines de archivado.
+
+
+
+== Obtenga más información
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Página de recursos de SolidFire de NetApp"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentación para versiones anteriores de SolidFire de NetApp y los productos Element"^]
+

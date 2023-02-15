@@ -1,0 +1,31 @@
+---
+permalink: api/concept_element_api_administrator_api_methods.html 
+sidebar: sidebar 
+keywords: API,administration,method,administrator 
+summary: Es posible usar métodos de API de administrador para crear, modificar, ver y quitar administradores de clústeres de almacenamiento, así como para asignar niveles de acceso y privilegios a los que tienen acceso a un clúster de almacenamiento. 
+---
+= Métodos API de administrador
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible usar métodos de API de administrador para crear, modificar, ver y quitar administradores de clústeres de almacenamiento, así como para asignar niveles de acceso y privilegios a los que tienen acceso a un clúster de almacenamiento.
+
+* xref:reference_element_api_addclusteradmin.adoc[AddClusterAdmin]
+* xref:reference_element_api_getcurrentclusteradmin.adoc[GetCurrentClusterAdmin]
+* xref:reference_element_api_getloginbanner.adoc[GetLoginBanner]
+* xref:reference_element_api_listclusteradmins.adoc[ListClusterAdmins]
+* xref:reference_element_api_modifyclusteradmin.adoc[ModifyClusterAdmin]
+* xref:reference_element_api_removeclusteradmin.adoc[RemoveClusterAdmin]
+* xref:reference_element_api_setloginbanner.adoc[SetLoginBanner]
+
+
+
+
+== Obtenga más información
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Página de recursos de SolidFire de NetApp"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentación para versiones anteriores de SolidFire de NetApp y los productos Element"^]
+

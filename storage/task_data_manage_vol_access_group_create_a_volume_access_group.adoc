@@ -1,0 +1,80 @@
+---
+permalink: storage/task_data_manage_vol_access_group_create_a_volume_access_group.html 
+sidebar: sidebar 
+keywords: volume access group, create, initiators 
+summary: Los grupos de acceso de volúmenes se pueden crear asignando iniciadores a una colección de volúmenes para garantizar el acceso seguro. A continuación, podrá otorgar acceso a los volúmenes del grupo con un secreto de iniciador CHAP de cuenta y un secreto de destino. 
+---
+= Cree un grupo de acceso de volúmenes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los grupos de acceso de volúmenes se pueden crear asignando iniciadores a una colección de volúmenes para garantizar el acceso seguro. A continuación, podrá otorgar acceso a los volúmenes del grupo con un secreto de iniciador CHAP de cuenta y un secreto de destino.
+
+Si utiliza CHAP basado en iniciador, puede añadir credenciales de CHAP para un único iniciador en un grupo de acceso de volúmenes, lo que proporciona más seguridad. Esto permite aplicar esta opción a los grupos de acceso de volúmenes que ya existen.
+
+.Pasos
+. Haga clic en *Administración* > *grupos de acceso*.
+. Haga clic en *Crear grupo de acceso*.
+. Escriba un nombre para el grupo de acceso de volúmenes en el campo *Nombre*.
+. Añada un iniciador al grupo de acceso de volúmenes de una de las siguientes maneras:
++
+[cols="25,75"]
+|===
+| Opción | Descripción 
+
+
+ a| 
+Se añade un iniciador de Fibre Channel
+ a| 
+.. En Add Initiators, seleccione un iniciador de Fibre Channel existente en la lista Unbound Fibre Channel Initiators.
+.. Haga clic en *Agregar iniciador FC*.
++
+
+NOTE: Puede crear un iniciador durante este paso si hace clic en el enlace *Crear iniciador*, escribe un nombre de iniciador y hace clic en *Crear*. El sistema añade automáticamente el iniciador a la lista Initiators después de crearlo.
+
+
+
+A continuación, se ofrece un ejemplo de formato:
+
+[listing]
+----
+5f:47:ac:c0:5c:74:d4:02
+----
+
+
+ a| 
+Adición de un iniciador de iSCSI
+ a| 
+En Add Initiators, seleccione un iniciador de existente en la lista Initiators. *Nota:* puede crear un iniciador durante este paso si hace clic en el enlace *Crear iniciador*, introduce un nombre de iniciador y haz clic en *Crear*. El sistema añade automáticamente el iniciador a la lista Initiators después de crearlo.
+
+A continuación, se ofrece un ejemplo de formato:
+
+[listing]
+----
+iqn.2010-01.com.solidfire:c2r9.fc0.2100000e1e09bb8b
+----
+
+TIP: Puede encontrar el IQN del iniciador para cada volumen seleccionando *Ver detalles* en el menú acciones del volumen en la lista *Gestión* > *volúmenes* > *activo*.
+
+Al modificar un iniciador, puede cambiar el atributo requiredCHAP a True, lo que permite configurar el secreto de iniciador de destino. Para obtener más información, consulte la información de API acerca del método API ModifyInitiator.
+
+link:../api/index.html["Gestione el almacenamiento con la API de Element"]
+
+|===
+. *Opcional:* Agregue más iniciadores según sea necesario.
+. En Agregar volúmenes, seleccione un volumen de la lista *volúmenes*.
++
+El volumen aparece en la lista *volúmenes adjuntos*.
+
+. *Opcional:* Agregue más volúmenes según sea necesario.
+. Haga clic en *Crear grupo de acceso*.
+
+
+
+
+== Obtenga más información
+
+xref:task_data_manage_vol_access_group_add_volumes.adoc[Añada volúmenes a un grupo de acceso]

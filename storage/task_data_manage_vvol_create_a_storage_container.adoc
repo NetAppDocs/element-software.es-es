@@ -1,0 +1,36 @@
+---
+permalink: storage/task_data_manage_vvol_create_a_storage_container.html 
+sidebar: sidebar 
+keywords: storage container, create 
+summary: Los contenedores de almacenamiento se pueden crear en la interfaz de usuario de Element y se pueden detectar en vCenter. Es necesario crear al menos un contenedor de almacenamiento para comenzar a aprovisionar máquinas virtuales respaldadas por VVol. 
+---
+= Cree un contenedor de almacenamiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los contenedores de almacenamiento se pueden crear en la interfaz de usuario de Element y se pueden detectar en vCenter. Es necesario crear al menos un contenedor de almacenamiento para comenzar a aprovisionar máquinas virtuales respaldadas por VVol.
+
+Debe habilitar la funcionalidad VVol en la interfaz de usuario de Element para el clúster.
+
+. Seleccione *VVols* > *contenedores de almacenamiento*.
+. Haga clic en el botón *Crear contenedores de almacenamiento*.
+. Introduzca la información del contenedor de almacenamiento en el cuadro de diálogo *Crear un contenedor de almacenamiento nuevo*:
++
+.. Escriba un nombre para el contenedor de almacenamiento.
+.. Configure el iniciador y los secretos de destino para CHAP.
++
+
+TIP: Deje los campos CHAP Settings vacíos para que los secretos se generen automáticamente.
+
+.. Haga clic en el botón *Crear contenedor de almacenamiento*.
+
+
+. Compruebe que el nuevo contenedor de almacenamiento aparece en la lista de la subpestaña *contenedores de almacenamiento*.
++
+
+NOTE: Dado que el ID de cuenta de NetApp Element se crea automáticamente y se asigna al contenedor de almacenamiento, no es necesario crear una cuenta de forma manual.
+
+

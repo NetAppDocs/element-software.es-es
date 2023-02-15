@@ -1,0 +1,75 @@
+---
+permalink: api/reference_element_api_networkinterfacestats.html 
+sidebar: sidebar 
+keywords: object,objects,stats,statistics,networkInterfacestats 
+summary: El objeto networkInterfaceStats contiene estadísticas de red e información sobre errores para las interfaces de red individuales de un nodo de almacenamiento. 
+---
+= NetworkInterfaceStats
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El objeto networkInterfaceStats contiene estadísticas de red, el número total de paquetes transmitidos y recibidos, e información sobre errores de interfaces de red individuales en un nodo de almacenamiento. Puede utilizar el `ListNetworkInterfaceStats` Método de API para enumerar esta información de las interfaces de red en un nodo de almacenamiento.
+
+
+
+== Miembros de objeto
+
+Este objeto contiene los siguientes miembros:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+| colisiones | El número de colisiones detectadas. | entero 
+
+
+| nombre | Nombre de la interfaz de red. | cadena 
+
+
+| RxBytes | La cantidad total de bytes recibidos. | entero 
+
+
+| RxCrcErrors | El número de paquetes recibidos con un error de CRC. | entero 
+
+
+| RxDropped | El número de paquetes recibidos que se descartaron. | entero 
+
+
+| RxErrors | El número de paquetes incorrectos o mal formados recibidos. | entero 
+
+
+| RxFifoErrors | El número de errores de desbordamiento de FIFO en los datos recibidos. | entero 
+
+
+| RxFrameErrors | El número de paquetes recibidos con errores de alineación de tramas. | entero 
+
+
+| RxLengthErrors | El número de paquetes recibidos con un error de longitud. | entero 
+
+
+| RxMissedErrors | El número de paquetes que ha perdido el receptor. | entero 
+
+
+| RxOverErrors | El número de errores de desbordamiento del búfer del anillo receptor para esta interfaz. | entero 
+
+
+| RxPackets | El número total de paquetes recibidos. | entero 
+
+
+| TxBytes | La cantidad total de bytes transmitidos. | entero 
+
+
+| CarritxerErrors | El número de errores de portador para el lado de transmisión. | entero 
+
+
+| TxErrors | El número de errores de transmisión de paquetes. | entero 
+
+
+| FiftxoErrors | El número de errores de desbordamiento de FIFO en el lado de transmisión. | entero 
+
+
+| Empaquetado txets | El número total de paquetes transmitidos. | entero 
+|===

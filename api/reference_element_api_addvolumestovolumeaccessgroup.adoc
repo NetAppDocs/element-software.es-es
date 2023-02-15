@@ -1,0 +1,126 @@
+---
+permalink: api/reference_element_api_addvolumestovolumeaccessgroup.html 
+sidebar: sidebar 
+keywords: volume,volumes,adding,add,access,group,addvolumestovolumeaccessgroup 
+summary: Puede utilizar el método AddVolumesToVolumeAccessGroup para añadir volúmenes a un grupo de acceso de volúmenes especificado. 
+---
+= AddVolumesToVolumeAccessGroup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `AddVolumesToVolumeAccessGroup` método para añadir volúmenes a un grupo de acceso de volúmenes especificado.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+volúmenes
+ a| 
+La lista de ID de volumen que se van a añadir al grupo de acceso de volúmenes.
+ a| 
+matriz en números enteros
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+VolumeAccessGroupID
+ a| 
+VolumeAccessGroupID del grupo de acceso de volúmenes al cual se añaden volúmenes.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+VolumeAccessGroup
+ a| 
+Un objeto que contiene información acerca del grupo de acceso de volúmenes recién modificado.
+ a| 
+xref:reference_element_api_volumeaccessgroup.adoc[VolumeAccessGroup]
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "AddVolumesToVolumeAccessGroup",
+   "params": {
+      "volumeAccessGroupID": 96,
+      "volumes": [1,2]
+   },
+   "id": 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "volumeAccessGroup": {
+      "attributes": {},
+      "deletedVolumes": [
+        346
+      ],
+      "initiatorIDs": [
+        116,
+        117
+      ],
+      "initiators": [
+        "iqn.1993-08.org.debian:01:181324777",
+        "iqn.1993-08.org.debian:01:181324888"
+      ],
+      "name": "northbanktest",
+      "volumeAccessGroupID": 96,
+      "volumes": [
+        1,
+        2
+      ]
+    }
+  }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

@@ -1,0 +1,19 @@
+---
+permalink: storage/task_replication_validate_the_cluster_pair_connection.html 
+sidebar: sidebar 
+keywords: cluster pair connection, validate 
+summary: Una vez que se ha completado el emparejamiento de clústeres, es posible que desee verificar la conexión de la pareja de clústeres para garantizar que la replicación se haya realizado correctamente. 
+---
+= Valide la conexión de la pareja de clústeres
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Una vez que se ha completado el emparejamiento de clústeres, es posible que desee verificar la conexión de la pareja de clústeres para garantizar que la replicación se haya realizado correctamente.
+
+. En el clúster local, seleccione *Data Protection* > *Cluster Pairs*.
+. En la ventana *Cluster Pairs*, compruebe que el par de clústeres esté conectado.
+. *Opcional:* vuelva al clúster local y a la ventana *Cluster Pairs* y compruebe que el par de clústeres esté conectado.
+

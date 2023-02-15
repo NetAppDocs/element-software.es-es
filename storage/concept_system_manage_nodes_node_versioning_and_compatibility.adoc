@@ -1,0 +1,32 @@
+---
+permalink: storage/concept_system_manage_nodes_node_versioning_and_compatibility.html 
+sidebar: sidebar 
+keywords: compatibility, node version, clusters, software version, compatible versions, major, minor, micro 
+summary: La compatibilidad del nodo se basa en la versión del software Element instalada en un nodo. Los clústeres de almacenamiento basados en software Element crean automáticamente la imagen de un nodo en la versión de software Element en el clúster cuando las versiones del nodo y el clúster no son compatibles. 
+---
+= Versiones y compatibilidad de nodos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La compatibilidad del nodo se basa en la versión del software Element instalada en un nodo. Los clústeres de almacenamiento basados en software Element crean automáticamente la imagen de un nodo en la versión de software Element en el clúster cuando las versiones del nodo y el clúster no son compatibles.
+
+En la siguiente lista, se describen los niveles de importancia de las versiones del software Element que conforman el número de versión del software Element:
+
+* *Mayor*
++
+El primer número designa una versión de software. No es posible añadir un nodo con un número de componente principal a un clúster que contenga nodos de otro número de revisión principal ni se puede crear un clúster con nodos de versiones principales mixtas.
+
+* *Menor*
++
+El segundo número designa mejoras o funciones de software más pequeñas que se aplican en funciones de software existentes que se han incorporado a una versión principal. Este componente aumenta dentro de un componente de versión principal para indicar que esta versión incremental no es compatible con otras versiones incrementales del software Element con un componente secundario distinto. Por ejemplo, 11.0 no es compatible con 11.1 y 11.1 no es compatible con 11.2.
+
+* *Micro*
++
+El tercer número designa una revisión compatible (versión incremental) con la versión de software Element que representan los componentes principal.secundario. Por ejemplo, 11.0.1 es compatible con 11.0.2 y 11.0 es compatible con 11.0.3.
+
+
+
+Los números de versión principal y secundario deben coincidir para ser compatibles. Los números micro no tienen que coincidir para ser compatibles.

@@ -1,0 +1,31 @@
+---
+permalink: setup/task_setup_cluster_with_fibre_channel_nodes.html 
+sidebar: sidebar 
+keywords: element, solidfire, fibre channel, setup, node, cluster 
+summary: Comprender la secuencia de configurar un clúster con nodos de almacenamiento. 
+---
+= Configurar un clúster con nodos Fibre Channel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible configurar un clúster con nodos Fibre Channel y gestionarlo mediante el software Element después de instalar y cablear los nodos en una unidad de rack y encender los. De esta forma, puede instalar y configurar componentes adicionales en el sistema de almacenamiento.
+
+.Pasos
+. link:../setup/concept_setup_fc_configure_a_fibre_channel_node.html["Configure un nodo Fibre Channel"]
+. link:../setup/task_setup_fc_create_a_new_cluster_with_fibre_channel_nodes.html["Cree un nuevo clúster con nodos Fibre Channel"]
+. link:../setup/task_setup_fc_add_fibre_channel_nodes_to_a_cluster.html["Añada nodos Fibre Channel a un clúster"]
+. link:../setup/concept_setup_fc_set_up_zones_for_fibre_channel_nodes.html["Configure zonas para los nodos Fibre Channel"]
+. link:../setup/task_setup_create_a_volume_access_group_for_fibre_channel_clients.html["Cree un grupo de acceso de volúmenes para clientes Fibre Channel"]
+. link:../setup/task_setup_determine_which_solidfire_components_to_install.html["Determine qué componentes de SolidFire instalar"]
+. link:../setup/task_setup_gh_redirect_set_up_a_management_node.html["Configure un nodo de gestión"]
+
+
+
+
+== Obtenga más información
+
+* https://www.netapp.com/data-storage/solidfire/documentation["Página SolidFire y Element Resources"^]
+

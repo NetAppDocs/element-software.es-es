@@ -1,0 +1,130 @@
+---
+permalink: api/reference_element_api_listdrivehardware.html 
+sidebar: sidebar 
+keywords: drive,hardware,list,listing,listdrivehardware,drives 
+summary: Es posible usar el método ListDrivehardware para mostrar todas las unidades conectadas a un nodo. Cuando se usa en nodos individuales, este método muestra información de hardware de la unidad. Cuando se utiliza en la MVIP del nodo maestro de clúster, este método muestra información de todas las unidades de todos los nodos. 
+---
+= ListDrivehardware
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `ListDriveHardware` método para enumerar todas las unidades conectadas a un nodo. Cuando se usa en nodos individuales, este método muestra información de hardware de la unidad. Cuando se utiliza en la MVIP del nodo maestro de clúster, este método muestra información de todas las unidades de todos los nodos.
+
+
+
+== Parámetros
+
+
+NOTE: "SecuritySupported": La línea verdadera de la respuesta del método no implica que las unidades sean capaces de cifrar; solo que se pueda consultar el estado de seguridad. Si tiene un tipo de nodo con un número de modelo que finaliza en "-NE", se producirá un error en los comandos para habilitar las funciones de seguridad en estas unidades.
+
+Este método tiene el siguiente parámetro:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+fuerza
+ a| 
+Establezca esta opción en true para ejecutar este método en todos los nodos.
+ a| 
+booleano
+ a| 
+Ninguno
+ a| 
+No
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+Drivehardware
+ a| 
+Se devolvió información de hardware de la unidad para el nodo.
+ a| 
+Cabina de objetos JSON
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+"method": "ListDriveHardware",
+"params": {},
+"id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "driveHardware": [
+      {
+        "canonicalName": "sda",
+        "connected": true,
+        "dev": 2048,
+        "devPath": "/dev/slot0",
+        "driveEncryptionCapability": "fips",
+        "driveType": "Slice",
+        "lifeRemainingPercent": 98,
+        "lifetimeReadBytes": 0,
+        "lifetimeWriteBytes": 14012129542144,
+        "name": "scsi-SATA_SAMSUNG_MZ7GE24S1M9NWAG501251",
+        "path": "/dev/sda",
+        "pathLink": "/dev/slot0",
+        "powerOnHours": 15489,
+        "product": "SAMSUNG MZ7GE240HMGR-00003",
+        "reallocatedSectors": 0,
+        "reserveCapacityPercent": 100,
+        "scsiCompatId": "scsi-SATA_SAMSUNG_MZ7GE24S1M9NWAG501251",
+        "scsiState": "Running",
+        "securityAtMaximum": false,
+        "securityEnabled": true,
+        "securityFrozen": false,
+        "securityLocked": false,
+        "securitySupported": true,
+        "serial": "S1M9NWAG501251",
+        "size": 240057409536,
+        "slot": 0,
+        "uncorrectableErrors": 0,
+        "uuid": "789aa05d-e49b-ff4f-f821-f60eed8e43bd",
+        "vendor": "Samsung",
+        "version": "EXT1303Q"
+      }
+   ]
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6
+
+
+
+== Obtenga más información
+
+xref:reference_element_api_enableencryptionatrest.adoc[EnableEncryptionAtest]

@@ -1,0 +1,227 @@
+---
+permalink: api/reference_element_api_clustercapacity.html 
+sidebar: sidebar 
+keywords: objects,object,clusterCapacity 
+summary: El objeto clusterCapacity contiene mediciones de capacidad de alto nivel para el clúster. Es posible obtener información sobre la capacidad de clúster con el método API GetClusterCapacity. Las mediciones de espacio en los miembros del objeto se calculan en bytes. 
+---
+= ClusterCapacity
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El objeto clusterCapacity contiene mediciones de capacidad de alto nivel para el clúster. Es posible obtener información sobre la capacidad de clúster con el método API GetClusterCapacity. Las mediciones de espacio en los miembros del objeto se calculan en bytes.
+
+
+
+== Miembros de objeto
+
+Este objeto contiene los siguientes miembros:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+ActiveBlockSpace
+ a| 
+La cantidad de espacio en las unidades de bloques. Esto incluye información adicional, como entradas de metadatos y espacio que se puede limpiar.
+ a| 
+entero
+
+
+
+ a| 
+ActiveSessions
+ a| 
+El número de sesiones iSCSI activas que se comunican con el clúster.
+ a| 
+entero
+
+
+
+ a| 
+AverageIOPS
+ a| 
+El IOPS promedio para el clúster desde la hora universal coordinada (UTC) de la medianoche.
+ a| 
+entero
+
+
+
+ a| 
+ClusterRecentIOSize
+ a| 
+El tamaño promedio de IOPS para todos los volúmenes del clúster.
+ a| 
+entero
+
+
+
+ a| 
+IOPS actuales
+ a| 
+El IOPS promedio para todos los volúmenes del clúster durante los últimos 5 segundos.
+ a| 
+entero
+
+
+
+ a| 
+IOPS
+ a| 
+La funcionalidad máxima estimada de IOPS del clúster actual.
+ a| 
+entero
+
+
+
+ a| 
+MaxOverProvisionableSpace
+ a| 
+La cantidad máxima de espacio de aprovisionamiento. Se trata de un valor calculado. No puede crear volúmenes nuevos si el espacio actual aprovisionado más el tamaño del nuevo volumen supera este número. El valor se calcula de la siguiente forma: `maxOverProvisionableSpace = maxProvisionedSpace * maxMetadataOverProvisionFactor`
+ a| 
+entero
+
+
+
+ a| 
+MaxProvisionedSpace
+ a| 
+La cantidad total de espacio de aprovisionamiento si todos los volúmenes están llenos del 100% (sin metadatos de thin provisioning).
+ a| 
+entero
+
+
+
+ a| 
+MaxUsedMetadataSpace
+ a| 
+La cantidad de bytes en las unidades de volúmenes que se usan para almacenar metadatos.
+ a| 
+entero
+
+
+
+ a| 
+MaxUsedSpace
+ a| 
+La cantidad total de espacio en todas las unidades de bloques activas.
+ a| 
+entero
+
+
+
+ a| 
+No ZeroBlock
+ a| 
+El número total de bloques de 4 KiB con datos después de haber completado la última operación de recopilación de basura.
+ a| 
+entero
+
+
+
+ a| 
+PeakActiveSessions
+ a| 
+El número máximo de conexiones iSCSI desde la medianoche UTC.
+ a| 
+entero
+
+
+
+ a| 
+PeakIOPS
+ a| 
+El valor más alto para IOPS actuales desde la medianoche de UTC.
+ a| 
+entero
+
+
+
+ a| 
+AprovisionadoSpace
+ a| 
+La cantidad total de espacio aprovisionado en todos los volúmenes del clúster.
+ a| 
+entero
+
+
+
+ a| 
+fecha/hora
+ a| 
+La fecha y la hora, en formato UTC+0, que se tomó esta muestra de capacidad de clúster.
+ a| 
+Cadena ISO 8601
+
+
+
+ a| 
+TotalOps
+ a| 
+La cantidad total de operaciones de I/o realizadas a lo largo de la vida útil del clúster.
+ a| 
+entero
+
+
+
+ a| 
+Juniorescandados
+ a| 
+La cantidad total de bloques almacenados en las unidades de bloques. El valor incluye bloques replicados.
+ a| 
+entero
+
+
+
+ a| 
+UniqueBlocksUsedSpace
+ a| 
+La cantidad total de datos que los uniqueBlocks tienen en las unidades de bloques. Consulte el método GetClusterCapacity para obtener información sobre la relación de este número con el valor unidoBlocks.
+ a| 
+entero
+
+
+
+ a| 
+UsedMetadataSpace
+ a| 
+La cantidad total de bytes en las unidades de volúmenes que se usan para almacenar metadatos.
+ a| 
+entero
+
+
+
+ a| 
+UsedMetadataSpaceInSnapshots
+ a| 
+La cantidad de bytes en unidades de volúmenes que se usan para almacenar datos únicos en las Snapshot. Este número calcula la cantidad de espacio de metadatos que se recuperaría si se eliminaran todas las instantáneas del sistema.
+ a| 
+entero
+
+
+
+ a| 
+UsedSpace
+ a| 
+La cantidad total de espacio usado por todas las unidades de bloques del sistema.
+ a| 
+entero
+
+
+
+ a| 
+Cierres de ceros
+ a| 
+El número total de bloques vacíos de 4 KiB sin datos después de haber completado la última ronda de recopilación de basura.
+ a| 
+entero
+
+|===
+
+
+== Obtenga más información
+
+xref:reference_element_api_getclustercapacity.adoc[GetClusterCapacity]

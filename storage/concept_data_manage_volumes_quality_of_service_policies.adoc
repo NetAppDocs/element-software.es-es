@@ -1,0 +1,83 @@
+---
+permalink: storage/concept_data_manage_volumes_quality_of_service_policies.html 
+sidebar: sidebar 
+keywords: qos policies, manage, volumes, create, edit, delete 
+summary: 'Una política de calidad de servicio \(QoS\) permite crear y guardar un ajuste de calidad de servicio estandarizado que se puede aplicar a muchos volúmenes. Las políticas de calidad de servicio se pueden crear, editar y eliminar desde la página QoS Policies de la pestaña Management.' 
+---
+= Gestione políticas de calidad de servicio
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Una política de calidad de servicio (QoS) permite crear y guardar un ajuste de calidad de servicio estandarizado que se puede aplicar a muchos volúmenes. Las políticas de calidad de servicio se pueden crear, editar y eliminar desde la página QoS Policies de la pestaña Management.
+
+
+NOTE: Si utiliza políticas de calidad de servicio, no use la calidad de servicio personalizada en un volumen. La calidad de servicio personalizada anulará y ajustará los valores de las políticas de calidad de servicio de los volúmenes.
+
+https://www.youtube.com/embed/q9VCBRDtrnI?rel=0["Vídeo de NetApp: Políticas de calidad de servicio de SolidFire"]
+
+Consulte link:../concepts/concept_data_manage_volumes_solidfire_quality_of_service.html["Rendimiento y calidad del servicio"].
+
+* Cree una política de calidad de servicio
+* Edite una política de calidad de servicio
+* Elimine una política de calidad de servicio
+
+
+
+
+== Cree una política de calidad de servicio
+
+Puede crear políticas de calidad de servicio y aplicarlas cuando se creen los volúmenes.
+
+. Seleccione *Administración* > *políticas QoS*.
+. Haga clic en *Crear directiva QoS*.
+. Introduzca el *Nombre de la directiva*.
+. Introduzca los valores**Min IOPS**, *Max IOPS* y *Burst IOPS*.
+. Haga clic en *Crear directiva QoS*.
+
+
+
+
+== Edite una política de calidad de servicio
+
+Una política de calidad de servicio existente se puede cambiar, o bien se pueden editar los valores asociados con esta. Los cambios que se aplican en una política de calidad de servicio afectan a todos los volúmenes asociados con la política.
+
+. Seleccione *Administración* > *políticas QoS*.
+. Haga clic en el icono Actions de la política de calidad de servicio que quiera editar.
+. En el menú que se abre, seleccione**Edit**.
+. En el cuadro de diálogo *Editar directiva de QoS*, modifique las siguientes propiedades según sea necesario:
++
+** Nombre de la directiva
+** IOPS mín
+** Tasa máx. De IOPS
+** IOPS de ráfaga
+
+
+. Haga clic en *Guardar cambios*.
+
+
+
+
+== Elimine una política de calidad de servicio
+
+Puede eliminar una política de calidad de servicio si ya no es necesaria. Cuando se elimina una política de calidad de servicio, todos los volúmenes asociados con la política se conservan en la configuración de QoS, pero se desasocian de una política.
+
+
+NOTE: Si desea desasociar en lugar de ello un volumen de una política de calidad de servicio, puede cambiar la configuración de calidad de servicio de ese volumen a personalizado.
+
+. Seleccione *Administración* > *políticas QoS*.
+. Haga clic en el icono Actions de la política de calidad de servicio que quiera eliminar.
+. En el menú que se abre, seleccione *Eliminar*.
+. Confirme la acción.
+
+
+
+
+== Obtenga más información
+
+* link:task_data_manage_volumes_remove_a_qos_policy_association_of_a_volume.html["Quite la asociación de políticas de calidad de servicio de un volumen"]
+* https://www.netapp.com/data-storage/solidfire/documentation["Página SolidFire y Element Resources"^]
+* https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
+

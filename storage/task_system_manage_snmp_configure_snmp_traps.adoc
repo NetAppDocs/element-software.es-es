@@ -1,0 +1,29 @@
+---
+permalink: storage/task_system_manage_snmp_configure_snmp_traps.html 
+sidebar: sidebar 
+keywords: snmp, config, traps, notifications, monitor, health, enable, disable 
+summary: Los administradores del sistema pueden utilizar capturas SNMP, también denominadas notificaciones, para supervisar el estado del clúster de SolidFire. 
+---
+= Configurar las capturas SNMP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los administradores del sistema pueden utilizar capturas SNMP, también denominadas notificaciones, para supervisar el estado del clúster de SolidFire.
+
+Cuando se habilitan los retos SNMP, el clúster de SolidFire genera retos asociados con las entradas del registro de eventos y las alertas del sistema. Para recibir notificaciones SNMP, tiene que elegir los retos que se tendrían que generar e identificar los destinatarios de la información del reto. De forma predeterminada, no se genera ningún reto.
+
+. Haga clic en *Cluster* > *SNMP*.
+. Seleccione uno o varios tipos de solapamientos en la sección *Configuración de solapamientos SNMP* que el sistema debe generar:
++
+** Retos de fallo de clúster
+** Retos de fallo resueltos del clúster
+** Retos de evento de clúster
+
+
+. En la sección *destinatarios de la captura*, introduzca la información de host, puerto y cadena de comunidad para un destinatario.
+. *Opcional*: Para agregar otro destinatario de captura, haga clic en *Agregar un destinatario de captura* e introduzca la información de host, puerto y cadena de comunidad.
+. Haga clic en *Guardar cambios*.
+

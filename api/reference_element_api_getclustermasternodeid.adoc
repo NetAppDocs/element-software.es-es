@@ -1,0 +1,73 @@
+---
+permalink: api/reference_element_api_getclustermasternodeid.html 
+sidebar: sidebar 
+keywords: cluster,master,node,ID,get,getting,getclustermasternodeID 
+summary: 'Puede usar el método GetClusterMasterNodeID para recuperar el ID del nodo que ejecuta tareas de administración en todo el clúster y contiene la dirección IP virtual de almacenamiento \(SVIP\) y la dirección IP virtual de gestión \(MVIP\).' 
+---
+= GetClusterMasterNodeID
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `GetClusterMasterNodeID` Método para recuperar el ID del nodo que realiza tareas de administración en todo el clúster y contiene la dirección IP virtual de almacenamiento (SVIP) y la dirección IP virtual de gestión (MVIP).
+
+
+
+== Parámetros
+
+Este método no tiene parámetros de entrada.
+
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+NodeID
+ a| 
+ID del nodo maestro.
+ a| 
+entero
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+  "method": "GetClusterMasterNodeID",
+  "params": {},
+  "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id" : 1
+  "result": {
+    "nodeID": 1
+   }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

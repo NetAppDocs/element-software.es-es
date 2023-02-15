@@ -1,0 +1,83 @@
+---
+sidebar: sidebar 
+permalink: upgrade/concept_element_upgrade_overview.html 
+summary: Si desea mantener actualizado el sistema de almacenamiento de SolidFire Element después de la implementación, actualice todos los componentes de almacenamiento de NetApp. 
+keywords: netapp, solidfire upgrade, vcp upgrade, element upgrade, vsphere upgrade 
+---
+= Información general sobre la secuencia de actualización
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+:keywords: solidfire, cloud, onprem, documentation, help
+
+
+[role="lead"]
+Es posible mantener actualizado el sistema de almacenamiento de SolidFire Element después de la puesta en marcha. Para ello, se deben actualizar secuencialmente todos los componentes de almacenamiento de NetApp.
+
+Estos componentes incluyen servicios de gestión, NetApp Hybrid Cloud Control, software Element, nodo de gestión y (según la instalación) el plugin Element para vCenter Server.
+
+[NOTE]
+====
+* A partir de Element 12.7, los nodos de almacenamiento SF2405 y SF9608 y los nodos FC FC0025 y SF-FCN-01 no son compatibles. Si se intenta actualizar uno de estos nodos a Element 12.7, se muestra un error que indica que este nodo no es compatible con Element 12.7.
+* A partir de Element 12.5, NetApp HealthTools ya no es compatible con las actualizaciones del software Element. Si ejecuta Element 11.0 o 11.1, primero debe hacerlo https://docs.netapp.com/us-en/element-software-123/upgrade/task_hcc_upgrade_element_software.html#upgrade-element-software-at-connected-sites-using-healthtools["Actualice a Element 12.3 mediante HealthTools"^] Después actualice a Element 12.5 o posterior mediante NetApp Hybrid Cloud Control.
+
+
+====
+La <<sys_upgrade,secuencia de actualización del sistema>> Contenido describe las tareas necesarias para completar una actualización del sistema de almacenamiento all-flash de SolidFire. Lo ideal es que estos procedimientos se realicen como parte de la secuencia de actualización más grande y no de forma aislada. Si es necesaria una actualización o actualización basada en componentes, consulte los requisitos previos del procedimiento para garantizar que se aborden complejidades adicionales.
+
+La link:task_sf_upgrade_all_vsphere.html["Secuencia de actualización de vSphere"] Incluir el contenido del plugin de Element para vCenter Server describe los pasos adicionales previos y posteriores a la actualización necesarios para volver a instalar el plugin de Element para vCenter Server.
+
+.Lo que necesitará
+* Ejecuta el nodo de gestión 11.3 o una versión posterior. Las versiones más recientes del nodo de gestión tienen una arquitectura modular que proporciona servicios individuales.
++
+
+TIP: Para comprobar la versión, inicie sesión en el nodo de gestión y vea el número de versión de Element en el banner de inicio de sesión. Si no tiene 11.3, consulte link:task_hcc_upgrade_management_node.html["Actualice su nodo de gestión"].
+
+* Ha actualizado sus servicios de administración a al menos la versión 2.1.326.
++
+Las actualizaciones con Hybrid Cloud Control de NetApp no están disponibles en versiones anteriores del paquete de servicio.
+
+* Debe asegurarse de que la hora del sistema en todos los nodos esté sincronizada y que NTP esté correctamente configurado para el clúster de almacenamiento y los nodos. Cada nodo debe configurarse con un servidor de nombres DNS en la interfaz de usuario web por nodo (`https://[IP address]:442`) sin fallos de clúster sin resolver relacionados con la desviación de tiempo.
+* Ha programado suficiente tiempo para el link:task_hcc_upgrade_element_software.html#element-upgrade-time["Software Element"] y.. link:task_hcc_upgrade_storage_firmware.html#storage-firmware-upgrade["firmware de almacenamiento"] actualizaciones. Cuando se actualiza al software Element 12.5 o una versión posterior, el tiempo del proceso de actualización varía según la versión del software Element y las actualizaciones del firmware.
+
+
+
+
+== [[sys_upgrade]]secuencia de actualización del sistema
+
+Es posible usar la siguiente secuencia para actualizar el sistema de almacenamiento all-flash SolidFire de NetApp para Element 12.5 o una versión posterior.
+
+.Pasos
+. link:task_hcc_update_management_services.html["Actualice los servicios de gestión de Hybrid Cloud Control"].
++
+
+IMPORTANT: Si actualiza los servicios de gestión a la versión 2.16 o posterior y ejecuta un nodo de gestión de 11.3 a 11.8, deberá aumentar la RAM de la máquina virtual del nodo de gestión antes de actualizar los servicios de gestión.
+
++
+
+IMPORTANT: Debe actualizar al paquete de servicios de gestión más reciente antes de actualizar el software Element.
+
+. link:task_hcc_upgrade_element_prechecks.html["Ejecute comprobaciones del estado del almacenamiento de Element antes de actualizar el almacenamiento"].
+. link:task_hcc_upgrade_element_software.html["Actualice el software Element y el firmware de almacenamiento"].
+. link:task_hcc_upgrade_storage_firmware.html["(Opcional) Actualice solo el firmware de almacenamiento de Element"].
++
+
+NOTE: Puede realizar esta tarea cuando haya una nueva actualización del firmware de almacenamiento disponible fuera de una versión principal.
+
+. link:task_hcc_upgrade_management_node.html["(Opcional) Actualice el nodo de gestión"].
++
+
+NOTE: Ya no se necesita actualizar el sistema operativo del nodo de gestión para actualizar el software Element en el clúster de almacenamiento. Si el nodo de gestión es la versión 11.3 o posterior, solo tiene que actualizar los servicios de gestión a la versión más reciente para realizar actualizaciones de Element mediante el control de cloud híbrido de NetApp. Siga el procedimiento de actualización del nodo de gestión para su escenario si desea actualizar el sistema operativo del nodo de gestión por otros motivos, como la corrección de seguridad.
+
+. link:task_vcp_upgrade_plugin.html["Actualice el plugin de Element para vCenter Server"].
+
+
+[discrete]
+== Obtenga más información
+
+* https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
+* https://www.netapp.com/data-storage/solidfire/documentation["Página SolidFire y Element Resources"^]
+

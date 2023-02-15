@@ -1,0 +1,83 @@
+---
+permalink: api/reference_element_api_restartnetworking.html 
+sidebar: sidebar 
+keywords: node,restarting,restart,networking,network,service,services,restartnetworking 
+summary: Puede usar el método RestartNetworking para reiniciar los servicios de red en un nodo. 
+---
+= RestartNetworking
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `RestartNetworking` método para reiniciar los servicios de red en un nodo.
+
+
+NOTE: El SDS empresarial de SolidFire no admite este método. Si utiliza este método en un sistema SolidFire eSDS, el método devolverá un error.
+
+PRECAUCIÓN:
+
+Este método reinicia todos los servicios de red en un nodo, lo que produce una pérdida temporal de conectividad de red.
+
+
+
+== Parámetro
+
+Este método tiene el siguiente parámetro de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+fuerza
+ a| 
+Establezca esta opción en true para reiniciar los servicios de red en un nodo.
+ a| 
+booleano
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+
+
+== Valores devueltos
+
+Este método no tiene valores devueltos.
+
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "RestartNetworking",
+   "params": {
+              "force" : true
+             },
+   "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{ "id" : 1,
+  "result" : {}
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

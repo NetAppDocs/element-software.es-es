@@ -1,0 +1,44 @@
+---
+permalink: storage/task_system_manage_nodes_view_individual_node_details.html 
+sidebar: sidebar 
+keywords: nodes, view, details, vlan, mip, cip, sip, virtual id 
+summary: Puede ver detalles de nodos individuales, como etiquetas de servicio, detalles de unidades y gráficos para la utilización y estadísticas de unidades. La página Nodes de la pestaña Cluster proporciona la columna Version donde puede ver la versión de software de cada nodo. 
+---
+= Ver los detalles del nodo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede ver detalles de nodos individuales, como etiquetas de servicio, detalles de unidades y gráficos para la utilización y estadísticas de unidades. La página Nodes de la pestaña Cluster proporciona la columna Version donde puede ver la versión de software de cada nodo.
+
+.Pasos
+. Haga clic en *Cluster* > *Nodes*.
+. Para ver los detalles de un nodo específico, haga clic en el icono *acciones* de un nodo.
+. Haga clic en *Ver detalles*.
+. Revise los detalles del nodo:
++
+** *ID de nodo*: El ID generado por el sistema para el nodo.
+** *Nombre de nodo*: El nombre de host del nodo.
+** *iops 4k* disponible: IOPS configuradas para el nodo.
+** *Función de nodo*: La función que tiene el nodo en el clúster. Los posibles valores son los siguientes:
++
+*** Cluster Master: El nodo que realiza tareas administrativas para todo el clúster y contiene la MVIP y la SVIP.
+*** Ensemble Node: Un nodo que participa en el clúster. Hay nodos de 3 o 5 conjuntos, según el tamaño del clúster.
+*** Fibre Channel: Un nodo del clúster.
+
+
+** *Tipo de nodo*: Tipo de modelo del nodo.
+** *Active Drives*: Número de unidades activas en el nodo.
+** *IP de administración*: La dirección IP de administración (MIP) asignada al nodo para las tareas de administración de red de 1 GbE o 10 GbE.
+** *IP de clúster*: La dirección IP de clúster (CIP) asignada al nodo utilizado para la comunicación entre nodos del mismo clúster.
+** *IP de almacenamiento*: La dirección IP de almacenamiento (SIP) asignada al nodo utilizado para la detección de redes iSCSI y todo el tráfico de red de datos.
+** *ID de VLAN de administración*: ID virtual para la red de área local de administración.
+** *Storage VLAN ID*: El ID virtual de la red de área local de almacenamiento.
+** *Versión*: La versión del software que se ejecuta en cada nodo.
+** *Puerto de replicación*: El puerto utilizado en los nodos para la replicación remota.
+** *Etiqueta de servicio*: El número de etiqueta de servicio exclusivo asignado al nodo.
+
+
+

@@ -1,0 +1,23 @@
+---
+permalink: storage/task_system_manage_cluster_terms_disable_the_terms_of_use_banner.html 
+sidebar: sidebar 
+keywords: terms of use banner, disable 
+summary: El banner con las condiciones de uso se puede deshabilitar. Cuando se deshabilita el banner, se deja de solicitar al usuario que acepte las condiciones de uso cuando se usa la interfaz de usuario de Element. 
+---
+= Deshabilite el banner con las condiciones de uso
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El banner con las condiciones de uso se puede deshabilitar. Cuando se deshabilita el banner, se deja de solicitar al usuario que acepte las condiciones de uso cuando se usa la interfaz de usuario de Element.
+
+* Para poder configurar las condiciones de uso, debe tener privilegios de administrador del clúster.
+* Asegúrese de que las condiciones de uso estén habilitadas.
++
+.. Haga clic en *usuarios* > *Términos de uso*.
+.. Haga clic en *Desactivar*.
+
+
+

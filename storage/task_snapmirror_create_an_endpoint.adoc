@@ -1,0 +1,42 @@
+---
+permalink: storage/task_snapmirror_create_an_endpoint.html 
+sidebar: sidebar 
+keywords: endpoints, create, snapmirror, ui 
+summary: Debe crear un extremo de SnapMirror en la interfaz de usuario de NetApp Element para poder crear una relación. 
+---
+= Cree un extremo de SnapMirror
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe crear un extremo de SnapMirror en la interfaz de usuario de NetApp Element para poder crear una relación.
+
+Un extremo de SnapMirror es un clúster de ONTAP que funciona como destino de replicación para un clúster que ejecuta el software Element. Antes de crear una relación de SnapMirror, primero se debe crear un extremo de SnapMirror.
+
+Es posible crear y gestionar hasta cuatro extremos de SnapMirror en un clúster de almacenamiento que ejecuta el software Element.
+
+
+NOTE: Si originalmente se creó un extremo existente mediante la API y no se guardaron las credenciales, puede ver el extremo en la interfaz de usuario de Element y verificar su existencia, pero no se puede gestionar mediante la interfaz de usuario de Element. Este extremo solo puede gestionarse mediante la API de Element.
+
+Para obtener más información sobre los métodos API, consulte link:../api/index.html["Gestione el almacenamiento con la API de Element"].
+
+.Lo que necesitará
+* Debe haber habilitado SnapMirror en la interfaz de usuario de Element para el clúster de almacenamiento.
+* Conoce las credenciales de ONTAP para el extremo.
+
+
+.Pasos
+. Haga clic en *Protección de datos* > *terminales de SnapMirror*.
+. Haga clic en *Crear extremo*.
+. En el cuadro de diálogo *Crear un nuevo extremo*, introduzca la dirección IP de administración del clúster del sistema ONTAP.
+. Introduzca las credenciales de administrador de ONTAP asociadas con el extremo.
+. Consulte información adicional:
++
+** LIF: Enumera las interfaces lógicas de interconexión de clústeres de ONTAP que se utilizan para comunicarse con Element.
+** Status: Muestra el estado actual del extremo de SnapMirror. Los valores posibles son: Conectado, desconectado y no administrado.
+
+
+. Haga clic en *Crear extremo*.
+

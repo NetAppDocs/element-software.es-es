@@ -1,0 +1,94 @@
+---
+permalink: esds/reference_esds_sf_sds_config_file.html 
+sidebar: sidebar 
+keywords: element, solidfire esds, hardware components, configuration file 
+summary: Cada nodo tiene un archivo sf_sds_config.yaml, que incluye la lista de hardware que especifique para que los servicios SolidFire eSDS consuman. Después de sustituir una unidad, debe añadir la información de la unidad de reemplazo en este archivo para el nodo desde el que se reemplazó la unidad. Este archivo se almacena en /opt/sf/. Este archivo incluye toda la información sobre las unidades del nodo. Debe introducir los detalles de la nueva unidad en este archivo cada vez que añada una nueva unidad. 
+---
+= Contenido del archivo sf_sds_config.yaml
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cada nodo tiene un `sf_sds_config.yaml` Archivo, que incluye la lista de hardware que especifique para ser consumido por los servicios eSDS de SolidFire. Después de sustituir una unidad, debe añadir la información de la unidad de reemplazo en este archivo para el nodo desde el que se reemplazó la unidad. Este archivo se almacena en `/opt/sf/`. Este archivo incluye toda la información sobre las unidades del nodo. Debe introducir los detalles de la unidad nueva en este archivo cada vez que añada una nueva unidad.
+
+Aquí están los contenidos *obligatorios* del archivo:
+
+[cols="4*"]
+|===
+| Clave | Predeterminado | Tipo | Descripción 
+
+
+ a| 
+SchemaVersion
+ a| 
+"2.0"
+ a| 
+Cadena
+ a| 
+Número de versión de esquema del archivo.
+
+
+
+ a| 
+red
+ a| 
+N.A.
+ a| 
+Lista
+ a| 
+Valores permitidos: ManagementInterface, storageInterface, storageInterface
+
+
+
+ a| 
+ManagementInterface
+ a| 
+"team0"
+ a| 
+Cadena
+ a| 
+El nombre de la interfaz de red del sistema operativo del host preconfigurada, redundante y previa para usar para el tráfico de gestión de clústeres y gestión.
+
+
+
+ a| 
+Interfaz de almacenamiento
+ a| 
+"team1"
+ a| 
+Cadena
+ a| 
+El nombre de la interfaz de red del sistema operativo del host preconfigurada, redundante y configurada para usar para el tráfico de red de almacenamiento (tráfico de iSCSI).
+
+
+
+ a| 
+Unidades de datos
+ a| 
+N.A.
+ a| 
+Lista
+ a| 
+La lista de rutas de sistema operativo del host a dispositivos de almacenamiento físico que utiliza SolidFire eSDS. Puede especificar esto como rutas completas al bloque o a los dispositivos NVMe. A continuación se admiten ejemplos completos de rutas: /Dev/disk/by-id/wwn-xxxx-xxxx-EXAMPLE, /dev/disk/by-UUID/nvme-xxxx-xxxxx-EXAMPLE y /dev/sda1
+
+
+
+ a| 
+Dispositivos en caché
+ a| 
+N.A.
+ a| 
+Lista
+ a| 
+La ruta del sistema operativo del host al dispositivo físico que está utilizando SolidFire eSDS como dispositivo de caché. Debe especificarlo como una entrada de lista. A continuación se muestra un ejemplo de una ruta de acceso completa compatible: /Dev/disk/by-id/nvme-nvme.8086-XXXXX-XXXXX-XXXXXX-EJEMPLO
+
+|===
+
+
+== Obtenga más información
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Página de recursos de SolidFire de NetApp"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentación para versiones anteriores de SolidFire de NetApp y los productos Element"^]
+

@@ -1,0 +1,118 @@
+---
+permalink: api/reference_element_api_modifyvolumepair.html 
+sidebar: sidebar 
+keywords: volume,pair,pairs,modify,modifying,edit,editing,changing,change,modifyvolumepair,paired 
+summary: 'Puede utilizar el método ModifyVolumePair para pausar o reiniciar la replicación entre un par de volúmenes. Este método se establece en el volumen de origen \(el volumen con acceso de lectura/escritura\).' 
+---
+= ModifyVolumePair
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `ModifyVolumePair` método para pausar o reiniciar la replicación entre un par de volúmenes. Este método se establece en el volumen de origen (el volumen con acceso de lectura/escritura).
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+
+
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+ID de volumen
+ a| 
+Número de identificación del volumen que se va a modificar.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+Manual de instrucciones
+ a| 
+La replicación remota se puede pausar o reiniciar en el volumen de origen (lectura/escritura). Los posibles valores son los siguientes:
+
+* True: Pausa la replicación de volúmenes.
+* False: Reinicie la replicación de volúmenes.
+
+
+Si no se especifica ningún valor, no se realiza ningún cambio en la replicación.
+ a| 
+booleano
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+modo
+ a| 
+Modo de replicación del volumen. Los posibles valores son los siguientes:
+
+* Asincrónica: Las escrituras se reconocen cuando se completan localmente. El clúster no espera a que se repliquen las escrituras en el clúster de destino.
+* Sync: El origen reconoce la escritura cuando los datos se almacenan localmente y en el clúster remoto.
+* SnapshotsOnly: Solo se replican las copias de Snapshot que se crearon en el clúster de origen. No se replican las escrituras activas del volumen de origen.
+
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+No
+
+|===
+
+
+== Valor de retorno
+
+Este método no tiene ningún valor devuelto.
+
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+  "method": "ModifyVolumePair",
+  "params": {
+    "pausedManual": false,
+    "volumeID": 5,
+    "mode": "sync"
+   },
+  "id": 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+   "id" : 1,
+   "result" : {}
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

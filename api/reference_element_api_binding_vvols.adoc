@@ -1,0 +1,94 @@
+---
+permalink: api/reference_element_api_binding_vvols.html 
+sidebar: sidebar 
+keywords: binding,object,objects,volume,volumes,virtual 
+summary: El objeto de vinculación contiene información acerca de la vinculación de un volumen virtual. Puede recuperar una lista de esta información para todos los volúmenes virtuales mediante el método API ListVirtualVolumeBindings. 
+---
+= vinculación (volúmenes virtuales)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El objeto de vinculación contiene información acerca de la vinculación de un volumen virtual. Puede recuperar una lista de esta información de todos los volúmenes virtuales mediante el `ListVirtualVolumeBindings` Método API.
+
+
+
+== Miembros de objeto
+
+Este objeto contiene los siguientes miembros:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+`protocolEndpointID`
+ a| 
+El ID único del extremo de protocolo.
+ a| 
+UUID
+
+
+
+ a| 
+`protocolEndpointInBandID`
+ a| 
+El scentNAADeviceID del extremo de protocolo.
+ a| 
+cadena
+
+
+
+ a| 
+`protocolEndpointType`
+ a| 
+El tipo de extremo de protocolo. SCSI es el único valor que se devuelve para el tipo de extremo de protocolo.
+ a| 
+cadena
+
+
+
+ a| 
+`virtualVolumeBindingID`
+ a| 
+El ID único del objeto de vinculación de volúmenes virtuales.
+ a| 
+entero
+
+
+
+ a| 
+`virtualVolumeHostID`
+ a| 
+El ID único del host del volumen virtual.
+ a| 
+UUID
+
+
+
+ a| 
+`virtualVolumeID`
+ a| 
+El ID exclusivo del volumen virtual.
+ a| 
+UUID
+
+
+
+ a| 
+`virtualVolumeSecondaryID`
+ a| 
+El ID secundario del volumen virtual.
+ a| 
+cadena
+
+|===
+
+
+== Obtenga más información
+
+* xref:reference_element_api_listvirtualvolumebindings.adoc[ListVirtualVolumeBindings]
+* xref:reference_element_api_protocolendpoint.adoc[ProtocolEndpoint]
+

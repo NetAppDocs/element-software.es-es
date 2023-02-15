@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: hccstorage/index.html 
+summary: Con el almacenamiento all-flash SolidFire de NetApp, puede gestionar y supervisar activos de almacenamiento utilizando el control del cloud híbrido de NetApp. 
+keywords: netapp, element, cluster, element, account, user, volume, hybrid cloud control, hcc 
+---
+= Gestione y supervise el almacenamiento con Hybrid Cloud Control de NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Con el almacenamiento all-flash SolidFire de NetApp, puede gestionar y supervisar activos de almacenamiento y configurar componentes en su sistema de almacenamiento con el control de cloud híbrido de NetApp.
+
+* link:task-hcc-manage-storage-clusters.html["Añadir y gestionar clústeres de almacenamiento"]
+* link:task-setup-configure-fqdn-web-ui-access.html["Configure el acceso completo a la interfaz de usuario web de Nombre de dominio"]
+* link:task-hcc-manage-accounts.html["Crear y administrar cuentas de usuario"]
+* link:task-hcc-manage-vol-management.html["Cree y gestione volúmenes"]
+* link:task-hcc-manage-vol-access-groups.html["Permite crear y gestionar grupos de acceso de volúmenes"]
+* link:task-hcc-manage-initiators.html["Cree y gestione iniciadores"]
+* link:task-hcc-qos-policies.html["Cree y gestione políticas de calidad de servicio de volúmenes"]
+* link:task-hcc-dashboard.html["Supervise su sistema SolidFire con el control del cloud híbrido de NetApp"]
+
+
+[discrete]
+== Obtenga más información
+
+* https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
+* https://www.netapp.com/data-storage/solidfire/documentation["Página SolidFire y Element Resources"^]
+

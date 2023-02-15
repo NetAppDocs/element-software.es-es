@@ -1,0 +1,141 @@
+---
+permalink: api/reference_element_api_restartservices.html 
+sidebar: sidebar 
+keywords: restart,service,services,restartservices,restarting,node 
+summary: Puede usar el método RestartServices para reiniciar los servicios en un nodo. 
+---
+= Servicios de RestartServices
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `RestartServices` método para reiniciar los servicios en un nodo.
+
+
+
+== Parámetros
+
+PRECAUCIÓN:
+
+Este método provoca una interrupción temporal de los servicios de los nodos.
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+fuerza
+ a| 
+Establezca esta opción en true para reiniciar los servicios en un nodo.
+ a| 
+booleano
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+servicio
+ a| 
+Nombre del servicio que se va a reiniciar.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+acción
+ a| 
+Acción que se debe realizar en el servicio (inicio, parada, reinicio).
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+No
+
+|===
+
+
+== Valores devueltos
+
+Este método tiene los siguientes valores devueltos:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+detalles
+ a| 
+El resultado del procedimiento de reinicio del servicio, incluidos los errores (si los hay).
+ a| 
+Objeto JSON
+
+
+
+ a| 
+duración
+ a| 
+El tiempo, en segundos, se tardó en reiniciar los servicios al nodo.
+ a| 
+cadena
+
+
+
+ a| 
+resultado
+ a| 
+Resultados del reinicio.
+ a| 
+cadena
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "RestartServices",
+   "params": {
+              "force" : true
+              "action" : restart,
+             }
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "details": "solidfire stop/waiting\nsolidfire start/running, process 7284\n",
+    "duration": "00:00:02.541594",
+    "result": "Passed"
+  }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

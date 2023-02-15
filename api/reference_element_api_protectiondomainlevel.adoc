@@ -1,0 +1,56 @@
+---
+permalink: api/reference_element_api_protectiondomainlevel.html 
+sidebar: sidebar 
+keywords: object,objects,protectionDomainLevel 
+summary: El objeto protectionDomainLevel contiene información acerca de la tolerancia actual y los niveles de resiliencia del clúster de almacenamiento. Los niveles de tolerancia indican la capacidad del clúster para seguir leyendo y escribiendo datos en caso de fallo, y los niveles de resiliencia indican la capacidad del clúster para recuperarse automáticamente de uno o más fallos dentro de su tipo de dominio de protección asociado. 
+---
+= ProtectionDomainLevel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El objeto protectionDomainLevel contiene información acerca de la tolerancia actual y los niveles de resiliencia del clúster de almacenamiento. Los niveles de tolerancia indican la capacidad del clúster para seguir leyendo y escribiendo datos en el caso de un fallo, y los niveles de resiliencia indican la capacidad del clúster para recuperarse automáticamente de uno o más fallos dentro del tipo de dominio de protección asociado.
+
+
+
+== Miembros de objeto
+
+Este objeto contiene los siguientes miembros:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+ProtectionDomainType
+ a| 
+El tipo de dominio de protección que tiene la tolerancia y la resiliencia asociadas. Los posibles valores son los siguientes:
+
+* Node: Cualquier nodo individual.
+* Chassis: Cualquier nodo individual o todos los nodos de almacenamiento en un único chasis.
+* Custom: Todos los nodos de almacenamiento en un único dominio de protección definido por el cliente.
+
+ a| 
+cadena
+
+
+
+ a| 
+resiliencia
+ a| 
+La resiliencia actual de este clúster desde la perspectiva de este tipo de dominio de protección.
+ a| 
+xref:reference_element_api_protectiondomainresiliency.adoc[ProtectionDomainResiliency]
+
+
+
+ a| 
+tolerancia
+ a| 
+La tolerancia actual de este clúster desde la perspectiva de este tipo de dominio de protección.
+ a| 
+xref:reference_element_api_protectiondomaintolerance.adoc[ProtectionDomainTolerance]
+
+|===

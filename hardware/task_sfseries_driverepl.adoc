@@ -1,0 +1,200 @@
+---
+permalink: hardware/task_sfseries_driverepl.html 
+sidebar: sidebar 
+keywords: SSDs, drives, replacement, sf-series, nodes 
+summary: Una unidad de estado sólido con fallos se puede cambiar en caliente por una unidad de reemplazo. 
+---
+= Sustituya unidades para los nodos de almacenamiento SF-Series
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Una unidad de estado sólido con fallos se puede cambiar en caliente por una unidad de reemplazo.
+
+.Lo que necesitará
+* Tiene una unidad de reemplazo.
+* Usted tiene una muñequera de descarga electrostática (ESD), o usted ha tomado otras precauciones antiestáticas.
+* Usted se ha puesto en contacto con el soporte de NetApp para verificar que el SSD debe sustituirse y que para facilitar el procedimiento de resolución de problemas adecuado.
++
+Necesitará la etiqueta o el número de serie del servicio al llamar al soporte de NetApp. El equipo de soporte colaborará con usted para obtener una unidad de sustitución de acuerdo con su acuerdo de nivel de servicio.
+
+
+
+.Acerca de esta tarea
+Las instrucciones se aplican a los siguientes modelos de nodos de almacenamiento SolidFire:
+
+* SF2405
+* SF4805
+* SF9605
+* SF9608
+* SF19210
+* SF38410
+
+
+[NOTE]
+====
+Según la versión del software Element, no se admiten los siguientes nodos:
+
+* A partir de los nodos de almacenamiento Element 12.7, SF2405 y SF9608
+* A partir de los nodos de almacenamiento Element 12.0, SF3010, SF6010 y SF9010.
+
+
+====
+La siguiente figura muestra la colocación de las unidades en un chasis SF9605:
+
+image::../media/sf_drives.gif[En esta figura, se muestran las unidades del chasis SolidFire.]
+
+
+NOTE: La figura anterior es un ejemplo. SF9608 tiene una distribución de unidades diferente que incluye solo ocho unidades numeradas de una a ocho, de izquierda a derecha.
+
+La ranura 0 contiene la unidad de metadatos para el nodo. Si va a sustituir la unidad en la ranura 0, debe fijar la pegatina incluida en la caja de envío de la unidad de reemplazo, de modo que pueda identificarla por separado del resto.
+
+[NOTE]
+====
+Siga estas prácticas recomendadas al gestionar las unidades:
+
+* Evite la descarga electrostática (ESD) manteniendo la unidad en la bolsa ESD hasta que esté listo para instalarla.
+* No inserte una herramienta o cuchilla metálicas en la bolsa ESD.
+* Abra la bolsa ESD a mano o corte la parte superior con unas tijeras.
+* Guarde la bolsa ESD y cualquier material de embalaje en caso de que deba devolver una unidad más tarde.
+* Utilice siempre una muñequera ESD conectada a una superficie sin pintar en su chasis.
+* Utilice siempre ambas manos cuando quite, instale o lleve una unidad.
+* No fuerce nunca una unidad en el chasis.
+* No coloque las unidades entre sí.
+* Utilice siempre paquetes aprobados cuando los lleve.
+
+
+====
+A continuación, se ofrece una descripción general de alto nivel de los pasos:
+
+* <<Quite la unidad del clúster>>
+* <<Sustituya la unidad del chasis>>
+* <<Añada la unidad al clúster>>
+
+
+
+
+== Quite la unidad del clúster
+
+El sistema SolidFire pone una unidad en estado de error cuando el sistema de autodiagnóstico de la unidad indica al nodo que se ha producido un error o cuando la comunicación con la unidad se detiene durante cinco minutos y medio o más. El sistema muestra una lista de las unidades con errores. Quite una unidad con error de la lista de unidades con errores en el software NetApp Element.
+
+.Pasos
+. En la interfaz de usuario de Element, seleccione *Cluster* > *Drives*.
+. Seleccione *error* para ver la lista de unidades con errores.
+. Anote el número de ranura de la unidad con error.
++
+Esta información se necesita para localizar la unidad con error en el chasis.
+
+. Quite la unidad con error mediante uno de los siguientes métodos:
++
+[cols="2*"]
+|===
+| Opción | Pasos 
+
+
+ a| 
+Para quitar unidades individuales
+ a| 
+.. Seleccione *acciones* para la unidad que desea quitar.
+.. Seleccione *Quitar*.
+
+
+
+
+ a| 
+Para quitar varias unidades
+ a| 
+.. Seleccione todas las unidades que desee quitar y seleccione *acciones masivas*.
+.. Seleccione *Quitar*.
+
+
+|===
+
+
+
+
+== Sustituya la unidad del chasis
+
+Después de quitar una unidad con error de la lista de unidades con errores en la interfaz de usuario de Element, está listo para sustituir físicamente la unidad con error del chasis.
+
+.Pasos
+. Desembale la unidad de repuesto y colóquela en una superficie plana y sin estática cerca del bastidor.
++
+Guarde los materiales de embalaje para cuando devuelva la unidad con error a NetApp.
+
+. Coincida el número de ranura de la unidad con error desde la interfaz de usuario de Element con el número en el chasis.
++
+La siguiente figura muestra un ejemplo para mostrar la numeración de las ranuras de unidad:
+
++
+image::../media/sf_series_drive_numbers.gif[En esta figura, se muestra el número de unidades para los nodos de almacenamiento de SolidFire.]
+
++
+[cols="2*"]
+|===
+| Elemento | Descripción 
+
+
+ a| 
+1
+ a| 
+Números de ranura de unidad
+
+|===
+. Pulse el círculo rojo de la unidad que desea quitar para liberar la unidad.
++
+El pestillo hace clic en abierto.
+
+. Deslice la unidad fuera del chasis y colóquela sobre una superficie nivelada y sin estática.
+. Presione el círculo rojo en la unidad de repuesto antes de deslizarla en la ranura.
+. Inserte la unidad de sustitución y presione el círculo rojo para cerrar el pestillo.
+. Notifique al soporte de NetApp sobre el reemplazo de la unidad.
++
+El soporte de NetApp proporcionará instrucciones para la devolución de la unidad con error.
+
+
+
+
+
+== Añada la unidad al clúster
+
+Después de instalar una unidad nueva en el chasis, se registra como disponible. Debe añadir la unidad al clúster mediante la interfaz de usuario de Element antes de que esta pueda participar en el clúster.
+
+.Pasos
+. En la interfaz de usuario de Element, haga clic en *Cluster* > *Drives*.
+. Haga clic en *disponible* para ver la lista de unidades disponibles.
+. Seleccione una de las siguientes opciones para añadir unidades:
++
+[cols="2*"]
+|===
+| Opción | Pasos 
+
+
+ a| 
+Para añadir unidades individuales
+ a| 
+.. Seleccione el botón *acciones* de la unidad que desea agregar.
+.. Seleccione *Agregar*.
+
+
+
+
+ a| 
+Para añadir varias unidades
+ a| 
+.. Active las casillas de verificación de las unidades que desee agregar y, a continuación, seleccione *acciones masivas*.
+.. Seleccione *Agregar*.
+
+
+|===
+
+
+
+
+== Obtenga más información
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Página de recursos de SolidFire de NetApp"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentación para versiones anteriores de SolidFire de NetApp y los productos Element"^]
+

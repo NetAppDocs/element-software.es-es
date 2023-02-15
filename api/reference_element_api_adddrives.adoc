@@ -1,0 +1,126 @@
+---
+permalink: api/reference_element_api_adddrives.html 
+sidebar: sidebar 
+keywords: drives,adding,cluster,drive,add,adddrives 
+summary: Puede usar el método AddDrives para añadir una o varias unidades disponibles al clúster, lo cual permite que las unidades alojen una parte de los datos del clúster. 
+---
+= AddDrives
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `AddDrives` método para añadir una o varias unidades disponibles al clúster, lo cual permite que las unidades alojen una parte de los datos del clúster.
+
+Cuando se añade un nodo de almacenamiento al clúster o se instalan unidades nuevas en un nodo existente, las unidades nuevas se marcan como disponibles y se deben añadir mediante AddDrives antes de que se puedan utilizar. Utilice la xref:reference_element_api_listdrives.adoc[ListDrives] método para mostrar las unidades disponibles para añadir. Cuando se añade una unidad, el sistema determina automáticamente el tipo de unidad que debería ser.
+
+El método es asíncrono y devuelve tan pronto como se inician los procesos para reequilibrar las unidades del clúster. Sin embargo, puede tardar más tiempo en que los datos del clúster se reequilibren utilizando las unidades que se acaban de añadir; el reequilibrado continuará incluso después de que finalice la llamada al método AddDrives. Puede utilizar el xref:reference_element_api_getasyncresult.adoc[GetAsyncResult] Método para consultar el comando establish devuelto por el método. Una vez que se devuelve el método AddDrives, puede utilizar xref:reference_element_api_listsyncjobs.adoc[ListSyncJobs] método para ver el progreso del reequilibrado de los datos con las nuevas unidades.
+
+
+NOTE: Cuando se agregan varias unidades, es más eficaz agregarlas en una sola llamada al método AddDrives en lugar de varios métodos individuales con una sola unidad cada uno. Esto reduce la cantidad de equilibrio de datos que se debe producir para estabilizar la carga de almacenamiento en el clúster.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+unidades
+ a| 
+Información sobre cada unidad que se va a añadir al clúster. Los posibles valores son los siguientes:
+
+* DriveID: El ID de la unidad que se va a añadir (número entero).
+* Type: El tipo de unidad que se va a añadir (cadena). Los valores válidos son "slice", "block" o "volume". Si se omite, el sistema asigna el tipo correcto.
+
+ a| 
+Cabina de objetos JSON
+ a| 
+Ninguno
+ a| 
+Sí (el tipo es opcional)
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+Establish asyncHandle
+ a| 
+Valor de mango utilizado para obtener el resultado de la operación.
+ a| 
+entero
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+  "id": 1,
+  "method": "AddDrives",
+  "params": {
+    "drives": [
+      {
+        "driveID": 1,
+        "type": "slice"
+      },
+      {
+        "driveID": 2,
+        "type": "block"
+      },
+      {
+        "driveID": 3,
+        "type": "block"
+      }
+    ]
+  }
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result" : {
+    "asyncHandle": 1
+  }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6
+
+
+
+== Obtenga más información
+
+* xref:reference_element_api_getasyncresult.adoc[GetAsyncResult]
+* xref:reference_element_api_listdrives.adoc[ListDrives]
+* xref:reference_element_api_listsyncjobs.adoc[ListSyncJobs]
+

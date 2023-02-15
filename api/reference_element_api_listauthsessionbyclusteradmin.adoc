@@ -1,0 +1,103 @@
+---
+permalink: api/reference_element_api_listauthsessionbyclusteradmin.html 
+sidebar: sidebar 
+keywords: cluster admin,sessions,auth sessions,list 
+summary: Puede utilizar el método ListAuthSessionsByClusterAdmin para enumerar todas las sesiones de autenticación asociadas con el ClusterAdminID especificado. Si el ClusterAdminID especificado se asigna a un grupo de usuarios, se mostrarán todas las sesiones de autenticación para todos los miembros de ese grupo. 
+---
+= ListAuthSessionsByClusterAdmin
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `ListAuthSessionsByClusterAdmin` método para enumerar todas las sesiones de autenticación asociadas con el especificado `ClusterAdminID`. Si se especifica `ClusterAdminID` se asigna a un grupo de usuarios, se enumerarán todas las sesiones de autenticación de todos los miembros de ese grupo.
+
+
+
+== Parámetros
+
+Este método tiene el siguiente parámetro de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+ClusterAdminID
+ a| 
+Identificador único del administrador de clúster.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+
+
+== Valores devueltos
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+sesiones
+ a| 
+Lista de información de sesión para las sesiones de autenticación.
+ a| 
+link:reference_element_api_authsessioninfo.md#GUID-FF0CE38C-8F99-4F23-8A6F-F6EA4487E808["AuthSessionInfo"]
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+    "method": "ListAuthSessionsByClusterAdmin",
+    "clusterAdminID": 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+"sessions": [
+      {
+        "accessGroupList": [
+          "administrator"
+        ],
+        "authMethod": "Cluster",
+        "clusterAdminIDs": [
+          1
+        ],
+        "finalTimeout": "2020-03-14T19:21:24Z",
+        "idpConfigVersion": 0,
+        "lastAccessTimeout": "2020-03-11T19:51:24Z",
+        "sessionCreationTime": "2020-03-11T19:21:24Z",
+        "sessionID": "b12bfc64-f233-44df-8b9f-6fb6c011abf7",
+        "username": "admin"
+      }
+    ]
+}
+----
+
+
+== Nuevo desde la versión
+
+12.0

@@ -1,0 +1,71 @@
+---
+permalink: api/reference_element_api_getsshinfo.html 
+sidebar: sidebar 
+keywords: SSH,status,get,getting,getsshinfo 
+summary: Puede utilizar el método GetSshInfo para consultar el estado del servicio SSH en un solo nodo. 
+---
+= GetSshInfo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `GetSshInfo` Método para consultar el estado del servicio SSH en un solo nodo.
+
+
+NOTE: El SDS empresarial de SolidFire no admite este método. Si utiliza este método en un sistema SolidFire eSDS, el método devolverá un error.
+
+
+
+== Parámetros
+
+Este método no tiene parámetros de entrada.
+
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+resultado
+ a| 
+El estado del servicio SSH de este nodo.
+ a| 
+booleano
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+    "method" : "GetSshInfo",
+    "params" : {},
+    "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+    "id": 1,
+    "result": {
+        "enabled": false
+    }
+}
+----

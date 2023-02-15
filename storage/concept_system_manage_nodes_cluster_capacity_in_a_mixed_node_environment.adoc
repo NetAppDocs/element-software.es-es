@@ -1,0 +1,41 @@
+---
+permalink: storage/concept_system_manage_nodes_cluster_capacity_in_a_mixed_node_environment.html 
+sidebar: sidebar 
+keywords: nodes, mixed environment, capacity, cluster capacity, mixed nodes, encrypted, non-encrypted, threshold 
+summary: En un clúster se pueden combinar distintos tipos de nodos. SF-Series 2405, 3010, 4805, 6010, 9605 9010, 19210, 38410 y H-Series pueden coexistir en un clúster. 
+---
+= Capacidad de clúster en un entorno de nodos mixtos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En un clúster se pueden combinar distintos tipos de nodos. SF-Series 2405, 3010, 4805, 6010, 9605 9010, 19210, 38410 y H-Series pueden coexistir en un clúster.
+
+H-Series consta de nodos H610S-1, H610S-2, H610S-4 y H410S. Estos nodos son compatibles tanto con 10 GbE como con 25 GbE.
+
+Es mejor no mezclar nodos no cifrados y no cifrados. En un clúster de nodos mixtos, ningún nodo puede superar el 33 % de la capacidad total del clúster. Por ejemplo, en un clúster con cuatro nodos SF-Series 4805, el nodo más grande que se puede añadir solo es un nodo SF-Series 9605. El umbral de capacidad del clúster se calcula en función de la pérdida potencial del nodo más grande en esta situación.
+
+Según la versión del software Element, los siguientes nodos de almacenamiento SF-Series no son compatibles:
+
+[cols="40,40"]
+|===
+| Empezando por... | Nodo de almacenamiento no compatible... 
+
+
+| Elemento 12.7  a| 
+* SF2405
+* SF9608
+
+
+
+
+| Elemento 12.0  a| 
+* SF3010
+* SF6010
+* SF9010
+
+
+|===
+Si intenta actualizar uno de estos nodos a una versión de elemento no compatible, verá un error que indica que este nodo no es compatible con Element 12.x.

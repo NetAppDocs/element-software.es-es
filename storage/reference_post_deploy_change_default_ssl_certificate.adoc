@@ -1,0 +1,45 @@
+---
+permalink: storage/reference_post_deploy_change_default_ssl_certificate.html 
+sidebar: sidebar 
+keywords: ssl certificate, SSL, private key, self-signed, cluster, nodes, user-defined certificate, API, change default certificate, certificate, Element API 
+summary: Puede cambiar el certificado SSL predeterminado y la clave privada del nodo de almacenamiento del clúster mediante la API de NetApp Element. 
+---
+= Cambie el certificado SSL predeterminado del software Element
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede cambiar el certificado SSL predeterminado y la clave privada del nodo de almacenamiento del clúster mediante la API de NetApp Element.
+
+Cuando se crea un clúster de software de NetApp Element, el clúster crea un certificado único de capa de sockets seguros (SSL) con firma automática y una clave privada que se utiliza para todas las comunicaciones HTTPS a través de la interfaz de usuario de Element, la interfaz de usuario por nodo o las API. El software Element admite certificados autofirmados, así como certificados que una entidad de certificación (CA) de confianza emite y verifica.
+
+Puede utilizar los siguientes métodos API para obtener más información sobre el certificado SSL predeterminado y realizar cambios.
+
+Para obtener más información sobre cada método, consulte link:../api/index.html["Referencia de API del software NetApp Element"].
+
+* *GetSSLCertificate*
++
+Puede utilizar este método para recuperar información acerca del certificado SSL instalado actualmente, incluidos todos los detalles del certificado.
+
+* *SetSSLCertificate*
++
+Puede utilizar este método para establecer los certificados SSL de clúster y por nodo en el certificado y la clave privada que proporcione. El sistema valida el certificado y la clave privada para evitar que se aplique un certificado no válido.
+
+* *RemoveSSLCertificate*
++
+Este método quita el certificado SSL y la clave privada instalados actualmente. A continuación, el clúster genera un nuevo certificado autofirmado y una clave privada.
+
+
+
+
+NOTE: El certificado SSL de clúster se aplica automáticamente a todos los nodos nuevos que se añaden al clúster. Cualquier nodo que se quite del clúster se revierte a un certificado autofirmado y toda la información de claves y certificados definidos por el usuario se elimina del nodo.
+
+
+
+== Obtenga más información
+
+* https://www.netapp.com/data-storage/solidfire/documentation["Página SolidFire y Element Resources"^]
+* https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
+

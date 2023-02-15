@@ -1,0 +1,51 @@
+---
+permalink: api/reference_element_api_snapmirrorjobschedulecroninfo.html 
+sidebar: sidebar 
+keywords: object,objects,snapMirrorJobScheduleCronInfo 
+summary: El objeto snapMirrorJobScheduleCronInfo contiene información sobre una programación de tareas de cron en el sistema ONTAP. 
+---
+= SnapMirrorJobScheduleCronInfo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El objeto snapMirrorJobScheduleCronInfo contiene información sobre una programación de tareas de cron en el sistema ONTAP.
+
+
+
+== Miembros de objeto
+
+Este objeto contiene los siguientes miembros:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+SnapMirrorEndpointID
+ a| 
+El ID del sistema ONTAP de destino.
+ a| 
+entero
+
+
+
+ a| 
+Nombredetrabajo
+ a| 
+El nombre del programa de trabajo.
+ a| 
+cadena
+
+
+
+ a| 
+JobFinteDescription
+ a| 
+Un resumen de la programación generado automáticamente por el usuario.
+ a| 
+cadena
+
+|===

@@ -1,0 +1,105 @@
+---
+permalink: api/reference_element_api_storagecontainer.html 
+sidebar: sidebar 
+keywords: object,objects,storagecontainer 
+summary: El objeto Storage Container contiene los atributos de un contenedor de almacenamiento de volúmenes virtuales. Se puede recuperar esta información para cada contenedor de almacenamiento en el clúster mediante el método API ListStorageContainers. 
+---
+= Contenedor de almacenamiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El objeto Storage Container contiene los atributos de un contenedor de almacenamiento de volúmenes virtuales. Puede recuperar esta información para cada contenedor de almacenamiento del clúster mediante el `ListStorageContainers` Método API.
+
+
+
+== Miembros de objeto
+
+Este objeto contiene los siguientes miembros:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+ID de cuenta
+ a| 
+El ID de la cuenta del sistema de almacenamiento asociada con el contenedor de almacenamiento.
+ a| 
+entero
+
+
+
+ a| 
+InitiatorSecret
+ a| 
+El secreto de autenticación CHAP del iniciador asociado con el contenedor de almacenamiento.
+ a| 
+cadena
+
+
+
+ a| 
+nombre
+ a| 
+El nombre del contenedor de almacenamiento.
+ a| 
+cadena
+
+
+
+ a| 
+ProtocolEndpointType
+ a| 
+El tipo de extremo de protocolo del contenedor de almacenamiento. SCSI es el único valor válido.
+ a| 
+cadena
+
+
+
+ a| 
+estado
+ a| 
+El estado del contenedor de almacenamiento. Los posibles valores son los siguientes:
+
+* Active: El contenedor de almacenamiento está en uso.
+* Locked: El contenedor de almacenamiento está bloqueado.
+
+ a| 
+cadena
+
+
+
+ a| 
+ID de almacenamiento ContainerID
+ a| 
+El ID único del contenedor de almacenamiento.
+ a| 
+UUID
+
+
+
+ a| 
+TargetSecret
+ a| 
+El secreto de autenticación CHAP para el destino asociado con el contenedor de almacenamiento.
+ a| 
+cadena
+
+
+
+ a| 
+VirtualVolumes
+ a| 
+Una lista de ID de los volúmenes virtuales asociados con el contenedor de almacenamiento.
+ a| 
+Cabina de UUID
+
+|===
+
+
+== Obtenga más información
+
+xref:reference_element_api_liststoragecontainers.adoc[ListStorageContainers]

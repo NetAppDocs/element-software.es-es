@@ -1,0 +1,18 @@
+---
+permalink: storage/concept_snapmirror_labels.html 
+sidebar: sidebar 
+keywords: labels, snapmirror, retention rules 
+summary: Una etiqueta de SnapMirror sirve como marcador para la transferencia de una copia de Snapshot específica según las reglas de retención de la relación. 
+---
+= Etiquetas de SnapMirror
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Una etiqueta de SnapMirror sirve como marcador para la transferencia de una copia de Snapshot específica según las reglas de retención de la relación.
+
+Si se aplica una etiqueta a una copia de Snapshot, esta se Marca como destino de la replicación de SnapMirror. El rol de la relación es aplicar las reglas sobre la transferencia de datos seleccionando la snapshot con la etiqueta correspondiente, copiándola al volumen de destino y garantizando que se conserva el número correcto de copias. Se refiere a la política para determinar el recuento de retenciones y el período de retención. La directiva puede tener un número cualquiera de reglas y cada regla tiene una etiqueta única. Esta etiqueta actúa como enlace entre la snapshot y la regla de retención.
+
+Es la etiqueta de SnapMirror que indica qué regla se aplica a la snapshot, la snapshot de grupo o la programación seleccionada.

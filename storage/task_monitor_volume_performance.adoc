@@ -1,0 +1,36 @@
+---
+permalink: storage/task_monitor_volume_performance.html 
+sidebar: sidebar 
+keywords: volume performance, view, view alerts 
+summary: Puede ver información detallada del rendimiento de todos los volúmenes del clúster. Esta información se puede ordenar por ID de volumen o por cualquier otra de las columnas de rendimiento. También puede usar filtros de la información según determinados criterios. 
+---
+= Ver el rendimiento del volumen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede ver información detallada del rendimiento de todos los volúmenes del clúster. Esta información se puede ordenar por ID de volumen o por cualquier otra de las columnas de rendimiento. También puede usar filtros de la información según determinados criterios.
+
+Puede cambiar la frecuencia con la que el sistema actualiza la información de rendimiento en la página haciendo clic en la lista *Actualizar cada* y eligiendo un valor diferente. El intervalo de actualización predeterminado es de 10 segundos si el clúster tiene menos de 1000 volúmenes; de lo contrario, el valor predeterminado es de 60 segundos. Si elige Never, se deshabilita la actualización automática de página.
+
+Puede volver a activar la actualización automática haciendo clic en *Activar la actualización automática*.
+
+. En la interfaz de usuario de Element, seleccione *Reporting* > *Volume Performance*.
+. En la lista de volúmenes, haga clic en el icono Actions de un volumen.
+. Haga clic en *Ver detalles*.
++
+Aparecerá una bandeja en la parte inferior de la página con información general sobre el volumen.
+
+. Para ver información más detallada sobre el volumen, haga clic en *Ver más detalles*.
++
+El sistema muestra información detallada y gráficos de rendimiento del volumen.
+
+
+
+
+
+== Obtenga más información
+
+xref:reference_monitor_volume_performance_details.adoc[Detalles de rendimiento de volumen]

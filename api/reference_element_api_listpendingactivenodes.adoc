@@ -1,0 +1,90 @@
+---
+permalink: api/reference_element_api_listpendingactivenodes.html 
+sidebar: sidebar 
+keywords: cluster,list,listing,pending,active,node,nodes,listpendingactivenodes 
+summary: Es posible usar el método ListPendingActiveNodes para enumerar los nodos del clúster que están en el estado PendingActive, entre los estados Pending y Active. Los nodos en este estado se devuelven a la imagen de fábrica. 
+---
+= ListPendingActiveNodes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `ListPendingActiveNodes` Método para enumerar los nodos del clúster que están en el estado PendingActive, entre los estados pendiente y activo. Los nodos en este estado se devuelven a la imagen de fábrica.
+
+
+
+== Parámetros
+
+Este método no tiene parámetros de entrada.
+
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+PendingActiveNodes
+ a| 
+Lista de objetos, donde se detalla información acerca de todos los nodos PendingActive del sistema.
+ a| 
+xref:reference_element_api_pendingactivenode.adoc[PendingActiveNode] cabina
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "ListPendingActiveNodes",
+   "params": {},
+   "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  id: null,
+  result: {
+    pendingActiveNodes: [
+    {
+      activeNodeKey: "5rPHP3lTAO",
+      assignedNodeID: 5,
+      asyncHandle: 2,
+      cip: "10.10.5.106",
+      mip: "192.168.133.106",
+      pendingNodeID: 1,
+      platformInfo: {
+        chassisType: "R620",
+        cpuModel: "Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz",
+        nodeMemoryGB: 72,
+        nodeType: "SF3010"
+      },
+     sip: "10.10.5.106",
+     softwareVersion: "9.0.0.1077"
+    }
+    ]
+  }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

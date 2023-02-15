@@ -1,0 +1,59 @@
+---
+permalink: api/reference_element_api_disableldapauthentication.html 
+sidebar: sidebar 
+keywords: LDAP,authentication,auth,disable,disabling,DisableLdapAuthentication 
+summary: Puede utilizar el método DisableLdapAuthentication para deshabilitar la autenticación LDAP y quitar todas las opciones de configuración LDAP. Este método no quita ninguna cuenta de administrador de clúster configurada para los usuarios o los grupos. Una vez deshabilitada la autenticación LDAP, los administradores de clúster que se configuran para usar la autenticación LDAP ya no pueden acceder al clúster. 
+---
+= Autenticación DisableLdapAuthentication
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `DisableLdapAuthentication` Método para deshabilitar la autenticación LDAP y quitar todas las opciones de configuración de LDAP. Este método no quita ninguna cuenta de administrador de clúster configurada para los usuarios o los grupos. Una vez deshabilitada la autenticación LDAP, los administradores de clúster que se configuran para usar la autenticación LDAP ya no pueden acceder al clúster.
+
+
+
+== Parámetros
+
+Este método no tiene parámetros de entrada.
+
+
+
+== Valores devueltos
+
+Este método no tiene valores devueltos.
+
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+  "method": "DisableLdapAuthentication",
+  "params": {},
+"id": 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+"id": 1,
+"result": {}
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

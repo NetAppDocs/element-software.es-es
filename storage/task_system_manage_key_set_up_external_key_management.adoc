@@ -1,0 +1,61 @@
+---
+permalink: storage/task_system_manage_key_set_up_external_key_management.html 
+sidebar: sidebar 
+keywords: sign request, certificate authority, software encryption at rest, ear, eks, csr 
+summary: Puede seguir estos pasos y usar los métodos API de Element que aparecen para configurar la función de gestión de claves externa. 
+---
+= Configure la gestión de claves externas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede seguir estos pasos y usar los métodos API de Element que aparecen para configurar la función de gestión de claves externa.
+
+.Lo que necesitará
+* Si va a configurar la gestión de claves externas en combinación con el cifrado de software en reposo, debe habilitar el cifrado de software en reposo con el link:../api/reference_element_api_createcluster.html["CreateCluster"] método en un nuevo clúster que no contiene volúmenes.
+
+
+.Pasos
+. Establecer una relación de confianza con el servidor de claves externo (EKS).
++
+.. Cree un par de claves público/privado para el clúster de Element que se utilice para establecer una relación de confianza con el servidor de claves llamando al siguiente método de API: link:../api/reference_element_api_createpublicprivatekeypair.html["CreatePublicPrivateKeyPair"]
+.. Obtenga la solicitud de firma de certificado (CSR) que la entidad de certificación debe firmar. La CSR permite que el servidor de claves verifique que el clúster de Element que tendrá acceso a las claves se autentique como clúster de Element. Llame al siguiente método API: link:../api/reference_element_api_getclientcertificatesignrequest.html["GetClientCertificateSignRequest"]
+.. Utilice la autoridad EKS/Certificate para firmar la CSR recuperada. Consulte la documentación de terceros para obtener más información.
+
+
+. Cree un servidor y un proveedor en el clúster para comunicarse con el EKS. Un proveedor de claves define dónde se debe obtener una clave y un servidor define los atributos específicos del EKS con los que se comunicará.
++
+.. Cree un proveedor de claves en el que residirán los detalles del servidor de claves llamando al siguiente método de API: link:../api/reference_element_api_createkeyproviderkmip.html["CreateKeyProviderKmip"]
+.. Cree un servidor de claves que proporcione el certificado firmado y el certificado de clave pública de la entidad emisora de certificados llamando a los siguientes métodos API: link:../api/reference_element_api_createkeyserverkmip.html["CreateKeyServerKmip"]
+link:../api/reference_element_api_testkeyserverkmip.html["TestKeyServerKmip"]
++
+Si la prueba falla, verifique la configuración y la conectividad del servidor. A continuación, repita la prueba.
+
+.. Para agregar el servidor de claves al contenedor de proveedor de claves, llame a los siguientes métodos API:link:../api/reference_element_api_addkeyservertoproviderkmip.html["AddKeyServerToProviderKmip"]
+link:../api/reference_element_api_testkeyproviderkmip.html["TestKeyProviderKmip"]
++
+Si la prueba falla, verifique la configuración y la conectividad del servidor. A continuación, repita la prueba.
+
+
+
+. Realice una de las siguientes acciones como siguiente paso para el cifrado en reposo:
++
+.. (Para el cifrado de hardware en reposo) Habilitar link:../concepts/concept_solidfire_concepts_security.html["cifrado de hardware en reposo"] Mediante la identificación del proveedor de claves que contiene el servidor de claves utilizado para almacenar las claves, llame al link:../api/reference_element_api_enableencryptionatrest.html["EnableEncryptionAtest"] Método API.
++
+
+NOTE: Debe habilitar el cifrado en reposo a través del link:../api/reference_element_api_enableencryptionatrest.html["API"]. Si se habilita el cifrado en reposo con el botón existente de interfaz de usuario de Element, la función volverá al uso de claves generadas internamente.
+
+.. (Para el cifrado de software en reposo) en orden de link:../concepts/concept_solidfire_concepts_security.html["cifrado de software en reposo"] Para utilizar el proveedor de claves recién creado, pase el ID de proveedor de claves al link:../api/reference_element_api_rekeysoftwareencryptionatrestmasterkey.html["RekeySoftwareEncryptionAtRestMasterKey"] Método API.
+
+
+
+
+[discrete]
+== Obtenga más información
+
+* link:task_system_manage_cluster_enable_and_disable_encryption_for_a_cluster.html["Habilite y deshabilite el cifrado de un clúster"]
+* https://www.netapp.com/data-storage/solidfire/documentation/["Página de recursos de SolidFire de NetApp"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentación para versiones anteriores de SolidFire de NetApp y los productos Element"^]
+

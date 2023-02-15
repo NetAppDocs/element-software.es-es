@@ -1,0 +1,142 @@
+---
+permalink: api/reference_element_api_listaccounts.html 
+sidebar: sidebar 
+keywords: account,accounts,list,listing,all,listaccounts 
+summary: Puede utilizar ListAccounts para obtener la lista completa de cuentas de inquilino de almacenamiento, con soporte de envío de mensajes opcional. Las cuentas de Element permiten el acceso a los volúmenes. 
+---
+= Cuentas de lista
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar `ListAccounts` para obtener la lista completa de cuentas de inquilino de almacenamiento, con soporte de paginación opcional. Las cuentas de Element permiten el acceso a los volúmenes.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+IncludeStorageContainers
+ a| 
+De forma predeterminada, se incluyen contenedores de almacenamiento de volúmenes virtuales en la respuesta. Para excluir contenedores de almacenamiento, establezca el valor false.
+ a| 
+booleano
+ a| 
+verdadero
+ a| 
+No
+
+
+
+ a| 
+StartAccountID
+ a| 
+Iniciando código de cuenta para devolver. Si no existe ninguna cuenta con este ID de cuenta, la siguiente cuenta por orden de ID de cuenta se utiliza como inicio de la lista. Para desplazarse por la lista, pase el ID de cuenta de la última cuenta en la respuesta anterior + 1.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+límite
+ a| 
+Número máximo de objetos de cuenta que devolver.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+No
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+cuentas
+ a| 
+La lista de cuentas.
+ a| 
+xref:reference_element_api_account.adoc[cuenta] cabina
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "ListAccounts",
+   "params": {
+     "startAccountID"  : 0,
+     "limit" : 1000
+   },
+   "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+   "result" : {
+    "accounts": [
+	{
+        "attributes": {},
+        "username": "jamesw",
+        "targetSecret": "168#5A757ru268)",
+        "volumes": [],
+        "enableChap": false,
+        "status": "active",
+        "accountID": 16,
+        "storageContainerID": "abcdef01-1234-5678-90ab-cdef01234567",
+        "initiatorSecret": "168#5A757ru268)"
+    },
+    {
+        "attributes": {},
+        "username": "jimmyd",
+        "targetSecret": "targetsecret",
+        "volumes": [],
+        "enableChap": true,
+        "status": "active",
+        "accountID": 5,
+        "storageContainerID": "abcdef01-1234-5678-90ab-cdef01234567",
+        "initiatorSecret": "initiatorsecret"
+    }
+  ]
+}
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

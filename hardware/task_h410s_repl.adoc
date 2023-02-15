@@ -1,0 +1,245 @@
+---
+permalink: hardware/task_h410s_repl.html 
+sidebar: sidebar 
+keywords: h410s, replacement, node replacement, maintenance 
+summary: Debe sustituir un nodo de almacenamiento en caso de que se produzca un fallo de CPU, problemas de tarjeta radial, otros problemas de la placa base o si no se enciende. Las instrucciones se aplican a los nodos de almacenamiento H410S. 
+---
+= Sustituya un nodo H410S
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe sustituir un nodo de almacenamiento en caso de que se produzca un fallo de CPU, problemas de tarjeta radial, otros problemas de la placa base o si no se enciende. Las instrucciones se aplican a los nodos de almacenamiento H410S.
+
+Las alarmas en la interfaz de usuario del software NetApp Element le alertan de un nodo de almacenamiento. Debe usar la interfaz de usuario de Element para obtener el número de serie (etiqueta de servicio) del nodo con errores. Necesita esta información para localizar el nodo con errores en el clúster.
+
+Aquí se encuentra la parte posterior de un chasis de dos racks (2U) de cuatro nodos con cuatro nodos de almacenamiento:
+
+image::hci_stornode_rear.gif[En esta figura, se muestra el chasis de cuatro nodos con cuatro nodos de almacenamiento.]
+
+A continuación, se muestra la vista frontal de un chasis de cuatro nodos con nodos H410S, mostrando las bahías que corresponden a cada nodo:
+
+image::hci_stor_node_ssd_bays.gif[Muestra las bahías asociadas con cada nodo en un chasis de cuatro nodos con nodos H410S.]
+
+.Lo que necesitará
+* Verificó que el nodo de almacenamiento está defectuoso y se debe sustituir.
+* Obtuvo un nodo de almacenamiento de reemplazo.
+* Usted tiene una muñequera de descarga electrostática (ESD), o usted ha tomado otra protección antiestática.
+* Ha etiquetado cada cable conectado al nodo de almacenamiento.
+
+
+A continuación, se ofrece una descripción general de alto nivel de los pasos:
+
+* <<Prepare para sustituir el nodo>>
+* <<Sustituya el nodo en el chasis>>
+* <<Añada el nodo al clúster>>
+
+
+
+
+== Prepare para sustituir el nodo
+
+Debe quitar el nodo de almacenamiento defectuoso correctamente desde el clúster en la interfaz de usuario del software NetApp Element antes de instalar el nodo de reemplazo. Puede hacer esto sin causar ninguna interrupción del servicio. Debe obtener el número de serie del nodo de almacenamiento defectuoso en la interfaz de usuario de Element y relacionarlo con el número de serie de la etiqueta adhesiva en la parte posterior del nodo.
+
+.Pasos
+. En la interfaz de usuario de Element, seleccione *Cluster* > *Drives*.
+. Quite las unidades del nodo mediante uno de los siguientes métodos:
++
+[cols="2*"]
+|===
+| Opción | Pasos 
+
+
+ a| 
+Para quitar unidades individuales
+ a| 
+.. Haga clic en *acciones* para la unidad que desea quitar.
+.. Haga clic en *Quitar*.
+
+
+
+
+ a| 
+Para quitar varias unidades
+ a| 
+.. Seleccione todas las unidades que desee quitar y haga clic en *acciones masivas*.
+.. Haga clic en *Quitar*.
+
+
+|===
+. Seleccione *Cluster* > *Nodes*.
+. Tenga en cuenta el número de serie (etiqueta de servicio) del nodo defectuoso. Debe coincidir con el número de serie de la etiqueta en la parte posterior del nodo.
+. Después de anotar el número de serie, quite el nodo del clúster del siguiente modo:
++
+.. Seleccione el botón *acciones* del nodo que desea quitar.
+.. Seleccione *Quitar*.
+
+
+
+
+
+
+== Sustituya el nodo en el chasis
+
+Después de quitar el nodo defectuoso del clúster mediante la interfaz de usuario del software NetApp Element, estará listo para quitar físicamente el nodo del chasis. Debe instalar el nodo de reemplazo en la misma ranura del chasis desde el que quitó el nodo con errores.
+
+.Pasos
+. Use protección antiestática antes de continuar.
+. Desembale el nuevo nodo de almacenamiento y configúrelo en una superficie plana cerca del chasis.
++
+Mantenga el material de empaque durante el momento en que devuelve el nodo defectuoso a NetApp.
+
+. Etiquete cada cable que esté insertado en la parte posterior del nodo de almacenamiento que desea quitar.
++
+Después de instalar el nodo de almacenamiento nuevo, debe insertar los cables en los puertos originales.
+
++
+Esta es una imagen que muestra la parte posterior de un nodo de almacenamiento:
+
++
+image::../media/hci_isi_storage_cabling.png[En esta figura, se muestra el cableado del nodo de almacenamiento.]
+
++
+[cols="2*"]
+|===
+| Puerto | Detalles 
+
+
+ a| 
+Puerto A
+ a| 
+Puerto 1/10 GbE RJ45
+
+
+
+ a| 
+Puerto B
+ a| 
+Puerto 1/10 GbE RJ45
+
+
+
+ a| 
+Puerto C
+ a| 
+Puerto SFP+ o SFP28 de 10 GbE
+
+
+
+ a| 
+Puerto D
+ a| 
+Puerto SFP+ o SFP28 de 10 GbE
+
+
+
+ a| 
+IPMI
+ a| 
+Puerto 1/10 GbE RJ45
+
+|===
+. Desconecte todos los cables del nodo de almacenamiento.
+. Tire hacia abajo del asa de leva en el lado derecho del nodo y tire del nodo para sacarlo con las dos asas de leva.
++
+El mango de leva que tira hacia abajo tiene una flecha sobre él para indicar la dirección en la que se mueve. El otro controlador de leva no se mueve y está allí para ayudarle a sacar el nodo.
+
++
+image::../media/hci_stor_node_camhandles.gif[En esta figura]
+
++
+[cols="2*"]
+|===
+| Elemento | Descripción 
+
+
+ a| 
+1
+ a| 
+Asa de leva para ayudarle a sacar el nodo.
+
+
+
+ a| 
+2
+ a| 
+Mango de leva que se tira hacia abajo antes de sacar el nodo.
+
+|===
++
+
+NOTE: Dé soporte al nodo con las dos manos cuando lo tire del chasis.
+
+. Coloque el nodo en una superficie nivelada.
++
+Debe empaquetar el nodo y devolverlo a NetApp.
+
+. Instale el nodo de repuesto en la misma ranura del chasis.
++
+
+IMPORTANT: Asegúrese de no utilizar una fuerza excesiva al deslizar el nodo en el chasis.
+
+. Mueva las unidades del nodo que quitó e insértelas en el nodo nuevo.
+. Vuelva a conectar los cables a los puertos desde los que se desconectaron originalmente.
++
+Las etiquetas que tenía en los cables cuando los desconectó le ayudarán a guiar.
+
++
+[NOTE]
+====
+.. Si la apertura de flujo de aire de la parte trasera del chasis está bloqueada con cables o etiquetas, puede provocar fallos prematuros en los componentes debido al sobrecalentamiento.
+.. No fuerce los cables hacia los puertos, podría dañar los cables, los puertos o ambos.
+
+
+====
++
+
+TIP: Asegúrese de que el nodo de reemplazo esté cableado de la misma manera que los otros nodos del chasis.
+
+. Pulse el botón situado en la parte frontal del nodo para encender el nodo.
+
+
+
+
+== Añada el nodo al clúster
+
+Cuando se añade un nodo al clúster o se instalan unidades nuevas en un nodo existente, las unidades se registran automáticamente como Available. Las unidades se deben añadir al clúster mediante la interfaz de usuario o la API de Element antes de que puedan participar en el clúster.
+
+La versión de software de cada nodo en un clúster tiene que ser compatible. Cuando se añade un nodo a un clúster, el clúster instala la versión del clúster del software Element en el nuevo nodo según sea necesario.
+
+.Pasos
+. Seleccione *Cluster* > *Nodes*.
+. Seleccione *pendiente* para ver la lista de nodos pendientes.
+. Debe realizar una de las siguientes acciones:
++
+** Para agregar nodos individuales, seleccione el icono *acciones* del nodo que desea agregar.
+** Para añadir varios nodos, active la casilla de los nodos que desee agregar y, a continuación, *acciones masivas*.
++
+
+NOTE: Si el nodo que desea añadir tiene una versión de software Element diferente a la versión que se ejecuta en el clúster, el clúster actualiza de forma asíncrona el nodo a la versión del software Element que se ejecuta en el maestro de clústeres. Después de que se actualiza el nodo, se añade automáticamente al clúster. Durante este proceso asíncrono, el nodo estará en un `pendingActive` estado.
+
+
+
+. Seleccione *Agregar*.
++
+El nodo aparece en la lista de nodos activos.
+
+. En la interfaz de usuario de Element, seleccione *Cluster* > *Drives*.
+. Seleccione *Available* para ver la lista de unidades disponibles.
+. Debe realizar una de las siguientes acciones:
++
+** Para agregar unidades individuales, seleccione el icono *acciones* de la unidad que desea agregar y, a continuación, seleccione *Agregar*.
+** Para añadir varias unidades, active las casillas de verificación de las unidades que desee agregar, seleccione *acciones masivas* y, a continuación, seleccione *Agregar*.
+
+
+
+
+
+
+== Obtenga más información
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Página de recursos de SolidFire de NetApp"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentación para versiones anteriores de SolidFire de NetApp y los productos Element"^]
+

@@ -1,0 +1,220 @@
+---
+permalink: api/reference_element_api_schedule.html 
+sidebar: sidebar 
+keywords: object,objects,schedule 
+summary: El objeto de programación contiene información sobre una programación creada para realizar de forma autónoma una instantánea de un volumen. Puede recuperar información de programación para todas las programaciones con el método API ListSchedules. 
+---
+= programación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El objeto de programación contiene información sobre una programación creada para realizar de forma autónoma una instantánea de un volumen. Puede recuperar la información de la programación de todas las programaciones con el `ListSchedules` Método API.
+
+
+
+== Miembros de objeto
+
+Este objeto contiene los siguientes miembros:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+atributos
+ a| 
+Indica la frecuencia de la incidencia de la programación. Los posibles valores son los siguientes:
+
+* Día de la semana
+* Día del mes
+* Intervalo de tiempo
+
+ a| 
+Objeto JSON
+
+
+
+ a| 
+HasError
+ a| 
+Indica si la programación tiene errores o no. Los posibles valores son los siguientes:
+
+* verdadero
+* falso
+
+ a| 
+booleano
+
+
+
+ a| 
+horas
+ a| 
+Muestra las horas que transcurren antes de crear la siguiente snapshot. Los valores posibles están entre 0 y 24.
+ a| 
+entero
+
+
+
+ a| 
+LastRunStatus
+ a| 
+Indica el estado de la última snapshot programada. Los posibles valores son los siguientes:
+
+* Correcto
+* Error
+
+ a| 
+cadena
+
+
+
+ a| 
+LastRunTimeStart
+ a| 
+Indica la última vez que se inició la programación.
+ a| 
+Cadena de fecha ISO 8601
+
+
+
+ a| 
+minutos
+ a| 
+Muestra los minutos que transcurrirán antes de que se cree la siguiente snapshot. Los valores posibles están entre 0 y 59.
+ a| 
+entero
+
+
+
+ a| 
+mesdays
+ a| 
+Indica los días del mes en que se realizará una copia de Snapshot.
+ a| 
+cabina
+
+
+
+ a| 
+en pausa
+ a| 
+Indica si la programación se pausó o no. Los posibles valores son los siguientes:
+
+* verdadero
+* falso
+
+ a| 
+booleano
+
+
+
+ a| 
+recurrente
+ a| 
+Indica si la programación se repite o no. Los posibles valores son los siguientes:
+
+* verdadero
+* falso
+
+ a| 
+booleano
+
+
+
+ a| 
+RunNextInterval
+ a| 
+Indica si la programación se ejecutará la próxima vez que el programador esté activo. Si es verdadero, la programación se ejecutará la próxima vez que el programador esté activo y, a continuación, este valor se vuelva a definir como FALSE. Los posibles valores son los siguientes:
+
+* verdadero
+* falso
+
+ a| 
+booleano
+
+
+
+ a| 
+ID de intervalo
+ a| 
+El ID único de la programación.
+ a| 
+entero
+
+
+
+ a| 
+Info. De Lac
+ a| 
+Incluye el nombre único que se le asignó a la programación, el período de retención de la snapshot que se creó y el ID de volumen del volumen a partir del cual se creó la copia de Snapshot.
+ a| 
+Objeto JSON
+
+
+
+ a| 
+Nombre de la pila
+ a| 
+El nombre único que se asigna a la programación.
+ a| 
+cadena
+
+
+
+ a| 
+Tipo de columna
+ a| 
+En este momento solo se admiten los tipos de programación de Snapshot.
+ a| 
+cadena
+
+
+
+ a| 
+SnapMirrorLabel
+ a| 
+El snapMirrorLabel que se aplicará a la instantánea o instantánea de grupo creadas, incluidos en el documento LROInfo. Si no se establece, este valor es nulo.
+ a| 
+cadena
+
+
+
+ a| 
+Fecha de inicio
+ a| 
+Indica la fecha la primera vez que se inició o empezará la programación; se le formateó la hora UTC.
+ a| 
+Cadena de fecha ISO 8601
+
+
+
+ a| 
+ToDeDeleted
+ a| 
+Indica si la programación está marcada para eliminarse. Los posibles valores son los siguientes:
+
+* verdadero
+* falso
+
+ a| 
+booleano
+
+
+
+ a| 
+días laborables
+ a| 
+Indica los días de la semana en que se realizará una copia de Snapshot.
+ a| 
+cabina
+
+|===
+
+
+== Obtenga más información
+
+xref:reference_element_api_listschedules.adoc[ListSchedules]

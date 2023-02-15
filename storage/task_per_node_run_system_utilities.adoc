@@ -1,0 +1,103 @@
+---
+permalink: storage/task_per_node_run_system_utilities.html 
+sidebar: sidebar 
+keywords: storage nodes, running system utilities, system utilities, network settings, testing changes, reboot the node, power cycle, shuts down the node 
+summary: Se puede usar la interfaz de usuario por nodo para el nodo de almacenamiento a fin de crear o eliminar paquetes de soporte, restablecer la configuración de las unidades y reiniciar los servicios de red o de clúster. 
+---
+= Ejecute las utilidades del sistema con la interfaz de usuario por nodo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se puede usar la interfaz de usuario por nodo para el nodo de almacenamiento a fin de crear o eliminar paquetes de soporte, restablecer la configuración de las unidades y reiniciar los servicios de red o de clúster.
+
+Inició sesión en la interfaz de usuario por nodo del nodo de almacenamiento.
+
+. Haga clic en *Utilidades del sistema*.
+. Haga clic en el botón de la utilidad del sistema que desea ejecutar.
++
+** *Alimentación de control*
++
+Reinicia, apaga o enciende el nodo.
+
++
+
+IMPORTANT: Esta operación provoca la pérdida temporal de conectividad de red.
+
++
+Especifique los siguientes parámetros:
+
++
+*** Acción: Las opciones incluyen reinicio y parada (apagado).
+*** Retraso en el reactivación: En cualquier momento adicional antes de que el nodo vuelva a estar online.
+
+
+** *Recopilar registros de nodos*
++
+Crea un paquete de soporte en el directorio /tmp/bundles del nodo.
+
++
+Especifique los siguientes parámetros:
+
++
+*** Bundle Name: Nombre único para cada paquete de soporte creado. Si no se proporciona ningún nombre, "supportBundle" y el nombre de nodo se utilizan como nombre de archivo.
+*** Extra args: Este parámetro se alimenta con el script sf_make_support_bundle. Este parámetro solo se debe usar si lo solicita el soporte de NetApp.
+*** Timeout Sec: Especifique el número de segundos que se deben esperar para cada respuesta ping individual.
+
+
+** *Borrar registros de nodos*
++
+Elimina todos los paquetes de soporte actuales del nodo que se crearon con *Crear paquete de soporte de clúster* o el método API CreateSupportBundle.
+
+** *Restablecer las unidades*
++
+Inicializa las unidades y quita todos los datos que residen en ese momento en la unidad. Es posible reutilizar la unidad en un nodo existente o en un nodo actualizado.
+
++
+Especifique el siguiente parámetro:
+
++
+*** Unidades: Lista de nombres de dispositivos (no driveID) que se van a restablecer.
+
+
+** *Restablecer configuración de red*
++
+Ayuda a resolver problemas de configuración de red para un nodo individual y restablece la configuración de red de un nodo individual a la configuración predeterminada de fábrica.
+
+** *Restablecer nodo*
++
+Restablece un nodo a la configuración de fábrica. Todos los datos se quitan, pero la configuración de red del nodo se conserva durante esta operación. Los nodos solo se pueden restablecer si no se han asignado a un clúster y en estado disponible.
+
++
+
+IMPORTANT: Cuando utiliza esta opción, se eliminan del nodo todos los datos, paquetes (actualizaciones de software), configuraciones y archivos de registro.
+
+** *Reinicie Networking*
++
+Reinicia todos los servicios de red de un nodo.
+
++
+
+IMPORTANT: Esta operación puede provocar la pérdida temporal de conectividad de red.
+
+** *Reinicie Servicios*
++
+Reinicia los servicios del software Element en un nodo.
+
++
+
+IMPORTANT: Esta operación puede provocar una interrupción temporal del servicio de los nodos. Debe realizar esta operación solo cuando lo indique el soporte de NetApp.
+
++
+Especifique los siguientes parámetros:
+
++
+*** Servicio: Nombre del servicio que se va a reiniciar.
+*** Acción: Acción a realizar en el servicio. Las opciones incluyen inicio, parada y reinicio.
+
+
+
+
+

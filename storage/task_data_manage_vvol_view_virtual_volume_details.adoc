@@ -1,0 +1,86 @@
+---
+permalink: storage/task_data_manage_vvol_view_virtual_volume_details.html 
+sidebar: sidebar 
+keywords: virtual volumes, view details vvols, vvols performance activity, vSphere 
+summary: En la interfaz de usuario de Element, se puede revisar la información relacionada con los volúmenes virtuales activos del clúster. También se puede ver la actividad de rendimiento de cada volumen virtual, como la entrada, la salida, el rendimiento y la latencia, profundidad de cola e información de volumen. 
+---
+= Ver los detalles de los volúmenes virtuales
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En la interfaz de usuario de Element, se puede revisar la información relacionada con los volúmenes virtuales activos del clúster. También se puede ver la actividad de rendimiento de cada volumen virtual, como la entrada, la salida, el rendimiento y la latencia, profundidad de cola e información de volumen.
+
+.Lo que necesitará
+* Debe haber habilitado la funcionalidad VVol en la interfaz de usuario de Element para el clúster.
+* Debe haber creado un contenedor de almacenamiento asociado.
+* Debe haber configurado el clúster de vSphere para usar la funcionalidad VVol del software Element.
+* Debe haber creado al menos una máquina virtual en vSphere.
+
+
+.Pasos
+. Haga clic en *VVols* > *Virtual Volumes*.
++
+Se muestra la información de todos los volúmenes virtuales activos.
+
+. Haga clic en el icono *acciones* del volumen virtual que desee revisar.
+. En el menú que se abre, seleccione *Ver detalles*.
+
+
+
+
+== Detalles
+
+La página Virtual Volumes de la pestaña VVols proporciona información sobre cada volumen virtual activo en el clúster, como el ID de volumen, el ID de snapshot, el ID de volumen virtual primario y el ID de volumen virtual.
+
+* *ID de volumen*: El ID del volumen subyacente.
+* *ID de instantánea*: El ID de la instantánea de volumen subyacente. El valor es 0 si el volumen virtual no representa una snapshot de SolidFire.
+* *Id. De volumen virtual principal*: El ID de volumen virtual del volumen virtual principal. Si el ID solo está formado por ceros, indica que el volumen virtual es independiente y no tiene ningún enlace a un volumen principal.
+* *Virtual Volume ID*: El UUID del volumen virtual.
+* *Nombre*: Nombre asignado al volumen virtual.
+* *Contenedor de almacenamiento*: El contenedor de almacenamiento que posee el volumen virtual.
+* *Tipo de SO invitado*: Sistema operativo asociado al volumen virtual.
+* *Tipo de volumen virtual*: Tipo de volumen virtual: Config, datos, memoria, intercambio u otro.
+* *Access*: Los permisos de lectura y escritura asignados al volumen virtual.
+* *Tamaño*: El tamaño del volumen virtual en GB o GIB.
+* *Instantáneas*: El número de instantáneas asociadas. Haga clic en el número para vincular a detalles de instantánea.
+* *Min IOPS*: El valor mínimo de QoS de IOPS del volumen virtual.
+* *Max IOPS*: El valor máximo de QoS para IOPS del volumen virtual.
+* *Burst IOPS*: El valor máximo de QoS de ráfaga del volumen virtual.
+* *VMW_VMID*: VMware define la información de los campos que van precedidos por "VMW_".
+* *Crear tiempo*: La hora en que se completó la tarea de creación de volumen virtual.
+
+
+
+
+== Detalles de cada volumen virtual
+
+La página Virtual Volumes de la pestaña VVols proporciona la siguiente información sobre volúmenes virtuales cuando selecciona un volumen virtual y desea ver sus detalles.
+
+* *VMW_XXX*: VMware define la información de los campos que van precedidos por "VMW_".
+* *Id. De volumen virtual principal*: El ID de volumen virtual del volumen virtual principal. Si el ID solo está formado por ceros, indica que el volumen virtual es independiente y no tiene ningún enlace a un volumen principal.
+* *Virtual Volume ID*: El UUID del volumen virtual.
+* *Tipo de volumen virtual*: Tipo de volumen virtual: Config, datos, memoria, intercambio u otro.
+* *ID de volumen*: El ID del volumen subyacente.
+* *Access*: Los permisos de lectura y escritura asignados al volumen virtual.
+* *Nombre de cuenta*: Nombre de la cuenta que contiene el volumen.
+* *Grupos de acceso*: Grupos de acceso de volúmenes asociados.
+* *Tamaño total del volumen*: Capacidad total aprovisionada en bytes.
+* * Bloques no cero*: Número total de bloques de 4 KiB con datos después de haber completado la última operación de recopilación de basura.
+* * Cero bloques*: Número total de bloques de 4 KiB sin datos después de haber completado la última ronda de recolección de basura.
+* *Instantáneas*: El número de instantáneas asociadas. Haga clic en el número para vincular a detalles de instantánea.
+* *Min IOPS*: El valor mínimo de QoS de IOPS del volumen virtual.
+* *Max IOPS*: El valor máximo de QoS para IOPS del volumen virtual.
+* *Burst IOPS*: El valor máximo de QoS de ráfaga del volumen virtual.
+* *Activar 512*: Debido a que los volúmenes virtuales siempre utilizan emulación de tamaño de bloque de 512 bytes, el valor es siempre yes.
+* *Volúmenes emparejados*: Indica si un volumen está emparejado.
+* *Crear tiempo*: La hora en que se completó la tarea de creación de volumen virtual.
+* *Tamaño de los bloques*: Tamaño de los bloques en el volumen.
+* *Escrituras no alineadas*: Para volúmenes 512e, el número de operaciones de escritura que no estaban en un ámbito de sector 4k. Si el número de escrituras no alineadas es grande, puede indicar que la alineación de las particiones no es la adecuada.
+* *Lecturas no alineadas*: Para los volúmenes 512e, el número de operaciones de lectura que no estaban en un ámbito del sector 4k. Si el número de lecturas no alineadas es grande, puede indicar que la alineación de las particiones no es la adecuada.
+* *SsiEUIDeviceID*: Identificador único global de dispositivo SCSI para el volumen en formato de 16 bytes basado en EUI-64.
+* *SscsiNAADeviceID*: Identificador de dispositivo SCSI exclusivo global para el volumen en el formato extendido registrado de NAA según IEEE.
+* *Atributos*: Lista de pares nombre-valor en formato de objeto JSON.
+

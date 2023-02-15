@@ -1,0 +1,130 @@
+---
+permalink: api/reference_element_api_listvolumestatsbyvolume.html 
+sidebar: sidebar 
+keywords: volumes,volume,stats,list,listing,listvolumestatsbyvolume,activity 
+summary: Puede usar el método ListVolumeStatsByVolume para enumerar las medidas de actividad de alto nivel para cada volumen, por volumen. Los valores se acumulan a partir de la creación del volumen. 
+---
+= ListVolumeStatsByVolume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `ListVolumeStatsByVolume` método para enumerar las mediciones de actividad de alto nivel para cada volumen, por volumen. Los valores se acumulan a partir de la creación del volumen.
+
+
+
+== Parámetro
+
+Este método tiene el siguiente parámetro de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+IncludeVirtualVolumes
+ a| 
+De forma predeterminada, se incluyen los volúmenes virtuales en la respuesta. Para excluir volúmenes virtuales, se debe establecer en FALSE.
+ a| 
+booleano
+ a| 
+verdadero
+ a| 
+No
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+VolumeStats
+ a| 
+Lista de información de actividad de volumen.
+ a| 
+xref:reference_element_api_volumestats.adoc[VolumeStats] cabina
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "ListVolumeStatsByVolume",
+   "params": {},
+   "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "volumeStats": [
+      {
+        "accountID": 3,
+        "actualIOPS": 0,
+        "asyncDelay": null,
+        "averageIOPSize": 4096,
+        "burstIOPSCredit": 30000,
+        "clientQueueDepth": 0,
+        "desiredMetadataHosts": null,
+        "latencyUSec": 0,
+        "metadataHosts": {
+          "deadSecondaries": [],
+          "liveSecondaries": [
+              16
+          ],
+          "primary": 12
+        },
+        "nonZeroBlocks": 7499205,
+        "readBytes": 159012818944,
+        "readBytesLastSample": 0,
+        "readLatencyUSec": 0,
+        "readOps": 38821489,
+        "readOpsLastSample": 0,
+        "samplePeriodMSec": 500,
+        "throttle": 0,
+        "timestamp": "2016-10-17T20:55:31.087537Z",
+        "unalignedReads": 0,
+        "unalignedWrites": 0,
+        "volumeAccessGroups": [
+          1
+        ],
+        "volumeID": 1,
+        "volumeSize": 53687091200,
+        "volumeUtilization": 0,
+        "writeBytes": 52992585728,
+        "writeBytesLastSample": 0,
+        "writeLatencyUSec": 0,
+        "writeOps": 12937643,
+        "writeOpsLastSample": 0,
+        "zeroBlocks": 5607995
+      }
+    ]
+  }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

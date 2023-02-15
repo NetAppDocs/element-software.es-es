@@ -1,0 +1,59 @@
+---
+permalink: api/reference_element_api_disablesnmp.html 
+sidebar: sidebar 
+keywords: SNMP,disable,disabling,DisableSnmp 
+summary: Puede usar el método DisableSnmp para deshabilitar SNMP en los nodos de clúster. 
+---
+= DisableSnmp
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `DisableSnmp` Método para deshabilitar SNMP en los nodos del clúster.
+
+
+
+== Parámetro
+
+Este método no tiene parámetro de entrada.
+
+
+
+== Valor de retorno
+
+Este método no tiene ningún valor devuelto.
+
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+  "method": "DisableSnmp",
+  "params": {},
+  "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "result" : {},
+  "id" : 1
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

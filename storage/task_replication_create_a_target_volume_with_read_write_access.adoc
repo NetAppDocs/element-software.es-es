@@ -1,0 +1,25 @@
+---
+permalink: storage/task_replication_create_a_target_volume_with_read_write_access.html 
+sidebar: sidebar 
+keywords: target volume, create, read, write access 
+summary: 'El proceso de replicación implica dos extremos: El volumen de origen y el de destino. Cuando se crea el volumen objetivo, el volumen se establece automáticamente en el modo de lectura/escritura para aceptar los datos durante la replicación.' 
+---
+= Cree un volumen objetivo con acceso de lectura o escritura
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El proceso de replicación implica dos extremos: El volumen de origen y el de destino. Cuando se crea el volumen objetivo, el volumen se establece automáticamente en el modo de lectura/escritura para aceptar los datos durante la replicación.
+
+. Seleccione *Gestión* > *volúmenes*.
+. Haga clic en *Crear volumen*.
+. En el cuadro de diálogo Create a New Volume, introduzca el nombre del volumen en Volume Name.
+. Introduzca el tamaño total del volumen, seleccione un tamaño de bloque para el volumen y seleccione la cuenta que debe tener acceso al volumen.
+. Haga clic en *Crear volumen*.
+. En la ventana Active, haga clic en el icono Actions del volumen.
+. Haga clic en *Editar*.
+. Cambie el nivel de acceso de cuenta a destino de replicación.
+. Haga clic en *Guardar cambios*.
+

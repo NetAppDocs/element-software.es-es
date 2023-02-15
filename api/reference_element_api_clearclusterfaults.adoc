@@ -1,0 +1,83 @@
+---
+permalink: api/reference_element_api_clearclusterfaults.html 
+sidebar: sidebar 
+keywords: cluster,clear,clearing,fault,faults,support bundles,ClearClusterFaults 
+summary: Puede usar el método ClearClusterFaults para borrar información sobre los fallos actuales y detectados previamente. Se pueden borrar tanto los fallos resueltos como los no resueltos. 
+---
+= ClearClusterFaults
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `ClearClusterFaults` método para borrar información sobre fallos tanto actuales como detectados previamente. Se pueden borrar tanto los fallos resueltos como los no resueltos.
+
+
+
+== Parámetro
+
+Este método tiene el siguiente parámetro de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+Intachable
+ a| 
+Determina los tipos de fallos que se van a borrar. Los posibles valores son los siguientes:
+
+* actual:
++
+Fallos que se detectan actualmente y que no se han resuelto.
+
+* Resuelto: Fallos detectados y resueltos anteriormente.
+* All: Fallos tanto actuales como resueltos. El estado del fallo puede ser determinado por el campo "resolucionado" del objeto de fallo.
+
+ a| 
+cadena
+ a| 
+resuelto
+ a| 
+No
+
+|===
+
+
+== Valores devueltos
+
+Este método no tiene valores devueltos.
+
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "ClearClusterFaults",
+   "params": {},
+  "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id" : 1,
+    "result" : {}
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

@@ -1,0 +1,67 @@
+---
+permalink: setup/task_setup_determine_which_solidfire_components_to_install.html 
+sidebar: sidebar 
+keywords: setup, element, solidfire active iq 
+summary: 'Tal vez desee comprobar qué componentes de SolidFire, como el nodo de gestión, Active IQ y el agente de supervisión de NetApp \(NMA\), debe instalar, en función de las opciones de configuración e implementación.' 
+---
+= Determine qué componentes de SolidFire instalar
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Tal vez desee comprobar qué componentes de SolidFire, como el nodo de gestión, Active IQ y el agente de supervisión de NetApp (NMA), se debería instalar, en función de las opciones de configuración e implementación.
+
+La siguiente tabla enumera los componentes adicionales e indica si debe instalarlos.
+
+[cols="3*"]
+|===
+| Componente | Clúster de almacenamiento de SolidFire independiente | Clúster de NetApp HCI 
+
+
+ a| 
+Nodo de gestión
+ a| 
+Recomendado
+ a| 
+Instalado de forma predeterminada, necesario
+
+
+
+ a| 
+Active IQ
+ a| 
+Recomendado*
+ a| 
+Recomendado*
+
+
+
+ a| 
+Agente de supervisión de NetApp
+ a| 
+No admitido
+ a| 
+Recomendado
+
+|===
+*Se requiere Active IQ para los clústeres de almacenamiento SolidFire con licencia por capacidad.
+
+.Pasos
+. Determine qué componentes se deben instalar.
+. Complete la instalación de acuerdo con link:../mnode/task_mnode_install.html["instale el nodo de gestión"] procedimiento.
++
+
+NOTE: Para configurar Active IQ, utilice `--telemetry_active` Parámetro en el script de configuración para habilitar la recogida de datos para análisis por parte de Active IQ.
+
+. Para obtener información sobre el agente de supervisión de NetApp, consulte este tema link:../mnode/task_mnode_enable_activeIQ.html["procedimiento"].
+
+
+
+
+== Si quiere más información
+
+* https://www.netapp.com/data-storage/solidfire/documentation["Página SolidFire y Element Resources"^]
+* https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
+

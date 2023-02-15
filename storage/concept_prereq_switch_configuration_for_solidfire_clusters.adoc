@@ -1,0 +1,76 @@
+---
+permalink: storage/concept_prereq_switch_configuration_for_solidfire_clusters.html 
+sidebar: sidebar 
+keywords: cluster switch configuration, best practices for switch configuration, optimal storage performance, node hardware, traffic, cluster, Element software, best practices, switches, switch requirements, storage, performance, storage performance 
+summary: El sistema de software NetApp Element tiene ciertos requisitos de switch y prácticas recomendadas para un rendimiento óptimo del almacenamiento. 
+---
+= Configuración de switches para los clústeres que ejecutan el software Element
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El sistema de software NetApp Element tiene ciertos requisitos de switch y prácticas recomendadas para un rendimiento óptimo del almacenamiento.
+
+Los nodos de almacenamiento requieren switches Ethernet de 10 GbE o 25GbE, en función del hardware de nodos específicos para la comunicación de los servicios de almacenamiento iSCSI y los servicios de nodo dentro del clúster. Los switches de 1 GbE se pueden usar para estos tipos de tráfico:
+
+* Gestión del clúster y los nodos
+* Tráfico de gestión dentro del clúster entre los nodos
+* Tráfico entre los nodos del clúster y la máquina virtual del nodo de gestión
+
+
+|===
+
+
+ a| 
+*Práctica recomendada:* debe implementar las siguientes prácticas recomendadas al configurar los conmutadores Ethernet para el tráfico de clúster:
+
+* Para el tráfico que no sea de almacenamiento en el clúster, implemente un par de switches de 1 GbE para proporcionar alta disponibilidad y uso compartido de la carga.
+* En los switches de red de almacenamiento, implemente switches en parejas y configure y utilice tramas gigantes (un tamaño de MTU de 9216 bytes). Esto garantiza una instalación correcta y elimina los errores de red de almacenamiento debidos a paquetes fragmentados.
+
+
+|===
+La implementación de Element requiere al menos dos segmentos de red, uno para cada tipo de tráfico siguiente:
+
+* Gestión
+* Almacenamiento/datos
+
+
+Según los modelos de nodos de almacenamiento de NetApp H-Series y la configuración de cableado planificada, estas redes se pueden separar mediante switches distintos, o bien mediante VLAN. Para la mayoría de las implementaciones, sin embargo, es necesario separar lógicamente estas redes mediante VLAN.
+
+Los nodos de almacenamiento deben poder comunicarse antes, durante y después de la implementación.
+
+Si va a implementar redes de gestión independientes para los nodos de almacenamiento, asegúrese de que estas redes de gestión tengan rutas de red entre ellas. Estas redes deben tener puertas de enlace asignadas, y debe existir una ruta entre las puertas de enlace. Asegúrese de que cada nodo nuevo tenga asignada una puerta de enlace para facilitar la comunicación entre nodos y redes de gestión.
+
+NetApp Element requiere lo siguiente:
+
+* Todos los puertos de switch conectados a los nodos de almacenamiento H-Series de NetApp deben configurarse como puertos periféricos de árbol de expansión.
++
+** En los switches Cisco, en función del modelo del switch, la versión del software y el tipo de puerto, puede hacerlo con uno de los siguientes comandos:
++
+*** `spanning-tree port type edge`
+*** `spanning-tree port type edge trunk`
+*** `spanning-tree portfast`
+*** `spanning-tree portfast trunk`
+
+
+** En los switches Mellanox, puede hacerlo con `spanning-tree port type edge` comando.
+
+
+* Los switches que controlan el tráfico de almacenamiento deben admitir velocidades de al menos 10 GbE por puerto (se admiten hasta 25 GbE por puerto).
+* Los switches que controlan el tráfico de gestión deben admitir velocidades de al menos 1 GbE por puerto.
+* Debe configurar tramas gigantes en los puertos del switch que controla el tráfico de almacenamiento. Los hosts deben poder enviar paquetes de 9000 bytes de extremo a extremo para una instalación correcta.
+* La latencia de red de ida y vuelta entre todos los nodos de almacenamiento no debe exceder los 2 ms.
+
+
+Algunos nodos proporcionan funcionalidades de gestión fuera de banda adicionales a través de un puerto de gestión dedicado. Los nodos NetApp H300S, H500S y H700S también permiten el acceso IPMI a través del puerto A. Como práctica recomendada, debe facilitar la gestión remota mediante la configuración de la gestión fuera de banda para todos los nodos del entorno.
+
+
+
+== Si quiere más información
+
+* https://docs.netapp.com/us-en/hci/docs/hci_prereqs_network_switch.html["Requisitos de switch y red de NetApp HCI"^]
+* https://www.netapp.com/data-storage/solidfire/documentation["Página SolidFire y Element Resources"^]
+* https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
+

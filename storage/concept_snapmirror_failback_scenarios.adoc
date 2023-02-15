@@ -1,0 +1,35 @@
+---
+permalink: storage/concept_snapmirror_failback_scenarios.html 
+sidebar: sidebar 
+keywords: failback scenarios, snapmirror, dr, disaster recovery 
+summary: 'La funcionalidad de recuperación ante desastres de SnapMirror se ilustra en dos escenarios de conmutación tras recuperación. Se supone que se ha producido un error en la relación original sobre \(roto\).' 
+---
+= Escenarios de conmutación tras recuperación de SnapMirror
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La funcionalidad de recuperación ante desastres de SnapMirror se ilustra en dos escenarios de conmutación tras recuperación. Se asume que la relación original ha sido fallida (rota).
+
+Los pasos de los procedimientos correspondientes se añaden como referencia.
+
+
+NOTE: En los ejemplos que se muestran aquí, R1 = la relación original en la que el clúster que ejecuta el software NetApp Element es el volumen de origen original (elemento) y ONTAP es el volumen de destino original (ONTAP). R2 y R3 representan las relaciones inversas creadas a través de la operación de resincronización inversa.
+
+La siguiente imagen muestra el escenario de conmutación por recuperación cuando el volumen de origen sigue existiendo:
+
+image::../media/snapmirror_element_failback1.gif[fallo de snapmirror element 1]
+
+La siguiente imagen muestra el escenario de conmutación por recuperación cuando el volumen de origen ya no existe:
+
+image::../media/snapmirror_element_failback2.png[fallo de snapmirror element 2]
+
+
+
+== Obtenga más información
+
+* xref:task_snapmirror_perform_failback_when_source_volume_exists.adoc[Realice una conmutación tras recuperación cuando el volumen de origen siga existiendo]
+* xref:task_snapmirror_performing_failback_when_source_volume_no_longer_exists.adoc[Realice una conmutación tras recuperación cuando el volumen de origen ya no exista]
+

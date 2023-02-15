@@ -1,0 +1,158 @@
+---
+permalink: api/reference_element_api_listnetworkinterfaces.html 
+sidebar: sidebar 
+keywords: network,interface,interfaces,list,listing,listnetworkinterfaces 
+summary: Puede utilizar el método ListNetworkinterfaces para mostrar información sobre cada interfaz de red en un nodo. Este método de API está pensado para usar en nodos individuales; se necesitan ID de usuario y autenticación de contraseña para acceder a nodos individuales. Sin embargo, puede usar este método en el clúster si se da el valor TRUE al parámetro force en la llamada al método. Cuando se utiliza el parámetro en el clúster, se muestran todas las interfaces. 
+---
+= ListNetworkinterfaces
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `ListNetworkInterfaces` método para enumerar la información de cada interfaz de red en un nodo. Este método de API está pensado para usar en nodos individuales; se necesitan ID de usuario y autenticación de contraseña para acceder a nodos individuales. Sin embargo, puede usar este método en el clúster si se da el valor TRUE al parámetro force en la llamada al método. Cuando se utiliza el parámetro en el clúster, se muestran todas las interfaces.
+
+
+NOTE: El SDS empresarial de SolidFire no admite este método. Si utiliza este método en un sistema SolidFire eSDS, el método devolverá un error.
+
+
+
+== Parámetro
+
+Este método tiene el siguiente parámetro de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+fuerza
+ a| 
+Los posibles valores son los siguientes:
+
+* True: Se muestra información sobre todas las interfaces de red del clúster.
+* Falso: No se devuelve información.
+
+ a| 
+booleano
+ a| 
+Ninguno
+ a| 
+No
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+interfaces
+ a| 
+Una lista de información de configuración para cada interfaz de red del nodo de almacenamiento (o de todo el clúster de almacenamiento, si se fuerza = `true`).
+ a| 
+xref:reference_element_api_networkinterface.adoc[NetworkInterface] cabina
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+"method": "ListNetworkInterfaces",
+"params": {},
+"id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+	"id": 1,
+	"result": {
+		"nodes": [
+			{
+				"nodeID": 1,
+				"result": {
+					"interfaces": [
+						{
+							"address": "10.117.80.32",
+							"addressV6": "::",
+							"broadcast": "10.117.95.255",
+							"macAddress": "90:b1:1c:42:e0:1a",
+							"mtu": 9000,
+							"name": "Bond10G",
+							"namespace": false,
+							"netmask": "255.255.240.0",
+							"status": "UpAndRunning",
+							"type": "BondMaster",
+							"virtualNetworkTag": 0
+						},
+						{
+							"address": "10.117.64.32",
+							"addressV6": "::",
+							"broadcast": "10.117.79.255",
+							"macAddress": "90:b1:1c:42:e0:1e",
+							"mtu": 1500,
+							"name": "Bond1G",
+							"namespace": false,
+							"netmask": "255.255.240.0",
+							"status": "UpAndRunning",
+							"type": "BondMaster",
+							"virtualNetworkTag": 0
+						},
+						{
+							"address": "0.0.0.0",
+							"addressV6": "::",
+							"broadcast": "0.0.0.0",
+							"macAddress": "90:b1:1c:42:e0:1a",
+							"mtu": 9000,
+							"name": "eth0",
+							"namespace": false,
+							"netmask": "0.0.0.0",
+							"status": "UpAndRunning",
+							"type": "BondSlave",
+							"virtualNetworkTag": 0
+						},
+						{
+							"address": "127.0.0.1",
+							"addressV6": "::",
+							"broadcast": "0.0.0.0",
+							"macAddress": "00:00:00:00:00:00",
+							"mtu": 0,
+							"name": "lo",
+							"namespace": false,
+							"netmask": "0.0.0.0",
+							"status": "UpAndRunning",
+							"type": "Loopback",
+							"virtualNetworkTag": 0
+						}
+					]
+				}
+			}
+		]
+	}
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

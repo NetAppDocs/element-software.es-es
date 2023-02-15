@@ -1,0 +1,35 @@
+---
+permalink: storage/task_system_manage_cluster_ntp_configure_to_listen_for_ntp_broadcasts.html 
+sidebar: sidebar 
+keywords: ntp, broadcasts, server, config, server list, broadcast client 
+summary: 'Con el modo de difusión, puede indicar a cada nodo de un clúster que escuche en la red los mensajes de retransmisión del protocolo de tiempo de red \(NTP\) de un servidor determinado.' 
+---
+= Configure el clúster para que escuche las transmisiones NTP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Con el modo de retransmisión, puede ordenar a cada nodo de un clúster que escuche en la red de mensajes de retransmisión de protocolo de tiempo de redes (NTP) de un servidor determinado.
+
+.Lo que necesitará
+* Para poder configurar esta opción, debe tener privilegios de administrador del clúster.
+* Debe configurar un servidor NTP en la red como servidor de retransmisión.
+
+
+.Pasos
+. Haga clic en *Cluster* > *Settings*.
+. Introduzca en la lista de servidores el servidor NTP o los servidores que utilizan el modo de retransmisión.
+. En Configuración del protocolo de tiempo de redes, seleccione *Sí* para utilizar un cliente de difusión.
+. Para establecer el cliente de difusión, en el campo *servidor*, introduzca el servidor NTP configurado en modo de difusión.
+. Haga clic en *Guardar cambios*.
+
+
+
+
+== Obtenga más información
+
+* https://www.netapp.com/data-storage/solidfire/documentation["Página SolidFire y Element Resources"^]
+* https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
+

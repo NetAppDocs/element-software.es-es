@@ -1,0 +1,23 @@
+---
+permalink: storage/concept_intro_storage_nodes.html 
+sidebar: sidebar 
+keywords: storage nodes, management nodes, block space, metadata space, data management, storage management, Bond10G, network interface, network, metadata, data storage, storage, drives, network interfaces 
+summary: Un nodo de almacenamiento SolidFire es un servidor que contiene una colección de unidades que se comunican entre sí a través de la interfaz de red Bond10G. Las unidades de cada nodo contienen espacio de bloques y metadatos para almacenar y gestionar los datos. 
+---
+= Nodos de almacenamiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un nodo de almacenamiento SolidFire es un servidor que contiene una colección de unidades que se comunican entre sí a través de la interfaz de red Bond10G. Las unidades de cada nodo contienen espacio de bloques y metadatos para almacenar y gestionar los datos.
+
+Los nodos de almacenamiento tienen las siguientes características:
+
+* Cada nodo tiene un nombre único. Si un administrador no especifica un nombre de nodo, se usa el predeterminado, SF-XXXX, donde XXXX representa cuatro caracteres aleatorios generados por el sistema.
+* Cada nodo tiene su propia caché de escritura de alto rendimiento de memoria de acceso aleatorio no volátil (NVRAM) con la que se mejora el rendimiento general del sistema y se reduce la latencia de escritura.
+* Cada nodo está conectado a dos redes, almacenamiento y gestión, cada una con dos enlaces independientes por motivos de redundancia y rendimiento. Cada nodo requiere una dirección IP en cada red.
+* Es posible crear un clúster con nodos de almacenamiento nuevos o añadir nodos de almacenamiento a un clúster existente para aumentar el rendimiento y la capacidad del almacenamiento.
+* En cualquier momento que desee, se pueden añadir nodos al clúster o quitarlos sin tener que interrumpir el servicio.
+

@@ -1,0 +1,87 @@
+---
+permalink: api/reference_element_api_getremotelogginghosts.html 
+sidebar: sidebar 
+keywords: remote,logging,hosts,host,get,getting,getremotelogginghosts 
+summary: Puede usar el método GetRemoteLoggingHosts para obtener la lista actual de servidores de registro. 
+---
+= GetRemoteLoggingHosts
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `GetRemoteLoggingHosts` método para obtener la lista actual de servidores de registro.
+
+
+
+== Parámetros
+
+Este método no tiene parámetros de entrada.
+
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+RemoteHosts
+ a| 
+Lista de direcciones IP e información de puerto sobre los hosts configurados para recibir información de registro reenviado.
+ a| 
+xref:reference_element_api_loggingserver.adoc[LoggingServer] cabina
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "id": 3386609,
+   "method": "GetRemoteLoggingHosts",
+   "params": {}
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+   "id": 3386609,
+   "result": {
+      "remoteHosts": [
+         {
+           "host": "172.16.1.20",
+           "port": 10514
+         },
+         {
+           "host": "172.16.1.25"
+         }
+      ]
+   }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6
+
+
+
+== Obtenga más información
+
+xref:reference_element_api_setremotelogginghosts.adoc[SetRemoteLoggingHosts]

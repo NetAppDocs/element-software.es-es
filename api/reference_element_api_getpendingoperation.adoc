@@ -1,0 +1,92 @@
+---
+permalink: api/reference_element_api_getpendingoperation.html 
+sidebar: sidebar 
+keywords: get,getting,pending,operation,getpendingoperation 
+summary: Puede utilizar el método GetPendingOperation para detectar una operación en un nodo que está en curso actualmente. Este método también se puede utilizar para informar cuando se ha completado una operación. 
+---
+= GetPendingOperation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `GetPendingOperation` método para detectar una operación en un nodo que se encuentra actualmente en curso. Este método también se puede utilizar para informar cuando se ha completado una operación.
+
+
+
+== Parámetros
+
+Este método no tiene parámetros de entrada.
+
+
+
+== Valores devueltos
+
+Este método tiene los siguientes valores devueltos:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+pendiente
+ a| 
+Los posibles valores son los siguientes:
+
+* True: La operación sigue en curso.
+* falso:
++
+La operación ya no está en curso.
+
+
+ a| 
+booleano
+
+
+
+ a| 
+funcionamiento
+ a| 
+Nombre de la operación que está en curso o que se ha completado.
+ a| 
+cadena
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "GetPendingOperation",
+   "params": {},
+   "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+   "id" : 1,
+   "result" : {
+      "pendingOperation" : {
+         "pending" : "true",
+         "operation" : "TestDrivesInternal",
+      }
+   }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

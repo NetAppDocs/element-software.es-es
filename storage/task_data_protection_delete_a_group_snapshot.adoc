@@ -1,0 +1,28 @@
+---
+permalink: storage/task_data_protection_delete_a_group_snapshot.html 
+sidebar: sidebar 
+keywords: group snapshot, delete 
+summary: Es posible eliminar una copia de Snapshot de grupo del sistema. Cuando se elimina la copia de Snapshot de grupo, se puede elegir si se eliminarán todas las copias de Snapshot asociadas al grupo o si se retendrán como copias de Snapshot individuales. 
+---
+= Eliminar una copia de Snapshot de grupo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible eliminar una copia de Snapshot de grupo del sistema. Cuando se elimina la copia de Snapshot de grupo, se puede elegir si se eliminarán todas las copias de Snapshot asociadas al grupo o si se retendrán como copias de Snapshot individuales.
+
+Si elimina un volumen o una copia de Snapshot que forma parte de una copia de Snapshot de grupo, no se puede revertir a la copia de Snapshot de grupo. Sin embargo, se puede revertir a cada volumen de forma individual.
+
+. Haga clic en *Protección de datos* > *instantáneas de grupo*.
+. Haga clic en el icono Actions de la snapshot que quiera eliminar.
+. En el menú que se abre, haga clic en *Eliminar*.
+. Seleccione una de las siguientes opciones en el cuadro de diálogo de confirmación:
++
+** Haga clic en *Eliminar instantánea de grupo Y todos los miembros de instantánea de grupo* para eliminar la instantánea de grupo y todas las instantáneas de miembro.
+** Haga clic en *retener miembros de instantánea de grupo como instantáneas individuales* para eliminar la instantánea de grupo pero conservar todas las instantáneas de miembro.
+
+
+. Confirme la acción.
+

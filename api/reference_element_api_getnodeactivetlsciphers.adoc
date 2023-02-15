@@ -1,0 +1,88 @@
+---
+permalink: api/reference_element_api_getnodeactivetlsciphers.html 
+sidebar: sidebar 
+keywords: tls,cipher,ciphers,get,getting,getnodeactivetlsciphers,accepted 
+summary: Puede usar el método GetNodeActiveTlsCiphers en un solo nodo para obtener una lista de los cifrados TLS que se aceptan actualmente en este nodo. Puede usar este método para los nodos de almacenamiento y de gestión. 
+---
+= GetNodeActiveTlsCiphers
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `GetNodeActiveTlsCiphers` Método en un solo nodo para obtener una lista de los cifrados TLS que se han aceptado actualmente en este nodo. Puede usar este método para los nodos de almacenamiento y de gestión.
+
+
+
+== Parámetro
+
+Este método no tiene parámetros de entrada.
+
+
+
+== Valores devueltos
+
+Este método tiene los siguientes valores devueltos:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+MandatoryCiphers
+ a| 
+Lista de conjuntos de cifrado TLS obligatorios para el nodo. Estos son cifrados que siempre están activos en el nodo.
+ a| 
+cadena
+
+
+
+ a| 
+SupplesCiphers
+ a| 
+Lista de conjuntos de cifrado TLS complementarios para el nodo.
+ a| 
+cadena
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+  "method": "GetNodeActiveTlsCiphers",
+  "params": {},
+  "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+      "id" : 1,
+      "result" : {
+        "mandatoryCiphers": [
+            "DHE-RSA-AES256-SHA256",
+            "DHE-RSA-AES256-GCM-SHA384",
+            "ECDHE-RSA-AES256-SHA384",
+            "ECDHE-RSA-AES256-GCM-SHA384"
+        ],
+        "supplementalCiphers": [
+            "DHE-RSA-AES128-SHA256",
+            "DHE-RSA-AES128-GCM-SHA256",
+            "ECDHE-RSA-AES128-SHA256",
+            "ECDHE-RSA-AES128-GCM-SHA256"
+        ]
+    }
+}
+----

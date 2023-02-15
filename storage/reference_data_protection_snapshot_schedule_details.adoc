@@ -1,0 +1,57 @@
+---
+permalink: storage/reference_data_protection_snapshot_schedule_details.html 
+sidebar: sidebar 
+keywords: snapshots, snapshot schedules 
+summary: En la página Data Protection \> Schedules, puede ver la siguiente información en la lista de programaciones de snapshots. 
+---
+= Detalles de la programación de Snapshot
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En la página Data Protection > Schedules, puede ver la siguiente información en la lista de programaciones de snapshots.
+
+* *ID*
++
+El ID que genera el sistema para la copia de Snapshot.
+
+* *Tipo*
++
+El tipo de programación. Actualmente, Snapshot es el único tipo admitido.
+
+* *Nombre*
++
+El nombre que se le dio a la programación cuando se creó. Los nombres de las programaciones de snapshots pueden tener hasta 223 caracteres y contener a-z, 9 y guion (-).
+
+* *Frecuencia*
++
+La frecuencia con la que se ejecuta la programación. La frecuencia se puede establecer en horas y minutos, semanas o meses.
+
+* *Recurrente*
++
+Indicación de si el programa se ejecutará sólo una vez o a intervalos regulares.
+
+* *Pausado manualmente*
++
+Indica si la programación se pausó manualmente o no.
+
+* *ID de volumen*
++
+El ID del volumen que usará la programación cuando se ejecute.
+
+* *Última ejecución*
++
+La última vez que se ejecutó la programación.
+
+* *Estado de la última ejecución*
++
+El resultado de la última ejecución de la programación. Los posibles valores son los siguientes:
+
++
+** Correcto
+** Fallo
+
+
+

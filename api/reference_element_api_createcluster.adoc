@@ -1,0 +1,222 @@
+---
+permalink: api/reference_element_api_createcluster.html 
+sidebar: sidebar 
+keywords: CreateCluster,cluster,create,creating,initialize,initializing 
+summary: 'Puede usar el método CreateCluster para inicializar el nodo en un clúster que tenga la propiedad de las direcciones "mvip" y "svip". Cada clúster nuevo se inicializa mediante la IP de gestión \(MIP\) del primer nodo del clúster. Este método también añade automáticamente todos los nodos que se están configurando en el clúster. Solo tiene que utilizar este método una vez cada vez que se inicializa un clúster nuevo.' 
+---
+= CreateCluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `CreateCluster` método para inicializar el nodo en un clúster que tenga la propiedad de las direcciones "mvip" y "svip". Cada clúster nuevo se inicializa mediante la IP de gestión (MIP) del primer nodo del clúster. Este método también añade automáticamente todos los nodos que se están configurando en el clúster. Solo tiene que utilizar este método una vez cada vez que se inicializa un clúster nuevo.
+
+
+NOTE: Después de iniciar sesión en el nodo maestro del clúster y ejecutar el xref:reference_element_api_getbootstrapconfig.adoc[GetBootStrapConfig] Método para obtener las direcciones IP del resto de los nodos que se desean incluir en el clúster, es posible ejecutar el método CreateCluster en el nodo maestro para el clúster.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+AceptEula
+ a| 
+Indique su aceptación del contrato de licencia para usuario final al crear este clúster. Para aceptar el CLUF, establezca este parámetro en TRUE.
+ a| 
+booleano
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+atributos
+ a| 
+La lista de pares nombre-valor en el formato de objetos JSON.
+ a| 
+Objeto JSON
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+EnableSoftwareEncryptionAtest
+ a| 
+Habilite este parámetro para utilizar el cifrado basado en software en reposo. De forma predeterminada es TRUE en los clústeres SDS empresariales de SolidFire. De forma predeterminada es false en el resto de clústeres. Después de habilitar el cifrado de software en reposo, no se puede deshabilitar en el clúster.
+ a| 
+booleano
+ a| 
+verdadero
+ a| 
+No
+
+
+
+ a| 
+mivip
+ a| 
+La dirección IP flotante (virtual) del clúster en la red de gestión.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+nodos
+ a| 
+Direcciones CIP/SIP del conjunto inicial de nodos que forman el clúster. La dirección IP de este nodo debe estar en la lista.
+ a| 
+matriz de cadenas
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+Número de pedido
+ a| 
+Número de pedido de venta alfanumérico. Necesario en plataformas basadas en software.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+No (plataformas basadas en hardware)
+
+Sí (plataformas basadas en software)
+
+
+
+ a| 
+contraseña
+ a| 
+La contraseña inicial de la cuenta de administrador del clúster.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+SerialNumber
+ a| 
+Número de serie alfanumérico de nueve dígitos. Puede ser necesario en plataformas basadas en software.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+No (plataformas basadas en hardware)
+
+Sí (plataformas basadas en software)
+
+
+
+ a| 
+svip
+ a| 
+La dirección IP flotante (virtual) del clúster en la red de almacenamiento (iSCSI).
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+nombre de usuario
+ a| 
+Nombre de usuario del administrador del clúster.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+
+
+== Valores devueltos
+
+Este método no tiene valores devueltos.
+
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+  "method": "CreateCluster",
+  "params": {
+    "acceptEula": true,
+    "mvip": "10.0.3.1",
+    "svip": "10.0.4.1",
+    "username": "Admin1",
+    "password": "9R7ka4rEPa2uREtE",
+    "attributes": {
+      "clusteraccountnumber": "axdf323456"
+    },
+    "nodes": [
+      "10.0.2.1",
+      "10.0.2.2",
+      "10.0.2.3",
+      "10.0.2.4"
+    ]
+  },
+  "id": 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+"id" : 1,
+"result" : {}
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6
+
+[discrete]
+== Obtenga más información
+
+* link:reference_element_api_getbootstrapconfig.html["GetBootstrapConfig"]
+* https://www.netapp.com/data-storage/solidfire/documentation/["Página de recursos de SolidFire de NetApp"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentación para versiones anteriores de SolidFire de NetApp y los productos Element"^]
+

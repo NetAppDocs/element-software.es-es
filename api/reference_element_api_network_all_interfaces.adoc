@@ -1,0 +1,69 @@
+---
+permalink: api/reference_element_api_network_all_interfaces.html 
+sidebar: sidebar 
+keywords: object,objects,network 
+summary: 'El objeto network \(all interfaces\) recopila información sobre la configuración de interfaz de red para un nodo de almacenamiento. Puede utilizar los métodos getconfig y GetNetworkConfig para obtener esta información para un nodo de almacenamiento.' 
+---
+= red (todas las interfaces)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El objeto de red (todas las interfaces) recopila información sobre la configuración de la interfaz de red para un nodo de almacenamiento. Puede utilizar el `GetConfig` y.. `GetNetworkConfig` métodos para obtener esta información para un nodo de almacenamiento.
+
+
+
+== Miembros de objeto
+
+Este objeto contiene los siguientes miembros:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+Bond10G
+ a| 
+Información de configuración de la interfaz de unión rígida de Bond10G.
+ a| 
+xref:reference_element_api_network_bonded_interfaces.adoc[red (interfaces unidas)]
+
+
+
+ a| 
+Bond1G
+ a| 
+Información de configuración de la interfaz de unión rígida.
+ a| 
+xref:reference_element_api_network_bonded_interfaces.adoc[red (interfaces unidas)]
+
+
+
+ a| 
+eth0-5
+ a| 
+Un objeto para cada interfaz de Ethernet del nodo de almacenamiento, donde se describe la información de configuración de la interfaz. Estos objetos están numerados del 0 al 5 para que coincidan con el nombre de la interfaz.
+ a| 
+xref:reference_element_api_network_ethernet_interfaces.adoc[Red (interfaces Ethernet)]
+
+
+
+ a| 
+lo
+ a| 
+Información de configuración de la interfaz de bucle invertido.
+ a| 
+xref:reference_element_api_network_local_interfaces.adoc[red (interfaces locales)]
+
+|===
+
+
+== Obtenga más información
+
+* xref:reference_element_api_getconfig.adoc[Getconfig]
+* xref:reference_element_api_getnetworkconfig.adoc[GetNetworkConfig]
+

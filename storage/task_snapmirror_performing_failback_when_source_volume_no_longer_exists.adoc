@@ -1,0 +1,48 @@
+---
+permalink: storage/task_snapmirror_performing_failback_when_source_volume_no_longer_exists.html 
+sidebar: sidebar 
+keywords: failback, perform, source volume, snapmirror, dr, disaster recovery 
+summary: Es posible resincronizar el volumen de origen original y conmutar por error con la interfaz de usuario de NetApp Element. Esta sección se aplica a situaciones en las que se ha perdido el volumen de origen original, pero el clúster original sigue intacto. Para obtener instrucciones sobre cómo restaurar en un clúster nuevo, consulte la documentación en el sitio de soporte de NetApp. 
+---
+= Realice una conmutación tras recuperación cuando el volumen de origen ya no exista
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible resincronizar el volumen de origen original y conmutar por error con la interfaz de usuario de NetApp Element. Esta sección se aplica a situaciones en las que se ha perdido el volumen de origen original, pero el clúster original sigue intacto. Para obtener instrucciones sobre cómo restaurar en un clúster nuevo, consulte la documentación en el sitio de soporte de NetApp.
+
+.Lo que necesitará
+* Tiene una relación de replicación despareja entre los volúmenes de Element y ONTAP.
+* El volumen de Element se pierde de forma irreversiblemente.
+* El nombre del volumen original se muestra como NO ENCONTRADO.
+
+
+.Pasos
+. En la interfaz de usuario de Element, busque la relación que rompió para realizar la conmutación al respaldo.
++
+*Mejor práctica:* anote la política de SnapMirror y los detalles del horario de la relación original de compensación. Esta información será necesaria al recrear la relación.
+
+. Haga clic en el icono *acciones* y haga clic en *Reverse Resync*.
+. Confirme la acción.
++
+
+NOTE: La operación de resincronización inversa crea una nueva relación en la que se revierten los roles del volumen de origen y del volumen de destino (esto provoca dos relaciones a medida que persiste la relación original). Como el volumen original ya no existe, el sistema crea un nuevo volumen de Element con el mismo nombre de volumen y tamaño de volumen que el volumen de origen original. Al nuevo volumen se le asigna una política de calidad de servicio predeterminada denominada recuperación sm y se asocia a una cuenta predeterminada denominada recuperación sm. Deberá editar manualmente la cuenta y la política de calidad de servicio de todos los volúmenes creados por SnapMirror para reemplazar los volúmenes de origen originales destruidos.
+
++
+Los datos de la copia snapshot más reciente se transfieren al nuevo volumen como parte de la operación de resincronización inversa. Puede seguir accediendo al volumen activo y escribiendo datos en el lado de destino, pero deberá desconectar todos los hosts del volumen activo y realizar una actualización de SnapMirror antes de restablecer la relación primaria original en un paso posterior. Una vez finalizada la resincronización inversa y asegúrese de que no haya sesiones activas conectadas al volumen en el lado de destino y que los últimos datos estén en el volumen primario original, siga estos pasos para completar la conmutación por recuperación y reactivar el volumen primario original:
+
+. Haga clic en el icono *acciones* de la relación inversa que se creó durante la operación Reverse Resync y haga clic en *Break*.
+. Haga clic en el icono *acciones* de la relación original, en la que el volumen de origen no existe, y haga clic en *Eliminar*.
+. Haga clic en el icono *acciones* de la relación inversa, que rompió en el paso 4, y haga clic en *Resync inversa*.
+. De este modo, se revierte el origen y el destino y se establece una relación con el mismo origen y el mismo destino de volumen que la relación original.
+. Haga clic en el icono *acciones* y en *Editar* para actualizar esta relación con la directiva QoS original y la configuración de programación de la que tomó nota.
+. Ahora es seguro eliminar la relación inversa que usted reynced en el paso 6.
+
+
+
+
+== Obtenga más información
+
+xref:concept_snapmirror_failback_scenarios.adoc[Escenarios de conmutación tras recuperación de SnapMirror]

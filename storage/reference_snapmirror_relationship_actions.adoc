@@ -1,0 +1,26 @@
+---
+permalink: storage/reference_snapmirror_relationship_actions.html 
+sidebar: sidebar 
+keywords: relationships, snapmirror, actions, configure relationships 
+summary: Puede configurar una relación desde la página SnapMirror Relationships de la pestaña Data Protection. Las opciones del icono acciones se describen aquí. 
+---
+= Acciones de relaciones con SnapMirror
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede configurar una relación desde la página SnapMirror Relationships de la pestaña Data Protection. Las opciones del icono acciones se describen aquí.
+
+* *Edición*: Edita la directiva utilizada o la programación de la relación.
+* *Eliminar*: Elimina la relación de SnapMirror. Esta función no elimina el volumen de destino.
+* *Inicializar*: Realiza la primera transferencia inicial de datos de línea de base para establecer una nueva relación.
+* *Actualizar*: Realiza una actualización bajo demanda de la relación, replicando los datos nuevos y las copias Snapshot incluidas desde la última actualización al destino.
+* *Quiesce*: Previene cualquier actualización adicional para una relación.
+* *Reanudar*: Reanuda una relación que se detiene.
+* *Break*: Hace que el volumen de destino sea de lectura y escritura y detiene todas las transferencias actuales y futuras. Determine que los clientes no utilizan el volumen de origen original, ya que la operación de resincronización inversa hace que el volumen de origen original sea de solo lectura.
+* *Resync*: Restablece una relación rota en la misma dirección antes de que se produjera la ruptura.
+* *Resync inversa*: Automatiza los pasos necesarios para crear e inicializar una nueva relación en la dirección opuesta. Esto sólo se puede hacer si la relación existente se encuentra en un estado roto. Esta operación no eliminará la relación actual. El volumen de origen original se revierte a la copia Snapshot común más reciente y se vuelve a sincronizar con el destino. Se perderán todos los cambios realizados en el volumen de origen original desde la última actualización correcta de SnapMirror. Los cambios realizados o los nuevos datos escritos en el volumen de destino actual se devuelven al volumen de origen original.
+* *Anular*: Cancela una transferencia actual en curso. Si se emite una actualización de SnapMirror para una relación abortada, la relación continúa con la última transferencia desde el último punto de comprobación de reinicio que se creó antes de que se produjera la anulación.
+

@@ -1,0 +1,133 @@
+---
+permalink: api/reference_element_api_getvolumeaccessgroupefficiency.html 
+sidebar: sidebar 
+keywords: volume,volumes,get,getting,access,group,efficiency,GetVolumeAccessGroupEfficiency 
+summary: Puede utilizar el método GetVolumeAccessGroupEfficiency para obtener información sobre eficiencia acerca de un grupo de acceso de volúmenes. Solo el grupo de acceso de volúmenes que se proporciona como parámetro en este método de API se utiliza para calcular la capacidad. 
+---
+= GetVolumeAccessGroupEfficency
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `GetVolumeAccessGroupEfficiency` método para obtener información de eficiencia sobre un grupo de acceso de volúmenes. Solo el grupo de acceso de volúmenes que se proporciona como parámetro en este método de API se utiliza para calcular la capacidad.
+
+
+
+== Parámetro
+
+Este método tiene el siguiente parámetro de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+VolumeAccessGroupID
+ a| 
+Especifica el grupo de acceso de volúmenes en el que se calcula la capacidad.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+compresión
+ a| 
+La cantidad de espacio que ahorra la compresión de datos en todos los volúmenes del grupo de acceso de volúmenes. Se afirma como una relación en la que el valor 1 significa que los datos se han almacenado sin compresión.
+ a| 
+flotante
+
+
+
+ a| 
+deduplicación
+ a| 
+La cantidad de espacio ahorrado no duplicando datos para todos los volúmenes del grupo de acceso de volúmenes. Se indica como una relación.
+ a| 
+flotante
+
+
+
+ a| 
+Thin Provisioning
+ a| 
+La relación entre el espacio utilizado y la cantidad de espacio asignado para almacenar datos. Se indica como una relación.
+ a| 
+flotante
+
+
+
+ a| 
+fecha/hora
+ a| 
+La última vez que se recopilaron datos de eficiencia después de la recolección de basura.
+ a| 
+Cadena de datos ISO 8601
+
+
+
+ a| 
+Volúmenes missingVolumes
+ a| 
+Los volúmenes que no se pudieron consultar para los datos de eficiencia. Los volúmenes que faltan pueden deberse a una recopilación de datos basura reciente, a una pérdida temporal de red o a servicios reiniciados desde el ciclo de recopilación de datos basura.
+ a| 
+matriz en números enteros
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "GetVolumeAccessGroupEfficiency",
+   "params": {
+      "volumeAccessGroupID": 1
+   },
+   "id": 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+   "id": 1,
+   "result": {
+       "compression": 2.006012925331075,
+       "deduplication": 1,
+       "missingVolumes": [],
+       "thinProvisioning": 1.009861932938856,
+       "timestamp": "2014-03-10T17:05:27Z"
+   }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

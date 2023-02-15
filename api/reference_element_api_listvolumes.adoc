@@ -1,0 +1,235 @@
+---
+permalink: api/reference_element_api_listvolumes.html 
+sidebar: sidebar 
+keywords: volume,volumes,list,listing,listvolumes 
+summary: Puede utilizar el método ListVolumes para obtener una lista de volúmenes que están en un clúster. Para especificar los volúmenes que desea volver en la lista, se pueden especificar los parámetros disponibles. 
+---
+= ListVolumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `ListVolumes` método para obtener una lista de volúmenes que están en un clúster. Para especificar los volúmenes que desea volver en la lista, se pueden especificar los parámetros disponibles.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+cuentas
+ a| 
+Solo se devuelven los volúmenes propiedad de las cuentas especificadas aquí. Se excluyen mutuamente con el parámetro volumeID.
+ a| 
+matriz en números enteros
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+IncludeVirtualVolumes
+ a| 
+De forma predeterminada, se incluyen los volúmenes virtuales en la respuesta. Para excluir volúmenes virtuales, se debe establecer en FALSE.
+ a| 
+booleano
+ a| 
+verdadero
+ a| 
+No
+
+
+
+ a| 
+IsPaireado
+ a| 
+Devuelve volúmenes emparejados o que no están emparejados. Los posibles valores son los siguientes:
+
+* True: Devuelve todos los volúmenes emparejados.
+* False: Devuelve todos los volúmenes que no están emparejados.
+
+ a| 
+booleano
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+límite
+ a| 
+Permite configurar el número máximo de resultados de volumen que se devuelven. Se excluyen mutuamente con el parámetro volumeID.
+ a| 
+entero
+ a| 
+10000
+ a| 
+No
+
+
+
+ a| 
+StartVolumeID
+ a| 
+Solo se muestran los volúmenes con un ID mayor o igual que este valor. Se excluyen mutuamente con el parámetro volumeID.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+ID de volumen
+ a| 
+Una lista de ID de volumen. Si se especifica este parámetro, otros parámetros únicamente funcionan en este conjunto de volúmenes. Se excluyen mutuamente con los parámetros Accounts, startVolumeID y limit.
+ a| 
+matriz en números enteros
+ a| 
+No
+ a| 
+No
+
+
+
+ a| 
+Nombre de volumen
+ a| 
+Solo se devuelve la información de objetos de volumen que coincide con el nombre del volumen.
+ a| 
+cadena
+ a| 
+No
+ a| 
+No
+
+
+
+ a| 
+Estado de volumen
+ a| 
+Solo se devuelven los volúmenes con el estado igual que el valor status. Los posibles valores son los siguientes:
+
+* creando
+* copias snapshot
+* activo
+* eliminado
+
+ a| 
+cadena
+ a| 
+No
+ a| 
+No
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+volúmenes
+ a| 
+Lista de volúmenes.
+ a| 
+xref:reference_element_api_volume.adoc[volumen] cabina
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+  "method": "ListVolumes",
+    "params": {
+        "volumeIDs": [1],
+        "volumeStatus": "active",
+        "isPaired": "false"
+    },
+    "id": 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+    "id": 1,
+    "result": {
+        "volumes": [
+            {
+                "access": "readWrite",
+                "accountID": 1,
+                "attributes": {},
+                "blockSize": 4096,
+                "createTime": "2016-03-28T14:39:05Z",
+                "deleteTime": "",
+                "enable512e": true,
+                "iqn": "iqn.2010-01.com.solidfire:testvolume1.1",
+                "name": "testVolume1",
+                "purgeTime": "",
+                "qos": {
+                    "burstIOPS": 15000,
+                    "burstTime": 60,
+                    "curve": {
+                        "4096": 100,
+                        "8192": 160,
+                        "16384": 270,
+                        "32768": 500,
+                        "65536": 1000,
+                        "131072": 1950,
+                        "262144": 3900,
+                        "524288": 7600,
+                        "1048576": 15000
+                    },
+                    "maxIOPS": 15000,
+                    "minIOPS": 50
+                },
+                "scsiEUIDeviceID": "6a79617900000001f47acc0100000000",
+                "scsiNAADeviceID": "6f47acc1000000006a79617900000001",
+                "sliceCount": 1,
+                "status": "active",
+                "totalSize": 5000658944,
+                "virtualVolumeID": null,
+                "volumeAccessGroups": [],
+                "volumeID": 1,
+                "volumePairs": []
+            }
+        ]
+    }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

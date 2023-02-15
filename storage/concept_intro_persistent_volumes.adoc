@@ -1,0 +1,21 @@
+---
+permalink: storage/concept_intro_persistent_volumes.html 
+sidebar: sidebar 
+keywords: persistent volumes, what are persistent volumes 
+summary: Los volúmenes persistentes permiten que los datos de configuración del nodo de gestión se almacenen en un clúster de almacenamiento especificado, en lugar de localmente con una máquina virtual, de modo que los datos se puedan conservar en caso de pérdida o eliminación del nodo de gestión. Los volúmenes persistentes son una configuración de nodos de gestión opcional pero recomendada. 
+---
+= Volúmenes persistentes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los volúmenes persistentes permiten que los datos de configuración del nodo de gestión se almacenen en un clúster de almacenamiento especificado, en lugar de localmente con una máquina virtual, de modo que los datos se puedan conservar en caso de pérdida o eliminación del nodo de gestión. Los volúmenes persistentes son una configuración de nodos de gestión opcional pero recomendada.
+
+Se incluye una opción para habilitar los volúmenes persistentes en las secuencias de comandos de instalación y actualización cuando se implementa un nuevo nodo de gestión. Los volúmenes persistentes son volúmenes en un clúster de almacenamiento basado en software Element que contienen información de configuración del nodo de gestión para la máquina virtual del nodo de gestión de host que permanece más allá de la vida útil de la máquina virtual. Si se pierde el nodo de gestión, una máquina virtual del nodo de gestión de reemplazo puede volver a conectarse y recuperar los datos de configuración de la máquina virtual perdida.
+
+La funcionalidad de volúmenes persistentes, si se habilita durante la instalación o la actualización, crea automáticamente varios volúmenes con NetApp-HCI, cuyo nombre finaliza previamente al nombre en el clúster asignado. Estos volúmenes, como cualquier volumen basado en el software Element, se pueden ver mediante la interfaz de usuario web del software Element, el plugin de NetApp Element para vCenter Server o la API, según sus preferencias e instalación. Los volúmenes persistentes deben estar activos y en ejecución con una conexión iSCSI al nodo de gestión para mantener los datos de configuración actuales que se pueden usar para la recuperación.
+
+
+IMPORTANT: Los volúmenes persistentes asociados con servicios de gestión se crean y se asignan a una nueva cuenta durante la instalación o la actualización. Si utiliza volúmenes persistentes, no modifique o elimine los volúmenes o su cuenta asociada.

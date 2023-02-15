@@ -1,0 +1,108 @@
+---
+permalink: api/reference_element_api_testhardwareconfig.html 
+sidebar: sidebar 
+keywords: node,test,testing,hardware,config,configuration,testhardwareconfig 
+summary: Puede usar el método TestHardwarConfig para realizar pruebas de hardware en un nodo. Las opciones de prueba incluyen verificar las configuraciones de hardware, las versiones de firmware y la presencia de todas las unidades. 
+---
+= TestHardwarConfig
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `TestHardwareConfig` método para realizar pruebas de hardware en un nodo. Las opciones de prueba incluyen verificar las configuraciones de hardware, las versiones de firmware y la presencia de todas las unidades.
+
+
+
+== Parámetros
+
+
+NOTE: Esta prueba no se realiza con la intención de detectar fallos de hardware.
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+limpio
+ a| 
+Inicia la prueba de configuración de hardware con una caché limpia. Los posibles valores son los siguientes:
+
+* Verdadero: Elimina el archivo de resultados de la prueba en caché y vuelve a ejecutar las pruebas.
+* False: Recupera los resultados de una prueba en caché.
+
+ a| 
+booleano
+ a| 
+falso
+ a| 
+No
+
+
+
+ a| 
+fuerza
+ a| 
+El parámetro force debe estar incluido en este método para restablecer correctamente el nodo.
+ a| 
+booleano
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+detalles
+ a| 
+Detalles de configuración de hardware.
+ a| 
+Objeto JSON
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "TestHardwareConfig",
+   "params": {
+      "force": true
+     },
+   "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Debido a la longitud de este ejemplo de respuesta, se documenta en un tema complementario.
+
+
+
+== Nuevo desde la versión
+
+9.6
+
+
+
+== Obtenga más información
+
+xref:reference_element_api_response_example_testhardwareconfig.adoc[TestHardwarConfig]

@@ -1,0 +1,26 @@
+---
+permalink: storage/reference_element_rn_find_product_docs.html 
+sidebar: sidebar 
+keywords: HCI documentation, SolidFire documentation 
+summary: Puede obtener más información sobre cómo usar y gestionar el almacenamiento all-flash de NetApp HCI y SolidFire en los recursos disponibles en las páginas de centros de documentación y recursos de ambos productos. 
+---
+= Dónde encontrar documentación de producto y otra información
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede obtener más información sobre cómo usar y gestionar el almacenamiento all-flash de NetApp HCI y SolidFire en los recursos disponibles en las páginas de centros de documentación y recursos de ambos productos.
+
+En los centros de documentación, también encontrará información sobre la instalación y el mantenimiento del hardware, los recursos de contenido adicionales disponibles, los enlaces a problemas conocidos y resueltos, y las notas de la versión más recientes. En las páginas Resources, encontrará enlaces a hojas de datos, informes técnicos, whitepapers y vídeos.
+
+* https://docs.netapp.com/us-en/hci/["Documentación de NetApp HCI"^]
+* https://www.netapp.com/us/documentation/hci.aspx["Recursos de NetApp HCI"^]
+* http://docs.netapp.com/sfe-122/index.jsp["Centro de documentación de SolidFire y Element 12.2"^]
+* http://docs.netapp.com/sfe-120/index.jsp["Centro de documentación de SolidFire y Element 12.0"^]
+* http://docs.netapp.com/sfe-118/index.jsp["Centro de documentación de SolidFire y Element 11.8"^]
+* http://docs.netapp.com/sfe-117/index.jsp["Centro de documentación de SolidFire y Element 11.7"^]
+* http://docs.netapp.com/sfe-115/index.jsp["Centro de documentación de SolidFire y Element 11.5"^]
+* https://www.netapp.com/us/documentation/solidfire.aspx["Recursos de SolidFire"^]
+

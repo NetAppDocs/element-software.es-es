@@ -1,0 +1,18 @@
+---
+permalink: storage/concept_data_manage_vvol_protocol_endpoints.html 
+sidebar: sidebar 
+keywords: protocol endpoint, access, cluster, storage node, iscsi supported 
+summary: Los extremos de protocolo son puntos de acceso que utiliza un host para abordar el almacenamiento de un clúster que ejecuta el software NetApp Element. Los usuarios no pueden eliminar ni modificar los extremos de protocolo. Tampoco se pueden asociar con una cuenta ni se pueden añadir a un grupo de acceso de volúmenes. 
+---
+= Extremos de protocolo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los extremos de protocolo son puntos de acceso que utiliza un host para abordar el almacenamiento de un clúster que ejecuta el software NetApp Element. Los usuarios no pueden eliminar ni modificar los extremos de protocolo. Tampoco se pueden asociar con una cuenta ni se pueden añadir a un grupo de acceso de volúmenes.
+
+Un clúster que ejecuta el software Element crea automáticamente un extremo de protocolo por nodo de almacenamiento en el clúster. Por ejemplo, un clúster de almacenamiento de seis nodos tiene seis extremos de protocolo que se asignan a cada host ESXi. Los extremos de protocolo se gestionan dinámicamente con el software Element y se crean, mueven o eliminan según sea necesario sin intervención. Los extremos de protocolo son el objetivo para las rutas múltiples y actúan como proxy I/o para las LUN subsidiarias. Cada extremo de protocolo consume una dirección SCSI disponible, al igual que un destino iSCSI estándar. Los extremos de protocolo aparecen como un dispositivo de almacenamiento de bloque único (512 bytes) en el cliente vSphere, pero este dispositivo de almacenamiento no está disponible para formatearse o usarse como almacenamiento.
+
+ISCSI es el único protocolo compatible. No se admite el protocolo Fibre Channel.

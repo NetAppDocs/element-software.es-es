@@ -1,0 +1,53 @@
+---
+permalink: storage/task_data_manage_vol_access_group_create_an_initiator.html 
+sidebar: sidebar 
+keywords: initiator, create, fc, iscsi, aliases, chap 
+summary: Es posible crear iniciadores iSCSI o Fibre Channel y, opcionalmente, asignarles alias. 
+---
+= Cree un iniciador
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible crear iniciadores iSCSI o Fibre Channel y, opcionalmente, asignarles alias.
+
+También puede asignar atributos CHAP basados en iniciadores mediante una llamada API. Para añadir un nombre de cuenta CHAP y credenciales por iniciador, debe usar `CreateInitiator` Llamada API para eliminar y añadir acceso y atributos CHAP. El acceso del iniciador se puede restringir a una o varias VLAN especificando uno o varios virtualNetworkID a través del `CreateInitiators` y.. `ModifyInitiators` Llamadas API. Si no se especifica ninguna red virtual, el iniciador puede acceder a todas las redes.
+
+Para obtener más detalles, consulte la información de referencia de API.link:../api/index.html["Gestione el almacenamiento con la API de Element"]
+
+.Pasos
+. Haga clic en *Administración* > *iniciadores*.
+. Haga clic en *Crear iniciador*.
+. Siga los pasos para crear un solo iniciador o varios iniciadores:
++
+[cols="25,75"]
+|===
+| Opción | Pasos 
+
+
+ a| 
+Cree un solo iniciador
+ a| 
+.. Haga clic en *Crear un único iniciador*.
+.. Introduzca el IQN o el WWPN del iniciador en el campo *IQN/WWPN*.
+.. Introduzca un nombre descriptivo para el iniciador en el campo *Alias*.
+.. Haga clic en *Crear iniciador*.
+
+
+
+
+ a| 
+Cree varios iniciadores
+ a| 
+.. Haga clic en *Bulk Create Initiators*.
+.. Introduzca una lista de varios IQN o WWPN en el cuadro de texto.
+.. Haga clic en *Add Initiators*.
+.. Elija un iniciador de la lista resultante y haga clic en el icono Agregar correspondiente en la columna *Alias* para añadir un alias para el iniciador.
+.. Haga clic en la Marca de verificación para confirmar el nuevo alias.
+.. Haga clic en *Crear iniciadores*.
+
+
+|===
+

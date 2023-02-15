@@ -1,0 +1,67 @@
+---
+permalink: storage/task_system_manage_virtual_add_a_virtual_network.html 
+sidebar: sidebar 
+keywords: virtual network, add, cluster configuration, cluster nodes, svip, vlans, vrf, view, network details, 
+summary: Es posible añadir una red virtual nueva a la configuración de un clúster para habilitar una conexión de entorno multi-tenant con un clúster donde se ejecuta el software Element. 
+---
+= Añadir una red virtual
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible añadir una red virtual nueva a la configuración de un clúster para habilitar una conexión de entorno multi-tenant con un clúster donde se ejecuta el software Element.
+
+.Lo que necesitará
+* Identifique el bloque de direcciones IP que se asignarán a las redes virtuales en los nodos del clúster.
+* Identifique una dirección IP de red de almacenamiento (SVIP) que se usará como extremo para todo el tráfico de almacenamiento de NetApp Element.
+
+
+
+IMPORTANT: Debe tener en cuenta los siguientes criterios para esta configuración:
+
+* Las VLAN que no están habilitadas para VRF requieren que haya iniciadores en la misma subred que la SVIP.
+* Las VLAN que están habilitadas para VRF no requieren que haya iniciadores en la misma subred que la SVIP y el que enrutamiento esté admitido.
+* La SVIP predeterminada no requiere que haya iniciadores en la misma subred que la SVIP y el que enrutamiento esté admitido.
+
+
+Cuando se añade una red virtual, se crea una interfaz para cada nodo y cada una requiere una dirección IP de red virtual. La cantidad de direcciones IP especificada cuando se crea una red virtual nueva debe ser igual o mayor que la cantidad de nodos del clúster. Las direcciones de red virtuales se aprovisionan de forma masiva y se asignan automáticamente a los nodos individuales. No es necesario asignar manualmente direcciones de red virtual a los nodos del clúster.
+
+.Pasos
+. Haga clic en *clúster* > *Red*.
+. Haga clic en *Crear VLAN*.
+. En el cuadro de diálogo *Crear una nueva VLAN*, introduzca valores en los siguientes campos:
++
+** *Nombre de VLAN*
+** *Etiqueta VLAN*
+** *SVIP*
+** *Netmask*
+** (Opcional) *Descripción*
+
+
+. Introduzca la dirección *IP inicial* para el rango de direcciones IP en *IP Address Blocks*.
+. Introduzca el *Tamaño* del intervalo IP como el número de direcciones IP que se incluirán en el bloque.
+. Haga clic en *Agregar un bloque* para agregar un bloque no continuo de direcciones IP para esta VLAN.
+. Haga clic en *Crear VLAN*.
+
+
+
+
+== Ver detalles de redes virtuales
+
+.Pasos
+. Haga clic en *clúster* > *Red*.
+. Revise los detalles.
++
+** *ID*: ID exclusivo de la red VLAN, asignada por el sistema.
+** *Nombre*: Nombre exclusivo asignado por el usuario para la red VLAN.
+** *Etiqueta VLAN*: Etiqueta VLAN asignada cuando se creó la red virtual.
+** *SVIP*: Dirección IP virtual de almacenamiento asignada a la red virtual.
+** *Netmask*: Máscara de red para esta red virtual.
+** *Gateway*: Dirección IP única de una puerta de enlace de red virtual. VRF debe estar habilitado.
+** *VRF Enabled*: Indica si el enrutamiento y reenvío virtuales está activado o no.
+** *IP utilizadas*: El rango de direcciones IP de red virtual que se utiliza para la red virtual.
+
+
+

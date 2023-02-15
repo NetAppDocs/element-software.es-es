@@ -1,0 +1,28 @@
+---
+permalink: storage/task_data_protection_edit_snapshot_retention.html 
+sidebar: sidebar 
+keywords: snapshot retention, edit, set a retention period, edit retention period 
+summary: 'Puede cambiar el período de retención de una snapshot y determinar si el sistema elimina las snapshots y cuándo. El período de retención que se especifica comienza cuando se introduce el nuevo intervalo. Cuando se establece un período de retención, se puede seleccionar un período que comience en ese mismo momento \(la retención no se calcula a partir del momento de creación de la copia de Snapshot\). Los intervalos se pueden especificar en minutos, horas y días.' 
+---
+= Editar la retención de snapshot
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede cambiar el período de retención de una snapshot y determinar si el sistema elimina las snapshots y cuándo. El período de retención que se especifica comienza cuando se introduce el nuevo intervalo. Cuando se establece un período de retención, se puede seleccionar un período que comience en ese mismo momento (la retención no se calcula a partir del momento de creación de la copia de Snapshot). Los intervalos se pueden especificar en minutos, horas y días.
+
+.Pasos
+. Haga clic en *Protección de datos* > *instantáneas*.
+. Haga clic en el icono *acciones* de la instantánea que desea editar.
+. En el menú que se abre, haga clic en *Editar*.
+. *Opcional:* Active la casilla de verificación ** incluir instantánea en la replicación cuando se empareje** para asegurarse de que la instantánea se capture en la replicación cuando el volumen primario se empareje.
+. *Opcional:* Seleccione una opción de retención para la instantánea:
++
+** Haga clic en *mantener siempre* para conservar la instantánea en el sistema indefinidamente.
+** Haga clic en *establecer período de retención* y utilice los cuadros de número de fecha para seleccionar un período de tiempo durante el cual el sistema retendrá la instantánea.
+
+
+. Haga clic en *Guardar cambios*.
+

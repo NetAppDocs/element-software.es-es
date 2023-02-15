@@ -1,0 +1,37 @@
+---
+permalink: setup/task_setup_add_drives_to_a_cluster.html 
+sidebar: sidebar 
+keywords:  
+summary: Cuando se añade un nodo al clúster o se instalan unidades nuevas en un nodo existente, las unidades se registran automáticamente como Available. Las unidades se deben añadir al clúster mediante la interfaz de usuario o la API de Element antes de que puedan participar en el clúster. 
+---
+= Añada unidades a un clúster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cuando se añade un nodo al clúster o se instalan unidades nuevas en un nodo existente, las unidades se registran automáticamente como Available. Las unidades se deben añadir al clúster mediante la interfaz de usuario o la API de Element antes de que puedan participar en el clúster.
+
+Las unidades no se muestran en la lista Available Drives cuando se dan las siguientes condiciones:
+
+* Las unidades se encuentran en el estado Active, Removing, Erasing o Failed.
+* El estado del nodo del que forma parte la unidad es Pending.
+
+
+.Pasos
+. En la interfaz de usuario de Element, seleccione *Cluster* > *Drives*.
+. Haga clic en *disponible* para ver la lista de unidades disponibles.
+. Debe realizar una de las siguientes acciones:
++
+** Para agregar unidades individuales, haga clic en el icono *acciones* de la unidad que desea agregar y haga clic en *Agregar*.
+** Para añadir varias unidades, active las casillas de verificación de las unidades que desee agregar, haga clic en *acciones masivas* y haga clic en *Agregar*.
++
+....
+== Find more information
+* https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
+....
+
+
+

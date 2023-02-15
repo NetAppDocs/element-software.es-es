@@ -1,0 +1,129 @@
+---
+permalink: api/reference_element_api_listsnapshots.html 
+sidebar: sidebar 
+keywords: snapshot,snapshots,list,listing,attributes,listsnapshots 
+summary: Puede usar ListSnapshots para devolver los atributos de cada snapshot que se haya realizado en el volumen. 
+---
+= ListSnapshots
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar `ListSnapshots` para devolver los atributos de cada snapshot que se toma en el volumen.
+
+La información sobre las copias de Snapshot que residen en el clúster de destino se muestra en el clúster de origen cuando se llama a este método desde el clúster de origen.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+ID de volumen
+ a| 
+Recupera snapshots de un volumen. Si no se muestra volumeID, se devuelven todas las copias de Snapshot de todos los volúmenes.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+ID de copia Snapshot
+ a| 
+Recupera información de un ID de snapshot individual.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+No
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+snapshot
+ a| 
+Información sobre cada snapshot de cada volumen. Si no se muestra volumeID, se devuelven todas las copias de Snapshot de todos los volúmenes. Las copias de Snapshot que están en un grupo se devuelven con un ID de grupo.
+ a| 
+xref:reference_element_api_snapshot.adoc[snapshot] cabina
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "ListSnapshots",
+   "params": {
+             "volumeID": "1"
+       },
+   "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "snapshots": [
+        {
+          "attributes": {},
+          "checksum": "0x0",
+          "createTime": "2015-05-08T13:15:00Z",
+          "enableRemoteReplication": true,
+          "expirationReason": "None",
+          "expirationTime": "2015-05-08T21:15:00Z",
+          "groupID": 0,
+          "groupSnapshotUUID": "00000000-0000-0000-0000-000000000000",
+          "name": "Hourly",
+          "remoteStatuses": [
+              {
+                "remoteStatus": "Present",
+                "volumePairUUID": "237e1cf9-fb4a-49de-a089-a6a9a1f0361e"
+              }
+         ],
+          "snapshotID": 572,
+          "snapshotUUID": "efa98e40-cb36-4c20-a090-a36c48296c14",
+          "status": "done",
+          "totalSize": 10000269312,
+          "volumeID": 1
+        }
+      ]
+    }
+  }
+----
+
+
+== Nuevo desde la versión
+
+9.6

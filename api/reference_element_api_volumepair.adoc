@@ -1,0 +1,99 @@
+---
+permalink: api/reference_element_api_volumepair.html 
+sidebar: sidebar 
+keywords: object,objects,volumePair 
+summary: El objeto volumePair contiene información sobre un volumen que está emparejado con otro volumen en un clúster diferente. Si el volumen no está emparejado, este objeto está vacío. Puede utilizar los métodos de la API ListActivePairedVolumes y ListActiveVolumes para obtener información acerca de los volúmenes emparejados. 
+---
+= Pareja de volúmenes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El objeto volumePair contiene información sobre un volumen que está emparejado con otro volumen en un clúster diferente. Si el volumen no está emparejado, este objeto está vacío. Puede utilizar el `ListActivePairedVolumes` y.. `ListActiveVolumes` Los métodos de API para obtener información acerca de los volúmenes emparejados.
+
+
+
+== Miembros de objeto
+
+Este objeto contiene los siguientes miembros:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+ClusterPairID
+ a| 
+El clúster en el que está emparejado el volumen.
+ a| 
+entero
+
+
+
+ a| 
+RemoteReplication
+ a| 
+Detalles sobre la replicación de volúmenes. Miembros:
+
+* Mode: (Cadena) uno de los modos "asíncrono", "Sync" o "SnapshotsOnly".
+* PauseLimit: (Integer) sólo uso interno.
+* RemoteServiceID: (Entero) el ID del servicio de segmentos remotos.
+* ResumeDetails: (Cadena) reservado para uso futuro.
+* SnapshotReplication (objeto JSON)
++
+** state: (Cadena) el estado de la replicación de snapshot en curso, si hay alguna en curso.
+** StateDetails: (Cadena) reservado para uso futuro.
+
+
+* state: (Cadena) el estado de la replicación de volumen.
+* StateDetails: (Cadena) reservado para uso futuro.
+
+ a| 
+Objeto JSON
+
+
+
+ a| 
+RemoteSliceID
+ a| 
+El ID de segmento definido por el clúster en el clúster remoto.
+ a| 
+entero
+
+
+
+ a| 
+ID de volumen remoto
+ a| 
+El ID del volumen en el clúster remoto con el que se empareja el volumen local.
+ a| 
+entero
+
+
+
+ a| 
+RemoteVolumeName
+ a| 
+El nombre del volumen remoto.
+ a| 
+cadena
+
+
+
+ a| 
+VolumePairUUID
+ a| 
+Identificador único universal definido por el clúster para este emparejamiento en un formato canónico.
+ a| 
+cadena
+
+|===
+
+
+== Obtenga más información
+
+* xref:reference_element_api_listactivepairedvolumes.adoc[ListActivePairedVolumes]
+* xref:reference_element_api_listactivevolumes.adoc[ListActiveVolumes]
+

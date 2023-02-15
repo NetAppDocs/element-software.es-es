@@ -1,0 +1,341 @@
+---
+permalink: api/reference_element_api_modifyvolume.html 
+sidebar: sidebar 
+keywords: volumes,volume,modifying,modify,change,changing,edit,editing,modifyvolume,settings 
+summary: Puede utilizar el método ModifyVolume para modificar la configuración de un volumen existente. Puede realizar modificaciones en un volumen a la vez y los cambios se producen de inmediato. 
+---
+= Volumen ModificíoVolume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `ModifyVolume` método para modificar la configuración en un volumen existente. Puede realizar modificaciones en un volumen a la vez y los cambios se producen de inmediato.
+
+Si no especifica valores de calidad de servicio al modificar un volumen, seguirán siendo los mismos que antes de la modificación. Puede recuperar los valores de calidad de servicio predeterminados para un volumen recién creado mediante la ejecución de `GetDefaultQoS` método.
+
+Cuando se necesita aumentar el tamaño de un volumen que se está replicando, hágalo en el siguiente orden para evitar errores de replicación:
+
+. Aumente el tamaño del volumen con replicationTarget Access.
+. Aumente el tamaño del origen o del volumen con el acceso READWRITE.
+
+
+Asegúrese de que los volúmenes de destino y origen tengan el mismo tamaño.
+
+
+NOTE: Si cambia el estado de acceso a Locked o replicationTarget, se finalizan todas las conexiones iSCSI existentes.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+ID de volumen
+ a| 
+El ID de volumen del volumen que se va a modificar.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+acceso
+ a| 
+Acceso permitido para el volumen. Los posibles valores son los siguientes:
+
+* `readOnly`: Sólo se permiten operaciones de lectura.
+* `readWrite`: Se permiten lecturas y escrituras.
+* `locked`: No se permiten lecturas ni escrituras. Si no se especifica, el valor de acceso no cambia.
+* `replicationTarget`: Identifique un volumen como volumen de destino para un conjunto de volúmenes emparejados. Si el volumen no está emparejado, el estado de acceso se bloquea. Si no se especifica un valor, el valor de acceso no cambia.
+* `snapMirrorTarget`: Identifique un volumen como volumen de destino para la replicación de SnapMirror.
+
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+ID de cuenta
+ a| 
+El ID de cuenta a la que se reasigna el volumen. Si no se especifica ninguno, se utiliza el nombre de cuenta anterior.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+AsociateWithQoSPolicy
+ a| 
+Asocie el volumen con la política de calidad de servicio especificada. Los posibles valores son los siguientes:
+
+* `true`: Asocie el volumen con la directiva QoS especificada en el parámetro QoSPolicyID.
+* `false`: No asocie el volumen con la directiva QoS especificada en el parámetro QoSPolicyID. Cuando es false, se elimina cualquier asociación de directiva existente, independientemente de si se especifica una directiva QoS en el parámetro QoSPolicy.
+
+ a| 
+booleano
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+atributos
+ a| 
+La lista de pares nombre-valor en el formato de objetos JSON.
+ a| 
+Objeto JSON
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+CreateTime
+ a| 
+Una cadena de fecha ISO 8601 que se establecerá como fecha de creación del nuevo volumen. Requerido si setCreateTime se establece en TRUE.
+ a| 
+Cadena ISO 8601
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+EnableSnapMirrorReplication
+ a| 
+Determina si el volumen se puede usar para la replicación con extremos de SnapMirror. Los posibles valores son los siguientes:
+
+* `true`
+* `false`
+
+ a| 
+booleano
+ a| 
+falso
+ a| 
+No
+
+
+
+| Tamaño 50 | Especifica el número máximo de instantáneas de primera entrada y salida (FIFO) admitidas por el volumen. Tenga en cuenta que las instantáneas FIFO y no FIFO utilizan el mismo pool de ranuras de instantánea disponibles en un volumen. Utilice esta opción para limitar el consumo de instantáneas FIFO de las ranuras de instantánea disponibles. Tenga en cuenta que no puede modificar este valor para que sea inferior al recuento de instantáneas FIFO actual. | entero | Ninguno | No 
+
+
+| MinFioSize | Especifica el número de ranuras de instantánea reservadas sólo para las instantáneas primero en salir (FIFO). Puesto que las instantáneas FIFO y no FIFO comparten la misma agrupación, el parámetro minFifoSize reduce el número total de posibles instantáneas no FIFO en la misma cantidad. Tenga en cuenta que no puede modificar este valor para que entre en conflicto con el recuento de instantáneas no FIFO actual. | entero | Ninguno | No 
+
+
+ a| 
+modo
+ a| 
+Modo de replicación del volumen. Los posibles valores son los siguientes:
+
+* `asynch`: Espera a que el sistema reconozca que los datos se almacenan en el origen antes de escribir en el destino.
+* `sync`: No espera a que el origen reconozca la transmisión de datos para comenzar a escribir datos en el destino.
+
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+calidad de servicio
+ a| 
+La nueva configuración de calidad de servicio para este volumen. Si no se especifica, la configuración de calidad de servicio no se modifica. Los posibles valores son los siguientes:
+
+* `minIOPS`
+* `maxIOPS`
+* `burstIOPS`
+
+ a| 
+xref:reference_element_api_qos.adoc[Calidad de servicio]
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+QosPolicyID
+ a| 
+El ID de la política cuya configuración de calidad de servicio debe aplicarse a los volúmenes especificados. Este parámetro es mutuamente exclusivo con qos.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+SetCreateTime
+ a| 
+Establezca esta opción en true para cambiar la fecha registrada de creación del volumen.
+ a| 
+booleano
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+Tamaño total
+ a| 
+El nuevo tamaño en bytes del volumen. 1000000000 es igual a 1 GB. El tamaño se redondea hasta el megabyte más cercano. Este parámetro solo se puede usar para aumentar el tamaño de un volumen.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+No
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+volumen
+ a| 
+Objeto que contiene información acerca del volumen recién modificado.
+ a| 
+xref:reference_element_api_volume.adoc[volumen]
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+  "method": "ModifyVolume",
+  "params": {
+     "volumeID": 5,
+     "attributes": {
+        "name1": "value1",
+        "name2": "value2",
+        "name3": "value3"
+     },
+     "qos": {
+        "minIOPS": 60,
+        "maxIOPS": 100,
+        "burstIOPS": 150,
+        "burstTime": 60
+     },
+      "access" :"readWrite"
+     },
+      "totalSize": 20000000000,
+     "id": 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+      "volume": {
+          "access": "readWrite",
+          "accountID": 1,
+          "attributes": {
+              "name1": "value1",
+              "name2": "value2",
+              "name3": "value3"
+          },
+          "blockSize": 4096,
+          "createTime": "2016-03-28T16:16:13Z",
+          "deleteTime": "",
+          "enable512e": true,
+          "iqn": "iqn.2010-01.com.solidfire:jyay.1459181777648.5",
+          "name": "1459181777648",
+          "purgeTime": "",
+          "qos": {
+              "burstIOPS": 150,
+              "burstTime": 60,
+              "curve": {
+                  "4096": 100,
+                  "8192": 160,
+                  "16384": 270,
+                  "32768": 500,
+                  "65536": 1000,
+                  "131072": 1950,
+                  "262144": 3900,
+                  "524288": 7600,
+                  "1048576": 15000
+              },
+              "maxIOPS": 100,
+              "minIOPS": 60
+          },
+          "scsiEUIDeviceID": "6a79617900000005f47acc0100000000",
+          "scsiNAADeviceID": "6f47acc1000000006a79617900000005",
+          "sliceCount": 1,
+          "status": "active",
+          "totalSize": 1000341504,
+          "virtualVolumeID": null,
+          "volumeAccessGroups": [
+              1
+          ],
+          "volumeID": 5,
+          "volumePairs": []
+      }
+  }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6
+
+
+
+== Obtenga más información
+
+xref:reference_element_api_getdefaultqos.adoc[GetDefaultQoS]

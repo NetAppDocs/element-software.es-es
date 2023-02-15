@@ -1,0 +1,104 @@
+---
+permalink: api/reference_element_api_listvirtualvolumehosts.html 
+sidebar: sidebar 
+keywords: virtual,volume,vvol,host,hosts,list,listing,known,listvirtualvolumehosts 
+summary: Puede utilizar el método ListVirtualVolumeHosts para obtener una lista de todos los hosts de volumen virtual conocidos del clúster. Un host de volumen virtual es un host VMware ESX que inició una sesión con el proveedor de API VASA. 
+---
+= ListVirtualVolumeHosts
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `ListVirtualVolumeHosts` método para obtener una lista de todos los hosts de volúmenes virtuales que se conocen en el clúster. Un host de volumen virtual es un host VMware ESX que inició una sesión con el proveedor de API VASA.
+
+
+
+== Parámetros
+
+Este método tiene el siguiente parámetro de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+VirtualVolumeHostIDs
+ a| 
+Una lista de los ID de host de los volúmenes virtuales de los cuales se puede recuperar información. Si omite este parámetro, el método muestra información acerca de todos los hosts de volúmenes virtuales.
+ a| 
+Matriz de UUID de virtualVolumeHostID
+ a| 
+Ninguno
+ a| 
+No
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+hosts
+ a| 
+Una lista de los objetos que describen los hosts de volúmenes virtuales del clúster.
+ a| 
+xref:reference_element_api_host.adoc[host] cabina
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+  "method": "ListVirtualVolumeHosts",
+    "params": {
+    },
+    "id": 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "hosts": [
+      {
+        "bindings": [],
+        "clusterID": "5ebdb4ad-9617-4647-adfd-c1013578483b",
+        "hostAddress": "172.30.89.117",
+        "initiatorNames": [
+          "iqn.1998-01.com.vmware:zdc-dhcp-0-c-29-d6-4b-f1-1a0cd614",
+          "iqn.1998-01.com.vmware:zdc-dhcp-0-c-29-d6-4b-f1-5bcf9254"
+        ],
+        "virtualVolumeHostID": "564de1a4-9a99-da0f-8b7c-3a41dfd64bf1",
+        "visibleProtocolEndpointIDs": [
+          "5dd53da0-b9b7-43f9-9b7e-b41c2558e92b"
+        ]
+      }
+    ]
+  }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

@@ -1,0 +1,75 @@
+---
+permalink: api/reference_element_api_enableidpauthentication.html 
+sidebar: sidebar 
+keywords: IdP,idp,authentication,enable 
+summary: Puede utilizar el método EnableIdpAuthentication para habilitar la compatibilidad con la autenticación mediante PDI de terceros para el clúster. Una vez habilitada la autenticación de IDP, los administradores de LDAP y clúster ya no pueden acceder al clúster a través de IU compatibles y todas las sesiones autenticadas activas quedan invalidadas o desconectadas. Sólo los usuarios autenticados por PDI de terceros pueden acceder al clúster a través de interfaces de usuario admitidas. 
+---
+= EnableIdpAuthentication
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `EnableIdpAuthentication` Método para habilitar la compatibilidad con la autenticación mediante PDI de terceros para el clúster. Una vez habilitada la autenticación de IDP, los administradores de LDAP y clúster ya no pueden acceder al clúster a través de IU compatibles y todas las sesiones autenticadas activas quedan invalidadas o desconectadas. Sólo los usuarios autenticados por PDI de terceros pueden acceder al clúster a través de interfaces de usuario admitidas.
+
+
+
+== Parámetros
+
+Este método tiene el siguiente parámetro de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+IdpConfigurationID
+ a| 
+UUID para la configuración de IDP de terceros. Si solo existe una configuración de IDP, la opción predeterminada es habilitar dicha configuración. Si sólo tiene una configuración IdpConfiguration única, no es necesario proporcionar el parámetro idpConfigurationID.
+ a| 
+UUID
+ a| 
+Ninguno
+ a| 
+No
+
+|===
+
+
+== Valores devueltos
+
+Este método no tiene valores devueltos.
+
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+  "method": "EnableIdpAuthentication",
+  "params": {
+    "idpConfigurationID": "f983c602-12f9-4c67-b214-bf505185cfed",
+  }
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+"result": {}
+}
+----
+
+
+== Nuevo desde la versión
+
+12.0

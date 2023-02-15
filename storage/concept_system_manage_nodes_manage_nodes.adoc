@@ -1,0 +1,22 @@
+---
+permalink: storage/concept_system_manage_nodes_manage_nodes.html 
+sidebar: sidebar 
+keywords: nodes, manage, cluster, capacity rule, pairs, stranded nodes 
+summary: Desde la página Nodes de la pestaña Cluster, se pueden gestionar los nodos de almacenamiento SolidFire y Fibre Channel. 
+---
+= Gestione los nodos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Desde la página Nodes de la pestaña Cluster, se pueden gestionar los nodos de almacenamiento SolidFire y Fibre Channel.
+
+Si un nodo que se acaba de añadir supone más del 50 % de la capacidad total del clúster, parte de la capacidad de este nodo se vuelve inutilizable ("trenzado"), de modo que cumpla con la regla de capacidad. Este sigue siendo el caso hasta que se añada más almacenamiento. Si se añade un nodo muy grande que también desobedece la regla de capacidad, el nodo que antes se había abandonado ya no se quedará abandonado, mientras el nodo recién añadido se vuelve abandonado. La capacidad debe añadirse siempre por parejas para evitar que esto suceda. Cuando un nodo se queda sin poner en cadena, se produce un error del clúster adecuado.
+
+
+
+== Obtenga más información
+
+xref:task_system_manage_nodes_adding_a_node_to_a_cluster.adoc[Añada un nodo a un clúster]

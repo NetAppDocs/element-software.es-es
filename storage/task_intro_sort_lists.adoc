@@ -1,0 +1,35 @@
+---
+permalink: storage/task_intro_sort_lists.html 
+sidebar: sidebar 
+keywords: sort lists, sorting on a single column, sorting on multiple columns, sort button, column selections, using sort criteria 
+summary: Es posible ordenar la información de las listas según uno o varios criterios en determinadas páginas de la interfaz de usuario de Element. Esto le ayuda a organizar la información que necesita en la pantalla. 
+---
+= Ordenar listas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible ordenar la información de las listas según uno o varios criterios en determinadas páginas de la interfaz de usuario de Element. Esto le ayuda a organizar la información que necesita en la pantalla.
+
+. Para ordenar una columna, haga clic en el encabezado de columna hasta que la información se ordene como desea.
+. Para ordenar varias columnas, haga clic en el encabezado de cada columna que desee ordenar hasta que la información de cada columna se ordene como desea.
++
+El botón Sort aparece cuando ordena usando varias columnas.
+
+. Para reordenar los criterios de ordenación, realice los siguientes pasos:
++
+.. Haga clic en *Ordenar*.
++
+El sistema rellena el campo Sort by con sus selecciones de columna.
+
+.. Distribuya las columnas en el campo Sort by en el orden en el que desea ordenar la lista.
++
+El sistema ordena la información de la lista.
+
+
+
+. Para quitar un único criterio de ordenación, haga clic en el icono *Quitar* junto al nombre de un criterio de ordenación.
+. Para quitar todos los criterios de ordenación, haga clic en *Borrar todo*.
+

@@ -1,0 +1,42 @@
+---
+permalink: storage/task_data_protection_edit_a_snapshot_schedule.html 
+sidebar: sidebar 
+keywords: snapshot schedule, edit, modify 
+summary: Puede modificar las programaciones de Snapshot que ya tenga. Después de modificarlas, la próxima vez que se ejecute la programación, se utilizarán los atributos actualizados. Las copias de Snapshot que se crean con la programación original siguen en el sistema de almacenamiento. 
+---
+= Editar una programación de Snapshot
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede modificar las programaciones de Snapshot que ya tenga. Después de modificarlas, la próxima vez que se ejecute la programación, se utilizarán los atributos actualizados. Las copias de Snapshot que se crean con la programación original siguen en el sistema de almacenamiento.
+
+.Pasos
+. Haga clic en *Protección de datos* > *programas*.
+. Haga clic en el icono *acciones* de la programación que desea cambiar.
+. En el menú que se abre, haga clic en *Editar*.
+. En el campo *ID de volumen CSV*, modifique el ID de volumen único o la lista separada por comas de los ID de volumen actualmente incluidos en la operación de instantánea.
+. Para pausar o reanudar la programación, seleccione una de las siguientes opciones:
++
+** Para pausar una programación activa, seleccione *Sí* en la lista *Pausa manual*.
+** Para reanudar una programación pausada, seleccione *no* en la lista *Pausa Manual*.
+
+
+. Introduzca otro nombre para la programación en el campo *Nombre de programación nuevo* si lo desea.
+. Para cambiar la programación para que se ejecute en distintos días de la semana o del mes, seleccione *Tipo de programación* y cambie la programación de las opciones proporcionadas.
+. *Opcional:* Seleccione *Recurring Schedule* para repetir la programación de la instantánea de forma indefinida.
+. *Opcional:* Introduzca o modifique el nombre de la nueva instantánea en el campo *Nuevo nombre de instantánea*.
++
+Si se deja el campo vacío, el sistema usará como nombre la hora y la fecha de la creación de la copia de Snapshot.
+
+. *Opcional:* Active la casilla de verificación *incluir instantáneas en replicación cuando se empareja* para asegurarse de que las instantáneas se capturan en la replicación cuando el volumen principal está emparejado.
+. Para cambiar la configuración de retención, seleccione una de las siguientes opciones:
++
+** Haga clic en *mantener siempre* para conservar la instantánea en el sistema indefinidamente.
+** Haga clic en *establecer período de retención* y utilice los cuadros de número de fecha para seleccionar un período de tiempo durante el cual el sistema retendrá la instantánea.
+
+
+. Haga clic en *Guardar cambios*.
+

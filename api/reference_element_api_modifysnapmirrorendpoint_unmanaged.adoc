@@ -1,0 +1,90 @@
+---
+permalink: api/reference_element_api_modifysnapmirrorendpoint_unmanaged.html 
+sidebar: sidebar 
+keywords: modify,modifying,edit,editing,change,changing,snapmirror,endpoint,modifysnapmirrorendpoint 
+summary: El software Element utiliza esta versión del método ModifySnapMirrorEndpoint para modificar los atributos de dirección IP o nombre del clúster de almacenamiento de un extremo de SnapMirror no administrado. No se pueden administrar extremos no gestionados mediante las API de SnapMirror de Element. Deben gestionarse con las API o el software de gestión de ONTAP. 
+---
+= ModificySnapMirrorEndpoint (no administrado)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El software Element utiliza esta versión de `ModifySnapMirrorEndpoint` Método para modificar los atributos del nombre o la dirección IP del clúster de almacenamiento de un extremo de SnapMirror no gestionado. No se pueden administrar extremos no gestionados mediante las API de SnapMirror de Element. Deben gestionarse con las API o el software de gestión de ONTAP.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+
+
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+SnapMirrorEndpointID
+ a| 
+El extremo de SnapMirror que se desea modificar.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+Nombre del clúster
+ a| 
+Nuevo nombre del extremo.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+Direcciones IP
+ a| 
+La nueva lista de direcciones IP para un clúster de sistemas de almacenamiento ONTAP que se deben comunicar con este clúster de almacenamiento de Element.
+ a| 
+matriz de cadenas
+ a| 
+Ninguno
+ a| 
+No
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+SnapMirrorEndpoint
+ a| 
+Información acerca del extremo de SnapMirror modificado.
+ a| 
+xref:reference_element_api_snapmirrorendpoint.adoc[SnapMirrorEndpoint]
+
+|===
+
+
+== Nuevo desde la versión
+
+10.3

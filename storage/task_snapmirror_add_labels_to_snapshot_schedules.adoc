@@ -1,0 +1,55 @@
+---
+permalink: storage/task_snapmirror_add_labels_to_snapshot_schedules.html 
+sidebar: sidebar 
+keywords: snapmirror labels, add labels to snapshot schedules, snapmirror policies 
+summary: Puede añadir etiquetas de SnapMirror a programaciones de Snapshot para garantizar que se aplique una política de SnapMirror. Puede ver las etiquetas disponibles en un cuadro de diálogo existente de relación de SnapMirror o en ONTAP System Manager de NetApp. 
+---
+= Añadir etiquetas de SnapMirror a las programaciones de Snapshot
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede añadir etiquetas de SnapMirror a programaciones de Snapshot para garantizar que se aplique una política de SnapMirror. Puede ver las etiquetas disponibles en un cuadro de diálogo existente de relación de SnapMirror o en ONTAP System Manager de NetApp.
+
+.Lo que necesitará
+* Se debe habilitar SnapMirror en el nivel de clúster.
+* La etiqueta que desea añadir ya existe en ONTAP.
+
+
+.Pasos
+. Haga clic en *Protección de datos* > *programas*.
+. Añada una etiqueta de SnapMirror a una programación de una de las siguientes maneras:
++
+[cols="25,75"]
+|===
+| Opción | Pasos 
+
+
+ a| 
+Crear una nueva programación
+ a| 
+.. Seleccione *Crear programación*.
+.. Introduzca todos los demás detalles relevantes.
+.. Seleccione *Crear programación*.
+
+
+
+
+ a| 
+Modificación de la programación existente
+ a| 
+.. Haga clic en el icono *acciones* de la programación a la que desea agregar una etiqueta y seleccione *Editar*.
+.. En el cuadro de diálogo que aparece, introduzca texto en el campo *etiqueta de SnapMirror*.
+.. Seleccione *Guardar cambios*.
+
+
+|===
+
+
+
+
+== Obtenga más información
+
+xref:task_data_protection_create_a_snapshot_schedule.adoc[Crear una programación de Snapshot]

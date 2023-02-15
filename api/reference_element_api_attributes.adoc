@@ -1,0 +1,60 @@
+---
+permalink: api/reference_element_api_attributes.html 
+sidebar: sidebar 
+keywords: QoS,object,Quality,Service 
+summary: Muchas de las solicitudes y respuestas de API utilizan objetos, así como tipos simples. Los objetos son una colección de pares clave-valor, donde el valor es un tipo simple o posiblemente otro objeto. Los atributos son pares personalizados nombre-valor que puede establecer el usuario en objetos JSON. Algunos métodos permiten agregar atributos al crear o modificar objetos. 
+---
+= Atributos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Muchas de las solicitudes y respuestas de API utilizan objetos, así como tipos simples. Los objetos son una colección de pares clave-valor, donde el valor es un tipo simple o posiblemente otro objeto. Los atributos son pares personalizados nombre-valor que puede establecer el usuario en objetos JSON. Algunos métodos permiten agregar atributos al crear o modificar objetos.
+
+Hay un límite de 1000 bytes en los objetos de atributos codificados.
+
+
+
+== Miembro del objeto
+
+Este objeto contiene el siguiente miembro:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+atributos
+ a| 
+La lista de pares nombre-valor en el formato de objetos JSON.
+ a| 
+Objeto JSON
+
+|===
+
+
+== Ejemplo de solicitud
+
+En el siguiente ejemplo de solicitud se utiliza el método AddClusterAdmin:
+
+[listing]
+----
+{
+   "method": "AddClusterAdmin",
+   "params": {
+      "username": "joeadmin",
+      "password": "68!5Aru268)$",
+      "access": [
+         "volume",
+         "reporting"
+      ],
+      "attributes": {
+         "name1": "value1",
+         "name2": "value2",
+         "name3": "value3"
+      }
+   }
+}
+----

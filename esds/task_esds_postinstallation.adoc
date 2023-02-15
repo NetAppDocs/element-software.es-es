@@ -1,0 +1,481 @@
+---
+permalink: esds/task_esds_postinstallation.html 
+sidebar: sidebar 
+keywords: solidfire esds, installation, create cluster, cluster, add drives, esds 
+summary: Después de instalar SolidFire eSDS, configure el nombre del clúster en cada nodo SolidFire eSDS. A continuación, puede crear un clúster de SolidFire eSDS. 
+---
+= Realice las tareas posteriores a la instalación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de instalar SolidFire eSDS, configure el nombre del clúster en cada nodo SolidFire eSDS. A continuación, puede crear un clúster de SolidFire eSDS.
+
+.Acerca de esta tarea
+A continuación se ofrece una descripción general de alto nivel de las tareas que debe realizar después de instalar SolidFire eSDS:
+
+* <<Configure el nombre del clúster>>
+* <<Establezca la clave de licencia>>
+* <<Cree un clúster>>
+* <<Añada unidades al clúster>>
+
+
+
+NOTE: Puede utilizar el enlace:https://github.com/NetApp-Automation/nar_solidfire_cluster_config[`nar_solidfire_cluster_config`#] Ansible rol proporcionado por NetApp para realizar los pasos posteriores a la instalación. Si desea hacerlo manualmente, consulte los pasos descritos a continuación.
+
+
+
+== Configure el nombre del clúster
+
+Debe configurar el nombre del clúster en cada nodo SolidFire eSDS antes de poder añadir el nodo a un clúster. Para ello, se puede usar la interfaz de usuario por nodo o la API de Element.
+
+
+IMPORTANT: No es posible cambiar el nombre del clúster después de crearlo.
+
+.Pasos
+. Elija una de las siguientes opciones:
++
+** Use la interfaz de usuario por nodo:
++
+... Abra la interfaz de usuario de cada nodo de gestión: `https://<node_mip>:442`.
+... Seleccione *Configuración del clúster* e introduzca el nombre del clúster.
+... Seleccione *aplicar cambios*.
+
+
+** Utilice el vínculo:../api/reference_element_api_setclusterconfig.html[`SetClusterConfig`Método API.
++
+Este método tiene el siguiente parámetro de entrada:
+
++
+[cols="5*"]
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+`cluster`
+ a| 
+Atributos de configuración que deben cambiarse durante esta llamada de método. Sólo es necesario agregar a este método los campos que desee modificar como miembros de este parámetro.
+ a| 
+clúster
+ a| 
+Ninguno
+ a| 
+No
+
+|===
++
+Consulte el siguiente ejemplo de solicitud:
+
++
+[listing]
+----
+{
+   "method": "SetClusterConfig",
+   "params": {
+      "cluster": {
+         "name": "myhost",
+         "mipi": "Bond10G"
+      },
+    "id" : 1
+   }
+}
+----
+
+
+
+
+
+
+== Establezca la clave de licencia
+
+Cuando crea un clúster de SolidFire eSDS, necesita la información de clave de licencia. El soporte de NetApp también necesitará la información clave de licencia para ayudar a resolver el problema. La clave de licencia del clúster eSDS de SolidFire consta del número de orden del clúster combinado con el número de serie y activa el modelo de licencia de término de capacidad que haya adquirido.
+
+.Acerca de esta tarea
+Puede utilizar el `SetLicenseKey` Método para establecer la clave de licencia para el clúster de almacenamiento de SolidFire eSDS. La `SetLicenseKey` el método tiene los siguientes parámetros de entrada:
+
+[cols="5*"]
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+`orderNumber`
+ a| 
+El nuevo número de pedido de ventas para este clúster de almacenamiento.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+`serialNumber`
+ a| 
+El nuevo número de serie para este clúster de almacenamiento.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+Este método tiene los siguientes valores devueltos:
+
+[cols="3*"]
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+`orderNumber`
+ a| 
+El nuevo número de pedido de ventas del clúster de almacenamiento.
+ a| 
+cadena
+
+
+
+ a| 
+`serialNumber`
+ a| 
+El nuevo número de serie del clúster de almacenamiento.
+ a| 
+cadena
+
+|===
+.Paso
+. Utilice la `SetLicenseKey` El método API tal como se muestra en el siguiente ejemplo:
++
+Las solicitudes de este método son similares al ejemplo siguiente:
+
++
+[listing]
+----
+{
+  "method": "SetLicenseKey",
+  "params": {
+    "orderNumber": "33601",
+    "serialNumber": "30G56E3WV"   },
+   "id" : 1
+}
+----
++
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
++
+[listing]
+----
+{
+   "id" : 1,
+   "result" : {
+      "serialNumber": "30G56E3WV",
+      "orderNumber": "33601"
+     }
+   }
+}
+----
+
+
+
+
+== Cree un clúster
+
+Después de configurar el nombre del clúster en cada nodo de almacenamiento SolidFire eSDS, es posible crear un clúster con la interfaz de usuario por nodo o la API de Element.
+
+
+IMPORTANT: El cifrado de software en reposo está habilitado de forma predeterminada para clústeres de SolidFire eSDS. Si desea cambiar el valor predeterminado, debe hacerlo cuando cree el clúster mediante el `CreateCluster` Método API.
+
+.Pasos
+. Elija una de las siguientes opciones:
++
+** Use la interfaz de usuario por nodo:
++
+... Abra la interfaz de usuario de cada nodo de gestión: `https://<node_mip>:442*`.
+... En la navegación de la izquierda, seleccione *Crear clúster*.
+... Seleccione las casillas de verificación de los nodos. Los nodos SolidFire eSDS se mostrarán como SFc100.
+... Introduzca la siguiente información: nombre de usuario, contraseña, dirección IP virtual de gestión (MVIP), dirección IP virtual de almacenamiento (SVIP), número de orden de software y número de serie.
++
+
+NOTE: No se pueden cambiar las direcciones MVIP y SVIP una vez que se crea el clúster. No se admite el uso de las mismas direcciones IP para MVIP y SVIP.
+
++
+
+NOTE: No se puede cambiar el nombre de usuario administrador del clúster inicial.
+
++
+
+IMPORTANT: Si no especifica el número de pedido y el número de serie, se producirá un error en la operación de creación de clúster.
+
++
+image::../media/esds_create_cluster.png[Muestra la pantalla de interfaz de usuario por nodo.]
+
+... Confirme que ha leído el contrato de licencia para usuario final de NetApp.
+... Seleccione *Crear clúster*.
+... Para verificar que el clúster se ha creado, inicie sesión en el clúster: `http://mvip_ip`.
+... Compruebe que los nombres de clúster, SVIP, MVIP, recuento de nodos y versión de Element sean correctos.
+
+
+** Utilice el vínculo:../api/reference_element_api_createcluster.html[`CreateCluster`Método API.
++
+Este método tiene los siguientes parámetros de entrada:
+
++
+[cols="5*"]
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+`acceptEula`
+ a| 
+Indique su aceptación del contrato de licencia para usuario final al crear este clúster. Para aceptar el CLUF, establezca este parámetro en TRUE.
+ a| 
+booleano
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+`attributes`
+ a| 
+La lista de pares nombre-valor en el formato de objetos JSON.
+ a| 
+Objeto JSON
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+`enableSoftwareEncryptionAtRest`
+ a| 
+Habilite este parámetro para utilizar el cifrado basado en software en reposo. De forma predeterminada es TRUE en clústeres eSDS de SolidFire. De forma predeterminada es false en el resto de clústeres.
+ a| 
+booleano
+ a| 
+verdadero
+ a| 
+No
+
+
+
+ a| 
+`mvip`
+ a| 
+La dirección IP flotante (virtual) del clúster en la red de gestión.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+`nodes`
+ a| 
+Direcciones CIP/SIP del conjunto inicial de nodos que forman el clúster. La dirección IP de este nodo debe estar en la lista.
+ a| 
+matriz de cadenas
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+`orderNumber`
+ a| 
+Número de pedido de venta alfanumérico. Requerida en SolidFire eSDS.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+No (plataformas basadas en hardware) sí (plataformas basadas en software)
+
+
+
+ a| 
+`password`
+ a| 
+La contraseña inicial de la cuenta de administrador del clúster.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+`serialNumber`
+ a| 
+Número de serie alfanumérico de nueve dígitos. Requerida en SolidFire eSDS.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+No (plataformas basadas en hardware) sí (plataformas basadas en software)
+
+
+
+ a| 
+`svip`
+ a| 
+La dirección IP flotante (virtual) del clúster en la red de almacenamiento (iSCSI).
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+`username`
+ a| 
+Nombre de usuario del administrador del clúster.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
++
+Consulte la siguiente solicitud de ejemplo:
+
++
+[listing]
+----
+{
+  "method": "CreateCluster",
+  "params": {
+    "acceptEula": true,
+    "mvip": "10.0.3.1",
+    "svip": "10.0.4.1",
+    "repCount": 2,
+    "username": "Admin1",
+    "password": "9R7ka4rEPa2uREtE",
+    "attributes": {
+      "clusteraccountnumber": "axdf323456"
+    },
+    "nodes": [
+      "10.0.2.1",
+      "10.0.2.2",
+      "10.0.2.3",
+      "10.0.2.4"
+    ]
+  },
+  "id": 1
+}
+----
+
+
+
+
+Para obtener más información acerca de este método, consulte LINK:api/reference_element_api_createcluster.html[`CreateCluster`#].
+
+
+
+== Añada unidades al clúster
+
+Debe añadir unidades a su clúster eSDS de SolidFire para que puedan participar en el clúster. Para ello, puede usar la interfaz de usuario de Element o las API.
+
+.Pasos
+. Elija una de las siguientes opciones:
++
+** Use la interfaz de usuario de Element:
++
+... En la interfaz de usuario de Element, seleccione *Cluster* > *Drives*.
+... Seleccione *Available* para ver la lista de unidades disponibles.
+... Para agregar unidades individuales, seleccione el icono *acciones* de la unidad que desea agregar y, a continuación, seleccione *Agregar*.
+... Para añadir varias unidades, active las casillas de verificación de las unidades que desee agregar, seleccione *acciones masivas* y, a continuación, seleccione *Agregar*.
+... Compruebe que las unidades se hayan añadido y que la capacidad del clúster sea la esperada.
+
+
+** Utilice la[`AddDrives`Método API.
++
+Este método tiene el siguiente parámetro de entrada:
+
++
+[cols="5*"]
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+`drives`
+ a| 
+Información sobre cada unidad que se va a añadir al clúster. Los posibles valores son los siguientes:
+
+*** DriveID: El ID de la unidad que se va a añadir (número entero).
+*** Type: El tipo de unidad que se va a añadir (cadena). Los valores válidos son "slice", "block" o "volume". Si se omite, el sistema asigna el tipo correcto.
+
+ a| 
+Cabina de objetos JSON
+ a| 
+Ninguno
+ a| 
+Sí (el tipo es opcional)
+
+|===
++
+Aquí tiene un ejemplo de solicitud:
+
++
+[listing]
+----
+{
+  "id": 1,
+  "method": "AddDrives",
+  "params": {
+    "drives": [
+      {
+        "driveID": 1,
+        "type": "slice"
+      },
+      {
+        "driveID": 2,
+        "type": "block"
+      },
+      {
+        "driveID": 3,
+        "type": "block"
+      }
+    ]
+  }
+}
+----
+
+
+
+
+Para obtener más información acerca de este método API, consulte LINK:./api/reference_element_api_adddrives.html[`AddDrives`#].
+
+
+
+== Obtenga más información
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Página de recursos de SolidFire de NetApp"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentación para versiones anteriores de SolidFire de NetApp y los productos Element"^]
+

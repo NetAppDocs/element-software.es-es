@@ -1,0 +1,25 @@
+---
+section: upgrade
+title: Actualice su sistema de almacenamiento all-flash SolidFire de NetApp para el
+  software Element 12.5 o posterior
+entries:
+- title: Información general sobre la secuencia de actualización
+  url: "/upgrade/concept_element_upgrade_overview.html"
+- title: Procedimientos de actualización del sistema
+  entries:
+  - title: Actualice los servicios de gestión
+    url: "/upgrade/task_hcc_update_management_services.html"
+  - title: Ejecute comprobaciones del estado del almacenamiento de Element antes de
+      actualizar el almacenamiento
+    url: "/upgrade/task_hcc_upgrade_element_prechecks.html"
+  - title: Actualice el software Element
+    url: "/upgrade/task_hcc_upgrade_element_software.html"
+  - title: Actualizar el firmware de almacenamiento
+    url: "/upgrade/task_hcc_upgrade_storage_firmware.html"
+  - title: Actualice un nodo de gestión
+    url: "/upgrade/task_hcc_upgrade_management_node.html"
+  - title: Actualice el plugin de Element para vCenter Server
+    url: "/upgrade/task_vcp_upgrade_plugin.html"
+- title: Actualice los componentes de vSphere para un sistema de almacenamiento SolidFire
+    de NetApp con el plugin de Element para vCenter Server
+  url: "/upgrade/task_sf_upgrade_all_vsphere.html"

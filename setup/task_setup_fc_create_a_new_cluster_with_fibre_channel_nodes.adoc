@@ -1,0 +1,53 @@
+---
+permalink: setup/task_setup_fc_create_a_new_cluster_with_fibre_channel_nodes.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible crear un nuevo clúster de después de configurar los nodos Fibre Channel individuales. Cuando se crea un clúster, también se crea automáticamente una cuenta de usuario de administrador de clúster. El administrador de clúster tiene permiso para gestionar todos los atributos del clúster y crear otras cuentas de administrador de clúster. 
+---
+= Cree un nuevo clúster con nodos Fibre Channel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible crear un nuevo clúster de después de configurar los nodos Fibre Channel individuales. Cuando se crea un clúster, también se crea automáticamente una cuenta de usuario de administrador de clúster. El administrador de clúster tiene permiso para gestionar todos los atributos del clúster y crear otras cuentas de administrador de clúster.
+
+Durante la configuración de nodos nuevos, se asignan direcciones IP de gestión (MIP) 1G o 10G a cada nodo. Debe usar una de las direcciones IP de nodo que se han creado durante la configuración para abrir la página Create a New Cluster. La dirección IP que utilice dependerá de la red que haya elegido para la gestión del clúster.
+
+.Lo que necesitará
+Configuró los nodos Fibre Channel individuales.
+
+.Pasos
+. En una ventana del navegador, introduzca la dirección MIP de un nodo.
+. En Create a New Cluster, introduzca la siguiente información:
++
+** Management VIP: IP virtual enrutable en una red 1GbE o 10GbE para tareas de gestión de red.
+** ISCSI (Storage) VIP: IP virtual en la red 10GbE para tareas de almacenamiento y detección iSCSI.
++
+
+NOTE: No se puede cambiar la SVIP una vez que se ha creado el clúster.
+
+** User name: El nombre de usuario del administrador de clúster principal para el acceso autenticado al clúster. Debe guardar el nombre de usuario para consultarlo más adelante.
++
+
+NOTE: Se pueden utilizar letras mayúsculas y minúsculas, caracteres especiales y números para el nombre de usuario.
+
+** Password: Contraseña para el acceso autenticado al clúster. Debe guardar el nombre de usuario para consultarlo más adelante. La protección de datos bidireccional está habilitada de forma predeterminada. No puede cambiar esta configuración.
+
+
+. Lea el Contrato de licencia para el usuario final y haga clic en *Acepto*.
+. *Opcional*: En la lista Nodes, asegúrese de que las casillas de verificación de los nodos que no deben incluirse en el clúster no están seleccionadas.
+. Haga clic en *Crear clúster*.
++
+En función del número de nodos que se incluyan, el sistema podría tardar varios minutos en crear el clúster. En una red que se haya configurado correctamente, la creación de un clúster pequeño de cinco nodos debería tardar menos de un minuto. Una vez que se haya creado el clúster, la ventana Create a New Cluster se redirige a la dirección URL de MVIP del clúster y muestra la interfaz de usuario web de de.
+
+
+
+
+
+== Obtenga más información
+
+* https://www.netapp.com/data-storage/solidfire/documentation["Página SolidFire y Element Resources"^]
+* https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
+

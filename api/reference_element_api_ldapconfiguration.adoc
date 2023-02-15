@@ -1,0 +1,132 @@
+---
+permalink: api/reference_element_api_ldapconfiguration.html 
+sidebar: sidebar 
+keywords: object,objects,ldapConfiguration 
+summary: El objeto ldapConfiguration contiene información sobre la configuración de LDAP en el sistema de almacenamiento de. Puede recuperar información LDAP con el método API GetLdapConfiguration. 
+---
+= LdapConfiguration
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El objeto ldapConfiguration contiene información sobre la configuración de LDAP en el sistema de almacenamiento de. Puede recuperar la información LDAP con `GetLdapConfiguration` Método API.
+
+
+
+== Miembros de objeto
+
+Este objeto contiene los siguientes miembros:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+Tipo de autorización
+ a| 
+Identifica el método de autenticación de usuarios que se va a utilizar. Los posibles valores son los siguientes:
+
+* DirectBind
+* SearchAndBind
+
+ a| 
+cadena
+
+
+
+ a| 
+activado
+ a| 
+Identifica si el sistema está configurado para LDAP o no. Los posibles valores son los siguientes:
+
+* verdadero
+* falso
+
+ a| 
+booleano
+
+
+
+ a| 
+GroupSearchBaseDN
+ a| 
+El DN base del árbol para iniciar la búsqueda del grupo (el sistema realizará una búsqueda en el subárbol de aquí).
+ a| 
+cadena
+
+
+
+ a| 
+GroupSearchCustomFilter
+ a| 
+Filtro de búsqueda personalizado utilizado.
+ a| 
+cadena
+
+
+
+ a| 
+GroupSearchType
+ a| 
+Controla el filtro de búsqueda de grupos predeterminado que se utiliza. Los posibles valores son los siguientes:
+
+* NoGroups: Ningún soporte de grupo.
+* ActiveDirectory: Pertenencia anidada de todos los grupos de AD de un usuario.
+* MemberDN: Grupos del estilo MemberDN (un nivel).
+
+ a| 
+cadena
+
+
+
+ a| 
+SearchBindDN
+ a| 
+Un DN completo con el que se inicia sesión para realizar una búsqueda LDAP del usuario (necesita acceso de lectura al directorio LDAP).
+ a| 
+cadena
+
+
+
+ a| 
+URIs de servidor
+ a| 
+Una lista separada por comas de los URI del servidor LDAP (por ejemplo, `ldap://1.2.3.4` y.. `ldaps://1.2.3.4:123`.)
+ a| 
+cadena
+
+
+
+ a| 
+UserDNTemplate
+ a| 
+Cadena que se utiliza para formar un DN de usuario completo.
+ a| 
+cadena
+
+
+
+ a| 
+UserSearchBaseDN
+ a| 
+El DN base de los tres que se usan para iniciar la búsqueda (realizará una búsqueda de subárbol de aquí).
+ a| 
+cadena
+
+
+
+ a| 
+UserSearchFilter
+ a| 
+El filtro LDAP utilizado.
+ a| 
+cadena
+
+|===
+
+
+== Obtenga más información
+
+xref:reference_element_api_getldapconfiguration.adoc[GetLdapConfiguration]

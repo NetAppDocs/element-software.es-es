@@ -1,0 +1,122 @@
+---
+permalink: hardware/task_hseries_driverepl.html 
+sidebar: sidebar 
+keywords: drives, replace drives, SSDs, replacement, h610s, h410s, maintenance 
+summary: Si una unidad está defectuosa o si el nivel de deterioro de la unidad está por debajo de un umbral, debe reemplazarla. Las alarmas en la interfaz de usuario del software Element se notifican cuando una unidad se produjo un error o se va a producir un fallo. Es posible cambiar en caliente una unidad con error. 
+---
+= Sustituya las unidades
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si una unidad está defectuosa o si el nivel de deterioro de la unidad está por debajo de un umbral, debe reemplazarla. Las alarmas en la interfaz de usuario del software Element se notifican cuando una unidad se produjo un error o se va a producir un fallo. Es posible cambiar en caliente una unidad con error.
+
+.Acerca de esta tarea
+Este procedimiento permite reemplazar unidades en nodos de almacenamiento H610S y H410S. Al quitar una unidad, esta se desconecta. Los datos en la unidad se extraen y se migran a otras unidades del clúster. La migración de datos a otras unidades activas del sistema puede demorar desde algunos minutos hasta una hora según el uso de la capacidad y las operaciones de I/o activas en el clúster. Debe seguir las siguientes prácticas recomendadas para gestionar las unidades al tiempo que las quita y las reemplaza:
+
+* Mantenga la unidad en la bolsa ESD hasta que esté listo para instalarla.
+* Abra la bolsa ESD a mano o corte la parte superior con unas tijeras.
+* Utilice siempre una muñequera ESD conectada a una superficie sin pintar en su chasis.
+* Utilice siempre ambas manos cuando quite, instale o lleve una unidad.
+* No fuerce nunca una unidad en el chasis.
+* Utilice siempre paquetes aprobados cuando los lleve.
+* No coloque las unidades entre sí.
+
+
+
+
+== Prácticas recomendadas para agregar y quitar unidades
+
+* Añada todas las unidades de bloques y asegúrese de que la sincronización de bloques se complete antes de añadir las unidades de segmentos.
+* Para el software Element 10.x y versiones posteriores, añada todas las unidades de bloques a la vez. Asegúrese de no hacerlo para más de tres nodos a la vez.
+* Para el software Element 9.x y versiones anteriores, añada tres unidades a la vez que le permitan sincronizarse completamente antes de añadir el siguiente grupo de tres.
+* Quite la unidad de segmentos y asegúrese de que la sincronización de segmentos se complete antes de quitar las unidades de bloques.
+* Quite todas las unidades de bloques de un único nodo a la vez. Asegúrese de que toda la sincronización de bloques esté completa antes de moverse al siguiente nodo.
+
+
+.Pasos
+. Quite la unidad del clúster mediante la interfaz de usuario del software NetApp Element:
++
+.. En la interfaz de usuario de Element, seleccione *Cluster > Drives*.
+.. Seleccione *error* para ver la lista de unidades con errores.
+.. Anote el número de ranura de la unidad con error. Esta información se necesita para localizar la unidad con error en el chasis.
+.. Seleccione *acciones* para la unidad que desea quitar.
+.. Seleccione *Quitar*.
++
+
+NOTE: Si no hay suficiente capacidad para quitar las unidades activas antes de quitar un nodo, se muestra un mensaje de error al confirmar la eliminación de la unidad. Después de resolver el error, ahora puede quitar físicamente la unidad del chasis.
+
+
+
+. Sustituya la unidad del chasis:
++
+.. Desembale la unidad de repuesto y colóquela en una superficie plana y sin estática cerca del bastidor. Guarde los materiales de embalaje para cuando devuelva la unidad con error a NetApp. Aquí tiene la vista frontal de los nodos de almacenamiento H610S y H410S con las unidades:
++
+image::h610s_h410s.png[Muestra la vista frontal de los nodos de almacenamiento H610S y H410S.]
+
+.. (*sólo H410S*) realice los siguientes pasos:
++
+... Identifique el nodo haciendo coincidir el número de serie (etiqueta de servicio) con el número que anotó abajo en la interfaz de usuario de Element. El número de serie está en una pegatina situada en la parte posterior de cada nodo. Después de identificar el nodo, se puede usar la información de ranura para identificar la ranura en la que está ubicada la unidad con error. Las unidades se ordenan alfabéticamente de La A a la D y del 0 al 5.
+... Retire el bisel.
+... Pulse el botón de liberación de la unidad con error:
++
+image::h410s_drive.png[Muestra el botón de lanzamiento de la unidad para nodos de almacenamiento H410S.]
+
++
+Al pulsar el botón de liberación, la palanca de leva de los resortes de accionamiento se abre parcialmente y la unidad se libera del plano medio.
+
+... Abra el mango de la leva y deslice la unidad con cuidado con ambas manos.
+... Coloque la unidad sobre una superficie nivelada y antiestática.
+... Inserte la unidad de sustitución en la ranura completamente en el chasis con ambas manos.
+... Presione el asa de la leva hasta que haga clic.
+... Vuelva a instalar el bisel.
+... Notifique al soporte de NetApp sobre el reemplazo de la unidad. El soporte de NetApp proporcionará instrucciones para la devolución de la unidad con error.
+
+
+.. (*sólo H610S*) realice los siguientes pasos:
++
+... Coincida el número de ranura de la unidad con error desde la interfaz de usuario de Element con el número en el chasis. El LED de la unidad con error se ilumina en ámbar.
+... Retire el bisel.
+... Pulse el botón de liberación y quite la unidad con error como se muestra en la siguiente ilustración:
++
+image::h610s_driveremove.png[Muestra la unidad que se quita del nodo H610S.]
+
++
+
+NOTE: Asegúrese de que el asa de la bandeja está completamente abierto antes de intentar sacar la unidad del chasis.
+
+... Deslice la unidad hacia fuera y colóquela sobre una superficie nivelada y sin estática.
+... Pulse el botón de liberación de la unidad de repuesto antes de insertarla en el compartimiento para unidades. Los muelles del mango de la bandeja de unidades se abren.
++
+image::H600S_driveinstall.png[Muestra la unidad que se está instalando en el nodo H610S.]
+
+... Inserte la transmisión de sustitución sin aplicar demasiada fuerza. Cuando la unidad se inserta por completo, se oye un clic.
+... Cierre Tratar con cuidado. del soporte de unidades
+... Vuelva a instalar el bisel.
+... Notifique al soporte de NetApp sobre el reemplazo de la unidad. El soporte de NetApp proporcionará instrucciones para la devolución de la unidad con error.
+
+
+
+
+. Vuelva a añadir la unidad al clúster mediante la interfaz de usuario de Element.
++
+
+NOTE: Al instalar una unidad nueva en un nodo existente, la unidad se registra automáticamente como *disponible* en la interfaz de usuario de Element. La unidad se debe añadir al clúster antes de que esta pueda participar en el clúster.
+
++
+.. En la interfaz de usuario de Element, seleccione *Cluster > Drives*.
+.. Seleccione *Available* para ver la lista de unidades disponibles.
+.. Seleccione el icono acciones de la unidad que desea agregar y seleccione *Agregar*.
+
+
+
+
+
+
+== Obtenga más información
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Página de recursos de SolidFire de NetApp"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentación para versiones anteriores de SolidFire de NetApp y los productos Element"^]
+

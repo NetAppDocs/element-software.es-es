@@ -1,0 +1,37 @@
+---
+permalink: storage/task_data_protection_edit_group_snapshots.html 
+sidebar: sidebar 
+keywords: group snapshots, edit, replication, retention 
+summary: La configuración de la replicación y la retención se puede editar para las snapshots de grupos existentes. 
+---
+= Editar copias de Snapshot de grupo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La configuración de la replicación y la retención se puede editar para las snapshots de grupos existentes.
+
+. Haga clic en *Protección de datos* > *instantáneas de grupo*.
+. Haga clic en el icono Actions de la snapshot de grupo que quiera editar.
+. En el menú que se abre, seleccione *Editar*.
+. *Opcional:* para cambiar la configuración de replicación de la instantánea de grupo:
++
+.. Haga clic en *Editar* junto a *replicación actual*.
+.. Active la casilla de verificación *incluir cada miembro de Snapshot de grupo en replicación cuando se empareja* para asegurarse de que cada instantánea se capture en la replicación cuando el volumen primario esté emparejado.
+
+
+. *Opcional:* para cambiar la configuración de retención de la instantánea de grupo, seleccione una de las siguientes opciones:
++
+.. Haga clic en *Editar* junto a *retención actual*.
+.. Seleccione una opción de retención para la copia de Snapshot de grupo:
++
+*** Haga clic en *mantener siempre* para conservar la instantánea en el sistema indefinidamente.
+*** Haga clic en *establecer período de retención* y utilice los cuadros de número de fecha para elegir un período de tiempo durante el cual el sistema retendrá la instantánea.
+
+
+
+
+. Haga clic en *Guardar cambios*.
+

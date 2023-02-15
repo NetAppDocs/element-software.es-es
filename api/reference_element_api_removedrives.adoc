@@ -1,0 +1,105 @@
+---
+permalink: api/reference_element_api_removedrives.html 
+sidebar: sidebar 
+keywords: cluster,drive,drives,remove,removing,removedrives 
+summary: Se puede usar el método RemoveDrives para quitar unidades de forma proactiva que forman parte del clúster. Se recomienda usar este método al reducir la capacidad de un clúster o como preparación para reemplazar unidades que se acercan al final de su vida útil. Los datos en las unidades se extraen y se migran a otras unidades del clúster antes de quitar la unidad del clúster. 
+---
+= RemoveDrives
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `RemoveDrives` método para quitar de forma proactiva unidades que forman parte del clúster. Se recomienda usar este método al reducir la capacidad de un clúster o como preparación para reemplazar unidades que se acercan al final de su vida útil. Los datos en las unidades se extraen y se migran a otras unidades del clúster antes de quitar la unidad del clúster.
+
+`RemoveDrives` es un método asíncrono. Según la capacidad total de las unidades que se estén quitando, es posible que se deban tardar varios minutos migrar todos los datos.
+
+Cuando se quitan varias unidades, se usa un único `RemoveDrives` llamada a método en lugar de varios métodos individuales con una sola unidad cada uno. Esto reduce la cantidad de equilibrio de datos que debe producirse para estabilizar uniformemente la carga de almacenamiento del clúster.
+
+También es posible quitar unidades con estado "Failed" mediante `RemoveDrives`. Cuando se retira una unidad con el estado «fallido», la unidad no se devuelve a un estado «disponible» o «activo». La unidad no está disponible para usar en el clúster.
+
+
+
+== Parámetro
+
+Este método tiene el siguiente parámetro de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+unidades
+ a| 
+Lista de identificadores de unidades que se van a quitar del clúster.
+ a| 
+matriz en números enteros
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+Establish asyncHandle
+ a| 
+Valor de mango utilizado para obtener el resultado de la operación.
+ a| 
+entero
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "RemoveDrives",
+   "params": {
+      "drives"  : [3, 4, 5]
+   },
+   "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+   "id": 1,
+   "result" : {
+     "asyncHandle": 1
+   }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6
+
+
+
+== Obtenga más información
+
+* xref:reference_element_api_getasyncresult.adoc[GetAsyncResult]
+* xref:reference_element_api_listdrives.adoc[ListDrives]
+

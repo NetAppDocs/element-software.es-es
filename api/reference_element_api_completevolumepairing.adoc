@@ -1,0 +1,97 @@
+---
+permalink: api/reference_element_api_completevolumepairing.html 
+sidebar: sidebar 
+keywords: volume,pairing,CompleteVolumePairing,pair,volumes,complete,completing 
+summary: Es posible usar CompleteVolumePairing para completar el emparejamiento de dos volúmenes. 
+---
+= CompleteVolumePairing
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar `CompleteVolumePairing` para completar el emparejamiento de dos volúmenes.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+ID de volumen
+ a| 
+El ID de volumen que completará la pareja de volúmenes.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+VolumePairingKey
+ a| 
+La clave ha vuelto de la xref:reference_element_api_startvolumepairing.adoc[StartVolumePairing] Método API.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+
+
+== Valor de retorno
+
+Este método no tiene valores devueltos.
+
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "CompleteVolumePairing",
+   "params": {
+        "volumeID" : 12,
+        "volumePairingKey" : "7b22636c7573746572506169724944223a312c22636c75737465725061697255554944223a2231636561313336322d346338662d343631612d626537322d373435363661393533643266222c22636c7573746572556e697175654944223a2278736d36222c226d766970223a223139322e3136382e3133392e313232222c226e616d65223a224175746f54657374322d63307552222c2270617373776f7264223a22695e59686f20492d64774d7d4c67614b222c22727063436f6e6e656374696f6e4944223a3931333134323634392c22757365726e616d65223a225f5f53465f706169725f50597a796647704c7246564432444a42227d"
+        },
+   "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+"id": 1,
+"result": {}
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6
+
+
+
+== Obtenga más información
+
+xref:reference_element_api_startvolumepairing.adoc[StartVolumePairing]

@@ -1,0 +1,147 @@
+---
+permalink: api/reference_element_api_listvolumestats.html 
+sidebar: sidebar 
+keywords: volumes,volume,stats,list,listing,listvolumestats,activity 
+summary: 'Es posible usar el método ListVolumeStats para obtener mediciones de actividad de alto nivel para un único volumen, una lista de volúmenes o todos los volúmenes \(si se omite el parámetro volumeIDs\). Los valores de medición se acumulan a partir de la creación del volumen.' 
+---
+= ListVolumeStats
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `ListVolumeStats` Método para obtener mediciones de actividad de alto nivel para un solo volumen, una lista de volúmenes o todos los volúmenes (si se omite el parámetro volumeIDs). Los valores de medición se acumulan a partir de la creación del volumen.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+IncludeVirtualVolumes
+ a| 
+De forma predeterminada, se incluyen los volúmenes virtuales en la respuesta. Para excluir volúmenes virtuales, se debe establecer en FALSE.
+ a| 
+booleano
+ a| 
+verdadero
+ a| 
+No
+
+
+
+ a| 
+ID de volumen
+ a| 
+Una lista de los volúmenes de los cuales se puede recuperar la información de la actividad.
+ a| 
+matriz en números enteros
+ a| 
+No
+ a| 
+No
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+VolumeStats
+ a| 
+Lista de información de actividad de volumen.
+ a| 
+xref:reference_element_api_volumestats.adoc[VolumeStats] cabina
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+  "method": "ListVolumeStats",
+    "params": {
+        "volumeIDs": [1]
+    },
+    "id": 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "volumeStats": [
+      {
+        "accountID": 1,
+        "actualIOPS": 0,
+        "asyncDelay": null,
+        "averageIOPSize": 0,
+        "burstIOPSCredit": 30000,
+        "clientQueueDepth": 0,
+        "desiredMetadataHosts": null,
+        "latencyUSec": 0,
+        "metadataHosts": {
+          "deadSecondaries": [],
+          "liveSecondaries": [
+            47
+          ],
+          "primary": 33
+        },
+        "nonZeroBlocks": 22080699,
+        "readBytes": 657262370816,
+        "readBytesLastSample": 0,
+        "readLatencyUSec": 0,
+        "readOps": 160464446,
+        "readOpsLastSample": 0,
+        "samplePeriodMSec": 500,
+        "throttle": 0,
+        "timestamp": "2016-03-09T19:39:15.771697Z",
+        "unalignedReads": 0,
+        "unalignedWrites": 0,
+        "volumeAccessGroups": [
+          1
+        ],
+        "volumeID": 1,
+        "volumeSize": 107374182400,
+        "volumeUtilization": 0,
+        "writeBytes": 219117547520,
+        "writeBytesLastSample": 0,
+        "writeLatencyUSec": 0,
+        "writeOps": 53495495,
+        "writeOpsLastSample": 0,
+        "zeroBlocks": 4133701
+      }
+    ]
+  }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

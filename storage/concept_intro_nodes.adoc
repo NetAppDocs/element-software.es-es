@@ -1,0 +1,14 @@
+---
+permalink: storage/concept_intro_nodes.html 
+sidebar: sidebar 
+keywords: sf-series nodes, nodes, block storage, storage nodes, fibre channel nodes, fc, FC 
+summary: 'Los nodos son los componentes de hardware individuales que se agrupan en un clúster para poder acceder a ellos como almacenamiento basado en bloques. Existen dos tipos de nodos en un sistema de almacenamiento SolidFire: Nodos de almacenamiento y nodos Fibre Channel.' 
+---
+= Nodos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los nodos son los componentes de hardware individuales que se agrupan en un clúster para poder acceder a ellos como almacenamiento basado en bloques. Existen dos tipos de nodos en un sistema de almacenamiento SolidFire: Nodos de almacenamiento y nodos Fibre Channel.

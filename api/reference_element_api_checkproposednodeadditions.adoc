@@ -1,0 +1,121 @@
+---
+permalink: api/reference_element_api_checkproposednodeadditions.html 
+sidebar: sidebar 
+keywords: proposed,node,additions,CheckProposedNodeAdditions,storage,checking 
+summary: Puede usar el método CheckedNodeAdditions para probar un conjunto de nodos de almacenamiento para ver si puede añadirlos a un clúster de almacenamiento sin errores ni infracciones a las mejores prácticas. 
+---
+= CheckboedNodeAdditions
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `CheckProposedNodeAdditions` método para probar un conjunto de nodos de almacenamiento a fin de ver si puede añadirlos a un clúster de almacenamiento sin errores ni violaciones de prácticas recomendadas.
+
+
+
+== Parámetro
+
+Este método tiene el siguiente parámetro de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+nodos
+ a| 
+Una lista de direcciones IP de almacenamiento de nodos de almacenamiento que están listos para añadir a un clúster de almacenamiento.
+ a| 
+matriz de cadenas
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+
+
+== Valores devueltos
+
+Este método tiene los siguientes valores devueltos:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+ProposedClusterValid
+ a| 
+Indica si los nodos de almacenamiento propuestos componen un clúster de almacenamiento válido o no. Los posibles valores son los siguientes:
+
+* verdadero
+* falso
+
+ a| 
+booleano
+
+
+
+ a| 
+ProposedClusterErrors
+ a| 
+Errores que se producirían si se creara un clúster de almacenamiento mediante los nodos de almacenamiento propuestos. posibles códigos de error:
+
+* `nodesNoCapacity`: Los nodos no tienen ninguna capacidad utilizable.
+* `nodesTooLarge`: Los nodos constituyen una parte demasiado grande de la capacidad del grupo para el esquema de protección activo.
+* `nodesConnectFailed`: No se ha podido conectar a los nodos para consultar la configuración de hardware.
+* `nodesQueryFailed`: No se pudo consultar los nodos para la configuración de hardware.
+* `nodesClusterMember`: Las direcciones IP de los nodos ya están en uso en el clúster.
+* `nonFipsNodeCapable`: No se puede agregar un nodo no compatible con FIPS al clúster de almacenamiento mientras la función de cifrado de unidades FIPS 140-2 está habilitada.
+* `nonFipsDrivesCapable`: No se puede agregar un nodo con unidades no compatibles con FIPS al clúster mientras la función de cifrado de unidades FIPS 140-2 está habilitada.
+
+ a| 
+matriz de cadenas
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+	"method": "CheckProposedNodeAdditions",
+	"params": {
+	"nodes": [
+		"192.168.1.11",
+		"192.168.1.12",
+		"192.168.1.13",
+		"192.168.1.14"
+	]
+},
+	"id": 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+	"id": 1,
+	"result": {
+		"proposedClusterValid": true,
+		"proposedClusterErrors": [ ]
+	}
+}
+----
+
+
+== Nuevo desde la versión
+
+11.0

@@ -1,0 +1,22 @@
+---
+permalink: storage/task_system_manage_fips_create_a_cluster_supporting_fips_drives.html 
+sidebar: sidebar 
+keywords: fips, security, federal information processing standards, 140-2, cluster, create 
+summary: 'La seguridad cada vez resulta más importante para la puesta en marcha de soluciones en muchos entornos de cliente. Los estándares de procesamiento de información federal \(FIPS\) son estándares de seguridad informática e interoperabilidad. El cifrado certificado FIPS 140-2 para datos en reposo es un componente de la solución de seguridad general.' 
+---
+= Cree un clúster que admita unidades FIPS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La seguridad cada vez resulta más importante para la puesta en marcha de soluciones en muchos entornos de cliente. Los estándares de procesamiento de información federal (FIPS) son estándares de interoperabilidad y seguridad informática. El cifrado certificado FIPS 140-2 para datos en reposo es un componente de la solución de seguridad general.
+
+* link:task_system_manage_fips_avoid_mixing_nodes_for_fips_drives.html["Evite combinar nodos para unidades FIPS"]
+* link:task_system_manage_fips_enable_encryption_at_rest.html["Habilite el cifrado en reposo"]
+* link:task_system_manage_fips_identify_nodes_ready_for_fips_drives["Identifique si los nodos están listos para la función de unidades FIPS"]
+* link:task_system_manage_fips_enable_the_fips_drives_feature.html["Habilite la función de unidades FIPS"]
+* link:task_system_manage_fips_check_the_fips_drive_status.html["Compruebe el estado de la unidad FIPS"]
+* link:task_system_manage_fips_troubleshoot_the_fips_drive_feature["Solucione problemas de la función de unidad FIPS"]
+

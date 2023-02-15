@@ -1,0 +1,29 @@
+---
+permalink: storage/task_data_protection_using_volume_snapshots.html 
+sidebar: sidebar 
+keywords: data protection, volume snapshots, roll back volume, replicate snapshots 
+summary: Una copia de Snapshot de volumen es una copia de un momento específico de un volumen. Puede realizar una copia de Snapshot de un volumen y usarla más adelante si se tiene que revertir un volumen al estado que tenía en el momento de creación de la copia de Snapshot. 
+---
+= Use copias Snapshot de volumen para la protección de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Una copia de Snapshot de volumen es una copia de un momento específico de un volumen. Puede realizar una copia de Snapshot de un volumen y usarla más adelante si se tiene que revertir un volumen al estado que tenía en el momento de creación de la copia de Snapshot.
+
+Las copias Snapshot son similares a los clones de volúmenes. No obstante, las copias de Snapshot son réplicas de los metadatos del volumen, por lo que no es posible montarlas ni escribir en ellas. Además, para crear una copia de Snapshot de volumen, solo se requiere una pequeña cantidad de espacio y recursos del sistema, lo cual es más rápido crear una copia de Snapshot que clonar.
+
+Es posible realizar una copia de Snapshot de un volumen individual o un conjunto de volúmenes.
+
+Opcionalmente, replique las snapshots en un clúster de remoto y utilícelos como copia de backup del volumen. Gracias a ello, es posible revertir un volumen a un momento específico mediante la copia de Snapshot replicada. Como alternativa, es posible crear un clon de un volumen a partir de una copia de Snapshot replicada.
+
+
+
+== Obtenga más información
+
+* xref:task_data_protection_use_individual_volume_snapshots.adoc[Use copias de Snapshot de volumen individuales para la protección de datos]
+* xref:task_data_protection_use_group_snapshots_for_data_protection.adoc[El uso de copias de Snapshot de grupo para la tarea de protección de datos]
+* xref:task_data_protection_schedule_a_snapshot_task.adoc[Programar una copia de Snapshot]
+

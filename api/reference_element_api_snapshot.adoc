@@ -1,0 +1,223 @@
+---
+permalink: api/reference_element_api_snapshot.html 
+sidebar: sidebar 
+keywords: object,objects,snapshot 
+summary: El objeto Snapshot contiene información sobre una snapshot realizada para un volumen. Es posible usar el método API ListSnapshots para recuperar una lista de información de Snapshot de un volumen o de todos los volúmenes. El objeto incluye información sobre la snapshot activa, así como cada snapshot creada para un volumen. 
+---
+= snapshot
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El objeto Snapshot contiene información sobre una snapshot realizada para un volumen. Puede utilizar el `ListSnapshots` Método API para recuperar una lista de información de snapshot de un volumen o de todos los volúmenes. El objeto incluye información sobre la snapshot activa, así como cada snapshot creada para un volumen.
+
+
+
+== Miembros de objeto
+
+Este objeto contiene los siguientes miembros:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+atributos
+ a| 
+La lista de pares nombre-valor en el formato de objetos JSON.
+ a| 
+Objeto JSON
+
+
+
+ a| 
+suma de comprobación
+ a| 
+Una pequeña representación de cadena de los datos de la instantánea almacenada. Esta suma de comprobación se puede utilizar más adelante para comparar otras instantáneas con el fin de detectar errores en los datos.
+ a| 
+cadena
+
+
+
+ a| 
+CreateTime
+ a| 
+La hora a la que se formateó la copia de Snapshot en UTC+0.
+ a| 
+Cadena de fecha ISO 8601
+
+
+
+ a| 
+EnableRemoteReplication
+ a| 
+Identifica si Snapshot está habilitada para la replicación remota.
+ a| 
+booleano
+
+
+
+ a| 
+ExpiraciónCausa
+ a| 
+Indica cómo se establece la caducidad de la instantánea. Los posibles valores son los siguientes:
+
+* API: El tiempo de caducidad se establece mediante la API.
+* Ninguno: No se establece el tiempo de caducidad.
+* Prueba: El tiempo de caducidad se establece para la prueba.
+* fifo: La caducidad se produce primero en salir.
+
+ a| 
+cadena
+
+
+
+ a| 
+Tiempo de caducidad
+ a| 
+La hora en la que caducará esta snapshot y se purgará del clúster.
+ a| 
+Cadena de fecha ISO 8601
+
+
+
+ a| 
+ID de grupo
+ a| 
+El ID de grupo si la copia de Snapshot forma parte de una copia de Snapshot de grupo.
+ a| 
+entero
+
+
+
+ a| 
+SnapgroupshotUUID
+ a| 
+Contiene información sobre cada snapshot del grupo. Cada uno de estos miembros tendrá un parámetro UUID para el UUID de la snapshot.
+ a| 
+cadena
+
+
+
+ a| 
+InstanceCreateTime
+ a| 
+La hora a la que se creó la snapshot en el clúster local.
+ a| 
+Cadena de fecha ISO 8601
+
+
+
+ a| 
+InstanceSnapshotUUID
+ a| 
+El ID único universal de la snapshot en el clúster local. Este ID no se replica en otros clústeres.
+ a| 
+cadena
+
+
+
+ a| 
+nombre
+ a| 
+El nombre exclusivo que se asigna a la copia de Snapshot. Si no se especifica ningún nombre, el nombre es la Marca de hora con formato UTC+0 del momento en que se creó la copia de Snapshot.
+ a| 
+cadena
+
+
+
+ a| 
+RemoteStatuses
+ a| 
+Una cabina que contiene el identificador universal y el estado de replicación de cada snapshot remota en el clúster de destino como se ve en el clúster de origen.
+ a| 
+xref:reference_element_api_remoteclustersnapshotstatus.adoc[RemoteClusterSnapshotStatus] cabina
+
+
+
+ a| 
+SnapMirrorLabel
+ a| 
+La etiqueta que utiliza el software SnapMirror para especificar la política de retención de snapshots en extremos de SnapMirror. Si no se establece, este valor es nulo.
+ a| 
+cadena
+
+
+
+ a| 
+ID de copia Snapshot
+ a| 
+El ID exclusivo de una snapshot existente.
+ a| 
+cadena
+
+
+
+ a| 
+UUID de copia Snapshot
+ a| 
+El ID único universal de una instantánea existente. Cuando la Snapshot se replica en los clústeres, este ID se replica junto con ella y se utiliza para identificar la copia de Snapshot entre los clústeres.
+ a| 
+cadena
+
+
+
+ a| 
+estado
+ a| 
+Estado actual de la copia de Snapshot de grupo. Los posibles valores son los siguientes:
+
+* Unknown: Se produjo un error al obtener el estado de la snapshot.
+* Preparing: Esta copia de Snapshot se está preparando para poder usarla y aún no se puede escribir en ella.
+* RemoteSyncing: Esta snapshot se está replicando desde un clúster remoto.
+* Done: Esta snapshot se ha terminado de preparar o replicar y se puede usar.
+* Active: Esta copia de Snapshot es la rama activa.
+* Clonación: Esta instantánea está involucrada en una operación de copia de volumen.
+
+ a| 
+cadena
+
+
+
+ a| 
+Tamaño total
+ a| 
+El tamaño total en bytes de la copia de Snapshot.
+ a| 
+entero
+
+
+
+ a| 
+ID de volumen virtual
+ a| 
+El ID del volumen virtual asociado con esta copia de Snapshot.
+ a| 
+UUID
+
+
+
+ a| 
+ID de volumen
+ a| 
+El ID del volumen a partir del cual se creó la copia de Snapshot.
+ a| 
+entero
+
+
+
+ a| 
+Nombre de volumen
+ a| 
+El nombre del volumen en el momento en que se creó la copia de Snapshot.
+ a| 
+cadena
+
+|===
+
+
+== Obtenga más información
+
+xref:reference_element_api_listsnapshots.adoc[ListSnapshots]

@@ -1,0 +1,590 @@
+---
+permalink: storage/reference_prereq_network_port_requirements.html 
+sidebar: sidebar 
+keywords: network port requirements, TCP ports, firewall, utilities, URL, access attempt, ICMP, MIP, SIP, MVIP, SVIP 
+summary: Es posible que deba permitir los siguientes puertos TCP a través del firewall perimetral del centro de datos para poder administrar el sistema de forma remota y permitir que los clientes fuera del centro de datos se conecten a los recursos. En función de la manera en la que se use el sistema, es posible que algunos puertos no sean necesarios. 
+---
+= Requisitos de puerto de red
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible que tenga que permitir a los siguientes puertos TCP atravesar el firewall perimetral del centro de datos, de manera que pueda gestionar el sistema de forma remota y permitir a los clientes que estén fuera del centro de datos conectarse a los recursos. En función de la manera en la que se use el sistema, es posible que algunos puertos no sean necesarios.
+
+Todos los puertos son TCP a menos que se especifique lo contrario, y deben permitir las comunicaciones bidireccionales entre NetApp Support Server, el nodo de gestión y los nodos que ejecutan el software Element.
+
+[NOTE]
+====
+Los paquetes de software de descarga de API e IU web de Hybrid Cloud Control de NetApp desde el repositorio de software en línea de NetApp. Por este motivo, algunas URL o direcciones IP pueden resolverse en otras direcciones URL o IP en función de la red de entrega de contenido. Si es posible, debe trabajar con un ingeniero de red para agregar estas direcciones URL o direcciones IP a las reglas de firewall, siguiendo los pasos generales siguientes:
+
+.Pasos
+. Use las utilidades wget o curl para acceder a una URL (support-sg-nawest.netapp.com, por ejemplo).
+. Compruebe si hay conectividad, como se muestra en el siguiente ejemplo:
++
+image::network_ports.PNG[Comprobar la conectividad de los puertos]
+
+. Recibir un fallo al acceder a la URL (diferente de support-sg-nawest.netapp.com).
+. Edite las reglas del firewall para permitir la nueva URL.
+. Repita los pasos anteriores hasta que el intento de acceso se realice correctamente.
+
+
+====
+
+TIP: Habilite ICMP entre el nodo de gestión, los nodos que ejecutan el software Element y la MVIP del clúster.
+
+En la tabla se emplean las siguientes abreviaturas:
+
+* MIP: Dirección IP de gestión, una dirección por nodo
+* SIP: Dirección IP de almacenamiento, una dirección por nodo
+* MVIP: Dirección IP virtual de gestión
+* SVIP: Dirección IP virtual de almacenamiento
+
+
+[cols="25,25,15,35"]
+|===
+| Origen | Destino | Puerto | Descripción 
+
+
+ a| 
+Clientes iSCSI
+ a| 
+MVIP de clúster de almacenamiento
+ a| 
+443
+ a| 
+Acceso de interfaz de usuario y API (opcional)
+
+
+
+ a| 
+Clientes iSCSI
+ a| 
+SVIP de clúster de almacenamiento
+ a| 
+3260
+ a| 
+Comunicaciones de cliente iSCSI
+
+
+
+ a| 
+Clientes iSCSI
+ a| 
+SIP de nodo de almacenamiento
+ a| 
+3260
+ a| 
+Comunicaciones de cliente iSCSI
+
+
+
+ a| 
+Nodo de gestión
+ a| 
+sfsupport.solidfire.com
+ a| 
+22
+ a| 
+Túnel SSH inverso para acceso al soporte
+
+
+
+ a| 
+Nodo de gestión
+ a| 
+MIP de nodo de almacenamiento
+ a| 
+22
+ a| 
+Acceso SSH para soporte
+
+
+
+ a| 
+Nodo de gestión
+ a| 
+Servidores DNS
+ a| 
+53 TCP/UDP
+ a| 
+Búsqueda de DNS
+
+
+
+ a| 
+Nodo de gestión
+ a| 
+MIP de nodo de almacenamiento
+ a| 
+442
+ a| 
+Acceso de interfaz de usuario y de API al nodo de almacenamiento y actualizaciones del software Element
+
+
+
+ a| 
+Nodo de gestión
+ a| 
+MVIP de clúster de almacenamiento
+ a| 
+442
+ a| 
+Acceso de interfaz de usuario y de API al nodo de almacenamiento y actualizaciones del software Element
+
+
+
+ a| 
+Nodo de gestión
+ a| 
+Notificación de la nueva versión:
+
+* `https://support.netapp.com/aods/`
+
+
+Descarga de software:
+
+* `https://support-sg-emea.netapp.com`
+* `https://support-sg-naeast.netapp.com`
+* `https://support-sg-nawest.netapp.com`
+
+ a| 
+443
+ a| 
+Actualizaciones del servicio del nodo de gestión
+
+
+
+ a| 
+Nodo de gestión
+ a| 
+monitoring.solidfire.com
+ a| 
+443
+ a| 
+Informes del clúster de almacenamiento a Active IQ
+
+
+
+ a| 
+Nodo de gestión
+ a| 
+MVIP de clúster de almacenamiento
+ a| 
+443
+ a| 
+Acceso de interfaz de usuario y de API al nodo de almacenamiento y actualizaciones del software Element
+
+
+
+ a| 
+Nodo de gestión
+ a| 
+repo.netapp.com
+ a| 
+443
+ a| 
+Proporciona acceso a los componentes necesarios para instalar/actualizar la puesta en marcha en las instalaciones.
+
+
+
+| Nodo de gestión | BMC/IPMI de nodo de almacenamiento | 623 UDP | Puerto RMCP. Esto es necesario para gestionar los sistemas habilitados para IPMI. 
+
+
+ a| 
+Nodo de gestión
+ a| 
+Nodo de testimonio
+ a| 
+9442
+ a| 
+Servicio API de configuración por nodo
+
+
+
+ a| 
+Nodo de gestión
+ a| 
+VCenter Server
+ a| 
+9443
+ a| 
+Registro del plugin de vCenter; El puerto se puede cerrar una vez que se completa el registro.
+
+
+
+ a| 
+Servidor SNMP
+ a| 
+MVIP de clúster de almacenamiento
+ a| 
+161 UDP
+ a| 
+Sondeo de SNMP
+
+
+
+ a| 
+Servidor SNMP
+| MIP de nodo de almacenamiento  a| 
+161 UDP
+ a| 
+Sondeo de SNMP
+
+
+
+| BMC/IPMI de nodo de almacenamiento | Nodo de gestión | 623 UDP | Puerto RMCP. Esto es necesario para gestionar los sistemas habilitados para IPMI. 
+
+
+ a| 
+MIP de nodo de almacenamiento
+ a| 
+Servidores DNS
+ a| 
+53 TCP/UDP
+ a| 
+Búsqueda de DNS
+
+
+
+ a| 
+MIP de nodo de almacenamiento
+ a| 
+Nodo de gestión
+ a| 
+80
+ a| 
+Actualizaciones del software Element
+
+
+
+ a| 
+MIP de nodo de almacenamiento
+ a| 
+Extremo de S3/Swift
+ a| 
+80
+ a| 
+Comunicación HTTP con el extremo de S3/Swift para backup y recuperación (opcional)
+
+
+
+ a| 
+MIP de nodo de almacenamiento
+ a| 
+Servidor NTP
+ a| 
+123 UDP
+ a| 
+NTP
+
+
+
+ a| 
+MIP de nodo de almacenamiento
+ a| 
+Nodo de gestión
+ a| 
+162 UDP
+ a| 
+(Opcional) capturas SNMP
+
+
+
+ a| 
+MIP de nodo de almacenamiento
+ a| 
+Servidor SNMP
+ a| 
+162 UDP
+ a| 
+(Opcional) capturas SNMP
+
+
+
+ a| 
+MIP de nodo de almacenamiento
+ a| 
+Servidor LDAP
+ a| 
+389 TCP/UDP
+ a| 
+Búsqueda de LDAP (opcional)
+
+
+
+ a| 
+MIP de nodo de almacenamiento
+ a| 
+Nodo de gestión
+ a| 
+443
+ a| 
+Actualizaciones del firmware de almacenamiento Element
+
+
+
+ a| 
+MIP de nodo de almacenamiento
+ a| 
+MVIP de clúster de almacenamiento remoto
+ a| 
+443
+ a| 
+Comunicación de emparejamiento de clústeres de replicación remota
+
+
+
+ a| 
+MIP de nodo de almacenamiento
+ a| 
+MIP de nodo de almacenamiento remoto
+ a| 
+443
+ a| 
+Comunicación de emparejamiento de clústeres de replicación remota
+
+
+
+ a| 
+MIP de nodo de almacenamiento
+ a| 
+Extremo de S3/Swift
+ a| 
+443
+ a| 
+Comunicación HTTPS con el extremo de S3/Swift para backup y recuperación (opcional)
+
+
+
+ a| 
+MIP de nodo de almacenamiento
+ a| 
+Nodo de gestión
+ a| 
+514 TCP/UDP
+
+10514 TCP/UDP
+ a| 
+Reenvío de syslog
+
+
+
+ a| 
+MIP de nodo de almacenamiento
+ a| 
+Servidor de syslog
+ a| 
+514 TCP/UDP
+
+10514 TCP/UDP
+ a| 
+Reenvío de syslog
+
+
+
+ a| 
+MIP de nodo de almacenamiento
+ a| 
+Servidor LDAPS
+ a| 
+636 TCP/UDP
+ a| 
+Búsqueda LDAPS
+
+
+
+ a| 
+MIP de nodo de almacenamiento
+ a| 
+MIP de nodo de almacenamiento remoto
+ a| 
+2181
+ a| 
+Comunicación entre clústeres para replicación remota
+
+
+
+ a| 
+SIP de nodo de almacenamiento
+ a| 
+SIP de nodo de almacenamiento remoto
+ a| 
+2181
+ a| 
+Comunicación entre clústeres para replicación remota
+
+
+
+ a| 
+SIP de nodo de almacenamiento
+ a| 
+SIP de nodo de almacenamiento
+ a| 
+3260
+ a| 
+ISCSI entre nodos
+
+
+
+ a| 
+SIP de nodo de almacenamiento
+ a| 
+SIP de nodo de almacenamiento remoto
+ a| 
+4000 hasta 4020
+ a| 
+Transferencia de datos nodo a nodo con replicación remota
+
+
+
+ a| 
+PC del administrador de sistemas
+ a| 
+Nodo de gestión
+ a| 
+442
+ a| 
+Acceso de interfaz de usuario de HTTPS a nodo de gestión
+
+
+
+ a| 
+PC del administrador de sistemas
+ a| 
+MIP de nodo de almacenamiento
+ a| 
+442
+ a| 
+Acceso de API e interfaz de usuario de HTTPS a nodo de almacenamiento
+
+
+
+ a| 
+PC del administrador de sistemas
+ a| 
+Nodo de gestión
+ a| 
+443
+ a| 
+Acceso HTTPS de interfaz de usuario y API al nodo de gestión
+
+
+
+ a| 
+PC del administrador de sistemas
+ a| 
+MVIP de clúster de almacenamiento
+ a| 
+443
+ a| 
+Acceso de API e interfaz de usuario de HTTPS a clúster de almacenamiento
+
+
+
+ a| 
+PC del administrador de sistemas
+ a| 
+Controlador de gestión en placa base del nodo de almacenamiento (BMC)/interfaz de gestión de plataforma inteligente (IPMI) serie H410 y H600
+ a| 
+443
+ a| 
+Acceso de API e interfaz de usuario de HTTPS a control remoto de nodos
+
+
+
+ a| 
+PC del administrador de sistemas
+ a| 
+MIP de nodo de almacenamiento
+ a| 
+443
+ a| 
+Creación de clúster de almacenamiento de HTTPS, acceso de interfaz de usuario al clúster de almacenamiento posterior a la implementación
+
+
+
+ a| 
+PC del administrador de sistemas
+ a| 
+Nodos de almacenamiento series BMC/IPMI H410 y H600
+ a| 
+623 UDP
+ a| 
+Puerto del protocolo de control de gestión remota. Esto es necesario para gestionar los sistemas habilitados para IPMI.
+
+
+
+ a| 
+PC del administrador de sistemas
+ a| 
+Nodo de testimonio
+ a| 
+8080
+ a| 
+Interfaz de usuario web de un nodo de testigos por nodo
+
+
+
+ a| 
+VCenter Server
+ a| 
+MVIP de clúster de almacenamiento
+ a| 
+443
+ a| 
+Acceso de API de plugin de vCenter
+
+
+
+ a| 
+VCenter Server
+ a| 
+Plugin remoto
+ a| 
+8333
+ a| 
+Servicio de complemento de vCenter remoto
+
+
+
+ a| 
+VCenter Server
+ a| 
+Nodo de gestión
+ a| 
+8443
+ a| 
+Servicio QoSSIOC del plugin de vCenter (opcional);
+
+
+
+ a| 
+VCenter Server
+ a| 
+MVIP de clúster de almacenamiento
+ a| 
+8444
+ a| 
+Acceso del proveedor VASA de vCenter (solo VVol)
+
+
+
+ a| 
+VCenter Server
+ a| 
+Nodo de gestión
+ a| 
+9443
+ a| 
+Registro del plugin de vCenter; El puerto se puede cerrar una vez que se completa el registro.
+
+|===
+
+
+== Si quiere más información
+
+* https://www.netapp.com/data-storage/solidfire/documentation["Página SolidFire y Element Resources"^]
+* https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
+

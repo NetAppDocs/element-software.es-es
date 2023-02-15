@@ -1,0 +1,93 @@
+---
+permalink: api/reference_element_api_protocolendpoint.html 
+sidebar: sidebar 
+keywords: object,objects,protocolEndpoint 
+summary: El objeto ProtocolEndpoint contiene los atributos de un extremo de protocolo. Puede recuperar esta información para todos los extremos de protocolo del clúster mediante el método API ListProtocolEndpoints. 
+---
+= ProtocolEndpoint
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El objeto ProtocolEndpoint contiene los atributos de un extremo de protocolo. Puede recuperar esta información para todos los extremos de protocolo en el clúster mediante el `ListProtocolEndpoints` Método API.
+
+
+
+== Miembros de objeto
+
+Este objeto contiene los siguientes miembros:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+Primario ProviderID
+ a| 
+El ID del objeto de proveedor de extremo de protocolo principal para el extremo de protocolo.
+ a| 
+entero
+
+
+
+ a| 
+ProtocolEndpointID
+ a| 
+El ID único del extremo de protocolo.
+ a| 
+UUID
+
+
+
+ a| 
+ProtocolEndpointState
+ a| 
+El estado del extremo de protocolo. Los posibles valores son los siguientes:
+
+* Active: El extremo de protocolo está en uso.
+* Start: El extremo de protocolo se está iniciando.
+* Failover: El extremo de protocolo se conmutó al nodo de respaldo.
+* Reserved: El extremo de protocolo está reservado.
+
+ a| 
+cadena
+
+
+
+ a| 
+ProviderType
+ a| 
+El tipo de proveedor del extremo de protocolo. Los posibles valores son los siguientes:
+
+* Primario
+* Secundario
+
+ a| 
+cadena
+
+
+
+ a| 
+SsiNAADeviceID
+ a| 
+El identificador exclusivo de dispositivo SCSI para el extremo de protocolo a nivel global en el formato extendido registrado de NAA según la norma IEEE.
+ a| 
+cadena
+
+
+
+ a| 
+Cód. Segundo Proder.
+ a| 
+El ID del objeto de proveedor de extremo de protocolo secundario para el extremo de protocolo.
+ a| 
+entero
+
+|===
+
+
+== Obtenga más información
+
+xref:reference_element_api_listprotocolendpoints.adoc[ListProtocolEndpoints]

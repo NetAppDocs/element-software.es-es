@@ -1,0 +1,49 @@
+---
+permalink: storage/task_troubleshoot_remove_failed_drives.html 
+sidebar: sidebar 
+keywords: troubleshoot, failed drives, remove 
+summary: El sistema SolidFire pone una unidad en estado de error si el autodiagnóstico de la unidad indica al nodo que ha fallado o si la comunicación con la unidad se detiene durante cinco minutos y medio o más. El sistema muestra una lista de las unidades con errores. Debe quitar una unidad con error de la lista de unidades con errores en el software NetApp Element. 
+---
+= Quite las unidades con errores del clúster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El sistema SolidFire pone una unidad en estado de error cuando el sistema de autodiagnóstico de la unidad indica al nodo que se ha producido un error o cuando la comunicación con la unidad se detiene durante cinco minutos y medio o más. El sistema muestra una lista de las unidades con errores. Debe quitar una unidad con error de la lista de unidades con errores en el software NetApp Element.
+
+Las unidades de la lista *Alertas* aparecen como *blockServiceUnhealthy* cuando un nodo está desconectado. Cuando se reinicia el nodo, si el nodo y sus unidades vuelven a estar en línea en un plazo de cinco minutos y medio, las unidades se actualizan automáticamente y siguen mostrándose como unidades activas en el clúster.
+
+. En la interfaz de usuario de Element, seleccione *Cluster* > *Drives*.
+. Haga clic en *error* para ver la lista de unidades con errores.
+. Anote el número de ranura de la unidad con error.
++
+Esta información se necesita para localizar la unidad con error en el chasis.
+
+. Quite las unidades con errores mediante uno de los siguientes métodos:
++
+|===
+
+
+| Opción | Pasos 
+
+
+ a| 
+Para quitar unidades individuales
+ a| 
+.. Haga clic en *acciones* para la unidad que desea quitar.
+.. Haga clic en *Quitar*.
+
+
+
+
+ a| 
+Para quitar varias unidades
+ a| 
+.. Seleccione todas las unidades que desee quitar y haga clic en *acciones masivas*.
+.. Haga clic en *Quitar*.
+
+
+|===
+

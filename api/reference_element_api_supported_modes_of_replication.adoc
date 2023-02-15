@@ -1,0 +1,19 @@
+---
+permalink: api/reference_element_api_supported_modes_of_replication.html 
+sidebar: sidebar 
+keywords: supported,replication,modes,clusters,paired,pair,pairs 
+summary: 'Los siguientes modos de replicación se admiten en los clústeres emparejados:' 
+---
+= Modos de replicación compatibles para clústeres emparejados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los siguientes modos de replicación se admiten en los clústeres emparejados:
+
+* Replicación asíncrona de datos: Los datos que se envían al volumen de destino de replicación se envían de forma asíncrona. El sistema no espera que se envíe un acuse de recibo antes de escribir datos.
+* Replicación síncrona de datos: Los datos que se envían al volumen de destino de replicación se envían de forma síncrona. Cuando el sistema reconoce las operaciones de I/o enviadas desde el host, el reconocimiento del sistema se envía de nuevo al host y los datos se envían al volumen de destino de replicación.
+* Replicación de los datos solo con snapshots: Solo se replican las copias de Snapshot de volumen en el clúster de destino.
+

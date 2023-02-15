@@ -1,0 +1,46 @@
+---
+permalink: storage/reference_data_manage_vvol_bindings_details.html 
+sidebar: sidebar 
+keywords: bindings details, vvols, for each virtual volume, endpoints, 
+summary: La página Bindings de la pestaña VVols proporciona información relacionada con la vinculación de cada volumen virtual. 
+---
+= Detalles de vinculaciones
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página Bindings de la pestaña VVols proporciona información relacionada con la vinculación de cada volumen virtual.
+
+Se muestra la siguiente información:
+
+* *ID de host*
++
+El UUID del host ESXi que aloja los volúmenes virtuales y es conocido para el clúster.
+
+* *ID de extremo de protocolo*
++
+Los ID de extremo de protocolo que corresponden a cada nodo del clúster de SolidFire.
+
+* *Protocol Endpoint in Band ID*
++
+El ID de dispositivo SCSI de NAA según el extremo de protocolo.
+
+* *Tipo de extremo de protocolo*
++
+El tipo de extremo de protocolo.
+
+* *ID de enlace de VVol*
++
+El UUID de vinculación del volumen virtual.
+
+* *ID de VVol*
++
+El identificador único universal (UUID) del volumen virtual.
+
+* *ID secundario de VVol*
++
+El ID secundario del volumen virtual que es un ID de LUN de segundo nivel para SCSI.
+
+

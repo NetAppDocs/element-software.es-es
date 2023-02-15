@@ -1,0 +1,138 @@
+---
+permalink: api/reference_element_api_addinitiatorstovolumeaccessgroup.html 
+sidebar: sidebar 
+keywords: addinitiatorstovolumeaccessgroup,add,adding,initiators,initiator,volume,access,group 
+summary: Puede usar el método AddInitiatorsToVolumeAccessGroup para añadir iniciadores a un grupo de acceso de volúmenes especificado. 
+---
+= AddInitiatorsToVolumeAccessGroup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `AddInitiatorsToVolumeAccessGroup` método para añadir iniciadores a un grupo de acceso de volúmenes especificado.
+
+El formato aceptado de un IQN de iniciador es IQN.yyyy-mm, donde y y m son dígitos, seguidos de texto que solo puede contener dígitos, caracteres alfabéticos en minúscula, un punto (.), dos puntos (:) o un guion (-). Consulte el siguiente ejemplo:
+
+[listing]
+----
+iqn.2010-01.com.solidfire:17oi.solidfire-0.1
+----
+El formato aceptado de WWPN de un iniciador Fibre Channel es AA:BB:CC:dd:11:22:33:44, o AabBCCdd11223344. Consulte el siguiente ejemplo:
+
+[listing]
+----
+21:00:00:0e:1e:11:f1:81
+----
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+iniciadores
+ a| 
+Lista de ID o nombres de iniciador (IQN y WWPN) que se van a incluir en el grupo de acceso de volúmenes. Si pasa una lista de nombres de iniciador, se crean los iniciadores si no existen todavía. Si pasa una lista de ID de iniciador, el método devuelve un error si alguno de los iniciadores aún no existe.
+
+Pasar los nombres de iniciadores está obsoleto; debe usar ID de iniciador cuando sea posible.
+ a| 
+matriz de enteros o matriz de cadenas (obsoleto)
+ a| 
+ a| 
+Sí
+
+
+
+ a| 
+VolumeAccessGroupID
+ a| 
+El ID del grupo de acceso de volúmenes para añadir el iniciador.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+VolumeAccessGroup
+ a| 
+Un objeto que contiene información acerca del grupo de acceso de volúmenes recién modificado.
+ a| 
+xref:reference_element_api_volumeaccessgroup.adoc[VolumeAccessGroup]
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+  "id": 13171,
+  "method": "AddInitiatorsToVolumeAccessGroup",
+  "params": {
+    "initiators": [116,117],
+    "volumeAccessGroupID": 96
+  }
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id": 13171,
+  "result": {
+    "volumeAccessGroup": {
+      "attributes": {},
+      "deletedVolumes": [
+        327
+      ],
+      "initiatorIDs": [
+        116,
+        117
+      ],
+      "initiators": [
+        "iqn.1993-08.org.debian:01:181324777",
+        "iqn.1993-08.org.debian:01:181324888"
+      ],
+      "name": "northbanktest",
+      "volumeAccessGroupID": 96,
+      "volumes": [
+        346
+      ]
+    }
+  }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

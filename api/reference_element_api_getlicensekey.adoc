@@ -1,0 +1,85 @@
+---
+permalink: api/reference_element_api_getlicensekey.html 
+sidebar: sidebar 
+keywords: cluster,get,getting,license,key 
+summary: En los clústeres de almacenamiento de SDS empresarial de SolidFire, puede utilizar el método GetLicenseKey para recuperar la clave de licencia actual del clúster de almacenamiento. La clave de licencia de un clúster de almacenamiento consta del número de orden del clúster combinado con el número de serie y activa el modelo de capacidad que se compró para el software Element. 
+---
+= GetLicenseKey
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En los clústeres de almacenamiento de SDS empresarial de SolidFire, puede utilizar el `GetLicenseKey` método para recuperar la clave de licencia actual del clúster de almacenamiento. La clave de licencia de un clúster de almacenamiento consta del número de orden del clúster combinado con el número de serie y activa el modelo de capacidad que se compró para el software Element.
+
+
+
+== Parámetros
+
+Este método no tiene parámetros de entrada.
+
+
+
+== Valores devueltos
+
+Este método tiene los siguientes valores devueltos:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+Número de pedido
+ a| 
+El número de pedido de ventas del clúster de almacenamiento.
+ a| 
+cadena
+
+
+
+ a| 
+SerialNumber
+ a| 
+El número de serie del clúster de almacenamiento.
+ a| 
+cadena
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "GetLicenseKey",
+   "params": {
+     },
+   "id": 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+   "id" : 1,
+   "result" : {
+      "serialNumber": "30G56E3WV",
+      "orderNumber": "33601"
+     }
+   }
+}
+----
+
+
+== Nuevo desde la versión
+
+12.2

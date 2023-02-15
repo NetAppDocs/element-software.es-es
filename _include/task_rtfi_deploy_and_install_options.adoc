@@ -1,0 +1,20 @@
+= Obtenga más información
+:allow-uri-read: 
+
+
+El proceso de retorno a la imagen de fábrica (RTFI) utiliza un medio de arranque, instalable con un sistema operativo Linux completamente independiente y minimalista para implementar el software Element en un nodo. Puede descargar la imagen ISO de RTFI específica de su versión de software Element desde la https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab["Sitio de soporte de NetApp"^].
+
+Después de descargar la imagen ISO de RTFI, puede implementarla de acuerdo con uno de los siguientes métodos de uso común:
+
+* *Llave USB física*: Puede escribir un software de elementos de arranque ISO en una llave USB. Para obtener instrucciones, consulte el artículo de la base de conocimientos https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_create_an_RTFI_key_to_re-image_a_SolidFire_storage_node["Cómo crear una clave RTFI para volver a crear una imagen de un nodo de almacenamiento SolidFire"^]. Inserte la llave USB con la ISO en el nodo y arranque desde la llave USB.
+* *Medios virtuales usando el controlador de administración de la placa base (BMC) puerto de administración*: Puede usar el BMC para conectarse dinámicamente a la ISO ubicada en su sistema cliente. El ISO está disponible para el sistema operativo host como una unidad virtual (CD o DVD). Para obtener más información, vea el artículo de la base de conocimientos https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_RTFI_a_node_via_BMC["Cómo RTFI un nodo a través de BMC"^].
+* *Arranque de red mediante un entorno de ejecución de prearranque (PXE), protocolo trivial de transferencia de archivos (TFTP) o FTP*: En lugar de desempaquetar manualmente una imagen ISO, puede utilizar `autofs` Para extraer automáticamente una imagen cuando el proceso de RTFI la solicite. Este mecanismo de puesta en marcha requiere una configuración inicial mayor, pero permite una automatización y escalabilidad correctas de la instalación.
+
+
+
+
+== Obtenga más información
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Página de recursos de SolidFire de NetApp"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentación para versiones anteriores de SolidFire de NetApp y los productos Element"^]
+

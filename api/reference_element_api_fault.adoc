@@ -1,0 +1,174 @@
+---
+permalink: api/reference_element_api_fault.html 
+sidebar: sidebar 
+keywords: object,objects,fault 
+summary: El objeto de fallo contiene información acerca de los errores que se han detectado en el clúster. El método ListClusterFaults devuelve información de errores del clúster. 
+---
+= fallo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El objeto de fallo contiene información acerca de los errores que se han detectado en el clúster. La `ListClusterFaults` método devuelve información de errores del clúster.
+
+
+
+== Miembros de objeto
+
+Este objeto contiene los siguientes miembros:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+ClusterFaultID
+ a| 
+El ID único asociado con cada error de clúster.
+ a| 
+entero
+
+
+
+ a| 
+codificación
+ a| 
+El código de avería del fallo específico detectado. Para obtener más información, consulte códigos de avería del clúster.
+ a| 
+cadena
+
+
+
+ a| 
+sql server
+ a| 
+Información adicional específica de la avería.
+ a| 
+Objeto JSON
+
+
+
+ a| 
+fecha
+ a| 
+La hora actual en formato UTC+0.
+ a| 
+Cadena ISO 8601
+
+
+
+ a| 
+detalles
+ a| 
+La descripción del error con detalles adicionales.
+ a| 
+cadena
+
+
+
+ a| 
+ID de unidad
+ a| 
+El primer ID de unidad de la lista driveIDs. Si la lista driveIDs está vacía (lo que significa que no se han devuelto errores que tratan con las unidades), este valor es 0.
+ a| 
+entero
+
+
+
+ a| 
+ID de unidad
+ a| 
+Una lista de valores de DriveID para las unidades a las que hace referencia este error. Se incluye para fallos de manejo de unidades. Si no lo hace, se trata de una matriz vacía.
+ a| 
+matriz en números enteros
+
+
+
+ a| 
+NodeHardwarfwareFID
+ a| 
+El identificador asignado a un error de hardware en el clúster.
+ a| 
+entero
+
+
+
+ a| 
+NodeID
+ a| 
+El ID de nodo para el nodo al que hace referencia este error. Se incluye para los errores de nodo y de unidad; de lo contrario se establece como 0.
+ a| 
+entero
+
+
+
+ a| 
+resuelto
+ a| 
+El estado resuelto del error. Los posibles valores son los siguientes:
+
+* True: El fallo ya no se detecta.
+* Falso: El fallo persiste.
+
+ a| 
+booleano
+
+
+
+ a| 
+ResolvedDate
+ a| 
+La fecha y la hora en la que se resolvió el error.
+ a| 
+Cadena ISO 8601
+
+
+
+ a| 
+ID de servicio
+ a| 
+El servicio asociado al error. Este valor es "0" (cero) si el fallo no se asocia con un servicio.
+ a| 
+entero
+
+
+
+ a| 
+gravedad
+ a| 
+La gravedad del error. Los posibles valores son los siguientes:
+
+* Warning: Un problema menor. El clúster está funcionando y las actualizaciones se permiten en este nivel de gravedad.
+* Error: Un error que generalmente no debe afectar al servicio (excepto la posible degradación del rendimiento o la pérdida de alta disponibilidad). Es posible que algunas funciones estén deshabilitadas.
+* Critical: Un error grave que afecta el servicio. El sistema no es capaz de atender las solicitudes de la API o I/o del cliente y está en riesgo de pérdida de datos.
+* BestPractice: Errores activados por una configuración del sistema sub-óptima.
+
+ a| 
+cadena
+
+
+
+ a| 
+tipo
+ a| 
+El tipo de fallo. Los posibles valores son los siguientes:
+
+* Node: Error que afecta a un nodo en su totalidad.
+* Drive: Un error que afecta a una unidad individual.
+* Cluster: Un error que afecta a todo el clúster.
+* Service: Error que afecta a un servicio del clúster.
+* Volume: Un error que afecta a un volumen individual.
+
+ a| 
+cadena
+
+|===
+
+
+== Obtenga más información
+
+* xref:reference_element_api_listclusterfaults.adoc[ListClusterFaults]
+* link:../storage/reference_monitor_cluster_fault_codes.html["códigos de error de clúster"]
+

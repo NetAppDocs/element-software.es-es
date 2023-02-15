@@ -1,0 +1,74 @@
+---
+permalink: api/reference_element_api_getvirtualvolumecount.html 
+sidebar: sidebar 
+keywords: volume,volumes,virtual,get,getting,count,GetVirtualVolumeCount 
+summary: Puede utilizar el método GetVirtualVolumeCount para recuperar el número de volúmenes virtuales que actualmente están en el sistema. 
+---
+= GetVirtualVolumeCount
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `GetVirtualVolumeCount` método para recuperar el número de volúmenes virtuales que actualmente están en el sistema.
+
+
+
+== Parámetros
+
+Este método no tiene parámetros de entrada.
+
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+cuente
+ a| 
+El número de volúmenes virtuales que actualmente están en el sistema.
+ a| 
+entero
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+  "method": "GetVirtualVolumeCount",
+    "params": {
+    },
+    "id": 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "count": 5
+  }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

@@ -1,0 +1,51 @@
+---
+permalink: api/reference_element_api_protectionschemeresiliency.html 
+sidebar: sidebar 
+keywords: object,objects,protectionSchemeResiliency 
+summary: 'El objeto protectionSchemeResiliency contiene información sobre si un clúster de almacenamiento, para un esquema de protección específico, puede recuperarse automáticamente de uno o varios fallos dentro de su protección asociada DomainType. Un clúster de almacenamiento se considera curado cuando pueda seguir leyendo y escribiendo datos mediante el fallo de cualquier nodo de almacenamiento \(un estado conocido como tolerancia de nodo\).' 
+---
+= ProtectionSchemeResiliency
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El objeto protectionSchemeResiliency contiene información sobre si un clúster de almacenamiento, para un esquema de protección específico, puede recuperarse automáticamente de uno o varios fallos dentro de su protección asociada DomainType. Un clúster de almacenamiento se considera curado cuando este pueda seguir leyendo y escribiendo datos mediante el fallo de cualquier otro nodo de almacenamiento (un estado conocido como tolerancia al nodo).
+
+
+
+== Miembros de objeto
+
+Este objeto contiene los siguientes miembros:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+Esquema de protección
+ a| 
+El esquema de protección actual de este clúster de almacenamiento. El único valor posible es doubleHelix.
+ a| 
+cadena
+
+
+
+ a| 
+FaillableFaiurForBlockData
+ a| 
+El número previsto de fallos simultáneos que pueden producirse sin perder la capacidad de recuperarse automáticamente en un estado de tolerancia de nodo para los datos.
+ a| 
+entero
+
+
+
+ a| 
+SustentableFailuresForMetadata
+ a| 
+El número previsto de fallos simultáneos que se pueden producir sin perder la capacidad de recuperarse automáticamente en un estado de tolerancia de nodo para metadatos.
+ a| 
+entero
+
+|===

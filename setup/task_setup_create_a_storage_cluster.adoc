@@ -1,0 +1,75 @@
+---
+permalink: setup/task_setup_create_a_storage_cluster.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible crear un clúster de almacenamiento después de configurar todos los nodos individuales. Cuando se crea un clúster, también se crea automáticamente una cuenta de usuario de administrador de clúster. El administrador de clúster tiene permiso para gestionar todos los atributos del clúster y crear otras cuentas de administrador de clúster. 
+---
+= Cree un clúster de almacenamiento de
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible crear un clúster de almacenamiento después de configurar todos los nodos individuales. Cuando se crea un clúster, también se crea automáticamente una cuenta de usuario de administrador de clúster. El administrador de clúster tiene permiso para gestionar todos los atributos del clúster y crear otras cuentas de administrador de clúster.
+
+.Lo que necesitará
+* Instaló el nodo de gestión.
+* Configuró todos los nodos individuales.
+
+
+.Acerca de esta tarea
+Durante la configuración de nodos nuevos, se asignan direcciones IP de gestión (MIP) 1G o 10G a cada nodo. Debe usar una de las direcciones IP de nodo que se han creado durante la configuración para abrir la página Create a New Cluster. La dirección IP que utilice dependerá de la red que haya elegido para la gestión del clúster.
+
+[IMPORTANT]
+====
+Si desea habilitar toda la clúster link:../concepts/concept_solidfire_concepts_security.html#encryption-at-rest-software["cifrado de software en reposo"] En el caso de los clústeres de almacenamiento all-flash de SolidFire, debe hacerlo durante la creación del clúster. A partir de Element 12.5, debe habilitar el cifrado de software en reposo en la interfaz de usuario Create Cluster durante la creación del clúster. Para Element 12.3.x y versiones anteriores, debe crear el clúster mediante el link:../api/reference_element_api_createcluster.html["CreateCluster"] Método API y cambie el parámetro enableSoftwareEncryptionAtRest a. `true`. El cifrado de software en reposo está habilitado de forma predeterminada para clústeres de SolidFire eSDS. En el caso de los clústeres de almacenamiento all-flash de SolidFire y los clústeres eSDS de SolidFire, no se puede deshabilitar después de habilitar el cifrado de software en reposo en el clúster. Puede hacerlo link:../storage/task_system_manage_cluster_enable_and_disable_encryption_for_a_cluster.html["enable y disable"] Cifrado basado en hardware en reposo tras la creación del clúster.
+
+====
+[NOTE]
+====
+Al crear un nuevo clúster, tenga en cuenta lo siguiente:
+
+* Si se utilizan nodos de almacenamiento que residen en un chasis compartido, es posible que se desee considerar el diseño de la protección contra fallos en el nivel del chasis mediante la función de dominios de protección.
+* Si un chasis compartido no está en uso, puede definir un diseño de dominio de protección personalizado.
+
+
+====
+.Pasos
+. En una ventana del navegador, introduzca `\https://MIP:443`, Donde MIP es la dirección IP del nodo de gestión.
+. En Create a New Cluster, introduzca la siguiente información:
++
+** Management VIP: IP virtual enrutable en una red 1GbE o 10GbE para tareas de gestión de red.
++
+
+NOTE: Es posible crear un nuevo clúster mediante la dirección IPv4 o IPv6.
+
+** ISCSI (Storage) VIP: IP virtual en la red 10GbE para tareas de almacenamiento y detección iSCSI.
++
+
+NOTE: No se puede cambiar la dirección MVIP, la SVIP o el nombre del clúster después de crear el clúster.
+
+** User name: El nombre de usuario del administrador de clúster principal para el acceso autenticado al clúster. Debe guardar el nombre de usuario para consultarlo más adelante.
++
+
+NOTE: Se pueden utilizar letras mayúsculas y minúsculas, caracteres especiales y números para el nombre de usuario y la contraseña.
+
+** Password: Contraseña para el acceso autenticado al clúster. Debe guardar la contraseña para poder consultarla en el futuro. La protección de datos bidireccional está habilitada de forma predeterminada. No puede cambiar esta configuración.
+
+
+. Lea el contrato de licencia para usuario final y seleccione *Acepto*.
+. *Opcional*: En la lista Nodes, asegúrese de que las casillas de verificación de los nodos que no deben incluirse en el clúster no están seleccionadas.
+. Seleccione *Crear clúster*.
++
+En función del número de nodos que se incluyan, el sistema podría tardar varios minutos en crear el clúster. En una red que se haya configurado correctamente, la creación de un clúster pequeño de cinco nodos debería tardar menos de un minuto. Una vez que se haya creado el clúster, la ventana Create a New Cluster se redirige a la dirección URL de MVIP del clúster y muestra la interfaz de usuario de Element.
+
+
+
+
+
+== Si quiere más información
+
+* link:../api/index.html["Gestionar el almacenamiento con la API de Element"]
+* https://www.netapp.com/data-storage/solidfire/documentation["Página SolidFire y Element Resources"^]
+* https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
+

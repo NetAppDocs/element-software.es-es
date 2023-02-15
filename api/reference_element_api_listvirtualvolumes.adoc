@@ -1,0 +1,195 @@
+---
+permalink: api/reference_element_api_listvirtualvolumes.html 
+sidebar: sidebar 
+keywords: virtual,volume,volumes,vvol,list,listing,listvirtualvolumes 
+summary: Puede utilizar el método ListVirtualVolumes para enumerar los volúmenes virtuales que actualmente están en el sistema. Se puede usar este método para enumerar todos los volúmenes virtuales, o bien para enumerar solo un subconjunto. 
+---
+= ListVirtualVolumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `ListVirtualVolumes` método para enumerar los volúmenes virtuales que actualmente están en el sistema. Se puede usar este método para enumerar todos los volúmenes virtuales, o bien para enumerar solo un subconjunto.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+detalles
+ a| 
+El nivel de detalle en la respuesta. Los posibles valores son los siguientes:
+
+* True: Incluya más detalles sobre cada VVol en la respuesta.
+* False: Incluya el nivel estándar de detalle de cada VVol en la respuesta.
+
+ a| 
+booleano
+ a| 
+Falso
+ a| 
+No
+
+
+
+ a| 
+límite
+ a| 
+El número máximo de volúmenes virtuales que se van a enumerar.
+ a| 
+entero
+ a| 
+10000
+ a| 
+No
+
+
+
+ a| 
+recursiva
+ a| 
+Especifica si se debe incluir información sobre los hijos de cada VVol en la respuesta o no. Los posibles valores son los siguientes:
+
+* True: Incluya información sobre los hijos de cada VVol en la respuesta.
+* Falso: No incluya información sobre los hijos de cada VVol en la respuesta.
+
+ a| 
+booleano
+ a| 
+Falso
+ a| 
+No
+
+
+
+ a| 
+StartVirtualVolumeID
+ a| 
+El ID del volumen virtual en el que se iniciará la lista en la respuesta.
+ a| 
+UIDType
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+ID de volúmenes virtuales
+ a| 
+Una lista de los ID de volúmenes virtuales de los cuales se puede recuperar información. Si omite este parámetro, el método devuelve información acerca de solo estos volúmenes virtuales.
+ a| 
+Matriz de UUID de virtualVolumeID
+ a| 
+Ninguno
+ a| 
+No
+
+|===
+
+
+== Valores devueltos
+
+Este método tiene los siguientes valores devueltos:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+NextVirtualVolumeID
+ a| 
+El ID del siguiente volumen virtual de la lista.
+ a| 
+UUID
+
+
+
+ a| 
+VirtualVolumes
+ a| 
+Una lista de los objetos que describen los volúmenes virtuales que actualmente están en el sistema.
+ a| 
+xref:reference_element_api_virtualvolume.adoc[Volumen virtual] cabina
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+  "method": "ListVirtualVolumes",
+    "params": {
+    },
+    "id": 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "nextVirtualVolumeID": "00000000-0000-0000-0000-000000000000",
+    "virtualVolumes": [
+      {
+        "bindings": [
+          177
+        ],
+        "children": [],
+        "metadata": {
+          "SFProfileId": "f4e5bade-15a2-4805-bf8e-52318c4ce443",
+          "SFgenerationId": "0",
+          "VMW_ContainerId": "abaab415-bedc-44cd-98b8-f37495884db0",
+          "VMW_VVolName": "asdf",
+          "VMW_VVolType": "Config",
+          "VMW_VmID": "502e0676-e510-ccdd-394c-667f6867fcdf",
+          "VMW_VvolProfile": "f4e5bade-15a2-4805-bf8e-52318c4ce443:0"
+        },
+        "parentVirtualVolumeID": "00000000-0000-0000-0000-000000000000",
+        "snapshotID": 0,
+        "snapshotInfo": null,
+        "status": "done",
+        "storageContainer": {
+          "accountID": 1,
+          "initiatorSecret": "B5)D1y10K)8IDN58",
+          "name": "test",
+          "protocolEndpointType": "SCSI",
+          "status": "active",
+          "storageContainerID": "abaab415-bedc-44cd-98b8-f37495884db0",
+          "targetSecret": "qgae@{o{~8\"2U)U^"
+        },
+        "virtualVolumeID": "269d3378-1ca6-4175-a18f-6d4839e5c746",
+        "virtualVolumeType": "config",
+        "volumeID": 166,
+        "volumeInfo": null
+      }
+    ]
+  }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

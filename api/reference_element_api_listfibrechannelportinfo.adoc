@@ -1,0 +1,210 @@
+---
+permalink: api/reference_element_api_listfibrechannelportinfo.html 
+sidebar: sidebar 
+keywords: fibre,channel,port,ports,list,listing,listfibrechannelportinfo 
+summary: Puede utilizar el método ListFiberChannelPortInfo para obtener información acerca de los puertos Fibre Channel. 
+---
+= ListFiberChannelPortInfo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `ListFibreChannelPortInfo` Método para ver información acerca de los puertos Fibre Channel.
+
+Este método de API está pensado para usar en nodos individuales; se necesitan un ID de usuario y una contraseña para acceder a nodos Fibre Channel individuales. Sin embargo, este método se puede usar en el clúster si el parámetro force está establecido en true. Cuando se usa en el clúster, se muestran todas las interfaces de Fibre Channel.
+
+
+
+== Parámetro
+
+Este método tiene el siguiente parámetro de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+fuerza
+ a| 
+Establezca esta opción en true para ejecutarse en todos los nodos del clúster.
+ a| 
+booleano
+ a| 
+Ninguno
+ a| 
+No
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+FiberChannelPorts
+ a| 
+Una lista de todos los puertos Fibre Channel físicos o un puerto para un único nodo.
+ a| 
+xref:reference_element_api_fibrechannelport.adoc[Puerto de FiberChannelPort] cabina
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+  "method": "ListFibreChannelPortInfo",
+    "params": {},
+    "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "fibreChannelPortInfo": {
+      "5": {
+        "result": {
+          "fibreChannelPorts": [
+            {
+             "firmware": "7.04.00 (d0d5)",
+             "hbaPort": 1,
+             "model": "QLE2672",
+             "nPortID": "0xc70084",
+             "pciSlot": 3,
+             "serial": "BFE1335E03500",
+             "speed": "8 Gbit",
+             "state": "Online",
+             "switchWwn": "20:01:00:2a:6a:98:a3:41",
+             "wwnn": "5f:47:ac:c8:3c:e4:95:00",
+             "wwpn": "5f:47:ac:c0:3c:e4:95:0a"
+           },
+           {
+             "firmware": "7.04.00 (d0d5)",
+             "hbaPort": 2,
+             "model": "QLE2672",
+             "nPortID": "0x0600a4",
+             "pciSlot": 3,
+             "serial": "BFE1335E03500",
+             "speed": "8 Gbit",
+             "state": "Online",
+             "switchWwn": "20:01:00:2a:6a:9c:71:01",
+             "wwnn": "5f:47:ac:c8:3c:e4:95:00",
+             "wwpn": "5f:47:ac:c0:3c:e4:95:0b"
+           },
+           {
+             "firmware": "7.04.00 (d0d5)",
+             "hbaPort": 1,
+             "model": "QLE2672",
+             "nPortID": "0xc70044",
+             "pciSlot": 2,
+             "serial": "BFE1335E04029",
+             "speed": "8 Gbit",
+             "state": "Online",
+             "switchWwn": "20:01:00:2a:6a:98:a3:41",
+             "wwnn": "5f:47:ac:c8:3c:e4:95:00",
+             "wwpn": "5f:47:ac:c0:3c:e4:95:08"
+          },
+          {
+            "firmware": "7.04.00 (d0d5)",
+            "hbaPort": 2,
+            "model": "QLE2672",
+            "nPortID": "0x060044",
+            "pciSlot": 2,
+            "serial": "BFE1335E04029",
+            "speed": "8 Gbit",
+            "state": "Online",
+            "switchWwn": "20:01:00:2a:6a:9c:71:01",
+            "wwnn": "5f:47:ac:c8:3c:e4:95:00",
+            "wwpn": "5f:47:ac:c0:3c:e4:95:09"
+          }
+       ]
+    }
+  },
+   "6": {
+     "result": {
+         "fibreChannelPorts": [
+        {
+           "firmware": "7.04.00 (d0d5)",
+           "hbaPort": 1,
+           "model": "QLE2672",
+           "nPortID": "0x060084",
+           "pciSlot": 3,
+           "serial": "BFE1335E04217",
+           "speed": "8 Gbit",
+           "state": "Online",
+           "switchWwn": "20:01:00:2a:6a:9c:71:01",
+           "wwnn": "5f:47:ac:c8:3c:e4:95:00",
+           "wwpn": "5f:47:ac:c0:3c:e4:95:02"
+        },
+        {
+           "firmware": "7.04.00 (d0d5)",
+           "hbaPort": 2,
+           "model": "QLE2672",
+           "nPortID": "0xc700a4",
+           "pciSlot": 3,
+           "serial": "BFE1335E04217",
+           "speed": "8 Gbit",
+           "state": "Online",
+           "switchWwn": "20:01:00:2a:6a:98:a3:41",
+           "wwnn": "5f:47:ac:c8:3c:e4:95:00",
+           "wwpn": "5f:47:ac:c0:3c:e4:95:03"
+        },
+        {
+           "firmware": "7.04.00 (d0d5)",
+           "hbaPort": 1,
+           "model": "QLE2672",
+           "nPortID": "0xc70064",
+           "pciSlot": 2,
+           "serial": "BFE1341E09515",
+           "speed": "8 Gbit",
+           "state": "Online",
+           "switchWwn": "20:01:00:2a:6a:98:a3:41",
+           "wwnn": "5f:47:ac:c8:3c:e4:95:00",
+           "wwpn": "5f:47:ac:c0:3c:e4:95:00"
+        },
+        {
+           "firmware": "7.04.00 (d0d5)",
+           "hbaPort": 2,
+           "model": "QLE2672",
+           "nPortID": "0x060064",
+           "pciSlot": 2,
+           "serial": "BFE1341E09515",
+           "speed": "8 Gbit",
+           "state": "Online",
+           "switchWwn": "20:01:00:2a:6a:9c:71:01",
+           "wwnn": "5f:47:ac:c8:3c:e4:95:00",
+           "wwpn": "5f:47:ac:c0:3c:e4:95:01"
+        }
+     ]
+    }
+   }
+  }
+ }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

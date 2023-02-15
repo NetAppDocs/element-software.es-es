@@ -1,0 +1,70 @@
+---
+permalink: api/reference_element_api_getnetworkconfig.html 
+sidebar: sidebar 
+keywords: network,config,configuration,get,getting,getnetworkconfig 
+summary: Puede utilizar el método GetNetworkConfig para mostrar la información de configuración de red de un nodo. 
+---
+= GetNetworkConfig
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `GetNetworkConfig` método para mostrar la información de configuración de red de un nodo.
+
+
+
+== Parámetros
+
+Este método no tiene parámetros de entrada.
+
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+red
+ a| 
+Los tipos de conexión de red y la configuración actual de cada interfaz de red del nodo.
+ a| 
+xref:reference_element_api_network_all_interfaces.adoc[red (todas las interfaces)]
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "GetNetworkConfig",
+   "params": {},
+   "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Debido a la longitud de este ejemplo de respuesta, se documenta en un tema complementario.
+
+
+
+== Nuevo desde la versión
+
+9.6
+
+
+
+== Obtenga más información
+
+xref:reference_element_api_response_example_getnetworkconfig.adoc[GetNetworkConfig]

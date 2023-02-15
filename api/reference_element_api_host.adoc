@@ -1,0 +1,83 @@
+---
+permalink: api/reference_element_api_host.html 
+sidebar: sidebar 
+keywords: object,objects,host 
+summary: El objeto del host contiene información acerca de un host de volumen virtual. Puede utilizar el método ListVirtualVolumeHosts para obtener esta información para todos los hosts de volumen virtual. 
+---
+= host (volúmenes virtuales)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El objeto del host contiene información acerca de un host de volumen virtual. Puede utilizar el `ListVirtualVolumeHosts` método para obtener esta información para todos los hosts de volúmenes virtuales.
+
+
+
+== Miembros de objeto
+
+Este objeto contiene los siguientes miembros:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+vinculaciones
+ a| 
+Una lista de objetos que describen los vinculaciones del host de volúmenes virtuales.
+ a| 
+matriz en números enteros
+
+
+
+ a| 
+ID de clúster
+ a| 
+El ID único del clúster con el que está asociado este host.
+ a| 
+UUID
+
+
+
+ a| 
+Dirección de host
+ a| 
+La dirección IP o el nombre DNS del host de volumen virtual.
+ a| 
+cadena
+
+
+
+ a| 
+Nombres de iniciador
+ a| 
+Una lista de IQN de iniciador para el host de volúmenes virtuales.
+ a| 
+matriz de cadenas
+
+
+
+ a| 
+VirtualVolumeHostID
+ a| 
+El ID exclusivo de este host de volumen virtual.
+ a| 
+UUID
+
+
+
+ a| 
+VisibleProtocolEndpointID
+ a| 
+Una lista de ID de extremos de protocolo visibles en este host.
+ a| 
+Cabina de UUID
+
+|===
+
+
+== Obtenga más información
+
+xref:reference_element_api_listvirtualvolumehosts.adoc[ListVirtualVolumeHosts]

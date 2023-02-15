@@ -1,0 +1,33 @@
+---
+permalink: storage/task_replication_pair_clusters.html 
+sidebar: sidebar 
+keywords: pair clusters, replication, connect clusters, data protection 
+summary: 'Debe emparejar dos clústeres como primer paso para utilizar la funcionalidad de replicación en tiempo real. Después de emparejar y conectar dos clústeres, es posible configurar volúmenes activos en un clúster para que se repliquen continuamente en un segundo clúster; esto proporciona protección de datos continua \(CDP\).' 
+---
+= Emparejar clústeres para la replicación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe emparejar dos clústeres como primer paso para utilizar la funcionalidad de replicación en tiempo real. Después de emparejar y conectar dos clústeres, es posible configurar volúmenes activos en un clúster para que se repliquen continuamente en un segundo clúster; esto proporciona protección de datos continua (CDP).
+
+.Lo que necesitará
+* Debe tener privilegios de administrador del clúster en uno de los clústeres que se está emparejando, o en ambos.
+* Todos los MIPs y SIPs de nodos están enrutados entre sí.
+* Debe haber menos de 2000 ms de latencia de ida y vuelta entre clústeres.
+* Ambos clústeres de almacenamiento deben tener nombres de clúster únicos, MVIP, SVIP y todas las direcciones IP de los nodos.
+* La diferencia entre las versiones del software Element en los clústeres no debe ser superior a la versión principal. Si la diferencia es superior, se debe actualizar uno de los clústeres para ejecutar la replicación de datos.
+
+
+
+NOTE: El emparejamiento de clústeres requiere una conectividad completa entre los nodos en la red de gestión. La replicación requiere conectividad entre los nodos individuales en la red de clústeres de almacenamiento.
+
+Un clúster se puede emparejar con hasta otros cuatro clústeres para replicar volúmenes. De igual manera, los clústeres que pertenecen a un grupo de clústeres se pueden emparejar entre sí.
+
+
+
+== Obtenga más información
+
+xref:reference_prereq_network_port_requirements.adoc[Requisitos de puerto de red]

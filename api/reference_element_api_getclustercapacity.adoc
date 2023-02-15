@@ -1,0 +1,117 @@
+---
+permalink: api/reference_element_api_getclustercapacity.html 
+sidebar: sidebar 
+keywords: cluster,capacity,getting,get,measurements,measure,deduplication,GetClusterCapacity 
+summary: Es posible usar GetClusterCapacity para obtener mediciones de capacidad de alto nivel para un clúster de almacenamiento completo. Este método muestra campos que se pueden usar para calcular las tasas de eficiencia que se muestran en la interfaz de usuario web de Element. Puede utilizar los cálculos de eficiencia de los scripts para obtener las tasas de eficiencia de thin provisioning, deduplicación, compresión y eficiencia general. 
+---
+= GetClusterCapacity
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `GetClusterCapacity` para devolver mediciones de capacidad a grandes niveles para todo un clúster de almacenamiento. Este método muestra campos que se pueden usar para calcular las tasas de eficiencia que se muestran en la interfaz de usuario web de Element. Puede utilizar los cálculos de eficiencia de los scripts para obtener las tasas de eficiencia de thin provisioning, deduplicación, compresión y eficiencia general.
+
+
+
+== Cálculos de eficiencia
+
+Utilice las siguientes ecuaciones para calcular el thin provisioning, la deduplicación y la compresión. Estas ecuaciones se aplican al elemento 8.2 y posterior.
+
+* ThinProvisioningfactor = (nonZeroBlocks + zeroBlocks) / nonZeroBlocks
+* DuplicationFactor = (nonZeroBlocks + snapshotNonZeroBlocks) / unicqueBlocks
+* Compressionfactor = (unidoBlocks * 4096) / (uniqueBlocksUsedSpace * 0.93)
+
+
+
+
+== Cálculo general de la tasa de eficiencia
+
+Use la siguiente ecuación para calcular la eficiencia general del clúster utilizando los resultados del cálculo de eficiencia de thin provisioning, deduplicación y compresión.
+
+* Efficiencyfactor = thinProvisioningfactor * debDuplicationfactor * compressionfactor
+
+
+
+
+== Parámetros
+
+Este método no tiene parámetros de entrada.
+
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+ClusterCapacity
+ a| 
+Mediciones de la capacidad para el clúster de almacenamiento.
+ a| 
+xref:reference_element_api_clustercapacity.adoc[ClusterCapacity]
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "GetClusterCapacity",
+   "params": {},
+   "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "clusterCapacity": {
+      "activeBlockSpace": 236015557096,
+      "activeSessions": 20,
+      "averageIOPS": 0,
+      "clusterRecentIOSize": 0,
+      "currentIOPS": 0,
+      "maxIOPS": 150000,
+      "maxOverProvisionableSpace": 259189767127040,
+      "maxProvisionedSpace": 51837953425408,
+      "maxUsedMetadataSpace": 404984011161,
+      "maxUsedSpace": 12002762096640,
+      "nonZeroBlocks": 310080350,
+      "peakActiveSessions": 20,
+      "peakIOPS": 0,
+      "provisionedSpace": 1357931085824,
+      "snapshotNonZeroBlocks": 0,
+      "timestamp": "2016-10-17T21:24:36Z",
+      "totalOps": 1027407650,
+      "uniqueBlocks": 108180156,
+      "uniqueBlocksUsedSpace": 244572686901,
+      "usedMetadataSpace": 8745762816,
+      "usedMetadataSpaceInSnapshots": 8745762816,
+      "usedSpace": 244572686901,
+      "zeroBlocks": 352971938
+    }
+  }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

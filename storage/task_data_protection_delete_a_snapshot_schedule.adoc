@@ -1,0 +1,20 @@
+---
+permalink: storage/task_data_protection_delete_a_snapshot_schedule.html 
+sidebar: sidebar 
+keywords: snapshot schedule, delete 
+summary: Es posible eliminar programaciones de Snapshot. Después de eliminar una programación, no se ejecutan las siguientes copias de Snapshot programadas. Las copias de Snapshot creadas con la programación permanecen en el sistema de almacenamiento. 
+---
+= Eliminar una programación de Snapshot
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible eliminar programaciones de Snapshot. Después de eliminar una programación, no se ejecutan las siguientes copias de Snapshot programadas. Las copias de Snapshot creadas con la programación permanecen en el sistema de almacenamiento.
+
+. Haga clic en *Protección de datos* > *programas*.
+. Haga clic en el icono *acciones* de la programación que desea eliminar.
+. En el menú que se abre, haga clic en *Eliminar*.
+. Confirme la acción.
+

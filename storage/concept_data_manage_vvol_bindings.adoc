@@ -1,0 +1,16 @@
+---
+permalink: storage/concept_data_manage_vvol_bindings.html 
+sidebar: sidebar 
+keywords: bindings, vvols, bound virtual volumes 
+summary: Para realizar operaciones de I/o con un volumen virtual, el volumen virtual se debe vincular primero a un host ESXi. 
+---
+= Vinculaciones
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para realizar operaciones de I/o con un volumen virtual, el volumen virtual se debe vincular primero a un host ESXi.
+
+El clúster de SolidFire elige un extremo de protocolo adecuado, crea una vinculación que asocia el host ESXi y el volumen virtual con el extremo del protocolo, y devuelve la vinculación al host ESXi. Una vez enlazados, el host ESXi puede llevar a cabo operaciones de I/o con el volumen virtual vinculado.

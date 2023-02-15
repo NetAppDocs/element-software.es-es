@@ -1,0 +1,18 @@
+---
+permalink: storage/concept_basic_interface_refresh_rate_impacted_by_cluster_load.html 
+sidebar: sidebar 
+keywords: data refresh interval, cluster, interval controls, API requests, heavy load cluster, cluster credentials 
+summary: Dependiendo de los tiempos de respuesta de la API, el clúster podría ajustar automáticamente el intervalo de actualización de los datos para ciertas porciones de la página de software de NetApp Element que está viendo. 
+---
+= Tasa de actualización de la interfaz afectada por la carga del clúster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dependiendo de los tiempos de respuesta de la API, el clúster podría ajustar automáticamente el intervalo de actualización de los datos para ciertas porciones de la página de software de NetApp Element que está viendo.
+
+Los valores predeterminados del intervalo de actualización se restablecen cuando la página se vuelve a cargar en el navegador. El intervalo de actualización actual se puede ver si hace clic en el nombre del clúster en la parte superior derecha de la página. Hay que tener en cuenta que el intervalo determina la frecuencia con la que se realizan las solicitudes de API, no la rapidez con la que los datos regresan del servidor.
+
+Cuando la carga del clúster es muy pesada, puede poner en cola las solicitudes de API de la interfaz de usuario de Element. En las pocas ocasiones, cuando la respuesta del sistema se retrasa significativamente, como una conexión de red lenta combinada con un clúster ocupado, puede optar por cerrar la sesión de la interfaz de usuario de Element si el sistema no responde a las solicitudes de API en cola con la suficiente rapidez. Si se le redirige a la pantalla de cierre de sesión, puede volver a iniciar sesión después de desactivar cualquier solicitud de autenticación inicial del navegador. Tras volver a la página de introducción, se le pueden pedir las credenciales del clúster si no las ha guardado en el navegador.

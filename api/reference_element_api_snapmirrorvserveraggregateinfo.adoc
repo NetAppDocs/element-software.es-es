@@ -1,0 +1,42 @@
+---
+permalink: api/reference_element_api_snapmirrorvserveraggregateinfo.html 
+sidebar: sidebar 
+keywords: object,objects,snapMirrorVserverAggregateInfo 
+summary: 'El objeto snapMirrorVserveragateInfo contiene información sobre los datos disponibles Storage Virtual Machines \(también denominado vServers\) en el clúster ONTAP de destino.' 
+---
+= SnapMirrorVserveragregateInfo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El objeto snapMirrorVserveragregateInfo contiene información sobre los datos disponibles Storage Virtual Machines (también llamados vServers) en el clúster ONTAP de destino.
+
+
+
+== Miembros de objeto
+
+Este objeto contiene los siguientes miembros:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+Nombre de aggrName
+ a| 
+El nombre del agregado asignado a un Vserver.
+ a| 
+cadena
+
+
+
+ a| 
+AgAvailSize
+ a| 
+El tamaño disponible del agregado asignado.
+ a| 
+entero
+
+|===

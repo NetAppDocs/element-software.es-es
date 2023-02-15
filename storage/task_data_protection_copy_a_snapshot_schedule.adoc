@@ -1,0 +1,24 @@
+---
+permalink: storage/task_data_protection_copy_a_snapshot_schedule.html 
+sidebar: sidebar 
+keywords: snapshot schedule, copy, maintain, schedule attributes 
+summary: Puede copiar una programación y mantener sus atributos actuales. 
+---
+= Copiar una programación de Snapshot
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede copiar una programación y mantener sus atributos actuales.
+
+. Haga clic en *Protección de datos* > *programas*.
+. Haga clic en el icono Actions de la programación que quiera copiar.
+. En el menú que se abre, haga clic en *hacer una copia*.
++
+Aparece el cuadro de diálogo *Crear programación*, con los atributos actuales de la programación.
+
+. *Opcional:* Introduzca un nombre y atributos actualizados para la nueva programación.
+. Haga clic en *Crear programación*.
+

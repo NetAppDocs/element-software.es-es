@@ -1,0 +1,169 @@
+---
+permalink: api/reference_element_api_modifysnapshot.html 
+sidebar: sidebar 
+keywords: modify,modifying,edit,editing,change,changing,snapshot,attributes,attribute 
+summary: 'Puede utilizar ModifySnapshot para cambiar los atributos actualmente asignados a una instantánea. También es posible usar este método para habilitar las copias de Snapshot creadas en el volumen de lectura/escritura \(origen\) que se replican de forma remota en un clúster de almacenamiento de destino que ejecuta el software Element.' 
+---
+= ModificySnapshot
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar `ModifySnapshot` para cambiar los atributos actualmente asignados a una snapshot. También se puede usar este método para habilitar las copias de Snapshot creadas en el volumen de lectura/escritura (origen) y que se replican de forma remota a un clúster de almacenamiento de destino donde se ejecuta el software Element.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+
+
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+EnableRemoteReplication
+ a| 
+Utilice para habilitar la copia de Snapshot creada para replicarse en un clúster de almacenamiento remoto. Los posibles valores son los siguientes:
+
+* `true`: La instantánea se replicará en el almacenamiento remoto.
+* `false`: La instantánea no se replicará en el almacenamiento remoto.
+
+ a| 
+booleano
+ a| 
+falso
+ a| 
+No
+
+
+
+ a| 
+Tiempo de caducidad
+ a| 
+Especifique la hora después de la cual puede eliminarse la snapshot. No se puede utilizar con retención. Si no se especifica ni el tiempo de caducidad ni la retención en la snapshot original, la snapshot no caducará. El formato de hora es una cadena de fecha ISO 8601 para vencimiento basado en tiempo; de lo contrario, no caducará. El valor null hace que la snapshot se retenga de forma permanente. El valor de fifo hace que la instantánea se conserve primero en entrar primero en salir (FIFO), en relación con otras instantáneas del FIFO del volumen. La API fallará si no hay espacio FIFO disponible.
+ a| 
+Cadena de fecha ISO 8601
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+nombre
+ a| 
+El nombre de la copia de Snapshot. Si no se introduce ningún nombre, se utilizará la fecha y la hora en que se realizó la instantánea. La longitud máxima permitida para el nombre es de 255 caracteres.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+SnapMirrorLabel
+ a| 
+La etiqueta que utiliza el software SnapMirror para especificar la política de retención de snapshots en un extremo de SnapMirror.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+ID de copia Snapshot
+ a| 
+Identificador de la copia de Snapshot.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+snapshot
+ a| 
+Un objeto que contiene información acerca de la snapshot recién modificada.
+ a| 
+xref:reference_element_api_snapshot.adoc[snapshot]
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+  "method": "ModifySnapshot",
+  "params": {
+    "snapshotID": 3114,
+    "enableRemoteReplication": "true",
+    "name" : "Chicago"
+  },
+  "id": 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "snapshot": {
+      "attributes": {},
+      "checksum": "0x0",
+      "createTime": "2016-04-04T17:26:20Z",
+      "enableRemoteReplication": true,
+      "expirationReason": "None",
+      "expirationTime": null,
+      "groupID": 0,
+      "groupSnapshotUUID": "00000000-0000-0000-0000-000000000000",
+      "name": "test1",
+      "snapshotID": 3114,
+      "snapshotUUID": "5809a671-4ad0-4a76-9bf6-01cccf1e65eb",
+      "status": "done",
+      "totalSize": 5000658944,
+      "virtualVolumeID": null,
+      "volumeID": 1
+    }
+  }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

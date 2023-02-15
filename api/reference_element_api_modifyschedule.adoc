@@ -1,0 +1,349 @@
+---
+permalink: api/reference_element_api_modifyschedule.html 
+sidebar: sidebar 
+keywords: modify,modifying,edit,editing,change,changing,snapshot,schedule,scheduled,delete,pause,modifyschedule 
+summary: Puede utilizar ModifySchedule para cambiar los intervalos en los que se produce una instantánea programada. También puede eliminar o pausar una programación mediante este método. 
+---
+= ModificySchedule
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar `ModifySchedule` cambiar los intervalos en los que se produce una snapshot programada. También puede eliminar o pausar una programación mediante este método.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+
+
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+atributos
+ a| 
+Se utiliza para cambiar la frecuencia de la aparición de la snapshot. Los posibles valores son los siguientes:
+
+* `Days of Week`
+* `Days of Month`
+* `Time Interval`
+
+ a| 
+Objeto JSON
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+horas
+ a| 
+Cantidad de horas entre las instantáneas o la hora en que se realizará la copia de Snapshot en el modo días de la semana o días del mes. Los valores válidos abarcan de 0 a 24.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+nombre
+ a| 
+El nombre de la copia de Snapshot. Si no se introduce ningún nombre, se utilizará la fecha y la hora en que se tomó la snapshot de grupo. La longitud máxima permitida para el nombre es de 244 caracteres.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+minutos
+ a| 
+Cantidad de minutos entre las instantáneas o los minutos en los que se realizará la copia de Snapshot en el modo días de la semana o días del mes. Los valores válidos abarcan de 0 a 59.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+| LastRunStatus | El resultado o el estado de la última creación de snapshot programada. | cadena | Ninguno | No 
+
+
+ a| 
+en pausa
+ a| 
+Indica si la programación debe estar en pausa o no. Valores válidos:
+
+* `true`
+* `false`
+
+ a| 
+booleano
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+recurrente
+ a| 
+Indica si la programación será periódica o no. Valores válidos:
+
+* `true`
+* `false`
+
+ a| 
+booleano
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+RunNextInterval
+ a| 
+Utilice para elegir si desea ejecutar o no la snapshot la próxima vez que esté activo el programador. Valores válidos:
+
+* `true`
+* `false`
+
+
+Cuando se configura en true, la snapshot programada se ejecuta la próxima vez que el programador esté activo y, a continuación, se restablece en false.
+ a| 
+booleano
+ a| 
+falso
+ a| 
+No
+
+
+
+ a| 
+ID de intervalo
+ a| 
+El ID único de la programación.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+Nombre de la pila
+ a| 
+Nombre único de la programación. La longitud máxima permitida para el nombre de programación es de 244 caracteres.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+Tipo de columna
+ a| 
+Indica el tipo de programación que se va a crear. El único valor admitido es `snapshot`.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+`scheduleInfo`
+ a| 
+El nombre único que se le asignó a la programación, el período de retención de la copia de Snapshot que se creó y el ID de volumen del volumen a partir del cual se creó la copia de Snapshot. Valores válidos:
+
+* `volumeID`: El ID del volumen que se incluirá en la instantánea. (entero)
+* `volumes`: Lista de ID de volumen que se incluirán en la instantánea de grupo. (matriz entera)
+* `name`: El nombre de la instantánea que se va a utilizar. (cadena)
+* `enableRemoteReplication`: Indica si la instantánea debe incluirse en la replicación remota. (booleano)
+* `retention`: La cantidad de tiempo que la instantánea se conservará en HH:mm:ss Si está vacío, la copia de Snapshot se conserva siempre. (cadena)
+* `fifo`: La instantánea se conserva en base a la primera entrada en salida (FIFO). (cadena)
+* `ensureSerialCreation`: Especifique si se debe permitir la creación de una nueva instantánea si hay una replicación de instantánea anterior en curso. (booleano)
+
+ a| 
+link:reference_element_api_schedule.html["programación"^]
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+SnapMirrorLabel
+ a| 
+La etiqueta que utiliza el software SnapMirror para especificar la política de retención de snapshots en un extremo de SnapMirror.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+ToDeDeleted
+ a| 
+Indica si la programación está marcada para eliminarse. Valores válidos:
+
+* `true`
+* `false`
+
+ a| 
+booleano
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+Fecha de inicio
+ a| 
+Indica la fecha la primera vez que se inició o empezará la programación.
+ a| 
+Cadena de fecha ISO 8601
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+mesdays
+ a| 
+Los días del mes en que se realizará una copia de Snapshot. Los valores válidos son de 1 a 31.
+ a| 
+matriz en números enteros
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+días laborables
+ a| 
+Día de la semana en que se va a crear la snapshot. El día de la semana comienza el domingo con el valor de 0 y un desplazamiento de 1.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+No
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+programación
+ a| 
+Objeto que contiene los atributos de programación modificados.
+ a| 
+xref:reference_element_api_schedule.adoc[programación]
+
+|===
+
+
+== Ejemplo de solicitud
+
+[listing]
+----
+{
+  "method": "ModifySchedule",
+  "params": {
+    "scheduleName" : "Chicago",
+    "scheduleID" : 3
+    },
+  "id": 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "schedule": {
+      "attributes": {
+        "frequency": "Days Of Week"
+            },
+      "hasError": false,
+      "hours": 5,
+      "lastRunStatus": "Success",
+      "lastRunTimeStarted": null,
+      "minutes": 0,
+      "monthdays": [],
+      "paused": false,
+      "recurring": true,
+      "runNextInterval": false,
+      "scheduleID": 3,
+      "scheduleInfo": {
+        "volumeID": "2"
+            },
+      "scheduleName": "Chicago",
+      "scheduleType": "Snapshot",
+      "startingDate": null,
+      "toBeDeleted": false,
+      "weekdays": [
+        {
+          "day": 2,
+          "offset": 1
+      }
+      ]
+    }
+  }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

@@ -1,0 +1,112 @@
+---
+permalink: api/reference_element_api_getdrivehardwareinfo.html 
+sidebar: sidebar 
+keywords: drive,get,getting,hardware,info,getdrivehardwareinfo 
+summary: Puede usar el método GetDriveHardwareInfo para obtener toda la información de hardware para la unidad determinada. Generalmente, se incluyen los fabricantes, los proveedores, las versiones y otra información de identificación de hardware asociada. 
+---
+= GetDriveHardwarwareInfo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `GetDriveHardwareInfo` método para obtener toda la información de hardware para la unidad dada. Generalmente, se incluyen los fabricantes, los proveedores, las versiones y otra información de identificación de hardware asociada.
+
+
+
+== Parámetro
+
+Este método tiene el siguiente parámetro de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+ID de unidad
+ a| 
+ID de la unidad para la solicitud.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+resultado
+ a| 
+Se devolvió la información de hardware para el DriveID especificado.
+ a| 
+xref:reference_element_api_hardwareinfo.adoc[HardwareInfo]
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "GetDriveHardwareInfo",
+   "params": {
+     "driveID": 5
+   },
+   "id" : 100
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+   "id" : 100,
+   "result" : {
+     "driveHardwareInfo" : {
+       "description" : "ATA Drive",
+       "dev" : "8:80",
+       "devpath" : "/devices/pci0000:40/0000:40:01.0/0000:41:00.0/host6/port-6:0/expander-6:0/port-6:0:4/end_device-6:0:4/target6:0:4/6:0:4:0/block/sdf",
+       "driveSecurityAtMaximum" : false,
+       "driveSecurityFrozen" : false
+       "driveSecurityLocked" : false,
+       "logicalname" : "/dev/sdf",
+       "product" : "INTEL SSDSA2CW300G3",
+       "securityFeatureEnabled" : false,
+       "securityFeatureSupported" : true,
+       "serial" : "CVPR121400NT300EGN",
+       "size" : "300069052416",
+       "uuid" : "7e1fd5b9-5acc-8991-e2ac-c48f813a3884",
+       "version" : "4PC10362"
+     }
+   }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6
+
+
+
+== Obtenga más información
+
+xref:reference_element_api_listdrives.adoc[ListDrives]

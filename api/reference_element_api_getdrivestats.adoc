@@ -1,0 +1,147 @@
+---
+permalink: api/reference_element_api_getdrivestats.html 
+sidebar: sidebar 
+keywords: drive,drives,stats,get,getting,getdrivestats 
+summary: Puede utilizar el método GetDriveStats para obtener mediciones de actividad de alto nivel para una sola unidad. Los valores se acumulan desde la adición de la unidad al clúster. Algunos valores son específicos de las unidades de bloques. Cuando se ejecuta este método, se devuelven datos estadísticos para los tipos de unidades de metadatos o bloque. 
+---
+= GetDriveStats
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `GetDriveStats` método para obtener mediciones de actividad de alto nivel para una sola unidad. Los valores se acumulan desde la adición de la unidad al clúster. Algunos valores son específicos de las unidades de bloques. Cuando se ejecuta este método, se devuelven datos estadísticos para los tipos de unidades de metadatos o bloque.
+
+
+
+== Parámetro
+
+Este método tiene el siguiente parámetro de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+ID de unidad
+ a| 
+ID de la unidad para la solicitud.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+DriveStats
+ a| 
+Información de la actividad de la unidad para el DriveID especificado.
+ a| 
+xref:reference_element_api_drivestats.adoc[DriveStats]
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "GetDriveStats",
+   "params": {
+     "driveID": 3
+   },
+   "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta (unidad de bloque)
+
+Este método devuelve una respuesta similar al siguiente ejemplo para una unidad de bloque:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "driveStats": {
+      "driveID": 10,
+      "failedDieCount": 0,
+      "lifeRemainingPercent": 99,
+      "lifetimeReadBytes": 26471661830144,
+      "lifetimeWriteBytes": 13863852441600,
+      "powerOnHours": 33684,
+      "readBytes": 10600432105,
+      "readOps": 5101025,
+      "reallocatedSectors": 0,
+      "reserveCapacityPercent": 100,
+      "timestamp": "2016-10-17T20:23:45.456834Z",
+      "totalCapacity": 300069052416,
+      "usedCapacity": 6112226545,
+      "usedMemory": 114503680,
+      "writeBytes": 53559500896,
+      "writeOps": 25773919
+    }
+  }
+}
+----
+
+
+== Ejemplo de respuesta (unidad de metadatos de volumen)
+
+Este método devuelve una respuesta similar al siguiente ejemplo de una unidad de metadatos de un volumen:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "driveStats": {
+      "activeSessions": 8,
+      "driveID": 12,
+      "failedDieCount": 0,
+      "lifeRemainingPercent": 100,
+      "lifetimeReadBytes": 2308544921600,
+      "lifetimeWriteBytes": 1120986464256,
+      "powerOnHours": 16316,
+      "readBytes": 1060152152064,
+      "readOps": 258826209,
+      "reallocatedSectors": 0,
+      "reserveCapacityPercent": 100,
+      "timestamp": "2016-10-17T20:34:52.456130Z",
+      "totalCapacity": 134994670387,
+      "usedCapacity": null,
+      "usedMemory": 22173577216,
+      "writeBytes": 353346510848,
+      "writeOps": 86266238
+    }
+  }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6
+
+
+
+== Obtenga más información
+
+xref:reference_element_api_listdrives.adoc[ListDrives]

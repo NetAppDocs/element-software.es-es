@@ -1,0 +1,27 @@
+---
+permalink: storage/task_data_protection_roll_back_a_volume_to_a_snapshot.html 
+sidebar: sidebar 
+keywords: volume to snapshot roll back, snapshot roll back, revert changes 
+summary: Siempre que lo desee, es posible revertir un volumen a una snapshot anterior. De este modo se revierten los cambios que se hayan hecho al volumen desde el momento de la creación de la snapshot. 
+---
+= Revertir un volumen a una copia de Snapshot
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Siempre que lo desee, es posible revertir un volumen a una snapshot anterior. De este modo se revierten los cambios que se hayan hecho al volumen desde el momento de la creación de la snapshot.
+
+.Pasos
+. Haga clic en *Protección de datos* > *instantáneas*.
+. Haga clic en el icono *acciones* de la instantánea que desee utilizar para la reversión de volumen.
+. En el menú que se abre, seleccione *revertir volumen a instantánea*.
+. *Opcional:* para guardar el estado actual del volumen antes de retroceder a la instantánea:
++
+.. En el cuadro de diálogo *revertir a instantánea*, seleccione *Guardar estado actual del volumen como instantánea*.
+.. Escriba un nombre para la snapshot nueva.
+
+
+. Haga clic en *revertir Snapshot*.
+

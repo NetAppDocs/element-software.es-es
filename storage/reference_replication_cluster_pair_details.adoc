@@ -1,0 +1,40 @@
+---
+permalink: storage/reference_replication_cluster_pair_details.html 
+sidebar: sidebar 
+keywords: cluster pairs, replication, data protection 
+summary: La página Cluster Pairs de la pestaña Data Protection proporciona información sobre los clústeres que se hayan emparejado o que estén en proceso de emparejarse. El sistema muestra mensajes de emparejamiento y progreso en la columna Status. 
+---
+= Detalles de parejas de clústeres
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página Cluster Pairs de la pestaña Data Protection proporciona información sobre los clústeres que se hayan emparejado o que estén en proceso de emparejarse. El sistema muestra mensajes de emparejamiento y progreso en la columna Status.
+
+* *ID*
++
+Un ID generado por el sistema que se otorga a cada pareja de clústeres.
+
+* *Nombre de clúster remoto*
++
+El nombre del otro clúster de la pareja.
+
+* *MVIP remoto*
++
+La dirección IP virtual de gestión del otro clúster en la pareja.
+
+* *Estado*
++
+El estado de replicación del clúster remoto
+
+* *Replicación de volúmenes*
++
+La cantidad de volúmenes que contiene el clúster emparejados para la replicación.
+
+* *UUID*
++
+Un ID único que se otorga a cada clúster en la pareja.
+
+

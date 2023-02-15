@@ -1,0 +1,57 @@
+---
+permalink: storage/concept_monitor_understand_cluster_fullness_levels.html 
+sidebar: sidebar 
+keywords: cluster fullness levels, understanding, fullness levels 
+summary: 'El clúster que ejecuta el software Element genera errores de clúster para advertir al administrador de almacenamiento cuándo se está quedando sin capacidad el clúster. Hay tres niveles de ocupación del clúster, cada uno de los cuales se muestra en la interfaz de usuario de NetApp Element: Warning, error y Critical.' 
+---
+= Comprender los niveles de llenado de clústeres
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El clúster que ejecuta el software Element genera errores de clúster para advertir al administrador de almacenamiento cuándo se está quedando sin capacidad el clúster. Hay tres niveles de ocupación del clúster, cada uno de los cuales se muestra en la interfaz de usuario de NetApp Element: Warning, error y Critical.
+
+El sistema usa el código de error BlockClusterFull para informar sobre el nivel de ocupación del almacenamiento en bloque de clúster. Puede ver los niveles de gravedad de ocupación del clúster en la pestaña Alerts de la interfaz de usuario de Element.
+
+La siguiente lista incluye información sobre los niveles de gravedad de BlockClusterFull:
+
+* *Advertencia*
++
+Se trata de una advertencia que puede configurar el cliente y que aparece cuando la capacidad de bloques del clúster se acerca al nivel de gravedad de error. De forma predeterminada, este nivel se establece en el tres % por debajo del nivel de error y se puede ajustar a través de la interfaz de usuario y la API de Element. Debe añadir más capacidad o liberar capacidad Lo antes posible..
+
+* *Error*
++
+Cuando el clúster presenta este estado, si se pierde un nodo, no habrá suficiente capacidad en el clúster para reconstruir la protección de datos de Double Helix. La creación de los volúmenes, los clones y las snapshots se bloquea cuando el clúster está en este estado. No es un estado seguro y no se recomienda para ningún clúster. Debe añadir más capacidad o liberar capacidad de inmediato.
+
+* *Crítico*
++
+Este error crítico se ha producido porque se ha consumido el 100 % del clúster. Se trata de un estado de solo lectura y no se puede realizar ninguna conexión iSCSI nueva con el clúster. Cuando se alcanza este estado, debe liberar capacidad o añadir más de inmediato.
+
+
+
+El sistema utiliza el código de error MetadataClusterFull para informar sobre la ocupación del almacenamiento de metadatos del clúster. Puede ver la ocupación del almacenamiento de metadatos del clúster en la sección Cluster Capacity en la página Overview de la pestaña Reporting en la interfaz de usuario de Element.
+
+En la siguiente lista, se incluye información acerca de los niveles de gravedad de MetadataClusterFull:
+
+* *Advertencia*
++
+Se trata de una advertencia que puede configurar el cliente y que aparece cuando la capacidad de datos de metadatos del clúster se acerca al nivel de gravedad de error. De forma predeterminada, este nivel se establece en el tres por ciento por debajo del nivel de error y se puede ajustar a través de la API de Element. Debe añadir más capacidad o liberar capacidad Lo antes posible..
+
+* *Error*
++
+Cuando el clúster presenta este estado, si se pierde un nodo, no habrá suficiente capacidad en el clúster para reconstruir la protección de datos de Double Helix. La creación de los volúmenes, los clones y las snapshots se bloquea cuando el clúster está en este estado. No es un estado seguro y no se recomienda para ningún clúster. Debe añadir más capacidad o liberar capacidad de inmediato.
+
+* *Crítico*
++
+Este error crítico se ha producido porque se ha consumido el 100 % del clúster. Se trata de un estado de solo lectura y no se puede realizar ninguna conexión iSCSI nueva con el clúster. Cuando se alcanza este estado, debe liberar capacidad o añadir más de inmediato.
+
+
+
+
+NOTE: Lo siguiente se aplica a los umbrales de clúster de dos nodos:
+
+* El error de ocupación de metadatos está un 20% por debajo de crítico.
+* El error de ocupación de los bloques es 1 unidad de bloque (incluida la capacidad desaprovechada) que se encuentra por debajo de la crucial. Esto significa que vale de dos unidades de bloque la capacidad por debajo de la crítica.
+

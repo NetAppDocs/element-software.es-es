@@ -1,0 +1,32 @@
+---
+permalink: storage/task_data_protection_back_up_a_volume_snapshot_to_an_amazon_s3_object_store.html 
+sidebar: sidebar 
+keywords: volume snapshot, backup, amazon S3 object store 
+summary: Es posible realizar backups de snapshots de SolidFire en almacenes de objetos externos que sean compatibles con Amazon S3. 
+---
+= Realice backups de una copia de Snapshot de volumen en un almacén de objetos Amazon S3
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible realizar backups de snapshots de SolidFire en almacenes de objetos externos que sean compatibles con Amazon S3.
+
+. Haga clic en**Protección de datos** > *Snapshots*.
+. Haga clic en el icono *acciones* de la instantánea de la que desea realizar la copia de seguridad.
+. En el menú que se abre, haga clic en *copia de seguridad en*.
+. En el cuadro de diálogo *copia de seguridad integrada* en *copia de seguridad a*, seleccione *S3*.
+. Seleccione una opción en *Formato de datos*:
++
+** *Original*: Formato comprimido que sólo pueden leer los sistemas de almacenamiento SolidFire.
+** *Sin comprimir*: Formato sin comprimir compatible con otros sistemas.
+
+
+. Introduzca un nombre de host para acceder al almacén de objetos en el campo *Hostname*.
+. Introduzca un ID de clave de acceso para la cuenta en el campo *ID de clave de acceso*.
+. Introduzca la clave de acceso secreta de la cuenta en el campo *clave de acceso secreta*.
+. Introduzca el bloque S3 en el que desea almacenar la copia de seguridad en el campo *S3 Bucket*.
+. *Opcional*: Introduzca una etiqueta de nombre para adjuntarla al prefijo en el campo *etiqueta de nombre*.
+. Haga clic en *Iniciar lectura*.
+

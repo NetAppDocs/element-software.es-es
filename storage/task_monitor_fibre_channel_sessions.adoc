@@ -1,0 +1,24 @@
+---
+permalink: storage/task_monitor_fibre_channel_sessions.html 
+sidebar: sidebar 
+keywords: fibre channel sessions, fc, FC, sessions 
+summary: 'Puede ver las sesiones Fibre Channel \(FC\) que están conectadas al clúster. Puede filtrar la información para que incluya únicamente las conexiones que desea que aparezcan en la ventana.' 
+---
+= Consulte las sesiones Fibre Channel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible ver las sesiones Fibre Channel (FC) que están conectadas al clúster. Puede filtrar la información para que incluya únicamente las conexiones que desea que aparezcan en la ventana.
+
+. En la interfaz de usuario de Element, seleccione *Reporting* > *FC Sessions*.
+. Para ver los campos de criterios de filtro, haga clic en *filtro*.
+
+
+
+
+== Obtenga más información
+
+xref:reference_monitor_fibre_channel_session_details.adoc[Detalles de la sesión Fibre Channel]

@@ -1,0 +1,106 @@
+---
+permalink: api/reference_element_api_virtualnetwork.html 
+sidebar: sidebar 
+keywords: object,objects,virtualNetwork 
+summary: El objeto virtualNetwork contiene información acerca de una red virtual específica. Puede utilizar el método API ListVirtualNetworks para recuperar una lista de esta información para todas las redes virtuales del sistema. 
+---
+= VirtualNetwork
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El objeto virtualNetwork contiene información acerca de una red virtual específica. Puede utilizar el `ListVirtualNetworks` Método API para recuperar una lista de esta información de todas las redes virtuales del sistema.
+
+
+
+== Miembros de objeto
+
+Este objeto contiene los siguientes miembros:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+Bloqueos de direcciones
+ a| 
+El rango de bloques de direcciones actualmente asignados a la red virtual. Miembros:
+
+* Disponible: Cadena binaria en "1"s y "0"s. "1" indica que la dirección IP está disponible y "0" indica que la dirección IP no está disponible. La cadena se lee de derecha a izquierda, siendo el dígito a la derecha la primera dirección IP de la lista de bloques de direcciones.
+* Size: El tamaño de este bloque de direcciones.
+* Start: La primera dirección IP del bloque.
+
+ a| 
+Cabina de objetos JSON
+
+
+
+ a| 
+atributos
+ a| 
+La lista de pares nombre-valor en el formato de objetos JSON.
+ a| 
+Objeto JSON
+
+
+
+ a| 
+nombre
+ a| 
+El nombre asignado a la red virtual.
+ a| 
+cadena
+
+
+
+ a| 
+máscara de red
+ a| 
+La dirección IP de la máscara de red de la red virtual.
+ a| 
+cadena
+
+
+
+ a| 
+svip
+ a| 
+La dirección IP de almacenamiento de la red virtual.
+ a| 
+cadena
+
+
+
+ a| 
+puerta de enlace
+ a| 
+La puerta de enlace utilizada para la red virtual.
+ a| 
+cadena
+
+
+
+ a| 
+Cód. Virtual
+ a| 
+El identificador único de una red virtual.
+ a| 
+entero
+
+
+
+ a| 
+VirtualNetworkTag
+ a| 
+El identificador de etiqueta de VLAN.
+ a| 
+entero
+
+|===
+
+
+== Obtenga más información
+
+xref:reference_element_api_listvirtualnetworks.adoc[ListVirtualNetworks]

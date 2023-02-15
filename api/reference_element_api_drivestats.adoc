@@ -1,0 +1,191 @@
+---
+permalink: api/reference_element_api_drivestats.html 
+sidebar: sidebar 
+keywords: object,objects,driveStats 
+summary: El objeto driveStats contiene mediciones de actividad de alto nivel para una sola unidad. Puede recuperar información de medición con el método API GetDriveStats. 
+---
+= DriveStats
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El objeto driveStats contiene mediciones de actividad de alto nivel para una sola unidad. Con el método API, puede recuperar la información de medición `GetDriveStats`.
+
+
+
+== Miembros de objeto
+
+Este objeto contiene los siguientes miembros:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+ActiveSessions
+ a| 
+Cantidad de sesiones iSCSI que actualmente utilizan esta unidad (solo está presente para unidades de metadatos).
+ a| 
+entero
+
+
+
+ a| 
+ID de unidad
+ a| 
+El ID único de la unidad en el clúster.
+ a| 
+entero
+
+
+
+ a| 
+FailedDieCount
+ a| 
+Número de elementos de hardware de unidad con fallos.
+ a| 
+entero
+
+
+
+ a| 
+VidaRemainPercent
+ a| 
+Indicador de desgaste de los medios de la unidad.
+ a| 
+entero
+
+
+
+ a| 
+Salvavidas ReadBytes
+ a| 
+Los bytes totales que se leen en esta unidad durante la vida útil de la unidad.
+ a| 
+entero
+
+
+
+ a| 
+Salvavidas WriteBytes
+ a| 
+Bytes totales escritos en esta unidad durante la vida útil de la unidad.
+ a| 
+entero
+
+
+
+ a| 
+PowerOnHours
+ a| 
+Número de horas en las que se encendió esta unidad.
+ a| 
+entero
+
+
+
+ a| 
+ReadBytes
+ a| 
+Bytes totales leídos desde la unidad debido a operaciones del cliente.
+ a| 
+entero
+
+
+
+ a| 
+Operaciones de lectura
+ a| 
+Operaciones de lectura totales en la unidad debido a operaciones de cliente.
+ a| 
+entero
+
+
+
+ a| 
+Agentes de propiedad
+ a| 
+Número de sectores defectuosos sustituidos en esta unidad.
+ a| 
+entero
+
+
+
+ a| 
+ReserveCapacidadPercent
+ a| 
+La capacidad de reserva disponible de la unidad.
+ a| 
+entero
+
+
+
+ a| 
+fecha/hora
+ a| 
+La hora actual en formato UTC+0.
+ a| 
+Cadena de fecha ISO 8601
+
+
+
+ a| 
+Capacidad total
+ a| 
+La capacidad total de la unidad, en bytes.
+ a| 
+entero
+
+
+
+ a| 
+Errores sin correcttableErrors
+ a| 
+El valor de errores no corregibles del sistema DE supervisión automática, análisis y tecnología de informes (SMART) de la unidad.
+ a| 
+entero
+
+
+
+ a| 
+UsedCapacity
+ a| 
+La capacidad en bytes utilizada de la unidad.
+ a| 
+entero
+
+
+
+ a| 
+Memoria usedMemory
+ a| 
+Cantidad de memoria que actualmente utiliza el nodo que aloja esta unidad.
+ a| 
+entero
+
+
+
+ a| 
+Bytes de escritura
+ a| 
+Bytes totales escritos en la unidad debido a la actividad del cliente.
+ a| 
+entero
+
+
+
+ a| 
+Operaciones de escritura
+ a| 
+Operaciones de escritura totales en la unidad debido a la actividad de cliente.
+ a| 
+entero
+
+|===
+
+
+== Obtenga más información
+
+xref:reference_element_api_getdrivestats.adoc[GetDriveStats]

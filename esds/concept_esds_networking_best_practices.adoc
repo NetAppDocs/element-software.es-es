@@ -1,0 +1,65 @@
+---
+permalink: esds/concept_esds_networking_best_practices.html 
+sidebar: sidebar 
+keywords: solidfire esds, software-defined storage, networks, linux host routing, networking 
+summary: Antes de instalar SolidFire eSDS, debe configurar las redes necesarias en los nodos de almacenamiento que ejecutan RHEL. Es responsable del enrutamiento de red en su entorno. Puede utilizar las prácticas recomendadas que se proporcionan como marco. 
+---
+= Consideraciones sobre la configuración de red
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de instalar SolidFire eSDS, debe configurar las redes necesarias en los nodos de almacenamiento que ejecutan RHEL. Es responsable del enrutamiento de red en su entorno. Puede utilizar las prácticas recomendadas que se proporcionan como marco.
+
+[IMPORTANT]
+====
+* Utilice interfaces Unidas o en equipo.
+* Use los mismos nombres de interfaz para todos los nodos del clúster (ejemplo: Team-mgt para la interfaz de gestión de cada nodo y Team-stg para cada interfaz de almacenamiento de nodo).
+* Asegúrese de que NetworkManager está en ejecución.
+* Asegúrese de que el paquete NetworkManager-Dispatcher-Routing-rules esté instalado en todos los nodos de almacenamiento para el enrutamiento basado en directivas.
+* Consulte https://www.netapp.com/us/media/tr-4763.pdf["Prácticas recomendadas para el mantenimiento de redes y redes en sistemas de almacenamiento SolidFire de NetApp"].
+* Configure las redes de gestión y almacenamiento de cada nodo para que utilicen varias interfaces físicas redundantes mediante configuraciones de vínculo o de equipo.
+
+
+====
+Para obtener información acerca de la creación de equipos de red, consulte https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/networking_guide/ch-configure_network_teaming["Configurar el trabajo en equipo de red"^]. De forma predeterminada, todas las interfaces de 10 GbE del nodo de almacenamiento se habilitan con una unidad de transmisión máxima (MTU) de 9000 bytes. Para obtener un rendimiento óptimo, configure todas las interfaces de almacenamiento del servidor con la misma MTU que los nodos de almacenamiento de SolidFire de NetApp. Debe configurar switches de red para que admitan una MTU de al menos 9016 bytes o más para tener en cuenta la sobrecarga de la trama gigante y para un reenvío correcto a través de la red. Si desea cambiar esta configuración para admitir un valor de MTU más bajo, debe ponerse en contacto con el soporte de NetApp.
+
+Consulte la siguiente tabla para obtener información acerca de las redes de gestión y almacenamiento que SolidFire eSDS necesita para los diferentes tipos de tráfico:
+
+[cols="2*"]
+|===
+| Tipo de red | Descripción 
+
+
+ a| 
+Red de almacenamiento
+ a| 
+* Incluye todo el tráfico de almacenamiento/iSCSI.
+* Puede enrutarse si desea montar desde hosts ubicados en una red de capa 3 diferente o si tiene pensado replicar datos entre clústeres.
+* Debe configurarse con interfaces de red en el mismo dominio de difusión de capa 2.
+
+
+
+
+ a| 
+Red de gestión
+ a| 
+* Incluye todo el tráfico de administración.
+* Puede enrutarse si desea acceder a la API o la interfaz de usuario de clúster desde una red de capa 3 diferente.
+* Debe configurarse con interfaces de red en el mismo dominio de difusión de capa 2.
+* Debe configurarse con una tarjeta de interfaz de red con un valor MTU de al menos 1500 bytes.
+
+
+|===
+
+TIP: Para obtener ejemplos y consejos para configurar la red host, consulte link:task_esds_configure_the_interface_config_files.adoc["aquí"].
+
+
+
+== Obtenga más información
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Página de recursos de SolidFire de NetApp"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentación para versiones anteriores de SolidFire de NetApp y los productos Element"^]
+

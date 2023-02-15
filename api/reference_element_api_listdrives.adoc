@@ -1,0 +1,94 @@
+---
+permalink: api/reference_element_api_listdrives.html 
+sidebar: sidebar 
+keywords: drives,drive,list,listing,listdrives,cluster 
+summary: Puede usar el método ListDrives para enumerar las unidades que existen en los nodos activos del clúster. Este método muestra las unidades que se añadieron como metadatos de volumen o unidades de bloques, así como las unidades que no se añadieron y están disponibles. 
+---
+= ListDrives
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `ListDrives` método para enumerar las unidades que existen en los nodos activos del clúster. Este método muestra las unidades que se añadieron como metadatos de volumen o unidades de bloques, así como las unidades que no se añadieron y están disponibles.
+
+
+
+== Parámetros
+
+Este método no tiene parámetros de entrada.
+
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+unidades
+ a| 
+La lista de unidades del clúster.
+ a| 
+xref:reference_element_api_drive.adoc[unidad] cabina
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "ListDrives",
+   "params": {},
+   "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+   "id" : 1,
+   "result" : {
+     "drives" : [
+       {
+         "attributes" : {},
+         "capacity" : 299917139968,
+         "driveID" : 35,
+         "nodeID" : 5,
+         "serial" : "scsi-SATA_INTEL_SSDSA2CW6CVPR141502R3600FGN-part2",
+         "slot" : 0,
+         "status" : "active",
+         "type" : "volume"
+       },
+       {
+         "attributes" : {},
+         "capacity" : 600127266816,
+         "driveID" : 36,
+         "nodeID" : 5,
+         "serial" : "scsi-SATA_INTEL_SSDSA2CW6CVPR1415037R600FGN",
+         "slot" : 6,
+         "status" : "active",
+         "type" : "block"
+       }
+     }
+   ]
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

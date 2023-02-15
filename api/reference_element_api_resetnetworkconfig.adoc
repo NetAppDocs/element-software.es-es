@@ -1,0 +1,55 @@
+---
+permalink: api/reference_element_api_resetnetworkconfig.html 
+sidebar: sidebar 
+keywords: network,config,configuration,reset,restetting,factory,default,resetnetworkconfig 
+summary: Puede utilizar el método ResetNetworkConfig para ayudar a resolver problemas de configuración de red en un nodo individual. Este método restablece la configuración de red de un nodo individual a los valores predeterminados de fábrica. 
+---
+= ResetNetworkConfig
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `ResetNetworkConfig` método para ayudar a resolver problemas de configuración de red para un nodo individual. Este método restablece la configuración de red de un nodo individual a los valores predeterminados de fábrica.
+
+
+NOTE: El SDS empresarial de SolidFire no admite este método. Si utiliza este método en un sistema SolidFire eSDS, el método devolverá un error.
+
+
+
+== Parámetros
+
+Este método no tiene parámetros de entrada.
+
+
+
+== Valor de retorno
+
+Este método no tiene valores devueltos.
+
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "ResetNetworkConfig",
+   "params": {},
+   "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método no devuelve una respuesta.
+
+
+
+== Nuevo desde la versión
+
+11.0

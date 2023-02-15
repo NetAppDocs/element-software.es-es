@@ -1,0 +1,184 @@
+---
+permalink: api/reference_element_api_updatebulkvolumestatus.html 
+sidebar: sidebar 
+keywords: updatebulkvolumestatus,update,updating,bulk,volume,status,job 
+summary: Puede usar el método UpdateBulkVolumeStatus para actualizar el estado de un trabajo de volumen masivo que inició con los métodos StartBulkVolumeRead o StartBulkVolumeWrite. 
+---
+= UpdateBulkVolumeStatus
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `UpdateBulkVolumeStatus` método para actualizar el estado de un trabajo de volumen masivo que se inició con el `StartBulkVolumeRead` o. `StartBulkVolumeWrite` métodos.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+clave
+ a| 
+Clave asignada durante la inicialización de un xref:reference_element_api_startbulkvolumeread.adoc[StartBulkVolumeRead] o. xref:reference_element_api_startbulkvolumewrite.adoc[StartBulkVolumeWrite] sesión.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+estado
+ a| 
+El sistema establece el estado del trabajo de volumen masivo dado. Los posibles valores son los siguientes:
+
+* Running: Trabajos que aún están activos.
+* Completado: Trabajos que se han realizado.
+* Failed: Trabajos con errores.
+
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+Porcentaje completado
+ a| 
+El progreso completado del trabajo de volumen masivo como porcentaje.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+mensaje
+ a| 
+Devuelve el estado del trabajo de volumen masivo una vez completado el trabajo.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+No
+
+
+
+ a| 
+atributos
+ a| 
+Atributos JSON; actualiza lo que está en el trabajo de volumen masivo.
+ a| 
+Objeto JSON
+ a| 
+Ninguno
+ a| 
+No
+
+|===
+
+
+== Valores devueltos
+
+Este método tiene los siguientes valores devueltos:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+estado
+ a| 
+Estado de la sesión solicitada. Estado devuelto:
+
+* preparando
+* activo
+* listo
+* error
+
+ a| 
+cadena
+
+
+
+ a| 
+atributos
+ a| 
+Devuelve los atributos especificados en la llamada al método. Los valores se devuelven tanto si han cambiado como si no.
+ a| 
+cadena
+
+
+
+ a| 
+url
+ a| 
+La URL para acceder al servidor web del nodo; se proporciona solo si la sesión sigue activa.
+ a| 
+cadena
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "UpdateBulkVolumeStatus",
+   "params": {
+          "key": "0b2f532123225febda2625f55dcb0448",
+	      "status": "running"
+      },
+   "id": 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+   "id" : 1,
+   "result": {
+	  "status" : "running",
+	  "url" : "https://10.10.23.47:8443/"
+    }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6
+
+
+
+== Obtenga más información
+
+* xref:reference_element_api_startbulkvolumeread.adoc[StartBulkVolumeRead]
+* xref:reference_element_api_startbulkvolumewrite.adoc[StartBulkVolumeWrite]
+

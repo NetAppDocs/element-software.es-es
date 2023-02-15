@@ -1,0 +1,52 @@
+---
+permalink: storage/reference_data_manage_vvol_protocol_endpoints_details.html 
+sidebar: sidebar 
+keywords: protocol endpoints, details, vvols, state, type, id 
+summary: La página Protocol Endpoints en la pestaña VVols proporciona información sobre extremos de protocolo. 
+---
+= Detalles de los extremos de protocolo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página Protocol Endpoints en la pestaña VVols proporciona información sobre extremos de protocolo.
+
+* *ID de proveedor primario*
++
+El ID del proveedor de extremo de protocolo principal.
+
+* *ID de proveedor secundario*
++
+El ID del proveedor de extremo de protocolo secundario.
+
+* *ID de extremo de protocolo*
++
+El UUID del extremo de protocolo.
+
+* *Estado del extremo de protocolo*
++
+El estado del extremo de protocolo. Los valores posibles son los siguientes:
+
++
+** Active: El extremo de protocolo está en uso.
+** Start: El extremo de protocolo se está iniciando.
+** Failover: El extremo de protocolo se conmutó al nodo de respaldo.
+** Reserved: El extremo de protocolo está reservado.
+
+
+* *Tipo de proveedor*
++
+El tipo de proveedor del extremo de protocolo. Los valores posibles son los siguientes:
+
++
+** Primario
+** Secundario
+
+
+* *SCSI NAA DEVICE ID*
++
+El identificador exclusivo de dispositivo SCSI para el extremo de protocolo a nivel global en el formato extendido registrado de NAA según la norma IEEE.
+
+

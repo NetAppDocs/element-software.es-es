@@ -1,0 +1,34 @@
+---
+permalink: storage/task_data_protection_clone_multiple_volumes_from_a_group_snapshot.html 
+sidebar: sidebar 
+keywords: multiple volumes, group snapshot, clone, create, data protection 
+summary: Es posible clonar un grupo de volúmenes desde una copia de Snapshot de grupo específica. Esta operación requiere la existencia de una snapshot de grupo de los volúmenes, puesto que la snapshot de grupo sirve como base para crear los volúmenes. Después de crear los volúmenes, es posible usarlos como cualquier otro volumen del sistema. 
+---
+= Clonar varios volúmenes a partir de una copia de Snapshot de grupo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible clonar un grupo de volúmenes desde una copia de Snapshot de grupo específica. Esta operación requiere la existencia de una snapshot de grupo de los volúmenes, puesto que la snapshot de grupo sirve como base para crear los volúmenes. Después de crear los volúmenes, es posible usarlos como cualquier otro volumen del sistema.
+
+El tamaño del volumen y la carga del clúster actual influirán en el tiempo que se necesite para completar una operación de clonado.
+
+. Haga clic en *Protección de datos* > *instantáneas de grupo*.
+. Haga clic en el icono Actions de la snapshot de grupo que desee usar para los clones de volúmenes.
+. En el menú que se abre, seleccione *Clonar volúmenes desde Group Snapshot*.
+. Introduzca un * prefijo de nombre de nuevo volumen* en el cuadro de diálogo *Clonar volúmenes desde Snapshot de grupo*.
++
+El prefijo se aplica a todos los volúmenes que se creen a partir de la copia de Snapshot de grupo.
+
+. *Opcional:* Seleccione otra cuenta a la que pertenecerá el clon.
++
+Si no selecciona ninguna cuenta, el sistema asignará los nuevos volúmenes a la cuenta de volumen actual.
+
+. *Opcional:* Seleccione un método de acceso diferente para los volúmenes del clon.
++
+Si no selecciona ninguno, el sistema usará el acceso de volumen actual.
+
+. Haga clic en *Iniciar clonación*.
+

@@ -1,0 +1,147 @@
+---
+permalink: api/reference_element_api_testlocalconnectivity.html 
+sidebar: sidebar 
+keywords: test,testing,local,connectivity,TestLocalConnectivity 
+summary: 'Puede usar el método TestLocalConnectivity para hacer ping a la IP de clúster \(CIP\) de cada nodo de un clúster activo.' 
+---
+= TestLocalConnectivity
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `TestLocalConnectivity` Método para hacer ping en la IP de clúster (CIP) de cada nodo en un clúster activo.
+
+
+
+== Parámetros
+
+Este método no tiene parámetros de entrada.
+
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+detalles
+ a| 
+Tiempos de respuesta ping individuales para cada nodo del clúster activo local.
+ a| 
+Objeto JSON
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+    "method": "TestLocalConnectivity",
+    "params": {},
+    "id": 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "id": null,
+   "result": {
+      "details": {
+                 "10.26.86.17": {
+                    individualResponseTimes: [
+                         "00:00:00.006868",
+                         "00:00:00.005933",
+                         "00:00:00.006655",
+                         "00:00:00.006584",
+                         "00:00:00.006334"
+                    ],
+                    individualStatus: [
+                          true,
+                          true,
+                          true,
+                          true,
+                          true
+                    ],
+                    responseTime: "00:00:00.006475",
+                    successful: true
+                       },
+                       "10.26.86.18": {
+                    individualResponseTimes: [
+                         "00:00:00.006201",
+                         "00:00:00.006187",
+                         "00:00:00.005990",
+                         "00:00:00.006029",
+                         "00:00:00.005917"],
+                    individualStatus: [
+                          true,
+                          true,
+                          true,
+                          true,
+                          true
+                     ],
+                     "responseTime": "00:00:00.006065",
+                     "successful": true
+     },
+                       "10.26.86.19": {
+                     individualResponseTimes: [
+                         "00:00:00.005988",
+                         "00:00:00.006948",
+                         "00:00:00.005981",
+                         "00:00:00.005964",
+                         "00:00:00.005942"
+                      ],
+                    individualStatus: [
+                                "true",
+                                "true",
+                          true,
+                          true,
+                          true
+                      ],
+                      responseTime: "00:00:00.006165",
+                      successful: true,
+               },
+                          "10.26.86.20": {
+                    individualResponseTimes: [
+                         "00:00:00.005926",
+                         "00:00:00.006072",
+                         "00:00:00.005675",
+                         "00:00:00.009904",
+                         "00:00:00.006225"
+                      ],
+                              "individualStatus": [
+                          true,
+                          true,
+                          true,
+                          true,
+                          true
+                     ],
+                      responseTime: "00:00:00.006760",
+                      successful: true
+                   }
+             },
+     "duration": "00:00:00.595982",
+     "result": "Passed"
+  }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

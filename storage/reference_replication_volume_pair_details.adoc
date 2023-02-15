@@ -1,0 +1,71 @@
+---
+permalink: storage/reference_replication_volume_pair_details.html 
+sidebar: sidebar 
+keywords: volume pairs, replication, data protection 
+summary: La página Volume Pairs de la pestaña Data Protection proporciona información sobre los volúmenes que se hayan emparejado o que estén en proceso de emparejarse. El sistema muestra los mensajes de emparejamiento y progreso en la columna Volume Status. 
+---
+= Detalles de parejas de volúmenes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página Volume Pairs de la pestaña Data Protection proporciona información sobre los volúmenes que se hayan emparejado o que estén en proceso de emparejarse. El sistema muestra los mensajes de emparejamiento y progreso en la columna Volume Status.
+
+* *ID*
++
+El ID que genera el sistema para el volumen.
+
+* *Nombre*
++
+El nombre que se le dio al volumen cuando se creó. Los nombres de volumen pueden tener hasta 223 caracteres y contener a-z, 9 y guion (-).
+
+* *Cuenta*
++
+El nombre de la cuenta asignada al volumen.
+
+* *Estado del volumen*
++
+El estado de replicación del volumen
+
+* *Estado de instantánea*
++
+El estado del volumen de snapshot.
+
+* *Modo*
++
+El método de replicación de escritura del cliente. Los valores posibles son los siguientes:
+
++
+** Asincrónica
+** Solo Snapshot
+** Sincr
+
+
+* *Dirección*
++
+La dirección de los datos del volumen:
+
++
+** Icono de volumen de origen (image:../media/source_icon_for_volume_pairs.png["Indica que los datos se escriben en un clúster de fuera de destino"]) indica que los datos se escriben en un objetivo fuera del clúster.
+** Icono de volumen de destino (image:../media/target_icon_for_volume_pairs.png["Icono que indica que los datos se escriben en el volumen local de un origen externo"]) indica que los datos se escriben en el volumen local desde un origen externo.
+
+
+* *Retraso asíncrono*
++
+El tiempo transcurrido desde que el volumen se sincronizó por última vez con el clúster remoto. Si el volumen no se empareja, el valor es nulo.
+
+* *Cluster remoto*
++
+El nombre del clúster remoto en el que reside el volumen.
+
+* *ID de volumen remoto*
++
+El ID de volumen del volumen en el clúster remoto.
+
+* *Nombre del volumen remoto*
++
+El nombre que se le dio al volumen remoto cuando se creó.
+
+

@@ -1,0 +1,54 @@
+---
+permalink: api/concept_element_api_multitenant_networking_api_methods.html 
+sidebar: sidebar 
+keywords: multitenant,network,networking,api,prerequisites,requirements,virtual,tenant 
+summary: Las redes multitenant en clústeres de almacenamiento de Element permiten que el tráfico entre varios clientes en redes lógicas independientes se conecten a un clúster de almacenamiento de Element sin enrutamiento de la capa 3. 
+---
+= Métodos de API de redes múltiples inquilinos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Las redes multitenant en clústeres de almacenamiento de Element permiten que el tráfico entre varios clientes en redes lógicas independientes se conecten a un clúster de almacenamiento de Element sin enrutamiento de la capa 3.
+
+Las conexiones al clúster de almacenamiento se separan en la pila de redes mediante el etiquetado de VLAN.
+
+
+
+== Requisitos previos para configurar una red virtual multitenant
+
+* Se debe haber identificado el bloque de direcciones IP de red de cliente que se asignarán a las redes virtuales en los nodos de almacenamiento.
+* Se debe haber identificado la dirección IP de red de almacenamiento de cliente (SVIP) que se usará como extremo para todo el tráfico de almacenamiento de.
+
+
+
+
+== Orden de operaciones de red virtual
+
+. Utilice el método AddVirtualNetwork para aprovisionar en lote las direcciones IP que introduzca.
++
+Después de añadir una red virtual, el clúster realiza de forma automática los siguientes pasos:
+
++
+** Cada nodo de almacenamiento crea una interfaz de red virtual.
+** A cada nodo de almacenamiento se le asigna una dirección VLAN que se puede enrutar con la SVIP virtual.
+** Las direcciones IP de VLAN persisten en cada nodo en el caso de que se reinicie un nodo.
+
+
+. Cuando se asignan la interfaz de red virtual y las direcciones VLAN, es posible asignar el tráfico de red de cliente a la SVIP virtual.
+
+
+
+
+== Obtenga más información
+
+* xref:concept_element_api_virtual_network_naming_conventions.adoc[Convenciones de nomenclatura de redes virtuales]
+* xref:reference_element_api_addvirtualnetwork.adoc[AddVirtualNetwork]
+* xref:reference_element_api_modifyvirtualnetwork.adoc[ModificyVirtualNetwork]
+* xref:reference_element_api_listvirtualnetworks.adoc[ListVirtualNetworks]
+* xref:reference_element_api_removevirtualnetwork.adoc[RemoveVirtualNetwork]
+* https://www.netapp.com/data-storage/solidfire/documentation/["Página de recursos de SolidFire de NetApp"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentación para versiones anteriores de SolidFire de NetApp y los productos Element"^]
+

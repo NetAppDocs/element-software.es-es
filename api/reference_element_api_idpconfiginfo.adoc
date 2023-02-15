@@ -1,0 +1,78 @@
+---
+permalink: api/reference_element_api_idpconfiginfo.html 
+sidebar: sidebar 
+keywords: objects,object,idpConfigInfo 
+summary: 'El objeto idpConfigInfo contiene detalles de configuración e integración con respecto a un proveedor de identidades \(IDP\) de terceros.' 
+---
+= IdpConfigInfo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El objeto idpConfigInfo contiene detalles de configuración e integración relacionados con un proveedor de identidades (IDP) de terceros.
+
+
+
+== Miembros de objeto
+
+Este objeto contiene los siguientes miembros:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+activado
+ a| 
+Especifica si esta configuración IdPConfiguration de terceros está habilitada.
+ a| 
+booleano
+
+
+
+ a| 
+IdpConfigurationID
+ a| 
+UUID para la configuración de IDP de terceros.
+ a| 
+UUID
+
+
+
+ a| 
+IdpMetadata
+ a| 
+Metadatos para detalles de configuración e integración para el inicio de sesión único de SAML 2.0.
+ a| 
+cadena
+
+
+
+ a| 
+IdpName
+ a| 
+Nombre para recuperar el proveedor IDP para el inicio de sesión único SAML 2.0.
+ a| 
+cadena
+
+
+
+ a| 
+ServiceProviderCertificate
+ a| 
+Un certificado PKCS#10 X.509 codificado en Base64 con formato PEM que se utilizará para la comunicación con este IDP.
+ a| 
+cadena
+
+
+
+ a| 
+SpMetadataUrl
+ a| 
+URL para recuperar los metadatos del proveedor de servicios (SP) del clúster para proporcionar al IDP para establecer una relación de confianza.
+ a| 
+cadena
+
+|===

@@ -1,0 +1,118 @@
+---
+permalink: api/reference_element_api_setnodesupplementaltlsciphers.html 
+sidebar: sidebar 
+keywords: tls,cipher,set,setting,list,supplemental,setnodesupplementaltlsciphers,node 
+summary: Puede usar el método SetNodeSupplementalTlsCiphers para especificar la lista de cifrados TLS complementarios. Este comando se puede usar en nodos de gestión. 
+---
+= SetNodeSupplementalTlsCiphers
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `SetNodeSupplementalTlsCiphers` Método para especificar la lista de cifrados TLS suplementarios. Este comando se puede usar en nodos de gestión.
+
+
+
+== Parámetro
+
+
+NOTE: Debe llamar a este método contra el nodo de gestión. Por ejemplo:
+
+[listing]
+----
+https://<management node IP>:442/json-rpc/10.0
+----
+Este método tiene el siguiente parámetro de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+SupplesCiphers
+ a| 
+Los nombres suplementarios de las suites de cifrado utilizando el esquema de nomenclatura OpenSSL. El uso de nombres de paquete cifrado no distingue mayúsculas y minúsculas.
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+
+
+== Valores devueltos
+
+Este método tiene los siguientes valores devueltos:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+MandatoryCiphers
+ a| 
+Lista de conjuntos de cifrado TLS obligatorios para el nodo. Estos son cifrados que siempre están activos en el nodo.
+ a| 
+cadena
+
+
+
+ a| 
+SupplesCiphers
+ a| 
+Lista de conjuntos de cifrado TLS complementarios para el nodo.
+ a| 
+cadena
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "SetNodeSupplementalTlsCiphers",
+   "params": {
+        "supplementalCiphers": [
+            "DHE-RSA-AES128-SHA256",
+            "DHE-RSA-AES128-GCM-SHA256",
+            "ECDHE-RSA-AES128-SHA256",
+            "ECDHE-RSA-AES128-GCM-SHA256"
+        ]
+   },
+   "id": 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id" : 1,
+  "result" : {
+        "mandatoryCiphers": [
+            "DHE-RSA-AES256-SHA256",
+            "DHE-RSA-AES256-GCM-SHA384",
+            "ECDHE-RSA-AES256-SHA384",
+            "ECDHE-RSA-AES256-GCM-SHA384"
+        ],
+        "supplementalCiphers": [
+            "DHE-RSA-AES128-SHA256",
+            "DHE-RSA-AES128-GCM-SHA256",
+            "ECDHE-RSA-AES128-SHA256",
+            "ECDHE-RSA-AES128-GCM-SHA256"
+        ]
+    }
+}
+----

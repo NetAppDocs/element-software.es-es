@@ -1,0 +1,26 @@
+---
+permalink: storage/task_data_protection_delete_a_snapshot.html 
+sidebar: sidebar 
+keywords: snapshot, delete, volume snapshot, storage cluster, remove snapshot 
+summary: Es posible eliminar una copia de Snapshot de volumen de un clúster de almacenamiento donde se ejecuta el software Element. Cuando se elimina una copia de Snapshot, el sistema la quita de forma inmediata. 
+---
+= Eliminar una copia de Snapshot
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible eliminar una copia de Snapshot de volumen de un clúster de almacenamiento donde se ejecuta el software Element. Cuando se elimina una copia de Snapshot, el sistema la quita de forma inmediata.
+
+Es posible eliminar del clúster de origen copias de Snapshot que se están replicando. Si una snapshot se está sincronizando en el clúster de destino cuando se la elimina, se completa la replicación sincrónica y la snapshot se elimina del clúster de origen. La copia de Snapshot no se elimina del clúster de destino.
+
+También es posible eliminar del clúster de destino las copias de Snapshot que se hayan replicado en el destino. La copia de Snapshot eliminada se guarda en una lista de copias de Snapshot eliminadas en el destino hasta que el sistema detecta que se ha eliminado la copia de Snapshot en el clúster de origen. Cuando el destino detecta que se ha eliminado la copia de Snapshot de origen, el destino detiene la replicación de la copia de Snapshot.
+
+Cuando se elimina una snapshot del clúster de origen, la snapshot del clúster de destino no se ve afectada (lo contrario también aplica).
+
+. Haga clic en *Protección de datos* > *instantáneas*.
+. Haga clic en el icono *acciones* de la instantánea que desea eliminar.
+. En el menú que se abre, seleccione *Eliminar*.
+. Confirme la acción.
+

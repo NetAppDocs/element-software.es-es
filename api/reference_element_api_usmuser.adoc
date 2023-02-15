@@ -1,0 +1,83 @@
+---
+permalink: api/reference_element_api_usmuser.html 
+sidebar: sidebar 
+keywords: object,objects,usmUser 
+summary: Puede utilizar el objeto usmUser de SNMP con el método de API SetSnmpInfo para configurar SNMP en el clúster de almacenamiento. 
+---
+= UsumUsuario
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el objeto usmUser de SNMP con `SetSnmpInfo` Método de API para configurar SNMP en el clúster de almacenamiento.
+
+
+
+== Miembros de objeto
+
+Este objeto contiene los siguientes miembros:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+acceso
+ a| 
+Tipo de acceso SNMP para este usuario. Los posibles valores son los siguientes:
+
+* Rousser: Acceso de sólo lectura.
+* Rwuser: Acceso de lectura y escritura. Todos los objetos MIB del software Element son de solo lectura.
+
+ a| 
+cadena
+
+
+
+ a| 
+nombre
+ a| 
+El nombre del usuario.
+ a| 
+cadena
+
+
+
+ a| 
+contraseña
+ a| 
+La contraseña del usuario.
+ a| 
+cadena
+
+
+
+ a| 
+frase de contraseña
+ a| 
+La frase de acceso del usuario.
+ a| 
+cadena
+
+
+
+ a| 
+SecLevel
+ a| 
+El tipo de credenciales necesarias para este usuario. Los posibles valores son los siguientes:
+
+* Noauth: No se requiere contraseña ni frase de contraseña.
+* Auth: Se necesita una contraseña para el acceso de los usuarios.
+* priv: Se necesita una contraseña y una contraseña para el acceso del usuario.
+
+ a| 
+cadena
+
+|===
+
+
+== Obtenga más información
+
+xref:reference_element_api_setsnmpinfo.adoc[SetSnmpInfo]

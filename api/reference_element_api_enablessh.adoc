@@ -1,0 +1,70 @@
+---
+permalink: api/reference_element_api_enablessh.html 
+sidebar: sidebar 
+keywords: SSH,enable,enabling,single,node,EnableSSH 
+summary: Puede utilizar el método EnableSsh para habilitar el servicio SSH para un único nodo. Este método no afecta a la duración del tiempo de espera de SSH para todo el clúster y no exime al nodo de que SSH esté deshabilitado por el tiempo de espera global de SSH. 
+---
+= EnableSsh
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `EnableSsh` Método para habilitar el servicio Secure Shell (SSH) para un solo nodo. Este método no afecta a la duración del tiempo de espera de SSH para todo el clúster y no exime al nodo de que SSH esté deshabilitado por el tiempo de espera global de SSH.
+
+
+NOTE: El SDS empresarial de SolidFire no admite este método. Si utiliza este método en un sistema SolidFire eSDS, el método devolverá un error.
+
+
+
+== Parámetro
+
+Este método no tiene parámetro de entrada.
+
+
+
+== Valor de retorno
+
+Este método tiene el siguiente valor devuelto:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+activado
+ a| 
+El estado del servicio SSH de este nodo.
+ a| 
+booleano
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+  "method": "EnableSsh",
+  "params": {
+     },
+  "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id" : 1,
+  "result" : {"enabled": true}
+}
+----

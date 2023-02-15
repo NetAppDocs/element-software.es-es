@@ -1,0 +1,71 @@
+---
+permalink: api/reference_element_api_getlldpconfig.html 
+sidebar: sidebar 
+keywords: lldp,config,configuration,get,getting,getlldpinfo,storage 
+summary: 'Puede utilizar el método GetLldpConfig para obtener la configuración del protocolo de detección de nivel de vínculo \(LLDP\) para cada nodo de un clúster de almacenamiento.' 
+---
+= GetLldpConfig
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `GetLldpConfig` Método para obtener la configuración del protocolo de detección de nivel de enlace (LLDP) para cada nodo de un clúster de almacenamiento.
+
+
+
+== Parámetros
+
+Este método no tiene parámetros de entrada.
+
+
+
+== Valores devueltos
+
+Este método tiene los siguientes valores devueltos:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+LldpConfig
+ a| 
+Información sobre la configuración de LLDP en el clúster de almacenamiento.
+ a| 
+Objeto JSON
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "GetLldpConfig",
+   "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+	"id": null,
+		"result": {
+			"lldpConfig": {
+				"enableLldp": true,
+				"enableMed": false,
+				"enableOtherProtocols": true
+		}
+	}
+}
+----

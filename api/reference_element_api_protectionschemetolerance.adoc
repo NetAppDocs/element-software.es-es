@@ -1,0 +1,51 @@
+---
+permalink: api/reference_element_api_protectionschemetolerance.html 
+sidebar: sidebar 
+keywords: object,objects,protectionSchemeTolerance 
+summary: El objeto protectionSchemeTolerance contiene información sobre si un clúster de almacenamiento, para un esquema de protección específico, puede seguir leyendo y escribiendo datos después de un fallo. 
+---
+= ProtectionSchemeTolerance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El objeto protectionSchemeTolerance contiene información sobre si un clúster de almacenamiento, para un esquema de protección específico, puede seguir leyendo y escribiendo datos después de un fallo.
+
+
+
+== Miembros de objeto
+
+Este objeto contiene los siguientes miembros:
+
+|===
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+Esquema de protección
+ a| 
+El esquema de protección actual de este clúster de almacenamiento. El único valor posible es doubleHelix.
+ a| 
+cadena
+
+
+
+ a| 
+FaillableFaiurForBlockData
+ a| 
+El número actual de errores simultáneos que se pueden producir sin perder la disponibilidad de datos de bloques para el esquema de protección asociado.
+ a| 
+entero
+
+
+
+ a| 
+SustentableFailuresForMetadata
+ a| 
+El número actual de errores simultáneos que se pueden producir sin perder la disponibilidad de metadatos para el esquema de protección asociado.
+ a| 
+entero
+
+|===

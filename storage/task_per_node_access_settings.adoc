@@ -1,0 +1,30 @@
+---
+permalink: storage/task_per_node_access_settings.html 
+sidebar: sidebar 
+keywords: nodes, accessing node settings, accessing node settings with per-node UI 
+summary: Tras introducir la IP y la autenticación del nodo de gestión, puede acceder a los ajustes de red, los ajustes del clúster y las pruebas y las utilidades del sistema en la interfaz de usuario por nodo de gestión. 
+---
+= Acceda a la configuración por nodo con la interfaz de usuario por nodo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Tras introducir la IP y la autenticación del nodo de gestión, puede acceder a los ajustes de red, los ajustes del clúster y las pruebas y las utilidades del sistema en la interfaz de usuario por nodo de gestión.
+
+Si desea modificar la configuración de un nodo en un estado Active que forme parte de un clúster, debe iniciar sesión como usuario de administrador de clúster.
+
+
+TIP: Debe configurar o modificar un nodo por vez. Debe asegurarse de que la configuración de red especificada tenga el efecto deseado y que la red sea estable y se ejecute correctamente antes de hacer modificaciones en otro nodo.
+
+. Abra la interfaz de usuario por nodo mediante uno de los siguientes métodos:
++
+** Introduzca la dirección IP de administración seguida de :442 en una ventana del navegador e inicie sesión con un nombre de usuario y una contraseña de administrador.
+** En la interfaz de usuario de Element, seleccione *Cluster* > *Nodes* y haga clic en el enlace de la dirección IP de administración correspondiente al nodo que desea configurar o modificar. En la ventana del navegador que se abre, puede editar la configuración del nodo.
+
+
++
+image::../media/per_node_ui_hcc_skin.png[Por página de configuración de red de la interfaz de usuario del nodo]
+
+

@@ -1,0 +1,99 @@
+---
+permalink: api/reference_element_api_deletesnapshot.html 
+sidebar: sidebar 
+keywords: snapshot,snapshots,delete,deleting,DeleteSnapshot 
+summary: Puede utilizar el método DeleteSnapshot para eliminar una instantánea. 
+---
+= DeleteSnapshot
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `DeleteSnapshot` método para eliminar una snapshot.
+
+Una copia de Snapshot que actualmente es la copia de Snapshot activa no se puede eliminar. Debe revertir y hacer otra copia de Snapshot activa para poder eliminar la copia de Snapshot actual.
+
+
+
+== Parámetros
+
+Este método tiene los siguientes parámetros de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+ID de copia Snapshot
+ a| 
+El ID de la copia de Snapshot que se desea eliminar.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+Sí
+
+
+
+ a| 
+OverrideSnapMirrorHold
+ a| 
+Anule el bloqueo colocado en las snapshots durante la replicación. Puede usar este parámetro para eliminar copias de Snapshot obsoletas de SnapMirror después de haber eliminado la relación de SnapMirror asociada.
+ a| 
+booleano
+ a| 
+falso
+ a| 
+No
+
+|===
+
+
+== Valores devueltos
+
+Este método no tiene valores devueltos.
+
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+   "method": "DeleteSnapshot",
+"params": {
+"snapshotID": 8,
+"overrideSnapMirrorHold": true
+},
+"id": 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {}
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6
+
+
+
+== Obtenga más información
+
+xref:reference_element_api_rollbacktosnapshot.adoc[RollbackToSnapshot]

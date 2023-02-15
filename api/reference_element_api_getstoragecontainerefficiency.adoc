@@ -1,0 +1,133 @@
+---
+permalink: api/reference_element_api_getstoragecontainerefficiency.html 
+sidebar: sidebar 
+keywords: volume,virtual,container,volumes,get,getting,efficiency,vvol,GetStorageContainerEfficiency 
+summary: Puede utilizar el método GetStorageContainerEfficial para recuperar información sobre eficiencia de un contenedor de almacenamiento de volúmenes virtuales. 
+---
+= GetStorageContainerEfficiency
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `GetStorageContainerEfficiency` método para recuperar información de eficiencia acerca de un contenedor de almacenamiento de volumen virtual.
+
+
+
+== Parámetros
+
+Este método tiene el siguiente parámetro de entrada:
+
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+ID de almacenamiento ContainerID
+ a| 
+El ID del contenedor de almacenamiento del que se puede recuperar la información de eficiencia.
+ a| 
+entero
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+
+
+== Valores devueltos
+
+Este método tiene los siguientes valores devueltos:
+
+|===
+
+
+| Nombre | Descripción | Tipo 
+
+
+ a| 
+compresión
+ a| 
+La cantidad de espacio que ahorra la compresión de datos en todos los volúmenes virtuales del contenedor de almacenamiento. Se afirma como una relación en la que el valor 1 significa que los datos se han almacenado sin compresión.
+ a| 
+flotante
+
+
+
+ a| 
+deduplicación
+ a| 
+La cantidad de espacio ahorrado no duplicando los datos de todos los volúmenes virtuales del contenedor de almacenamiento. Se indica como una relación.
+ a| 
+flotante
+
+
+
+ a| 
+Volúmenes missingVolumes
+ a| 
+Los volúmenes virtuales que no se pudieron consultar para los datos de eficiencia. Los volúmenes que faltan pueden deberse a que el ciclo de recolección de elementos no utilizados (GC) tiene menos de una hora de antigüedad, a una pérdida temporal de conectividad de red o a servicios reiniciados desde el ciclo de GC.
+ a| 
+matriz en números enteros
+
+
+
+ a| 
+Thin Provisioning
+ a| 
+La relación entre el espacio utilizado y la cantidad de espacio asignado para almacenar datos. Se indica como una relación.
+ a| 
+flotante
+
+
+
+ a| 
+fecha/hora
+ a| 
+La última vez que se recopilaron datos de eficiencia después de GC.
+ a| 
+Cadena de datos ISO 8601
+
+|===
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+  "method": "GetStorageContainerEfficiency",
+  "params": {
+    "storageContainerID" : "6c95e24f-9f0b-4793-affb-5a4bc6c3d7e1"
+  },
+  "id" : 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "compression": 1,
+    "deduplication": 1,
+    "missingVolumes": [],
+    "thinProvisioning": 1,
+    "timestamp": "2016-04-12T15:39:49Z"
+  }
+}
+----
+
+
+== Nuevo desde la versión
+
+9.6

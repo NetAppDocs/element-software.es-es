@@ -1,0 +1,63 @@
+---
+permalink: storage/task_data_protection_configure_custom_protection_domains.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede configurar Protection Domains personalizados para mejorar la resiliencia del clúster. 
+---
+= Configure los dominios de protección personalizados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En el caso de los clústeres de Element que contienen más de dos nodos de almacenamiento, es posible configurar Protection Domains personalizados para cada nodo. Cuando configura Protection Domains personalizados, debe asignar todos los nodos del clúster a un dominio.
+
+
+TIP: Cuando se asignan Protection Domains, se inicia una sincronización de datos entre nodos y algunas operaciones del clúster no están disponibles hasta que se completa la sincronización de datos. Después de configurar un dominio de protección personalizado para un clúster, cuando se añade un nodo de almacenamiento nuevo, no es posible añadir unidades al nodo nuevo hasta que se asigna un dominio de protección al nodo y permite que se complete la sincronización de datos. Visite la link:../concepts/concept_solidfire_concepts_data_protection.html#protection-domains["Documentación de Protection Domains"] Para obtener más información acerca de Protection Domains.
+
+
+NOTE: Para que un esquema de Protection Domain personalizado sea útil en un clúster, todos los nodos de almacenamiento de cada chasis deben asignarse al mismo dominio de protección personalizado. Debe crear tantos dominios de protección personalizados como sea necesario para que este sea el caso (el esquema de dominio de protección personalizado más pequeño posible es tres dominios). Como práctica recomendada, configure un número igual de nodos por dominio e intente garantizar que cada nodo asignado a un dominio en particular sea del mismo tipo.
+
+.Pasos
+. Haga clic en *Cluster* > *Nodes*.
+. Haga clic en *Configurar dominios de protección*.
++
+En la ventana *Configurar dominios de protección personalizados*, puede ver los dominios de protección configurados actualmente (si los hay), así como las asignaciones de dominios de protección para nodos individuales.
+
+. Escriba un nombre para el nuevo dominio de protección personalizado y haga clic en *Crear*.
++
+Repita este paso para todos los dominios de protección nuevos que necesite crear.
+
+. Para cada nodo de la lista *asignar nodos*, haga clic en el menú desplegable de la columna *dominio de protección* y seleccione un dominio de protección para asignar a ese nodo.
++
+
+CAUTION: Asegúrese de comprender el diseño del nodo y el chasis, el esquema de dominio de protección personalizado que ha configurado y los efectos del esquema en la protección de datos antes de aplicar los cambios. Si aplica un esquema de Protection Domain y necesita hacer cambios de inmediato, puede pasar algún tiempo antes de poder hacerlo debido a la sincronización de datos que se produce una vez que se aplica una configuración.
+
+. Haga clic en *Configurar dominios de protección*.
+
+
+.Resultado
+En función del tamaño del clúster, la sincronización de datos entre dominios podría llevar algún tiempo. Una vez completada la sincronización de datos, puede ver las asignaciones personalizadas de Protection Domain en la página *Cluster* > *Nodes* y el panel de la interfaz de usuario web de Element muestra el estado de protección del clúster en el panel *Custom Protection Domain Health*.
+
+.Posibles errores
+A continuación se muestran algunos errores tras aplicar una configuración personalizada de Protection Domain:
+
+|===
+
+
+| Error | Descripción | Resolución 
+
+
+| SetProtectionDomainLayout falló: ProtectionDomainLayout dejaría el identificador de nodo {9} inutilizable. Los nombres predeterminados y no predeterminados no se pueden usar juntos. | Un nodo no tiene asignado un dominio de protección. | Asigne un dominio de protección al nodo. 
+
+
+| SetProtectionDomainLayout falló: El tipo de dominio de protección 'personalizado' divide el tipo de dominio de protección 'chasis'. | A un nodo en un chasis de varios nodos se le asigna un dominio de protección diferente a los de otros nodos del chasis. | Asegúrese de que todos los nodos del chasis tengan asignado el mismo dominio de protección. 
+|===
+
+
+== Obtenga más información
+
+* link:../concepts/concept_solidfire_concepts_data_protection.html#custom_pd["Dominios de protección personalizados"^]
+* link:../api/index.html["Gestione el almacenamiento con la API de Element"^]
+

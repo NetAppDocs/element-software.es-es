@@ -1,0 +1,32 @@
+---
+permalink: storage/task_snapmirror_perform_failover_from_element_cluster.html 
+sidebar: sidebar 
+keywords: failover, cluster, perform a failover, snapmirror 
+summary: Puede realizar una conmutación al nodo de respaldo desde el clúster de Element para hacer que el volumen de destino sea de lectura/escritura y accesible para los hosts en el lado de destino. Antes de realizar una conmutación al nodo de respaldo del clúster de Element, debe interrumpir la relación de SnapMirror. 
+---
+= Ejecute una conmutación al nodo de respaldo desde un clúster de Element
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede realizar una conmutación al nodo de respaldo desde el clúster de Element para hacer que el volumen de destino sea de lectura/escritura y accesible para los hosts en el lado de destino. Antes de realizar una conmutación al nodo de respaldo del clúster de Element, debe interrumpir la relación de SnapMirror.
+
+Use la interfaz de usuario de NetApp Element para realizar la conmutación al respaldo. Si la interfaz de usuario de Element no está disponible, también es posible usar ONTAP System Manager o la CLI de ONTAP para ejecutar el comando break Relationship.
+
+.Lo que necesitará
+* Existe una relación de SnapMirror y tiene al menos una snapshot válida en el volumen de destino.
+* Necesita una conmutación al nodo de respaldo en el volumen de destino debido a una interrupción del servicio no planificada o un evento planificado en el sitio principal.
+
+
+.Pasos
+. En la interfaz de usuario de Element, haga clic en *Protección de datos* > *Relaciones de SnapMirror*.
+. Busque la relación con el volumen de origen que desea conmutar al nodo de respaldo.
+. Haga clic en el icono *acciones*.
+. Haga clic en *descanso*.
+. Confirme la acción.
++
+El volumen del clúster de destino ahora tiene acceso de lectura/escritura y se puede montar en los hosts de la aplicación para reanudar las cargas de trabajo de producción. Toda la replicación de SnapMirror se detiene como resultado de esta acción. La relación muestra un estado de ruptura.
+
+

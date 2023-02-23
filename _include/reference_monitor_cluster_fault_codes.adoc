@@ -1,19 +1,6 @@
----
-permalink: storage/reference_monitor_cluster_fault_codes.html 
-sidebar: sidebar 
-keywords: cluster fault codes, alerts, error codes, view 
-summary: El sistema informa de un error o un estado que puede ser de su interés al generar un código de error, que se incluye en la página Alerts. Estos códigos ayudan a determinar en qué componente del sistema se generó la alerta y por qué se generó. 
----
-= códigos de error de clúster
+= 
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
-
-[role="lead"]
-El sistema informa de un error o un estado que puede ser de su interés al generar un código de error, que se incluye en la página Alerts. Estos códigos ayudan a determinar en qué componente del sistema se generó la alerta y por qué se generó.
-
-En la siguiente lista se describen los distintos tipos de códigos:
 
 * *AutenticaciónServiceFault*
 +

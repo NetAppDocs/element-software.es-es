@@ -11341,7 +11341,6 @@
   <block id="1b3b2f72f429aa6470095a49affa4ebc" category="paragraph">No hay suficiente espacio libre de almacenamiento basado en bloques para admitir la pérdida de un solo nodo. Consulte el método API GetClusterFullThreshold para obtener detalles sobre los niveles de ocupación de los clústeres. Esta falla del clúster indica una de las siguientes condiciones:</block>
   <block id="638768955c5a6f2ab425aae1bce583bc" category="list-text">Stage3Low (Advertencia): Se superó el umbral definido por el usuario. Ajuste la configuración del clúster lleno o añada más nodos.</block>
   <block id="66ee2d060cdf84b1fec9ae435d8f1a81" category="list-text">Stage4Critical (error): No hay espacio suficiente para recuperar el sistema de un fallo de 1 nodo. No se permite la creación de volúmenes, snapshots y clones.</block>
-  <block id="6dd7d6f50201f92efca3955b56977f59" category="list-text">Stage5CompletelyConsumed (crítico)1; no se permiten escrituras ni nuevas conexiones iSCSI. Se mantendrán las conexiones iSCSI actuales. Las escrituras fallarán hasta que se añada más capacidad al clúster. Para resolver esta falla, purgue o elimine volúmenes o añada otro nodo de almacenamiento al clúster de almacenamiento.</block>
   <block id="d224dcc4acfd1590ca54fc5fcc706716" category="list-text">* BlocksDegraded*</block>
   <block id="4121923b447abdbd7a192a5ef89111dc" category="paragraph">Los datos de bloques ya no se replican por completo debido a un fallo.</block>
   <block id="0eaadb4fcb48a0a0ed7bc9868be9fbaa" category="paragraph">Advertencia</block>
@@ -11358,7 +11357,6 @@
   <block id="76c3f3974c0bb69705ba25d138d9a599" category="paragraph">Se detectó que un servicio de bloques está en mal estado:</block>
   <block id="43f872680fd424e2b1762db257650751" category="list-text">Gravedad = Advertencia: No se realiza ninguna acción. Este período de advertencia caducará en cTimeUntilBSIsKilledMSec=330000 milisegundos.</block>
   <block id="1243ff1c26bd2b3dd66afd02705039aa" category="list-text">Gravedad = error: El sistema decomisiona automáticamente los datos y vuelve a replicar los datos en otras unidades en buen estado.</block>
-  <block id="f1b539b56aae2623dd1a1bb6034beea5" category="list-text">Severidad = crítico: Hay servicios de bloque con errores en varios nodos mayores o iguales al número de replicación (2 para Double Helix). Los datos no están disponibles y la sincronización de bandejas no finalizará. Compruebe si existen problemas de conectividad de red y errores de hardware. Si se han producido errores en componentes de hardware específicos, habrá otros errores. El fallo se borrará cuando se pueda acceder al servicio de bloqueo o cuando se haya retirado el servicio.</block>
   <block id="efe7c0d4ed04341756689674a3fb46c4" category="list-text">*BmcSelfTestFailed*</block>
   <block id="e14ad5a8fd8d67543e771552b5287d65" category="paragraph">La controladora de gestión de placa base (BMC) no pudo realizar una autoprueba.</block>
   <block id="f13985a4689ae985836f2d3e56cd1a5f" category="paragraph">Comuníquese con el soporte de NetApp para obtener ayuda.</block>
@@ -11381,14 +11379,10 @@
   <block id="550957ff4e127baf9356e53acd6bec29" category="paragraph">El clúster no se configura para habilitar la seguridad de la unidad (cifrado en reposo), pero al menos una unidad tiene la seguridad de la unidad habilitada, lo cual significa que se deshabilita la seguridad de la unidad en esas unidades. Este fallo se registra con la gravedad "'Advertencia'".</block>
   <block id="9b7fe003823e01b6d191cd130cac6e23" category="paragraph">Para resolver esta falla, compruebe los detalles de la falla por el motivo por el que no se pudo deshabilitar la seguridad de la unidad. Los posibles motivos son:</block>
   <block id="87c8214c4d624147becc5521d4175136" category="list-text">No se pudo adquirir la clave de cifrado, investigue el problema de acceso a la clave o al servidor de claves externo.</block>
-  <block id="17d5d626f718f91ee043b656973c4202" category="list-text">Se produjo un error en la operación de desactivación de la unidad, determine si es posible que se haya adquirido una clave incorrecta. Si ninguno de estos son el motivo del fallo, es posible que sea necesario sustituir la unidad.</block>
   <block id="c7dbd3edb899d383f271fbaddff857c9" category="paragraph">Es posible intentar recuperar una unidad que no deshabilita la seguridad correctamente incluso cuando se proporciona la clave de autenticación correcta. Para realizar esta operación, quite las unidades del sistema moverlas a Available, ejecute un borrado seguro en la unidad y vuelva a moverlas a Active.</block>
   <block id="5f195070878aa77d5ab08b4ac4a54f3d" category="list-text">*DesconecttedClusterPair*</block>
-  <block id="42344d5a7661ee02bc81824149e682ec" category="paragraph">Una pareja de clústeres está desconectada o configurada incorrectamente. Compruebe la conectividad de red entre los clústeres.</block>
   <block id="3fd928a4db83d2fce8a6a22ae18c96e5" category="list-text">*DisconnectedRemoteNode*</block>
-  <block id="4df25837c8cec48ce5932444744985b2" category="paragraph">Un nodo remoto está desconectado o configurado incorrectamente. Compruebe la conectividad de red entre los nodos.</block>
   <block id="c0ab26c4daa61064202eea521001fd78" category="list-text">*DesconectadoSnapMirrorEndpoint*</block>
-  <block id="49304f2e992199a7f758572f901ebd72" category="paragraph">Un extremo de SnapMirror remoto está desconectado o configurado incorrectamente. Compruebe la conectividad de red entre el clúster y el SnapMirrorEndpoint remoto.</block>
   <block id="306920e20dd0fe16e804aba58ddd2916" category="list-text">*Disponible*</block>
   <block id="ae53472bfa7653cba79cb2a0c97df1b7" category="paragraph">Hay una o más unidades disponibles en el clúster. En general, todos los clústeres deben tener todas las unidades añadidas, y ninguna debe estar en estado disponible. Si esta falla aparece de forma inesperada, comuníquese con el soporte de NetApp.</block>
   <block id="931adb816c53335ac4fa33d4806e546b" category="paragraph">Para resolver esta falla, añada las unidades disponibles al clúster de almacenamiento.</block>
@@ -11399,19 +11393,15 @@
   <block id="fb3e817b0c8795e02aefa4556e7780dc" category="list-text">Falta la unidad.</block>
   <block id="1bbb54812222b3924c6bf4c604fa345c" category="list-text">No se puede acceder al servicio maestro del nodo (todas las unidades del nodo se consideran ausentes o con errores).</block>
   <block id="357055579aee5a54ad7a5eeeaff622af" category="list-text">La unidad está bloqueada y no puede adquirirse la clave de autenticación de la unidad.</block>
-  <block id="3d00feb87354cc29eeca71cb7c6337cb" category="list-text">La unidad se bloqueó y la operación de desbloqueo falla. Para resolver este problema:</block>
   <block id="d573f30ca912851cb2b018b5e162b81e" category="list-text">Compruebe la conectividad de red del nodo.</block>
   <block id="eb060d511b605e93f2a2a260b6dbc752" category="list-text">Sustituya la unidad.</block>
   <block id="c6a23c02f7b414f5c0f52e9a7a75617a" category="list-text">Asegúrese de que la clave de autenticación esté disponible.</block>
   <block id="e9d2d415045856f2ca7f232b17779252" category="list-text">*HealthdriveFault*</block>
   <block id="ed77497765047a5cf8d5a44d362b2e87" category="paragraph">Se produjo un error en la comprobación DEL estado INTELIGENTE de una unidad y, como resultado, se reducen las funciones de la unidad. Existe un nivel de gravedad crítico para esta falla:</block>
-  <block id="cf6c9b1c70a2c3988584cd35ab6553cf" category="list-text">Unidad con serie: &lt;serial number&gt; en ranura: &lt;node slot&gt; &lt;drive slot&gt; no superó la comprobación de estado general INTELIGENTE. Para resolver esta falla, reemplace la unidad.</block>
   <block id="56b8d37bfe2dd64bbdf23e1e3f2f7ea7" category="list-text">*DriveWeFault*</block>
   <block id="e675bb0d238256c785eec015e9bb8114" category="paragraph">La vida útil restante de una unidad cayó por debajo del umbral permitido, pero la unidad sigue funcionando.existen dos niveles de gravedad posibles para este fallo: Crucial y Advertencia:</block>
   <block id="450f3e44340f787c8a2402d47b9d8839" category="list-text">Unidad con serie: &lt;serial number&gt; en ranura: &lt;node slot&gt; &lt;drive slot&gt; tiene niveles de desgaste críticos.</block>
-  <block id="7c9f14461aa7585ef3cbd85404b200f3" category="list-text">Unidad con serie: &lt;serial number&gt; en ranura: &lt;node slot&gt; &lt;drive slot&gt; tiene bajas reservas de desgaste. Para resolver esta falla, reemplace la unidad cuanto antes.</block>
   <block id="6bb4a8aa55442d93640dd64e3af9591b" category="list-text">*DuplicateClusterMasterCandidates*</block>
-  <block id="02b81dbf521552655d4a2cd6aa0b1afb" category="paragraph">Se detectó más de un candidato maestro de clúster de almacenamiento. Comuníquese con el soporte de NetApp para obtener ayuda.</block>
   <block id="3f881480536a97ff08a0d4e8479d95f8" category="list-text">*EnableDriveSecurityFailed*</block>
   <block id="6fade1bd2a365206b6a213e2b5b00c62" category="paragraph">El clúster se configura para requerir seguridad de unidades (cifrado en reposo), pero la seguridad de unidades no se pudo habilitar en al menos una unidad. Este fallo se registra con la gravedad "'Advertencia'".</block>
   <block id="8019ecfd9e8dbe87d5f5d4dc8e47f11d" category="paragraph">Para resolver esta falla, compruebe los detalles de la falla por el motivo por el que no se pudo habilitar la seguridad de la unidad. Los posibles motivos son:</block>
@@ -11421,7 +11411,6 @@
   <block id="3b3e099ccd971f57b43b46533613607d" category="paragraph">Se perdió la alimentación de energía o la conectividad de red en uno o varios de los nodos del conjunto.</block>
   <block id="56c3dd0e50c6cf4993350d6aeac7f9bd" category="paragraph">Para resolver esta falla, restaure la alimentación o la conectividad de red.</block>
   <block id="9a7ee3317b3f58ab912aa398126464fc" category="list-text">*excepción*</block>
-  <block id="edb1590e58bd9eec8435f60fcb5260ad" category="paragraph">Una falla que no es de rutina. Estas fallas no se borran automáticamente de la cola de fallas. Comuníquese con el soporte de NetApp para obtener ayuda.</block>
   <block id="1252af204b6a81b333395f05ae66d195" category="list-text">*FailedSpaceTooFull*</block>
   <block id="2fd17e6f1ee2875e5116bdddb35a4bdb" category="paragraph">Un servicio de bloques no responde a las solicitudes de escritura de datos. Esto provoca que el servicio de segmentos se quede sin espacio para almacenar escrituras fallidas.</block>
   <block id="7d5092acb3ccf2843e39faff0e6f93c8" category="paragraph">Para resolver esto, restaure la funcionalidad de servicios de bloques de modo que las escrituras puedan continuar normalmente y que el espacio con fallas se vacíe en el servicio de segmentos.</block>
@@ -11429,30 +11418,24 @@
   <block id="f027e93cb191c3a34b63d2380336aa2f" category="paragraph">Un sensor de ventilador presenta una falla o está ausente.</block>
   <block id="7820c1d9ad4697a94c323676b62aef9c" category="paragraph">Para resolver esta falla, reemplace cualquier hardware con errores.</block>
   <block id="d46186bf1074b548dc7e656292fe9d79" category="list-text">*FiberChannelAccessDegraded*</block>
-  <block id="df103158c18b8fbdbb3a080a5551cd33" category="paragraph">Un nodo Fibre Channel no responde a otros nodos en el clúster de almacenamiento a través de su dirección IP de almacenamiento durante un período. En este estado, se considera que el nodo no responde y se genera una falla en el clúster. Compruebe la conectividad de red.</block>
   <block id="010012bcf587a096a5299b7b1a55e19e" category="list-text">*FiberChannelAccessUnavailable*</block>
-  <block id="350260c827d22bf266542d0329507824" category="paragraph">Ninguno de los nodos Fibre Channel responde. Se muestran los ID de los nodos. Compruebe la conectividad de red.</block>
   <block id="9a239bb37b76456edd6beae3f86996bf" category="list-text">*FiberChannelActiveIxL*</block>
   <block id="7b1e90f542ce632a3d53bd8584b6d818" category="paragraph">El número de Nexus IXL se acerca al límite admitido de 8000 sesiones activas por nodo Fibre Channel.</block>
   <block id="afde178f3cdc76e86b358a735370a4ee" category="list-text">El límite de mejores prácticas es de 5500.</block>
   <block id="2a89b8bd6f61acaa29e36c53507cdcd9" category="list-text">El límite de advertencia es 7500.</block>
-  <block id="6c56e1741b1b70da8687046bccdd9219" category="list-text">El límite máximo (no forzado) es 8192. Para resolver esta falla, reduzca el número de Nexus IXL por debajo del límite de mejores prácticas de 5500.</block>
   <block id="bb8e93e925fd43a4aea012f3ee50c111" category="list-text">*FiberChannelConfig*</block>
   <block id="6894d61b116b1aed9a5f537bbf47060f" category="paragraph">Esta falla del clúster indica una de las siguientes condiciones:</block>
   <block id="eea8c17dfc94cc47441f5d76cd656589" category="list-text">Hay un puerto de Fibre Channel no esperado en una ranura PCI.</block>
   <block id="77f0a06c22e15fd19ec507cc798e4687" category="list-text">Hay un modelo de adaptador de bus de host de Fibre Channel no esperado.</block>
   <block id="9081496d4343ff2942d3a7ace8927753" category="list-text">Hay un problema con el firmware de un adaptador de bus de host de Fibre Channel.</block>
   <block id="9b6b174ad1439ca86267072c96c6a708" category="list-text">Un puerto de Fibre Channel no está en línea.</block>
-  <block id="284b15d95b9022c777da88ba199d8d99" category="list-text">Hay un problema persistente en la configuración de traspaso de Fibre Channel. Comuníquese con el soporte de NetApp para obtener ayuda.</block>
   <block id="b9e3ca72a9c87848342ca9f2c269ea2d" category="list-text">*FiberChannelIOPS*</block>
   <block id="1920210ab5977cb3b8fbce0d869553e7" category="paragraph">El número total de IOPS está cerca del límite de IOPS para los nodos Fibre Channel del clúster. Los límites son:</block>
   <block id="30df86760d85d6e2bce14a346d935d23" category="list-text">FC0025: Límite de 450 000 IOPS con un tamaño de bloque de 4 KB por nodo Fibre Channel.</block>
-  <block id="736f0c444dc6d16da36825884a13b439" category="list-text">FCN001: Límite de 625K OPS a un tamaño de bloque de 4K por nodo Fibre Channel. Para resolver esta falla, equilibre la carga en todos los nodos Fibre Channel disponibles.</block>
   <block id="6675d019f3da60337f04e5cbade63637" category="list-text">*FiberChannelStaticIxL*</block>
   <block id="fcebb97bf64928933388bc235f02631d" category="paragraph">El número de Nexus IXL se acerca al límite admitido de 16000 sesiones estáticas por nodo Fibre Channel.</block>
   <block id="d85f1b7e325152ab8b9dc4987156513c" category="list-text">El límite de mejores prácticas es de 11000.</block>
   <block id="ecba663b07684c482e30930dbc2c5447" category="list-text">El límite de advertencia es 15000.</block>
-  <block id="be7907804b39f6bb8eb8f693b3948133" category="list-text">El límite máximo (obligatorio) es 16384. Para resolver esta falla, reduzca el número de Nexus IXL por debajo del límite de mejores prácticas de 11000.</block>
   <block id="1732cf9a398a21acc054d31275c3e4bb" category="list-text">*FileSystemCapacidadLow*</block>
   <block id="813d286021d5006aabfe635f27b246a1" category="paragraph">No hay espacio suficiente en uno de los sistemas de archivos.</block>
   <block id="fe98c55781fece742fe24f76102b689e" category="paragraph">Para resolver esta falla, añada más capacidad al sistema de archivos.</block>
@@ -11471,7 +11454,6 @@
   <block id="71af532c4c9766361e01036327838cdd" category="list-text">El tamaño de unidad para este tipo de nodo es incorrecto.</block>
   <block id="f37083c72cc95f714c6dcccbf50fbae6" category="list-text">Se detectó una unidad no compatible. Un posible motivo es que la versión de elemento instalada no reconoce esta unidad. Recomienda actualizar el software Element en este nodo.</block>
   <block id="7adda67a2bab68e6354d45fbda56172d" category="list-text">Hay un error de coincidencia en el firmware de la unidad.</block>
-  <block id="b346b0ec45c209c42645dd9f78da6721" category="list-text">El estado de capacidad de cifrado de la unidad no coincide con el nodo. Comuníquese con el soporte de NetApp para obtener ayuda.</block>
   <block id="f333ac88b43f31babae53274c15bc06a" category="list-text">*IdPCertificateExpiración*</block>
   <block id="a17d48e8302e765f05d40934bd23fb08" category="paragraph">El certificado SSL del proveedor de servicios del clúster para su uso con un proveedor de identidades (IDP) de terceros está a punto de expirar o ya ha caducado. Este fallo utiliza las siguientes gravedades en función de la urgencia:</block>
   <block id="76664c0be6648ca07148b71896d0b43f" category="paragraph">El certificado caduca dentro de los 30 días.</block>
@@ -11482,7 +11464,6 @@
   <block id="b475deeed44bd779162bd430e996d375" category="paragraph">Los modos de enlace en el dispositivo de VLAN no están presentes. Esta falla muestra el modo de enlace esperado y el modo de enlace actualmente en uso.</block>
   <block id="fda27fd12d2000d1a0b9936573376fa0" category="list-text">* InconstentMtus*</block>
   <block id="9c1485d86c325377a29a8d89037f06b2" category="list-text">Bond1G mismatch: Se detectaron varias MTU inconsistentes en interfaces Bond1G.</block>
-  <block id="b58eb7f90dba2f54452894923240eadb" category="list-text">Bond10G mismatch: Se detectaron varias MTU inconsistentes en interfaces Bond10G. Esta falla muestra los nodos en cuestión junto con el valor de MTU asociado.</block>
   <block id="c11e78a17f64007d25b6de5ae396d1d4" category="list-text">*InconstentRoutingRules*</block>
   <block id="af06857975f05b4ba140f81c535ca3ca" category="paragraph">Las reglas de enrutamiento de esta interfaz son inconsistentes.</block>
   <block id="926a2c4cb3cf87fae9e13dfa3e2caa73" category="list-text">* InconstentSubnetMasks*</block>
@@ -11538,7 +11519,6 @@
   <block id="f0c41738998b4e7c8da03ee30be0e125" category="paragraph">La memoria del sistema se ha consumido por completo.</block>
   <block id="de54af49388227db08b3aed3c76f21b2" category="list-text">*MetadataClusterFull*</block>
   <block id="a6e65ad071757627d1787887e0f732ed" category="paragraph">No hay suficiente espacio libre de almacenamiento de metadatos para admitir la pérdida de un solo nodo. Consulte el método API GetClusterFullThreshold para obtener detalles sobre los niveles de ocupación de los clústeres. Esta falla del clúster indica una de las siguientes condiciones:</block>
-  <block id="348ab1889b814efd0359a5dfe10a8a81" category="list-text">Stage5CompletelyConsumed (crítico)1; no se permiten escrituras ni nuevas conexiones iSCSI. Se mantendrán las conexiones iSCSI actuales. Las escrituras fallarán hasta que se añada más capacidad al clúster. Purgue o elimine datos o añada más nodos. Para resolver esta falla, purgue o elimine volúmenes o añada otro nodo de almacenamiento al clúster de almacenamiento.</block>
   <block id="e71f12b026ae4fcf06c49eb9f0469a1f" category="list-text">*MtuCheckFailure*</block>
   <block id="ac9e3e7c4730a02619836ba5e86f7e87" category="paragraph">Un dispositivo de red no tiene configurado el tamaño de MTU correcto.</block>
   <block id="6b5c51f1e1330cd58c5c189b5c3cd67a" category="paragraph">Para resolver esta falla, asegúrese de que todas las interfaces de red y puertos del switch tengan configuradas tramas gigantes (MTU de hasta 9000 bytes de tamaño).</block>
@@ -11546,10 +11526,8 @@
   <block id="9f7d0d58efdf92487c79aa73770cf27a" category="list-text">No hay una interfaz esperada.</block>
   <block id="1034f427f692ffaeb3c342ef7af5a6d1" category="list-text">Hay una interfaz duplicada.</block>
   <block id="b8edcaaaa4084c689bfac36d5cb428a6" category="list-text">Una interfaz configurada está inactiva.</block>
-  <block id="d5e6f85254ff923ed2fdf9f9d1972674" category="list-text">Se requiere reiniciar la red. Comuníquese con el soporte de NetApp para obtener ayuda.</block>
   <block id="c8dfa7e973e5dfd88b07c9ea8f39d5c1" category="list-text">*NoAvailableVirtualNetworkIPAddresses*</block>
   <block id="5a1b0770161278deb085c70d18081459" category="paragraph">No hay direcciones de red virtual disponibles en el bloque de direcciones IP.</block>
-  <block id="7b3dc932f6f5617b82c2df4a26203725" category="list-text">VirtualNetworkID # TAG(###) no tiene direcciones IP de almacenamiento disponibles. No es posible agregar nodos adicionales al clúster. Para resolver esta falla, añada más direcciones IP al bloque de direcciones de red virtual.</block>
   <block id="2c351c3e6b16ecda4ee3c5b07bf92f86" category="list-text">*NodeHardwarFault (falla de interfaz de red &lt;name&gt; o el cable está desconectado)*</block>
   <block id="550b9a0d94cd045f1d5953d97983f335" category="paragraph">Una interfaz de red está desconectada o el cable está desenchufado.</block>
   <block id="6cc9733e0e3716a18c7fe043f52abced" category="paragraph">Para resolver esta falla, compruebe la conectividad de red de los nodos.</block>
@@ -11597,7 +11575,6 @@
   <block id="106147765d484e9d580a4ffb4aecd320" category="list-text">*PowerSupplyError*</block>
   <block id="1aada3eca1e3ebdad5bf568c00f6618a" category="list-text">No hay un suministro de alimentación.</block>
   <block id="e3843a30f99965f6bf0fe2f2727273d3" category="list-text">Se produjo un error de suministro de alimentación.</block>
-  <block id="9475afd968f0ca7555d0c65ee2d7153a" category="list-text">La entrada de un suministro de alimentación es nula o está fuera de rango. Para resolver esta falla, compruebe que se suministra alimentación redundante a todos los nodos. Comuníquese con el soporte de NetApp para obtener ayuda.</block>
   <block id="173645bdc5529260f13137fc1a0b972e" category="list-text">*AprovisionadoSpaceTooFull*</block>
   <block id="64c6b1920eb7741d6bfcc0679fbd5ad6" category="paragraph">La capacidad general aprovisionada del clúster está demasiado llena.</block>
   <block id="3412e2f46d96ab7c4a5565eaf7540202" category="paragraph">Para resolver esta falla, añada más espacio aprovisionado, o elimine y purgue los volúmenes.</block>
@@ -11623,7 +11600,6 @@
   <block id="b0537d36b3091b7e8e1d1a8f59a8f8eb" category="list-text">*SliceServiceUnhealthy*</block>
   <block id="abe34aeb4fb1207c0198415cbbaa59f2" category="paragraph">El sistema detectó que un servicio de segmentos está en estado incorrecto y lo decomisiona automáticamente.</block>
   <block id="37b556315ca9e4d0bf96bfbb72a90068" category="list-text">Gravedad = Advertencia: No se realiza ninguna acción. Este período de aviso caducará en 6 minutos.</block>
-  <block id="211bd79997a55288a61ce77e3f0294d5" category="list-text">Gravedad = error: El sistema decomisiona automáticamente los datos y vuelve a replicar los datos en otras unidades en buen estado. Compruebe si existen problemas de conectividad de red y errores de hardware. Si se han producido errores en componentes de hardware específicos, habrá otros errores. El fallo se borrará cuando se pueda acceder al servicio de cortes o cuando se haya retirado el servicio.</block>
   <block id="77a9bdbc36212768a8fa68cd2fa5b2df" category="list-text">*SshEnabled*</block>
   <block id="c0dcf8bdd514b88aa2f4e08c9146ee43" category="paragraph">El servicio SSH está habilitado en uno o más nodos del clúster de almacenamiento.</block>
   <block id="08859561c22bfd25c836ab28ea73e205" category="paragraph">Para resolver esta falla, deshabilite el servicio SSH en los nodos correspondientes o comuníquese con el soporte de NetApp para obtener ayuda.</block>
@@ -11639,7 +11615,6 @@
   <block id="c4db6be37f68c3d45398133d7edc70d0" category="paragraph">Para resolver esta falla, compruebe que el flujo de aire no esté obstruido cerca del clúster de almacenamiento. Si es necesario, comuníquese con el soporte de NetApp para obtener ayuda.</block>
   <block id="92018782133eb660d9128d1342172fb9" category="list-text">*actualización*</block>
   <block id="fd406b4623b781b31f258a0879276c93" category="paragraph">Hay una actualización en curso desde hace más de 24 horas.</block>
-  <block id="c20d3b325dabe9dc4b42e3e85097a989" category="paragraph">Para resolver esta falla, reanude la actualización o comuníquese con el soporte de NetApp para obtener ayuda.</block>
   <block id="ee6e3166109a6358fc272981bf9bd6cb" category="list-text">*UnresponveService*</block>
   <block id="5e4d14c3be61157b20827e4a7845df94" category="paragraph">Un servicio ha dejado de responder.</block>
   <block id="732cb524681f74d8b6ed83b31dd8fdfb" category="list-text">*VirtualNetworkConfig*</block>
@@ -11648,7 +11623,6 @@
   <block id="48766e2b79a5b9849011f867e2a4543b" category="list-text">Hay una máscara de red incorrecta.</block>
   <block id="9ade69268a715c1a417af433fedcd21e" category="list-text">Hay una dirección IP incorrecta.</block>
   <block id="0a2b48020b48f8fbcf311a98dace5d74" category="list-text">Una interfaz no está en funcionamiento.</block>
-  <block id="5109af461c73b502ce6b072e4cc0a0c9" category="list-text">Hay una interfaz superflua en un nodo. Comuníquese con el soporte de NetApp para obtener ayuda.</block>
   <block id="85a491c87fd77350bc3bd38a726fd168" category="list-text">*VolumesDegraded*</block>
   <block id="9451a3dfb762350c7cbcbe9ee518b8af" category="paragraph">Los volúmenes secundarios aún se están replicando y sincronizando. El mensaje se borra al finalizar la sincronización.</block>
   <block id="f18e735235d5a307ceb3e60d3161fa15" category="list-text">*VolumesOffline*</block>
@@ -12710,4 +12684,45 @@
   <block id="cf35d1bd4f63afd1c731729075f91d65" category="sidebar">ROL realizar backups de volúmenes a una copia de Snapshot de grupo</block>
   <block id="e9c9178d0dcc22e83ce4dafbccebece2" category="sidebar">Configurar dominios de protección personalizados</block>
   <block id="f3ef8562bc46b3fd5d64fc8a88bab6f9" category="sidebar">Instale los nodos H410S y H610S</block>
+  <block id="0e9854d5683c94e98eff290cc17a418d" category="list-text">Stage5CompletelyConsumed (crítico)1; no se permiten escrituras ni nuevas conexiones iSCSI. Se mantendrán las conexiones iSCSI actuales. Las escrituras fallarán hasta que se añada más capacidad al clúster.</block>
+  <block id="3db1b2b278c0d698957be3ed18d42de5" category="paragraph">Para resolver esta falla, purgue o elimine volúmenes o añada otro nodo de almacenamiento al clúster de almacenamiento.</block>
+  <block id="2ae0b813312f2044fb0000c93b743c18" category="list-text">Severidad = crítico: Hay servicios de bloque con errores en varios nodos mayores o iguales al número de replicación (2 para Double Helix). Los datos no están disponibles y la sincronización de bandejas no finalizará.</block>
+  <block id="5f0cbed0ef8a3bd7e904fa0b7d66df2a" category="paragraph">Compruebe si existen problemas de conectividad de red y errores de hardware. Si se han producido errores en componentes de hardware específicos, habrá otros errores. El fallo se borrará cuando se pueda acceder al servicio de bloqueo o cuando se haya retirado el servicio.</block>
+  <block id="c12520b146934cca9f0563beb6c4b386" category="list-text">Se produjo un error en la operación de desactivación de la unidad, determine si es posible que se haya adquirido una clave incorrecta.</block>
+  <block id="e8bd7f29873c064c3b0afe30143a9400" category="paragraph">Si ninguno de estos son el motivo del fallo, es posible que sea necesario sustituir la unidad.</block>
+  <block id="ca505a259b750fe5a33a46d3a0b1380e" category="paragraph">Una pareja de clústeres está desconectada o configurada incorrectamente.</block>
+  <block id="0e5226fbc6080c457c2049fae2c59580" category="paragraph">Compruebe la conectividad de red entre los clústeres.</block>
+  <block id="19fc4b6eefc66be47a1245164a1e0a30" category="paragraph">Un nodo remoto está desconectado o configurado incorrectamente.</block>
+  <block id="bda8d7e202992031643b7f0dd34f95b6" category="paragraph">Compruebe la conectividad de red entre los nodos.</block>
+  <block id="d295ddb65575ec2f7c53600c865abb3f" category="paragraph">Un extremo de SnapMirror remoto está desconectado o configurado incorrectamente.</block>
+  <block id="20d0ab0df11b1d6b1906d3ba602b7a60" category="paragraph">Compruebe la conectividad de red entre el clúster y el SnapMirrorEndpoint remoto.</block>
+  <block id="5b0e7d9573ad0e308cbbcaa692388ffa" category="list-text">La unidad se bloqueó y la operación de desbloqueo falla.</block>
+  <block id="4d76376d1fdfa802843702a2b8cfb46f" category="paragraph">Para resolver este problema:</block>
+  <block id="6b6ada126074585acbda3e3e706375bf" category="list-text">Unidad con serie: &lt;serial number&gt; en ranura: &lt;node slot&gt; &lt;drive slot&gt; no superó la comprobación de estado general INTELIGENTE.</block>
+  <block id="58b8e7725ad2228baeb985d92f7b7d73" category="paragraph">Para resolver esta falla, reemplace la unidad.</block>
+  <block id="bc85c300d6a6164fbbdb72d6f4ad2e6c" category="list-text">Unidad con serie: &lt;serial number&gt; en ranura: &lt;node slot&gt; &lt;drive slot&gt; tiene bajas reservas de desgaste.</block>
+  <block id="8f0cd9a07c4f987dbf40bc8ac46d0623" category="paragraph">Para resolver esta falla, reemplace la unidad cuanto antes.</block>
+  <block id="6c6cd406a169110c850887e787bf23b5" category="paragraph">Se detectó más de un candidato maestro de clúster de almacenamiento.</block>
+  <block id="f876d0eee683cd78e680d10a4e6544ac" category="paragraph">Una falla que no es de rutina. Estas fallas no se borran automáticamente de la cola de fallas.</block>
+  <block id="c1dbe321100df10efa6ed1cb882091dc" category="paragraph">Un nodo Fibre Channel no responde a otros nodos en el clúster de almacenamiento a través de su dirección IP de almacenamiento durante un período. En este estado, se considera que el nodo no responde y se genera una falla en el clúster.</block>
+  <block id="92f4ebeef8956a175af4d3e1ec7b1c15" category="paragraph">Compruebe la conectividad de red.</block>
+  <block id="bf67c87d37b9233d02e142302836fd57" category="paragraph">Ninguno de los nodos Fibre Channel responde. Se muestran los ID de los nodos.</block>
+  <block id="87cec377fddbc2b343c523b1f948a6e2" category="list-text">El límite máximo (no forzado) es 8192.</block>
+  <block id="7d8bc88f1f8ee937dacd85baa429de19" category="paragraph">Para resolver esta falla, reduzca el número de Nexus IXL por debajo del límite de mejores prácticas de 5500.</block>
+  <block id="1a8b25bc838c0110139358395735d6f5" category="list-text">Hay un problema persistente en la configuración de traspaso de Fibre Channel.</block>
+  <block id="0601c36d5a717978b7c215c94c397752" category="list-text">FCN001: Límite de 625K OPS a un tamaño de bloque de 4K por nodo Fibre Channel.</block>
+  <block id="0bcb81681e0f1dd4a80519a70edf9f0e" category="paragraph">Para resolver esta falla, equilibre la carga en todos los nodos Fibre Channel disponibles.</block>
+  <block id="0164a04bfac1ebbda38a2e22844ed405" category="list-text">El límite máximo (obligatorio) es 16384.</block>
+  <block id="2d89e20951d3587ba7465143c06aaed8" category="paragraph">Para resolver esta falla, reduzca el número de Nexus IXL por debajo del límite de mejores prácticas de 11000.</block>
+  <block id="84235cc0ee8b4a1704e15c4682efed21" category="list-text">El estado de capacidad de cifrado de la unidad no coincide con el nodo.</block>
+  <block id="b9c6a0b1df2e02b3cef9f3c2de4ae589" category="list-text">Bond10G mismatch: Se detectaron varias MTU inconsistentes en interfaces Bond10G.</block>
+  <block id="59634c985623b38ef29cbc5c41cdcd71" category="paragraph">Esta falla muestra los nodos en cuestión junto con el valor de MTU asociado.</block>
+  <block id="cb5b46f0ba19f5a116bf29e63d30a1cc" category="list-text">Stage5CompletelyConsumed (crítico)1; no se permiten escrituras ni nuevas conexiones iSCSI. Se mantendrán las conexiones iSCSI actuales. Las escrituras fallarán hasta que se añada más capacidad al clúster. Purgue o elimine datos o añada más nodos.</block>
+  <block id="e475633cda3cbb184cee43276947ca84" category="list-text">Se requiere reiniciar la red.</block>
+  <block id="4eda4adc3d0ab81d7babf172a3dff251" category="list-text">VirtualNetworkID # TAG(\###) no tiene direcciones IP de almacenamiento disponibles. No es posible agregar nodos adicionales al clúster.</block>
+  <block id="a23d1fa9eb45a4686b769b2b24c1ad79" category="list-text">La entrada de un suministro de alimentación es nula o está fuera de rango.</block>
+  <block id="9fe5420d18a5c8643739c1442185b688" category="paragraph">Para resolver esta falla, compruebe que se suministra alimentación redundante a todos los nodos. Comuníquese con el soporte de NetApp para obtener ayuda.</block>
+  <block id="2f2028a01cc26368c3f4daa01753e427" category="paragraph">Compruebe si existen problemas de conectividad de red y errores de hardware. Si se han producido errores en componentes de hardware específicos, habrá otros errores. El fallo se borrará cuando se pueda acceder al servicio de cortes o cuando se haya retirado el servicio.</block>
+  <block id="19ea2f91b3ae961be9e609088755c628" category="paragraph">Para resolver esta falla, reanude la actualización o comuníquese con el soporte de NetApp para obtener ayuda.</block>
+  <block id="9672f91e71f82d57d55bef9837c3723c" category="list-text">Hay una interfaz superflua en un nodo.</block>
 </blocks>

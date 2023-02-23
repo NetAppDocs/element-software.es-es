@@ -79,11 +79,17 @@
 
   <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/es-es/element-software/js/na-search.js'></script><script src='/es-es/element-software/js/na-pagenav.js'></script><script src='/es-es/element-software/js/na-utility.js'></script>
+ <!--  
+  <link rel='stylesheet' href='/es-es/element-software/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/es-es/element-software/css/prism-netapp.css' type='text/css'>
+ -->
+
+  <!-- <script src='/es-es/element-software/js/na-utility.js'></script> -->
   <script src='/es-es/element-software/js/clouddocs.js'></script>
   <script src='/es-es/element-software/js/jquery.navgoco.min.js'></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src='/es-es/element-software/js/toc.js'></script>
-  <script src='/es-es/element-software/js/customscripts.js'></script><script>
+  <!-- <script src='/es-es/element-software/js/toc.js'></script> -->
+  <!-- <script src='/es-es/element-software/js/customscripts.js'></script> --><script>
       $(document).ready(function() {
           
           var collapseOnInit = true;
@@ -148,7 +154,7 @@
   <script src='/es-es/element-software/js/FileSaver.min.js'></script>
   <script src='/es-es/element-software/js/jszip-utils.min.js'></script>
   <script src='/es-es/element-software/js/jszip.min.js'></script>
-  <script src='/es-es/element-software/js/pdf-ux.js'></script>
+  <!-- <script src='/es-es/element-software/js/pdf-ux.js'></script> -->
 </head>
 
 
@@ -221,7 +227,7 @@
           <span class="n-property-bar__menu-toggle-text">Menu</span>
           <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
             <title>bars</title>
-            <use xlink:href="/es-es/element-software/common/svg/sprite.svg#bars"></use>
+            <use xlink:href="/es-es/element-software/images/sprite.svg#bars"></use>
           </svg>
         </a>
       </div>
@@ -230,11 +236,11 @@
           <div class="n-property-bar__logo">
             <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
               <title>netapp-mark</title>
-              <use xlink:href="/es-es/element-software/common/svg/sprite.svg#netapp-mark"></use>
+              <use xlink:href="/es-es/element-software/images/sprite.svg#netapp-mark"></use>
             </svg>
             <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
               <title>netapp-logo</title>
-              <use xlink:href="/es-es/element-software/common/svg/sprite.svg#netapp-logo"></use>
+              <use xlink:href="/es-es/element-software/images/sprite.svg#netapp-logo"></use>
             </svg>
           </div>
         </a>
@@ -260,7 +266,7 @@
           <button class="n-property-bar__search-toggle-button" type="button">
             <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
               <title>search</title>
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/es-es/element-software/common/svg/sprite.svg#search"></use>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/es-es/element-software/images/sprite.svg#search"></use>
             </svg>
           </button>
         </div>
@@ -274,7 +280,7 @@
       <span class="lang-name">Español</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/es-es/element-software/common/svg/sprite.svg#globe"></use>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/es-es/element-software/images/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
@@ -9737,7 +9743,7 @@
     <div class="ie-nmt-disclaimer-container">
       <div class="ie-nmt-disclaimer-icon">
         <svg class="luci-icon" aria-hidden="true">
-          <use xlink:href="/es-es/element-software/common/svg/sprite.svg#circle-info">
+          <use xlink:href="/es-es/element-software/images/sprite.svg#circle-info">
         </svg>
       </div>
       <div class="ie-nmt-disclaimer-content">
@@ -9754,7 +9760,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-02-20 18:14:12 +0000">02/20/2023</time>
+    <time datetime="2023-02-23 20:08:17 +0000">02/23/2023</time>
     
   
 
@@ -9804,9 +9810,12 @@
 <p>Stage4Critical (error): No hay espacio suficiente para recuperar el sistema de un fallo de 1 nodo. No se permite la creación de volúmenes, snapshots y clones.</p>
 </li>
 <li>
-<p>Stage5CompletelyConsumed (crítico)1; no se permiten escrituras ni nuevas conexiones iSCSI. Se mantendrán las conexiones iSCSI actuales. Las escrituras fallarán hasta que se añada más capacidad al clúster. Para resolver esta falla, purgue o elimine volúmenes o añada otro nodo de almacenamiento al clúster de almacenamiento.</p>
+<p>Stage5CompletelyConsumed (crítico)1; no se permiten escrituras ni nuevas conexiones iSCSI. Se mantendrán las conexiones iSCSI actuales. Las escrituras fallarán hasta que se añada más capacidad al clúster.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Para resolver esta falla, purgue o elimine volúmenes o añada otro nodo de almacenamiento al clúster de almacenamiento.</p>
 </div>
 </li>
 <li>
@@ -9880,9 +9889,12 @@
 <p>Gravedad = error: El sistema decomisiona automáticamente los datos y vuelve a replicar los datos en otras unidades en buen estado.</p>
 </li>
 <li>
-<p>Severidad = crítico: Hay servicios de bloque con errores en varios nodos mayores o iguales al número de replicación (2 para Double Helix). Los datos no están disponibles y la sincronización de bandejas no finalizará. Compruebe si existen problemas de conectividad de red y errores de hardware. Si se han producido errores en componentes de hardware específicos, habrá otros errores. El fallo se borrará cuando se pueda acceder al servicio de bloqueo o cuando se haya retirado el servicio.</p>
+<p>Severidad = crítico: Hay servicios de bloque con errores en varios nodos mayores o iguales al número de replicación (2 para Double Helix). Los datos no están disponibles y la sincronización de bandejas no finalizará.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Compruebe si existen problemas de conectividad de red y errores de hardware. Si se han producido errores en componentes de hardware específicos, habrá otros errores. El fallo se borrará cuando se pueda acceder al servicio de bloqueo o cuando se haya retirado el servicio.</p>
 </div>
 </li>
 <li>
@@ -9956,7 +9968,10 @@
 <p>No se pudo adquirir la clave de cifrado, investigue el problema de acceso a la clave o al servidor de claves externo.</p>
 </li>
 <li>
-<p>Se produjo un error en la operación de desactivación de la unidad, determine si es posible que se haya adquirido una clave incorrecta. Si ninguno de estos son el motivo del fallo, es posible que sea necesario sustituir la unidad.</p>
+<p>Se produjo un error en la operación de desactivación de la unidad, determine si es posible que se haya adquirido una clave incorrecta.</p>
+<div class="paragraph">
+<p>Si ninguno de estos son el motivo del fallo, es posible que sea necesario sustituir la unidad.</p>
+</div>
 </li>
 </ul>
 </div>
@@ -9967,19 +9982,28 @@
 <li>
 <p><strong>DesconecttedClusterPair</strong></p>
 <div class="paragraph">
-<p>Una pareja de clústeres está desconectada o configurada incorrectamente. Compruebe la conectividad de red entre los clústeres.</p>
+<p>Una pareja de clústeres está desconectada o configurada incorrectamente.</p>
+</div>
+<div class="paragraph">
+<p>Compruebe la conectividad de red entre los clústeres.</p>
 </div>
 </li>
 <li>
 <p><strong>DisconnectedRemoteNode</strong></p>
 <div class="paragraph">
-<p>Un nodo remoto está desconectado o configurado incorrectamente. Compruebe la conectividad de red entre los nodos.</p>
+<p>Un nodo remoto está desconectado o configurado incorrectamente.</p>
+</div>
+<div class="paragraph">
+<p>Compruebe la conectividad de red entre los nodos.</p>
 </div>
 </li>
 <li>
 <p><strong>DesconectadoSnapMirrorEndpoint</strong></p>
 <div class="paragraph">
-<p>Un extremo de SnapMirror remoto está desconectado o configurado incorrectamente. Compruebe la conectividad de red entre el clúster y el SnapMirrorEndpoint remoto.</p>
+<p>Un extremo de SnapMirror remoto está desconectado o configurado incorrectamente.</p>
+</div>
+<div class="paragraph">
+<p>Compruebe la conectividad de red entre el clúster y el SnapMirrorEndpoint remoto.</p>
 </div>
 </li>
 <li>
@@ -10014,7 +10038,10 @@
 <p>La unidad está bloqueada y no puede adquirirse la clave de autenticación de la unidad.</p>
 </li>
 <li>
-<p>La unidad se bloqueó y la operación de desbloqueo falla. Para resolver este problema:</p>
+<p>La unidad se bloqueó y la operación de desbloqueo falla.</p>
+<div class="paragraph">
+<p>Para resolver este problema:</p>
+</div>
 </li>
 <li>
 <p>Compruebe la conectividad de red del nodo.</p>
@@ -10036,9 +10063,12 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Unidad con serie: &lt;serial number&gt; en ranura: &lt;node slot&gt; &lt;drive slot&gt; no superó la comprobación de estado general INTELIGENTE. Para resolver esta falla, reemplace la unidad.</p>
+<p>Unidad con serie: &lt;serial number&gt; en ranura: &lt;node slot&gt; &lt;drive slot&gt; no superó la comprobación de estado general INTELIGENTE.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Para resolver esta falla, reemplace la unidad.</p>
 </div>
 </li>
 <li>
@@ -10052,15 +10082,21 @@
 <p>Unidad con serie: &lt;serial number&gt; en ranura: &lt;node slot&gt; &lt;drive slot&gt; tiene niveles de desgaste críticos.</p>
 </li>
 <li>
-<p>Unidad con serie: &lt;serial number&gt; en ranura: &lt;node slot&gt; &lt;drive slot&gt; tiene bajas reservas de desgaste. Para resolver esta falla, reemplace la unidad cuanto antes.</p>
+<p>Unidad con serie: &lt;serial number&gt; en ranura: &lt;node slot&gt; &lt;drive slot&gt; tiene bajas reservas de desgaste.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Para resolver esta falla, reemplace la unidad cuanto antes.</p>
 </div>
 </li>
 <li>
 <p><strong>DuplicateClusterMasterCandidates</strong></p>
 <div class="paragraph">
-<p>Se detectó más de un candidato maestro de clúster de almacenamiento. Comuníquese con el soporte de NetApp para obtener ayuda.</p>
+<p>Se detectó más de un candidato maestro de clúster de almacenamiento.</p>
+</div>
+<div class="paragraph">
+<p>Comuníquese con el soporte de NetApp para obtener ayuda.</p>
 </div>
 </li>
 <li>
@@ -10097,7 +10133,10 @@
 <li>
 <p><strong>excepción</strong></p>
 <div class="paragraph">
-<p>Una falla que no es de rutina. Estas fallas no se borran automáticamente de la cola de fallas. Comuníquese con el soporte de NetApp para obtener ayuda.</p>
+<p>Una falla que no es de rutina. Estas fallas no se borran automáticamente de la cola de fallas.</p>
+</div>
+<div class="paragraph">
+<p>Comuníquese con el soporte de NetApp para obtener ayuda.</p>
 </div>
 </li>
 <li>
@@ -10121,13 +10160,19 @@
 <li>
 <p><strong>FiberChannelAccessDegraded</strong></p>
 <div class="paragraph">
-<p>Un nodo Fibre Channel no responde a otros nodos en el clúster de almacenamiento a través de su dirección IP de almacenamiento durante un período. En este estado, se considera que el nodo no responde y se genera una falla en el clúster. Compruebe la conectividad de red.</p>
+<p>Un nodo Fibre Channel no responde a otros nodos en el clúster de almacenamiento a través de su dirección IP de almacenamiento durante un período. En este estado, se considera que el nodo no responde y se genera una falla en el clúster.</p>
+</div>
+<div class="paragraph">
+<p>Compruebe la conectividad de red.</p>
 </div>
 </li>
 <li>
 <p><strong>FiberChannelAccessUnavailable</strong></p>
 <div class="paragraph">
-<p>Ninguno de los nodos Fibre Channel responde. Se muestran los ID de los nodos. Compruebe la conectividad de red.</p>
+<p>Ninguno de los nodos Fibre Channel responde. Se muestran los ID de los nodos.</p>
+</div>
+<div class="paragraph">
+<p>Compruebe la conectividad de red.</p>
 </div>
 </li>
 <li>
@@ -10144,9 +10189,12 @@
 <p>El límite de advertencia es 7500.</p>
 </li>
 <li>
-<p>El límite máximo (no forzado) es 8192. Para resolver esta falla, reduzca el número de Nexus IXL por debajo del límite de mejores prácticas de 5500.</p>
+<p>El límite máximo (no forzado) es 8192.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Para resolver esta falla, reduzca el número de Nexus IXL por debajo del límite de mejores prácticas de 5500.</p>
 </div>
 </li>
 <li>
@@ -10169,9 +10217,12 @@
 <p>Un puerto de Fibre Channel no está en línea.</p>
 </li>
 <li>
-<p>Hay un problema persistente en la configuración de traspaso de Fibre Channel. Comuníquese con el soporte de NetApp para obtener ayuda.</p>
+<p>Hay un problema persistente en la configuración de traspaso de Fibre Channel.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Comuníquese con el soporte de NetApp para obtener ayuda.</p>
 </div>
 </li>
 <li>
@@ -10185,9 +10236,12 @@
 <p>FC0025: Límite de 450 000 IOPS con un tamaño de bloque de 4 KB por nodo Fibre Channel.</p>
 </li>
 <li>
-<p>FCN001: Límite de 625K OPS a un tamaño de bloque de 4K por nodo Fibre Channel. Para resolver esta falla, equilibre la carga en todos los nodos Fibre Channel disponibles.</p>
+<p>FCN001: Límite de 625K OPS a un tamaño de bloque de 4K por nodo Fibre Channel.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Para resolver esta falla, equilibre la carga en todos los nodos Fibre Channel disponibles.</p>
 </div>
 </li>
 <li>
@@ -10204,9 +10258,12 @@
 <p>El límite de advertencia es 15000.</p>
 </li>
 <li>
-<p>El límite máximo (obligatorio) es 16384. Para resolver esta falla, reduzca el número de Nexus IXL por debajo del límite de mejores prácticas de 11000.</p>
+<p>El límite máximo (obligatorio) es 16384.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Para resolver esta falla, reduzca el número de Nexus IXL por debajo del límite de mejores prácticas de 11000.</p>
 </div>
 </li>
 <li>
@@ -10274,9 +10331,12 @@
 <p>Hay un error de coincidencia en el firmware de la unidad.</p>
 </li>
 <li>
-<p>El estado de capacidad de cifrado de la unidad no coincide con el nodo. Comuníquese con el soporte de NetApp para obtener ayuda.</p>
+<p>El estado de capacidad de cifrado de la unidad no coincide con el nodo.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Comuníquese con el soporte de NetApp para obtener ayuda.</p>
 </div>
 </li>
 <li>
@@ -10341,9 +10401,12 @@
 <p>Bond1G mismatch: Se detectaron varias MTU inconsistentes en interfaces Bond1G.</p>
 </li>
 <li>
-<p>Bond10G mismatch: Se detectaron varias MTU inconsistentes en interfaces Bond10G. Esta falla muestra los nodos en cuestión junto con el valor de MTU asociado.</p>
+<p>Bond10G mismatch: Se detectaron varias MTU inconsistentes en interfaces Bond10G.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Esta falla muestra los nodos en cuestión junto con el valor de MTU asociado.</p>
 </div>
 </li>
 <li>
@@ -10632,9 +10695,12 @@ Consulte el encabezado <strong>Detalles</strong> del error para obtener informac
 <p>Stage4Critical (error): No hay espacio suficiente para recuperar el sistema de un fallo de 1 nodo. No se permite la creación de volúmenes, snapshots y clones.</p>
 </li>
 <li>
-<p>Stage5CompletelyConsumed (crítico)1; no se permiten escrituras ni nuevas conexiones iSCSI. Se mantendrán las conexiones iSCSI actuales. Las escrituras fallarán hasta que se añada más capacidad al clúster. Purgue o elimine datos o añada más nodos. Para resolver esta falla, purgue o elimine volúmenes o añada otro nodo de almacenamiento al clúster de almacenamiento.</p>
+<p>Stage5CompletelyConsumed (crítico)1; no se permiten escrituras ni nuevas conexiones iSCSI. Se mantendrán las conexiones iSCSI actuales. Las escrituras fallarán hasta que se añada más capacidad al clúster. Purgue o elimine datos o añada más nodos.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Para resolver esta falla, purgue o elimine volúmenes o añada otro nodo de almacenamiento al clúster de almacenamiento.</p>
 </div>
 </li>
 <li>
@@ -10663,9 +10729,12 @@ Consulte el encabezado <strong>Detalles</strong> del error para obtener informac
 <p>Una interfaz configurada está inactiva.</p>
 </li>
 <li>
-<p>Se requiere reiniciar la red. Comuníquese con el soporte de NetApp para obtener ayuda.</p>
+<p>Se requiere reiniciar la red.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Comuníquese con el soporte de NetApp para obtener ayuda.</p>
 </div>
 </li>
 <li>
@@ -10676,9 +10745,12 @@ Consulte el encabezado <strong>Detalles</strong> del error para obtener informac
 <div class="ulist">
 <ul>
 <li>
-<p>VirtualNetworkID # TAG(<mark>#</mark>) no tiene direcciones IP de almacenamiento disponibles. No es posible agregar nodos adicionales al clúster. Para resolver esta falla, añada más direcciones IP al bloque de direcciones de red virtual.</p>
+<p>VirtualNetworkID # TAG(###) no tiene direcciones IP de almacenamiento disponibles. No es posible agregar nodos adicionales al clúster.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Para resolver esta falla, añada más direcciones IP al bloque de direcciones de red virtual.</p>
 </div>
 </li>
 <li>
@@ -10888,9 +10960,12 @@ Consulte el encabezado <strong>Detalles</strong> del error para obtener informac
 <p>Se produjo un error de suministro de alimentación.</p>
 </li>
 <li>
-<p>La entrada de un suministro de alimentación es nula o está fuera de rango. Para resolver esta falla, compruebe que se suministra alimentación redundante a todos los nodos. Comuníquese con el soporte de NetApp para obtener ayuda.</p>
+<p>La entrada de un suministro de alimentación es nula o está fuera de rango.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Para resolver esta falla, compruebe que se suministra alimentación redundante a todos los nodos. Comuníquese con el soporte de NetApp para obtener ayuda.</p>
 </div>
 </li>
 <li>
@@ -10982,9 +11057,12 @@ Consulte el encabezado <strong>Detalles</strong> del error para obtener informac
 <p>Gravedad = Advertencia: No se realiza ninguna acción. Este período de aviso caducará en 6 minutos.</p>
 </li>
 <li>
-<p>Gravedad = error: El sistema decomisiona automáticamente los datos y vuelve a replicar los datos en otras unidades en buen estado. Compruebe si existen problemas de conectividad de red y errores de hardware. Si se han producido errores en componentes de hardware específicos, habrá otros errores. El fallo se borrará cuando se pueda acceder al servicio de cortes o cuando se haya retirado el servicio.</p>
+<p>Gravedad = error: El sistema decomisiona automáticamente los datos y vuelve a replicar los datos en otras unidades en buen estado.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Compruebe si existen problemas de conectividad de red y errores de hardware. Si se han producido errores en componentes de hardware específicos, habrá otros errores. El fallo se borrará cuando se pueda acceder al servicio de cortes o cuando se haya retirado el servicio.</p>
 </div>
 </li>
 <li>
@@ -11103,9 +11181,12 @@ Consulte el encabezado <strong>Detalles</strong> del error para obtener informac
 <p>Una interfaz no está en funcionamiento.</p>
 </li>
 <li>
-<p>Hay una interfaz superflua en un nodo. Comuníquese con el soporte de NetApp para obtener ayuda.</p>
+<p>Hay una interfaz superflua en un nodo.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Comuníquese con el soporte de NetApp para obtener ayuda.</p>
 </div>
 </li>
 <li>
@@ -11175,7 +11256,7 @@ Consulte el encabezado <strong>Detalles</strong> del error para obtener informac
                 <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
                   <title>blog@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/es-es/element-software/common/svg/sprite.svg#blog"></use>
+                    xlink:href="/es-es/element-software/images/sprite.svg#blog"></use>
                 </svg>
               </a>
             </li>
@@ -11186,7 +11267,7 @@ Consulte el encabezado <strong>Detalles</strong> del error para obtener informac
                 <svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
                   <title>community@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/es-es/element-software/common/svg/sprite.svg#comments"></use>
+                    xlink:href="/es-es/element-software/images/sprite.svg#comments"></use>
                 </svg>
               </a>
             </li>
@@ -11197,7 +11278,7 @@ Consulte el encabezado <strong>Detalles</strong> del error para obtener informac
                 <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
                   <title>twitter@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/es-es/element-software/common/svg/sprite.svg#twitter"></use>
+                    xlink:href="/es-es/element-software/images/sprite.svg#twitter"></use>
                 </svg>
               </a>
             </li>
@@ -11208,7 +11289,7 @@ Consulte el encabezado <strong>Detalles</strong> del error para obtener informac
                 <svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
                   <title>facebook@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/es-es/element-software/common/svg/sprite.svg#facebook"></use>
+                    xlink:href="/es-es/element-software/images/sprite.svg#facebook"></use>
                 </svg>
               </a>
             </li>
@@ -11219,7 +11300,7 @@ Consulte el encabezado <strong>Detalles</strong> del error para obtener informac
                 <svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
                   <title>linkedin@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/es-es/element-software/common/svg/sprite.svg#linkedin"></use>
+                    xlink:href="/es-es/element-software/images/sprite.svg#linkedin"></use>
                 </svg>
               </a>
             </li>
@@ -11230,7 +11311,7 @@ Consulte el encabezado <strong>Detalles</strong> del error para obtener informac
                 <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
                   <title>youtube@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/es-es/element-software/common/svg/sprite.svg#youtube"></use>
+                    xlink:href="/es-es/element-software/images/sprite.svg#youtube"></use>
                 </svg>
               </a>
             </li>
@@ -11241,7 +11322,7 @@ Consulte el encabezado <strong>Detalles</strong> del error para obtener informac
                 <svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
                   <title>slideshare@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/es-es/element-software/common/svg/sprite.svg#slideshare"></use>
+                    xlink:href="/es-es/element-software/images/sprite.svg#slideshare"></use>
                 </svg>
               </a>
             </li>
@@ -11265,7 +11346,6 @@ Consulte el encabezado <strong>Detalles</strong> del error para obtener informac
       cookieLaw.euCountry = "US";
       cookieLaw.invoke = function(){return false;}
     </script>
-    <script src='/es-es/element-software/js/www-ntap.js'></script>
     <script src='/es-es/element-software/js/tabbed-blocks.js'></script>
     <script src='/es-es/element-software/js/sidebar.js'></script>
   </body></html>

@@ -8842,7 +8842,6 @@
   <block id="4cafaba2174b734c409ee5766b4c90a8" category="paragraph">Para configurar el nodo una vez finalizado correctamente el proceso de RTFI, consulte<block ref="ad60dd2928135a9355e0d51cd38822f2" category="inline-link-rx"></block>. Una vez que un nodo finaliza correctamente el proceso RTFI, pasa al estado _Available_ (sin configurar) de forma predeterminada.</block>
   <block id="9bbce3f386ebd93c00f99ac698c4f85e" category="paragraph">Utilice el siguiente procedimiento para restaurar el software Element en su nodo SolidFire.</block>
   <block id="097f61b38015fce3acc737235b76aa70" category="inline-xref-macro">Opciones de implementación e instalación de RTFI</block>
-  <block id="98f034cb87c1c327b13fbbbb31bc622b" category="paragraph">Para obtener información sobre cómo crear una clave USB o utilizar el BMC para realizar el proceso RTFI, consulte <block ref="4761cf42d3167c91f942aaa5770bce7b" category="inline-xref-macro-rx"></block>.</block>
   <block id="e291c5603b49506d01779471f77ce7c8" category="paragraph">Compruebe que cumple los siguientes requisitos:</block>
   <block id="4a97b78efa5043e19cc08344b22fccb7" category="list-text">Tiene acceso a una consola para el nodo SolidFire.</block>
   <block id="8c84f98354c5ad685a8ff935ecdb2630" category="list-text">El nodo en el que está realizando el proceso RTFI se enciende y se conecta a una red.</block>
@@ -8875,9 +8874,6 @@
   <block id="6488398a09e5e3619c68849839032852" category="list-text">Linux: Tiene experiencia con sistemas Linux.</block>
   <block id="88a314dd47a5b577c9b424a096c7a9e8" category="list-text">Redes: Conoce bien la red del servidor y el almacenamiento en red, incluidas las direcciones IP, las máscaras de red y las puertas de enlace.</block>
   <block id="229a83df3c23d08a8495591aab99bf5b" category="paragraph">Despliegue e instale la imagen de la Organización Internacional de Normalización (ISO) de RTFI y realice el proceso RTFI:</block>
-  <block id="4761cf42d3167c91f942aaa5770bce7b" category="list-text"><block ref="4761cf42d3167c91f942aaa5770bce7b" category="inline-xref-macro-rx"></block></block>
-  <block id="8e03dc636d7913fabfabd316d5e54ac0" category="list-text"><block ref="8e03dc636d7913fabfabd316d5e54ac0" category="inline-xref-macro-rx"></block></block>
-  <block id="82deed01641c36ab7f885c50d27dcaea" category="list-text"><block ref="82deed01641c36ab7f885c50d27dcaea" category="inline-xref-macro-rx"></block></block>
   <block id="f2d0759d87444a140baf94c8f56dd5a3" category="paragraph">Si una unidad está defectuosa o si el nivel de deterioro de la unidad está por debajo de un umbral, debe reemplazarla. Las alarmas en la interfaz de usuario del software Element se notifican cuando una unidad se produjo un error o se va a producir un fallo. Es posible cambiar en caliente una unidad con error.</block>
   <block id="c90f88b09e4d6cdde7aae7013f8b2923" category="paragraph">Este procedimiento permite reemplazar unidades en nodos de almacenamiento H610S y H410S. Al quitar una unidad, esta se desconecta. Los datos en la unidad se extraen y se migran a otras unidades del clúster. La migración de datos a otras unidades activas del sistema puede demorar desde algunos minutos hasta una hora según el uso de la capacidad y las operaciones de I/o activas en el clúster. Debe seguir las siguientes prácticas recomendadas para gestionar las unidades al tiempo que las quita y las reemplaza:</block>
   <block id="44f9cec2f1a55d1d6436b9afd85faa6e" category="list-text">Mantenga la unidad en la bolsa ESD hasta que esté listo para instalarla.</block>
@@ -12725,4 +12721,8 @@
   <block id="2f2028a01cc26368c3f4daa01753e427" category="paragraph">Compruebe si existen problemas de conectividad de red y errores de hardware. Si se han producido errores en componentes de hardware específicos, habrá otros errores. El fallo se borrará cuando se pueda acceder al servicio de cortes o cuando se haya retirado el servicio.</block>
   <block id="19ea2f91b3ae961be9e609088755c628" category="paragraph">Para resolver esta falla, reanude la actualización o comuníquese con el soporte de NetApp para obtener ayuda.</block>
   <block id="9672f91e71f82d57d55bef9837c3723c" category="list-text">Hay una interfaz superflua en un nodo.</block>
+  <block id="4de84bc0dceded350b6aa7db34f7e00d" category="paragraph">Para obtener información sobre cómo crear una clave USB o utilizar el BMC para realizar el proceso RTFI, consulte <block ref="51de7a2a44178422229997edab051ac7" category="inline-xref-macro-rx"></block>.</block>
+  <block id="51de7a2a44178422229997edab051ac7" category="list-text"><block ref="51de7a2a44178422229997edab051ac7" category="inline-xref-macro-rx"></block></block>
+  <block id="8f047e2b521fd8a37be46c7a429ab25b" category="list-text"><block ref="8f047e2b521fd8a37be46c7a429ab25b" category="inline-xref-macro-rx"></block></block>
+  <block id="c2350b958761f326a00bd673fc30fdae" category="list-text"><block ref="c2350b958761f326a00bd673fc30fdae" category="inline-xref-macro-rx"></block></block>
 </blocks>

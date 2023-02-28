@@ -31,7 +31,7 @@ Para configurar el nodo una vez finalizado correctamente el proceso de RTFI, con
 
 Utilice el siguiente procedimiento para restaurar el software Element en su nodo SolidFire.
 
-Para obtener información sobre cómo crear una clave USB o utilizar el BMC para realizar el proceso RTFI, consulte xref:task_rtfi_deployment_and_install_options.html[Opciones de implementación e instalación de RTFI].
+Para obtener información sobre cómo crear una clave USB o utilizar el BMC para realizar el proceso RTFI, consulte xref:task_rtfi_deployment_and_install_options.adoc[Opciones de implementación e instalación de RTFI].
 
 .Antes de empezar
 Compruebe que cumple los siguientes requisitos:

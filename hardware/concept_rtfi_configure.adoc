@@ -26,9 +26,9 @@ WARNING: El proceso RTFI es destructivo para los datos y borra todos los datos y
 
 Despliegue e instale la imagen de la Organización Internacional de Normalización (ISO) de RTFI y realice el proceso RTFI:
 
-* xref:task_rtfi_deployment_and_install_options.html[Opciones de implementación e instalación de RTFI]
-* xref:task_rtfi_process.html[Realice el proceso RTFI]
-* xref:task_rtfi_options_menu.html[Menú de opciones de RTFI]
+* xref:task_rtfi_deployment_and_install_options.adoc[Opciones de implementación e instalación de RTFI]
+* xref:task_rtfi_process.adoc[Realice el proceso RTFI]
+* xref:task_rtfi_options_menu.adoc[Menú de opciones de RTFI]
 
 
 

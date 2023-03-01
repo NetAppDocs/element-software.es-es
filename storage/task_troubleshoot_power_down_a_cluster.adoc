@@ -11,12 +11,12 @@ summary: Si necesita desconectar un clúster completo, puede hacerlo después de
 
 
 [role="lead"]
-Si necesita desconectar un clúster completo, puede hacerlo después de haberse puesto en contacto con el servicio de soporte de NetApp y haber completado unos pasos preliminares.
+Realice el siguiente procedimiento para desconectar un clúster completo.
 
-Prepare el clúster para su apagado haciendo lo siguiente:
-
-* Detenga todas las operaciones de I/O.
-* Desconecte todas las sesiones de iSCSI.
+.Pasos
+. (Opcional) comuníquese con el soporte de NetApp para obtener ayuda en la realización de los pasos preliminares.
+. Verifique que todas las operaciones de I/o se hayan detenido.
+. Desconecte todas las sesiones de iSCSI:
 +
 .. Acceda a la dirección IP virtual de gestión (MVIP) en el clúster para abrir la interfaz de usuario de Element.
 .. Revise los nodos que aparecen en la lista Nodes.
@@ -24,3 +24,21 @@ Prepare el clúster para su apagado haciendo lo siguiente:
 
 
 
+
+[NOTE]
+====
+Cuando reinicia el clúster, debe seguir algunos pasos para verificar que todos los nodos entran en línea:
+
+. Compruebe que todas las gravedad crítica y. `volumesOffline` se resolvieron errores del clúster.
+. Espere de 10 a 15 minutos para que el clúster se asiente.
+. Empiece a poner los hosts a acceder a los datos.
+
+
+Si desea permitir más tiempo al encender los nodos y verificar que su estado sea después del mantenimiento, póngase en contacto con el soporte técnico para obtener ayuda con la demora de la sincronización de datos para evitar la sincronización innecesaria de bandejas.
+
+====
+
+
+== Obtenga más información
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/How_to_gracefully_shut_down_and_power_on_a_NetApp_Solidfire_HCI_storage_cluster["Cómo apagar y encender correctamente un clúster de almacenamiento SolidFire/HCI de NetApp"^]

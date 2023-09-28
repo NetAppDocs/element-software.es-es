@@ -55,7 +55,7 @@ No
  a| 
 EnableSoftwareEncryptionAtest
  a| 
-Habilite este parámetro para utilizar el cifrado basado en software en reposo. De forma predeterminada es TRUE en los clústeres SDS empresariales de SolidFire. De forma predeterminada es false en el resto de clústeres. Después de habilitar el cifrado de software en reposo, no se puede deshabilitar en el clúster.
+Habilite este parámetro para utilizar el cifrado basado en software en reposo. De forma predeterminada es FALSE en todos los clústeres. Después de habilitar el cifrado de software en reposo, no se puede deshabilitar en el clúster.
  a| 
 booleano
  a| 

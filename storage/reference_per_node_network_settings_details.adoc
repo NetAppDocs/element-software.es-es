@@ -15,9 +15,6 @@ Es posible cambiar la configuración de red del nodo de almacenamiento para dar 
 
 Puede ver la configuración de red para un nodo de almacenamiento en la página *Configuración de red* cuando inicia sesión en el nodo (https://<node[] IP>:442/hcc/node/network-settings). Puede seleccionar las opciones *Bond1G* (administración) o *Bond10G* (almacenamiento). En la lista siguiente se describe la configuración que se puede modificar cuando el estado de un nodo de almacenamiento es Available, Pending o Active:
 
-
-NOTE: Si ejecuta un clúster SDS empresarial de SolidFire, la mayoría de la configuración de red en la interfaz de usuario por nodo no se puede modificar después de la implementación del nodo.
-
 * *Método*
 +
 El método que se utiliza para configurar la interfaz. Métodos posibles:

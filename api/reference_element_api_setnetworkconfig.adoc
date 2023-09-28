@@ -14,9 +14,6 @@ summary: Puede utilizar el método SetNetworkConfig para establecer la configura
 Puede utilizar el `SetNetworkConfig` método para establecer la configuración de red para un nodo. Para mostrar la configuración de red actual de un nodo, ejecute el `GetNetworkConfig` Método API.
 
 
-NOTE: El SDS empresarial de SolidFire no admite este método. Si utiliza este método en un sistema SolidFire eSDS, el método devolverá un error.
-
-
 
 == Parámetro
 

@@ -19,7 +19,7 @@ La interfaz de software se creó sobre la API de Element.
 
 * link:task_post_deploy_access_the_element_software_user_interface.html["Acceda a la interfaz de usuario del software Element"]
 * link:task_post_deploy_configure_system_options.html["Configure las opciones del sistema SolidFire después de la implementación"]
-* link:concept_upgrade_storage_components.html["Actualice los componentes del sistema de almacenamiento"]
+* link:../upgrade/concept_element_upgrade_overview.html["Actualice los componentes del sistema de almacenamiento"]
 * link:task_intro_use_basic_options_in_the_element_software_ui.html["Use las opciones básicas en la interfaz de usuario del software Element"]
 * link:concept_system_manage_accounts_overview.html["Gestionar cuentas"]
 * link:concept_system_manage_system_management.html["Gestione su sistema"]

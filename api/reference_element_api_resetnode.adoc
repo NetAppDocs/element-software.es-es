@@ -14,9 +14,6 @@ summary: 'Puede utilizar el método ResetNode para restablecer un nodo a la conf
 Puede utilizar el `ResetNode` método para restablecer un nodo a la configuración de fábrica. Cuando llama a este método, se eliminan todos los datos, paquetes (actualizaciones de software, etc.), configuraciones y archivos de registro del nodo. Sin embargo, la configuración de red del nodo se conserva durante esta operación. Los nodos que participan en un clúster no se pueden restablecer a la configuración de fábrica.
 
 
-NOTE: El SDS empresarial de SolidFire no admite este método. Si utiliza este método en un sistema SolidFire eSDS, el método devolverá un error.
-
-
 
 == Parámetros
 

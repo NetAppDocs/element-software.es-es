@@ -15,9 +15,6 @@ Es posible habilitar el acceso de soporte para permitir temporalmente el acceso 
 
 Para modificar el acceso al soporte, debe tener privilegios de administrador de clúster.
 
-
-NOTE: Esta función no está disponible en los clústeres de SDS empresarial de SolidFire.
-
 . Haga clic en *Cluster* > *Settings*.
 . En la sección Habilitar/deshabilitar acceso de soporte, introduzca la duración (en horas) que desea permitir que el soporte tenga acceso.
 . Haga clic en *Activar acceso de soporte*.

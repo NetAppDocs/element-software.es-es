@@ -14,6 +14,9 @@ summary: Puede usar el método SetSSLCertificate para establecer un certificado 
 Puede utilizar el `SetSSLCertificate` Método para establecer un certificado SSL de usuario y una clave privada para los nodos de almacenamiento del clúster.
 
 
+NOTE: Después de usar la API, debe reiniciar el nodo de gestión.
+
+
 
 == Parámetros
 

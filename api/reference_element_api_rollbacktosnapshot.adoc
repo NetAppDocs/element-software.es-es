@@ -17,9 +17,13 @@ La nueva snapshot estará activa y se conservará la snapshot existente hasta qu
 
 *CLUSTER_LLENY*
 
+[NOTE]
+====
+* Puede crear copias de Snapshot si la ocupación del clúster se encuentra en la etapa 1, 2 o 3. No se pueden crear copias de Snapshot cuando la ocupación del clúster llegue a la etapa 4 o 5.
+* Es posible que se produzca un error en la reversión de un volumen a una copia de Snapshot cuando la sincronización de segmentos está en curso. Vuelva a intentarlo `RollbackToSnapshot` una vez finalizada la sincronización.
 
-NOTE: Puede crear copias de Snapshot si la ocupación del clúster se encuentra en la etapa 1, 2 o 3. No se pueden crear copias de Snapshot cuando la ocupación del clúster llegue a la etapa 4 o 5.
 
+====
 
 
 == Parámetros

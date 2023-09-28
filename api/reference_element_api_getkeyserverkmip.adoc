@@ -50,7 +50,7 @@ KmipKeyServer
  a| 
 Objeto que contiene detalles acerca del servidor de claves solicitado.
  a| 
-link:reference_element_api_keyserverkmip.md#["KeyServerKmip"]
+link:reference_element_api_keyserverkmip.html["KeyServerKmip"]
 
 |===
 

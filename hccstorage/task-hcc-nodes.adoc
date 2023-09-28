@@ -18,8 +18,6 @@ Puede ver los activos de almacenamiento en el sistema y determinar sus direccion
 
 Puede ver información de almacenamiento de los sistemas de varios nodos. Si link:../concepts/concept_solidfire_concepts_data_protection.html#custom_pd["dominios de protección personalizados"] se asignan, puede ver qué dominios de protección se asignan a nodos específicos.
 
-Para los nodos SDS de SolidFire Enterprise, puede supervisar el inventario en la pestaña Storage.
-
 .Pasos
 . Abra la dirección IP del nodo de gestión en un navegador web. Por ejemplo:
 +

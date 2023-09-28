@@ -31,7 +31,7 @@ Por ejemplo, para añadir un número de puerto personalizado, introduzca <host n
 . Seleccione *Use LDAPS Protocol*.
 . Introduzca la información necesaria en *Ajustes generales*.
 +
-link:reference_system_manage_ldap_details.md#["Detalles de LDAP"]
+link:concept_system_manage_manage_ldap.html#view_ldap_details["Detalles de LDAP"]
 
 +
 image::../media/element_new_ldap_servers.jpg[nuevos servidores ldap de element]
@@ -59,8 +59,10 @@ Ahora tiene un usuario con el valor de un grupo de Active Directory.
 
 Para probarlo, cierre sesión en la interfaz de usuario del elemento y vuelva a iniciarla como usuario en ese grupo.
 
-*Información relacionada*
 
-xref:task_system_manage_create_a_cluster_administrator_account.adoc[Cree una cuenta de administrador de clúster]
 
-xref:reference_system_manage_ldap_details.adoc[Detalles de LDAP]
+== Información relacionada
+
+* link:concept_system_manage_manage_cluster_administrator_users.html#create_cluster_admin_account["Cree una cuenta de administrador de clúster"]
+* link:concept_system_manage_manage_ldap.html#view_ldap_details["Detalles de LDAP"]
+

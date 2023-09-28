@@ -14,9 +14,6 @@ summary: 'Puede utilizar el método EnablebmcColdReset para habilitar una tarea 
 Puede utilizar el `EnableBmcColdReset` Método para habilitar una tarea en segundo plano que restablece periódicamente el controlador de administración de placa base (BMC) para todos los nodos del clúster.
 
 
-NOTE: El SDS empresarial de SolidFire no admite este método. Si utiliza este método en un sistema SolidFire eSDS, el método devolverá un error.
-
-
 
 == Parámetro
 

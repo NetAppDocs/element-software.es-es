@@ -34,7 +34,7 @@ ProtectionDomainLayout
  a| 
 Lista de nodos, cada uno con sus dominios de protección asociados.
  a| 
-Lista JSON de link:reference_element_api_nodeprotectiondomains.md#GUID-3750B3B8-6A66-402F-85F1-E828005084BB["ProtectionDomains de nodo"] objetos.
+Lista JSON de link:reference_element_api_nodeprotectiondomains.html["ProtectionDomains de nodo"] objetos.
 
 |===
 

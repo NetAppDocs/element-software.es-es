@@ -14,9 +14,6 @@ summary: 'Puede utilizar el método GetIpmiInfo para mostrar un informe detallad
 Puede utilizar el `GetIpmiInfo` método para mostrar un informe detallado de los sensores (objetos) de los ventiladores de los nodos, las temperaturas de admisión y escape y las fuentes de alimentación que supervisa el sistema.
 
 
-NOTE: El SDS empresarial de SolidFire no admite este método. Si utiliza este método en un sistema SolidFire eSDS, el método devolverá un error.
-
-
 
 == Parámetros
 

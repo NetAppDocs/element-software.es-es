@@ -14,9 +14,6 @@ summary: Puede utilizar el método EnableSsh para habilitar el servicio SSH para
 Puede utilizar el `EnableSsh` Método para habilitar el servicio Secure Shell (SSH) para un solo nodo. Este método no afecta a la duración del tiempo de espera de SSH para todo el clúster y no exime al nodo de que SSH esté deshabilitado por el tiempo de espera global de SSH.
 
 
-NOTE: El SDS empresarial de SolidFire no admite este método. Si utiliza este método en un sistema SolidFire eSDS, el método devolverá un error.
-
-
 
 == Parámetro
 

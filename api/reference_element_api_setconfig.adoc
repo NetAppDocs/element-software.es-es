@@ -14,9 +14,6 @@ summary: Puede utilizar el método SetConfig para establecer la información de 
 Puede utilizar el `SetConfig` método para establecer la información de red y clúster del nodo. Este método incluye la misma configuración en un único método API que está disponible mediante ambos `SetClusterConfig` y.. `SetNetworkConfig` métodos. Sólo es necesario incluir con este método los campos que desee modificar.
 
 
-NOTE: El SDS empresarial de SolidFire no admite este método. Si utiliza este método en un sistema SolidFire eSDS, el método devolverá un error.
-
-
 
 == Parámetro
 

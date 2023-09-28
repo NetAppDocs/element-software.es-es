@@ -14,9 +14,6 @@ summary: Puede utilizar el método EnableClusterSsh para habilitar el servicio S
 Puede utilizar el `EnableClusterSsh` Método para habilitar el servicio SSH en todos los nodos del clúster de almacenamiento.
 
 
-NOTE: El SDS empresarial de SolidFire no admite este método. Si utiliza este método en un sistema SolidFire eSDS, el método devolverá un error.
-
-
 
 == Parámetro
 

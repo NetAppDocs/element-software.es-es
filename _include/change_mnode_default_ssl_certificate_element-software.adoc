@@ -1,16 +1,7 @@
----
-permalink: storage/reference_post_deploy_change_default_ssl_certificate.html 
-sidebar: sidebar 
-keywords: ssl certificate, SSL, private key, self-signed, cluster, nodes, user-defined certificate, API, change default certificate, certificate, Element API 
-summary: Puede cambiar el certificado SSL predeterminado y la clave privada del nodo de almacenamiento del clúster mediante la API de NetApp Element. 
----
-= Cambie el certificado SSL predeterminado del software Element
+= Obtenga más información
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
 
-[role="lead"]
 Puede cambiar el certificado SSL predeterminado y la clave privada del nodo de almacenamiento del clúster mediante la API de NetApp Element.
 
 Cuando se crea un clúster de software de NetApp Element, el clúster crea un certificado único de capa de sockets seguros (SSL) con firma automática y una clave privada que se utiliza para todas las comunicaciones HTTPS a través de la interfaz de usuario de Element, la interfaz de usuario por nodo o las API. El software Element admite certificados autofirmados, así como certificados que una entidad de certificación (CA) de confianza emite y verifica.

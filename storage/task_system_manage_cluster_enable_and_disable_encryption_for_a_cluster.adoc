@@ -18,7 +18,7 @@ Puede habilitar el cifrado de hardware en reposo mediante la interfaz de usuario
 El cifrado basado en hardware en reposo no está habilitado de forma predeterminada durante la creación de clústeres, y se puede habilitar o deshabilitar desde la interfaz de usuario de Element.
 
 
-WARNING: En los clústeres de almacenamiento all-flash de SolidFire, el cifrado del software en reposo debe habilitarse durante la creación del clúster y no se puede deshabilitar una vez que se ha creado el clúster. Para los clústeres SDS empresarial de SolidFire, el cifrado de software en reposo está habilitado de forma predeterminada.
+WARNING: En los clústeres de almacenamiento all-flash de SolidFire, el cifrado del software en reposo debe habilitarse durante la creación del clúster y no se puede deshabilitar una vez que se ha creado el clúster.
 
 .Lo que necesitará
 * Tiene privilegios de administrador de clúster para habilitar o modificar la configuración de cifrado.

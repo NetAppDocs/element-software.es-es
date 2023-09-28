@@ -20,20 +20,18 @@ Es posible añadir nodos de capacidad inferior o superior a un clúster existent
 
 NOTE: Si un nodo que se acaba de añadir supone más del 50 % de la capacidad total del clúster, parte de la capacidad de este nodo se vuelve inutilizable ("trenzado"), de modo que cumpla con la regla de capacidad. Este sigue siendo el caso hasta que se añada más almacenamiento. Si se añade un nodo muy grande que también desobedece la regla de capacidad, el nodo que antes se había abandonado ya no se quedará abandonado, mientras el nodo recién añadido se vuelve abandonado. La capacidad debe añadirse siempre por parejas para evitar que esto suceda. Cuando un nodo se convierte en abandonado, se produce el error del clúster strandedCapacity.
 
-https://www.youtube.com/embed/2smVHWkikXY?rel=0["Vídeo de NetApp: Escale según sus necesidades: Ampliar un clúster de SolidFire"]
+https://www.youtube.com/embed/2smVHWkikXY?rel=0["Vídeo de NetApp: Escale según sus necesidades: Ampliar un clúster de SolidFire"^]
 
-Puede añadir nodos a los clústeres SDS de SolidFire Enterprise (SolidFire eSDS) o a dispositivos NetApp HCI.
-
-Los nodos SolidFire eSDS tienen un prefijo de tipo de nodo "SFC", por ejemplo, "S PAc100".
+Puede añadir nodos a dispositivos NetApp HCI.
 
 .Pasos
 . Seleccione *Cluster* > *Nodes*.
 . Haga clic en *pendiente* para ver la lista de nodos pendientes.
 +
-Cuando el proceso de adición de nodos (nodos SolidFire eSDS o no SolidFire eSDS) se completa, aparecen en la lista Active Nodes. Hasta entonces, los nodos pendientes aparecen en la lista Pending Active.
+Una vez completado el proceso de adición de nodos, aparecen en la lista Active Nodes. Hasta entonces, los nodos pendientes aparecen en la lista Pending Active.
 
 +
-Para los nodos que no son nodos eSDS de SolidFire, SolidFire instala la versión del software Element del clúster en los nodos pendientes cuando los añade a un clúster. Esto puede tardar varios minutos.
+SolidFire instala la versión del software Element del clúster en los nodos pendientes cuando se añaden a un clúster. Esto puede tardar varios minutos.
 
 . Debe realizar una de las siguientes acciones:
 +

@@ -15,7 +15,7 @@ Tiene que configurar nodos de individuales antes de poder añadirlos a un clúst
 
 La configuración de los nodos de almacenamiento es de dos opciones:
 
-* <<Configure un nodo de almacenamiento con la interfaz de usuario por nodo,IU por nodo>>: Utilice la interfaz de usuario por nodo (https://<node_management_IP>:442)[] para configurar los ajustes de red de los nodos.
+* <<Configure un nodo de almacenamiento con la interfaz de usuario por nodo,IU por nodo>>: Utilice la interfaz de usuario por nodo  para configurar los ajustes de red de los nodos.
 * <<Con la TUI, configure un nodo de almacenamiento,TUI>>: Utilice la interfaz de usuario del terminal (TUI) del nodo para configurar el nodo.
 
 

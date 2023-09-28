@@ -14,9 +14,6 @@ summary: Puede utilizar el método TestAddressAvailability para comprobar si se 
 Puede utilizar el `TestAddressAvailability` Método para comprobar si hay una determinada dirección IP en uso en una interfaz dentro del clúster de almacenamiento.
 
 
-NOTE: El SDS empresarial de SolidFire no admite este método. Si utiliza este método en un sistema SolidFire eSDS, el método devolverá un error.
-
-
 
 == Parámetros
 

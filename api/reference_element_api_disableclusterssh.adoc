@@ -14,9 +14,6 @@ summary: Puede utilizar el método DisableClusterSsh para deshabilitar el servic
 Puede utilizar el `DisableClusterSsh` Método para deshabilitar el servicio SSH para todo el clúster de almacenamiento. Cuando añada nodos al clúster de almacenamiento, los nuevos nodos heredan esta configuración en todo el clúster.
 
 
-NOTE: El SDS empresarial de SolidFire no admite este método. Si utiliza este método en un sistema SolidFire eSDS, el método devolverá un error.
-
-
 
 == Parámetro
 

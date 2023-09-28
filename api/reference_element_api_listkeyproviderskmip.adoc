@@ -77,7 +77,7 @@ KmipKeyProviders
  a| 
 Una lista de los proveedores de claves KMIP que se hayan creado.
  a| 
-link:reference_element_api_keyproviderkmip.md#["KeyProviderKmip"] cabina
+link:reference_element_api_keyproviderkmip.html["KeyProviderKmip"] cabina
 
 |===
 

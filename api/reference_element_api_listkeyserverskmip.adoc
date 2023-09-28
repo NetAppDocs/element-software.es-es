@@ -90,7 +90,7 @@ KmipKeyServers
  a| 
 La lista completa de los servidores de claves KMIP que se crearon.
  a| 
-link:reference_element_api_keyserverkmip.md#["KeyServerKmip"] cabina
+link:reference_element_api_keyserverkmip.html["KeyServerKmip"] cabina
 
 |===
 

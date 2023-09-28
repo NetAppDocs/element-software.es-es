@@ -14,9 +14,6 @@ summary: El método ListClusterInterfacePreference permite a los sistemas integr
 La `ListClusterInterfacePreference` Method permite a los sistemas integrados con los clústeres de almacenamiento que ejecutan el software Element mostrar las preferencias de la interfaz de clúster existentes almacenadas en el sistema. Este método es para uso interno.
 
 
-NOTE: El SDS empresarial de SolidFire no admite este método. Si utiliza este método en un sistema SolidFire eSDS, el método devolverá un error.
-
-
 
 == Parámetros
 

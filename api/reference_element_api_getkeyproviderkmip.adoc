@@ -50,7 +50,7 @@ KmipKeyProvider
  a| 
 Objeto que contiene detalles sobre el proveedor de claves solicitado.
  a| 
-link:reference_element_api_keyproviderkmip.md#["KeyProviderKmip"]
+link:reference_element_api_keyproviderkmip.html["KeyProviderKmip"]
 
 |===
 

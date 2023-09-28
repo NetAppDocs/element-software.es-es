@@ -6,7 +6,7 @@ settings:
   prod:
     pdf_enabled: true
     harmony_enabled: false
-  langs: es-es,us-en,ja-jp,ko-kr,zh-cn,zh-tw,de-de,fr-fr
+  langs: es-es,us-en,ja-jp,ko-kr,zh-cn,zh-tw,de-de,fr-fr,it-it
 sidebar:
   entries:
   - title: SolidFire y el software Element 12.5 y documentación posterior
@@ -29,7 +29,6 @@ sidebar:
       url: "/storage/reference_prereq_network_port_requirements.html"
   - section: try
   - section: hardware
-  - section: esds
   - section: setup
   - section: storage
   - section: hccstorage
@@ -83,18 +82,6 @@ homepage:
       url: https://docs.netapp.com/us-en/solidfire-active-iq/
     - title: Trabaje con el nodo de gestión
       url: "/mnode/task_mnode_work_overview.html"
-  - title: Instale y utilice SDS empresarial de SolidFire
-    links:
-    - title: Descripción general de SolidFire eSDS
-      url: "/esds/concept_get_started_esds.html"
-    - title: Inicio rápido
-      url: https://docs.netapp.com/us-en/element-software/media/SDS_Quick_Start_Guide.pdf
-    - title: Requisitos para la instalación
-      url: "/esds/concept_esds_prerequisite_tasks.html"
-    - title: Gestionar el almacenamiento
-      url: "/esds/reference_esds_element_links.html"
-    - title: Mantener SolidFire eSDS
-      url: "/esds/concept_esds_maintain.html"
   - title: Uso de herramientas de integración (se requiere inicio de sesión)
     links:
     - title: CLI de Element

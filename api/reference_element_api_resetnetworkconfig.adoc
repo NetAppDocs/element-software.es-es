@@ -14,9 +14,6 @@ summary: Puede utilizar el método ResetNetworkConfig para ayudar a resolver pro
 Puede utilizar el `ResetNetworkConfig` método para ayudar a resolver problemas de configuración de red para un nodo individual. Este método restablece la configuración de red de un nodo individual a los valores predeterminados de fábrica.
 
 
-NOTE: El SDS empresarial de SolidFire no admite este método. Si utiliza este método en un sistema SolidFire eSDS, el método devolverá un error.
-
-
 
 == Parámetros
 

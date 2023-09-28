@@ -14,9 +14,6 @@ summary: Puede usar el método ListNodeStats para ver las mediciones de activida
 Puede utilizar el `ListNodeStats` método para ver las mediciones de actividad de alto nivel para todos los nodos de almacenamiento de un clúster de almacenamiento.
 
 
-NOTE: El SDS empresarial de SolidFire no admite este método. Si utiliza este método en un sistema SolidFire eSDS, el método devolverá un error.
-
-
 
 == Parámetros
 

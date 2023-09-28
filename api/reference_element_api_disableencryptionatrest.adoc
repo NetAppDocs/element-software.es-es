@@ -14,7 +14,7 @@ summary: Puede utilizar el método DisableEncryptionAtRest para quitar el cifrad
 Puede utilizar el `DisableEncryptionAtRest` método para quitar el cifrado que se aplicó previamente al clúster mediante el `EnableEncryptionAtRest` método. Este método disable es asíncrono y devuelve una respuesta antes de que se deshabilite el cifrado. Puede utilizar el `GetClusterInfo` método para sondear el sistema para ver cuándo se ha completado el proceso.
 
 
-TIP: Para ver el estado actual del cifrado en reposo y/o el cifrado de software en reposo en el clúster, use el link:../api/reference_element_api_getclusterinfo["obtenga el método de información del clúster"^]. Puede utilizar el `GetSoftwareEncryptionAtRestInfo` link:../api/reference_element_api_getsoftwareencryptionatrestinfo["método para obtener información que utiliza el clúster para cifrar datos en reposo"^].
+TIP: Para ver el estado actual del cifrado en reposo y/o el cifrado de software en reposo en el clúster, use el link:../api/reference_element_api_getclusterinfo.html["obtenga el método de información del clúster"^]. Puede utilizar el `GetSoftwareEncryptionAtRestInfo` link:../api/reference_element_api_getsoftwareencryptionatrestinfo.html["método para obtener información que utiliza el clúster para cifrar datos en reposo"^].
 
 
 NOTE: No se puede usar este método para deshabilitar el cifrado de software en reposo. Para deshabilitar el cifrado de software en reposo, debe hacerlo link:reference_element_api_createcluster.html["cree un nuevo clúster"] con el cifrado de software en reposo deshabilitado.

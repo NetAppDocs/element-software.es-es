@@ -14,9 +14,6 @@ summary: Puede usar el método DisableSsh para deshabilitar el servicio SSH para
 Puede utilizar el `DisableSsh` Método para deshabilitar el servicio SSH para un solo nodo de almacenamiento. Este método no afecta la duración del tiempo de espera del servicio SSH para todo el clúster.
 
 
-NOTE: El SDS empresarial de SolidFire no admite este método. Si utiliza este método en un sistema SolidFire eSDS, el método devolverá un error.
-
-
 
 == Parámetro
 

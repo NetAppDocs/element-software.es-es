@@ -13,9 +13,6 @@ summary: Puede usar el método RestartNetworking para reiniciar los servicios de
 [role="lead"]
 Puede utilizar el `RestartNetworking` método para reiniciar los servicios de red en un nodo.
 
-
-NOTE: El SDS empresarial de SolidFire no admite este método. Si utiliza este método en un sistema SolidFire eSDS, el método devolverá un error.
-
 PRECAUCIÓN:
 
 Este método reinicia todos los servicios de red en un nodo, lo que produce una pérdida temporal de conectividad de red.

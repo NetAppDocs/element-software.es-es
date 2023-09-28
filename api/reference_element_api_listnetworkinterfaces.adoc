@@ -14,9 +14,6 @@ summary: Puede utilizar el método ListNetworkinterfaces para mostrar informaci�
 Puede utilizar el `ListNetworkInterfaces` método para enumerar la información de cada interfaz de red en un nodo. Este método de API está pensado para usar en nodos individuales; se necesitan ID de usuario y autenticación de contraseña para acceder a nodos individuales. Sin embargo, puede usar este método en el clúster si se da el valor TRUE al parámetro force en la llamada al método. Cuando se utiliza el parámetro en el clúster, se muestran todas las interfaces.
 
 
-NOTE: El SDS empresarial de SolidFire no admite este método. Si utiliza este método en un sistema SolidFire eSDS, el método devolverá un error.
-
-
 
 == Parámetro
 

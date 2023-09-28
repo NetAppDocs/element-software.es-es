@@ -15,22 +15,6 @@ Es posible que tenga que permitir a los siguientes puertos TCP atravesar el fire
 
 Todos los puertos son TCP a menos que se especifique lo contrario, y deben permitir las comunicaciones bidireccionales entre NetApp Support Server, el nodo de gestión y los nodos que ejecutan el software Element.
 
-[NOTE]
-====
-Los paquetes de software de descarga de API e IU web de Hybrid Cloud Control de NetApp desde el repositorio de software en línea de NetApp. Por este motivo, algunas URL o direcciones IP pueden resolverse en otras direcciones URL o IP en función de la red de entrega de contenido. Si es posible, debe trabajar con un ingeniero de red para agregar estas direcciones URL o direcciones IP a las reglas de firewall, siguiendo los pasos generales siguientes:
-
-.Pasos
-. Use las utilidades wget o curl para acceder a una URL (support-sg-nawest.netapp.com, por ejemplo).
-. Compruebe si hay conectividad, como se muestra en el siguiente ejemplo:
-+
-image::network_ports.PNG[Comprobar la conectividad de los puertos]
-
-. Recibir un fallo al acceder a la URL (diferente de support-sg-nawest.netapp.com).
-. Edite las reglas del firewall para permitir la nueva URL.
-. Repita los pasos anteriores hasta que el intento de acceso se realice correctamente.
-
-
-====
 
 TIP: Habilite ICMP entre el nodo de gestión, los nodos que ejecutan el software Element y la MVIP del clúster.
 
@@ -132,27 +116,6 @@ MVIP de clúster de almacenamiento
 442
  a| 
 Acceso de interfaz de usuario y de API al nodo de almacenamiento y actualizaciones del software Element
-
-
-
- a| 
-Nodo de gestión
- a| 
-Notificación de la nueva versión:
-
-* `https://support.netapp.com/aods/`
-
-
-Descarga de software:
-
-* `https://support-sg-emea.netapp.com`
-* `https://support-sg-naeast.netapp.com`
-* `https://support-sg-nawest.netapp.com`
-
- a| 
-443
- a| 
-Actualizaciones del servicio del nodo de gestión
 
 
 

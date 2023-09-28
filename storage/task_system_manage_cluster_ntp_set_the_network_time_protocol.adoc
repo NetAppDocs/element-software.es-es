@@ -14,6 +14,3 @@ summary: 'La configuración del protocolo de tiempo de red \(NTP\) puede logrars
 La configuración del protocolo de tiempo de redes (NTP) se puede lograr de dos maneras: Indique a cada nodo de un clúster que escuche las difusiones o indique a cada nodo que consulte un servidor NTP para obtener actualizaciones.
 
 El NTP se utiliza para sincronizar los relojes que hay en toda una red. La conexión con un servidor NTP interno o externo debe formar parte de la configuración inicial del clúster.
-
-
-NOTE: Esta función no está disponible en los clústeres de SDS empresarial de SolidFire.

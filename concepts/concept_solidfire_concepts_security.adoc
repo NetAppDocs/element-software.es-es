@@ -28,9 +28,6 @@ link:../storage/task_system_manage_cluster_enable_and_disable_encryption_for_a_c
 Otro tipo de cifrado en reposo, el cifrado por software en reposo permite cifrar todos los datos que se escriben en los SSD de un clúster de almacenamiento. link:../storage/task_system_manage_cluster_enable_and_disable_encryption_for_a_cluster.html["Si está habilitada"^], cifra todos los datos escritos y descifra todos los datos leídos automáticamente en el software. El cifrado por software en reposo refleja la implementación de la unidad de cifrado automático (SED) en el hardware para proporcionar seguridad de datos en ausencia de SED.
 
 
-NOTE: El cifrado de software en reposo está habilitado de forma predeterminada en todos los nodos SDS empresariales de SolidFire. El cifrado de software en reposo proporciona una capa de software principal de cifrado de seguridad de datos en nodos SDS empresariales de SolidFire que no incluyen unidades de autocifrado (SED).
-
-
 WARNING: En los clústeres de almacenamiento all-flash de SolidFire, el cifrado del software en reposo debe habilitarse durante la creación del clúster y no se puede deshabilitar una vez que se ha creado el clúster.
 
 Tanto el cifrado en reposo basado en software como en hardware pueden utilizarse de forma independiente o en combinación con uno al otro.

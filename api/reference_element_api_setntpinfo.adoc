@@ -14,9 +14,6 @@ summary: Puede usar el método SetNtpInfo para configurar NTP en nodos de clúst
 Puede utilizar el `SetNtpInfo` Método para configurar NTP en los nodos del clúster. Los valores que establece con esta interfaz se aplican a todos los nodos del clúster. Si un servidor de retransmisión NTP transmite periódicamente información de hora a la red, los nodos se pueden configurar como clientes de retransmisión.
 
 
-NOTE: El SDS empresarial de SolidFire no admite este método. Si utiliza este método en un sistema SolidFire eSDS, el método devolverá un error.
-
-
 
 == Parámetros
 

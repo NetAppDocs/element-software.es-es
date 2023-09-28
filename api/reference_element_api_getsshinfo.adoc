@@ -14,9 +14,6 @@ summary: Puede utilizar el método GetSshInfo para consultar el estado del servi
 Puede utilizar el `GetSshInfo` Método para consultar el estado del servicio SSH en un solo nodo.
 
 
-NOTE: El SDS empresarial de SolidFire no admite este método. Si utiliza este método en un sistema SolidFire eSDS, el método devolverá un error.
-
-
 
 == Parámetros
 

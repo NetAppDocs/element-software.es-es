@@ -14,6 +14,9 @@ summary: Puede usar el método SetNodeSSLCertificate para establecer un certific
 Puede utilizar el `SetNodeSSLCertificate` Método para establecer un certificado SSL de usuario y una clave privada para el nodo de gestión.
 
 
+NOTE: Después de usar la API, debe reiniciar el nodo de gestión.
+
+
 
 == Parámetros
 

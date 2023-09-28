@@ -14,9 +14,6 @@ summary: Puede utilizar el método GetIpmiConfig para recuperar información del
 Puede utilizar el `GetIpmiConfig` método para recuperar información del sensor de hardware de sensores que están en su nodo.
 
 
-NOTE: El SDS empresarial de SolidFire no admite este método. Si utiliza este método en un sistema SolidFire eSDS, el método devolverá un error.
-
-
 
 == Parámetro
 

@@ -15,9 +15,13 @@ Puede utilizar `RollbackToGroupSnapshot` para revertir todos los volúmenes indi
 
 Al revertir a una copia de Snapshot de grupo, se crea una copia de Snapshot temporal de cada volumen dentro de la copia de Snapshot de grupo.
 
+[NOTE]
+====
+* Se permite la creación de una copia de Snapshot si la ocupación del clúster se encuentra en la etapa 1, 2 o 3. Las copias de Snapshot no se crean cuando la ocupación del clúster se encuentra en la etapa 4 o 5.
+* Es posible que se produzca un error en la reversión de volúmenes a una copia de Snapshot de grupo cuando la sincronización de segmentos está en curso. Vuelva a intentarlo `RollbackToGroupSnapshot` una vez finalizada la sincronización.
 
-NOTE: Se permite la creación de una copia de Snapshot si la ocupación del clúster se encuentra en la etapa 1, 2 o 3. Las copias de Snapshot no se crean cuando la ocupación del clúster se encuentra en la etapa 4 o 5.
 
+====
 
 
 == Parámetros

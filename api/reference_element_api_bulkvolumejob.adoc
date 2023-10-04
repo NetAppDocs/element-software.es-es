@@ -64,8 +64,8 @@ cadena
  a| 
 El formato de la operación de volumen masivo. Los posibles valores son los siguientes:
 
-* comprimido
 * nativo
+* sin comprimir
 
  a| 
 cadena

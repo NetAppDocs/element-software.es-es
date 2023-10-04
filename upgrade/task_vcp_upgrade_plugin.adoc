@@ -31,7 +31,7 @@ Este procedimiento de actualización cubre los siguientes escenarios de actualiz
 * Actualice a un HTML5 8.0 o 7.0 vSphere Web Client.
 +
 
-IMPORTANT: El plugin de Element para vCenter 5.0 y versiones posteriores no es compatible con vCenter Server 6.7 y 6.5.
+IMPORTANT: El plugin de Element para vCenter 5,0 o posterior no es compatible con vCenter Server 6,7 y 6,5.
 
 
 

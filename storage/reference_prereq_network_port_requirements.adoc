@@ -67,7 +67,7 @@ Comunicaciones de cliente iSCSI
  a| 
 Nodo de gestión
  a| 
-sfsupport.solidfire.com
+`sfsupport.solidfire.com`
  a| 
 22
  a| 
@@ -122,7 +122,7 @@ Acceso de interfaz de usuario y de API al nodo de almacenamiento y actualizacion
  a| 
 Nodo de gestión
  a| 
-monitoring.solidfire.com
+`monitoring.solidfire.com`
  a| 
 443
  a| 

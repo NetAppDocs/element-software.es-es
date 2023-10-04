@@ -1733,7 +1733,6 @@
   <block id="e6c04958395a323ddbc02c929b4dfdf0" category="paragraph">Es posible actualizar el registro del plugin en vCenter Server Virtual Appliance (vcsa) o Windows desde la utilidad de registro. Debe cambiar el registro del plugin de vCenter en cada instancia de vCenter Server donde necesite usar el plugin.</block>
   <block id="d59048f21fd887ad520398ce677be586" category="inline-link">Leer más</block>
   <block id="1ec8160ad002d3b57b0367c162c7e579" category="open-title">Plugin de Element vCenter versión 5.0 o posterior</block>
-  <block id="787e0e54cc17d9dd6bbd7cf4c4fbc14d" category="admonition">El plugin de Element para vCenter 5.0 y versiones posteriores no es compatible con vCenter Server 6.7 y 6.5.</block>
   <block id="e6d87bbd73a5a86fcf1e6cbc75296808" category="open-title">Plugin de Element vCenter versión 4.10 o anterior</block>
   <block id="524f8acc9609df7272285a19757aefcb" category="list-text">Actualice al plugin de Element para vCenter Server 4.10, 4.9, 4.8, 4.7, 4.6, 4.5, o 4.4.</block>
   <block id="a6a18366932bfeffc2341cc7aa5fe09d" category="list-text">Va a actualizar a un HTML5 7.0, 6.7 o 6.5 vSphere Web Client.</block>
@@ -2550,7 +2549,6 @@
   <block id="e73f633d7130bda90fdf8bdfb25a7568" category="paragraph">Clientes iSCSI</block>
   <block id="dc00b10af56d2a7366b04770c01c14c2" category="paragraph">MVIP de clúster de almacenamiento</block>
   <block id="9d1964604a628a56c31d007f1f2340fb" category="paragraph">Acceso de interfaz de usuario y API (opcional)</block>
-  <block id="00a55ff76496c3c45ca20071f6151bfc" category="paragraph">monitoring.solidfire.com</block>
   <block id="6ac181854a8b48c5ac6018a305f6ae7c" category="paragraph">Informes del clúster de almacenamiento a Active IQ</block>
   <block id="5ee0194e49d16c87d081efc156fb0d74" category="paragraph">MVIP de clúster de almacenamiento remoto</block>
   <block id="75a4d5a956df2844befb13a89867e179" category="paragraph">Comunicación de emparejamiento de clústeres de replicación remota</block>
@@ -5750,7 +5748,6 @@
   <block id="11e18bb72465b19d35f1a1fb2d9a5ccc" category="paragraph">El número de segundos desde que se inició el trabajo.</block>
   <block id="703769be5e6210b6a2b6b99e92112954" category="paragraph"><block ref="1ddcb92ade31c8fbd370001f9b29a7d9" prefix="" category="inline-code"></block></block>
   <block id="e553196c9c6aca88c9d5001211caacb9" category="paragraph">El formato de la operación de volumen masivo. Los posibles valores son los siguientes:</block>
-  <block id="2b98a4ad988a18c42682f388901f2672" category="list-text">comprimido</block>
   <block id="8e5f3adee38c8fccc13c1f3be0143796" category="list-text">nativo</block>
   <block id="b5f22048829ef6db41cb34c651f96faa" category="paragraph"><block ref="3c6e0b8a9c15224a8228b9a98ca1531d" prefix="" category="inline-code"></block></block>
   <block id="7a5bc9d962882cb35fcea421f3f78bd9" category="paragraph">La clave única que crea la sesión de volumen masivo.</block>
@@ -10258,7 +10255,6 @@
   <block id="c51558c5b0e3376ab979005c0eadcc9e" category="list-text">SVIP: Dirección IP virtual de almacenamiento</block>
   <block id="d54ce9de9df77c579775a7b6b1a4bdc0" category="paragraph">3260</block>
   <block id="980b3703717b76269490b885f315bb88" category="paragraph">SIP de nodo de almacenamiento</block>
-  <block id="43638993383f845bcd8925bd4e266bc9" category="paragraph">sfsupport.solidfire.com</block>
   <block id="54ea06f86e263d9bc3ed3b50598bbf94" category="paragraph">Túnel SSH inverso para acceso al soporte</block>
   <block id="96cfb6e2eafa2acea9be9443ff8808e3" category="paragraph">Acceso SSH para soporte</block>
   <block id="8cb02e0989a55415d84d6a664ebaa9c7" category="paragraph">Servidores DNS</block>
@@ -12017,4 +12013,8 @@
   <block id="eea7cb3a63edf642e1f15162351dfce7" category="list-text">Va a actualizar al plugin de Element para vCenter Server 5,2, 5,1 o 5,0.</block>
   <block id="c9c6a2f6fa07c1f8c580586914c37e79" category="image-alt">Muestra los puntos de extensión del plugin después de una actualización o una instalación correcta del plugin de Element versión 5,1 o posterior</block>
   <block id="f35f89119a6374d18bd89e0103590c61" category="image-alt">Muestra los puntos de extensión del plugin después de una instalación correcta o una actualización del plugin de Element versión 4,10 o anterior</block>
+  <block id="1583ff28675a9e24a50fa1079a5dd985" category="paragraph"><block ref="43638993383f845bcd8925bd4e266bc9" prefix="" category="inline-code"></block></block>
+  <block id="86eccd8202a873aee7f9acfbe920bb59" category="paragraph"><block ref="00a55ff76496c3c45ca20071f6151bfc" prefix="" category="inline-code"></block></block>
+  <block id="474ed7ffbbc0fc1d58ad983e7ef700f6" category="admonition">El plugin de Element para vCenter 5,0 o posterior no es compatible con vCenter Server 6,7 y 6,5.</block>
+  <block id="dfd25ff244b001be7beece9729517779" category="list-text">sin comprimir</block>
 </blocks>

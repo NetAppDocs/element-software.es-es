@@ -1,7 +1,6 @@
 ---
 section: upgrade
-title: Actualice su sistema de almacenamiento all-flash SolidFire de NetApp para el
-  software Element 12.5 o posterior
+title: Actualice su sistema de almacenamiento all-flash NetApp SolidFire
 entries:
 - title: Información general sobre la secuencia de actualización
   url: "/upgrade/concept_element_upgrade_overview.html"

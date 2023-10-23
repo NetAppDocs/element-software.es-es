@@ -4203,7 +4203,6 @@
   <block id="e4129684446aea2a0364c5466dc85146" category="paragraph">El nombre de usuario CHAP especificado por el iniciador durante un inicio de sesión iSCSI.</block>
   <block id="ef72c37be9d1b9e6e5bbd6ef09448abe" category="paragraph">dirección</block>
   <block id="e7eefd9834440f0ab15e111471053cf0" category="paragraph">La dirección de autenticación, por ejemplo, unidireccional (solo el iniciador) o bidireccional (tanto iniciador como destino).</block>
-  <block id="cd6217be1698a09a848043a5d6c72040" category="paragraph">*Disponible a partir del elemento 12.7.</block>
   <block id="a19557189569d666fbab86836cd903b9" category="summary">Puede utilizar ModifiySnapMirrorRelationship para cambiar los intervalos en los que se produce una instantánea programada. También puede eliminar o pausar una programación mediante este método.</block>
   <block id="4d0d8f3b9f751aa4fa6049bd6076d25a" category="doc">ModificySnapMirrorRelationship</block>
   <block id="b26980d8fc8e0239f2a41818569ed71d" category="paragraph">Puede utilizar<block ref="4d0d8f3b9f751aa4fa6049bd6076d25a" prefix=" " category="inline-code"></block> cambiar los intervalos en los que se produce una snapshot programada. También puede eliminar o pausar una programación mediante este método.</block>
@@ -11337,7 +11336,6 @@
   <block id="e6a388b4e4786b8655456ca5710e3fbe" category="list-text">Seleccione las unidades de segmentos que desea añadir.</block>
   <block id="0360e025e4ccc982aec3f7b16492eeae" category="list-text">Confirme en la ficha *Active Drives* que las unidades se han añadido.</block>
   <block id="c6ad545ed5197a02a4f86759e091d934" category="summary">Un sistema de almacenamiento all-flash SolidFire consta de componentes de hardware como unidades y nodos que se combinan en un pool de recursos de almacenamiento. Como sistema de almacenamiento único, este clúster unificado se gestiona con el software NetApp Element.</block>
-  <block id="b7faeba39aadbf9af836a1e70f5708d7" category="doc">SolidFire y el software Element 12.5 y documentación posterior</block>
   <block id="07cb49c54e22e4c2ca3423ad1672fc6c" category="summary">Puede que deba sustituir el chasis si falla el ventilador, la unidad de procesamiento central (CPU) o el módulo de memoria en línea doble (DIMM), o bien si resuelve problemas de sobrecalentamiento o problemas con el proceso de arranque. Los errores del clúster en la interfaz de usuario del software (UI) de NetApp Element y la luz ámbar intermitente en la parte frontal del chasis son indicios de una posible necesidad de sustituir el chasis. Debe comunicarse con el soporte de NetApp antes de continuar.</block>
   <block id="6532faa3d471ea3d108b449c58acd643" category="doc">Sustituya un chasis</block>
   <block id="bf5db3ceb89fb233ad7de03ee4b2b8e5" category="list-text">Se ha puesto en contacto con el soporte de NetApp.</block>
@@ -11848,7 +11846,6 @@
   <block id="01f85930b405f5ff6ea401b95fb623af" category="sidebar">Trabaje con la interfaz de usuario del nodo de gestión</block>
   <block id="ca1fd6fbdda3d71b63bb4ea743cd48e8" category="sidebar">Trabaje con la API DE REST del nodo de gestión</block>
   <block id="4c46c9acea33f3a7201c692e8d84806b" category="sidebar">Gestión de conexiones de soporte</block>
-  <block id="a3fc65b85282a6a88ae5d5d3defca6e5" category="sidebar">Actualice su sistema de almacenamiento all-flash SolidFire de NetApp para el software Element 12.5 o posterior</block>
   <block id="b837bae0f441ebacd86887d737939282" category="sidebar">Procedimientos de actualización del sistema</block>
   <block id="9282ad3aef7e124a3b2b9c7eab52b33d" category="sidebar">Arquitectura y componentes</block>
   <block id="e558a93d8af634916bae37b7136be1d2" category="sidebar">GetSoftwareEncryptionatRestInfo</block>
@@ -12017,4 +12014,6 @@
   <block id="86eccd8202a873aee7f9acfbe920bb59" category="paragraph"><block ref="00a55ff76496c3c45ca20071f6151bfc" prefix="" category="inline-code"></block></block>
   <block id="474ed7ffbbc0fc1d58ad983e7ef700f6" category="admonition">El plugin de Element para vCenter 5,0 o posterior no es compatible con vCenter Server 6,7 y 6,5.</block>
   <block id="dfd25ff244b001be7beece9729517779" category="list-text">sin comprimir</block>
+  <block id="54b283655ec8649a11478759bf661650" category="list-text">Disponible a partir del elemento 12,7.</block>
+  <block id="909a1c829d29d09da00949e5c8b87a0e" category="sidebar">Actualice su sistema de almacenamiento all-flash NetApp SolidFire</block>
 </blocks>

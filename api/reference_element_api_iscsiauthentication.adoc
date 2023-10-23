@@ -58,4 +58,5 @@ La dirección de autenticación, por ejemplo, unidireccional (solo el iniciador)
 cadena
 
 |===
-*Disponible a partir del elemento 12.7.
+* Disponible a partir del elemento 12,7.
+

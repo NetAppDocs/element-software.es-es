@@ -11,9 +11,9 @@ summary: Es posible que deba permitir los siguientes puertos TCP a través del f
 
 
 [role="lead"]
-Es posible que tenga que permitir a los siguientes puertos TCP atravesar el firewall perimetral del centro de datos, de manera que pueda gestionar el sistema de forma remota y permitir a los clientes que estén fuera del centro de datos conectarse a los recursos. En función de la manera en la que se use el sistema, es posible que algunos puertos no sean necesarios.
+Es posible que tenga que permitir a los siguientes puertos TCP y UDP atravesar el firewall perimetral del centro de datos, de manera que pueda gestionar el sistema de forma remota y permitir a los clientes que estén fuera del centro de datos conectarse a los recursos. En función de la manera en la que se use el sistema, es posible que algunos puertos no sean necesarios.
 
-Todos los puertos son TCP a menos que se especifique lo contrario, y deben permitir las comunicaciones bidireccionales entre NetApp Support Server, el nodo de gestión y los nodos que ejecutan el software Element.
+Todos los puertos son TCP a menos que se especifique lo contrario, y todos los puertos TCP deben admitir la comunicación de apretón de manos tripartito entre el servidor de soporte de NetApp, el nodo de gestión y los nodos que ejecutan el software Element. Por ejemplo, el host de un origen del nodo de gestión se comunica con el host en un destino de MVIP del clúster de almacenamiento a través del puerto TCP 443, y el host de destino se vuelve a comunicar al host de origen a través de cualquier puerto.
 
 
 TIP: Habilite ICMP entre el nodo de gestión, los nodos que ejecutan el software Element y la MVIP del clúster.

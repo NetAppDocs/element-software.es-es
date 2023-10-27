@@ -2,7 +2,7 @@
 permalink: storage/reference_prereq_network_port_requirements.html 
 sidebar: sidebar 
 keywords: network port requirements, TCP ports, firewall, utilities, URL, access attempt, ICMP, MIP, SIP, MVIP, SVIP 
-summary: Es posible que deba permitir los siguientes puertos TCP a través del firewall perimetral del centro de datos para poder administrar el sistema de forma remota y permitir que los clientes fuera del centro de datos se conecten a los recursos. En función de la manera en la que se use el sistema, es posible que algunos puertos no sean necesarios. 
+summary: Es posible que tenga que permitir a los siguientes puertos TCP atravesar el firewall perimetral del centro de datos, de manera que pueda gestionar el sistema de forma remota y permitir a los clientes que estén fuera del centro de datos conectarse a los recursos. En función de la manera en la que se use el sistema, es posible que algunos puertos no sean necesarios. 
 ---
 = Requisitos de puerto de red
 :allow-uri-read: 

@@ -164,5 +164,5 @@ Este paquete de registro está en un formato de archivo .tgz comprimido.
 == Obtenga más información
 
 * https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
-* https://www.netapp.com/data-storage/solidfire/documentation["Página SolidFire y Element Resources"^]
+* https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]
 

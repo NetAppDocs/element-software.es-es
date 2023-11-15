@@ -343,5 +343,5 @@ NOTE: Debe crear un nuevo rol HCC de NetApp en vCenter para añadir un subsistem
 * link:task_mnode_add_assets.html["Añada un activo de controladora al nodo de gestión"]
 * link:task_mnode_install_add_storage_NIC.html["Configurar un NIC de almacenamiento"]
 * https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
-* https://www.netapp.com/data-storage/solidfire/documentation["Página SolidFire y Element Resources"^]
+* https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]
 

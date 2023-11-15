@@ -158,6 +158,6 @@ Es posible usar la interfaz de usuario de Element para cambiar las contraseñas 
 
 * link:task_system_manage_enable_ldap_authentication.html["Habilite la autenticación de LDAP con la interfaz de usuario de Element"]
 * link:concept_system_manage_manage_ldap.html["Deshabilite LDAP"]
-* https://www.netapp.com/data-storage/solidfire/documentation["Página SolidFire y Element Resources"^]
+* https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]
 * https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
 

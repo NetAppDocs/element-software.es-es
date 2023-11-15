@@ -78,6 +78,6 @@ NOTE: Si desea desasociar en lugar de ello un volumen de una política de calida
 == Obtenga más información
 
 * link:task_data_manage_volumes_remove_a_qos_policy_association_of_a_volume.html["Quite la asociación de políticas de calidad de servicio de un volumen"]
-* https://www.netapp.com/data-storage/solidfire/documentation["Página SolidFire y Element Resources"^]
+* https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]
 * https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
 

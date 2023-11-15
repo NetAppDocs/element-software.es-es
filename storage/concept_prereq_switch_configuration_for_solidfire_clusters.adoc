@@ -71,6 +71,6 @@ Algunos nodos proporcionan funcionalidades de gestión fuera de banda adicionale
 == Si quiere más información
 
 * https://docs.netapp.com/us-en/hci/docs/hci_prereqs_network_switch.html["Requisitos de switch y red de NetApp HCI"^]
-* https://www.netapp.com/data-storage/solidfire/documentation["Página SolidFire y Element Resources"^]
+* https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]
 * https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
 

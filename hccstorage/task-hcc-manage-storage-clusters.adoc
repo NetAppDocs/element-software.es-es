@@ -198,5 +198,5 @@ Si se producen errores cuando se habilita o se deshabilita el modo de mantenimie
 == Obtenga más información
 
 * link:../mnode/task_mnode_manage_storage_cluster_assets.html["Crear y gestionar activos de clúster de almacenamiento"]
-* https://www.netapp.com/data-storage/solidfire/documentation["Página SolidFire y Element Resources"^]
+* https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]
 

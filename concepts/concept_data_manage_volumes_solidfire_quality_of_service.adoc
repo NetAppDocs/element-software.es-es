@@ -103,5 +103,5 @@ NOTE: El clúster seleccionado debe ser Element 10.0 o posterior para usar polí
 
 == Obtenga más información
 
-* https://www.netapp.com/data-storage/solidfire/documentation["Página SolidFire y Element Resources"^]
+* https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]
 

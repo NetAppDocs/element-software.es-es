@@ -38,6 +38,6 @@ Para obtener más información sobre cada método, consulte link:../api/index.ht
 == Obtenga más información
 
 * link:../api/index.html["Gestionar el almacenamiento con la API de Element"]
-* https://www.netapp.com/data-storage/solidfire/documentation["Página SolidFire y Element Resources"^]
+* https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]
 * https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
 

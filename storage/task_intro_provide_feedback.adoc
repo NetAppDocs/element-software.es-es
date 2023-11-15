@@ -25,6 +25,6 @@ Es posible mejorar la interfaz de usuario web del software Element y solucionar 
 
 == Obtenga más información
 
-* https://www.netapp.com/data-storage/solidfire/documentation["Página SolidFire y Element Resources"^]
+* https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]
 * https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
 

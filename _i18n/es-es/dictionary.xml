@@ -2488,8 +2488,6 @@
   <block id="b6bc13e979e5c7e1ea02ebf7ba32f74c" category="paragraph">El estado del modo de mantenimiento solicitado del nodo. Los posibles valores son los siguientes:</block>
   <block id="768d396ff6865c309cb5b887f53b62ee" category="paragraph">Lista de ID de nodos de almacenamiento que se van a quitar del modo de mantenimiento.</block>
   <block id="f52fd865d827234a5d7f2d167a191468" category="list-text">Inesperado: Se encontró que el nodo estaba sin conexión, pero estaba en el modo deshabilitado.</block>
-  <block id="1c1519037df87ff4dd08fe6e757ff03f" category="inline-link">Página de recursos de SolidFire de NetApp</block>
-  <block id="abc0c04174a58217258765895984ed4e" category="list-text"><block ref="abc0c04174a58217258765895984ed4e" category="inline-link-rx"></block></block>
   <block id="48c7c41b72e1d678923ce3571aa65b2d" category="list-title">Paso</block>
   <block id="d478021fe72aef0c237ac72d79f71ceb" category="paragraph">Las solicitudes de este método son similares al ejemplo siguiente:</block>
   <block id="6c29922ea921f9493eb423f9a77c8e9d" category="paragraph">Este método devuelve una respuesta similar al siguiente ejemplo:</block>
@@ -12016,4 +12014,6 @@
   <block id="331d6d490990c63b2cee0dc04fe2589b" category="paragraph">Todos los puertos son TCP a menos que se especifique lo contrario, y todos los puertos TCP deben admitir la comunicación de apretón de manos tripartito entre el servidor de soporte de NetApp, el nodo de gestión y los nodos que ejecutan el software Element. Por ejemplo, el host de un origen del nodo de gestión se comunica con el host en un destino de MVIP del clúster de almacenamiento a través del puerto TCP 443, y el host de destino se vuelve a comunicar al host de origen a través de cualquier puerto.</block>
   <block id="f814466eb9bcf561b354422b41f381f3" category="summary">Es posible que tenga que permitir a los siguientes puertos TCP atravesar el firewall perimetral del centro de datos, de manera que pueda gestionar el sistema de forma remota y permitir a los clientes que estén fuera del centro de datos conectarse a los recursos. En función de la manera en la que se use el sistema, es posible que algunos puertos no sean necesarios.</block>
   <block id="c04c3f3380a29245247f6e8a6c77a880" category="paragraph">Es posible que tenga que permitir a los siguientes puertos TCP y UDP atravesar el firewall perimetral del centro de datos, de manera que pueda gestionar el sistema de forma remota y permitir a los clientes que estén fuera del centro de datos conectarse a los recursos. En función de la manera en la que se use el sistema, es posible que algunos puertos no sean necesarios.</block>
+  <block id="5858de35bb153f56bdb4f3fbd003b515" category="list-text"><block ref="5858de35bb153f56bdb4f3fbd003b515" category="inline-link-rx"></block></block>
+  <block id="591c130bf36c26fe5946fac7eeba4c11" category="list-text"><block ref="5858de35bb153f56bdb4f3fbd003b515" category="inline-link-rx"></block>entación]</block>
 </blocks>

@@ -80,7 +80,7 @@ Los problemas conocidos y resueltos, se enumeran en la herramienta NetApp Bugs O
 
 == Elemento 12.5
 
-Element 12.5 presenta un acceso mejorado a nodos de almacenamiento, una gestión mejorada de dominios de protección personalizados, errores y eventos de clúster nuevos y mejorados, funcionalidad mejorada de la interfaz de usuario de creación de clúster, seguridad mejorada y actualizaciones automatizadas con Ansible.
+Element 12,5 presenta un acceso mejorado a los nodos de almacenamiento, capacidad de gestión personalizada mejorada de Protection Domains, eventos y errores nuevos y mejorados en los clústeres, funcionalidad de interfaz de usuario para crear clúster y seguridad mejorada.
 
 
 
@@ -124,11 +124,6 @@ Element 12.5 también incluye más de 120 soluciones de vulnerabilidad de seguri
 
 
 
-=== Actualizaciones automatizadas con Ansible
-
-Con Element 12.5, puede automatizar el flujo de trabajo de actualización del software Element mediante Ansible para realizar una actualización gradual de todo el clúster de almacenamiento. Para comenzar, navegue hasta la https://github.com/NetApp-Automation["Repositorio de Ansible de NetApp"^] En GitHub y descargue el `nar_solidfire_sds_upgrade` papel y documentación.
-
-[discrete]
 == Obtenga más información
 
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes["Notas de la versión de los servicios de gestión y control del cloud híbrido de NetApp"^]

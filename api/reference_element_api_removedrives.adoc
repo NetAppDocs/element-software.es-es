@@ -11,7 +11,7 @@ summary: Se puede usar el método RemoveDrives para quitar unidades de forma pro
 
 
 [role="lead"]
-Puede utilizar el `RemoveDrives` método para quitar de forma proactiva unidades que forman parte del clúster. Se recomienda usar este método al reducir la capacidad de un clúster o como preparación para reemplazar unidades que se acercan al final de su vida útil. Los datos en las unidades se extraen y se migran a otras unidades del clúster antes de quitar la unidad del clúster.
+Puede utilizar el `RemoveDrives` método para quitar de forma proactiva unidades que forman parte del clúster. Se recomienda usar este método al reducir la capacidad de un clúster o como preparación para reemplazar unidades que se acercan al final de su vida útil. `RemoveDrives` Crea una tercera copia de los datos del bloque en los otros nodos del clúster y espera a que se complete la sincronización antes de mover las unidades a la lista «Available». Las unidades de la lista «Disponible» se eliminan por completo del sistema y no tienen servicios en ejecución ni datos activos.
 
 `RemoveDrives` es un método asíncrono. Según la capacidad total de las unidades que se estén quitando, es posible que se deban tardar varios minutos migrar todos los datos.
 

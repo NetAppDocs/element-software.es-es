@@ -11807,27 +11807,6 @@
   <block id="f0e8a2f025f562374fa58233f9f7cd01" category="sidebar">Gestione el almacenamiento con el plugin de Element para vCenter Server</block>
   <block id="45f40a7365f71f3eafc4489e01e9aa82" category="sidebar">Supervise el almacenamiento con SolidFire Active IQ de NetApp</block>
   <block id="93168a8084b3e838d2932c4734bd234e" category="sidebar">Versiones anteriores</block>
-  <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">Manos a la obra</block>
-  <block id="01064f33f360eefba819bf9542c0486b" category="sidebar">Instale y mantenga el hardware</block>
-  <block id="111c5671bddfca211130815e5d97e7bc" category="sidebar">Revisiones de firmware admitidas para los nodos de almacenamiento H-Series de NetApp</block>
-  <block id="f54101aa6702c025c4f74ec5ada7bae3" category="sidebar">Gestionar el almacenamiento</block>
-  <block id="bfd78ad06fdbded1393f2f3c6bce1cdb" category="sidebar">Use la interfaz de usuario del software Element</block>
-  <block id="ed4186f75217d239b68544e14bbe38c9" category="sidebar">Utilice el control del cloud híbrido de NetApp</block>
-  <block id="1d5eadee8dd359da135590100c405785" category="sidebar">Utilice la API del software Element</block>
-  <block id="b16427ba775ee26e7f5fa22679a4a605" category="sidebar">Use el plugin de Element para vCenter Server</block>
-  <block id="d8d2cf4b5fd1196b5be39dd3b93ba995" category="sidebar">Utilice SolidFire Active IQ de NetApp</block>
-  <block id="6216a3b9e8c46cd0635bc8d3f9c8cf4f" category="sidebar">Uso de herramientas de integración (se requiere inicio de sesión)</block>
-  <block id="52e27f272b7f3c0cd5623309ba926677" category="sidebar">SDK de Element (Java, .NET, Python)</block>
-  <block id="2a9dbfa4b74c53d7304fc8b79a1874d3" category="sidebar">NetApp</block>
-  <block id="fcf140abed196b8eba71c45f21312bce" category="sidebar">Soluciones NetApp</block>
-  <block id="81a123ccab93cd947289b672b0e50348" category="sidebar">Demostraciones y tutoriales</block>
-  <block id="a3306879b2c1b46c3e6e86a4c65d51bc" category="sidebar">Formación en SolidFire de NetApp University (se requiere inicio de sesión)</block>
-  <block id="ab1cf947f75ab4705fc3fcf084c10a01" category="sidebar">Cómo instalar y escalar su clúster SolidFire de NetApp (vídeo)</block>
-  <block id="483b680d14606131d42c44dbca0bb4f2" category="sidebar">Instalación de SolidFire de NetApp (vídeo)</block>
-  <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">Blogs y comunidad</block>
-  <block id="a310588c148d934b9b30c31802d4a30b" category="sidebar">Comunidad de NetApp</block>
-  <block id="213686afc3803be7caa09348765467fe" category="sidebar">Dónde obtener ayuda</block>
-  <block id="b47307258c4d85ffb5f4141d7a660a9b" category="sidebar">Element 11.8.2 y documentación anterior</block>
   <block id="2e531c00d20727b760f0fefbb4c65c82" category="sidebar">Consulte su inventario en la página Nodes de NetApp Hybrid Cloud Control</block>
   <block id="767682e703a28fefdc1067e1fcf04243" category="sidebar">Supervise los volúmenes en su clúster de almacenamiento con Hybrid Cloud Control de NetApp</block>
   <block id="19d0a846033170bad30679c08c8ddf47" category="sidebar">Instale o recupere un nodo de gestión</block>
@@ -12013,4 +11992,5 @@
   <block id="df0f8acf74958be223bdd3dabcce5038" category="inline-link">No se pueden iniciar las actualizaciones de SolidFire y HCI debido a un error de carga del paquete de actualización</block>
   <block id="b9bbae8efe5c0f15ffba3f05d619b861" category="list-text">A partir del 2023 de noviembre, no puede iniciar una actualización de componente con control de nube híbrida de NetApp o API de REST porque los certificados de clave de firma (privados y públicos) caducaron el 5 de noviembre de 2023. Puede resolver este problema siguiendo la solución que se explica en el artículo de la base de conocimientos<block ref="43e83b9864cac922c7475bad0e74a40f" category="inline-link-rx"></block>.</block>
   <block id="9f94ad22fed97f22703d9d145f565bfb" category="paragraph">Puede utilizar el<block ref="e7d385ef5ac889916654bf5f865952f1" prefix=" " category="inline-code"></block> método para quitar de forma proactiva unidades que forman parte del clúster. Se recomienda usar este método al reducir la capacidad de un clúster o como preparación para reemplazar unidades que se acercan al final de su vida útil.<block ref="e7d385ef5ac889916654bf5f865952f1" prefix=" " category="inline-code"></block> Crea una tercera copia de los datos del bloque en los otros nodos del clúster y espera a que se complete la sincronización antes de mover las unidades a la lista «Available». Las unidades de la lista «Disponible» se eliminan por completo del sistema y no tienen servicios en ejecución ni datos activos.</block>
+  <block id="f9beecbb3d1ea8584ca694bab8a73de7" category="sidebar">Versiones de firmware compatibles para los nodos de almacenamiento</block>
 </blocks>

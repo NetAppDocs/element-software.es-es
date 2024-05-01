@@ -84,7 +84,7 @@ No
  a| 
 atributos
  a| 
-Atributos JSON para el trabajo de volúmenes masivos.
+La lista de pares nombre-valor en el formato de objetos JSON. link:reference_element_api_attributes.html["Leer más"].
  a| 
 Objeto JSON
  a| 

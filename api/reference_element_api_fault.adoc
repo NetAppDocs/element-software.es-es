@@ -24,6 +24,19 @@ Este objeto contiene los siguientes miembros:
 
 
  a| 
+BlocksUpgrade
+ a| 
+El fallo bloquea una actualización. Los posibles valores son los siguientes:
+
+* True: El fallo bloquea una actualización.
+* False: El fallo no bloquea una actualización.
+
+ a| 
+booleano
+
+
+
+ a| 
 ClusterFaultID
  a| 
 El ID único asociado con cada error de clúster.

@@ -11968,4 +11968,26 @@
   <block id="bfb37ae14420b32b4119e40e73553257" category="paragraph">Una URL personalizada para el ZIP del plugin.</block>
   <block id="8e0d59cc781c5557d1fdc81fdff04d8f" category="paragraph">Aparece el punto de extensión NetApp Element Remote Plugin:</block>
   <block id="5770384eddfc0ac7f73f0f6242a52b50" category="paragraph">Se muestran los puntos de extensión NetApp Element Configuration y Management:</block>
+  <block id="518a4b6a1346e1ad096698dafab107cf" category="sidebar">Un sistema de almacenamiento all-flash SolidFire consta de componentes de hardware como unidades y nodos que se combinan en un pool de recursos de almacenamiento. Mediante la interfaz de Element, la API u otras herramientas de gestión, puede gestionar estos clústeres de recursos de almacenamiento con el software NetApp Element. Este sitio contiene documentación para el software Element 12,5 y 12,7.</block>
+  <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">Manos a la obra</block>
+  <block id="01064f33f360eefba819bf9542c0486b" category="sidebar">Instale y mantenga el hardware</block>
+  <block id="111c5671bddfca211130815e5d97e7bc" category="sidebar">Revisiones de firmware admitidas para los nodos de almacenamiento H-Series de NetApp</block>
+  <block id="f54101aa6702c025c4f74ec5ada7bae3" category="sidebar">Gestionar el almacenamiento</block>
+  <block id="bfd78ad06fdbded1393f2f3c6bce1cdb" category="sidebar">Use la interfaz de usuario del software Element</block>
+  <block id="ed4186f75217d239b68544e14bbe38c9" category="sidebar">Utilice el control del cloud híbrido de NetApp</block>
+  <block id="1d5eadee8dd359da135590100c405785" category="sidebar">Utilice la API del software Element</block>
+  <block id="b16427ba775ee26e7f5fa22679a4a605" category="sidebar">Use el plugin de Element para vCenter Server</block>
+  <block id="d8d2cf4b5fd1196b5be39dd3b93ba995" category="sidebar">Utilice SolidFire Active IQ de NetApp</block>
+  <block id="6216a3b9e8c46cd0635bc8d3f9c8cf4f" category="sidebar">Uso de herramientas de integración (se requiere inicio de sesión)</block>
+  <block id="52e27f272b7f3c0cd5623309ba926677" category="sidebar">SDK de Element (Java, .NET, Python)</block>
+  <block id="2a9dbfa4b74c53d7304fc8b79a1874d3" category="sidebar">NetApp</block>
+  <block id="fcf140abed196b8eba71c45f21312bce" category="sidebar">Soluciones NetApp</block>
+  <block id="81a123ccab93cd947289b672b0e50348" category="sidebar">Demostraciones y tutoriales</block>
+  <block id="a3306879b2c1b46c3e6e86a4c65d51bc" category="sidebar">Formación en SolidFire de NetApp University (se requiere inicio de sesión)</block>
+  <block id="ab1cf947f75ab4705fc3fcf084c10a01" category="sidebar">Cómo instalar y escalar su clúster SolidFire de NetApp (vídeo)</block>
+  <block id="483b680d14606131d42c44dbca0bb4f2" category="sidebar">Instalación de SolidFire de NetApp (vídeo)</block>
+  <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">Blogs y comunidad</block>
+  <block id="a310588c148d934b9b30c31802d4a30b" category="sidebar">Comunidad de NetApp</block>
+  <block id="213686afc3803be7caa09348765467fe" category="sidebar">Dónde obtener ayuda</block>
+  <block id="b47307258c4d85ffb5f4141d7a660a9b" category="sidebar">Element 11.8.2 y documentación anterior</block>
 </blocks>

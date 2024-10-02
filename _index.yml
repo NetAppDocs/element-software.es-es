@@ -1,6 +1,6 @@
 ---
 indexpage:
-  title: Documentación de SolidFire y el software Element
+  title: Documentación de SolidFire y el software Element 12,7
   summary: Un sistema de almacenamiento all-flash SolidFire consta de componentes
     de hardware como unidades y nodos que se combinan en un pool de recursos de almacenamiento.
     Como sistema de almacenamiento único, este clúster unificado se gestiona con el
@@ -11,7 +11,7 @@ indexpage:
     hardware como unidades y nodos que se combinan en un pool de recursos de almacenamiento.
     Mediante la interfaz de Element, la API u otras herramientas de gestión, puede
     gestionar estos clústeres de recursos de almacenamiento con el software NetApp
-    Element. Este sitio contiene documentación para el software Element 12,5 y 12,7.
+    Element. Este sitio incluye documentación relativa al software Element.
   tiles:
   - title: Manos a la obra
     links:
@@ -86,6 +86,8 @@ indexpage:
       url: https://mysupport.netapp.com/site/products/all/details/element-software/guideme-tab
   - title: Versiones anteriores
     links:
+    - title: Documentación de Element 12.5
+      url: https://docs.netapp.com/us-en/element-software-125/index.html
     - title: Documentación de Element 12.3.x.
       url: https://docs.netapp.com/us-en/element-software-123/index.html
     - title: Documentación de Element 12.2.1

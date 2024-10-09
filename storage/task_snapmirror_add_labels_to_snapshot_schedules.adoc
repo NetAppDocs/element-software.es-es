@@ -1,7 +1,7 @@
 ---
 permalink: storage/task_snapmirror_add_labels_to_snapshot_schedules.html 
 sidebar: sidebar 
-keywords: snapmirror labels, add labels to snapshot schedules, snapmirror policies 
+keywords: element, ui, snapmirror, labels, schedules, policies 
 summary: Puede añadir etiquetas de SnapMirror a programaciones de Snapshot para garantizar que se aplique una política de SnapMirror. Puede ver las etiquetas disponibles en un cuadro de diálogo existente de relación de SnapMirror o en ONTAP System Manager de NetApp. 
 ---
 = Añadir etiquetas de SnapMirror a las programaciones de Snapshot

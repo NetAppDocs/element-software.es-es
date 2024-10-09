@@ -1,7 +1,7 @@
 ---
 permalink: storage/task_snapmirror_performing_failback_when_source_volume_no_longer_exists.html 
 sidebar: sidebar 
-keywords: failback, perform, source volume, snapmirror, dr, disaster recovery 
+keywords: element, ui, failback, perform, source, volume, snapmirror, dr, disaster, recovery 
 summary: Es posible resincronizar el volumen de origen original y conmutar por error con la interfaz de usuario de NetApp Element. Esta sección se aplica a situaciones en las que se ha perdido el volumen de origen original, pero el clúster original sigue intacto. Para obtener instrucciones sobre cómo restaurar en un clúster nuevo, consulte la documentación en el sitio de soporte de NetApp. 
 ---
 = Realice una conmutación tras recuperación cuando el volumen de origen ya no exista

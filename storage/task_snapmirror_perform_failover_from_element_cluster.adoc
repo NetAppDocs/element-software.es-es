@@ -1,7 +1,7 @@
 ---
 permalink: storage/task_snapmirror_perform_failover_from_element_cluster.html 
 sidebar: sidebar 
-keywords: failover, cluster, perform a failover, snapmirror 
+keywords: element, ui, failover, cluster, perform a failover, snapmirror 
 summary: Puede realizar una conmutación al nodo de respaldo desde el clúster de Element para hacer que el volumen de destino sea de lectura/escritura y accesible para los hosts en el lado de destino. Antes de realizar una conmutación al nodo de respaldo del clúster de Element, debe interrumpir la relación de SnapMirror. 
 ---
 = Ejecute una conmutación al nodo de respaldo desde un clúster de Element

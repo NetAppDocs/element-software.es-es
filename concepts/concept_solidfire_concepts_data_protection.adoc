@@ -105,7 +105,7 @@ Los sistemas que ejecutan Element 10.1 y versiones posteriores incluyen el códi
 
 A partir de los sistemas Element 10.3 y ONTAP 9.4, es posible replicar volúmenes originados por ONTAP en volúmenes de Element en casos de uso específicos con funcionalidad limitada.
 
-Para obtener más información, consulte la documentación de ONTAP.
+Para obtener más información, consulte link:../storage/element-replication-index.html["Replicación entre software NetApp Element y ONTAP (CLI de ONTAP)"].
 
 
 

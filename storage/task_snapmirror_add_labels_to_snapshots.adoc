@@ -1,7 +1,7 @@
 ---
 permalink: storage/task_snapmirror_add_labels_to_snapshots.html 
 sidebar: sidebar 
-keywords: snapmirror labels, add labels to snapshots, specify retention policies, group snapshots 
+keywords: element, ui, snapmirror, labels, retention, policies, group, snapshots 
 summary: Las etiquetas de SnapMirror especifican la política de retención de snapshots en el extremo de SnapMirror. Se pueden añadir etiquetas a las copias de Snapshot y las copias de Snapshot de grupo. 
 ---
 = Añada etiquetas de SnapMirror a snapshots

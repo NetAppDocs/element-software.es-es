@@ -1,7 +1,7 @@
 ---
 permalink: storage/task_snapmirror_perform_failback_when_source_volume_exists.html 
 sidebar: sidebar 
-keywords: failback, perform, source volume, snapmirror, ui 
+keywords: element, ui, failback, perform, source volume, snapmirror 
 summary: Es posible resincronizar el volumen de origen original y conmutar por error con la interfaz de usuario de NetApp Element. Este procedimiento se aplica a situaciones en las que aún existe el volumen de origen original. 
 ---
 = Realice una conmutación tras recuperación cuando el volumen de origen siga existiendo

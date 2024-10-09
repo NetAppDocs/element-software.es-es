@@ -1,0 +1,108 @@
+---
+permalink: storage/task-element-replication-define-rule-policy.html 
+sidebar: sidebar 
+keywords: ontap, cli, define, rule, policy 
+summary: Para las políticas personalizadas con el tipo de política «reflejo-almacén», debe definir al menos una regla que determine qué copias de Snapshot se transfieren durante la inicialización y la actualización. También puede definir reglas para las políticas predeterminadas con el tipo de política “mirror-vault”. 
+---
+= Defina una regla para una política
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para las políticas personalizadas con el tipo de política «marror-vault», debe definir al menos una regla que determine qué copias de instantánea se transfieren durante la inicialización y la actualización. También puede definir reglas para las políticas predeterminadas con el tipo de política «mirror-vault».
+
+.Acerca de esta tarea
+Cada política con el tipo de política «marror-vault» debe tener una regla que especifique qué copias de instantáneas replicar. La regla “bimensual”, por ejemplo, indica que solo se deben replicar las copias snapshot asignadas a la etiqueta “bimensual” de SnapMirror. Al configurar las copias de Snapshot de Element, se asigna la etiqueta de SnapMirror.
+
+Cada tipo de política está asociado a una o más reglas definidas por el sistema. Estas reglas se asignan automáticamente a una directiva cuando se especifica su tipo de directiva. La siguiente tabla muestra las reglas definidas por el sistema.
+
+|===
+
+
+| Regla definida por el sistema | Se utiliza en tipos de políticas | Resultado 
+
+
+ a| 
+sm_creado
+ a| 
+reflejo asíncrono, reflejo de almacenes
+ a| 
+Se transfiere una copia snapshot creada por SnapMirror en el momento de la inicialización y la actualización.
+
+
+
+ a| 
+todos los días
+ a| 
+mirror-vault
+ a| 
+Las nuevas copias instantáneas en el origen con la etiqueta de SnapMirror “DAILY” se transfieren en la inicialización y actualización.
+
+
+
+ a| 
+semanal
+ a| 
+mirror-vault
+ a| 
+Las nuevas copias snapshot del origen con la etiqueta «semanal» de SnapMirror se transfieren en el momento de la inicialización y la actualización.
+
+
+
+ a| 
+mensual
+ a| 
+mirror-vault
+ a| 
+Las nuevas copias instantáneas en el origen con la etiqueta de SnapMirror “en orden” se transfieren en el momento de la inicialización y la actualización.
+
+|===
+Puede especificar reglas adicionales según sea necesario, para directivas predeterminadas o personalizadas. Por ejemplo:
+
+* Para la política predeterminada `MirrorAndVault`, puede crear una regla denominada «bimensual» para hacer coincidir las copias snapshot del origen con la etiqueta «bimensual» de SnapMirror.
+* Para una política personalizada con el tipo de política “Mirror-vault”, puede crear una regla llamada “bisemanal” para hacer coincidir las copias instantáneas en el origen con la etiqueta “bisemanal” de SnapMirror.
+
+
+.Paso
+. Definir una regla para una directiva:
++
+`snapmirror policy add-rule -vserver _SVM_ -policy _policy_for_rule_ -snapmirror-label _snapmirror-label_ -keep _retention_count_`
+
++
+Para obtener una sintaxis de comando completa, consulte la página man.
+
++
+En el siguiente ejemplo, se agrega una regla con la etiqueta SnapMirror `bi-monthly` a la `MirrorAndVault` política predeterminada:
+
++
+[listing]
+----
+cluster_dst::> snapmirror policy add-rule -vserver svm1 -policy MirrorAndVault -snapmirror-label bi-monthly -keep 6
+----
++
+En el siguiente ejemplo, se agrega una regla con la etiqueta SnapMirror `bi-weekly` a la `my_snapvault` política personalizada:
+
++
+[listing]
+----
+cluster_dst::> snapmirror policy add-rule -vserver svm1 -policy my_snapvault -snapmirror-label bi-weekly -keep 26
+----
++
+En el siguiente ejemplo, se agrega una regla con la etiqueta SnapMirror `app_consistent` a la `Sync` política personalizada:
+
++
+[listing]
+----
+cluster_dst::> snapmirror policy add-rule -vserver svm1 -policy Sync -snapmirror-label app_consistent -keep 1
+----
++
+Luego, puede replicar copias Snapshot del clúster de origen que coincidan con esta etiqueta de SnapMirror:
+
++
+[listing]
+----
+cluster_src::> snapshot create -vserver vs1 -volume vol1 -snapshot snapshot1 -snapmirror-label app_consistent
+----
+

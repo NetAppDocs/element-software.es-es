@@ -326,7 +326,7 @@ entries:
           url: "/storage/reference_replication_volume_pairing_messages.html"
         - title: Advertencias sobre el emparejamiento de volúmenes
           url: "/storage/reference_replication_volume_pairing_warnings.html"
-  - title: Use la replicación de SnapMirror entre clústeres de Element y ONTAP
+  - title: Usar replicación SnapMirror entre clústeres de Element y ONTAP (IU de Element)
     url: "/storage/task_snapmirror_use_replication_between_element_and_ontap_clusters.html"
     entries:
     - title: Información general de SnapMirror
@@ -366,6 +366,51 @@ entries:
           url: "/storage/task_snapmirror_performing_failback_when_source_volume_no_longer_exists.html"
       - title: Realice una transferencia o una migración puntual de ONTAP a Element
         url: "/storage/task_snapmirror_transfer_or_one_time_migration_from_ontap_to_element.html"
+  - title: Replicación entre software NetApp Element y ONTAP (CLI de ONTAP)
+    entries:
+    - title: Descripción general
+      url: "/storage/element-replication-index.html"
+    - title: Flujo de trabajo
+      url: "/storage/concept-element-replication-workflow.html"
+    - title: Habilite SnapMirror en el software Element
+      entries:
+      - title: Habilite SnapMirror en el clúster de Element
+        url: "/storage/task-element-replication-enable-snapmirror-cluster.html"
+      - title: Habilite SnapMirror en el volumen de origen de Element
+        url: "/storage/task-element-replication-enable-snapmirror-source-volume.html"
+      - title: Cree un extremo de SnapMirror
+        url: "/storage/task-element-replication-create-snapmirror-endpoint.html"
+    - title: Configurar una relación de replicación
+      entries:
+      - title: Cree una programación de trabajo de replicación
+        url: "/storage/task-element-replication-create-replication-job-schedule.html"
+      - title: Personalizar una política de replicación
+        entries:
+        - title: Cree una política de replicación personalizada
+          url: "/storage/concept-element-replication-create-custom-replication-policy.html"
+        - title: Defina una regla para una política
+          url: "/storage/task-element-replication-define-rule-policy.html"
+      - title: Cree una relación de replicación
+        entries:
+        - title: Crear una relación desde un origen de elemento a un destino de ONTAP
+          url: "/storage/task-element-replication-create-replication-relationship.html"
+        - title: Cree una relación desde un origen de ONTAP a un destino de elemento
+          url: "/storage/task-element-replication-create-relationship-element-destination.html"
+      - title: Inicializar una relación de replicación
+        url: "/storage/task-element-replication-initialize-replication-relationship.html"
+    - title: Proporcione datos desde un volumen de destino de recuperación ante desastres
+        de SnapMirror
+      entries:
+      - title: Haga que el volumen de destino sea modificable
+        url: "/storage/task-element-replication-make-destination-volume-writeable.html"
+      - title: Configure el volumen de destino para acceder a los datos
+        url: "/storage/concept-element-replication-configure-destination-volume-data-access.html"
+      - title: Vuelva a activar el volumen de origen original
+        url: "/storage/task-element-replication-reactivate-original-source-volume.html"
+    - title: Actualice manualmente una relación de replicación
+      url: "/storage/task-element-replication-update-replication-relationship-manually.html"
+    - title: Resincronice una relación de replicación
+      url: "/storage/task-element-replication-resynchronize-data-protection-relationship.html"
   - title: Realice backups y restaure volúmenes
     url: "/storage/task_data_protection_back_up_and_restore_volumes.html"
     entries:

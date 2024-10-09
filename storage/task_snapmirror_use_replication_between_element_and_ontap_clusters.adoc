@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: replication, snapmirror, data protection 
 summary: Las relaciones de SnapMirror se pueden crear en la pestaña Data Protection de la interfaz de usuario de NetApp Element. La funcionalidad de SnapMirror debe estar habilitada para poder verla en la interfaz de usuario de. 
 ---
-= Use la replicación de SnapMirror entre clústeres de Element y ONTAP
+= Usar replicación SnapMirror entre clústeres de Element y ONTAP (IU de Element)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -26,5 +26,5 @@ https://www.netapp.com/pdf.html?item=/media/17048-tr4641pdf.pdf["Informe técnic
 == Obtenga más información
 
 * https://www.netapp.com/pdf.html?item=/media/16991-tr4748pdf.pdf["Crear una estructura de datos con NetApp HCI, ONTAP e infraestructura convergente"^]
-* http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-sdbak/home.html["Replicación entre software de NetApp Element y ONTAP"^]
+* link:element-replication-index.html["Replicación entre software NetApp Element y ONTAP (CLI de ONTAP)"]
 

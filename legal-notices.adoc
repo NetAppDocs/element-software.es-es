@@ -65,6 +65,7 @@ Los archivos de notificación proporcionan información sobre los derechos de au
 * link:./media/mgmt-216.pdf["Aviso para servicios de gestión 2.16 (plugin de NetApp Element para vCenter Server 4.6.29)"^]
 * link:./media/mgmt-214.pdf["Aviso para servicios de gestión 2.14 (plugin de NetApp Element para vCenter Server 4.5.42)"^]
 * link:./media/mgmt-213.pdf["Aviso para servicios de gestión 2.13 (plugin de NetApp Element para vCenter Server 4.5.42)"^]
+* link:./media/storage_firmware_bundle_2.182.0_notices.pdf["Aviso para el paquete de firmware de almacenamiento 2.182.0"^]
 * link:./media/storage_firmware_bundle_2.175.0_notices.pdf["Aviso para el paquete de firmware de almacenamiento 2.175.0"^]
 * link:./media/storage_firmware_bundle_2.164.0_notices.pdf["Aviso para el paquete de firmware de almacenamiento 2.164.0"^]
 * link:./media/storage_firmware_bundle_2.150_notices.pdf["Aviso para el paquete de firmware de almacenamiento 2.150"^]

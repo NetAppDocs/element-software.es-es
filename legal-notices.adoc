@@ -52,6 +52,7 @@ Los archivos de notificación proporcionan información sobre los derechos de au
 * link:./media/mNode_12.7.pdf["Aviso para el nodo de gestión 12.7"^]
 * link:./media/Element_Software_12.5.pdf["Aviso sobre el software Element 12.5"^]
 * link:./media/mNode_12.5.pdf["Aviso para el nodo de gestión 12.5"^]
+* link:./media/mgmt_svcs_2.26_notice.pdf["Aviso para servicios de gestión 2.26.30 (complemento NetApp Element para VMware vCenter Server 5,4.1)"^]
 * link:./media/mgmt_svcs_2.25_notice.pdf["Aviso para servicios de gestión 2.25.42 (complemento NetApp Element para VMware vCenter Server 5,3.9)"^]
 * link:./media/mgmt_svcs_2.24_notice.pdf["Aviso para servicios de gestión 2.24.40 (complemento NetApp Element para VMware vCenter Server 5,2.12)"^]
 * link:./media/mgmt_svcs_2.23_notice.pdf["Aviso relativo a los servicios de gestión 2.23.64 (complemento NetApp Element para VMware vCenter Server 5.1.12)"^]

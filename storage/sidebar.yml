@@ -53,6 +53,8 @@ entries:
       url: "/storage/task_system_manage_cluster_enable_and_disable_encryption_for_a_cluster.html"
     - title: Establezca el umbral de ocupación del clúster
       url: "/storage/task_system_manage_cluster_set_the_cluster_full_threshold.html"
+    - title: Habilite y deshabilite Volume Load Balancing
+      url: "/storage/task_system_manage_cluster_volume_load_balancing.html"
     - title: Habilite y deshabilite el acceso al soporte
       url: "/storage/task_system_manage_cluster_enable_and_disable_support_access.html"
     - title: Gestione el banner de las condiciones de uso

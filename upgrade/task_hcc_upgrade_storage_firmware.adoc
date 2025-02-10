@@ -60,7 +60,12 @@ Esta 1 para obtener una matriz completa de firmware y firmware de controlador pa
 Esta 2 Si combina un clúster con una pesada carga de IOPS de escritura con una mayor hora de actualización del firmware, el tiempo de sincronización de datos aumentará.
 
 +
-Hacia esta versión 3, que comienza con Element 12.7, los nodos de almacenamiento SF2405 y SF9608 y los nodos FC FC0025 y SF-FCN-01 no son compatibles. Si se intenta actualizar uno de estos nodos a Element 12.7, se muestra un error que indica que este nodo no es compatible con Element 12.7.
+^3^ Los siguientes nodos no son compatibles. Si intenta actualizar uno de estos nodos a una versión de Element no compatible, se mostrará un error que indica que el nodo no es compatible con Element 12.x:
+
++
+** A partir de Element 12,8, SF4805, SF9605, SF19210 y SF38410 nodos de almacenamiento.
+** A partir de los nodos de almacenamiento Element 12.7, SF2405 y SF9608, y los nodos FC FC0025 y SF-FCN-01.
+
 
 * *Contrato de licencia para el usuario final (CLUF)*: A partir de los servicios de administración 2.20.69, debe aceptar y guardar el CLUF antes de utilizar la UI o API de control de cloud híbrido de NetApp para actualizar el firmware de almacenamiento:
 +

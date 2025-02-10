@@ -115,7 +115,7 @@ NOTE: Si necesita una NIC adicional para aislar el tráfico de almacenamiento, c
 
 == Configurar la sincronización de hora
 
-. Asegúrese de que la hora se haya sincronizado entre el nodo de gestión y el clúster de almacenamiento mediante NTP:
+. Compruebe que la hora se sincronice entre el nodo de gestión y el clúster de almacenamiento mediante NTP:
 
 
 

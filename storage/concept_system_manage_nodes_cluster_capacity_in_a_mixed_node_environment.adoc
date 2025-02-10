@@ -24,6 +24,15 @@ Según la versión del software Element, los siguientes nodos de almacenamiento 
 | Empezando por... | Nodo de almacenamiento no compatible... 
 
 
+| Elemento 12.8  a| 
+* SF4805
+* SF9605
+* SF19210
+* SF38410
+
+
+
+
 | Elemento 12.7  a| 
 * SF2405
 * SF9608
@@ -38,4 +47,4 @@ Según la versión del software Element, los siguientes nodos de almacenamiento 
 
 
 |===
-Si intenta actualizar uno de estos nodos a una versión de elemento no compatible, verá un error que indica que este nodo no es compatible con Element 12.x.
+Si intenta actualizar uno de estos nodos a una versión de elemento no compatible, se producirá un error que indica que Element 12.x.

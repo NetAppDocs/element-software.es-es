@@ -19,6 +19,7 @@ Puede configurar ajustes como el umbral de ocupación del clúster, el acceso de
 * xref:concept_data_manage_vvol_work_virtual_volumes.adoc[Trabaje con volúmenes virtuales]
 * xref:task_snapmirror_use_replication_between_element_and_ontap_clusters.adoc[Use la replicación de SnapMirror entre clústeres de Element y ONTAP]
 * xref:task_system_manage_cluster_set_the_cluster_full_threshold.adoc[Establezca el umbral de ocupación del clúster]
+* xref:task_system_manage_cluster_volume_load_balancing.adoc[Habilite y deshabilite Volume Load Balancing]
 * xref:task_system_manage_cluster_enable_and_disable_support_access.adoc[Habilite y deshabilite el acceso al soporte]
 * https://kb.netapp.com/Advice_and_Troubleshooting/Flash_Storage/SF_Series/How_are_the_blockSpace_thresholds_calculated_for_Element["Cómo se calculan los umbrales de blockSpace para el elemento"]
 * xref:task_system_manage_cluster_enable_and_disable_encryption_for_a_cluster.adoc[Habilite y deshabilite el cifrado de un clúster]
@@ -27,8 +28,8 @@ Puede configurar ajustes como el umbral de ocupación del clúster, el acceso de
 * xref:concept_system_manage_snmp_manage_snmp.adoc[Gestionar SNMP]
 * xref:concept_system_manage_drives_managing_drives.adoc[Gestionar unidades]
 * xref:concept_system_manage_nodes_manage_nodes.adoc[Gestione los nodos]
-* xref:concept_system_manage_virtual_manage_virtual_networks.adoc[Gestionar redes virtuales]
 * xref:task_system_manage_fc_view_fibre_channel_ports_details.adoc[Ver detalles de los puertos Fibre Channel]
+* xref:concept_system_manage_virtual_manage_virtual_networks.adoc[Gestionar redes virtuales]
 
 
 

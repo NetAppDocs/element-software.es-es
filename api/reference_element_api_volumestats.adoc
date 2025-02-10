@@ -27,6 +27,7 @@ Es posible usar los siguientes métodos para obtener objetos volumeStats de algu
 
 Este objeto contiene los siguientes miembros:
 
+[cols="20,50,15,15"]
 |===
 | Nombre | Descripción | Cálculo | Tipo 
 
@@ -231,6 +232,33 @@ La duración del período de la muestra, en milisegundos.
 N.A.
  a| 
 entero
+
+
+
+ a| 
+SliceIopsStats
+ a| 
+Las estadísticas de uso de I/O de un volumen. Disponible a partir del elemento 12,8. Valores posibles para sliceIopsStats:
+
+* LargeStatistics: Las estadísticas de I/O para el volumen medido durante un período de tiempo más largo, generalmente las últimas 24 horas.
+* SmallStatistics: Las estadísticas de I/O para el volumen medido durante un período de tiempo más corto, generalmente la última hora.
+
+
+Valores posibles para largeStatistics y smallStatistics:
+
+* AverageReadIops: El promedio de IOPS de lectura para el volumen.
+* AverageTotalIops: El promedio de IOPS total (lectura + escritura) para el volumen.
+* AverageWriteIops: El promedio de IOPS de escritura para el volumen.
+* NSamples: El número de muestras incluidas en el cálculo estadístico.
+* PeakReadIops: El número máximo de IOPS de lectura observado durante un intervalo estadístico.
+* PeakTotalIops: El número máximo de IOPS observado durante un intervalo estadístico.
+* PeakWriteIops: El número máximo de IOPS de escritura observado en un intervalo estadístico.
+* SliceID: ID de volumen o ID de segmento
+
+ a| 
+Momento específico
+ a| 
+Objeto JSON
 
 
 

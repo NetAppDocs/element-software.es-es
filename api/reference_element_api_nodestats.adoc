@@ -123,6 +123,21 @@ entero
 
 
  a| 
+NodeHeat
+ a| 
+Información de utilización de nodos. Disponible a partir del elemento 12,8. Miembros:
+
+* PrimaryTotalHeat: Número total de IOPS principal de nodo / tasa de IOPS configurada por nodo promediada en 24 horas
+* RecentPrimaryTotalHeat: Tasa total de IOPS principal de nodo/IOPS configurada por nodo promediada en una hora
+* RecentTotalHeat: IOPS total de nodo/IOPS configuradas en nodo promediado durante una hora
+* TotalHeat: IOPS totales de nodo/IOPS configuradas por nodo promediado en 24 horas
+
+ a| 
+Objeto JSON
+
+
+
+ a| 
 ReadLatencyUSectotal
  a| 
 El valor monotónicamente aumenta del tiempo total dedicado a realizar operaciones de lectura en el nodo.

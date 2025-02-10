@@ -1,0 +1,90 @@
+---
+permalink: api/reference_element_api_disablefeature.html 
+sidebar: sidebar 
+keywords: SNMP,disable,disabling,DisableFeature,vvols,virtual volumes 
+summary: Puede usar el método DisableFeature para deshabilitar VolumeLoadBalanceOnActualIOPS. 
+---
+= DisableFeature
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el `DisableFeature` método para desactivar la `VolumeLoadBalanceOnActualIOPS` función. `VolumeLoadBalanceOnActualIOPS` está desactivado de forma predeterminada.
+
+[NOTE]
+====
+Si intenta deshabilitar otra función, como VVol, aparece el siguiente mensaje de error:
+
+[listing]
+----
+{"error":{"code":500,"message":"VolumeLoadBalanceOnActualIOPS is the only feature that can be disabled","name":"xAPINotPermitted"},"id":null}
+----
+====
+
+
+== Parámetro
+
+Este método tiene el siguiente parámetro de entrada.
+
+[cols="1a,3a,1a,1a,1a"]
+|===
+| Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
+
+
+ a| 
+función
+ a| 
+Deshabilitar una función de clúster. El posible valor es:
+
+* `VolumeLoadBalanceOnActualIOPS`: Deshabilite el equilibrio de segmentos en IOPS real en lugar de Min IOPS.
+
+ a| 
+cadena
+ a| 
+Ninguno
+ a| 
+Sí
+
+|===
+
+
+== Valor de retorno
+
+Este método no tiene valores devueltos.
+
+
+
+== Ejemplo de solicitud
+
+Las solicitudes de este método son similares al ejemplo siguiente:
+
+[listing]
+----
+{
+  "method": "DisableFeature",
+    "params": {
+        "feature" : "VolumeLoadBalanceOnActualIOPS"
+    },
+    "id": 1
+}
+----
+
+
+== Ejemplo de respuesta
+
+Este método devuelve una respuesta similar al siguiente ejemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {}
+}
+----
+
+
+== Nuevo desde la versión
+
+12,8

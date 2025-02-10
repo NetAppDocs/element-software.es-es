@@ -19,6 +19,7 @@ Puede utilizar el `GetFeatureStatus` método para recuperar el estado de una fun
 
 Este método tiene el siguiente parámetro de entrada:
 
+[cols="1a,3a,1a,1a,1a"]
 |===
 | Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
 
@@ -28,10 +29,11 @@ función
  a| 
 El estado de una función de clúster. Si no se proporciona ningún valor, el sistema devuelve el estado de todas las características. Los posibles valores son los siguientes:
 
-* Vvols: Recupere el estado de la función de clúster VVol.
-* SnapMirror: Recupere el estado de la función de clúster de replicación de SnapMirror.
-* FIPS: Recupere el estado del cifrado FIPS 140-2 para la función de comunicación HTTPS.
-* FipsDrives: Recupere el estado de la función de cifrado de unidades FIPS 140-2-2.
+* `Vvols`: Recuperar el estado de la función de clúster VVol.
+* `SnapMirror`: Recuperar el estado de la función de cluster de replicación de SnapMirror.
+* `Fips`: Recuperar el estado para el cifrado FIPS 140-2 para la función de comunicación HTTPS.
+* `FipsDrives`: Recuperar el estado de la función de cifrado de la unidad FIPS 140-2.
+* `VolumeLoadBalanceOnActualIOPS`: Recuperar el estado para el equilibrio de segmentos en IOPS real en lugar de la función Min IOPS. Disponible a partir del elemento 12,8.
 
  a| 
 cadena
@@ -105,6 +107,10 @@ Este método devuelve una respuesta similar al siguiente ejemplo:
             {
                 "enabled": true,
                 "feature": "FipsDrives"
+            },
+            {
+                "enabled": true,
+                "feature": "VolumeLoadBalanceOnActualIOPS"
             }
         ]
     }

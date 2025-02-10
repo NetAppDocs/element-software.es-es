@@ -21,7 +21,6 @@ Puede ver detalles de nodos individuales, como etiquetas de servicio, detalles d
 +
 ** *ID de nodo*: El ID generado por el sistema para el nodo.
 ** *Nombre de nodo*: El nombre de host del nodo.
-** *iops 4k* disponible: IOPS configuradas para el nodo.
 ** *Función de nodo*: La función que tiene el nodo en el clúster. Los posibles valores son los siguientes:
 +
 *** Cluster Master: El nodo que realiza tareas administrativas para todo el clúster y contiene la MVIP y la SVIP.
@@ -31,6 +30,7 @@ Puede ver detalles de nodos individuales, como etiquetas de servicio, detalles d
 
 ** *Tipo de nodo*: Tipo de modelo del nodo.
 ** *Active Drives*: Número de unidades activas en el nodo.
+** *Utilización de Nodos*: El porcentaje de utilización de nodos basado en nodeHeat. El valor mostrado es recentPrimaryTotalHeat como porcentaje. Disponible a partir del elemento 12,8.
 ** *IP de administración*: La dirección IP de administración (MIP) asignada al nodo para las tareas de administración de red de 1 GbE o 10 GbE.
 ** *IP de clúster*: La dirección IP de clúster (CIP) asignada al nodo utilizado para la comunicación entre nodos del mismo clúster.
 ** *IP de almacenamiento*: La dirección IP de almacenamiento (SIP) asignada al nodo utilizado para la detección de redes iSCSI y todo el tráfico de red de datos.
@@ -39,6 +39,7 @@ Puede ver detalles de nodos individuales, como etiquetas de servicio, detalles d
 ** *Versión*: La versión del software que se ejecuta en cada nodo.
 ** *Puerto de replicación*: El puerto utilizado en los nodos para la replicación remota.
 ** *Etiqueta de servicio*: El número de etiqueta de servicio exclusivo asignado al nodo.
+** *Dominio de protección personalizado*: El Dominio de protección personalizado asignado al nodo.
 
 
 

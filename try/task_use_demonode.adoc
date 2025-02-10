@@ -133,6 +133,4 @@ El nodo de demostración de Element está disponible para voluntariado con el me
 
 == Obtenga más información
 
-* https://www.netapp.com/data-storage/solidfire/documentation/["Página de recursos de almacenamiento all-flash de SolidFire"^]
-* https://mysupport.netapp.com/site/tools/tool-eula/element-demonode/download["Página de descarga del nodo de demostración de Element (se requiere inicio de sesión)"^]
-
+https://mysupport.netapp.com/site/tools/tool-eula/element-demonode/download["Página de descarga del nodo de demostración de Element (se requiere inicio de sesión)"^]

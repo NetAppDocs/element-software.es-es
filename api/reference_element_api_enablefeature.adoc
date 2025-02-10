@@ -22,6 +22,7 @@ Este método tiene el siguiente parámetro de entrada.
 
 NOTE: Para los sistemas que ejecutan el software Element 11.x, al habilitar Virtual Volumes o después de establecer la supervisión de dominios de protección, la función de dominios de protección del clúster solo opera en el nivel del nodo.
 
+[cols="1a,3a,1a,1a,1a"]
 |===
 | Nombre | Descripción | Tipo | Valor predeterminado | Obligatorio 
 
@@ -34,6 +35,7 @@ Habilite una función de clúster. Los posibles valores son los siguientes:
 * `fips`: Habilite el cifrado certificado FIPS 140-2 para las comunicaciones HTTPS.
 * `FipsDrives`: Habilite el soporte de unidades FIPS 140-2 para el clúster de almacenamiento.
 * `SnapMirror`: Active la función de clúster de replicación de SnapMirror.
+* `VolumeLoadBalanceOnActualIOPS`: Habilite el equilibrio de segmentos en IOPS real en lugar de Min IOPS. Disponible a partir del elemento 12,8.
 * `vvols`: Active la función de clúster VVols del software Element.
 
  a| 

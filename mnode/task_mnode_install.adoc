@@ -18,7 +18,7 @@ Puede instalar manualmente el nodo de gestión para el clúster que ejecuta el s
 
 Este proceso manual está dirigido a administradores de almacenamiento all-flash de SolidFire que no utilizan el motor de puesta en marcha de NetApp para la instalación de nodos de gestión.
 
-.Lo que necesitará
+.Antes de empezar
 * La versión del clúster ejecuta el software NetApp Element 11.3 o una versión posterior.
 * En la instalación utiliza IPv4. El nodo de gestión 11.3 no admite IPv6.
 +
@@ -53,21 +53,15 @@ NOTE: Si necesita compatibilidad con IPv6, se puede usar el nodo de gestión 11.
 .Acerca de esta tarea
 El nodo de gestión Element 12.2 es una actualización opcional. No es necesario para las puestas en marcha existentes.
 
-Antes de seguir este procedimiento, debe tener conocimientos de link:../concepts/concept_solidfire_concepts_volumes.html#persistent-volumes["Volúmenes persistentes"] y si desea usarlos o no. Los volúmenes persistentes son opcionales, pero se recomienda para la recuperación de datos de configuración del nodo de gestión en caso de pérdida de una máquina virtual (VM).
-
-.Pasos
-. <<Descargue ISO o OVA e implemente la VM>>
-. <<create_mnode_admin,Cree el administrador del nodo de gestión y configure la red>>
-. <<Configurar la sincronización de hora>>
-. <<Configure el nodo de gestión>>
-. <<Configurar activos de controladora>>
+Antes de seguir este procedimiento, debe tener un conocimiento de link:../concepts/concept_solidfire_concepts_volumes.html#persistent-volumes["Volúmenes persistentes"]si desea o no usarlos. Los volúmenes persistentes son opcionales, pero se recomienda para la recuperación de datos de configuración del nodo de gestión en caso de pérdida de una máquina virtual (VM).
 
 
 
+== Paso 1: Descargar ISO o OVA e implementar la VM
 
-== Descargue ISO o OVA e implemente la VM
+Descargue el ISO o OVA adecuado desde el sitio de soporte de NetApp e instale la máquina virtual.
 
-. Descargue el OVA o ISO para su instalación desde link:https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab["Software Element"^] En el sitio de soporte de NetApp.
+. Descargue el OVA o ISO para la instalación desde link:https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab["Software Element"^]la página del sitio de soporte de NetApp. El nuevo OVA contiene un certificado SSL actualizado.
 +
 .. Seleccione *Descargar la versión más reciente* y acepte el EULA.
 .. Seleccione la imagen del nodo de gestión que desea descargar.
@@ -111,8 +105,11 @@ NOTE: La instalación de un nodo de gestión con la imagen puede provocar un ret
 
 
 
-== Cree el administrador del nodo de gestión y configure la red
+== Paso 2: Cree el administrador del nodo de gestión y configure la red
 
+Una vez finalizada la instalación de la máquina virtual, cree el usuario administrador del nodo de gestión y configure la red del nodo de gestión.
+
+.Pasos
 . Con la interfaz de usuario de terminal (TUI), cree un usuario administrador del nodo de gestión.
 +
 
@@ -139,13 +136,16 @@ NOTE: Si necesita una NIC adicional para aislar el tráfico de almacenamiento, c
 
 
 
-== Configurar la sincronización de hora
+== Paso 3: Configure la sincronización de tiempo
 
-. Asegúrese de que la hora se haya sincronizado entre el nodo de gestión y el clúster de almacenamiento mediante NTP:
+Antes de configurar el nodo de gestión, sincronice la hora entre el nodo de gestión y el clúster de almacenamiento.
+
+.Pasos
+. Compruebe que la hora se sincronice entre el nodo de gestión y el clúster de almacenamiento mediante NTP:
 
 
 
-NOTE: A partir del elemento 12.3.1, los subpasos (a) a (e) se realizan automáticamente. Para el nodo de gestión 12.3.1, vaya a. <<substep_f_install_config_time_sync,subpaso (f)>> para completar la configuración de sincronización de tiempo.
+NOTE: A partir del elemento 12.3.1, los subpasos (a) a (e) se realizan automáticamente. Para el nodo de gestión 12,3.1, continúe <<substep_f_install_config_time_sync,subpaso (f)>>a completar la configuración de sincronización de hora.
 
 . Inicie sesión en el nodo de gestión mediante SSH o la consola proporcionada por su hipervisor.
 . Stop NTPD:
@@ -216,8 +216,11 @@ NOTE: No edite el NTP después de completar la configuración de sincronización
 
 
 
-== Configure el nodo de gestión
+== Paso 4: Configure el nodo de gestión
 
+Configure el nodo de gestión con `setup-mnode` el comando.
+
+.Pasos
 . Configure y ejecute el comando de configuración del nodo de gestión:
 +
 
@@ -279,8 +282,11 @@ NOTE: Utilice un nombre de cuenta único para volúmenes persistentes que sean d
 
 
 
-== Configurar activos de controladora
+== Paso 5: Configurar los activos del controlador
 
+Localice el ID de instalación y añada un activo de controladora de vCenter.
+
+.Pasos
 . Busque el ID de instalación:
 +
 .. Desde un explorador, inicie sesión en la API DE REST del nodo de gestión:
@@ -336,7 +342,8 @@ NOTE: Debe crear un nuevo rol HCC de NetApp en vCenter para añadir un subsistem
 
 
 
-[discrete]
+
+
 == Obtenga más información
 
 * link:../concepts/concept_solidfire_concepts_volumes.html#persistent-volumes["Volúmenes persistentes"]

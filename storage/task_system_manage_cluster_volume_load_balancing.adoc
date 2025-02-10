@@ -1,0 +1,43 @@
+---
+permalink: storage/task_system_manage_cluster_volume_load_balancing.html 
+sidebar: sidebar 
+keywords: cluster, volume, volumes, load, balancing, actual, IOPS 
+summary: A partir de Element 12,8, puede habilitar Volume Load Balancing para equilibrar los volúmenes entre nodos según el IOPS real de cada volumen en lugar de las IOPS mínimas configuradas en la política de calidad de servicio. 
+---
+= Habilite y deshabilite Volume Load Balancing
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A partir de Element 12,8, se puede usar la función Volume Load Balancing para equilibrar los volúmenes entre nodos según el IOPS real de cada volumen en lugar de las IOPS mínimas configuradas en la política de calidad de servicio. Es posible habilitar y deshabilitar Volume Load Balancing, que se deshabilita de manera predeterminada, mediante la interfaz de usuario o la API de Element.
+
+.Pasos
+. Selecciona *Clúster* > *Ajustes*.
+. En la sección Específico de Cluster, cambie el estado para Volume Load Balancing:
++
+[role="tabbed-block"]
+====
+.Habilite equilibrio de carga de volumen
+--
+Seleccione *Activar equilibrio de carga en IOPS real* y confirme su selección.
+
+--
+.Deshabilitar equilibrio de carga de volumen:
+--
+Seleccione *Deshabilitar el equilibrio de carga en IOPS real* y confirme su selección.
+
+--
+====
+. Opcionalmente, selecciona *Informes* > *Descripción general* para confirmar el cambio de estado del saldo en IOPS reales. Puede que tenga que desplazarse por la información de estado del clúster para ver el estado.
+
+
+
+
+== Obtenga más información
+
+* link:../api/reference_element_api_enablefeature.html["Habilite Volume Load Balancing mediante la API"]
+* https://docs.netapp.com/us-en/element-software/api/reference_element_api_disablefeature.html["Deshabilite Volume Load Balancing mediante la API"]
+* link:../hccstorage/task-hcc-qos-policies.html["Cree y gestione políticas de calidad de servicio de volúmenes"]
+

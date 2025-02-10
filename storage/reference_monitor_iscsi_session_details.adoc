@@ -55,6 +55,10 @@ La dirección IP del nodo donde se aloja el volumen.
 +
 El IQN del volumen.
 
+* *CHAP*
++
+El algoritmo de CHAP para una sesión iSCSI. Si no se utiliza un algoritmo CHAP, se muestra un guión (-). Disponible a partir del elemento 12,8.
+
 * *Creado el*
 +
 La fecha en la que se estableció la sesión.

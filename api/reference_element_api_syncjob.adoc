@@ -30,7 +30,7 @@ BlocksPerSecond
  a| 
 La cantidad de bloques de datos que se transfieren por segundo del clúster de origen al clúster de destino. Presente sólo si el miembro del tipo está establecido en remoto.
  a| 
-flotante
+entero
 
 
 
@@ -97,7 +97,7 @@ Elatiempo
  a| 
 El tiempo transcurrido en segundos desde que se inició el trabajo de sincronización.
  a| 
-flotante
+flotante o entero según el tipo de operación de sincronización
 
 
 
@@ -124,7 +124,7 @@ Porcentaje completado
  a| 
 El porcentaje de finalización del trabajo de sincronización.
  a| 
-entero
+flotante o entero según el tipo de operación de sincronización
 
 
 
@@ -133,7 +133,7 @@ RemasterHora
  a| 
 El tiempo estimado en segundos para completar la operación.
  a| 
-entero
+flotante
 
 
 

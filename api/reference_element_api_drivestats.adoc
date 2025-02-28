@@ -51,6 +51,15 @@ entero
 
 
  a| 
+IosInProgress
+ a| 
+La cantidad de I/O de esta unidad que se encuentran en curso.
+ a| 
+entero
+
+
+
+ a| 
 VidaRemainPercent
  a| 
 Indicador de desgaste de los medios de la unidad.
@@ -87,9 +96,36 @@ entero
 
 
  a| 
+lecturas
+ a| 
+El número de llamadas de lectura () por segundo a esta unidad.
+ a| 
+entero
+
+
+
+ a| 
 ReadBytes
  a| 
 Bytes totales leídos desde la unidad debido a operaciones del cliente.
+ a| 
+entero
+
+
+
+ a| 
+ReadsCombined
+ a| 
+El número de llamadas read() a sectores adyacentes que podrían combinarse en una lectura más grande.
+ a| 
+entero
+
+
+
+ a| 
+ReadMseg
+ a| 
+Núm. De milisegundos que se han empleado en la lectura.
  a| 
 entero
 
@@ -168,9 +204,36 @@ entero
 
 
  a| 
+escrituras
+ a| 
+El número de llamadas write() por segundo a esta unidad.
+ a| 
+entero
+
+
+
+ a| 
 Bytes de escritura
  a| 
 Bytes totales escritos en la unidad debido a la actividad del cliente.
+ a| 
+entero
+
+
+
+ a| 
+WritesCombined
+ a| 
+El número de llamadas write() a sectores adyacentes que podrían combinarse en una escritura más grande.
+ a| 
+entero
+
+
+
+ a| 
+Escritura en segundo plano
+ a| 
+Número de milisegundos dedicados a escribir.
  a| 
 entero
 
@@ -189,3 +252,5 @@ entero
 == Obtenga más información
 
 xref:reference_element_api_getdrivestats.adoc[GetDriveStats]
+
+ // 2025 FEB 27, DOC-4778

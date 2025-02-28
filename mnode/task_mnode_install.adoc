@@ -61,6 +61,7 @@ Antes de seguir este procedimiento, debe tener un conocimiento de link:../concep
 
 Descargue el ISO o OVA adecuado desde el sitio de soporte de NetApp e instale la máquina virtual.
 
+.Pasos
 . Descargue el OVA o ISO para la instalación desde link:https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab["Software Element"^]la página del sitio de soporte de NetApp. El nuevo OVA contiene un certificado SSL actualizado.
 +
 .. Seleccione *Descargar la versión más reciente* y acepte el EULA.

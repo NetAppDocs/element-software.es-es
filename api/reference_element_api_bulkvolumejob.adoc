@@ -114,8 +114,8 @@ entero
 El estado de la operación. Los posibles valores son los siguientes:
 
 * preparando
-* activo
-* listo
+* ejecutando
+* completado
 * error
 
  a| 

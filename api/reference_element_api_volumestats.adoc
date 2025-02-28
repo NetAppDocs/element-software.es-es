@@ -99,17 +99,6 @@ entero
 
 
  a| 
-ClusterUtilización
- a| 
-La cantidad de capacidad de clúster que se está utilizando.
- a| 
-N.A.
- a| 
-flotante
-
-
-
- a| 
 DesiredMetadataHosts
  a| 
 Los servicios de metadatos (slice) que se están migrando a si los metadatos del volumen se migran entre los servicios de metadatos. Un valor "nulo" significa que el volumen no se está migrando.
@@ -144,6 +133,17 @@ Los servicios de metadatos (slice) en los que reside los metadatos del volumen. 
 N.A.
  a| 
 Objeto JSON
+
+
+
+ a| 
+IOPS normalizadas
+ a| 
+Número medio de IOPS para todo el clúster en los últimos 500 milisegundos.
+ a| 
+Momento específico
+ a| 
+entero
 
 
 

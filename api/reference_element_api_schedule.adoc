@@ -150,7 +150,20 @@ entero
  a| 
 Info. De Lac
  a| 
-Incluye el nombre único que se le asignó a la programación, el período de retención de la snapshot que se creó y el ID de volumen del volumen a partir del cual se creó la copia de Snapshot.
+Incluye el nombre único que se le asignó a la programación, el período de retención de la snapshot que se creó y el ID de volumen del volumen a partir del cual se creó la copia de Snapshot. Valores válidos:
+
+* `enableRemoteReplication`: Indica si la instantánea debe incluirse en la replicación remota. (booleano)
+* `ensureSerialCreation`: Especifica si se debe permitir la creación de una nueva instantánea si se está realizando una replicación de instantánea anterior. (booleano)
+* `name`: El nombre de la instantánea que se va a utilizar. (cadena)
+* `retention`: La cantidad de tiempo que se retiene la instantánea. Dependiendo de la hora, se muestra en uno de los siguientes formatos:
++
+** fifo: La instantánea se conserva por primera vez en la primera salida (FIFO). Si está vacío, la copia de Snapshot se conserva siempre. (cadena)
+** HH:mm:ss
+
+
+* `volumeID`: El ID del volumen que se incluirá en la instantánea. (entero)
+* `volumes`: Lista de ID de volumen que se incluirán en la instantánea de grupo. (matriz entera)
+
  a| 
 Objeto JSON
 

@@ -61,9 +61,13 @@ NOTE: Se necesita una cuenta de administrador de clúster local (que no sea LDAP
 
 
 +
+[NOTE]
+====
+Todos los permisos están disponibles para el tipo de acceso del administrador.
 
-NOTE: Todos los permisos están disponibles para el tipo de acceso del administrador.
+Existen tipos de acceso disponibles a través de la API que no están disponibles en la interfaz de usuario de Element.
 
+====
 +
 ** *Tipo*: El tipo de administrador de clúster. Los posibles valores son los siguientes:
 +
@@ -152,12 +156,9 @@ Es posible usar la interfaz de usuario de Element para cambiar las contraseñas 
 . Haga clic en *Guardar cambios*.
 
 
-
-
-== Obtenga más información
-
+.Información relacionada
+* link:../api/reference_element_api_app_b_access_control.html["Obtenga más información sobre los tipos de acceso disponibles para las API de Element"]
 * link:task_system_manage_enable_ldap_authentication.html["Habilite la autenticación de LDAP con la interfaz de usuario de Element"]
 * link:concept_system_manage_manage_ldap.html["Deshabilite LDAP"]
-* https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]
 * https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
 

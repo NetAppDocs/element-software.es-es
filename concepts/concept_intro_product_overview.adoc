@@ -41,7 +41,5 @@ link:../concepts/concept_solidfire_concepts_solidfire_architecture_overview.html
 
 == Obtenga más información
 
-* https://www.netapp.com/data-storage/solidfire/["Información general sobre el almacenamiento all-flash de SolidFire"^]
-* https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]
 * https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
 

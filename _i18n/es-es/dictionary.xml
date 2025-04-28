@@ -1675,7 +1675,6 @@
   <block id="f3bac24ec8b72ab99e38f7ecb167cc25" category="paragraph">Elija esta opción si ha * actualizado secuencialmente* (1) su versión de servicios de administración y (2) su versión de almacenamiento de Element y desea *mantener* su nodo de gestión existente:</block>
   <block id="1edc36bdf08bca8bac4f78d104c92780" category="admonition">Si no actualiza secuencialmente los servicios de gestión seguidos por el almacenamiento de Element, no se puede volver a configurar la autenticación mediante este procedimiento. Siga en su lugar el procedimiento de actualización adecuado.</block>
   <block id="2a67edcd39483da3b7c2244d1a853ca7" category="section-title">Actualice un nodo de gestión a la versión 12.5 o posterior desde la versión 12.3.x o posterior</block>
-  <block id="00986f242d79556b370e046857ac478c" category="paragraph">Puede realizar una actualización sin movimiento del nodo de gestión desde la versión 12.3.x o posterior a la versión 12.5 o posterior sin necesidad de aprovisionar una nueva máquina virtual del nodo de gestión.</block>
   <block id="162101c4a12e19388bdcdc0495ccc2ae" category="admonition">El nodo de gestión de Element 12.5 o posterior es una actualización opcional. No es necesario para las puestas en marcha existentes.</block>
   <block id="ec29698b029ebdc0e8d965b404b70339" category="list-text">La RAM de la máquina virtual del nodo de gestión es 24 GB.</block>
   <block id="cd847f70c9955e37a7a701eee9f2cd67" category="list-text">El nodo de gestión que pretende actualizar es la versión 12.0 y utiliza redes IPv4. La versión 12.5 o posterior del nodo de gestión no admite IPv6.</block>
@@ -1686,9 +1685,7 @@
   <block id="4733d6f93dbca188e79e25900eaeacb7" category="list-text">Ha configurado un adaptador de red adicional (si es necesario) utilizando las instrucciones para <block ref="1f5ebd4d6fe6b214007c2692b1a22cfb" category="inline-link-macro-rx"></block>.</block>
   <block id="97badad042e3a18dd496d204994f3a2f" category="admonition">Es posible que los volúmenes persistentes requieran un adaptador de red adicional si eth0 no se puede enrutar a la SVIP. Configure un nuevo adaptador de red en la red de almacenamiento iSCSI para permitir la configuración de volúmenes persistentes.</block>
   <block id="b529479350602e9be1d9caa1838edb9b" category="list-text">Los nodos de almacenamiento ejecutan Element 12.3.x o una versión posterior.</block>
-  <block id="1a6ffd97834fd7495156f52f3058e50b" category="list-text">Inicie sesión en la máquina virtual del nodo de gestión mediante SSH o el acceso de consola.</block>
   <block id="303c7d52b5c18e714947ecd4996594a2" category="inline-link">Nodo de gestión ISO</block>
-  <block id="bc6733dc102d98376848617102ed0352" category="list-text">Descargue el<block ref="ef86b20d3f4c031a449af5dec98fb6d8" category="inline-link-rx"></block> Para el software Element, desde el sitio de soporte de NetApp hasta la máquina virtual del nodo de gestión.</block>
   <block id="e097e26564fa470c938b5aa9cb375497" category="admonition">El nombre de la ISO es similar a.<block ref="6d2621b65437e9daea4c85caf8ee22ac" prefix=" " category="inline-code"></block></block>
   <block id="7af3e8bcf74bc743e6d42428a1ef8e84" category="list-text">Compruebe la integridad de la descarga. Para ello, ejecute md5sum en el archivo descargado y compare el resultado con lo que está disponible en el sitio de soporte de NetApp para el software Element, como en el siguiente ejemplo:</block>
   <block id="4e82f8cfbdbaab82d0c8c7e65d59b756" category="paragraph"><block ref="b2c4a82594dbf4c4ad269ec26ad77e05" prefix="" category="inline-code"></block></block>
@@ -2041,8 +2038,6 @@
   <block id="6bac9874bf1ac47d5ed430aed14ed2f9" category="list-text">Los clústeres se reequilibran automáticamente cuando se agregan o se quitan nodos</block>
   <block id="cc9d5c6e43509b7b512cd8106b62cef6" category="inline-link-macro">Información general de la arquitectura de almacenamiento all-flash de SolidFire</block>
   <block id="ce772989c5b639e2ddb875f41c132379" category="paragraph"><block ref="ce772989c5b639e2ddb875f41c132379" category="inline-link-macro-rx"></block></block>
-  <block id="e2291d0b9bc2d41bc343cf77cf0a1a87" category="inline-link">Información general sobre el almacenamiento all-flash de SolidFire</block>
-  <block id="e2c85d417b263e570fcb0b7027cad0ba" category="list-text"><block ref="e2c85d417b263e570fcb0b7027cad0ba" category="inline-link-rx"></block></block>
   <block id="b3f529035f6db885057f0dc4c4efa093" category="summary">Los nodos son elementos de hardware que se agrupan en un clúster para poder acceder a ellos como recursos de computación o almacenamiento basado en bloques.</block>
   <block id="187c6ad3a74cc93ac6c2229d398e383e" category="doc">Nodos</block>
   <block id="9573422b361212c3546eb0d97b1126c1" category="paragraph">Los nodos son recursos virtuales o de hardware que se agrupan en un clúster para proporcionar funcionalidades de computación y almacenamiento basado en bloques.</block>
@@ -12357,11 +12352,8 @@
   <block id="b036ebb7aa6b63db449d4df71f28c3cd" category="section-title">Paso 1: Actualice la versión del hardware de la VM en un nodo de gestión</block>
   <block id="6bdecd9b5d3ab973ac36df911f986fc3" category="paragraph">Si va a realizar una actualización in situ de un nodo de gestión existente a Element 12,8, antes de actualizar, debe asegurarse de que la versión de hardware de máquina virtual del nodo de gestión sea compatible con ESXi 6,7 (versión 14 de hardware de máquina virtual) o posterior según el entorno.</block>
   <block id="da356a9209429c8cb4f06565d719d2b8" category="list-text">Inicie sesión en vSphere Web Client como administrador de vCenter.</block>
-  <block id="7936b082e6a3d2167a2478cee0772514" category="list-text">En el menú del cliente de vSphere, seleccione *VMs* &gt; *Templates*.</block>
-  <block id="ad4062bf296d686c04c351f026e2400d" category="list-text">Haga clic con el botón derecho del ratón en la máquina virtual y seleccione *Compatibilidad* &gt; *Actualizar compatibilidad de VM*.</block>
   <block id="cf8716d5690805e881fbd8fa22fb282a" category="list-text">Seleccione ESXi 6,7 o una versión posterior, según la versión del entorno de vSphere.</block>
   <block id="3d1c64d2c8b1e4058225a78c3ef09fa6" category="list-text">Seleccione *OK*.</block>
-  <block id="43c3c8c2f75e6064714e6ec942f1e916" category="list-text">Una vez completada la actualización, seleccione *Vsphere client refresh* y verifique que la compatibilidad de VM esté en la versión deseada.</block>
   <block id="6b17900bf8b7a52b1be75bbe68b2d77e" category="section-title">Paso 2: Actualice un nodo de gestión a Element 12,5 o una versión posterior</block>
   <block id="d5bdcd035d3751961b201dd1c2261aa3" category="paragraph">Elija una de las siguientes opciones de actualización:</block>
   <block id="8c5a891df58bfda1762ec23302a952b6" category="sidebar">Un sistema de almacenamiento all-flash SolidFire consta de componentes de hardware como unidades y nodos que se combinan en un pool de recursos de almacenamiento. Mediante la interfaz de Element, la API u otras herramientas de gestión, puede gestionar estos clústeres de recursos de almacenamiento con el software NetApp Element. Este sitio incluye documentación para el software Element 12,8.</block>
@@ -12393,4 +12385,13 @@
   <block id="e3ae42684db77c59ef80c04aae526de5" category="paragraph"><block ref="e3ae42684db77c59ef80c04aae526de5" category="inline-link-macro-rx"></block></block>
   <block id="f72c81a1158d9efb9bad238e3c497a6c" category="inline-link-macro">Obtenga más información sobre los tipos de acceso disponibles para las API de Element</block>
   <block id="c858f3d30df8c552799df529153c0e44" category="list-text"><block ref="c858f3d30df8c552799df529153c0e44" category="inline-link-macro-rx"></block></block>
+  <block id="6e93fbac14e98fd4eee5f4f560e1d580" category="list-text">En el menú del cliente de vSphere, seleccione *VMs and Templates*.</block>
+  <block id="be19667c20f2f3c6b932b48a9c488774" category="list-text">Haga clic con el botón derecho en la máquina virtual (VM) y seleccione *Power* &gt; *Shut Down Guest OS*.</block>
+  <block id="6f5f678ae471ecc070cea185b3d40ed4" category="paragraph">Espere hasta que la máquina virtual se apague.</block>
+  <block id="b58c4fe6ac8a2dffa0fb94c9d1de7556" category="list-text">Haga clic con el botón derecho del ratón en la VM y seleccione *Compatibilidad* &gt; *Actualizar compatibilidad de VM*.</block>
+  <block id="eeb196c0a77fbb85f8908ae3cca16bfc" category="list-text">Una vez completada la actualización, haga clic con el botón derecho en la VM y seleccione *Power* &gt; *Power On*.</block>
+  <block id="917268d8045dd1bb18e5f8cc7caf9359" category="list-text">Seleccione *Vsphere client refresh* y verifique que la compatibilidad de VM esté en la versión deseada.</block>
+  <block id="a879c8e657832d392ef358d2440c3faf" category="paragraph">Puede realizar una actualización in situ del nodo de gestión desde la versión 12,3.x o posterior a la versión 12,5 o posterior sin necesidad de aprovisionar una nueva máquina virtual del nodo de gestión.</block>
+  <block id="6a309ddf9d0a46d94d5772dacb71dbc0" category="list-text">Inicie sesión en la máquina virtual del nodo de gestión con acceso SSH o a la consola.</block>
+  <block id="7258351fe62749f68f4b75a51c56912b" category="list-text">Descargue el<block ref="ef86b20d3f4c031a449af5dec98fb6d8" category="inline-link-rx"></block> software para Element del sitio de soporte de NetApp en la máquina virtual del nodo de gestión.</block>
 </blocks>

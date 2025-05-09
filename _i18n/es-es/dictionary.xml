@@ -12311,7 +12311,6 @@
   <block id="906ea05443e4b488a42f3f06305353ee" category="paragraph">Antes de seguir este procedimiento, debe tener un conocimiento de <block ref="6cc910c0977361227d631be0efac7242" category="inline-link-macro-rx"></block>si desea o no usarlos. Los volúmenes persistentes son opcionales, pero se recomienda para la recuperación de datos de configuración del nodo de gestión en caso de pérdida de una máquina virtual (VM).</block>
   <block id="6d8cd87a85946daeae42cb54aade3baa" category="section-title">Paso 1: Descargar ISO o OVA e implementar la VM</block>
   <block id="90c4d8ddd76d9f5f86c144316cec5657" category="paragraph">Descargue el ISO o OVA adecuado desde el sitio de soporte de NetApp e instale la máquina virtual.</block>
-  <block id="4aee9657f267c579c49541b5f19ca32c" category="list-text">Descargue el OVA o ISO para la instalación desde <block ref="00b11b6abe7f0003872aa657422c59ae" category="inline-link-macro-rx"></block>la página del sitio de soporte de NetApp. El nuevo OVA contiene un certificado SSL actualizado.</block>
   <block id="c6913d34fefabb7329dba971ad99632d" category="section-title">Paso 2: Cree el administrador del nodo de gestión y configure la red</block>
   <block id="8e1cc7b20e9f183452b777f8a4fb586d" category="paragraph">Una vez finalizada la instalación de la máquina virtual, cree el usuario administrador del nodo de gestión y configure la red del nodo de gestión.</block>
   <block id="5e0472334bca93d0d28d3eeaaf723518" category="section-title">Paso 3: Configure la sincronización de tiempo</block>
@@ -12394,4 +12393,5 @@
   <block id="a879c8e657832d392ef358d2440c3faf" category="paragraph">Puede realizar una actualización in situ del nodo de gestión desde la versión 12,3.x o posterior a la versión 12,5 o posterior sin necesidad de aprovisionar una nueva máquina virtual del nodo de gestión.</block>
   <block id="6a309ddf9d0a46d94d5772dacb71dbc0" category="list-text">Inicie sesión en la máquina virtual del nodo de gestión con acceso SSH o a la consola.</block>
   <block id="7258351fe62749f68f4b75a51c56912b" category="list-text">Descargue el<block ref="ef86b20d3f4c031a449af5dec98fb6d8" category="inline-link-rx"></block> software para Element del sitio de soporte de NetApp en la máquina virtual del nodo de gestión.</block>
+  <block id="e43f2538484fde027e53efbedb634fce" category="list-text">Descargue el OVA o ISO para la instalación desde <block ref="00b11b6abe7f0003872aa657422c59ae" category="inline-link-macro-rx"></block>la página del sitio de soporte de NetApp.</block>
 </blocks>

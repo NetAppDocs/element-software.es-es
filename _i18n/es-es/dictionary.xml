@@ -10187,7 +10187,6 @@
   <block id="2f00805e044ca70467775f06c1872f89" category="paragraph">Servidor LDAP</block>
   <block id="5483ab43104d3514dfdd7917f5a51b09" category="paragraph">389 TCP/UDP</block>
   <block id="19a0425f816e3267d5a9f5ee03f4fc4f" category="paragraph">Búsqueda de LDAP (opcional)</block>
-  <block id="6ca93b96b4cd5e33a779ecc83fde0268" category="paragraph">Actualizaciones del firmware de almacenamiento Element</block>
   <block id="94a2163bb19fc95c5d537943a7a7a263" category="paragraph">Comunicación HTTPS con el extremo de S3/Swift para backup y recuperación (opcional)</block>
   <block id="ed26bc39a920ff3cacdfe283ccd802dc" category="paragraph">514 TCP/UDP</block>
   <block id="525aa1c52ef30b3901ee99d7dfaa1989" category="paragraph">10514 TCP/UDP</block>
@@ -12394,4 +12393,5 @@
   <block id="6a309ddf9d0a46d94d5772dacb71dbc0" category="list-text">Inicie sesión en la máquina virtual del nodo de gestión con acceso SSH o a la consola.</block>
   <block id="7258351fe62749f68f4b75a51c56912b" category="list-text">Descargue el<block ref="ef86b20d3f4c031a449af5dec98fb6d8" category="inline-link-rx"></block> software para Element del sitio de soporte de NetApp en la máquina virtual del nodo de gestión.</block>
   <block id="e43f2538484fde027e53efbedb634fce" category="list-text">Descargue el OVA o ISO para la instalación desde <block ref="00b11b6abe7f0003872aa657422c59ae" category="inline-link-macro-rx"></block>la página del sitio de soporte de NetApp.</block>
+  <block id="bd000e3a7a010d55765a9684adc1c25f" category="paragraph">Actualizaciones de almacenamiento de elementos</block>
 </blocks>

@@ -284,7 +284,7 @@ Nodo de gestión
  a| 
 443
  a| 
-Actualizaciones del firmware de almacenamiento Element
+Actualizaciones de almacenamiento de elementos
 
 
 

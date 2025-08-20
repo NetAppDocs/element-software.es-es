@@ -6,13 +6,13 @@ entries:
   url: "/upgrade/concept_element_upgrade_overview.html"
 - title: Procedimientos de actualización del sistema
   entries:
-  - title: Actualice los servicios de gestión
-    url: "/upgrade/task_hcc_update_management_services.html"
   - title: Ejecute comprobaciones del estado del almacenamiento de Element antes de
       actualizar el almacenamiento
     url: "/upgrade/task_hcc_upgrade_element_prechecks.html"
   - title: Actualice el software Element
     url: "/upgrade/task_hcc_upgrade_element_software.html"
+  - title: Actualice los servicios de gestión
+    url: "/upgrade/task_hcc_update_management_services.html"
   - title: Actualizar el firmware de almacenamiento
     url: "/upgrade/task_hcc_upgrade_storage_firmware.html"
   - title: Actualice un nodo de gestión

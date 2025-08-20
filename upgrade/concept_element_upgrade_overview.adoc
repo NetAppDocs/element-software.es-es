@@ -59,17 +59,21 @@ Las actualizaciones con Hybrid Cloud Control de NetApp no están disponibles en 
 Es posible usar la siguiente secuencia para actualizar el sistema de almacenamiento all-flash SolidFire de NetApp para Element 12.5 o una versión posterior.
 
 .Pasos
+. link:task_hcc_upgrade_element_prechecks.html["Ejecute comprobaciones del estado del almacenamiento de Element antes de actualizarlo"] .
+. link:task_hcc_upgrade_element_software.html["Actualice el software Element y el firmware de almacenamiento"].
 . link:task_hcc_update_management_services.html["Actualice los servicios de gestión de Hybrid Cloud Control"].
 +
+[IMPORTANT]
+====
+** El paquete de servicios de administración 2.27 incluye el complemento Element para vCenter Server 5.5, que solo es compatible con el nodo de administración 12.8. Cuando actualiza a los servicios de administración 2.27, debe cambiar la secuencia de actualización y actualizar el paquete de servicios de administración _después_ de actualizar a Element 12.8 para tener compatibilidad entre el nodo de administración y los servicios de administración.
+** Si está actualizando a los servicios de administración 2.21.61 a 2.26.40, debe actualizar el paquete de servicios de administración _antes_ de actualizar a Element 12.8.
 
-IMPORTANT: Si actualiza los servicios de gestión a la versión 2.16 o posterior y ejecuta un nodo de gestión de 11.3 a 11.8, deberá aumentar la RAM de la máquina virtual del nodo de gestión antes de actualizar los servicios de gestión.
 
+====
 +
 
-IMPORTANT: Debe actualizar al paquete de servicios de gestión más reciente antes de actualizar el software Element.
+IMPORTANT: Si está actualizando los servicios de administración a la versión 2.16 o posterior y está ejecutando un nodo de administración 11.3 a 11.8, deberá aumentar la RAM de la máquina virtual de su nodo de administración antes de actualizar los servicios de administración.
 
-. link:task_hcc_upgrade_element_prechecks.html["Ejecute comprobaciones del estado del almacenamiento de Element antes de actualizar el almacenamiento"].
-. link:task_hcc_upgrade_element_software.html["Actualice el software Element y el firmware de almacenamiento"].
 . link:task_hcc_upgrade_storage_firmware.html["(Opcional) Actualice solo el firmware de almacenamiento de Element"].
 +
 

@@ -1438,7 +1438,6 @@
   <block id="17a0cd2d9b566cc91f84bdc0e9ca7f7d" category="list-text">*Puertos del sistema*: Si utiliza NetApp Hybrid Cloud Control para actualizaciones, se ha asegurado de que los puertos necesarios están abiertos. Consulte <block ref="3d57123b41e91126b56c6e08c9a32298" category="inline-link-macro-rx"></block> si quiere más información.</block>
   <block id="0a0bd77f761dabcb31d2bd26cb088c47" category="list-text">*Nodo de gestión*: Para la API e IU de control de cloud híbrido de NetApp, el nodo de gestión de su entorno ejecuta la versión 11.3.</block>
   <block id="7272db62c1a436743292f47d71c5e96e" category="list-text">*Servicios de administración*: Ha actualizado su paquete de servicios de administración a la última versión.</block>
-  <block id="7ef561ec74f917ecad309d4001bff056" category="admonition">Debe actualizar al paquete de servicios de gestión más reciente antes de actualizar el software Element a la versión 12.5 o una versión posterior. Si actualiza el software Element a la versión 12.5 o posterior, debe utilizar los servicios de gestión 2.21.61 o posterior para continuar.</block>
   <block id="0a4b0244a62a3d26a27fd761630e0952" category="inline-link-macro">Ejecute comprobaciones del estado del almacenamiento de Element antes de actualizar el almacenamiento</block>
   <block id="eb3ef9d3145086e8447906c0ff28c122" category="list-text">*Estado del clúster*: Ha comprobado que el clúster está listo para actualizarse. Consulte <block ref="bdcf6db43efb3c82b174a0c4c0a65c66" category="inline-link-macro-rx"></block>.</block>
   <block id="d12abcbed858bffa82e8d643aeac1e4f" category="inline-link-macro">notas de la versión e instrucciones de actualización</block>
@@ -1588,9 +1587,6 @@
   <block id="11d9cbba51c832a014742a5da1938d41" category="paragraph">Es posible usar la siguiente secuencia para actualizar el sistema de almacenamiento all-flash SolidFire de NetApp para Element 12.5 o una versión posterior.</block>
   <block id="524813e84d210a04a3c005022becca08" category="inline-link-macro">Actualice los servicios de gestión de Hybrid Cloud Control</block>
   <block id="c43409e402c491faff614694ff49b45b" category="list-text"><block ref="d96c5e393dc7f7cfcba5644a67a6ff8a" category="inline-link-macro-rx"></block>.</block>
-  <block id="9cd44430d13c7f6664a4e628ee6d90e4" category="admonition">Si actualiza los servicios de gestión a la versión 2.16 o posterior y ejecuta un nodo de gestión de 11.3 a 11.8, deberá aumentar la RAM de la máquina virtual del nodo de gestión antes de actualizar los servicios de gestión.</block>
-  <block id="17a2ec8576298e274b3b59e46ff67ea2" category="admonition">Debe actualizar al paquete de servicios de gestión más reciente antes de actualizar el software Element.</block>
-  <block id="109d7dba2c92c9420fece3ae278874f4" category="list-text"><block ref="bdcf6db43efb3c82b174a0c4c0a65c66" category="inline-link-macro-rx"></block>.</block>
   <block id="77f5518534e304c43787d59aa8f3ed00" category="inline-link-macro">Actualice el software Element y el firmware de almacenamiento</block>
   <block id="35e9c48aa9c5ae2adc6b713d2399dba2" category="list-text"><block ref="1e896f189b3768a955ddd6464b4ba1e2" category="inline-link-macro-rx"></block>.</block>
   <block id="1aa4a50ace326eb5b8adfa204053822a" category="inline-link-macro">(Opcional) Actualice solo el firmware de almacenamiento de Element</block>
@@ -1753,7 +1749,6 @@
   <block id="5e98629f8afe2eee1c27355eb45a80e0" category="paragraph">Si los iconos del plugin de vCenter no se ven, consulte <block ref="ab9b282dbdbe327f4195d1f5d71c406f" category="inline-link-macro-rx"></block> documentación sobre solución de problemas del plugin.</block>
   <block id="726e3510e2c172eed6861f3e6d271360" category="paragraph">Después de actualizar al plugin de NetApp Element para vCenter Server 4.8 o una versión posterior con VMware vCenter Server 6.7U1, si los clústeres de almacenamiento no se muestran en la lista o se muestra un error de servidor en las secciones *Clusters* y *Configuración de QoSSIOC* de la configuración de NetApp Element, consulte <block ref="c907b125bbc711015f83b735f4697e97" category="inline-link-macro-rx"></block> documentación sobre la solución de problemas de estos errores.</block>
   <block id="b9e50e6a339819ad9d12906b29e978ca" category="list-text">Verifique el cambio de versión en la ficha *Acerca de* del punto de extensión *Configuración NetApp Element* del plugin.</block>
-  <block id="a2b39afbde860c9c0fc759f3772e2dd2" category="paragraph">Debería ver los detalles o detalles de la siguiente versión de una versión más reciente:</block>
   <block id="4715e0cc20eb79c52c1f181ce0f6afb0" category="admonition">El plugin de vCenter incluye contenido de ayuda en línea. Para garantizar que la ayuda en línea incluya el contenido más reciente, borre la memoria caché del navegador después de actualizar el plugin.</block>
   <block id="c9ce4a5a8a9d1a8092a6ff7b76b8bc89" category="summary">Es posible actualizar los componentes de VMware para un sistema de almacenamiento SolidFire y realizar pasos adicionales para volver a instalar el plugin de vCenter.</block>
   <block id="ae39d371b28f32c0d2467b06b77ffdc4" category="doc">Actualice los componentes de vSphere para un sistema de almacenamiento SolidFire de NetApp con el plugin de Element para vCenter Server</block>
@@ -12233,7 +12228,6 @@
   <block id="ce90fd614158a5c7e0a42a5908fa1cd7" category="list-text"><block ref="ce90fd614158a5c7e0a42a5908fa1cd7" category="inline-link-rx"></block></block>
   <block id="6f00c58e2f26b2ef4542eb663cdb651d" category="inline-link-macro">Aviso para servicios de gestión 2.26.30 (complemento NetApp Element para VMware vCenter Server 5,4.1)</block>
   <block id="ea3b1d5907ee8e4303c54ecc7765f0f2" category="list-text"><block ref="ea3b1d5907ee8e4303c54ecc7765f0f2" category="inline-link-macro-rx"></block></block>
-  <block id="fdbd44871ecf32ab0e37e9d3c077e28a" category="list-text">Va a actualizar al plugin de Element para vCenter Server 5,4, 5,3, 5,2, 5,1 o 5,0.</block>
   <block id="ec584e493ebc5976220074c48288215d" category="summary">Debe crear un extremo de SnapMirror para poder crear una relación de replicación. Solo puede realizar esta tarea en la interfaz de usuario web del software Element o mediante los métodos API.</block>
   <block id="a1d54a55e83901cd25e5b3724d5ca5e5" category="summary">Es necesario habilitar SnapMirror en el clúster de Element para poder crear una relación de replicación. Solo puede realizar esta tarea en la interfaz de usuario web del software Element o mediante el método API.</block>
   <block id="5f974f5b5837f6beacdf509a09ac0df9" category="paragraph">^3^ Los siguientes nodos no son compatibles. Si intenta actualizar uno de estos nodos a una versión de Element no compatible, se mostrará un error que indica que el nodo no es compatible con Element 12.x:</block>
@@ -12281,7 +12275,6 @@
   <block id="f96ed95b5509cb599aadb504ec5aa0d5" category="list-text">PeakWriteIops: El número máximo de IOPS de escritura observado en un intervalo estadístico.</block>
   <block id="041f17de41a9f1db9829ff79ad3ef600" category="list-text">SliceID: ID de volumen o ID de segmento</block>
   <block id="6db7dd4182be7a1979ad403111fa8618" category="inline-link">Notas de la versión del software NetApp Element 12.8</block>
-  <block id="7d776811219f8ebb17adecaa976bd578" category="list-text"><block ref="53e04163346326834efd61306c0800b5" category="inline-link-rx"></block> _NUEVO_</block>
   <block id="912995e99772bb097b2c7b32940725bb" category="list-text"><block ref="912995e99772bb097b2c7b32940725bb" category="inline-link-rx"></block></block>
   <block id="de1923eab698e40e118f826163735ce9" category="doc">Novedades en el software Element</block>
   <block id="95dc02f465fb1139e3e92c363bf6965b" category="paragraph">NetApp actualiza periódicamente el software SolidFire y Element para incorporar nuevas funciones, mejoras y correcciones de errores. Element 12.8 es la versión más reciente e incluye actualizaciones de componentes del sistema y de seguridad, mejoras operativas y problemas resueltos.</block>
@@ -12394,4 +12387,17 @@
   <block id="7258351fe62749f68f4b75a51c56912b" category="list-text">Descargue el<block ref="ef86b20d3f4c031a449af5dec98fb6d8" category="inline-link-rx"></block> software para Element del sitio de soporte de NetApp en la máquina virtual del nodo de gestión.</block>
   <block id="e43f2538484fde027e53efbedb634fce" category="list-text">Descargue el OVA o ISO para la instalación desde <block ref="00b11b6abe7f0003872aa657422c59ae" category="inline-link-macro-rx"></block>la página del sitio de soporte de NetApp.</block>
   <block id="bd000e3a7a010d55765a9684adc1c25f" category="paragraph">Actualizaciones de almacenamiento de elementos</block>
+  <block id="53e04163346326834efd61306c0800b5" category="list-text"><block ref="53e04163346326834efd61306c0800b5" category="inline-link-rx"></block></block>
+  <block id="7373675a8dd923fb7362a663e0cb6e1f" category="inline-link">Notas de la versión del complemento vCenter 5.5</block>
+  <block id="1bb29b9b64a805e59f4873c404e002c4" category="list-text"><block ref="19934d197d6821fc66160fdecbaaf499" category="inline-link-rx"></block>_Nuevo_</block>
+  <block id="9addfb2ff8ac3a9826d26736c6697320" category="inline-link-macro">Aviso para los servicios de administración 2.27.40 (complemento de NetApp Element para VMware vCenter Server 5.5.16)</block>
+  <block id="5f97199338e05d8d021611cc709fe28f" category="list-text"><block ref="5f97199338e05d8d021611cc709fe28f" category="inline-link-macro-rx"></block></block>
+  <block id="111e46cd39158a394cd8236185cf08df" category="inline-link-macro">Ejecute comprobaciones del estado del almacenamiento de Element antes de actualizarlo</block>
+  <block id="15c2fc4333a0aada89bc8cf9f0ebbdac" category="list-text"><block ref="76b28290238ca686b8113b7395511f66" category="inline-link-macro-rx"></block> .</block>
+  <block id="c759706a0ac25a6b9701339b7c7959d4" category="list-text">El paquete de servicios de administración 2.27 incluye el complemento Element para vCenter Server 5.5, que solo es compatible con el nodo de administración 12.8. Cuando actualiza a los servicios de administración 2.27, debe cambiar la secuencia de actualización y actualizar el paquete de servicios de administración _después_ de actualizar a Element 12.8 para tener compatibilidad entre el nodo de administración y los servicios de administración.</block>
+  <block id="aebb2147cc4f1c96830ec15bbe8bbaaa" category="list-text">Si está actualizando a los servicios de administración 2.21.61 a 2.26.40, debe actualizar el paquete de servicios de administración _antes_ de actualizar a Element 12.8.</block>
+  <block id="a364164cb135a0ea8d140eae7c98e606" category="admonition">Si está actualizando los servicios de administración a la versión 2.16 o posterior y está ejecutando un nodo de administración 11.3 a 11.8, deberá aumentar la RAM de la máquina virtual de su nodo de administración antes de actualizar los servicios de administración.</block>
+  <block id="e4ccb22f69b8be133f5125883186655e" category="paragraph">El paquete de servicios de administración 2.22.7 incluye el complemento Element para vCenter Server 5.0, que contiene el complemento remoto. Si utiliza el complemento Element, debe actualizar a los servicios de administración 2.22.7 o posterior para cumplir con la directiva de VMware que elimina la compatibilidad con complementos locales.<block ref="3eff1b8505d27ff6caa23fbbb1b7b25c" category="inline-link-rx"></block> .</block>
+  <block id="f09175d59684197ed7788662b7cd5fe4" category="list-text">Está actualizando al complemento Element para vCenter Server 5.5, 5.4, 5.3, 5.2, 5.1 o 5.0.</block>
+  <block id="6eb41496b0f7ef5be359156d440fc5ea" category="paragraph">Debería ver los siguientes detalles de la versión:</block>
 </blocks>

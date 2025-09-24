@@ -60,7 +60,11 @@ Es posible usar la siguiente secuencia para actualizar el sistema de almacenamie
 
 .Pasos
 . link:task_hcc_upgrade_element_prechecks.html["Ejecute comprobaciones del estado del almacenamiento de Element antes de actualizarlo"] .
-. link:task_hcc_upgrade_element_software.html["Actualice el software Element y el firmware de almacenamiento"].
+. link:task_hcc_upgrade_management_node.html["(Opcional) Actualice el nodo de gestión"].
++
+
+NOTE: Ya no se necesita actualizar el sistema operativo del nodo de gestión para actualizar el software Element en el clúster de almacenamiento. Si el nodo de gestión es la versión 11.3 o posterior, solo tiene que actualizar los servicios de gestión a la versión más reciente para realizar actualizaciones de Element mediante el control de cloud híbrido de NetApp. Siga el procedimiento de actualización del nodo de gestión para su escenario si desea actualizar el sistema operativo del nodo de gestión por otros motivos, como la corrección de seguridad.
+
 . link:task_hcc_update_management_services.html["Actualice los servicios de gestión de Hybrid Cloud Control"].
 +
 [IMPORTANT]
@@ -74,15 +78,11 @@ Es posible usar la siguiente secuencia para actualizar el sistema de almacenamie
 
 IMPORTANT: Si está actualizando los servicios de administración a la versión 2.16 o posterior y está ejecutando un nodo de administración 11.3 a 11.8, deberá aumentar la RAM de la máquina virtual de su nodo de administración antes de actualizar los servicios de administración.
 
+. link:task_hcc_upgrade_element_software.html["Actualice el software Element y el firmware de almacenamiento"].
 . link:task_hcc_upgrade_storage_firmware.html["(Opcional) Actualice solo el firmware de almacenamiento de Element"].
 +
 
 NOTE: Puede realizar esta tarea cuando haya una nueva actualización del firmware de almacenamiento disponible fuera de una versión principal.
-
-. link:task_hcc_upgrade_management_node.html["(Opcional) Actualice el nodo de gestión"].
-+
-
-NOTE: Ya no se necesita actualizar el sistema operativo del nodo de gestión para actualizar el software Element en el clúster de almacenamiento. Si el nodo de gestión es la versión 11.3 o posterior, solo tiene que actualizar los servicios de gestión a la versión más reciente para realizar actualizaciones de Element mediante el control de cloud híbrido de NetApp. Siga el procedimiento de actualización del nodo de gestión para su escenario si desea actualizar el sistema operativo del nodo de gestión por otros motivos, como la corrección de seguridad.
 
 . link:task_vcp_upgrade_plugin.html["Actualice el plugin de Element para vCenter Server"].
 

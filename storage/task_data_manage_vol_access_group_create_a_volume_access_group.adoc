@@ -61,7 +61,7 @@ TIP: Puede encontrar el IQN del iniciador para cada volumen seleccionando *Ver d
 
 Al modificar un iniciador, puede cambiar el atributo requiredCHAP a True, lo que permite configurar el secreto de iniciador de destino. Para obtener más información, consulte la información de API acerca del método API ModifyInitiator.
 
-link:../api/index.html["Gestione el almacenamiento con la API de Element"]
+link:../api/concept_element_api_about_the_api.html["Gestione el almacenamiento con la API de Element"]
 
 |===
 . *Opcional:* Agregue más iniciadores según sea necesario.

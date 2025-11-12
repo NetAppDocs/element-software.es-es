@@ -13,7 +13,7 @@ summary: Puede verificar la configuración del clúster para un nodo de almacena
 [role="lead"]
 Puede verificar la configuración del clúster para un nodo de almacenamiento después de la configuración del clúster y modificar el nombre de host del nodo.
 
-En la siguiente lista se describe la configuración del clúster para un nodo de almacenamiento que se indica en la página *Configuración de clúster* de la interfaz de usuario por nodo (https://<node[] IP>:442/hcc/node/cluster-settings).
+La siguiente lista describe la configuración del clúster para un nodo de almacenamiento indicado en la página *Configuración del clúster* de la interfaz de usuario por nodo. (`https://<node_IP>:442/hcc/node/cluster-settings`).
 
 * *Rol*
 +

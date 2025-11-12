@@ -22,7 +22,7 @@ Es posible añadir varios iniciadores a un grupo de acceso de volúmenes existen
 
 Puede asignar atributos CHAP basados en iniciadores mediante una llamada API. Para añadir un nombre de cuenta CHAP y credenciales por iniciador, debe utilizar la llamada API ModifyInitiator para quitar y agregar acceso y atributos de CHAP.
 
-Para obtener más información, consulte link:../api/index.html["Gestione el almacenamiento con la API de Element"].
+Para más detalles, consultelink:../api/concept_element_api_about_the_api.html["Gestione el almacenamiento con la API de Element"] .
 
 .Pasos
 . Haga clic en *Administración* > *iniciadores*.

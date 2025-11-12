@@ -77,7 +77,7 @@ Existen tipos de acceso disponibles a través de la API que no están disponible
 
 ** *Atributos*: Si la cuenta de administrador de clúster se creó mediante la API de elemento, esta columna muestra cualquier par nombre-valor que se haya establecido utilizando ese método.
 +
-Consulte link:../api/index.html["Referencia de API del software NetApp Element"].
+Verlink:../api/concept_element_api_about_the_api.html["Referencia de API del software NetApp Element"] .
 
 
 
@@ -91,7 +91,7 @@ Es posible crear nuevas cuentas de administrador de clúster con permisos para c
 
 Si desea crear una cuenta de administrador de clúster LDAP, asegúrese de que LDAP esté configurado en el clúster antes de comenzar.
 
-link:task_system_manage_enable_ldap_authentication.html["Habilite la autenticación de LDAP con la interfaz de usuario de Element"]
+link:concept_system_manage_manage_ldap.html["Habilite la autenticación de LDAP con la interfaz de usuario de Element"]
 
 Más adelante, los privilegios de la cuenta de administrador de clúster se pueden cambiar para crear informes, nodos, unidades, volúmenes, cuentas y acceso a nivel de clúster. Cuando habilita un permiso, el sistema asigna acceso de escritura para ese nivel. Para los niveles que no se seleccionan, el sistema concede al usuario administrador acceso de solo lectura.
 
@@ -158,7 +158,7 @@ Es posible usar la interfaz de usuario de Element para cambiar las contraseñas 
 
 .Información relacionada
 * link:../api/reference_element_api_app_b_access_control.html["Obtenga más información sobre los tipos de acceso disponibles para las API de Element"]
-* link:task_system_manage_enable_ldap_authentication.html["Habilite la autenticación de LDAP con la interfaz de usuario de Element"]
+* link:concept_system_manage_manage_ldap.html["Habilite la autenticación de LDAP con la interfaz de usuario de Element"]
 * link:concept_system_manage_manage_ldap.html["Deshabilite LDAP"]
 * https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
 

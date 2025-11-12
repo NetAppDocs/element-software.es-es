@@ -26,7 +26,7 @@ NOTE: Si el clúster utiliza un certificado que sea inferior a 2048 bits antes d
 
 == Obtenga más información
 
-* link:../api/index.html["Gestionar el almacenamiento con la API de Element"]
+* link:../api/concept_element_api_about_the_api.html["Gestionar el almacenamiento con la API de Element"]
 * https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]
 * https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
 

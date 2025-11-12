@@ -21,13 +21,13 @@ sidebar:
   - title: Documentación del software SolidFire y Element 12,8
     url: "/index.html"
   - title: Notas de la versión
-    url: "/concepts/concept_rn_relatedrn_element.html"
     entries:
+    - title: Notas de la versión actual y anterior
+      url: "/concepts/concept_rn_relatedrn_element.html"
     - title: Novedades
       url: "/concepts/concept_rn_whats_new_element.html"
   - section: concepts
   - title: Requisitos
-    url: "/setup/concept_requirements_overview.html"
     entries:
     - title: Requisitos de red
       url: "/storage/concept_prereq_networking.html"

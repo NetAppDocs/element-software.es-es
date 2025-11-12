@@ -39,7 +39,7 @@ Una vez habilitado este modo operativo, todas las comunicaciones HTTPS utilizan 
 == Obtenga más información
 
 * xref:reference_system_manage_fips_ssl_cipher_changes.adoc[Cifrados SSL]
-* link:../api/index.html["Gestione el almacenamiento con la API de Element"]
+* link:../api/concept_element_api_about_the_api.html["Gestione el almacenamiento con la API de Element"]
 * https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]
 * https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
 

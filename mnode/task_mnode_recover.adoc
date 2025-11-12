@@ -226,6 +226,9 @@ echo '{"trident": true, "mvip": "[mvip IP address]", "account_name": "[persisten
 
 
 
+
+
+[[step_6_recover_mnode_redeploy]]
 . Configure y ejecute el comando de nueva puesta en marcha del nodo de gestión para conectarse a los volúmenes persistentes alojados en el clúster e inicie servicios con datos de configuración de nodos de gestión anteriores:
 +
 

@@ -41,4 +41,4 @@ Se utiliza para crear y mantener proveedores de claves que gestionan servidores 
 * TestKeyProviderKmip
 
 
-Para obtener información sobre los métodos de API, consulte link:../api/index.html["Información de referencia de API"].
+Para obtener información sobre los métodos de la API, consulte link:../api/concept_element_api_about_the_api.html["Información de referencia de API"].

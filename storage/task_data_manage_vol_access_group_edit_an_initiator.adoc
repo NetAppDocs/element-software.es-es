@@ -15,7 +15,7 @@ Es posible cambiar el alias de un iniciador existente o añadir un alias si aún
 
 Para añadir un nombre de cuenta CHAP y credenciales por iniciador, debe usar `ModifyInitiator` Llamada API para eliminar y añadir acceso y atributos CHAP.
 
-Consulte link:../api/index.html["Gestione el almacenamiento con la API de Element"].
+Verlink:../api/concept_element_api_about_the_api.html["Gestione el almacenamiento con la API de Element"] .
 
 .Pasos
 . Haga clic en *Administración* > *iniciadores*.

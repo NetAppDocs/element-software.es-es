@@ -57,7 +57,7 @@ La autenticación multifactor (MFA) permite requerir que los usuarios presenten 
 
 Puede emparejar la autenticación de múltiples factores con proveedores de identidades (PDI) compatibles con SAML 2.0 comunes, como Microsoft Active Directory Federation Services (ADFS) y Shibboleth.
 
-Para configurar la MFA, consulte link:../storage/concept_system_manage_mfa_enable_multi_factor_authentication.html["la activación de la autenticación multifactor"] documentación.
+Para configurar la autenticación multifactor (MFA), consulte link:../storage/task_system_manage_mfa_set_up_multi_factor_authentication.html["la activación de la autenticación multifactor"] documentación.
 
 
 

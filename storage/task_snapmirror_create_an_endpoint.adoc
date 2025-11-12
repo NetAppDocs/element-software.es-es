@@ -20,7 +20,7 @@ Es posible crear y gestionar hasta cuatro extremos de SnapMirror en un clúster 
 
 NOTE: Si originalmente se creó un extremo existente mediante la API y no se guardaron las credenciales, puede ver el extremo en la interfaz de usuario de Element y verificar su existencia, pero no se puede gestionar mediante la interfaz de usuario de Element. Este extremo solo puede gestionarse mediante la API de Element.
 
-Para obtener más información sobre los métodos API, consulte link:../api/index.html["Gestione el almacenamiento con la API de Element"].
+Para obtener más detalles sobre los métodos de la API, consulte link:../api/concept_element_api_about_the_api.html["Gestione el almacenamiento con la API de Element"].
 
 .Lo que necesitará
 * Debe haber habilitado SnapMirror en la interfaz de usuario de Element para el clúster de almacenamiento.

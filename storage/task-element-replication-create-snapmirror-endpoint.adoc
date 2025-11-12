@@ -11,7 +11,7 @@ summary: Debe crear un extremo de SnapMirror para poder crear una relación de r
 
 
 [role="lead"]
-Debe crear un extremo de SnapMirror para poder crear una relación de replicación. Solo puede realizar esta tarea en la interfaz de usuario web del software Element o mediante el link:../api/concept_element_api_snapmirror_api_methods.html["Métodos de API de SnapMirror"].
+Debes crear un punto de conexión SnapMirror antes de poder crear una relación de replicación. Esta tarea solo se puede realizar en la interfaz web del software Element o utilizando link:../api/reference_element_api_abortsnapmirrorrelationship.html["Métodos de API de SnapMirror"].
 
 .Antes de empezar
 Debe haber habilitado SnapMirror en el clúster de Element.

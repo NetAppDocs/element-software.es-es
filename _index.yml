@@ -22,15 +22,15 @@ indexpage:
     - title: Novedades
       url: "/concepts/concept_rn_whats_new_element.html"
     - title: Requisitos
-      url: "/setup/concept_requirements_overview.html"
+      url: "/storage/concept_prereq_networking.html"
     - title: Información general de la configuración
       url: "/setup/concept_setup_overview.html"
   - title: Instale y mantenga el hardware
     links:
     - title: Información de hardware H410S y H610S
-      url: "/hardware/concept_h410s_h610s_info.html"
+      url: "/hardware/task_h410s_h610s_install.html"
     - title: Información sobre hardware de SF-Series
-      url: "/hardware/concept_sfseries_info.html"
+      url: "/hardware/task_sfseries_chassisrepl.html"
     - title: Vuelva a la información de la imagen de fábrica
       url: "/hardware/concept_rtfi_configure.html"
     - title: Revisiones de firmware admitidas para los nodos de almacenamiento H-Series
@@ -41,9 +41,9 @@ indexpage:
     - title: Use la interfaz de usuario del software Element
       url: "/storage/index.html"
     - title: Utilice el control del cloud híbrido de NetApp
-      url: "/hccstorage/index.html"
+      url: "/hccstorage/task-hcc-manage-storage-clusters.html"
     - title: Utilice la API del software Element
-      url: "/api/index.html"
+      url: "/api/concept_element_api_about_the_api.html"
     - title: Use el plugin de Element para vCenter Server
       url: https://docs.netapp.com/us-en/vcp/
     - title: Utilice SolidFire Active IQ de NetApp
@@ -86,10 +86,6 @@ indexpage:
       url: https://mysupport.netapp.com/site/products/all/details/element-software/guideme-tab
   - title: Versiones anteriores
     links:
-    - title: Documentación de Element 12.5
-      url: https://docs.netapp.com/us-en/element-software-125/index.html
-    - title: Documentación de Element 12.3.x.
-      url: https://docs.netapp.com/us-en/element-software-123/index.html
     - title: Documentación de Element 12.2.1
       url: https://mysupport.netapp.com/documentation/docweb/index.html?productID=63945&language=en-US
     - title: Documentación de Element 12.2

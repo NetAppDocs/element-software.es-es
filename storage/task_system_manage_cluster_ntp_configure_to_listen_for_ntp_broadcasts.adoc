@@ -13,6 +13,8 @@ summary: 'Con el modo de difusión, puede indicar a cada nodo de un clúster que
 [role="lead"]
 Con el modo de retransmisión, puede ordenar a cada nodo de un clúster que escuche en la red de mensajes de retransmisión de protocolo de tiempo de redes (NTP) de un servidor determinado.
 
+El NTP se utiliza para sincronizar los relojes que hay en toda una red. La conexión con un servidor NTP interno o externo debe formar parte de la configuración inicial del clúster.
+
 .Lo que necesitará
 * Para poder configurar esta opción, debe tener privilegios de administrador del clúster.
 * Debe configurar un servidor NTP en la red como servidor de retransmisión.
@@ -30,6 +32,7 @@ Con el modo de retransmisión, puede ordenar a cada nodo de un clúster que escu
 
 == Obtenga más información
 
+* link:../storage/task_system_manage_cluster_ntp_configure.html["Configure los servidores de protocolo de tiempo de red para que el clúster consulte"]
 * https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]
 * https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
 

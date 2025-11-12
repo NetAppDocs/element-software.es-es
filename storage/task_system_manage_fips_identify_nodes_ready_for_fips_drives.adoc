@@ -31,7 +31,7 @@ El informe resultante muestra uno de los siguientes Estados:
 ** Utilice la API de Element, introduzca: `GetHardwareList`
 ** Observe el valor de *DriveEncryptionCapabilityType*. Si es "fips", el hardware puede admitir la función de unidades FIPS.
 +
-Consulte los detalles acerca de `GetFipsReport` o. `ListDriveHardware` en la link:../api/index.html["Referencia de la API de Element"].
+Ver detalles sobre `GetFipsReport` o `ListDriveHardware` en el link:../api/concept_element_api_about_the_api.html["Referencia de la API de Element"].
 
 
 

@@ -21,7 +21,7 @@ Debe supervisar el sistema para realizar diagnósticos y obtener información ac
 * link:task_monitor_iscsi_sessions.html["Ver sesiones iSCSI"]
 * link:task_monitor_fibre_channel_sessions.html["Consulte las sesiones Fibre Channel"]
 * link:concept_troubleshoot_drives.html["Solucione problemas de unidades"]
-* link:concept_troubleshoot_nodes.html["Solucione los problemas de los nodos"]
+* link:concept_remove_nodes_from_cluster.html["Solucione los problemas de los nodos"]
 * link:concept_per_node_work_with_utilities.html["Trabaje con utilidades por nodo para los nodos de almacenamiento"]
 * link:concept_mnode_work_with_the_management_node.html["Trabaje con el nodo de gestión"]
 * link:concept_monitor_understand_cluster_fullness_levels.html["Comprender los niveles de llenado de clústeres"]

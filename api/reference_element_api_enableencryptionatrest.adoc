@@ -13,12 +13,13 @@ summary: 'Puede usar el método EnableEncryptionAtRest para habilitar el cifrado
 [role="lead"]
 Puede utilizar el `EnableEncryptionAtRest` Método para habilitar el cifrado AES (estándar de cifrado avanzado) de 256 bits en reposo en el clúster de manera que el clúster pueda gestionar la clave de cifrado utilizada para las unidades de cada nodo. Esta función no está habilitada de forma predeterminada.
 
+[NOTE]
+====
+* Este método no habilita el cifrado de software en reposo. Esto sólo se puede hacer usando link:../api/reference_element_api_createcluster.html["cree el método de clúster"^] con `enableSoftwareEncryptionAtRest` establezca en `true`.
+* Para ver el estado actual del cifrado en reposo, el cifrado de software en reposo o ambos en el clúster, utilice la siguiente información: link:../api/reference_element_api_getclusterinfo.html["obtenga el método de información del clúster"]. Puedes usar el `GetSoftwareEncryptionAtRestInfo` link:../api/reference_element_api_getsoftwareencryptionatrestinfo.html["método para obtener información que utiliza el clúster para cifrar datos en reposo"].
 
-TIP: Para ver el estado actual del cifrado en reposo y/o el cifrado de software en reposo en el clúster, use el link:../api/reference_element_api_getclusterinfo["obtenga el método de información del clúster"^]. Puede utilizar el `GetSoftwareEncryptionAtRestInfo` link:../api/reference_element_api_getsoftwareencryptionatrestinfo["método para obtener información que utiliza el clúster para cifrar datos en reposo"^].
 
-
-NOTE: Este método no habilita el cifrado de software en reposo. Esto sólo se puede hacer usando link:../api/reference_element_api_createcluster.html["cree el método de clúster"^] con `enableSoftwareEncryptionAtRest` establezca en `true`.
-
+====
 Cuando habilita el cifrado en reposo, el clúster gestiona automáticamente las claves de cifrado internamente para las unidades de cada nodo del clúster.
 
 Si se especifica un keyProviderID, la contraseña se genera y recupera según el tipo de proveedor de claves. Esto suele realizarse mediante un servidor de claves de protocolo de interoperabilidad de gestión de claves (KMIP) en el caso de un proveedor de claves KMIP. Después de esta operación, el proveedor especificado se considera activo y no se puede eliminar hasta que se deshabilite el cifrado en reposo con el `DisableEncryptionAtRest` método.

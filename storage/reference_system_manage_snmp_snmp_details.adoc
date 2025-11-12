@@ -4,13 +4,24 @@ sidebar: sidebar
 keywords: snmp, overview, reference, mib, settings, trap 
 summary: En la página SNMP de la pestaña Cluster, puede ver la siguiente información. 
 ---
-= Detalles de SNMP
+= Obtenga más información sobre SNMP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Puede configurar el protocolo simple de gestión de redes (SNMP) en el clúster.
+
+Puede seleccionar un solicitante SNMP, seleccionar la versión de SNMP que desea usar, identificar el usuario de modelo de seguridad basado en usuario de SNMP (USM) y configurar las capturas para supervisar el clúster de SolidFire. También permite ver y acceder a los archivos de base de información de gestión.
+
+
+NOTE: Es posible usar tanto direcciones IPv4 como IPv6.
+
+
+
+== Detalles de SNMP
+
 En la página SNMP de la pestaña Cluster, puede ver la siguiente información.
 
 * *MIB SNMP*

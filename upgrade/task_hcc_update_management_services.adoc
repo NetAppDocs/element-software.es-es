@@ -25,7 +25,7 @@ Si está actualizando a los servicios de administración 2.21.61 a 2.26.40, debe
 
 [NOTE]
 ====
-* Los servicios de gestión 2.22.7 incluyen el plugin de Element para vCenter Server 5.0, que contiene el plugin remoto. Si usa el plugin de Element, debe actualizar a los servicios de gestión 2.22.7 o una versión posterior para cumplir con la directiva de VMware que elimina la compatibilidad con los plugins locales. https://kb.vmware.com/s/article/87880["Leer más"^].
+* Los servicios de administración 2.22.7 incluyen el complemento Element para vCenter Server 5.0, que contiene el complemento remoto. Si utiliza el complemento Element, debe actualizar a los servicios de administración 2.22.7 o posterior para cumplir con la directiva de VMware que elimina la compatibilidad con complementos locales. https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere-sdks-tools/8-0/developing-local-plug-ins-client-sdk/about-this-book-local/deprecation-of-local-plug-in-architecture.html["Leer más"^].
 * Para obtener las notas de la versión de los servicios de gestión más recientes, en las que se describen servicios principales, funciones nuevas, correcciones de errores y soluciones alternativas para cada paquete de servicio, consulte https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes["las notas de la versión de los servicios de gestión"^]
 
 

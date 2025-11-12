@@ -14,7 +14,7 @@ keywords: netapp, solidfire, vsphere components, upgrade, vCenter, ESXi
 
 
 [role="lead"]
-Al actualizar los componentes de VMware vSphere de la instalación de almacenamiento de SolidFire Element, tendrá que realizar algunos pasos adicionales a fin de aplicar a los sistemas con el plugin de Element para vCenter Server.
+Debe completar pasos adicionales al actualizar los componentes de VMware vSphere. Estos pasos son necesarios para los sistemas con el complemento Element para vCenter Server.
 
 .Pasos
 . Para actualizaciones de vcsa, https://docs.netapp.com/us-en/vcp/vcp_task_qossioc.html#clear-qossioc-settings["claro"^] Configuración de QoSSIOC en el plugin (*Configuración de NetApp Element > Configuración de QoSSIOC*). Aparece el campo *Estado de QoSSIOC* `Not Configured` una vez completado el proceso.
@@ -25,7 +25,7 @@ Al actualizar los componentes de VMware vSphere de la instalación de almacenami
 ====
 Debe actualizar al plugin de NetApp Element para vCenter Server 5.0 o una versión posterior para otorgar la capacidad de implementar el plugin con VMware vCenter 7.0 Update 3 sin tener que aplicar una solución alternativa.
 
-Con el plugin de Element para vCenter Server 4.x, cuando se actualiza a VMware vCenter Server 7.0 Update 3, el plugin no puede ponerse en marcha. Para resolver este problema con Spring Framework 4, consulte https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/vCenter_plug-in_deployment_fails_after_upgrading_vCenter_to_version_7.0_U3["Este artículo de la base de conocimientos"^].
+Al actualizar a VMware vCenter Server 7.0 Update 3, el complemento Element para vCenter Server 4.x no se implementa correctamente. Para resolver este problema utilizando Spring Framework 4, consulte https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/vCenter_plug-in_deployment_fails_after_upgrading_vCenter_to_version_7.0_U3["Este artículo de la base de conocimientos"^].
 
 ====
 . https://docs.netapp.com/us-en/vcp/vcp_task_getstarted.html#register-the-plug-in-with-vcenter["Regístrese"^] El plugin de Element para vCenter Server nuevamente con vCenter.

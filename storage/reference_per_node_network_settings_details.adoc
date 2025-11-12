@@ -13,7 +13,7 @@ summary: Es posible cambiar la configuración de red del nodo de almacenamiento 
 [role="lead"]
 Es posible cambiar la configuración de red del nodo de almacenamiento para dar al nodo un nuevo conjunto de atributos de red.
 
-Puede ver la configuración de red para un nodo de almacenamiento en la página *Configuración de red* cuando inicia sesión en el nodo (https://<node[] IP>:442/hcc/node/network-settings). Puede seleccionar las opciones *Bond1G* (administración) o *Bond10G* (almacenamiento). En la lista siguiente se describe la configuración que se puede modificar cuando el estado de un nodo de almacenamiento es Available, Pending o Active:
+Puedes ver la configuración de red de un nodo de almacenamiento en la página *Configuración de red* cuando inicies sesión en el nodo. (`https://<node_IP>:442/hcc/node/network-settings`). Puede seleccionar la configuración *Bond1G* (gestión) o *Bond10G* (almacenamiento). La siguiente lista describe la configuración que puede modificar cuando un nodo de almacenamiento se encuentra en estado Disponible, Pendiente o Activo:
 
 * *Método*
 +

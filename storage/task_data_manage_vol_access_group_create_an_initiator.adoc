@@ -15,7 +15,7 @@ Es posible crear iniciadores iSCSI o Fibre Channel y, opcionalmente, asignarles 
 
 También puede asignar atributos CHAP basados en iniciadores mediante una llamada API. Para añadir un nombre de cuenta CHAP y credenciales por iniciador, debe usar `CreateInitiator` Llamada API para eliminar y añadir acceso y atributos CHAP. El acceso del iniciador se puede restringir a una o varias VLAN especificando uno o varios virtualNetworkID a través del `CreateInitiators` y.. `ModifyInitiators` Llamadas API. Si no se especifica ninguna red virtual, el iniciador puede acceder a todas las redes.
 
-Para obtener más detalles, consulte la información de referencia de API.link:../api/index.html["Gestione el almacenamiento con la API de Element"]
+Para obtener más detalles, consulte la información de referencia de la API. link:../api/concept_element_api_about_the_api.html["Gestione el almacenamiento con la API de Element"]
 
 .Pasos
 . Haga clic en *Administración* > *iniciadores*.

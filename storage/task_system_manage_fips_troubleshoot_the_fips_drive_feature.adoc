@@ -28,7 +28,7 @@ Con la interfaz de usuario del software NetApp Element, es posible ver alertas s
 == Obtenga más información
 
 * xref:reference_monitor_cluster_fault_codes.adoc[códigos de error de clúster]
-* link:../api/index.html["Gestione el almacenamiento con la API de Element"]
+* link:../api/concept_element_api_about_the_api.html["Gestione el almacenamiento con la API de Element"]
 * https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]
 * https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]
 

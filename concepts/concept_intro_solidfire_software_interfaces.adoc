@@ -36,7 +36,7 @@ link:../storage/index.html["Gestionar el almacenamiento con el software Element"
 
 Permite utilizar un conjunto de objetos, métodos y rutinas para gestionar el almacenamiento Element. La API de Element se basa en el protocolo JSON-RPC a través de HTTPS. Puede supervisar las operaciones de API en la interfaz de usuario de Element mediante la habilitación del registro de API, lo cual permite ver los métodos que se emiten al sistema. Puede activar tanto las solicitudes como las respuestas para ver cómo responde el sistema a los métodos que se emiten.
 
-link:../api/index.html["Gestione el almacenamiento con la API de Element"]
+link:../api/concept_element_api_about_the_api.html["Gestione el almacenamiento con la API de Element"]
 
 
 
@@ -52,7 +52,7 @@ https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCen
 
 Permite actualizar los servicios de gestión y almacenamiento de Element y gestionar los activos de almacenamiento mediante la interfaz de NetApp Hybrid Cloud Control.
 
-link:../hccstorage/index.html["Gestione y supervise el almacenamiento con la información general de Hybrid Cloud Control de NetApp"]
+link:../hccstorage/task-hcc-manage-storage-clusters.html["Gestione y supervise el almacenamiento con Hybrid Cloud Control de NetApp"]
 
 
 

@@ -11,7 +11,7 @@ summary: Si no tiene credenciales de administrador del clúster para un clúster
 
 
 [role="lead"]
-Si no tiene credenciales de administrador del clúster para un clúster remoto, puede emparejar un volumen con otro volumen en un clúster remoto mediante una clave de emparejamiento.
+Si solo tiene acceso de administrador de clúster al clúster de origen (no tiene credenciales de administrador de clúster para un clúster remoto), puede emparejar un volumen con otro volumen en un clúster remoto mediante una clave de emparejamiento.
 
 .Lo que necesitará
 * Confirme que los clústeres que contienen los volúmenes están emparejados.

@@ -11,7 +11,7 @@ summary: Es posible emparejar un volumen con otro volumen en un clúster remoto 
 
 
 [role="lead"]
-Es posible emparejar un volumen con otro volumen en un clúster remoto si tiene credenciales de administrador de clústeres para el clúster remoto.
+Puede emparejar un volumen con otro volumen en un clúster remoto si tiene acceso de administrador de clúster a ambos clústeres en los que se van a emparejar los volúmenes. Este método utiliza el ID del volumen en el clúster remoto para iniciar una conexión.
 
 .Lo que necesitará
 * Confirme que los clústeres que contienen los volúmenes están emparejados.

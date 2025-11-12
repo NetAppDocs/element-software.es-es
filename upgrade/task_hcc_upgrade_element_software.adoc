@@ -34,6 +34,9 @@ A partir de Element 12.5, NetApp HealthTools ya no es compatible con las actuali
 * *Nodo de gestión*: Para la API e IU de control de cloud híbrido de NetApp, el nodo de gestión de su entorno ejecuta la versión 11.3.
 * *Estado del clúster*: Ha comprobado que el clúster está listo para actualizarse. Consulte link:task_hcc_upgrade_element_prechecks.html["Ejecute comprobaciones del estado del almacenamiento de Element antes de actualizar el almacenamiento"].
 * *Controlador de administración de placa base actualizado (BMC) para nodos de almacenamiento H610S*: Ha actualizado la versión de BMC para los nodos H610S. Consulte link:https://docs.netapp.com/us-en/hci/docs/rn_H610S_BMC_3.84.07.html["notas de la versión e instrucciones de actualización"^].
+
+
+[[element-upgrade-tim]]
 * *Tiempo de proceso de actualización*: Ha programado el tiempo suficiente para realizar la actualización. Cuando se actualiza al software Element 12.5 o una versión posterior, el tiempo del proceso de actualización varía según la versión actual del software Element y las actualizaciones de firmware.
 +
 [cols="20,20,20,20,20"]

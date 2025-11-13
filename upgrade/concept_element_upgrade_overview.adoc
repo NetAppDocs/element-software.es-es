@@ -20,9 +20,9 @@ Estos componentes incluyen servicios de gestión, NetApp Hybrid Cloud Control, s
 
 [NOTE]
 ====
-* A partir del 2023 de noviembre, no puedes iniciar una actualización de componentes con el control de nube híbrida de NetApp o la API de REST porque los certificados de clave de firma (privada y pública) caducaron el 5 de noviembre de 2023. Puede solucionar este problema desde link:task_hcc_upgrade_management_node.html["realizar una actualización in situ del nodo de gestión"]la versión 12,8 antes de usar el control del cloud híbrido de NetApp o la API de REST para actualizar los servicios de gestión, el software Element y el firmware del almacenamiento.
+* A partir de noviembre de 2023, no podrá iniciar una actualización de componentes utilizando NetApp Hybrid Cloud Control o la API REST porque los certificados de clave de firma (privada y pública) caducaron el 5 de noviembre de 2023. Puedes solucionar este problema mediantelink:task_hcc_upgrade_management_node.html["realizar una actualización in situ del nodo de gestión"] a la versión 12.8 o posterior antes de utilizar NetApp Hybrid Cloud Control o la API REST para actualizar los servicios de administración, el software Element y el firmware de almacenamiento.
 +
-Si va a implementar un nodo de gestión nuevo con versión 12,8, puede usar el control de cloud híbrido o la API de REST de NetApp para realizar actualizaciones de los componentes en el orden que se indica en <<sys_upgrade,secuencia de actualización del sistema>>.
+Si va a implementar un nuevo nodo de administración con la versión 12.8 o posterior, puede usar NetApp Hybrid Cloud Control o la API REST para realizar las actualizaciones de componentes en el orden que se indica en la documentación.<<sys_upgrade,secuencia de actualización del sistema>> .
 
 * Los siguientes nodos no son compatibles. Si intenta actualizar uno de estos nodos a una versión de Element no compatible, se mostrará un error que indica que el nodo no es compatible con Element 12.x:
 +
@@ -69,8 +69,8 @@ NOTE: Ya no es necesario actualizar el sistema operativo del nodo de administrac
 +
 [IMPORTANT]
 ====
-** El paquete de servicios de administración 2.27 incluye el complemento Element para vCenter Server 5.5, que solo es compatible con el nodo de administración 12.8. Cuando actualiza a los servicios de administración 2.27, debe cambiar la secuencia de actualización y actualizar el paquete de servicios de administración _después_ de actualizar a Element 12.8 para tener compatibilidad entre el nodo de administración y los servicios de administración.
-** Si está actualizando a los servicios de administración 2.21.61 a 2.26.40, debe actualizar el paquete de servicios de administración _antes_ de actualizar a Element 12.8.
+** El paquete de servicios de administración 2.27 incluye el complemento Element para vCenter Server 5.5, que solo es compatible con el nodo de administración 12.8 o posterior. Cuando actualiza a los servicios de administración 2.27, debe cambiar la secuencia de actualización y actualizar el paquete de servicios de administración _después_ de actualizar a Element 12.9 para tener compatibilidad entre el nodo de administración y los servicios de administración.
+** Si está actualizando a los servicios de administración 2.21.61 a 2.26.40, debe actualizar el paquete de servicios de administración _antes_ de actualizar a Element 12.9.
 
 
 ====

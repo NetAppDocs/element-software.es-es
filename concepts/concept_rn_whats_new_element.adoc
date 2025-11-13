@@ -12,16 +12,30 @@ summary: NetApp actualiza periódicamente el software SolidFire y Element para i
 
 
 [role="lead"]
-NetApp actualiza periódicamente el software SolidFire y Element para incorporar nuevas funciones, mejoras y correcciones de errores. Element 12.8 es la versión más reciente e incluye actualizaciones de componentes del sistema y de seguridad, mejoras operativas y problemas resueltos.
+NetApp actualiza periódicamente el software SolidFire y Element para ofrecerle nuevas funciones, mejoras y correcciones de errores. Element 12.9 es la última versión e incluye actualizaciones de seguridad y componentes del sistema, mejoras operativas y problemas resueltos.
 
 
-NOTE: Las actualizaciones acumulativas de software y firmware se instalan como parte de una actualización de Element 12.8 según la versión actual de Element que se ejecuta en un clúster de almacenamiento. Por ejemplo, si un clúster está ejecutando Element 12,5, puede actualizar directamente a Element 12,8 para obtener las actualizaciones acumulativas de Element 12,7 y 12,8. Para obtener información sobre las rutas de actualización admitidas, consulte el artículo de la base de conocimientos https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/What_is_the_upgrade_matrix_for_storage_clusters_running_NetApp_Element_software["¿Cuál es la matriz de actualización para los clústeres de almacenamiento que ejecutan el software NetApp Element"^] .
+NOTE: Las actualizaciones acumulativas de software y firmware se instalan como parte de una actualización de Element 12.9 basada en la versión actual de Element que se ejecuta en un clúster de almacenamiento. Por ejemplo, si un clúster actualmente ejecuta Element 12.5, puede actualizar directamente a Element 12.9 para obtener las actualizaciones acumulativas de Element 12.7, 12.8 y 12.9. Para conocer las rutas de actualización compatibles, consulte el artículo de la base de conocimientos. https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/What_is_the_upgrade_matrix_for_storage_clusters_running_NetApp_Element_software["¿Cuál es la matriz de actualización para los clústeres de almacenamiento que ejecutan el software NetApp Element"^] .
+
+
+
+== Elemento 12.9
+
+Descubre las novedades de Element 12.9.
+
+
+
+=== Compatibilidad con FQDN en "SetRemoteLoggingHosts"
+
+A partir del Elemento 12.9, puedes usar el `SetRemoteLoggingHosts` método para configurar un nombre de dominio totalmente calificado (FQDN) o una dirección IP como valor de host de registro para un clúster de almacenamiento.  Puedes ver el valor del host FQDN en la respuesta para el `GetRemoteLoggingHosts` método.  Para Element 12.8 y versiones anteriores, solo se puede configurar una dirección IP como valor del host de registro.
+
+https://docs.netapp.com/us-en/element-software/api/reference_element_api_loggingserver.html["Obtenga más información sobre la configuración del host de registro."]
 
 
 
 == Elemento 12.8
 
-Obtenga más información sobre las novedades de Element 12,8.
+Descubre las novedades de Element 12.8.
 
 
 
@@ -59,7 +73,7 @@ Si va a realizar una actualización in situ de un nodo de gestión existente a E
 
 == Elemento 12.7
 
-Obtenga más información sobre las novedades de Element 12,7.
+Descubre las novedades de Element 12.7.
 
 
 
@@ -118,7 +132,7 @@ Los problemas conocidos y resueltos, se enumeran en la herramienta NetApp Bugs O
 
 == Elemento 12.5
 
-Obtenga más información sobre las novedades de Element 12,5.
+Descubre las novedades de Element 12.5.
 
 
 

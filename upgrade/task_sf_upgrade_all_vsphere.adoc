@@ -19,7 +19,7 @@ Debe completar pasos adicionales al actualizar los componentes de VMware vSphere
 .Pasos
 . Para actualizaciones de vcsa, https://docs.netapp.com/us-en/vcp/vcp_task_qossioc.html#clear-qossioc-settings["claro"^] Configuración de QoSSIOC en el plugin (*Configuración de NetApp Element > Configuración de QoSSIOC*). Aparece el campo *Estado de QoSSIOC* `Not Configured` una vez completado el proceso.
 . Para actualizaciones de vcsa y Windows, https://docs.netapp.com/us-en/vcp/task_vcp_unregister.html["cancele el registro"^] El plugin desde la instancia de vCenter Server a la que se asocia mediante la utilidad de registro.
-. https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-7AFB6672-0B0B-4902-B254-EE6AE81993B2.html["Actualice vSphere, incluidos vCenter Server, ESXi, VMs y otros componentes de VMware"^].
+. https://techdocs.broadcom.com/["Actualice vSphere, incluidos vCenter Server, ESXi, VMs y otros componentes de VMware"^].
 +
 [IMPORTANT]
 ====

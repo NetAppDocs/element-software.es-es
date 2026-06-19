@@ -35,7 +35,7 @@ La replicación remota de datos puede adoptar las siguientes formas:
 * <<Replicación entre clústeres de Element y ONTAP mediante SnapMirror>>
 
 
-Para obtener más información, consulte https://www.netapp.com/pdf.html?item=/media/10607-tr4741pdf.pdf["TR-4741: Replicación remota del software NetApp Element"^].
+Para más información, consulta https://www.netapp.com/pdf.html?item=/media/10607-tr4741.pdf["TR-4741: Replicación remota del software NetApp Element"^].
 
 
 
@@ -93,7 +93,7 @@ La relación entre el volumen de origen en el almacenamiento primario y el volum
 
 SnapMirror se ejecuta de forma nativa en las controladoras ONTAP de NetApp y está integrado en Element, que se ejecuta en clústeres de NetApp HCI y SolidFire. La lógica para controlar SnapMirror reside en el software ONTAP; por tanto, todas las relaciones de SnapMirror deben implicar al menos un sistema ONTAP para realizar las tareas de coordinación. Los usuarios gestionan las relaciones entre los clústeres de Element y ONTAP principalmente mediante la interfaz de usuario de Element; no obstante, algunas tareas de gestión residen en ONTAP System Manager de NetApp. Los usuarios también pueden gestionar SnapMirror mediante la CLI y la API, que están disponibles en ONTAP y Element.
 
-Consulte https://fieldportal.netapp.com/content/616239["TR-4651: Arquitectura y configuración de SnapMirror para SolidFire de NetApp"^] (se requiere inicio de sesión)
+Ver https://www.netapp.com/pdf.html?item=/media/19771-tr-4651.pdf["TR-4651: Arquitectura y configuración de SnapMirror para SolidFire de NetApp"^]
 
 Es necesario habilitar manualmente la funcionalidad SnapMirror en el nivel de clúster mediante el software Element. La funcionalidad SnapMirror está deshabilitada de forma predeterminada y no se habilita automáticamente como parte de una nueva instalación o actualización.
 

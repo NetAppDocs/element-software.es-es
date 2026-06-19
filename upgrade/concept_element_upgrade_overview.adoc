@@ -49,7 +49,7 @@ TIP: Para comprobar la versión, inicie sesión en el nodo de gestión y vea el 
 Las actualizaciones con Hybrid Cloud Control de NetApp no están disponibles en versiones anteriores del paquete de servicio.
 
 * Debe asegurarse de que la hora del sistema en todos los nodos esté sincronizada y que NTP esté correctamente configurado para el clúster de almacenamiento y los nodos. Cada nodo debe configurarse con un servidor de nombres DNS en la interfaz de usuario web por nodo (`https://[IP address]:442`) sin fallos de clúster sin resolver relacionados con la desviación de tiempo.
-* Ha programado suficiente tiempo para el link:task_hcc_upgrade_element_software.html#element-upgrade-time["Software Element"] y.. link:task_hcc_upgrade_storage_firmware.html#storage-firmware-upgrade["firmware de almacenamiento"] actualizaciones. Cuando se actualiza al software Element 12.5 o una versión posterior, el tiempo del proceso de actualización varía según la versión del software Element y las actualizaciones del firmware.
+* Has reservado tiempo suficiente para tus actualizaciones de link:task_hcc_upgrade_element_software.html["Software Element"] y link:task_hcc_upgrade_storage_firmware.html#storage-firmware-upgrade["firmware de almacenamiento"]. Cuando actualizas al software Element 12.5 o una versión posterior, el tiempo que tarda el proceso de actualización varía según la versión del software Element y las actualizaciones de firmware.
 
 
 

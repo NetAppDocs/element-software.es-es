@@ -24,6 +24,7 @@ El cifrado en reposo debe estar habilitado en el clúster, y todos los nodos y u
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * link:../api/concept_element_api_about_the_api.html["Gestione el almacenamiento con la API de Element"]

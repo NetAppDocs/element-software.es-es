@@ -54,6 +54,7 @@ Las actualizaciones con Hybrid Cloud Control de NetApp no están disponibles en 
 
 
 
+[[sysupgradesystem-upgrade-sequence]]
 == [[sys_upgrade]]secuencia de actualización del sistema
 
 Es posible usar la siguiente secuencia para actualizar el sistema de almacenamiento all-flash SolidFire de NetApp para Element 12.5 o una versión posterior.

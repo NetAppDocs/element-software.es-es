@@ -15,6 +15,7 @@ Puede utilizar el `ListDriveStats` método para enumerar las mediciones de activ
 
 
 
+[[parameter]]
 == Parámetro
 
 Este método tiene el siguiente parámetro de entrada:
@@ -37,6 +38,7 @@ No
 |===
 
 
+[[return-values]]
 == Valores devueltos
 
 Este método tiene los siguientes valores devueltos:
@@ -66,6 +68,7 @@ Cabina de objetos JSON
 |===
 
 
+[[request-example]]
 == Ejemplo de solicitud
 
 Las solicitudes de este método son similares al ejemplo siguiente:
@@ -82,6 +85,7 @@ Las solicitudes de este método son similares al ejemplo siguiente:
 ----
 
 
+[[response-example]]
 == Ejemplo de respuesta
 
 Este método devuelve una respuesta similar al siguiente ejemplo:
@@ -125,12 +129,14 @@ Este método devuelve una respuesta similar al siguiente ejemplo:
 ----
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 9.6
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 xref:reference_element_api_getdrivestats.adoc[GetDriveStats]

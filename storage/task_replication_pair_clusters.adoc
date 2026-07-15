@@ -28,6 +28,7 @@ Un clúster se puede emparejar con hasta otros cuatro clústeres para replicar v
 
 
 
+[[pair-clusters-using-mvip-or-a-pairing-key]]
 == Emparejar clústeres con la MVIP o una clave de emparejamiento
 
 Es posible emparejar un clúster de origen y de destino mediante la dirección MVIP de un clúster de destino si ambos clústeres ofrece acceso de administrador de clúster. Si solo un clúster en una pareja de clústeres ofrece acceso de administrador del clúster, se puede usar una clave de emparejamiento en el clúster de destino para completar el emparejamiento de clústeres.
@@ -42,6 +43,7 @@ Es posible emparejar un clúster de origen y de destino mediante la dirección M
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 xref:reference_prereq_network_port_requirements.adoc[Requisitos de puerto de red]

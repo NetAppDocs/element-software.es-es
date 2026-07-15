@@ -15,6 +15,7 @@ La configuración de red para un sistema SolidFire consta de requisitos de switc
 
 
 
+[[for-more-information]]
 == Si quiere más información
 
 * link:../storage/concept_prereq_switch_configuration_for_solidfire_clusters.html["Configuración de switches para los clústeres que ejecutan el software Element"]

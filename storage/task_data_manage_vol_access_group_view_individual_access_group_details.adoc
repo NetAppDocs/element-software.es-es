@@ -20,6 +20,7 @@ Es posible ver los detalles de un grupo de acceso individual, como iniciadores y
 
 
 
+[[volume-access-group-details]]
 == Detalles del grupo de acceso de volúmenes
 
 En la página Access Groups de la pestaña Management, se proporciona información sobre los grupos de acceso de volúmenes.

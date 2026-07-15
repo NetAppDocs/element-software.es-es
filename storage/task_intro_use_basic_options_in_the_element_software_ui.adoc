@@ -22,6 +22,7 @@ Las opciones básicas incluyen ver comandos de API activados por actividad de la
 
 
 
+[[for-more-information]]
 == Si quiere más información
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]

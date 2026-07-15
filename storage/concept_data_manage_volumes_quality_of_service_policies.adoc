@@ -27,6 +27,7 @@ Consulte link:../concepts/concept_data_manage_volumes_solidfire_quality_of_servi
 
 
 
+[[create-a-qos-policy]]
 == Cree una política de calidad de servicio
 
 Puede crear políticas de calidad de servicio y aplicarlas cuando se creen los volúmenes.
@@ -40,6 +41,7 @@ Puede crear políticas de calidad de servicio y aplicarlas cuando se creen los v
 
 
 
+[[edit-a-qos-policy]]
 == Edite una política de calidad de servicio
 
 Una política de calidad de servicio existente se puede cambiar, o bien se pueden editar los valores asociados con esta. Los cambios que se aplican en una política de calidad de servicio afectan a todos los volúmenes asociados con la política.
@@ -60,6 +62,7 @@ Una política de calidad de servicio existente se puede cambiar, o bien se puede
 
 
 
+[[delete-a-qos-policy]]
 == Elimine una política de calidad de servicio
 
 Puede eliminar una política de calidad de servicio si ya no es necesaria. Cuando se elimina una política de calidad de servicio, todos los volúmenes asociados con la política se conservan en la configuración de QoS, pero se desasocian de una política.
@@ -75,6 +78,7 @@ NOTE: Si desea desasociar en lugar de ello un volumen de una política de calida
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * link:task_data_manage_volumes_remove_a_qos_policy_association_of_a_volume.html["Quite la asociación de políticas de calidad de servicio de un volumen"]

@@ -17,6 +17,7 @@ Si un nodo que se acaba de añadir supone más del 50 % de la capacidad total de
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 xref:task_system_manage_nodes_adding_a_node_to_a_cluster.adoc[Añada un nodo a un clúster]

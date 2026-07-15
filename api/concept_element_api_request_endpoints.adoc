@@ -17,6 +17,7 @@ Los tres extremos de solicitud de la API se designan de las siguientes formas:
 
 
 
+[[cluster-api-methods]]
 == Métodos de API de clúster
 
 El extremo de HTTPS para solicitudes de API para todo el clúster de almacenamiento es `+https://<mvip>/json-rpc/<api-version>+`, donde:
@@ -27,6 +28,7 @@ El extremo de HTTPS para solicitudes de API para todo el clúster de almacenamie
 
 
 
+[[cluster-creation-and-bootstrap-api-methods]]
 == Creación de clústeres y métodos API de bootstrap
 
 El extremo de HTTPS para crear un clúster de almacenamiento y acceder a las solicitudes de la API de bootstrap es `+https://<nodeIP>/json-rpc/<api-version>+`, donde:
@@ -37,6 +39,7 @@ El extremo de HTTPS para crear un clúster de almacenamiento y acceder a las sol
 
 
 
+[[per-node-api-methods]]
 == Métodos API por nodo
 
 El extremo de HTTPS para solicitudes de API de nodo de almacenamiento individuales es `+https://<nodeIP>:442/json-rpc/<api-version>+`, donde:
@@ -47,6 +50,7 @@ El extremo de HTTPS para solicitudes de API de nodo de almacenamiento individual
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]

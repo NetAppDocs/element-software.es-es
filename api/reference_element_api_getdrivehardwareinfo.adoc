@@ -15,6 +15,7 @@ Puede utilizar el `GetDriveHardwareInfo` método para obtener toda la informaci�
 
 
 
+[[parameter]]
 == Parámetro
 
 Este método tiene el siguiente parámetro de entrada:
@@ -37,6 +38,7 @@ Sí
 |===
 
 
+[[return-value]]
 == Valor de retorno
 
 Este método tiene el siguiente valor devuelto:
@@ -55,6 +57,7 @@ xref:reference_element_api_hardwareinfo.adoc[HardwareInfo]
 |===
 
 
+[[request-example]]
 == Ejemplo de solicitud
 
 Las solicitudes de este método son similares al ejemplo siguiente:
@@ -71,6 +74,7 @@ Las solicitudes de este método son similares al ejemplo siguiente:
 ----
 
 
+[[response-example]]
 == Ejemplo de respuesta
 
 Este método devuelve una respuesta similar al siguiente ejemplo:
@@ -101,12 +105,14 @@ Este método devuelve una respuesta similar al siguiente ejemplo:
 ----
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 9.6
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 xref:reference_element_api_listdrives.adoc[ListDrives]

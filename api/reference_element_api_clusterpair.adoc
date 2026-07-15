@@ -15,6 +15,7 @@ El objeto clusterPair contiene información acerca de los clústeres emparejados
 
 
 
+[[object-members]]
 == Miembros de objeto
 
 Este objeto contiene los siguientes miembros:
@@ -102,6 +103,7 @@ cadena
 |===
 
 
+[[find-more-information]]
 == Obtenga más información
 
 xref:reference_element_api_listclusterpairs.adoc[ListClusterPairs]

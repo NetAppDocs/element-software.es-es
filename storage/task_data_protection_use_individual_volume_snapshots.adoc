@@ -15,6 +15,7 @@ Una copia de Snapshot de volumen es una copia de un momento específico de un vo
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * xref:task_data_protection_create_a_volume_snapshot.adoc[Cree una copia de Snapshot de volumen]

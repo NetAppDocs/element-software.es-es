@@ -15,6 +15,7 @@ https://mysupport.netapp.com/site/tools/tool-eula/element-demonode/download["Nod
 
 
 
+[[supported-functionality]]
 == Funcionalidad compatible:
 
 El nodo de demostración de Element sólo está diseñado para usarse como herramienta de demostración y desarrollo. Tenga en cuenta las siguientes limitaciones funcionales antes de utilizar el nodo de demostración:
@@ -40,6 +41,7 @@ NOTE: Se aplican todas las demás limitaciones del software Element. Consulte la
 
 
 
+[[vm-requirements]]
 == Requisitos de equipos virtuales
 
 * 240 GB de capacidad total (el tamaño y la cantidad de discos virtuales de la máquina virtual no se pueden cambiar. El sistema operativo invitado ignora cualquier almacenamiento adicional presentado a través del hipervisor).
@@ -53,6 +55,7 @@ NOTE: Se aplican todas las demás limitaciones del software Element. Consulte la
 
 
 
+[[host-requirements]]
 == Requisitos del host
 
 * ESXI 6.0 o 6.5 para el nodo de demostración de Element 11.7 VM
@@ -63,12 +66,14 @@ NOTE: Se aplican todas las demás limitaciones del software Element. Consulte la
 
 
 
+[[download-element-demo-node]]
 == Descargue el nodo de demostración de Element
 
 El software Element Demo Node es un conjunto de archivos de VMware que se empaquetaron en un archivo .ova.
 
 
 
+[[install-element-demo-node-on-vmware-esxi]]
 == Instale el nodo de demostración de Element en VMware ESXi
 
 La instalación del nodo de demostración de Element en VMware ESXi implica las siguientes tareas:
@@ -80,12 +85,14 @@ La instalación del nodo de demostración de Element en VMware ESXi implica las 
 
 
 
+[[configure-network-interfaces]]
 === Configure las interfaces de red
 
 El nodo de demostración de Element requiere dos redes de máquina virtual separadas. Una es para el tráfico de almacenamiento y la otra para el tráfico de gestión. Debe configurar la red de almacenamiento para que admita las tramas gigantes.
 
 
 
+[[register-the-demo-node-on-an-esxi-server]]
 === Registre el nodo de demostración en un servidor ESXi
 
 Para registrar el nodo de demostración de Element en un servidor ESXi, debe implementar el archivo .ova del nodo de demostración mediante vSphere Client.
@@ -111,6 +118,7 @@ NOTE: Es posible que la puesta en marcha del nodo de demostración demore unos m
 
 
 
+[[start-the-demo-node-on-an-esxi-server]]
 === Inicie el nodo de demostración en un servidor ESXi
 
 Debe iniciar la máquina virtual del nodo de demostración para acceder a Element mediante la consola de VMware ESXi.
@@ -125,12 +133,14 @@ Debe iniciar la máquina virtual del nodo de demostración para acceder a Elemen
 
 
 
+[[how-to-get-support]]
 == Cómo obtener soporte
 
 El nodo de demostración de Element está disponible para voluntariado con el mejor esfuerzo. Para obtener soporte, envíe sus preguntas al https://community.netapp.com/t5/Simulator-Discussions/bd-p/simulator-discussions["Foro de nodos de demostración de Element"^].
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 https://mysupport.netapp.com/site/tools/tool-eula/element-demonode/download["Página de descarga del nodo de demostración de Element (se requiere inicio de sesión)"^]

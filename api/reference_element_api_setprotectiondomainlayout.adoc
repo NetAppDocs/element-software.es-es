@@ -26,6 +26,7 @@ El método devuelve un error cuando se utiliza en los clústeres de almacenamien
 
 
 
+[[parameter]]
 == Parámetro
 
 Este método tiene los siguientes parámetros de entrada:
@@ -48,6 +49,7 @@ Sí
 |===
 
 
+[[return-value]]
 == Valor de retorno
 
 Este método tiene el siguiente valor devuelto:
@@ -66,6 +68,7 @@ Lista JSON de link:reference_element_api_nodeprotectiondomains.html["ProtectionD
 |===
 
 
+[[request-example]]
 == Ejemplo de solicitud
 
 Las solicitudes de este método son similares al ejemplo siguiente:
@@ -119,6 +122,7 @@ Las solicitudes de este método son similares al ejemplo siguiente:
 ----
 
 
+[[response-example]]
 == Ejemplo de respuesta
 
 Este método devuelve una respuesta similar al siguiente ejemplo:
@@ -188,6 +192,7 @@ Este método devuelve una respuesta similar al siguiente ejemplo:
 ----
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 12.0

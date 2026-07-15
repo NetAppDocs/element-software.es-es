@@ -35,6 +35,7 @@ NOTE: El volumen primario original ahora se puede montar para reanudar las carga
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 xref:concept_snapmirror_failback_scenarios.adoc[Escenarios de conmutación tras recuperación de SnapMirror]

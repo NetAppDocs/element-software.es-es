@@ -15,6 +15,7 @@ Puede utilizar el `EnableMaintenanceMode` método para preparar un nodo de almac
 
 
 
+[[parameters]]
 == Parámetros
 
 Este método tiene los siguientes parámetros de entrada:
@@ -76,6 +77,7 @@ No
 |===
 
 
+[[return-values]]
 == Valores devueltos
 
 Este método tiene los siguientes valores devueltos:
@@ -128,6 +130,7 @@ Modo de mantenimiento (cadena)
 |===
 
 
+[[request-example]]
 == Ejemplo de solicitud
 
 Las solicitudes de este método son similares al ejemplo siguiente:
@@ -147,6 +150,7 @@ Las solicitudes de este método son similares al ejemplo siguiente:
 ----
 
 
+[[response-example]]
 == Ejemplo de respuesta
 
 Este método devuelve una respuesta similar al siguiente ejemplo:
@@ -165,12 +169,14 @@ Este método devuelve una respuesta similar al siguiente ejemplo:
 ----
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 12.2
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 http://docs.netapp.com/us-en/hci/docs/concept_hci_storage_maintenance_mode.html["Conceptos del modo de mantenimiento del almacenamiento de NetApp HCI"^]

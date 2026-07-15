@@ -17,6 +17,7 @@ Mediante la interfaz de Element, la API u otras herramientas de gestión, puede 
 
 
 
+[[solidfire-features]]
 == Funciones de SolidFire
 
 Un sistema SolidFire ofrece las siguientes funciones:
@@ -31,6 +32,7 @@ Un sistema SolidFire ofrece las siguientes funciones:
 
 
 
+[[solidfire-deployment]]
 == Puesta en marcha de SolidFire
 
 Utilice los nodos de almacenamiento que proporciona NetApp e integrados con el software NetApp Element.
@@ -39,6 +41,7 @@ link:../concepts/concept_solidfire_concepts_solidfire_architecture_overview.html
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]

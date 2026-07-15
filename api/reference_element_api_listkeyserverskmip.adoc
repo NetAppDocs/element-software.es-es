@@ -15,6 +15,7 @@ Puede utilizar el `ListKeyServersKmip` Método para enumerar todos los servidore
 
 
 
+[[parameters]]
 == Parámetros
 
 Este método tiene los siguientes parámetros de entrada:
@@ -75,6 +76,7 @@ No
 |===
 
 
+[[return-values]]
 == Valores devueltos
 
 Este método tiene los siguientes valores devueltos:
@@ -95,6 +97,7 @@ link:reference_element_api_keyserverkmip.html["KeyServerKmip"] cabina
 |===
 
 
+[[request-example]]
 == Ejemplo de solicitud
 
 Las solicitudes de este método son similares al ejemplo siguiente:
@@ -109,6 +112,7 @@ Las solicitudes de este método son similares al ejemplo siguiente:
 ----
 
 
+[[response-example]]
 == Ejemplo de respuesta
 
 Este método devuelve una respuesta similar al siguiente ejemplo:
@@ -134,6 +138,7 @@ Este método devuelve una respuesta similar al siguiente ejemplo:
 ----
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 11.7

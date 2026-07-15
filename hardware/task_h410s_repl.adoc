@@ -39,6 +39,7 @@ A continuación, se ofrece una descripción general de alto nivel de los pasos:
 
 
 
+[[prepare-to-replace-the-node]]
 == Prepare para sustituir el nodo
 
 Debe quitar el nodo de almacenamiento defectuoso correctamente desde el clúster en la interfaz de usuario del software NetApp Element antes de instalar el nodo de reemplazo. Puede hacer esto sin causar ninguna interrupción del servicio. Debe obtener el número de serie del nodo de almacenamiento defectuoso en la interfaz de usuario de Element y relacionarlo con el número de serie de la etiqueta adhesiva en la parte posterior del nodo.
@@ -81,6 +82,7 @@ Para quitar varias unidades
 
 
 
+[[replace-the-node-in-the-chassis]]
 == Sustituya el nodo en el chasis
 
 Después de quitar el nodo defectuoso del clúster mediante la interfaz de usuario del software NetApp Element, estará listo para quitar físicamente el nodo del chasis. Debe instalar el nodo de reemplazo en la misma ranura del chasis desde el que quitó el nodo con errores.
@@ -203,6 +205,7 @@ TIP: Asegúrese de que el nodo de reemplazo esté cableado de la misma manera qu
 
 
 
+[[add-the-node-to-the-cluster]]
 == Añada el nodo al clúster
 
 Cuando se añade un nodo al clúster o se instalan unidades nuevas en un nodo existente, las unidades se registran automáticamente como Available. Las unidades se deben añadir al clúster mediante la interfaz de usuario o la API de Element antes de que puedan participar en el clúster.
@@ -238,6 +241,7 @@ El nodo aparece en la lista de nodos activos.
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]

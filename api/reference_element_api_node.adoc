@@ -15,6 +15,7 @@ El objeto del nodo contiene información acerca de cada nodo del clúster. Puede
 
 
 
+[[object-members]]
 == Miembros de objeto
 
 Este objeto contiene los siguientes miembros:
@@ -225,6 +226,7 @@ xref:reference_element_api_virtualnetwork.adoc[VirtualNetwork] cabina
 |===
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * xref:reference_element_api_listactivenodes.adoc[ListActiveNodes]

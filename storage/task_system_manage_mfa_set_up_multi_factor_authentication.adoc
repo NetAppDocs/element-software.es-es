@@ -41,6 +41,7 @@ NOTE: El nombre de usuario del administrador del clúster IDP debe coincidir con
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]

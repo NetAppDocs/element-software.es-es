@@ -17,12 +17,14 @@ Este método de API está pensado para usar en nodos individuales; se necesitan 
 
 
 
+[[parameter]]
 == Parámetro
 
 Este método no tiene parámetros de entrada.
 
 
 
+[[return-value]]
 == Valor de retorno
 
 Este método tiene el siguiente valor devuelto:
@@ -41,6 +43,7 @@ xref:reference_element_api_fibrechannelport.adoc[Puerto de FiberChannelPort] cab
 |===
 
 
+[[request-example]]
 == Ejemplo de solicitud
 
 Las solicitudes de este método son similares al ejemplo siguiente:
@@ -58,6 +61,7 @@ Las solicitudes de este método son similares al ejemplo siguiente:
 ----
 
 
+[[response-example]]
 == Ejemplo de respuesta
 
 Este método devuelve una respuesta similar al siguiente ejemplo:
@@ -126,6 +130,7 @@ Este método devuelve una respuesta similar al siguiente ejemplo:
 ----
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 9.6

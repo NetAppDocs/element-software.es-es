@@ -15,6 +15,7 @@ El objeto groupSnapshot contiene información sobre una snapshot de un grupo de 
 
 
 
+[[object-members]]
 == Miembros de objeto
 
 Este objeto contiene los siguientes miembros:
@@ -113,6 +114,7 @@ cadena
 |===
 
 
+[[find-more-information]]
 == Obtenga más información
 
 xref:reference_element_api_listgroupsnapshots.adoc[ListGroupSnapshots]

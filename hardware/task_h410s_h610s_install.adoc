@@ -26,18 +26,21 @@ TIP: Consulte link:../media/hseries_isi.pdf["cartel"^] para una representación 
 
 
 
+[[workflow-diagrams]]
 == Diagramas de flujo de trabajo
 
 Los diagramas de flujo de trabajo aquí proporcionan una descripción general de alto nivel de los pasos de la instalación. Los pasos varían ligeramente según el modelo de la serie H.
 
 
 
+[[h410s]]
 === H410S
 
 image::../media/h410s_isi_workflow.png[Flujo de trabajo de instalación H410S]
 
 
 
+[[h610s]]
 === H610S
 
 
@@ -47,6 +50,7 @@ image::../media/h610s_isi_workflow.png[Flujo de trabajo de instalación H610S]
 
 
 
+[[prepare-for-installation]]
 == Preparación de la instalación
 
 Durante la preparación para la instalación, realice el inventario del hardware que recibió y póngase en contacto con el soporte de NetApp en caso de que falte algún artículo.
@@ -80,6 +84,7 @@ CAUTION: Durante la instalación de la tornillería, asegúrese de retirar todo 
 
 
 
+[[install-the-rails]]
 == Instale los rieles
 
 El orden de hardware que se le envió incluye un conjunto de rieles deslizantes. Necesitará un destornillador para completar la instalación del riel. Los pasos de instalación varían ligeramente para cada modelo de nodo.
@@ -93,6 +98,7 @@ TIP: Instale la tornillería desde la parte inferior del bastidor hasta la parte
 
 
 
+[[h410s]]
 === H410S
 
 Los nodos H410S se instalan en chasis 2U de cuatro nodos H-Series, que se envía con dos conjuntos de adaptadores. Si desea instalar el chasis en un rack con orificios redondos, utilice los adaptadores adecuados para un rack con orificios redondos. Los rieles para nodos H410S colocan un rack de entre 29 pulgadas y 33.5 pulgadas de profundidad. Cuando el riel está totalmente contrapuesto, tiene 28 pulgadas de largo, y las secciones delantera y trasera del riel se mantienen Unidas sólo con un tornillo.
@@ -115,6 +121,7 @@ image::../media/h410s_rail.gif[Instalación de rieles para 2U]
 
 
 
+[[h610s]]
 === H610S
 
 A continuación encontrará una ilustración de la instalación de rieles para un nodo de almacenamiento H610S:
@@ -126,6 +133,7 @@ TIP: Hay rieles izquierdo y derecho en la H610S. Coloque el orificio roscado hac
 
 
 
+[[install-and-cable-the-nodes]]
 == Instale los nodos y cablee
 
 Debe instalar el nodo de almacenamiento H410S en un chasis 2U de cuatro nodos. Para H610S, instale el chasis/nodo directamente en los rieles del rack.
@@ -139,6 +147,7 @@ CAUTION: Retire todo el material de embalaje y el embalaje de la unidad. Esto ev
 
 
 
+[[h410s]]
 === H410S
 
 .Pasos
@@ -181,6 +190,7 @@ image::../media/hci_poweron_isg.gif[En esta figura, se muestran los botones de e
 
 
 
+[[h610s]]
 === H610S
 
 .Pasos
@@ -219,6 +229,7 @@ image::../media/h600s_isi_nodefront.png[Esta figura muestra el frente del chasis
 
 
 
+[[configure-the-nodes]]
 == Configure los nodos
 
 Después de montar en rack y cablear el hardware, está listo para configurar el nuevo recurso de almacenamiento.
@@ -244,6 +255,7 @@ TIP: Consulte https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infr
 
 
 
+[[create-a-cluster]]
 == Cree un clúster
 
 Después de añadir el nodo de almacenamiento a la instalación y de configurar el nuevo recurso de almacenamiento, estará listo para crear un nuevo clúster de almacenamiento
@@ -255,6 +267,7 @@ Después de añadir el nodo de almacenamiento a la instalación y de configurar 
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]

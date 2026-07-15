@@ -17,6 +17,7 @@ Puede recuperar la información de sincronización con `ListSyncJobs` Método AP
 
 
 
+[[object-members]]
 == Miembros de objeto
 
 Este objeto contiene los siguientes miembros:
@@ -212,6 +213,7 @@ cadena
 |===
 
 
+[[find-more-information]]
 == Obtenga más información
 
 xref:reference_element_api_listsyncjobs.adoc[ListSyncJobs]

@@ -18,6 +18,7 @@ NOTE: Existen tipos de acceso disponibles a través de la API que no están disp
 
 
 
+[[accounts]]
 == cuentas
 
 Los siguientes métodos están disponibles para el tipo de acceso de cuentas:
@@ -61,12 +62,14 @@ RemoveAccount
 |===
 
 
+[[administrator]]
 == administrador
 
 Todos los métodos están disponibles para el tipo de acceso de administrador.
 
 
 
+[[clusteradmin]]
 == ClusterAdmin
 
 Los siguientes métodos están disponibles para el tipo de acceso de administrador del clúster:
@@ -464,6 +467,7 @@ GetVirtualNetwork
 |===
 
 
+[[drives]]
 == unidades
 
 Los siguientes métodos se encuentran disponibles para el tipo de acceso de las unidades:
@@ -492,6 +496,7 @@ SecureEraseDrives
 |===
 
 
+[[nodes]]
 == nodos
 
 Los siguientes métodos están disponibles para el tipo de acceso del nodo:
@@ -520,6 +525,7 @@ RemoveNodes
 |===
 
 
+[[read]]
 == lea
 
 Existen los siguientes métodos para el tipo de acceso de lectura:
@@ -663,6 +669,7 @@ ListBackupTargets
 |===
 
 
+[[reporting]]
 == creación de informes
 
 Los siguientes métodos están disponibles para el tipo de acceso a la generación de informes:
@@ -821,12 +828,14 @@ ListVolumeStatsByVolumeAccessGroup
 |===
 
 
+[[repositories]]
 == repositorios
 
 El método ListAllNodes está disponible para el tipo de acceso repositorios.
 
 
 
+[[volumes]]
 == volúmenes
 
 Los siguientes métodos están disponibles para el tipo de acceso de volúmenes:
@@ -1000,6 +1009,7 @@ UpdateBulkVolumeStatus
 |===
 
 
+[[write]]
 == escritura
 
 Los siguientes métodos están disponibles para el tipo de acceso de escritura:

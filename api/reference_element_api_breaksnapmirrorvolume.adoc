@@ -15,6 +15,7 @@ La interfaz de usuario web de Element utiliza el `BreakSnapMirrorVolume` Método
 
 
 
+[[parameter]]
 == Parámetro
 
 Este método tiene el siguiente parámetro de entrada:
@@ -87,18 +88,21 @@ No
 |===
 
 
+[[return-values]]
 == Valores devueltos
 
 Este método no tiene valores devueltos.
 
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 10.0
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 xref:reference_element_api_breaksnapmirrorrelationship.adoc[SnapBreakMirrorRelationship]

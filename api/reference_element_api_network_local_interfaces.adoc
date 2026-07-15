@@ -15,6 +15,7 @@ El objeto network (interfaces locales) contiene información de configuración p
 
 
 
+[[object-members]]
 == Miembros de objeto
 
 Este objeto contiene los siguientes miembros:
@@ -91,6 +92,7 @@ booleano
 |===
 
 
+[[member-modifiability-and-node-states]]
 == Modificación de miembros y estados de nodo
 
 Esta tabla indica si los parámetros del objeto se pueden modificar en cada estado de nodo posible.
@@ -168,6 +170,7 @@ N.A.
 |===
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * xref:reference_element_api_getconfig.adoc[Getconfig]

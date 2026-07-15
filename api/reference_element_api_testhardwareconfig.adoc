@@ -15,6 +15,7 @@ Puede utilizar el `TestHardwareConfig` método para realizar pruebas de hardware
 
 
 
+[[parameters]]
 == Parámetros
 
 
@@ -57,6 +58,7 @@ Sí
 |===
 
 
+[[return-value]]
 == Valor de retorno
 
 Este método tiene el siguiente valor devuelto:
@@ -75,6 +77,7 @@ Objeto JSON
 |===
 
 
+[[request-example]]
 == Ejemplo de solicitud
 
 Las solicitudes de este método son similares al ejemplo siguiente:
@@ -91,18 +94,21 @@ Las solicitudes de este método son similares al ejemplo siguiente:
 ----
 
 
+[[response-example]]
 == Ejemplo de respuesta
 
 Debido a la longitud de este ejemplo de respuesta, se documenta en un tema complementario.
 
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 9.6
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 xref:reference_element_api_response_example_testhardwareconfig.adoc[TestHardwarConfig]

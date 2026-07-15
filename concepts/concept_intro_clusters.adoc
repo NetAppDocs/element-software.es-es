@@ -32,6 +32,7 @@ NOTE: A partir de la versión 11.0 de Element, los nodos se pueden configurar co
 
 
 
+[[authoritative-storage-clusters]]
 == Clústeres de almacenamiento autoritativos
 
 El clúster de almacenamiento autorizado es el clúster de almacenamiento que utiliza Hybrid Cloud Control de NetApp para autenticar usuarios.
@@ -46,18 +47,21 @@ Consulte link:../mnode/task_mnode_manage_storage_cluster_assets.html["crear y ge
 
 
 
+[[rule-of-thirds]]
 == Regla de las terceras partes
 
 Cuando se mezclan los tipos de nodo de almacenamiento en un clúster de almacenamiento SolidFire de NetApp, ningún nodo de almacenamiento puede contener más del 33 % de la capacidad total de clúster de almacenamiento.
 
 
 
+[[stranded-capacity]]
 == Capacidad desaprovechada
 
 Si un nodo que se acaba de añadir supone más del 50 % de la capacidad total del clúster, parte de la capacidad de este nodo se vuelve inutilizable ("trenzado"), de modo que cumpla con la regla de capacidad. Este sigue siendo el caso hasta que se añada más capacidad de almacenamiento. Si se añade un nodo muy grande que también desobedece la regla de capacidad, el nodo que antes se había abandonado ya no se quedará abandonado, mientras el nodo recién añadido se vuelve abandonado. La capacidad debe añadirse siempre por parejas para evitar que esto ocurra. Cuando un nodo se queda sin poner en cadena, se produce un error del clúster adecuado.
 
 
 
+[[storage-efficiency]]
 == Eficiencia del almacenamiento
 
 Los clústeres de almacenamiento SolidFire de NetApp utilizan la deduplicación, la compresión y el thin provisioning para reducir la cantidad de almacenamiento físico necesario para almacenar un volumen.
@@ -78,6 +82,7 @@ Un volumen o LUN con thin provisioning es uno para el cual no se reserva almacen
 
 
 
+[[storage-cluster-quorum]]
 == Quórum del clúster de almacenamiento
 
 El software Element crea un clúster de almacenamiento a partir de los nodos seleccionados, que mantiene una base de datos replicada de la configuración de clúster. Se necesita un mínimo de tres nodos para participar en el conjunto de clústeres a fin de mantener el quórum para la resiliencia del clúster.

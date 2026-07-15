@@ -15,18 +15,21 @@ Puede utilizar el `ListPendingNodes` método para enumerar los nodos de almacena
 
 
 
+[[ipv4-and-ipv6-management-addresses]]
 == Direcciones de gestión IPv4 e IPv6
 
 Tenga en cuenta que `ListPendingNodes` No enumera los nodos pendientes que tienen diferentes tipos de dirección para la dirección IP de gestión (MIP) y la dirección IP virtual de gestión (MVIP). Por ejemplo, si un nodo pendiente tiene una MVIP IPv6 y una MIP de IPv4, `ListPendingNodes` no incluirá el nodo como parte del resultado.
 
 
 
+[[parameters]]
 == Parámetros
 
 Este método no tiene parámetros de entrada.
 
 
 
+[[return-value]]
 == Valor de retorno
 
 Este método tiene el siguiente valor devuelto:
@@ -45,6 +48,7 @@ xref:reference_element_api_pendingnode.adoc[PendingNode] cabina
 |===
 
 
+[[request-example]]
 == Ejemplo de solicitud
 
 Las solicitudes de este método son similares al ejemplo siguiente:
@@ -59,6 +63,7 @@ Las solicitudes de este método son similares al ejemplo siguiente:
 ----
 
 
+[[response-example]]
 == Ejemplo de respuesta
 
 Este método devuelve una respuesta similar al siguiente ejemplo:
@@ -95,12 +100,14 @@ Este método devuelve una respuesta similar al siguiente ejemplo:
 ----
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 9.6
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 xref:reference_element_api_addnodes.adoc[AddNodes]

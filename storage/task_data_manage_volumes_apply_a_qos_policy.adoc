@@ -25,6 +25,7 @@ Debe existir la política de calidad de servicio que desea aplicar de forma masi
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 xref:concept_data_manage_volumes_quality_of_service_policies.adoc[Políticas de calidad de servicio]

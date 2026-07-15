@@ -19,6 +19,7 @@ En los siguientes escenarios se describen posibles escenarios de fallos y se ofr
 
 
 
+[[system-slice-drive-fails]]
 == Error en la unidad de segmentos del sistema
 
 * En este caso, la ranura 2 se verifica y vuelve a un estado available.
@@ -31,6 +32,7 @@ NOTE: No es posible añadir la unidad de la ranura 2 por sí misma como una unid
 
 
 
+[[slot-2-fails]]
 == Error en la ranura 2
 
 * En este escenario, la unidad de segmentos del sistema se verifica y vuelve a un estado available.
@@ -39,6 +41,7 @@ NOTE: No es posible añadir la unidad de la ranura 2 por sí misma como una unid
 
 
 
+[[system-slice-drive-and-slot-2-fails]]
 == Se produce un error en la unidad de segmentos del sistema y en la ranura 2
 
 * Debe reemplazar la unidad de segmentos del sistema y la ranura 2 con una unidad de repuesto. Cuando las dos unidades estén disponibles, añada la unidad de segmentos del sistema y la unidad de la ranura 2 al mismo tiempo.
@@ -46,6 +49,7 @@ NOTE: No es posible añadir la unidad de la ranura 2 por sí misma como una unid
 
 
 
+[[order-of-operations]]
 == Orden de las operaciones
 
 * Reemplace la unidad de hardware en la que se haya producido el error con una unidad de repuesto (reemplace ambas unidades en caso de que las dos tengan errores).
@@ -54,6 +58,7 @@ NOTE: No es posible añadir la unidad de la ranura 2 por sí misma como una unid
 
 
 
+[[verify-operations]]
 == Verificar operaciones
 
 * Verifique que las unidades de la ranura 0 (o internas) y la ranura 2 se hayan identificado como unidades de metadatos en la lista de unidades activas.
@@ -62,6 +67,7 @@ NOTE: No es posible añadir la unidad de la ranura 2 por sí misma como una unid
 
 
 
+[[for-more-information]]
 == Si quiere más información
 
 xref:task_troubleshoot_add_mdss_drives.adoc[Añada unidades MDSS]

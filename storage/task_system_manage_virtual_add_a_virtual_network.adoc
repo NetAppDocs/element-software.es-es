@@ -48,6 +48,7 @@ Cuando se añade una red virtual, se crea una interfaz para cada nodo y cada una
 
 
 
+[[view-virtual-network-details]]
 == Ver detalles de redes virtuales
 
 .Pasos

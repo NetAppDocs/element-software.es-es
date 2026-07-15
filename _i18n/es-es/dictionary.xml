@@ -4314,8 +4314,6 @@
   <block id="40e6309535725d4314d28ffabe26de2f" category="paragraph">La clave pública SSH que resulta de la firma de la clave pública, ya sea proporcionada por el usuario o generada por la API.</block>
   <block id="4379e56a99273d480a732e14cfe86d12" category="paragraph">En este ejemplo, se firma una clave pública y se devuelve que es válida durante el tiempo (1-24 horas).</block>
   <block id="cf3e481a44141cabd4e9d46cfbb1f899" category="paragraph">12.5</block>
-  <block id="b1ff5704b48e42d700d43961dd415064" category="doc">Marca comercial</block>
-  <block id="a93bc0a57623c2facaa010825c808507" category="paragraph"><block ref="a93bc0a57623c2facaa010825c808507" category="inline-link-rx"></block></block>
   <block id="6e4d7139d3f3c45a0e469953f50bb719" category="summary">El objeto snapMirrorClusterIdentity contiene información de identificación sobre el clúster de ONTAP remoto en una relación de SnapMirror.</block>
   <block id="b3a627fb191e904a8282a5d7aa4f45de" category="doc">SnapMirrorClusterIdentity</block>
   <block id="343d28c140c3f5ce20a1ac3f8f7dae2c" category="paragraph">Nombre del clúster</block>
@@ -11422,9 +11420,6 @@
   <block id="a310588c148d934b9b30c31802d4a30b" category="sidebar">Comunidad de NetApp</block>
   <block id="213686afc3803be7caa09348765467fe" category="sidebar">Dónde obtener ayuda</block>
   <block id="b47307258c4d85ffb5f4141d7a660a9b" category="sidebar">Element 11.8.2 y documentación anterior</block>
-  <block id="3d08f19c985682eb2a632e36184cedd2" category="paragraph"><block ref="3d08f19c985682eb2a632e36184cedd2" category="inline-link-rx"></block></block>
-  <block id="b456d131470ee117b6ff900f949b80c5" category="paragraph"><block ref="b456d131470ee117b6ff900f949b80c5" category="inline-link-rx"></block></block>
-  <block id="1791fd435a83f3ee701165e29bb05b2f" category="list-text"><block ref="1791fd435a83f3ee701165e29bb05b2f" category="inline-link-rx"></block></block>
   <block id="6580584049ef8cc78e6be1833466e606" category="inline-link-macro">Replicación entre software NetApp Element y ONTAP (CLI de ONTAP)</block>
   <block id="9051badc24841b5e2521cd8790e8f7d8" category="paragraph">Para obtener más información, consulte <block ref="5aaa67c40a6461657bd1345524045131" category="inline-link-macro-rx"></block>.</block>
   <block id="39f2369f3b77569b78b2438bb261689c" category="summary">Tras hacer que el volumen de destino sea editable, debe configurar el volumen para el acceso a los datos. Los hosts SAN pueden acceder a los datos desde el volumen de destino hasta que se reactive el volumen de origen.</block>
@@ -12063,4 +12058,7 @@
   <block id="132c11da2b1e7646c3d397a41e823c61" category="admonition">Los sistemas operativos difieren en cómo tratan los volúmenes clonados. VMware ESXi tratará un volumen clonado como una copia de volumen o un volumen de snapshot. El volumen será un dispositivo disponible para usar y crear un nuevo datastore. Para más información sobre cómo montar volúmenes clonados y manejar LUN de snapshot, consulta la <block ref="3be1aef9521c6da181e637c000f32aa2" category="inline-link-macro-rx"></block> sobre cómo montar una copia de un datastore VMFS y gestionar datastores VMFS duplicados.</block>
   <block id="75b0b932212b6758e37fc8920da31e3e" category="list-text">Has reservado tiempo suficiente para tus actualizaciones de <block ref="da6d02632764bebb791a1a7b176b342b" category="inline-link-macro-rx"></block> y <block ref="64ca0a1c0466cb0bbd500939e8f353f3" category="inline-link-macro-rx"></block>. Cuando actualizas al software Element 12.5 o una versión posterior, el tiempo que tarda el proceso de actualización varía según la versión del software Element y las actualizaciones de firmware.</block>
   <block id="fe3c28c386d2be6c3cbda4b2feb01c29" category="list-text"><block ref="e8348e5b207b91893f9322900bc614aa" category="inline-link-rx"></block>.</block>
+  <block id="161b4ed96d634114cd790ffb7038cc24" category="paragraph"><block ref="161b4ed96d634114cd790ffb7038cc24" category="inline-link-rx"></block></block>
+  <block id="c28c56f7a7ce8d5595899ccc3950cb6d" category="paragraph"><block ref="c28c56f7a7ce8d5595899ccc3950cb6d" category="inline-link-rx"></block></block>
+  <block id="145012f945e6ea9359e0b746c1a4925a" category="list-text"><block ref="145012f945e6ea9359e0b746c1a4925a" category="inline-link-rx"></block></block>
 </blocks>

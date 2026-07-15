@@ -28,6 +28,7 @@ NOTE: De forma predeterminada, la cadena de comunidad es public y la red es loca
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * xref:task_system_manage_snmp_configure_snmp_traps.adoc[Configurar las capturas SNMP]

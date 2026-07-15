@@ -48,6 +48,7 @@ WARNING: A menos que el soporte de NetApp indique lo contrario, cualquier modifi
 
 
 
+[[troubleshoot-a-cluster-node]]
 == Solucionar los problemas de un nodo de clúster
 
 Puede realizar la solución de problemas básica utilizando la cuenta del sistema sfreadonly:
@@ -116,6 +117,7 @@ NOTE: SSH sigue estando habilitado en el nodo de gestión si no se la deshabilit
 
 
 
+[[troubleshoot-a-cluster-node-with-netapp-support]]
 == Solucione problemas de un nodo de clúster con el soporte de NetApp
 
 El soporte de NetApp puede llevar a cabo una solución de problemas avanzada con una cuenta del sistema, lo que permite a un técnico ejecutar diagnósticos de elementos más profundos.
@@ -213,6 +215,7 @@ NOTE: SSH sigue estando habilitado en el nodo de gestión si no se la deshabilit
 
 
 
+[[troubleshoot-a-node-that-is-not-part-of-cluster]]
 == Solucione el problema de un nodo que no forme parte del clúster
 
 Puede realizar la solución de problemas básica de un nodo que aún no se ha añadido a un clúster. Puede utilizar la cuenta del sistema sfreadonly con este fin, con o sin la ayuda del soporte de NetApp. Si tiene configurado un nodo de gestión, puede usarlo para SSH y ejecutar el script proporcionado para esta tarea.

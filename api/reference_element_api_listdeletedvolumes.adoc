@@ -15,6 +15,7 @@ Puede utilizar el `ListDeletedVolumes` método para recuperar la lista de volúm
 
 
 
+[[parameter]]
 == Parámetro
 
 Este método tiene el siguiente parámetro de entrada:
@@ -37,6 +38,7 @@ No
 |===
 
 
+[[return-value]]
 == Valor de retorno
 
 Este método tiene el siguiente valor devuelto:
@@ -55,6 +57,7 @@ xref:reference_element_api_volume.adoc[volumen] cabina
 |===
 
 
+[[request-example]]
 == Ejemplo de solicitud
 
 Las solicitudes de este método son similares al ejemplo siguiente:
@@ -69,6 +72,7 @@ Las solicitudes de este método son similares al ejemplo siguiente:
 ----
 
 
+[[response-example]]
 == Ejemplo de respuesta
 
 Las respuestas para este método son similares al ejemplo siguiente:
@@ -123,6 +127,7 @@ Las respuestas para este método son similares al ejemplo siguiente:
 ----
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 9.6

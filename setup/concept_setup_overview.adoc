@@ -36,6 +36,7 @@ Puede configurar un clúster con nodos Fibre Channel y administrarlo mediante el
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * link:../setup/concept_setup_whats_next.html["Descubra los siguientes pasos para usar el almacenamiento"]

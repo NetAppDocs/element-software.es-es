@@ -42,6 +42,7 @@ Puede gestionar, supervisar y actualizar el sistema mediante la interfaz de usua
 
 
 
+[[common-urls]]
 == Direcciones URL comunes
 
 Estas son las URL comunes que utiliza con un sistema de almacenamiento all-flash de SolidFire:
@@ -70,6 +71,7 @@ Estas son las URL comunes que utiliza con un sistema de almacenamiento all-flash
 |===
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]

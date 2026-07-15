@@ -17,6 +17,7 @@ Cuando se configura una programación de Snapshot, se puede elegir entre interva
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * xref:task_data_protection_create_a_snapshot_schedule.adoc[Crear una programación de Snapshot]

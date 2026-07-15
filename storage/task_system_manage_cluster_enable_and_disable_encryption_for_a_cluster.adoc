@@ -28,6 +28,7 @@ WARNING: En los clústeres de almacenamiento all-flash de SolidFire, el cifrado 
 
 
 
+[[check-encryption-at-rest-status]]
 == Comprobar el cifrado en estado de reposo
 
 Para ver el estado actual del cifrado en reposo y/o el cifrado de software en reposo en el clúster, use el link:../api/reference_element_api_getclusterinfo.html["GetClusterInfo"^] método. Puede utilizar el link:../api/reference_element_api_getsoftwareencryptionatrestinfo.html["GetSoftwareEncryptionAtRestInfo"^] método para obtener información que utiliza el clúster para cifrar datos en reposo.
@@ -43,6 +44,7 @@ NOTE: La consola de interfaz de usuario del software Element en `https://<MVIP>/
 
 
 
+[[enable-hardware-based-encryption-at-rest]]
 == Habilite el cifrado basado en hardware en reposo
 
 
@@ -54,6 +56,7 @@ NOTE: Para habilitar el cifrado en reposo mediante una configuración de gestió
 
 
 
+[[enable-software-based-encryption-at-rest]]
 == Habilite el cifrado basado en software en reposo
 
 
@@ -64,6 +67,7 @@ NOTE: El cifrado de software en reposo no se puede deshabilitar una vez que se h
 
 
 
+[[disable-hardware-based-encryption-at-rest]]
 == Deshabilite el cifrado basado en hardware en reposo
 
 . En la interfaz de usuario de Element, seleccione *Cluster* > *Settings*.

@@ -15,6 +15,7 @@ Ocasionalmente, puede producirse un error que requiere la intervención del usua
 
 
 
+[[the-cluster-is-unable-to-unlock-the-drives-due-to-a-kmipserverfault-cluster-fault]]
 == El clúster no puede desbloquear las unidades debido a un fallo en el clúster KmipServerFault.
 
 Esto puede suceder cuando el clúster se inicia por primera vez y no se puede acceder al servidor de claves o la clave requerida no está disponible.
@@ -24,6 +25,7 @@ Esto puede suceder cuando el clúster se inicia por primera vez y no se puede ac
 
 
 
+[[a-sliceserviceunhealthy-fault-might-be-set-because-the-metadata-drives-have-been-marked-as-failed-and-placed-into-the-available-state]]
 == Se puede configurar un error slicServiceUnhealthy porque las unidades de metadatos se han marcado como un error y se han colocado en el estado "Available".
 
 Pasos para borrar:

@@ -35,6 +35,7 @@ Para obtener información sobre cada método, consulte link:../api/concept_eleme
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * link:../api/concept_element_api_about_the_api.html["Gestionar el almacenamiento con la API de Element"]

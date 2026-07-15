@@ -15,6 +15,7 @@ Puede utilizar el `ListActiveVolumes` método para obtener la lista de volúmene
 
 
 
+[[parameters]]
 == Parámetros
 
 Este método tiene los siguientes parámetros de entrada:
@@ -63,6 +64,7 @@ No
 |===
 
 
+[[return-value]]
 == Valor de retorno
 
 Este método tiene el siguiente valor devuelto:
@@ -83,6 +85,7 @@ xref:reference_element_api_volume.adoc[volumen] cabina
 |===
 
 
+[[request-example]]
 == Ejemplo de solicitud
 
 Las solicitudes de este método son similares al ejemplo siguiente:
@@ -100,12 +103,14 @@ Las solicitudes de este método son similares al ejemplo siguiente:
 ----
 
 
+[[response-example]]
 == Ejemplo de respuesta
 
 Debido a la longitud de este ejemplo de respuesta, se documenta en un tema complementario.
 
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 9.6

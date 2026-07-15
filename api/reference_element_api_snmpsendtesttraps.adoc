@@ -15,12 +15,14 @@ summary: SnmpSendTestTraps permite probar la funcionalidad SNMP de un clúster. 
 
 
 
+[[parameters]]
 == Parámetros
 
 Este método no tiene parámetros de entrada.
 
 
 
+[[return-value]]
 == Valor de retorno
 
 Este método tiene el siguiente valor devuelto:
@@ -39,6 +41,7 @@ cadena
 |===
 
 
+[[request-example]]
 == Ejemplo de solicitud
 
 Las solicitudes de este método son similares al ejemplo siguiente:
@@ -53,6 +56,7 @@ Las solicitudes de este método son similares al ejemplo siguiente:
 ----
 
 
+[[response-example]]
 == Ejemplo de respuesta
 
 Este método devuelve una respuesta similar al siguiente ejemplo:
@@ -68,6 +72,7 @@ Este método devuelve una respuesta similar al siguiente ejemplo:
 ----
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 9.6

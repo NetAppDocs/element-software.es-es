@@ -15,6 +15,7 @@ Puede utilizar el `TestKeyProviderKmip` Método para probar si el proveedor de c
 
 
 
+[[parameters]]
 == Parámetros
 
 Este método tiene los siguientes parámetros de entrada:
@@ -37,12 +38,14 @@ Sí
 |===
 
 
+[[return-values]]
 == Valores devueltos
 
 Este método no tiene valores devueltos. La prueba se considera correcta mientras no se devuelve ningún error.
 
 
 
+[[request-example]]
 == Ejemplo de solicitud
 
 Las solicitudes de este método son similares al ejemplo siguiente:
@@ -59,6 +62,7 @@ Las solicitudes de este método son similares al ejemplo siguiente:
 ----
 
 
+[[response-example]]
 == Ejemplo de respuesta
 
 Este método devuelve una respuesta similar al siguiente ejemplo:
@@ -74,6 +78,7 @@ Este método devuelve una respuesta similar al siguiente ejemplo:
 ----
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 11.7

@@ -15,18 +15,21 @@ Puede utilizar el `RemoveSSLCertificate` Método para quitar el certificado SSL 
 
 
 
+[[parameters]]
 == Parámetros
 
 Este método no tiene parámetros de entrada.
 
 
 
+[[return-values]]
 == Valores devueltos
 
 Este método no tiene valores devueltos.
 
 
 
+[[request-example]]
 == Ejemplo de solicitud
 
 Las solicitudes de este método son similares al ejemplo siguiente:
@@ -41,6 +44,7 @@ Las solicitudes de este método son similares al ejemplo siguiente:
 ----
 
 
+[[response-example]]
 == Ejemplo de respuesta
 
 Este método devuelve una respuesta similar al siguiente ejemplo:
@@ -54,6 +58,7 @@ Este método devuelve una respuesta similar al siguiente ejemplo:
 ----
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 10.0

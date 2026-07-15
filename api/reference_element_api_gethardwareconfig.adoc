@@ -15,12 +15,14 @@ Puede utilizar el `GetHardwareConfig` método para obtener la información de co
 
 
 
+[[parameters]]
 == Parámetros
 
 Este método no tiene parámetros de entrada.
 
 
 
+[[return-value]]
 == Valor de retorno
 
 Este método tiene el siguiente valor devuelto:
@@ -33,6 +35,7 @@ Este método tiene el siguiente valor devuelto:
 |===
 
 
+[[request-example]]
 == Ejemplo de solicitud
 
 Las solicitudes de este método son similares al ejemplo siguiente:
@@ -47,6 +50,7 @@ Las solicitudes de este método son similares al ejemplo siguiente:
 ----
 
 
+[[response-example]]
 == Ejemplo de respuesta
 
 Las respuestas para este método son similares al ejemplo siguiente.
@@ -131,6 +135,7 @@ Las respuestas para este método son similares al ejemplo siguiente.
 ----
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 9.6

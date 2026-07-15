@@ -17,6 +17,7 @@ El almacenamiento de Element permite crear, ver, editar, eliminar, clonar, reali
 
 
 
+[[persistent-volumes]]
 == Volúmenes persistentes
 
 Los volúmenes persistentes permiten que los datos de configuración del nodo de gestión se almacenen en un clúster de almacenamiento especificado, en lugar de localmente con una máquina virtual, de modo que los datos se puedan conservar en caso de pérdida o eliminación del nodo de gestión. Los volúmenes persistentes son una configuración de nodos de gestión opcional pero recomendada.

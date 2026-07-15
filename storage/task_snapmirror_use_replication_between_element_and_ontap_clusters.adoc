@@ -19,12 +19,13 @@ https://www.youtube.com/embed/kerGI1ZtnZQ?rel=0["Vídeo de NetApp: SnapMirror pa
 
 Los sistemas que ejecutan el software NetApp Element admiten la funcionalidad SnapMirror para copiar y restaurar copias Snapshot con sistemas ONTAP de NetApp. El principal motivo para usar esta tecnología es la recuperación ante desastres de NetApp HCI a ONTAP. Los extremos incluyen ONTAP, ONTAP Select y Cloud Volumes ONTAP. Consulte TR-4641 Protección de datos de NetApp HCI.
 
-https://www.netapp.com/pdf.html?item=/media/17048-tr4641pdf.pdf["Informe técnico de NetApp 4641: Protección de datos de NetApp HCI"^]
+https://www.netapp.com/pdf.html?item=/media/17048-tr4641.pdf["Informe técnico de NetApp 4641: Protección de datos de NetApp HCI"^]
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
-* https://www.netapp.com/pdf.html?item=/media/16991-tr4748pdf.pdf["Crear una estructura de datos con NetApp HCI, ONTAP e infraestructura convergente"^]
+* https://www.netapp.com/pdf.html?item=/media/16991-tr4748.pdf["Crear una estructura de datos con NetApp HCI, ONTAP e infraestructura convergente"^]
 * link:element-replication-index.html["Replicación entre software NetApp Element y ONTAP (CLI de ONTAP)"]
 

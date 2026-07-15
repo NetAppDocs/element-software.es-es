@@ -24,6 +24,7 @@ NOTE: Si desea desasociar en lugar de ello un volumen de una política de calida
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 xref:task_data_manage_volumes_remove_a_qos_policy_association_of_a_volume.adoc[Quite la asociación de políticas de calidad de servicio de un volumen]

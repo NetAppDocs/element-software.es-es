@@ -31,6 +31,7 @@ Se muestra la información de todos los volúmenes virtuales activos.
 
 
 
+[[details]]
 == Detalles
 
 La página Virtual Volumes de la pestaña VVols proporciona información sobre cada volumen virtual activo en el clúster, como el ID de volumen, el ID de snapshot, el ID de volumen virtual primario y el ID de volumen virtual.
@@ -55,6 +56,7 @@ La página Virtual Volumes de la pestaña VVols proporciona información sobre c
 
 
 
+[[individual-virtual-volume-details]]
 == Detalles de cada volumen virtual
 
 La página Virtual Volumes de la pestaña VVols proporciona la siguiente información sobre volúmenes virtuales cuando selecciona un volumen virtual y desea ver sus detalles.

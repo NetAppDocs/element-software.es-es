@@ -15,6 +15,7 @@ Es posible gestionar los datos en un clúster que ejecuta el software Element de
 
 
 
+[[work-with-volumes]]
 == Trabaje con volúmenes
 
 El sistema SolidFire aprovisiona el almacenamiento mediante volúmenes. Los volúmenes son dispositivos de bloque a los que los clientes iSCSI o Fibre Channel acceden a través de la red. En la página Volumes de la pestaña Management, puede crear, modificar, clonar y eliminar volúmenes en un nodo. También puede ver estadísticas sobre el ancho de banda de los volúmenes y el uso de I/O.
@@ -23,6 +24,7 @@ link:../storage/concept_data_manage_volumes_quality_of_service_policies.html["Ap
 
 
 
+[[work-with-virtual-volumes]]
 == Trabaje con volúmenes virtuales
 
 Es posible ver información y realizar tareas en relación con los volúmenes virtuales y sus contenedores de almacenamiento, extremos de protocolo, vinculaciones y hosts asociados mediante la interfaz de usuario de Element.
@@ -43,6 +45,7 @@ link:../storage/task_data_manage_vvol_enable_virtual_volumes.html["Aprenda a tra
 
 
 
+[[work-with-volume-access-groups-and-initiators]]
 == Trabajar con iniciadores y grupos de acceso de volúmenes
 
 Es posible usar iniciadores iSCSI o iniciadores de Fibre Channel para acceder a los volúmenes definidos dentro de los grupos de acceso de volúmenes.
@@ -72,6 +75,7 @@ link:../storage/task_data_manage_vol_access_group_create_a_volume_access_group.h
 
 
 
+[[for-more-information]]
 == Si quiere más información
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]

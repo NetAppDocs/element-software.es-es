@@ -15,6 +15,7 @@ Puede utilizar el `GetNvramInfo` Método para obtener información de cada nodo 
 
 
 
+[[parameter]]
 == Parámetro
 
 Este método tiene el siguiente parámetro de entrada:
@@ -37,6 +38,7 @@ Sí
 |===
 
 
+[[return-value]]
 == Valor de retorno
 
 Este método tiene el siguiente valor devuelto:
@@ -55,6 +57,7 @@ Objeto JSON
 |===
 
 
+[[request-example]]
 == Ejemplo de solicitud
 
 Las solicitudes de este método son similares al ejemplo siguiente:
@@ -71,18 +74,21 @@ Las solicitudes de este método son similares al ejemplo siguiente:
 ----
 
 
+[[response-example]]
 == Ejemplo de respuesta
 
 Debido a la longitud de este ejemplo de respuesta, se documenta en un tema complementario.
 
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 9.6
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 xref:reference_element_api_response_example_getnvraminfo.adoc[GetNvramInfo]

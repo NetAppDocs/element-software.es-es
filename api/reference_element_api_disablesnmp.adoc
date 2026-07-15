@@ -15,18 +15,21 @@ Puede utilizar el `DisableSnmp` Método para deshabilitar SNMP en los nodos del 
 
 
 
+[[parameter]]
 == Parámetro
 
 Este método no tiene parámetro de entrada.
 
 
 
+[[return-value]]
 == Valor de retorno
 
 Este método no tiene ningún valor devuelto.
 
 
 
+[[request-example]]
 == Ejemplo de solicitud
 
 Las solicitudes de este método son similares al ejemplo siguiente:
@@ -41,6 +44,7 @@ Las solicitudes de este método son similares al ejemplo siguiente:
 ----
 
 
+[[response-example]]
 == Ejemplo de respuesta
 
 Este método devuelve una respuesta similar al siguiente ejemplo:
@@ -54,6 +58,7 @@ Este método devuelve una respuesta similar al siguiente ejemplo:
 ----
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 9.6

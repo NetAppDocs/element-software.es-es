@@ -15,6 +15,7 @@ El software Element utiliza esta versión de `ModifySnapMirrorEndpoint` Método 
 
 
 
+[[parameters]]
 == Parámetros
 
 Este método tiene los siguientes parámetros de entrada:
@@ -65,6 +66,7 @@ No
 |===
 
 
+[[return-value]]
 == Valor de retorno
 
 Este método tiene el siguiente valor devuelto:
@@ -85,6 +87,7 @@ xref:reference_element_api_snapmirrorendpoint.adoc[SnapMirrorEndpoint]
 |===
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 10.3

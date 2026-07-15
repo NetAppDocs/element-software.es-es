@@ -20,6 +20,7 @@ Tareas que se pueden realizar con API de REST:
 
 
 
+[[authorization]]
 == Autorización
 
 * link:task_mnode_api_get_authorizationtouse.html["Obtenga autorización para utilizar las API de REST"]
@@ -27,6 +28,7 @@ Tareas que se pueden realizar con API de REST:
 
 
 
+[[asset-configuration]]
 == Configuración de activos
 
 * link:task_mnode_enable_activeIQ.html["Habilite la supervisión de Active IQ y NetApp"]
@@ -38,6 +40,7 @@ Tareas que se pueden realizar con API de REST:
 
 
 
+[[asset-management]]
 == Gestión de activos
 
 * link:task_mnode_edit_vcenter_assets.html["Ver o editar activos de controladora existentes"]

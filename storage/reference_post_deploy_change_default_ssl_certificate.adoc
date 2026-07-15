@@ -36,6 +36,7 @@ NOTE: El certificado SSL de clúster se aplica automáticamente a todos los nodo
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * link:../mnode/reference_change_mnode_default_ssl_certificate.html["Cambie el certificado SSL predeterminado del nodo de gestión"]

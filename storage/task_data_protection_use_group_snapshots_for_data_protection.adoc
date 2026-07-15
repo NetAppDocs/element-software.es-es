@@ -15,6 +15,7 @@ Se puede crear una copia de Snapshot de grupo de un conjunto relacionado de vol�
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * xref:task_data_protection_create_a_group_snapshot.adoc[Crear una copia de Snapshot de grupo]

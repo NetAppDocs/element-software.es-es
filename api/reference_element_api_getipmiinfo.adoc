@@ -15,12 +15,14 @@ Puede utilizar el `GetIpmiInfo` método para mostrar un informe detallado de los
 
 
 
+[[parameters]]
 == Parámetros
 
 Este método no tiene parámetros de entrada.
 
 
 
+[[return-value]]
 == Valor de retorno
 
 Este método tiene el siguiente valor devuelto:
@@ -39,6 +41,7 @@ Cabina de objetos JSON
 |===
 
 
+[[request-example]]
 == Ejemplo de solicitud
 
 Las solicitudes de este método son similares al ejemplo siguiente:
@@ -53,6 +56,7 @@ Las solicitudes de este método son similares al ejemplo siguiente:
 ----
 
 
+[[response-example]]
 == Ejemplo de respuesta
 
 Debido a la duración de la respuesta devuelta para este método API, partes de la respuesta han sido eliminadas intencionalmente de este documento. Lo que se incluye son las partes de la información de hardware que supervisa el sistema para garantizar que el nodo se ejecute con un rendimiento óptimo.
@@ -187,6 +191,7 @@ Debido a la duración de la respuesta devuelta para este método API, partes de 
 ----
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 9.6

@@ -15,6 +15,7 @@ La `account` objeto contiene información acerca de una cuenta. Este objeto solo
 
 
 
+[[object-members]]
 == Miembros de objeto
 
 Este objeto contiene los siguientes miembros:
@@ -110,6 +111,7 @@ matriz en números enteros
 |===
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * xref:reference_element_api_addaccount.adoc[AddAccount]

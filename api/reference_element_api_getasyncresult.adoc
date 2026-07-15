@@ -19,6 +19,7 @@ Si falta el parámetro keepResult o FALSE, el comando establish asyncHandle se d
 
 
 
+[[parameters]]
 == Parámetros
 
 Este método tiene los siguientes parámetros de entrada:
@@ -54,6 +55,7 @@ No
 |===
 
 
+[[return-values]]
 == Valores devueltos
 
 Este método tiene los siguientes valores devueltos:
@@ -132,6 +134,7 @@ Cadena de fecha ISO 8601
 
 
 
+[[request-example]]
 == Ejemplo de solicitud
 
 Las solicitudes de este método son similares al ejemplo siguiente:
@@ -148,6 +151,7 @@ Las solicitudes de este método son similares al ejemplo siguiente:
 ----
 
 
+[[response-example-method-error]]
 == Ejemplo de respuesta: Error de método
 
 Este método devuelve una respuesta similar al siguiente ejemplo:
@@ -167,6 +171,7 @@ Si la "respuesta" fuera el objeto de respuesta JSON de la llamada GetAsyncResult
 
 
 
+[[response-example-asynchronous-task-error]]
 == Ejemplo de respuesta: Error de tarea asíncrona
 
 Este método devuelve una respuesta similar al siguiente ejemplo:
@@ -193,6 +198,7 @@ El "esponse.result.error" correspondería a un resultado de error de la llamada 
 
 
 
+[[response-example-asynchronous-task-success]]
 == Ejemplo de respuesta: Tarea asíncrona correcta
 
 Este método devuelve una respuesta similar al siguiente ejemplo:
@@ -218,6 +224,7 @@ Este método devuelve una respuesta similar al siguiente ejemplo:
 
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 9.6

@@ -19,6 +19,7 @@ Es posible ver las sesiones Fibre Channel (FC) que están conectadas al clúster
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 xref:reference_monitor_fibre_channel_session_details.adoc[Detalles de la sesión Fibre Channel]

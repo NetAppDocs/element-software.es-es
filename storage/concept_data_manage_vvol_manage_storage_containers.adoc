@@ -19,6 +19,7 @@ Se permite un máximo de cuatro contenedores de almacenamiento por clúster. Se 
 
 
 
+[[create-a-storage-container]]
 == Cree un contenedor de almacenamiento
 
 Los contenedores de almacenamiento se pueden crear en la interfaz de usuario de Element y se pueden detectar en vCenter. Es necesario crear al menos un contenedor de almacenamiento para comenzar a aprovisionar máquinas virtuales respaldadas por VVol.
@@ -48,6 +49,7 @@ NOTE: Dado que el ID de cuenta de NetApp Element se crea automáticamente y se a
 
 
 
+[[view-storage-container-details]]
 == Ver los detalles del contenedor de almacenamiento
 
 En la página Storage Containers de la pestaña VVols, puede ver información relativa a todos los contenedores de almacenamiento activos del clúster.
@@ -67,6 +69,7 @@ En la página Storage Containers de la pestaña VVols, puede ver información re
 
 
 
+[[view-individual-storage-container-details]]
 == Ver los detalles de cada contenedor de almacenamiento
 
 Si desea ver la información de un contenedor de almacenamiento específico, selecciónelo en la página Storage Containers de la pestaña VVols.
@@ -87,6 +90,7 @@ Si desea ver la información de un contenedor de almacenamiento específico, sel
 
 
 
+[[edit-a-storage-container]]
 == Editar un contenedor de almacenamiento
 
 La autenticación CHAP del contenedor de almacenamiento se puede modificar en la interfaz de usuario de Element.
@@ -104,6 +108,7 @@ TIP: Si no se modifican las credenciales en CHAP Settings, seguirán siendo las 
 
 
 
+[[delete-a-storage-container]]
 == Eliminar un contenedor de almacenamiento
 
 Los contenedores de almacenamiento se pueden eliminar de la interfaz de usuario de Element.

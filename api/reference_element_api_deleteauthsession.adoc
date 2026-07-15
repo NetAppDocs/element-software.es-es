@@ -15,6 +15,7 @@ Puede utilizar el `DeleteAuthSession` método para eliminar una sesión de auten
 
 
 
+[[parameters]]
 == Parámetros
 
 Este método tiene el siguiente parámetro de entrada:
@@ -37,6 +38,7 @@ Sí
 |===
 
 
+[[return-values]]
 == Valores devueltos
 
 Este método tiene el siguiente valor devuelto:
@@ -57,6 +59,7 @@ link:reference_element_api_authsessioninfo.html["AuthSessionInfo"]
 |===
 
 
+[[request-example]]
 == Ejemplo de solicitud
 
 Las solicitudes de este método son similares al ejemplo siguiente:
@@ -73,6 +76,7 @@ Las solicitudes de este método son similares al ejemplo siguiente:
 ----
 
 
+[[response-example]]
 == Ejemplo de respuesta
 
 Este método devuelve una respuesta similar al siguiente ejemplo:
@@ -102,6 +106,7 @@ Este método devuelve una respuesta similar al siguiente ejemplo:
 ----
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 12.0

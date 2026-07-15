@@ -21,6 +21,7 @@ TIP: Los términos "nodo" y "chasis" se utilizan indistintamente en el caso de H
 
 
 
+[[best-practices-for-adding-and-removing-drives]]
 == Prácticas recomendadas para agregar y quitar unidades
 
 Debe seguir estas prácticas recomendadas para añadir unidades al clúster:
@@ -79,6 +80,7 @@ NOTE: Consulte la documentación del proveedor del switch si el switch no recono
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]

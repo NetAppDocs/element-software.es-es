@@ -27,6 +27,7 @@ NOTE: Cuando inicia una nueva sesión de control del cloud híbrido de NetApp po
 
 
 
+[[access-the-netapp-hcc-dashboard]]
 == Acceda a la consola HCC de NetApp
 
 . Abra la dirección IP del nodo de gestión en un navegador web. Por ejemplo:
@@ -43,6 +44,7 @@ image::hcc_dashboard_all.PNG[Panel HCC]
 
 
 
+[[monitor-storage-resources]]
 == Supervise los recursos de almacenamiento
 
 Utilice el panel *almacenamiento* para ver su entorno de almacenamiento total. Es posible supervisar el número de clústeres de almacenamiento, los nodos de almacenamiento y el total de volúmenes.
@@ -59,6 +61,7 @@ TIP: Para ver los datos más recientes del clúster de almacenamiento, use la p�
 
 
 
+[[monitor-storage-capacity]]
 == Supervise la capacidad de almacenamiento
 
 Supervisar la capacidad de almacenamiento del entorno es crucial. Mediante el panel capacidad de almacenamiento, puede determinar sus ganancias en eficiencia de la capacidad del almacenamiento con o sin funciones de compresión, deduplicación y thin provisioning habilitadas.
@@ -97,6 +100,7 @@ NOTE: Las eficiencias totales son iguales a (factor de eficiencia maxUsedSpace *
 
 
 
+[[monitor-storage-performance]]
 == Supervise el rendimiento del almacenamiento
 
 Puede ver cuántas IOPS o rendimiento puede obtener de un clúster sin superar el rendimiento útil de ese recurso mediante el panel rendimiento del almacenamiento. El rendimiento del almacenamiento es el punto en el que se obtiene la utilización máxima antes de que la latencia empeore.

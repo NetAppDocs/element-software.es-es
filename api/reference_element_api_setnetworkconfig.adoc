@@ -15,6 +15,7 @@ Puede utilizar el `SetNetworkConfig` método para establecer la configuración d
 
 
 
+[[parameter]]
 == Parámetro
 
 PRECAUCIÓN:
@@ -41,6 +42,7 @@ No
 |===
 
 
+[[return-value]]
 == Valor de retorno
 
 Este método tiene el siguiente valor devuelto:
@@ -59,6 +61,7 @@ xref:reference_element_api_network_all_interfaces.adoc[red (todas las interfaces
 |===
 
 
+[[request-example]]
 == Ejemplo de solicitud
 
 Las solicitudes de este método son similares al ejemplo siguiente:
@@ -87,18 +90,21 @@ Las solicitudes de este método son similares al ejemplo siguiente:
 ----
 
 
+[[response-example]]
 == Ejemplo de respuesta
 
 La respuesta de este método es la misma que la del método GetNetworkConfig . El método muestra todos los miembros de cada objeto e incluye los nuevos valores para los miembros modificados.
 
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 9.6
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * xref:reference_element_api_getnetworkconfig.adoc[GetNetworkConfig]

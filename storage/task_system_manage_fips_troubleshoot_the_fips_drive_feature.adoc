@@ -25,6 +25,7 @@ Con la interfaz de usuario del software NetApp Element, es posible ver alertas s
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * xref:reference_monitor_cluster_fault_codes.adoc[códigos de error de clúster]

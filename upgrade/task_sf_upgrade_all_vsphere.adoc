@@ -36,6 +36,7 @@ Al actualizar a VMware vCenter Server 7.0 Update 3, el complemento Element para 
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]

@@ -25,6 +25,7 @@ El volumen que desea modificar debe estar asociado a una política de calidad de
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 xref:task_data_manage_volumes_deleting_a_qos_policy.adoc[Elimine una política de calidad de servicio]

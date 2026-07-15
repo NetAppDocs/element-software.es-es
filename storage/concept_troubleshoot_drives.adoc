@@ -32,6 +32,7 @@ IMPORTANT: Los sistemas de almacenamiento de SolidFire no permiten que se elimin
 
 
 
+[[for-more-information]]
 == Si quiere más información
 
 * xref:task_troubleshoot_remove_failed_drives.adoc[Quite las unidades con errores del clúster]

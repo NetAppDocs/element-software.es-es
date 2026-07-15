@@ -18,12 +18,14 @@ Los volúmenes virtuales de vSphere son un paradigma de almacenamiento para VMwa
 
 
 
+[[bindings]]
 == Vinculaciones
 
 El clúster de NetApp Element elige un extremo de protocolo adecuado, crea una vinculación que asocia el host ESXi y el volumen virtual con el extremo del protocolo, y devuelve la vinculación al host ESXi. Una vez enlazados, el host ESXi puede llevar a cabo operaciones de I/o con el volumen virtual vinculado.
 
 
 
+[[protocol-endpoints]]
 == Extremos de protocolo
 
 Los hosts ESXi de VMware utilizan proxies lógicos de I/o, que se conocen como extremos de protocolo, para comunicarse con los volúmenes virtuales. Los hosts ESXi enlazan volúmenes virtuales con extremos de protocolo para realizar operaciones de I/O. Cuando una máquina virtual en el host realiza una operación de I/o, el extremo de protocolo asociado dirige el I/o al volumen virtual con el que está enlazado.
@@ -34,6 +36,7 @@ ISCSI es el único protocolo compatible con el software NetApp Element. No se ad
 
 
 
+[[storage-containers]]
 == Contenedores de almacenamiento
 
 Los contenedores de almacenamiento son construcciones lógicas que se asignan a cuentas de NetApp Element y se usan para crear informes y asignar recursos. Estos aprovechan la capacidad de almacenamiento sin configurar o añaden capacidades de almacenamiento que el sistema de almacenamiento puede ofrecer a los volúmenes virtuales. Un almacén de datos VVol que se crea en vSphere se asigna a un contenedor de almacenamiento individual. De forma predeterminada, un único contenedor de almacenamiento contiene todos los recursos disponibles del clúster de NetApp Element. Sin embargo, si se precisa una gestión granular para el multi-tenancy, se pueden crear varios contenedores.
@@ -42,6 +45,7 @@ Los contenedores de almacenamiento funcionan como cuentas tradicionales, y puede
 
 
 
+[[vasa-provider]]
 == Proveedor de VASA
 
 Para que vSphere esté al tanto de la función VVol en el clúster de NetApp Element, el administrador de vSphere debe registrar el proveedor VASA de NetApp Element en vCenter. El proveedor de VASA es la ruta de control fuera de banda entre vSphere y el clúster de Element. Es responsable de ejecutar solicitudes en el clúster de Element en nombre de vSphere, como la creación de máquinas virtuales, la puesta a disposición de vSphere de máquinas virtuales y la publicidad de funcionalidades de almacenamiento para vSphere.

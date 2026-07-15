@@ -15,6 +15,7 @@ El objeto snapMirrorNode contiene información sobre los nodos del clúster de O
 
 
 
+[[object-members]]
 == Miembros de objeto
 
 Este objeto contiene los siguientes miembros:

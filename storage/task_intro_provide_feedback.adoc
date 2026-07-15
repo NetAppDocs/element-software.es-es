@@ -23,6 +23,7 @@ Es posible mejorar la interfaz de usuario web del software Element y solucionar 
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]

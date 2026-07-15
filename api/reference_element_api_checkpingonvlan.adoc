@@ -15,6 +15,7 @@ Puede utilizar el `CheckPingOnVlan` Método para probar la conectividad de red e
 
 
 
+[[parameters]]
 == Parámetros
 
 Este método tiene el siguiente parámetro de entrada:
@@ -158,6 +159,7 @@ Sí
 |===
 
 
+[[return-values]]
 == Valores devueltos
 
 Este método tiene los siguientes valores devueltos:
@@ -178,6 +180,7 @@ Objeto JSON
 |===
 
 
+[[request-example]]
 == Ejemplo de solicitud
 
 Las solicitudes de este método son similares al ejemplo siguiente:
@@ -197,6 +200,7 @@ Las solicitudes de este método son similares al ejemplo siguiente:
 ----
 
 
+[[response-example]]
 == Ejemplo de respuesta
 
 Este método devuelve una respuesta similar al siguiente ejemplo:
@@ -239,6 +243,7 @@ Este método devuelve una respuesta similar al siguiente ejemplo:
 ----
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 11.1

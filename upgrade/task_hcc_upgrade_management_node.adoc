@@ -23,6 +23,7 @@ NOTE: Si necesita información para actualizar los nodos de gestión 12.2 o una 
 
 
 
+[[step-1-upgrade-vm-hardware-version-on-a-management-node]]
 == Paso 1: Actualice la versión del hardware de la VM en un nodo de gestión
 
 Si va a realizar una actualización in situ de un nodo de administración existente a Element 12.9, antes de actualizar, debe asegurarse de que la versión del hardware de la máquina virtual en el nodo de administración sea compatible con ESXi 6.7 (versión de hardware de la máquina virtual 14) o posterior, según su entorno.
@@ -44,6 +45,7 @@ Espere hasta que la máquina virtual se apague.
 
 
 
+[[step-2-upgrade-a-management-node-to-element-12-5-or-later]]
 == Paso 2: Actualice un nodo de gestión a Element 12,5 o una versión posterior
 
 Elija una de las siguientes opciones de actualización:
@@ -60,6 +62,7 @@ NOTE: Si no actualiza secuencialmente los servicios de gestión seguidos por el 
 
 
 
+[[upgrade-a-management-node-to-version-12-5-or-later-from-version-12-3-x-or-later]]
 === Actualice un nodo de gestión a la versión 12.5 o posterior desde la versión 12.3.x o posterior
 
 Puede realizar una actualización in situ del nodo de gestión desde la versión 12,3.x o posterior a la versión 12,5 o posterior sin necesidad de aprovisionar una nueva máquina virtual del nodo de gestión.
@@ -153,6 +156,7 @@ IMPORTANT: Si había deshabilitado anteriormente la funcionalidad SSH en el nodo
 
 
 
+[[reconfigure-authentication-using-the-management-node-rest-api]]
 === Volver a configurar la autenticación mediante la API DE REST del nodo de gestión
 
 Se puede conservar el nodo de gestión existente si se actualizaron secuencialmente (1) y (2) el almacenamiento de Element. Si ha seguido un orden de actualización diferente, consulte los procedimientos para actualizar nodos de gestión sin movimiento.
@@ -188,6 +192,7 @@ El cuerpo de respuesta indica que la reconfiguración se ha realizado correctame
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]

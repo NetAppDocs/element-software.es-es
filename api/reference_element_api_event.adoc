@@ -15,6 +15,7 @@ El objeto event contiene detalles de los eventos que ocurren durante una llamada
 
 
 
+[[object-members]]
 == Miembros de objeto
 
 Este objeto contiene los siguientes miembros:
@@ -125,6 +126,7 @@ Cadena de fecha ISO 8601
 
 
 
+[[event-types]]
 == Tipos de evento
 
 La siguiente lista describe los posibles tipos de sucesos que puede contener el miembro eventInfoType:
@@ -163,6 +165,7 @@ La siguiente lista describe los posibles tipos de sucesos que puede contener el 
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 xref:reference_element_api_listevents.adoc[ListEvents]

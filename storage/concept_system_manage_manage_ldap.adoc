@@ -31,6 +31,7 @@ Habilitar LDAP implica los siguientes pasos de alto nivel, descritos con detalle
 
 
 
+[[complete-pre-configuration-steps-for-ldap-support]]
 == Complete los pasos previos de configuración para ser compatible con LDAP
 
 Antes de habilitar la compatibilidad con LDAP en Element, debe configurar un servidor de Windows Active Directory y realizar otras tareas previas a la configuración.
@@ -44,6 +45,7 @@ Antes de habilitar la compatibilidad con LDAP en Element, debe configurar un ser
 
 
 
+[[enable-ldap-authentication-with-the-element-user-interface]]
 == Habilite la autenticación de LDAP con la interfaz de usuario de Element
 
 Puede configurar la integración del sistema de almacenamiento con un servidor LDAP existente. De este modo, los administradores de LDAP pueden gestionar de forma centralizada el acceso al sistema de almacenamiento para los usuarios.
@@ -94,6 +96,7 @@ Para probarlo, cierre sesión en la interfaz de usuario del elemento y vuelva a 
 
 
 
+[[enable-ldap-authentication-with-the-element-api]]
 == Habilite la autenticación de LDAP con la API de Element
 
 Puede configurar la integración del sistema de almacenamiento con un servidor LDAP existente. De este modo, los administradores de LDAP pueden gestionar de forma centralizada el acceso al sistema de almacenamiento para los usuarios.
@@ -199,6 +202,8 @@ Para probarlo, cierre sesión en la interfaz de usuario del elemento y vuelva a 
 
 
 
+[[view-ldap-details]]
+[[view_ldap_details]]
 == Ver los detalles de LDAP
 
 Consulte la información de LDAP en la página LDAP de la pestaña Cluster.
@@ -237,6 +242,7 @@ NOTE: Debe habilitar LDAP para ver estas opciones de configuración de LDAP.
 
 
 
+[[test-the-ldap-configuration]]
 == Pruebe la configuración de LDAP
 
 Después de configurar LDAP, debe probarla mediante la interfaz de usuario de Element o la API de Element `TestLdapAuthentication` método.
@@ -331,6 +337,7 @@ La `userSearchBaseDN` No es una ubicación válida dentro del árbol LDAP.
 
 
 
+[[disable-ldap]]
 == Deshabilite LDAP
 
 Es posible deshabilitar la integración de LDAP con la interfaz de usuario de Element.
@@ -345,6 +352,7 @@ Antes de comenzar, debe tener en cuenta todas las opciones de configuración, ya
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]

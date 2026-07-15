@@ -19,6 +19,7 @@ Además, es posible configurar la autenticación multifactor, la gestión de cla
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * link:task_post_deploy_credentials.html["Cambie las credenciales en NetApp HCI y SolidFire de NetApp"]

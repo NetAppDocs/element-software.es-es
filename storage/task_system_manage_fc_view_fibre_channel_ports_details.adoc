@@ -42,6 +42,7 @@ Permite ver información sobre los puertos Fibre Channel que están conectados a
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]

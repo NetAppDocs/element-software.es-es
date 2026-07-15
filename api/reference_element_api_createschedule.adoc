@@ -20,6 +20,7 @@ NOTE: Puede crear copias de Snapshot si la ocupación del clúster se encuentra 
 
 
 
+[[parameters]]
 == Parámetros
 
 Este método tiene los siguientes parámetros de entrada:
@@ -242,6 +243,7 @@ Sí (si está programado para los días de la semana)
 |===
 
 
+[[return-values]]
 == Valores devueltos
 
 Este método tiene los siguientes valores devueltos:
@@ -271,6 +273,7 @@ xref:reference_element_api_schedule.adoc[programación]
 |===
 
 
+[[request-example-1]]
 == Ejemplo de solicitud 1
 
 En el siguiente ejemplo de programación se tienen los parámetros siguientes:
@@ -319,6 +322,7 @@ En el siguiente ejemplo de programación se tienen los parámetros siguientes:
 ----
 
 
+[[response-example-1]]
 == Ejemplo de respuesta 1
 
 La solicitud anterior devuelve una respuesta similar al siguiente ejemplo:
@@ -367,6 +371,7 @@ La solicitud anterior devuelve una respuesta similar al siguiente ejemplo:
 ----
 
 
+[[request-example-2]]
 == Ejemplo de solicitud 2
 
 En el siguiente ejemplo de programación se tienen los parámetros siguientes:
@@ -409,6 +414,7 @@ En el siguiente ejemplo de programación se tienen los parámetros siguientes:
 ----
 
 
+[[response-example-2]]
 == Ejemplo de respuesta 2
 
 La solicitud anterior devuelve una respuesta similar al siguiente ejemplo:
@@ -452,6 +458,7 @@ La solicitud anterior devuelve una respuesta similar al siguiente ejemplo:
 ----
 
 
+[[request-example-3]]
 == Ejemplo de solicitud 3
 
 En el siguiente ejemplo de programación se tienen los parámetros siguientes:
@@ -489,6 +496,7 @@ En el siguiente ejemplo de programación se tienen los parámetros siguientes:
 ----
 
 
+[[response-example-3]]
 == Ejemplo de respuesta 3
 
 La solicitud anterior devuelve una respuesta similar al siguiente ejemplo:
@@ -534,6 +542,7 @@ La solicitud anterior devuelve una respuesta similar al siguiente ejemplo:
 ----
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 9.6

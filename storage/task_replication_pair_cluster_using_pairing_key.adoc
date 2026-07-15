@@ -39,6 +39,7 @@ IMPORTANT: No modifique ningún carácter de la clave de emparejamiento. La clav
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * xref:task_replication_pair_cluster_using_mvip.adoc[Emparejar clústeres con la MVIP]

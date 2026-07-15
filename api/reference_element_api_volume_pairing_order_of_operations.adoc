@@ -29,6 +29,7 @@ Solo se puede identificar uno de los volúmenes emparejados como un volumen de d
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * xref:reference_element_api_startvolumepairing.adoc[StartVolumePairing]

@@ -19,6 +19,7 @@ En los sistemas de almacenamiento de SolidFire, los inquilinos pueden utilizar l
 
 
 
+[[for-more-information]]
 == Si quiere más información
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]

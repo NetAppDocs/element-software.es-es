@@ -93,6 +93,7 @@ IMPORTANT: Si va a actualizar un nodo serie H610S a Element 12.5 o una versión 
 
 
 
+[[use-netapp-hybrid-cloud-control-ui-to-upgrade-element-storage]]
 == Utilice la IU de control de cloud híbrido de NetApp para actualizar el almacenamiento de Element
 
 Con la interfaz de usuario de Cloud Control de NetApp, puede actualizar un clúster de almacenamiento.
@@ -159,6 +160,7 @@ Es posible descargar registros una vez completada la actualización. Para obtene
 
 
 
+[[upgrade-status-changes]]
 === Cambios de estado de actualización
 
 Estos son los diferentes estados que muestra la columna *Estado de actualización* de la interfaz de usuario antes, durante y después del proceso de actualización:
@@ -190,6 +192,7 @@ Estos son los diferentes estados que muestra la columna *Estado de actualizació
 |===
 
 
+[[use-netapp-hybrid-cloud-control-api-to-upgrade-element-storage]]
 == Utilice la API de control de cloud híbrido de NetApp para actualizar el almacenamiento de Element
 
 Puede utilizar las API para actualizar los nodos de almacenamiento de un clúster a la versión más reciente del software Element. Puede utilizar una herramienta de automatización que prefiera para ejecutar las API. El flujo de trabajo de API que se documenta aquí, utiliza la interfaz de usuario de API DE REST disponible en el nodo de gestión como ejemplo.
@@ -428,6 +431,7 @@ La actualización se completó correctamente cuando el `percent` el valor es `10
 
 
 
+[[what-happens-if-an-upgrade-fails-using-netapp-hybrid-cloud-control]]
 == ¿Qué ocurre si se produce un error en una actualización mediante el control del cloud híbrido de NetApp
 
 Si se produce un error en una unidad o un nodo durante una actualización, la interfaz de usuario de Element mostrará errores en el clúster. El proceso de actualización no pasa al siguiente nodo y espera a que se resuelvan los errores del clúster. La barra de progreso de la interfaz de usuario de muestra que la actualización está esperando a que se resuelvan los errores del clúster. En esta fase, la selección de *Pausa* en la interfaz de usuario no funcionará, ya que la actualización espera a que el clúster esté en buen estado. Deberá ponerse en contacto con el servicio de soporte de NetApp para que le ayude con la investigación de un fallo.

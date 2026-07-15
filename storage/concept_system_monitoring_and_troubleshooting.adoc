@@ -29,6 +29,7 @@ Debe supervisar el sistema para realizar diagnósticos y obtener información ac
 
 
 
+[[for-more-information]]
 == Si quiere más información
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]

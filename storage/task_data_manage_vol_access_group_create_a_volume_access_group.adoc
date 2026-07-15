@@ -75,6 +75,7 @@ El volumen aparece en la lista *volúmenes adjuntos*.
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 xref:task_data_manage_vol_access_group_add_volumes.adoc[Añada volúmenes a un grupo de acceso]

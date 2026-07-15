@@ -27,6 +27,7 @@ Para configurar el nodo una vez finalizado correctamente el proceso de RTFI, con
 
 
 
+[[perform-the-rtfi-process]]
 == Realice el proceso RTFI
 
 Utilice el siguiente procedimiento para restaurar el software Element en su nodo SolidFire.
@@ -92,6 +93,7 @@ Si ha encontrado un mensaje de error durante el proceso de RTFI, consulte xref:t
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]

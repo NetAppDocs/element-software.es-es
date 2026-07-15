@@ -546,6 +546,7 @@ Registro del plugin de vCenter; El puerto se puede cerrar una vez que se complet
 |===
 
 
+[[for-more-information]]
 == Si quiere más información
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]

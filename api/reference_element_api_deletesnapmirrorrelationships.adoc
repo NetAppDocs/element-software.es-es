@@ -15,6 +15,7 @@ La interfaz de usuario web de Element utiliza el `DeleteSnapMirrorRelationships`
 
 
 
+[[parameters]]
 == Parámetros
 
 Este método tiene los siguientes parámetros de entrada:
@@ -50,6 +51,7 @@ Sí
 |===
 
 
+[[return-values]]
 == Valores devueltos
 
 Este método tiene los siguientes valores devueltos:
@@ -70,6 +72,7 @@ Objeto JSON
 |===
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 10.1

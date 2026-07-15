@@ -24,6 +24,7 @@ NOTE: Si el clúster utiliza un certificado que sea inferior a 2048 bits antes d
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * link:../api/concept_element_api_about_the_api.html["Gestionar el almacenamiento con la API de Element"]

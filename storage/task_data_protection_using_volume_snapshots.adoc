@@ -21,6 +21,7 @@ Opcionalmente, replique las snapshots en un clúster de remoto y utilícelos com
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * xref:task_data_protection_use_individual_volume_snapshots.adoc[Use copias de Snapshot de volumen individuales para la protección de datos]

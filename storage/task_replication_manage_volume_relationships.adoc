@@ -15,6 +15,7 @@ Es posible gestionar las relaciones de volúmenes de muchas maneras, como pausar
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * xref:task_replication_pause_replication.adoc[Detenga la replicación]

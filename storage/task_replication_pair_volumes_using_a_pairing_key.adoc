@@ -66,6 +66,7 @@ Después de completar correctamente el emparejamiento, se recomienda actualizar 
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * xref:reference_replication_volume_pairing_messages.adoc[Mensajes sobre el emparejamiento de volúmenes]

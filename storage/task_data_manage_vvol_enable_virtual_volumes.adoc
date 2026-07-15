@@ -50,6 +50,7 @@ NOTE: Se requieren tareas adicionales de configuración en vSphere. Consulte la 
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
-https://www.netapp.com/pdf.html?item=/media/10516-tr4642pdf.pdf["Guía de configuración de VMware vSphere Virtual Volumes para SolidFire Storage"^]
+https://www.netapp.com/pdf.html?item=/media/10516-tr4642.pdf["Guía de configuración de VMware vSphere Virtual Volumes para SolidFire Storage"^]

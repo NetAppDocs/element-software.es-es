@@ -37,6 +37,7 @@ La desconexión de un nodo se debe hacer bajo la supervisión del soporte de Net
 
 
 
+[[for-more-information]]
 == Si quiere más información
 
 https://library.netapp.com/ecm/ecm_download_file/ECMLP2844772["Reemplazar un chasis SolidFire con fallos"]

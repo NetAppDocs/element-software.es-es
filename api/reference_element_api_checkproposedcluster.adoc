@@ -15,6 +15,7 @@ Puede utilizar el `CheckProposedCluster` método para probar un conjunto de nodo
 
 
 
+[[parameters]]
 == Parámetros
 
 Este método tiene el siguiente parámetro de entrada:
@@ -50,6 +51,7 @@ No
 |===
 
 
+[[return-values]]
 == Valores devueltos
 
 Este método tiene los siguientes valores devueltos:
@@ -83,6 +85,7 @@ matriz de cadenas
 |===
 
 
+[[request-example]]
 == Ejemplo de solicitud
 
 Las solicitudes de este método son similares al ejemplo siguiente:
@@ -104,6 +107,7 @@ Las solicitudes de este método son similares al ejemplo siguiente:
 ----
 
 
+[[response-example]]
 == Ejemplo de respuesta
 
 Este método devuelve una respuesta similar al siguiente ejemplo:
@@ -120,6 +124,7 @@ Este método devuelve una respuesta similar al siguiente ejemplo:
 ----
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 11.0

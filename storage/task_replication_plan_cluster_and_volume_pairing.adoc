@@ -26,6 +26,7 @@ NOTE: NetApp no ha autorizado los dispositivos aceleradores WAN para usarlos al 
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * xref:task_replication_pair_clusters.adoc[Emparejar clústeres para la replicación]

@@ -43,6 +43,7 @@ Se puede crear una copia de Snapshot de un volumen activo para conservar la imag
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 xref:task_data_protection_schedule_a_snapshot_task.adoc[Programar una copia de Snapshot]

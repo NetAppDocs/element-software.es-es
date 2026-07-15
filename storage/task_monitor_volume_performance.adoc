@@ -31,6 +31,7 @@ El sistema muestra información detallada y gráficos de rendimiento del volumen
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 xref:reference_monitor_volume_performance_details.adoc[Detalles de rendimiento de volumen]

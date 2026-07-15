@@ -15,6 +15,7 @@ Utiliza la interfaz de usuario web de Element `DeleteSnapMirrorEndpoints` Para e
 
 
 
+[[parameter]]
 == Parámetro
 
 Este método tiene el siguiente parámetro de entrada:
@@ -37,12 +38,14 @@ Sí
 |===
 
 
+[[return-values]]
 == Valores devueltos
 
 Este método no tiene valores devueltos.
 
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 10.0

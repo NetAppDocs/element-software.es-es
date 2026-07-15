@@ -37,6 +37,7 @@ Para poder configurar esta opción, debe tener privilegios de administrador del 
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * link:../storage/task_system_manage_cluster_ntp_configure_to_listen_for_ntp_broadcasts.html["Configure el clúster para que escuche las transmisiones NTP"]

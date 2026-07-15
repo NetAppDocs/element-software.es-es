@@ -67,6 +67,7 @@ En función del número de nodos que se incluyan, el sistema podría tardar vari
 
 
 
+[[for-more-information]]
 == Si quiere más información
 
 * link:../api/concept_element_api_about_the_api.html["Gestionar el almacenamiento con la API de Element"]

@@ -39,6 +39,7 @@ Si desea permitir más tiempo al encender los nodos y verificar que su estado se
 ====
 
 
+[[find-more-information]]
 == Obtenga más información
 
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/How_to_gracefully_shut_down_and_power_on_a_NetApp_Solidfire_HCI_storage_cluster["Cómo apagar y encender correctamente un clúster de almacenamiento SolidFire/HCI de NetApp"^]

@@ -19,6 +19,7 @@ Puede habilitar y deshabilitar el cifrado en todo el clúster en reposo. Esta fu
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * xref:task_system_manage_cluster_enable_and_disable_encryption_for_a_cluster.adoc[Habilite y deshabilite el cifrado de un clúster]

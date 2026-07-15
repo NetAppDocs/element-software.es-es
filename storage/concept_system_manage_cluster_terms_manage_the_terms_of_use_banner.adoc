@@ -20,6 +20,7 @@ Puede habilitar, editar o configurar un banner que contenga un mensaje para el u
 
 
 
+[[enable-the-terms-of-use-banner]]
 == Habilite el banner de las condiciones de uso
 
 Si lo desea, se puede habilitar un banner con las condiciones de uso que aparece cuando un usuario inicia sesión en la interfaz de usuario de Element. Cuando el usuario haga clic en el banner, aparecerá un cuadro de diálogo de texto con el mensaje que haya configurado para el clúster. El banner se puede descartar cuando desee.
@@ -37,6 +38,7 @@ NOTE: No supere los 4096 caracteres.
 
 
 
+[[edit-the-terms-of-use-banner]]
 == Edite el banner con las condiciones de uso
 
 Se puede editar el texto que ven los usuarios cuando seleccionan el banner de inicio de sesión de las condiciones de uso.
@@ -58,6 +60,7 @@ NOTE: No supere los 4096 caracteres.
 
 
 
+[[disable-the-terms-of-use-banner]]
 == Deshabilite el banner con las condiciones de uso
 
 El banner con las condiciones de uso se puede deshabilitar. Cuando se deshabilita el banner, se deja de solicitar al usuario que acepte las condiciones de uso cuando se usa la interfaz de usuario de Element.

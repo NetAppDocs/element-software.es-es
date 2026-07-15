@@ -15,6 +15,7 @@ La interfaz de usuario web de Element utiliza el `CreateSnapMirrorVolume` Métod
 
 
 
+[[parameters]]
 == Parámetros
 
 Este método tiene los siguientes parámetros de entrada:
@@ -109,6 +110,7 @@ Sí
 |===
 
 
+[[return-values]]
 == Valores devueltos
 
 Este método tiene los siguientes valores devueltos:
@@ -129,6 +131,7 @@ xref:reference_element_api_snapmirrorvolume.adoc[SnapMirrorVolume]
 |===
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 10.1

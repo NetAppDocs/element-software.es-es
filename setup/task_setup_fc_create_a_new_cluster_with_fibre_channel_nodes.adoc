@@ -46,6 +46,7 @@ En función del número de nodos que se incluyan, el sistema podría tardar vari
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]

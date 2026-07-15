@@ -19,6 +19,7 @@ Una vez que se replica un volumen, los volúmenes de origen y objetivo deben est
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 xref:reference_replication_volume_pairing_warnings.adoc[Advertencias sobre el emparejamiento de volúmenes]

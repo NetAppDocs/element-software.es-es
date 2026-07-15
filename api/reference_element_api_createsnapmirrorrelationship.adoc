@@ -15,6 +15,7 @@ La interfaz de usuario web de Element utiliza el `CreateSnapMirrorRelationship` 
 
 
 
+[[parameters]]
 == Parámetros
 
 Este método tiene los siguientes parámetros de entrada:
@@ -115,6 +116,7 @@ No
 |===
 
 
+[[return-values]]
 == Valores devueltos
 
 Este método tiene los siguientes valores devueltos:
@@ -135,6 +137,7 @@ xref:reference_element_api_snapmirrorrelationship.adoc[SnapMirrorRelationship]
 |===
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 10.1

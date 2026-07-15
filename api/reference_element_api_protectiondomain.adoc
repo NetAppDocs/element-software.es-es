@@ -15,6 +15,7 @@ El objeto protectionDomain contiene los detalles de nombre y tipo de un dominio 
 
 
 
+[[object-members]]
 == Miembros de objeto
 
 Este objeto contiene los siguientes miembros:

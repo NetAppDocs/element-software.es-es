@@ -53,6 +53,7 @@ NOTE: SSH sigue estando habilitado en el nodo de gestión si no se la deshabilit
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * https://docs.netapp.com/us-en/vcp/index.html["Plugin de NetApp Element para vCenter Server"^]

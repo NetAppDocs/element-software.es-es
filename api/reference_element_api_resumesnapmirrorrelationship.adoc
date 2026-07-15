@@ -15,6 +15,7 @@ La interfaz de usuario web del software Element utiliza el `ResumeSnapMirrorRela
 
 
 
+[[parameters]]
 == Parámetros
 
 Este método tiene los siguientes parámetros de entrada:
@@ -50,6 +51,7 @@ Sí
 |===
 
 
+[[return-value]]
 == Valor de retorno
 
 Este método tiene el siguiente valor devuelto:
@@ -68,6 +70,7 @@ xref:reference_element_api_snapmirrorrelationship.adoc[SnapMirrorRelationship]
 |===
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 10.1

@@ -43,6 +43,7 @@ Los datos de la copia snapshot más reciente se transfieren al nuevo volumen com
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 xref:concept_snapmirror_failback_scenarios.adoc[Escenarios de conmutación tras recuperación de SnapMirror]

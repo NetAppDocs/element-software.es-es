@@ -17,12 +17,14 @@ Antes de quitar un nodo, debe quitar todas las unidades que contiene el nodo med
 
 
 
+[[cluster-master-node-removal]]
 == Eliminación de nodo maestro de clústeres
 
 Si utiliza `RemoveNodes` para quitar el nodo maestro de clúster, es posible que se agote el tiempo de espera del método antes de devolver una respuesta. Si la llamada al método no puede eliminar el nodo, vuelva a realizar la llamada al método. Tenga en cuenta que si va a quitar el nodo de maestro de clústeres junto con otros nodos, debe usar una llamada independiente para quitar el nodo maestro de clústeres por sí mismo.
 
 
 
+[[parameter]]
 == Parámetro
 
 Este método tiene el siguiente parámetro de entrada:
@@ -60,12 +62,14 @@ Sí
 |===
 
 
+[[return-value]]
 == Valor de retorno
 
 Este método no tiene ningún valor devuelto.
 
 
 
+[[request-example]]
 == Ejemplo de solicitud
 
 Las solicitudes de este método son similares al ejemplo siguiente:
@@ -82,6 +86,7 @@ Las solicitudes de este método son similares al ejemplo siguiente:
 ----
 
 
+[[response-example]]
 == Ejemplo de respuesta
 
 Este método devuelve una respuesta similar al siguiente ejemplo:
@@ -95,6 +100,7 @@ Este método devuelve una respuesta similar al siguiente ejemplo:
 ----
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 9.6

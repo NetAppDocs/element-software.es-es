@@ -24,6 +24,7 @@ Debe tener privilegios de administrador del clúster.
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 https://kb.netapp.com/Advice_and_Troubleshooting/Flash_Storage/SF_Series/How_are_the_blockSpace_thresholds_calculated_for_Element["Cómo se calculan los umbrales de blockSpace para el elemento"^]

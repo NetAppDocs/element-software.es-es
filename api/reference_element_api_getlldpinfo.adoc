@@ -15,12 +15,14 @@ Puede utilizar el `GetLldpInfo` Método para obtener la configuración del proto
 
 
 
+[[parameters]]
 == Parámetros
 
 Este método no tiene parámetros de entrada.
 
 
 
+[[return-values]]
 == Valores devueltos
 
 Este método tiene los siguientes valores devueltos:
@@ -39,6 +41,7 @@ Objeto JSON
 |===
 
 
+[[request-example]]
 == Ejemplo de solicitud
 
 Las solicitudes de este método son similares al ejemplo siguiente:
@@ -52,18 +55,21 @@ Las solicitudes de este método son similares al ejemplo siguiente:
 ----
 
 
+[[response-example]]
 == Ejemplo de respuesta
 
 Debido a la longitud de este ejemplo de respuesta, se documenta en un tema complementario.
 
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 11.0
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 xref:reference_element_api_response_example_getlldpinfo.adoc[GetLldpInfo]

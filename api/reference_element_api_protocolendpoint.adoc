@@ -15,6 +15,7 @@ El objeto ProtocolEndpoint contiene los atributos de un extremo de protocolo. Pu
 
 
 
+[[object-members]]
 == Miembros de objeto
 
 Este objeto contiene los siguientes miembros:
@@ -88,6 +89,7 @@ entero
 |===
 
 
+[[find-more-information]]
 == Obtenga más información
 
 xref:reference_element_api_listprotocolendpoints.adoc[ListProtocolEndpoints]

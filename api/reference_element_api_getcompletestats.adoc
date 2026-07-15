@@ -23,6 +23,7 @@ Utilice los siguientes métodos API compatibles para recuperar información esta
 
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 9.6

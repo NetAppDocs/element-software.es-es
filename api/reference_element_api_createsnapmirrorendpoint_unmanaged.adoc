@@ -15,6 +15,7 @@ El sistema de almacenamiento del software Element utiliza `CreateSnapMirrorEndpo
 
 
 
+[[parameters]]
 == Parámetros
 
 Este método tiene los siguientes parámetros de entrada:
@@ -50,6 +51,7 @@ Sí
 |===
 
 
+[[return-values]]
 == Valores devueltos
 
 Este método tiene los siguientes valores devueltos:
@@ -70,6 +72,7 @@ xref:reference_element_api_snapmirrorendpoint.adoc[SnapMirrorEndpoint]
 |===
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 10.3

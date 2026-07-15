@@ -34,6 +34,7 @@ Puede configurar o quitar el acceso de interfaz de usuario web FQDN de NetApp Hy
 
 
 
+[[configure-fqdn-web-ui-access-using-netapp-hybrid-cloud-control]]
 == Configure el acceso de interfaz de usuario web de FQDN mediante NetApp Hybrid Cloud Control
 
 .Pasos
@@ -60,6 +61,7 @@ NOTE: En el panel *nombres de dominio completos* sólo aparecen los clústeres d
 
 
 
+[[configure-fqdn-web-ui-access-using-the-rest-api]]
 == Configure el acceso de interfaz de usuario web del FQDN mediante la API DE REST
 
 .Pasos
@@ -116,6 +118,7 @@ Por ejemplo:
 
 
 
+[[remove-fqdn-web-ui-access-using-netapp-hybrid-cloud-control]]
 == Elimine el acceso de interfaz de usuario web de FQDN mediante el control de cloud híbrido de NetApp
 
 Puede usar este procedimiento para quitar el acceso web FQDN para el nodo de gestión y los clústeres de almacenamiento.
@@ -131,6 +134,7 @@ La ventana se cierra y el FQDN ya no aparece en el panel *nombres de dominio com
 
 
 
+[[remove-fqdn-web-ui-access-using-the-rest-api]]
 == Quite el acceso de interfaz de usuario web del FQDN mediante la API DE REST
 
 .Pasos
@@ -181,6 +185,7 @@ https://<management_node_IP>/mnode/2/
 
 
 
+[[troubleshooting]]
 == Resolución de problemas
 
 Si las FQDN están configuradas incorrectamente, es posible que tenga problemas para acceder al nodo de administración, a un clúster de almacenamiento o a ambos. Utilice la siguiente información como ayuda para solucionar el problema.
@@ -212,6 +217,7 @@ Si las FQDN están configuradas incorrectamente, es posible que tenga problemas 
 |===
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]

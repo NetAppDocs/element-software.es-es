@@ -83,6 +83,7 @@ La hora en la que ocurrió el evento.
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 xref:reference_monitor_event_types.adoc[Tipos de evento]

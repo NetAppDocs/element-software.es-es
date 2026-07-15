@@ -64,6 +64,7 @@ Puede ponerse en contacto con el soporte de NetApp para obtener ayuda sobre el p
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]

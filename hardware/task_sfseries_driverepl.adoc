@@ -77,6 +77,7 @@ A continuación, se ofrece una descripción general de alto nivel de los pasos:
 
 
 
+[[remove-the-drive-from-the-cluster]]
 == Quite la unidad del clúster
 
 El sistema SolidFire pone una unidad en estado de error cuando el sistema de autodiagnóstico de la unidad indica al nodo que se ha producido un error o cuando la comunicación con la unidad se detiene durante cinco minutos y medio o más. El sistema muestra una lista de las unidades con errores. Quite una unidad con error de la lista de unidades con errores en el software NetApp Element.
@@ -116,6 +117,7 @@ Para quitar varias unidades
 
 
 
+[[replace-the-drive-from-the-chassis]]
 == Sustituya la unidad del chasis
 
 Después de quitar una unidad con error de la lista de unidades con errores en la interfaz de usuario de Element, está listo para sustituir físicamente la unidad con error del chasis.
@@ -159,6 +161,7 @@ El soporte de NetApp proporcionará instrucciones para la devolución de la unid
 
 
 
+[[add-the-drive-to-the-cluster]]
 == Añada la unidad al clúster
 
 Después de instalar una unidad nueva en el chasis, se registra como disponible. Debe añadir la unidad al clúster mediante la interfaz de usuario de Element antes de que esta pueda participar en el clúster.
@@ -194,6 +197,7 @@ Para añadir varias unidades
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]

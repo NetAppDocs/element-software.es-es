@@ -15,6 +15,7 @@ Puede utilizar el `ResetNode` método para restablecer un nodo a la configuraci�
 
 
 
+[[parameters]]
 == Parámetros
 
 La API ResetNode sólo se puede utilizar en los nodos en estado "disponible". No se puede usar en los nodos que están "activos" en un clúster ni en el estado "Pending".
@@ -69,12 +70,14 @@ No
 |===
 
 
+[[return-values]]
 == Valores devueltos
 
 Este método no tiene valores devueltos.
 
 
 
+[[request-example]]
 == Ejemplo de solicitud
 
 Las solicitudes de este método son similares al ejemplo siguiente:
@@ -92,6 +95,7 @@ Las solicitudes de este método son similares al ejemplo siguiente:
 ----
 
 
+[[response-example]]
 == Ejemplo de respuesta
 
 Este método devuelve una respuesta similar al siguiente ejemplo:
@@ -150,6 +154,7 @@ Este método devuelve una respuesta similar al siguiente ejemplo:
 ----
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 9.6

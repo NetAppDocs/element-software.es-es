@@ -15,6 +15,7 @@ El objeto volumeAccessGroup contiene información sobre un grupo de acceso de vo
 
 
 
+[[object-members]]
 == Miembros de objeto
 
 Este objeto contiene los siguientes miembros:
@@ -87,6 +88,7 @@ matriz en números enteros
 |===
 
 
+[[find-more-information]]
 == Obtenga más información
 
 xref:reference_element_api_listvolumeaccessgroups.adoc[ListVolumeAccessGroups]

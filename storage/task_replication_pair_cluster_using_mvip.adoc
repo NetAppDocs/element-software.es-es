@@ -29,6 +29,7 @@ En la ventana *autenticación requerida*, introduzca el nombre de usuario y la c
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * xref:task_replication_pair_cluster_using_pairing_key.adoc[Emparejar clústeres con una clave de emparejamiento]

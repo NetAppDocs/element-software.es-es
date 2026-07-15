@@ -15,6 +15,7 @@ Cada nodo contiene una o varias unidades físicas que se utilizan para almacenar
 
 
 
+[[drives-details]]
 == Detalles de unidades
 
 En la página Drives de la pestaña Cluster, se proporciona una lista de las unidades activas del clúster. La página se puede filtrar si selecciona de las pestañas Active, Available, Removing, Erasing y Failed.
@@ -62,6 +63,7 @@ El tipo de unidad. El tipo puede ser de bloque o metadatos.
 
 
 
+[[for-more-information]]
 == Si quiere más información
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]

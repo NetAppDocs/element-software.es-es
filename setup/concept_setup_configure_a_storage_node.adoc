@@ -28,6 +28,7 @@ NOTE: A partir de la versión 11.0 de Element, los nodos se pueden configurar co
 
 
 
+[[configure-a-storage-node-using-the-per-node-ui]]
 == Configure un nodo de almacenamiento con la interfaz de usuario por nodo
 
 Con la interfaz de usuario por nodo se pueden configurar nodos.
@@ -66,6 +67,7 @@ IMPORTANT: Este nombre debe añadirse a la configuración de todos los nodos par
 
 
 
+[[configure-a-storage-node-using-the-tui]]
 == Con la TUI, configure un nodo de almacenamiento
 
 La interfaz de usuario de terminal (TUI) se puede usar para realizar una configuración inicial de los nodos nuevos.
@@ -99,6 +101,7 @@ El nodo cambia al estado pendiente y puede añadirse a un clúster existente o a
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentación de SolidFire y el software Element"]

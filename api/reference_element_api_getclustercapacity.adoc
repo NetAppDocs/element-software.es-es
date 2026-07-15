@@ -15,6 +15,7 @@ Puede utilizar el `GetClusterCapacity` para devolver mediciones de capacidad a g
 
 
 
+[[efficiency-calculations]]
 == Cálculos de eficiencia
 
 Utilice las siguientes ecuaciones para calcular el thin provisioning, la deduplicación y la compresión. Estas ecuaciones se aplican al elemento 8.2 y posterior.
@@ -26,6 +27,7 @@ Utilice las siguientes ecuaciones para calcular el thin provisioning, la dedupli
 
 
 
+[[overall-efficiency-rate-calculation]]
 == Cálculo general de la tasa de eficiencia
 
 Use la siguiente ecuación para calcular la eficiencia general del clúster utilizando los resultados del cálculo de eficiencia de thin provisioning, deduplicación y compresión.
@@ -35,12 +37,14 @@ Use la siguiente ecuación para calcular la eficiencia general del clúster util
 
 
 
+[[parameters]]
 == Parámetros
 
 Este método no tiene parámetros de entrada.
 
 
 
+[[return-value]]
 == Valor de retorno
 
 Este método tiene el siguiente valor devuelto:
@@ -59,6 +63,7 @@ xref:reference_element_api_clustercapacity.adoc[ClusterCapacity]
 |===
 
 
+[[request-example]]
 == Ejemplo de solicitud
 
 Las solicitudes de este método son similares al ejemplo siguiente:
@@ -73,6 +78,7 @@ Las solicitudes de este método son similares al ejemplo siguiente:
 ----
 
 
+[[response-example]]
 == Ejemplo de respuesta
 
 Este método devuelve una respuesta similar al siguiente ejemplo:
@@ -112,6 +118,7 @@ Este método devuelve una respuesta similar al siguiente ejemplo:
 ----
 
 
+[[new-since-version]]
 == Nuevo desde la versión
 
 9.6
